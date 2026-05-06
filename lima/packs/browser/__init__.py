@@ -1,0 +1,1 @@
+"""Browser tool pack namespace."""
