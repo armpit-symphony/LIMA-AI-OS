@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime
 from enum import Enum
 from typing import Any, Mapping, Protocol, Sequence
 
@@ -30,8 +31,10 @@ class HumanInput:
     shell_id: str
     content_ref: str | None = None
     raw_text: str | None = None
+    timestamp: datetime | None = None
     locale: str = "en"
     confidence: float | None = None
+    privacy_class: str | None = None
     metadata: Mapping[str, Any] = field(default_factory=dict)
 
 
@@ -50,6 +53,7 @@ class IntentEnvelope:
     required_evidence: Sequence[str] = field(default_factory=tuple)
     required_approval_level: str | None = None
     proposed_tool_packs: Sequence[str] = field(default_factory=tuple)
+    created_at: datetime | None = None
     metadata: Mapping[str, Any] = field(default_factory=dict)
 
 
