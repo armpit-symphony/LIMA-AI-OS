@@ -73,6 +73,84 @@ Rules:
 - Every `IntentEnvelope` must be traceable to a `GuardianDecision` and audit events.
 - High-risk intent requires Guardian approval before execution.
 
+## Intent Lifecycle
+
+Intent lifecycle states:
+
+- `received`
+- `normalized`
+- `needs_clarification`
+- `compiled`
+- `submitted_to_guardian`
+- `approved`
+- `denied`
+- `escalated`
+- `expired`
+- `superseded`
+
+The intent lifecycle contract is represented by `IntentStatus`, which records where an intent sits in the control-plane pipeline. It is not an execution state machine. Execution remains behind Guardian-approved Harness, Tool, or Driver paths.
+
+## IntentType
+
+Starter contract-level categories:
+
+- `ask_information`
+- `create_plan`
+- `draft_content`
+- `schedule_task`
+- `run_tool`
+- `operate_file`
+- `browse_web`
+- `send_message`
+- `control_robot`
+- `administer_system`
+- `approve_action`
+- `deny_action`
+- `unknown`
+
+These categories help Guardian and later planning surfaces inspect intent. They are not implementation dispatch hooks.
+
+## ApprovalLevel
+
+Approval levels:
+
+- `none`
+- `confirm`
+- `guardian_review`
+- `operator_pin`
+- `breakglass`
+
+The Intent Compiler may recommend a required approval level. Guardian owns the decision and escalation path.
+
+## EvidenceRequirement
+
+Evidence requirements describe information needed before Guardian can evaluate consequential intent.
+
+Fields:
+
+- `evidence_id`
+- `kind`
+- `description`
+- `required`
+- `metadata`
+
+Confidence and risk thresholds are policy-owned, not compiler-owned. The compiler can attach evidence requirements; Guardian and policy decide whether evidence is sufficient.
+
+## IntentCompilationResult
+
+Compilation results package the output of one compilation attempt.
+
+Fields:
+
+- `input`
+- `intent`
+- `clarification`
+- `status`
+- `warnings`
+- `metadata`
+
+Results can contain an intent, a clarification request, or warnings. They do not contain execution output.
+
 ## ClarificationRequest
 
 Clarification requests stop ambiguous commands before they become action.
@@ -101,6 +179,14 @@ Rules:
 - The Intent Compiler only prepares structured intent for Guardian.
 - Guardian owns approval, denial, escalation, and confirmation requirements.
 - Harness and Driver APIs must require `GuardianDecision` or an approval token for consequential execution.
+
+## Responsibility Split
+
+- Intent Compiler creates intent.
+- Guardian decides.
+- Harness plans and completes model calls only after Guardian classification.
+- Drivers execute only after Guardian approval.
+- Spine records the chain.
 
 ## Harness
 

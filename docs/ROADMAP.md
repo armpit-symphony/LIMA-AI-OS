@@ -10,7 +10,7 @@ LIMA Runtime is SparkPit Labs' trust-gated automation and robotics runtime. Spar
 - Validate imports.
 - Review architecture decisions before implementation extraction.
 
-### M0.5: Natural Language Control Plane
+### M0.5: Intent Compiler Boundary
 
 Goal: define how human language becomes governed action before Harness extraction.
 
@@ -21,17 +21,33 @@ Deliverables:
 - `ClarificationRequest` contract.
 - `RiskClass` enum.
 - `IntentCompilerProtocol`.
+- Intent Compiler boundary doc.
+- `IntentLifecycle` / intent status contract.
+- `IntentStatus` enum.
+- `IntentType` enum.
+- `ApprovalLevel` enum.
+- `EvidenceRequirement` contract.
+- `IntentCompilationResult` contract.
+- Clarification lifecycle.
+- Confidence/risk thresholds as policy-owned, not compiler-owned.
+- Sparkbot chat/voice adapter requirements.
 - Approval UX requirements.
 - Voice/text normalization rules.
 - Future BCI safety constraints.
+- Raw language execution prohibition.
+- Future BCI confirmation-only rule.
 - Audit trail linking raw human input -> typed intent -> Guardian decision -> action/result.
 
 Acceptance criteria:
 
 - No tool, model, driver, file, browser, network, admin, or robot action can execute from raw natural language.
+- Raw chat/voice cannot directly execute tools in the architecture.
 - Every consequential command has an `IntentEnvelope`.
 - Ambiguous commands trigger clarification instead of execution.
 - High-risk intent requires Guardian approval.
+- `IntentCompilerProtocol` remains non-executing.
+- `GuardianDecision` is required before consequential Harness/Driver/Tool execution.
+- Phase 1 Harness extraction is blocked until this boundary is reviewed.
 - Future thought/BCI input is documented as confirm-only, never direct execution.
 - Sparkbot can later adapt its chat/voice commands into this contract without losing current behavior.
 

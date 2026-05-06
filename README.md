@@ -148,6 +148,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 - [docs/EXTRACTION_PLAN.md](docs/EXTRACTION_PLAN.md)
 - [docs/CONTRACTS.md](docs/CONTRACTS.md)
+- [docs/INTENT_COMPILER_BOUNDARY.md](docs/INTENT_COMPILER_BOUNDARY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
 - [docs/ROADMAP.md](docs/ROADMAP.md)
 - [docs/DECISIONS.md](docs/DECISIONS.md)
