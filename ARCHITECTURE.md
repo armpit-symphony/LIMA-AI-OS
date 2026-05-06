@@ -6,34 +6,40 @@ LIMA-AI-OS is the contracts-first home for **LIMA Runtime / LIMA Kernel**, a Gua
 
 ```text
                     +----------------------------------------------+
+                    | Human Control Surface                        |
+                    | Text, voice, console, gesture, future BCI    |
+                    +----------------------+-----------------------+
+                                           |
+                    +----------------------v-----------------------+
+                    | Intent Compiler                             |
+                    | normalize, clarify, typed intent, risk      |
+                    | confidence, evidence requirements           |
+                    +----------------------+-----------------------+
+                                           |
+                    +----------------------v-----------------------+
                     | Shells                                       |
                     | Sparkbot, Arc, SparkPit web, Robo shells     |
                     +----------------------+-----------------------+
                                            |
                     +----------------------v-----------------------+
-                    | System Services                              |
-                    | skills, comms, voice, office automation      |
+                    | Guardian Control Plane                       |
+                    | policy, auth, vault, budgets, approvals      |
+                    | audit, breakglass, syscall gate              |
                     +----------------------+-----------------------+
                                            |
                     +----------------------v-----------------------+
-                    | Spine                                        |
+                    | Model Plane                                  |
+                    | reasoning, planning, model routing           |
+                    +----------------------+-----------------------+
+                                           |
+                    +----------------------v-----------------------+
+                    | Driver Plane                                 |
+                    | deterministic tools, Robo-OS, files, browser |
+                    +----------------------+-----------------------+
+                                           |
+                    +----------------------v-----------------------+
+                    | Spine / Event Ledger                         |
                     | process/task/event ledger, schedules, audit  |
-                    +----------------------+-----------------------+
-                                           |
-                    +----------------------v-----------------------+
-                    | Guardian                                     |
-                    | policy, auth, vault, verifier, approvals     |
-                    | syscall gate for all external action         |
-                    +----------------------+-----------------------+
-                                           |
-                    +----------------------v-----------------------+
-                    | Model Harness                                |
-                    | model routing, tools, tool packs, telemetry  |
-                    +----------------------+-----------------------+
-                                           |
-                    +----------------------v-----------------------+
-                    | IO Drivers                                   |
-                    | Robo-OS, filesystem, browser, network, MCP   |
                     +----------------------+-----------------------+
                                            |
                     +----------------------v-----------------------+
@@ -45,6 +51,20 @@ LIMA-AI-OS is the contracts-first home for **LIMA Runtime / LIMA Kernel**, a Gua
 The diagram is logical, not a mandate that every internal call must be a network hop. The internal kernel may use direct Python contracts. Externally actionable operations still pass through Guardian.
 
 ## Layers
+
+### Human Control Surface
+
+Human control surfaces are the places where operators express intent: text, voice, mobile/operator consoles, gesture/manual controls, and future thought/BCI-style inputs.
+
+These surfaces are not execution APIs. They produce human input records that must be normalized, clarified, typed, classified for risk, and routed to Guardian before any consequential action can occur.
+
+Future thought/BCI signals are future-facing only. They can produce uncertain, low-confidence intent candidates, but they cannot directly execute tools, files, network actions, browser actions, payments, admin actions, or physical-world actions.
+
+### Intent Compiler
+
+The Intent Compiler is the boundary between human language and governed runtime action. It normalizes natural language, detects ambiguity, asks clarifying questions, produces typed `IntentEnvelope` records, assigns confidence, assigns risk class, attaches evidence requirements, and routes intent to Guardian.
+
+The Intent Compiler does not execute actions and does not approve actions. It prepares structured intent for Guardian.
 
 ### Shells
 
@@ -68,15 +88,15 @@ Guardian is the primary trust boundary. It owns policy, auth, vault references, 
 
 Every model call, tool call, robotics action, file/network/browser action, and privileged operation must be classified by Guardian before execution.
 
-### Model Harness
+### Model Plane
 
-The Model Harness owns model routing, fallback, prompt assembly, tool catalogue filtering, tool-pack scoping, prompt cache, telemetry, and friendly errors.
+The Model Plane owns model routing, fallback, prompt assembly, tool catalogue filtering, tool-pack scoping, prompt cache, telemetry, and friendly errors.
 
-The Harness may plan a tool call, but it cannot execute one through a public API unless Guardian has approved, denied, or routed the action.
+The Model Plane may reason and plan, but it cannot execute deterministic tools through a public API unless Guardian has approved, denied, or routed the action.
 
-### IO Drivers
+### Driver Plane
 
-Drivers are boundaries to external systems: Robo-OS, filesystem, browser, network, MCP servers, hardware devices, and robot drivers. MCP belongs here as the tool, driver, and plugin boundary.
+The Driver Plane contains deterministic execution surfaces: Robo-OS, filesystem, browser, network, MCP servers, hardware devices, robot drivers, and other tool packs. MCP belongs here as the tool, driver, and plugin boundary.
 
 Robo-OS is a Guardian-gated driver/runtime integration, not a competing brain.
 
@@ -93,6 +113,20 @@ Guardian is the syscall gate.
 Every external action, tool execution, privileged operation, model call, robotics/physical-world action, file/network/browser action, and approval-requiring operation must pass through Guardian.
 
 No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing.
+
+## Natural Language as an OS Primitive
+
+Natural language is the primary human control protocol for LIMA. Text, voice, console commands, gestures, and future thought/BCI-style inputs are human control surfaces that enter the runtime as `HumanInput` records.
+
+Natural language is not allowed to bypass Guardian. Raw natural language must never directly execute tools or drivers. All consequential commands must become `IntentEnvelope` records before execution is even considered.
+
+Every `IntentEnvelope` must be traceable to a Guardian decision and audit events:
+
+```text
+HumanInput -> IntentEnvelope -> GuardianDecision -> Action/Event
+```
+
+Voice transcripts are treated the same as text commands after transcription and normalization. Future thought/BCI signals are treated as uncertain intent candidates and require explicit confirmation, Guardian review, and approval. There is no direct actuation from thought input.
 
 ## MCP Boundary Rule
 

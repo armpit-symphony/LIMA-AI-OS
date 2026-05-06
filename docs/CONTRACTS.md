@@ -10,6 +10,7 @@ LIMA Runtime contracts define the kernel boundary before implementation is extra
 - MCP is the driver/tool/plugin boundary, not the mandatory internal kernel bus.
 - Raw secrets must not be stored in general events; contracts use secret references.
 - Shells declare allowed tool packs and permissions.
+- Natural language, voice transcripts, console input, gestures, and future BCI signals compile into typed intent before consequential execution.
 - Phase 0 contracts are intentionally small.
 
 ## Guardian
@@ -21,6 +22,85 @@ Examples in prose:
 - A model request enters the Harness. Guardian classifies the request for cost, policy, and allowed model route before the Harness calls a model provider.
 - A tool call is planned by the Harness. Guardian classifies it as allow, deny, approval required, or route to another path.
 - A robot motion command is represented as a driver command. Guardian classifies it before the driver can execute it.
+
+## HumanInput
+
+Human input records capture the operator-facing control surface before intent is compiled.
+
+Fields:
+
+- `input_id`
+- `source`: `text | voice | console | gesture | future_bci`
+- `actor_id`
+- `shell_id`
+- `raw_content` or `transcript_ref`
+- `timestamp`
+- `locale`
+- confidence metadata
+- privacy/data class
+
+Rules:
+
+- Voice transcripts are normalized into the same contract as text commands.
+- Future BCI input is future-facing only and can only produce low-confidence intent candidates requiring explicit confirmation.
+- Human input records are evidence, not execution commands.
+
+## IntentEnvelope
+
+Intent envelopes are typed, auditable command candidates prepared for Guardian.
+
+Fields:
+
+- `intent_id`
+- `source_input_id`
+- `actor_id`
+- `shell_id`
+- `normalized_text`
+- `intent_type`
+- `typed_args`
+- `confidence`
+- `risk_class`
+- `ambiguity_flags`
+- `required_evidence`
+- `required_approval_level`
+- `proposed_tool_packs`
+- `created_at`
+
+Rules:
+
+- Raw natural language must never directly execute tools or drivers.
+- Every consequential command must have an `IntentEnvelope`.
+- Every `IntentEnvelope` must be traceable to a `GuardianDecision` and audit events.
+- High-risk intent requires Guardian approval before execution.
+
+## ClarificationRequest
+
+Clarification requests stop ambiguous commands before they become action.
+
+Fields:
+
+- `clarification_id`
+- `intent_id`
+- `question`
+- `choices`
+- `reason`
+- `blocking`: `true | false`
+
+## IntentCompilerProtocol
+
+Protocol surface:
+
+- `compile(input: HumanInput, context: SessionContext) -> IntentEnvelope`
+- `clarify(intent: IntentEnvelope) -> ClarificationRequest | None`
+- `revise(intent: IntentEnvelope, user_reply: HumanInput) -> IntentEnvelope`
+
+Rules:
+
+- The Intent Compiler does not execute actions.
+- The Intent Compiler does not approve actions.
+- The Intent Compiler only prepares structured intent for Guardian.
+- Guardian owns approval, denial, escalation, and confirmation requirements.
+- Harness and Driver APIs must require `GuardianDecision` or an approval token for consequential execution.
 
 ## Harness
 

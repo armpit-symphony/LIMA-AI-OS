@@ -7,6 +7,7 @@ def test_public_contract_imports() -> None:
     from lima.contracts import (
         ApprovalEvent,
         AuditEvent,
+        ClarificationRequest,
         DriverCapability,
         DriverCommand,
         DriverEvent,
@@ -16,6 +17,11 @@ def test_public_contract_imports() -> None:
         GuardianDecision,
         GuardianProtocol,
         HarnessProtocol,
+        HumanInput,
+        HumanInputSource,
+        IntentCompilerProtocol,
+        IntentEnvelope,
+        RiskClass,
         ModelCallEvent,
         ModelRequest,
         ModelResponse,
@@ -38,6 +44,7 @@ def test_public_contract_imports() -> None:
         for item in (
             ApprovalEvent,
             AuditEvent,
+            ClarificationRequest,
             DriverCapability,
             DriverCommand,
             DriverEvent,
@@ -46,6 +53,11 @@ def test_public_contract_imports() -> None:
             GuardianContext,
             GuardianProtocol,
             HarnessProtocol,
+            HumanInput,
+            HumanInputSource,
+            IntentCompilerProtocol,
+            IntentEnvelope,
+            RiskClass,
             ModelCallEvent,
             ModelRequest,
             ModelResponse,
@@ -61,3 +73,49 @@ def test_public_contract_imports() -> None:
             ToolPackProtocol,
         )
     )
+
+
+def test_intent_contracts_instantiate() -> None:
+    from datetime import datetime, timezone
+
+    from lima.contracts import (
+        ClarificationRequest,
+        HumanInput,
+        HumanInputSource,
+        IntentEnvelope,
+        RiskClass,
+    )
+
+    human_input = HumanInput(
+        input_id="input-1",
+        source=HumanInputSource.TEXT,
+        actor_id="operator-1",
+        shell_id="sparkbot",
+        raw_text="Summarize the latest audit events.",
+        timestamp=datetime(2026, 5, 6, tzinfo=timezone.utc),
+        confidence=0.99,
+        privacy_class="internal",
+    )
+    intent = IntentEnvelope(
+        intent_id="intent-1",
+        source_input_id=human_input.input_id,
+        actor_id=human_input.actor_id,
+        shell_id=human_input.shell_id,
+        normalized_text="summarize latest audit events",
+        intent_type="audit.summarize",
+        risk_class=RiskClass.LOW,
+        created_at=datetime(2026, 5, 6, tzinfo=timezone.utc),
+    )
+    clarification = ClarificationRequest(
+        clarification_id="clarification-1",
+        intent_id=intent.intent_id,
+        question="Which audit window should be summarized?",
+        choices=("last_hour", "today"),
+    )
+
+    assert HumanInputSource.FUTURE_BCI.value == "future_bci"
+    assert RiskClass.CRITICAL.value == "critical"
+    assert human_input.privacy_class == "internal"
+    assert intent.created_at == human_input.timestamp
+    assert intent.source_input_id == human_input.input_id
+    assert clarification.blocking is True
