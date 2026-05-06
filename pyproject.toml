@@ -15,3 +15,8 @@ authors = [
 
 [tool.setuptools.packages.find]
 include = ["lima*"]
+
+[tool.pytest.ini_options]
+norecursedirs = [
+  "pytest-cache-files-*",
+]
