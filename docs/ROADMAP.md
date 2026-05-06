@@ -10,6 +10,31 @@ LIMA Runtime is SparkPit Labs' trust-gated automation and robotics runtime. Spar
 - Validate imports.
 - Review architecture decisions before implementation extraction.
 
+### M0.5: Natural Language Control Plane
+
+Goal: define how human language becomes governed action before Harness extraction.
+
+Deliverables:
+
+- `IntentEnvelope` contract.
+- `HumanInput` contract.
+- `ClarificationRequest` contract.
+- `RiskClass` enum.
+- `IntentCompilerProtocol`.
+- Approval UX requirements.
+- Voice/text normalization rules.
+- Future BCI safety constraints.
+- Audit trail linking raw human input -> typed intent -> Guardian decision -> action/result.
+
+Acceptance criteria:
+
+- No tool, model, driver, file, browser, network, admin, or robot action can execute from raw natural language.
+- Every consequential command has an `IntentEnvelope`.
+- Ambiguous commands trigger clarification instead of execution.
+- High-risk intent requires Guardian approval.
+- Future thought/BCI input is documented as confirm-only, never direct execution.
+- Sparkbot can later adapt its chat/voice commands into this contract without losing current behavior.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
@@ -54,6 +79,7 @@ LIMA Runtime becomes the kernel for human-controlled AI infrastructure: office b
 The runtime is credible only if the trust boundary is real:
 
 - Guardian gates action.
+- Natural language compiles into typed, auditable intent.
 - Spine records lineage.
 - Harness scopes models and tools.
 - Drivers expose capabilities without becoming brains.

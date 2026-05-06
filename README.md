@@ -44,10 +44,24 @@ Every external action, tool execution, privileged operation, model call, robotic
 
 No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing.
 
+## Natural Language Control Plane
+
+Natural language is not just UI. It is the human control plane for LIMA Runtime.
+
+LIMA is controlled through human-understandable language because humans need to command, understand, approve, and audit AI systems. Text and voice are first-class control surfaces. Operator consoles, mobile shells, gesture/manual controls, and future thought/BCI-style inputs are also human control surfaces, but they must compile into typed, governed intent before anything consequential executes.
+
+Raw natural language never directly executes tools, files, network actions, browser actions, admin actions, payments, model calls, or robot/physical-world actions. Commands become typed `IntentEnvelope` records with confidence, risk class, evidence requirements, approval requirements, and tool-pack scope before Guardian evaluates them.
+
+Guardian gates every meaningful action. LIMA exists to make AI systems and robots controllable by humans, not merely autonomous.
+
+Future thought/BCI input is documented as a research-facing, confirmation-only surface. It may produce low-confidence intent candidates, but it must never directly actuate tools, systems, payments, admin functions, or physical-world drivers. Explicit confirmation and Guardian approval are mandatory.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
 
+- Human Control Surface: text, voice, console, gesture, future BCI
+- Intent Compiler: normalization, clarification, typed intent, confidence, risk class, evidence requirements
 - Shells: Sparkbot, Arc / LIMA AI Office, SparkPit web, Robo shell, future robot shells
 - System Services: skills, comms, voice, office automation, tasks/projects
 - Spine: task/event/process ledger, schedulers, audit, lineage
