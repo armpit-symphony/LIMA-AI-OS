@@ -10,6 +10,7 @@ Scope:
 
 - Establish architecture documents.
 - Define public contracts for Guardian, Harness, Spine, Driver, Storage, Shell, ToolPack, approvals, audit events, model calls, and tool calls.
+- Define the Natural Language Control Plane contracts for `HumanInput`, `IntentEnvelope`, `ClarificationRequest`, risk classes, and the `IntentCompilerProtocol`.
 - Create importable package skeleton.
 - Add import-only validation.
 
@@ -21,6 +22,23 @@ Acceptance criteria:
 - No real execution paths exist.
 - No Sparkbot implementation code is copied.
 - No secrets or production deploys are touched.
+
+## Phase 0.5: Natural Language Control Plane
+
+Scope:
+
+- Define how Sparkbot chat and voice commands later adapt into the `IntentCompilerProtocol`.
+- Normalize text and voice into the same typed intent contract.
+- Require ambiguity handling before execution.
+- Require audit linkage from raw human input to typed intent, Guardian decision, action, and result.
+- Document future thought/BCI input as confirmation-only and never a direct execution path.
+
+Acceptance criteria:
+
+- Sparkbot chat/voice flows have a planned adapter boundary into the Intent Compiler.
+- No raw chat-to-tool behavior is preserved as a runtime contract.
+- Consequential execution requires typed intent and a Guardian decision or approval token.
+- Future BCI input remains low-confidence, explicit-confirmation-only, and Guardian-reviewed.
 
 ## Phase 1: Decouple Guardian
 
@@ -41,6 +59,7 @@ Acceptance criteria:
 
 Scope:
 
+- Define the Intent Compiler boundary before extracting Harness execution paths so Sparkbot does not accidentally preserve raw chat-to-tool behavior.
 - Extract model routing/fallback, tool catalogue, prompt cache, telemetry, and friendly error handling.
 - Enforce tool-pack scoping.
 - Preserve Sparkbot model behavior through parity tests.
