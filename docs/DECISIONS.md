@@ -65,3 +65,20 @@ Consequences:
 - Voice is normalized into the same contract as text.
 - Future thought/BCI input is confirm-only and never direct execution.
 - Every action is traceable: `HumanInput -> IntentEnvelope -> GuardianDecision -> Action/Event`.
+
+## ADR-0008: Intent Compiler Cannot Execute
+
+Status: Accepted
+
+Decision: The Intent Compiler is a translation and clarification boundary only. It cannot execute tools, call drivers, perform file/network/browser/admin/payment/robot actions, or approve its own output.
+
+Rationale: Natural language is ambiguous. LIMA must preserve human control and Guardian review before consequential execution.
+
+Consequences:
+
+- `IntentCompilerProtocol` remains non-executing.
+- Execution belongs behind Guardian-approved Harness/Driver/Tool paths.
+- Ambiguity creates `ClarificationRequest`.
+- Low-confidence intent cannot proceed to execution.
+- High/critical-risk intent requires Guardian escalation and explicit approval.
+- Future BCI/thought input remains confirm-only.

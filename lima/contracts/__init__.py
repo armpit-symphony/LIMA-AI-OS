@@ -5,11 +5,16 @@ from .events import ApprovalEvent, AuditEvent, DriverEvent, ModelCallEvent, Tool
 from .guardian import GuardianContext, GuardianDecision, GuardianProtocol
 from .harness import HarnessProtocol, ModelRequest, ModelResponse
 from .intent import (
+    ApprovalLevel,
     ClarificationRequest,
+    EvidenceRequirement,
     HumanInput,
     HumanInputSource,
+    IntentCompilationResult,
     IntentCompilerProtocol,
     IntentEnvelope,
+    IntentStatus,
+    IntentType,
     RiskClass,
 )
 from .shell import ShellManifest, ShellProtocol
@@ -19,12 +24,14 @@ from .toolpack import ToolDefinition, ToolPackManifest, ToolPackProtocol
 
 __all__ = [
     "ApprovalEvent",
+    "ApprovalLevel",
     "AuditEvent",
     "DriverCapability",
     "DriverCommand",
     "DriverEvent",
     "DriverProtocol",
     "DriverResult",
+    "EvidenceRequirement",
     "GuardianContext",
     "GuardianDecision",
     "GuardianProtocol",
@@ -32,8 +39,11 @@ __all__ = [
     "HumanInput",
     "HumanInputSource",
     "ClarificationRequest",
+    "IntentCompilationResult",
     "IntentCompilerProtocol",
     "IntentEnvelope",
+    "IntentStatus",
+    "IntentType",
     "ModelCallEvent",
     "ModelRequest",
     "ModelResponse",

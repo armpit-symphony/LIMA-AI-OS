@@ -27,6 +27,7 @@ Acceptance criteria:
 
 Scope:
 
+- Complete the Intent Compiler boundary before any Sparkbot Harness or tool execution extraction.
 - Define how Sparkbot chat and voice commands later adapt into the `IntentCompilerProtocol`.
 - Normalize text and voice into the same typed intent contract.
 - Require ambiguity handling before execution.
@@ -39,6 +40,10 @@ Acceptance criteria:
 - No raw chat-to-tool behavior is preserved as a runtime contract.
 - Consequential execution requires typed intent and a Guardian decision or approval token.
 - Future BCI input remains low-confidence, explicit-confirmation-only, and Guardian-reviewed.
+
+Hard gate:
+
+Phase 0.5 must be complete before any Sparkbot Harness/tool execution extraction. Sparkbot may currently have direct chat-to-tool behavior. LIMA Runtime must not inherit that shortcut. It must inherit a governed `HumanInput -> IntentEnvelope -> GuardianDecision` path.
 
 ## Phase 1: Decouple Guardian
 

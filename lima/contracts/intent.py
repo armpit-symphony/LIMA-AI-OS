@@ -23,6 +23,52 @@ class RiskClass(str, Enum):
     CRITICAL = "critical"
 
 
+class IntentStatus(str, Enum):
+    RECEIVED = "received"
+    NORMALIZED = "normalized"
+    NEEDS_CLARIFICATION = "needs_clarification"
+    COMPILED = "compiled"
+    SUBMITTED_TO_GUARDIAN = "submitted_to_guardian"
+    APPROVED = "approved"
+    DENIED = "denied"
+    ESCALATED = "escalated"
+    EXPIRED = "expired"
+    SUPERSEDED = "superseded"
+
+
+class IntentType(str, Enum):
+    ASK_INFORMATION = "ask_information"
+    CREATE_PLAN = "create_plan"
+    DRAFT_CONTENT = "draft_content"
+    SCHEDULE_TASK = "schedule_task"
+    RUN_TOOL = "run_tool"
+    OPERATE_FILE = "operate_file"
+    BROWSE_WEB = "browse_web"
+    SEND_MESSAGE = "send_message"
+    CONTROL_ROBOT = "control_robot"
+    ADMINISTER_SYSTEM = "administer_system"
+    APPROVE_ACTION = "approve_action"
+    DENY_ACTION = "deny_action"
+    UNKNOWN = "unknown"
+
+
+class ApprovalLevel(str, Enum):
+    NONE = "none"
+    CONFIRM = "confirm"
+    GUARDIAN_REVIEW = "guardian_review"
+    OPERATOR_PIN = "operator_pin"
+    BREAKGLASS = "breakglass"
+
+
+@dataclass(frozen=True)
+class EvidenceRequirement:
+    evidence_id: str
+    kind: str
+    description: str
+    required: bool = True
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+
 @dataclass(frozen=True)
 class HumanInput:
     input_id: str
@@ -65,6 +111,16 @@ class ClarificationRequest:
     choices: Sequence[str] = field(default_factory=tuple)
     reason: str | None = None
     blocking: bool = True
+
+
+@dataclass(frozen=True)
+class IntentCompilationResult:
+    input: HumanInput
+    intent: IntentEnvelope | None = None
+    clarification: ClarificationRequest | None = None
+    status: IntentStatus = IntentStatus.RECEIVED
+    warnings: Sequence[str] = field(default_factory=tuple)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
 
 
 class IntentCompilerProtocol(Protocol):
