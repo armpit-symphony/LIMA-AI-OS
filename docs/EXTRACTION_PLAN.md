@@ -93,6 +93,35 @@ Specific blockers:
 - Robotics bridge must require typed intent and `decision_id` before robot MCP command planning/execution.
 - Tool catalogue execution must require tool-pack scoping plus `decision_id`.
 
+## Phase 0.8: Tool-Pack Scoping Contract
+
+Scope:
+
+- Define deny-by-default tool-pack scoping before Harness or tool catalogue extraction.
+- Require shells to declare allowed, default, denied, and critical tool packs.
+- Require `GuardianDecision.allowed_tool_packs` to constrain the Harness tool shortlist.
+- Require tool exposure decisions to be auditable.
+
+Acceptance criteria:
+
+- `docs/TOOL_PACK_SCOPING.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Harness contracts receive selected tools, not the full catalogue.
+- Critical packs require explicit risk and approval policy.
+
+Hard gate:
+
+No Harness/tool catalogue extraction until Sparkbot tools are inventoried into packs and scoped.
+
+Specific blockers:
+
+- `stream_chat_with_tools()` must not receive the full tool catalogue.
+- Terminal/admin/robot/payment/deploy tools must be critical packs.
+- File/network/browser tools must have explicit risk and approval policy.
+- Tool-pack exposure must be auditable.
+- `GuardianDecision.allowed_tool_packs` must constrain the Harness shortlist.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

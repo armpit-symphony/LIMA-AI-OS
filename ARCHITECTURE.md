@@ -28,6 +28,11 @@ LIMA-AI-OS is the contracts-first home for **LIMA Runtime / LIMA Kernel**, a Gua
                     +----------------------+-----------------------+
                                            |
                     +----------------------v-----------------------+
+                    | Tool-Pack Scope                             |
+                    | deny-by-default packs, shortlist tools      |
+                    +----------------------+-----------------------+
+                                           |
+                    +----------------------v-----------------------+
                     | Model Plane                                  |
                     | reasoning, planning, model routing           |
                     +----------------------+-----------------------+
@@ -115,6 +120,18 @@ Every external action, tool execution, privileged operation, model call, robotic
 No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing.
 
 Every consequential action must carry a scoped `GuardianDecision.decision_id` before execution. The `decision_id` is the audit identity that links typed intent to Harness, Tool, Driver, Terminal, Robot, Spine, and Audit events.
+
+## Tool-Pack Scoping
+
+Tool-pack scoping sits between `GuardianDecision` and Harness tool exposure:
+
+```text
+GuardianDecision -> ToolPackScope -> Harness Tool Shortlist -> Tool Execution -> Spine/Audit
+```
+
+Tool exposure is deny-by-default. Shells declare allowed packs, actor/session policy narrows them, intent proposes needed packs, and Guardian constrains the final allowed packs. The Harness receives a selected shortlist, not the full catalogue.
+
+No shell receives every tool by default. Terminal, admin, robot, payment, deployment, filesystem, browser, and network packs require explicit risk and approval policy before exposure.
 
 ## Natural Language as an OS Primitive
 

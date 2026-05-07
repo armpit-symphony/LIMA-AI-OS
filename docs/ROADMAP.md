@@ -94,6 +94,29 @@ Acceptance criteria:
 - Harness/Driver contracts mention `GuardianDecision` requirements.
 - Phase 1 extraction remains blocked until the `decision_id` contract is reviewed.
 
+### M0.8: Tool-Pack Scoping Contract
+
+Goal: define deny-by-default tool-pack scoping so shells and models never receive the full tool catalogue by default.
+
+Deliverables:
+
+- `docs/TOOL_PACK_SCOPING.md`.
+- `ToolPackManifest` expansion.
+- `ShellToolScope` contract.
+- `ToolExposureRequest` contract.
+- `ToolExposureDecision` contract.
+- Harness shortlist requirements.
+- Default pack risk classes.
+- Shell examples for Sparkbot, Arc, SparkPit, Robo-OS, and future humanoid/worker robots.
+
+Acceptance criteria:
+
+- No shell receives all tools by default.
+- Tool exposure is deny-by-default.
+- Every consequential tool execution requires `GuardianDecision.decision_id`.
+- Critical packs require explicit approval metadata.
+- Harness extraction remains blocked until Sparkbot tools are grouped into packs.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

@@ -44,8 +44,13 @@ def test_public_contract_imports() -> None:
         TerminalEvent,
         ToolCallEvent,
         ToolDefinition,
+        ToolExposureAuditEvent,
+        ToolExposureDecision,
+        ToolExposureRequest,
         ToolPackManifest,
+        ToolPackName,
         ToolPackProtocol,
+        ShellToolScope,
     )
 
     assert lima.__all__ == ["contracts"]
@@ -91,8 +96,13 @@ def test_public_contract_imports() -> None:
             TerminalEvent,
             ToolCallEvent,
             ToolDefinition,
+            ToolExposureAuditEvent,
+            ToolExposureDecision,
+            ToolExposureRequest,
             ToolPackManifest,
+            ToolPackName,
             ToolPackProtocol,
+            ShellToolScope,
         )
     )
 
@@ -276,3 +286,107 @@ def test_guardian_decision_contracts_instantiate() -> None:
     assert "evaluate_action" in public_callables
     assert "record_decision" in public_callables
     assert "execute" not in public_callables
+
+
+def test_tool_pack_scoping_contracts_instantiate() -> None:
+    from datetime import datetime, timezone
+
+    from lima.contracts import (
+        ModelRequest,
+        ShellManifest,
+        ShellToolScope,
+        ToolExposureAuditEvent,
+        ToolExposureDecision,
+        ToolExposureRequest,
+        ToolPackManifest,
+        ToolPackName,
+        ToolPackProtocol,
+    )
+
+    manifest = ToolPackManifest(
+        pack_name=ToolPackName.TERMINAL,
+        description="Terminal tools require critical approval.",
+        default_risk_class="critical",
+        allowed_action_types=("terminal_command",),
+        requires_approval_level="operator_pin",
+        tools=("terminal_send",),
+        constraints={"deny_by_default": True},
+    )
+    shell_scope = ShellToolScope(
+        shell_id="sparkbot",
+        actor_id="operator-1",
+        allowed_packs=(ToolPackName.MEMORY, ToolPackName.TERMINAL),
+        denied_packs=(ToolPackName.PAYMENTS,),
+        default_packs=(ToolPackName.MEMORY,),
+        critical_packs=(ToolPackName.TERMINAL,),
+        policy_version="phase-0.8",
+    )
+    shell_manifest = ShellManifest(
+        shell_id=shell_scope.shell_id,
+        name="Sparkbot",
+        allowed_tool_packs=("memory", "terminal"),
+        default_tool_packs=("memory",),
+        denied_tool_packs=("payments",),
+        critical_tool_packs=("terminal",),
+    )
+    exposure_request = ToolExposureRequest(
+        request_id="exposure-request-1",
+        shell_id=shell_scope.shell_id,
+        actor_id="operator-1",
+        intent_id="intent-1",
+        decision_id="decision-1",
+        requested_packs=(ToolPackName.TERMINAL,),
+        requested_tools=("terminal_send",),
+        risk_class="critical",
+        context_refs=("terminal:session-1",),
+    )
+    exposure_decision = ToolExposureDecision(
+        exposure_id="exposure-1",
+        request_id=exposure_request.request_id,
+        decision_id=exposure_request.decision_id,
+        allowed_packs=(ToolPackName.TERMINAL,),
+        denied_packs=(ToolPackName.PAYMENTS,),
+        selected_tools=("terminal_send",),
+        risk_class="critical",
+        constraints={"requires_decision": True},
+        reason="Terminal pack requires scoped approval.",
+        policy_version="phase-0.8",
+        created_at="2026-05-06T00:00:00Z",
+    )
+    model_request = ModelRequest(
+        prompt="Prepare a guarded terminal plan.",
+        tool_pack_scope=("terminal",),
+        selected_tools=tuple(exposure_decision.selected_tools),
+        tool_exposure=exposure_decision,
+    )
+    audit_event = ToolExposureAuditEvent(
+        event_id="event-3",
+        actor_id=exposure_request.actor_id,
+        shell_id=exposure_request.shell_id,
+        event_type="tool.exposure",
+        created_at=datetime(2026, 5, 6, tzinfo=timezone.utc),
+        decision_id=exposure_request.decision_id,
+        intent_id=exposure_request.intent_id,
+        exposure_id=exposure_decision.exposure_id,
+        allowed_packs=("terminal",),
+        denied_packs=("payments",),
+        selected_tools=tuple(exposure_decision.selected_tools),
+        risk_class=exposure_decision.risk_class,
+    )
+    public_callables = {
+        name
+        for name, value in ToolPackProtocol.__dict__.items()
+        if not name.startswith("_") and callable(value)
+    }
+
+    assert ToolPackName.TERMINAL.value == "terminal"
+    assert ToolPackName.PAYMENTS.value == "payments"
+    assert ToolPackName.UNKNOWN.value == "unknown"
+    assert manifest.requires_decision is True
+    assert shell_manifest.default_tool_packs == ("memory",)
+    assert shell_scope.critical_packs == (ToolPackName.TERMINAL,)
+    assert exposure_request.decision_id == "decision-1"
+    assert exposure_decision.selected_tools == ("terminal_send",)
+    assert model_request.tool_exposure is exposure_decision
+    assert audit_event.decision_id == exposure_decision.decision_id
+    assert public_callables == {"declare_manifest", "list_tools"}

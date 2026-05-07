@@ -141,3 +141,7 @@ Goal: define the durable `GuardianDecision.decision_id` and approval token linka
 ## Phase 0.7 Follow-Up
 
 The unresolved risks from Phase 0.6 are carried into the GuardianDecision contract. Each risky entrypoint must later be mapped to `decision_id` before extraction, especially `stream_chat_with_tools()`, voice transcript routing, terminal/PTY routes, robotics bridge command planning, and broad tool catalogue execution.
+
+## Phase 0.8 Follow-Up
+
+The broad Sparkbot tool catalogue risk is carried into Tool-Pack Scoping. Before extraction, current Sparkbot tools must be grouped into packs and denied by default unless the shell, intent, and `GuardianDecision` allow them.

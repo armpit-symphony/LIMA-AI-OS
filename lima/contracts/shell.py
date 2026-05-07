@@ -11,6 +11,9 @@ class ShellManifest:
     shell_id: str
     name: str
     allowed_tool_packs: tuple[str, ...] = ()
+    default_tool_packs: tuple[str, ...] = ()
+    denied_tool_packs: tuple[str, ...] = ()
+    critical_tool_packs: tuple[str, ...] = ()
     permissions: tuple[str, ...] = ()
     description: str | None = None
     metadata: dict[str, str] = field(default_factory=dict)

@@ -63,3 +63,12 @@ class TerminalEvent(AuditEvent):
     command_ref: str | None = None
     risk_class: str = "critical"
     result_status: str | None = None
+
+
+@dataclass(frozen=True)
+class ToolExposureAuditEvent(AuditEvent):
+    exposure_id: str = ""
+    allowed_packs: tuple[str, ...] = ()
+    denied_packs: tuple[str, ...] = ()
+    selected_tools: tuple[str, ...] = ()
+    risk_class: str = ""
