@@ -145,3 +145,7 @@ The unresolved risks from Phase 0.6 are carried into the GuardianDecision contra
 ## Phase 0.8 Follow-Up
 
 The broad Sparkbot tool catalogue risk is carried into Tool-Pack Scoping. Before extraction, current Sparkbot tools must be grouped into packs and denied by default unless the shell, intent, and `GuardianDecision` allow them.
+
+## Phase 0.9 Follow-Up
+
+Phase 0.9 adds `docs/SPARKBOT_TOOL_PACK_INVENTORY.md`, which maps Sparkbot's static tools, dynamic skills, MCP manifests, and workflow surfaces into proposed LIMA tool packs before Harness/tool extraction.

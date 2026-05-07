@@ -122,6 +122,35 @@ Specific blockers:
 - Tool-pack exposure must be auditable.
 - `GuardianDecision.allowed_tool_packs` must constrain the Harness shortlist.
 
+## Phase 0.9: Sparkbot Tool-Pack Inventory
+
+Scope:
+
+- Inventory Sparkbot's current static tools, dynamic skills, MCP manifests, routes, scripts, and workflow surfaces.
+- Map known tool surfaces into future LIMA tool packs.
+- Mark unknown or unclassified tool surfaces as denied by default.
+- Carry full-catalogue exposure risks forward before Harness extraction.
+
+Acceptance criteria:
+
+- `docs/SPARKBOT_TOOL_PACK_INVENTORY.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Critical packs are identified.
+- Unknown tools remain denied until classified.
+
+Hard gate:
+
+No Harness/tool catalogue extraction until Sparkbot tool surfaces are grouped into packs and unknown tools are reviewed.
+
+Specific blockers:
+
+- `stream_chat_with_tools()` cannot be extracted with full-catalogue exposure.
+- Terminal/admin/robot/payment/deploy tools must be critical packs.
+- Files/browser/network/comms/calendar tools require risk and approval policy.
+- Unknown tools must be classified before extraction.
+- `GuardianDecision.allowed_tool_packs` must constrain `selected_tools`.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

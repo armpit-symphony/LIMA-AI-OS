@@ -131,3 +131,18 @@ Consequences:
 - Critical packs require explicit approval.
 - Tool exposure is auditable.
 - Sparkbot parity must preserve behavior without preserving full-catalogue exposure.
+
+## ADR-0012: Sparkbot Tools Must Be Inventoried Into Packs Before Harness Extraction
+
+Status: Accepted
+
+Decision: Before extracting Sparkbot's Harness or tool catalogue into LIMA Runtime, current Sparkbot tool surfaces must be inventoried and grouped into deny-by-default tool packs.
+
+Rationale: Sparkbot is the spec, but broad full-catalogue exposure must not become a LIMA Runtime primitive. Tool-pack inventory allows LIMA to preserve Sparkbot behavior while enforcing scoped, auditable, `GuardianDecision`-constrained tool exposure.
+
+Consequences:
+
+- Harness extraction is blocked until Sparkbot tool surfaces are classified.
+- Unknown tools remain denied by default.
+- Critical packs require explicit approval policy.
+- Sparkbot parity means behavior parity through scoped packs, not full firehose exposure.
