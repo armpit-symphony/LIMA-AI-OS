@@ -19,6 +19,7 @@ Observed Phase 0 notes:
 - Sparkbot documents a Guardian/Spine flow where model routing, tool policy, guarded execution, audit, memory, and task lineage connect.
 - Sparkbot includes MCP registry and run planning surfaces that already distinguish plan/approval state from direct execution.
 - Recent Sparkbot changes should be reviewed before any extraction, especially around approval redaction, breakglass, token routing, memory lifecycle, and run timelines.
+- Phase 0.6 adds `docs/SPARKBOT_ENTRYPOINT_INVENTORY.md` as a required pre-extraction step so chat, voice, model, tool, Guardian, terminal, browser, network, meeting, and robotics entrypoints are classified before code moves.
 
 ## LIMA-Guardian-Suite
 

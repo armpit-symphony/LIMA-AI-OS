@@ -45,6 +45,26 @@ Hard gate:
 
 Phase 0.5 must be complete before any Sparkbot Harness/tool execution extraction. Sparkbot may currently have direct chat-to-tool behavior. LIMA Runtime must not inherit that shortcut. It must inherit a governed `HumanInput -> IntentEnvelope -> GuardianDecision` path.
 
+## Phase 0.6: Sparkbot Entrypoint Inventory
+
+Scope:
+
+- Review Sparkbot's current entrypoints before extracting Guardian, Harness, Spine, or tool execution paths.
+- Classify inspected code paths as shell-specific, runtime/kernel candidates, Guardian gates, Harness/model concerns, Driver/tool concerns, Spine/audit concerns, or deprecated/unsafe shortcut patterns.
+- Map current entrypoints to future `HumanInput`, `IntentEnvelope`, `GuardianDecision`, Harness, Driver, Spine, ToolPack, or Shell contracts.
+- Identify raw chat-to-tool shortcut risks, Guardian coverage gaps, and tool-pack scoping concerns.
+
+Acceptance criteria:
+
+- `docs/SPARKBOT_ENTRYPOINT_INVENTORY.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Potential direct chat/voice/model-to-tool paths are identified and blocked from becoming runtime contracts.
+
+Hard gate:
+
+Do not extract any code path that allows raw chat/voice to execute tools without `IntentEnvelope` and `GuardianDecision`.
+
 ## Phase 1: Decouple Guardian
 
 Scope:
