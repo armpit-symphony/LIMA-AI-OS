@@ -82,3 +82,18 @@ Consequences:
 - Low-confidence intent cannot proceed to execution.
 - High/critical-risk intent requires Guardian escalation and explicit approval.
 - Future BCI/thought input remains confirm-only.
+
+## ADR-0009: Inventory Sparkbot Entrypoints Before Extraction
+
+Status: Accepted
+
+Decision: Before extracting Guardian, Harness, Spine, or tool execution paths, LIMA Runtime will inventory Sparkbot's current entrypoints and map them to the contracts-first architecture.
+
+Rationale: Sparkbot is the spec, but not every implementation shortcut should become part of the kernel. Inventory protects LIMA from inheriting raw chat-to-tool shortcuts, unclear side-effect paths, or shell-specific code as runtime primitives.
+
+Consequences:
+
+- Extraction is blocked until entrypoints are reviewed.
+- Sparkbot parity means preserving user-facing behavior, not preserving unsafe internal shortcuts.
+- Each entrypoint must map to `HumanInput`, `IntentEnvelope`, `GuardianDecision`, Harness, Driver, Spine, ToolPack, Shell, or be marked out-of-scope.
+- High-risk areas such as terminal, files, network, admin, and future robot actions require explicit Guardian coverage.

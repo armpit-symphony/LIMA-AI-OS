@@ -51,6 +51,28 @@ Acceptance criteria:
 - Future thought/BCI input is documented as confirm-only, never direct execution.
 - Sparkbot can later adapt its chat/voice commands into this contract without losing current behavior.
 
+### M0.6: Sparkbot Entrypoint Inventory
+
+Goal: inventory Sparkbot's current chat/voice/tool/model/Guardian/terminal/file/network/meeting entrypoints before extraction.
+
+Deliverables:
+
+- `docs/SPARKBOT_ENTRYPOINT_INVENTORY.md`.
+- Mapping from current Sparkbot entrypoints to future LIMA contracts.
+- Raw chat-to-tool shortcut risk notes.
+- Guardian coverage notes.
+- Tool-pack scoping notes.
+- Extraction blockers list.
+
+Acceptance criteria:
+
+- No Sparkbot code is copied.
+- No LIMA runtime implementation is added.
+- Current entrypoints are mapped to `HumanInput`, `IntentEnvelope`, `GuardianDecision`, Harness, Driver, Spine, ToolPack, or Shell contracts.
+- Potential raw chat-to-tool shortcuts are identified.
+- Future Sparkbot adapter requirements are documented.
+- Phase 1 extraction remains blocked until inventory is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
