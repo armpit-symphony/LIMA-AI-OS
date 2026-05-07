@@ -29,7 +29,7 @@ class HarnessProtocol(Protocol):
     """Model routing and tool planning surface."""
 
     async def complete(self, request: ModelRequest, decision: GuardianDecision) -> ModelResponse:
-        """Run a model completion only after Guardian classifies the model call."""
+        """Run a consequential model call only with a Guardian decision_id."""
         ...
 
     async def plan_tool_call(self, request: ModelRequest) -> Any:
@@ -37,5 +37,5 @@ class HarnessProtocol(Protocol):
         ...
 
     async def execute_guarded_tool_call(self, tool_call: Any, decision: GuardianDecision) -> Any:
-        """Execute a tool call only with a Guardian decision or approval token."""
+        """Execute a tool call only with a Guardian decision_id."""
         ...

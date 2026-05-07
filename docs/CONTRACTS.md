@@ -17,11 +17,90 @@ LIMA Runtime contracts define the kernel boundary before implementation is extra
 
 Guardian classifies and records decisions for model calls, tool calls, driver commands, privileged operations, and approval-requiring actions.
 
+`GuardianDecision.decision_id` is mandatory for consequential execution. It is the audit identity that links typed intent to model calls, tools, drivers, terminal/PTY commands, files, browser/network actions, admin actions, payments, robot actions, and Spine/Audit events.
+
 Examples in prose:
 
 - A model request enters the Harness. Guardian classifies the request for cost, policy, and allowed model route before the Harness calls a model provider.
 - A tool call is planned by the Harness. Guardian classifies it as allow, deny, approval required, or route to another path.
 - A robot motion command is represented as a driver command. Guardian classifies it before the driver can execute it.
+
+### GuardianDecision
+
+Fields:
+
+- `decision_id`
+- `request_id`
+- `intent_id`
+- `input_id`
+- `actor_id`
+- `shell_id`
+- `action_type`
+- `target_ref`
+- `risk_class`
+- `status` / outcome
+- `approval_level`
+- `allowed_tool_packs`
+- `constraints`
+- `evidence_refs`
+- `policy_version`
+- `created_at`
+- `expires_at`
+- `decided_at`
+- `decided_by`
+- `reason`
+- `metadata`
+
+Rules:
+
+- A `decision_id` must be globally unique.
+- A `decision_id` must be recorded before consequential execution.
+- A `decision_id` must be carried by downstream Harness, Tool, Driver, Terminal, Robot, Spine, and Audit events.
+- A `decision_id` must not be reused for unrelated actions.
+- Denied, escalated, expired, revoked, and superseded decisions are still audit records.
+- High/critical decisions require stronger evidence and approval metadata.
+
+### GuardianDecisionStatus
+
+Statuses:
+
+- `approved`
+- `denied`
+- `needs_clarification`
+- `needs_human_confirmation`
+- `needs_operator_pin`
+- `needs_breakglass`
+- `escalated`
+- `expired`
+- `revoked`
+- `superseded`
+
+### ConsequentialActionRequest
+
+Fields:
+
+- `request_id`
+- `intent_id`
+- `input_id`
+- `actor_id`
+- `shell_id`
+- `action_type`
+- `target_ref`
+- `requested_tool_pack`
+- `risk_class`
+- `typed_args`
+- `evidence_refs`
+- `metadata`
+
+Decision rules:
+
+- Intent Compiler does not decide.
+- Guardian decides.
+- Harness/Driver/Tool execution requires `GuardianDecision`.
+- Spine/Audit records the outcome.
+- No consequential execution may proceed without `decision_id`.
+
+Consequential actions include model calls with user/project context, tool calls, driver commands, terminal/PTY commands, file operations, browser/network actions, external communications, private data access, state changes, admin actions, payments, deployments, robot/physical-world actions, and any operation requiring approvals, auth, vault, breakglass, or elevated permissions.
 
 ## HumanInput
 
@@ -192,7 +271,7 @@ Rules:
 
 Harness owns model routing, fallback, tool catalogue filtering, prompt cache, telemetry, and friendly errors.
 
-Harness may plan a tool call. It may only execute a guarded tool call when supplied with a Guardian decision or approval token.
+Harness may plan a tool call. It may only execute consequential model/tool calls when supplied with a `GuardianDecision.decision_id`. Planning and execution must remain separated so raw chat, voice transcripts, or model-generated tool plans cannot execute directly.
 
 ## Spine
 
@@ -204,7 +283,7 @@ Spine records what happened. Guardian decides whether externally actionable work
 
 Drivers expose capabilities, dry-run previews, telemetry expectations, and execution calls.
 
-Driver execution requires Guardian approval. For Robo-OS, real hardware motion is never a default path.
+Driver execution requires a scoped `GuardianDecision.decision_id`. Terminal/PTY and robot driver actions are critical risk. For Robo-OS, real hardware motion is never a default path.
 
 ## Storage
 
@@ -245,11 +324,11 @@ Approval contracts represent pending, approved, denied, expired, and routed deci
 
 ## AuditEvent
 
-Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, and correlation IDs.
+Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.
 
 ## ModelCall
 
-Model call events record request metadata, selected route, cost/token posture, and result metadata. They must not leak raw secrets.
+Model call events record request metadata, selected route, cost/token posture, result metadata, and `decision_id` for consequential model calls. They must not leak raw secrets.
 
 ## ToolCall
 

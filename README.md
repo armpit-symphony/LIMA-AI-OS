@@ -42,7 +42,7 @@ Every external action, tool execution, privileged operation, model call, robotic
 
 **Guardian is the syscall gate.**
 
-No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing.
+No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing. Every consequential execution path must carry a `GuardianDecision.decision_id` before execution and into downstream audit events.
 
 ## Natural Language Control Plane
 
@@ -150,6 +150,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/CONTRACTS.md](docs/CONTRACTS.md)
 - [docs/INTENT_COMPILER_BOUNDARY.md](docs/INTENT_COMPILER_BOUNDARY.md)
 - [docs/SPARKBOT_ENTRYPOINT_INVENTORY.md](docs/SPARKBOT_ENTRYPOINT_INVENTORY.md)
+- [docs/GUARDIAN_DECISION_CONTRACT.md](docs/GUARDIAN_DECISION_CONTRACT.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
 - [docs/ROADMAP.md](docs/ROADMAP.md)
 - [docs/DECISIONS.md](docs/DECISIONS.md)

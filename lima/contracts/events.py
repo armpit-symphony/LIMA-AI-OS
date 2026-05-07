@@ -16,13 +16,24 @@ class AuditEvent:
     created_at: datetime
     metadata: dict[str, Any] = field(default_factory=dict)
     correlation_id: str | None = None
+    decision_id: str | None = None
+    intent_id: str | None = None
+    input_id: str | None = None
+
+
+@dataclass(frozen=True)
+class DecisionAuditEvent(AuditEvent):
+    action_type: str = ""
+    target_ref: str | None = None
+    risk_class: str = ""
+    result_status: str | None = None
+    evidence_refs: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
 class ApprovalEvent(AuditEvent):
     approval_id: str = ""
     status: Literal["pending", "approved", "denied", "expired"] = "pending"
-    decision_id: str | None = None
 
 
 @dataclass(frozen=True)
@@ -30,13 +41,11 @@ class ModelCallEvent(AuditEvent):
     model: str = ""
     route: str | None = None
     token_estimate: int | None = None
-    decision_id: str | None = None
 
 
 @dataclass(frozen=True)
 class ToolCallEvent(AuditEvent):
     tool_name: str = ""
-    decision_id: str | None = None
     approval_id: str | None = None
     result_status: str | None = None
 
@@ -45,5 +54,12 @@ class ToolCallEvent(AuditEvent):
 class DriverEvent(AuditEvent):
     driver_id: str = ""
     capability: str = ""
-    decision_id: str | None = None
     telemetry_ref: str | None = None
+
+
+@dataclass(frozen=True)
+class TerminalEvent(AuditEvent):
+    terminal_id: str = ""
+    command_ref: str | None = None
+    risk_class: str = "critical"
+    result_status: str | None = None

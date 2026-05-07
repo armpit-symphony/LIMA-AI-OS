@@ -65,6 +65,34 @@ Hard gate:
 
 Do not extract any code path that allows raw chat/voice to execute tools without `IntentEnvelope` and `GuardianDecision`.
 
+## Phase 0.7: Guardian Decision ID Contract
+
+Scope:
+
+- Define the mandatory `GuardianDecision.decision_id` contract before extracting any Sparkbot execution path.
+- Require every consequential Harness, Tool, Driver, Terminal, File, Browser, Network, Admin, Payment, Robot, or deployment action to carry `decision_id`.
+- Require downstream Spine/Audit events to carry `decision_id`, and `intent_id` / `input_id` when available.
+- Keep denied, escalated, expired, revoked, and superseded decisions auditable.
+
+Acceptance criteria:
+
+- `docs/GUARDIAN_DECISION_CONTRACT.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Harness, Driver, Tool, Terminal, Robot, and Spine/Audit contracts have a `decision_id` boundary.
+
+Hard gate:
+
+No Sparkbot execution path may be extracted until it can carry or be adapted to `GuardianDecision.decision_id`.
+
+Specific blockers:
+
+- `stream_chat_with_tools()` must be split or wrapped so planning and execution are separated by `GuardianDecision`.
+- Voice transcript paths must carry `HumanInput.input_id` and transcript confidence.
+- Terminal/PTY paths must be critical-risk and decision-gated.
+- Robotics bridge must require typed intent and `decision_id` before robot MCP command planning/execution.
+- Tool catalogue execution must require tool-pack scoping plus `decision_id`.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

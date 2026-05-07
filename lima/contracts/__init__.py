@@ -1,8 +1,24 @@
 """Public Phase 0 contracts for LIMA Runtime."""
 
 from .driver import DriverCapability, DriverCommand, DriverProtocol, DriverResult
-from .events import ApprovalEvent, AuditEvent, DriverEvent, ModelCallEvent, ToolCallEvent
-from .guardian import GuardianContext, GuardianDecision, GuardianProtocol
+from .events import (
+    ApprovalEvent,
+    AuditEvent,
+    DecisionAuditEvent,
+    DriverEvent,
+    ModelCallEvent,
+    TerminalEvent,
+    ToolCallEvent,
+)
+from .guardian import (
+    ConsequentialActionRequest,
+    ConsequentialActionType,
+    GuardianContext,
+    GuardianDecision,
+    GuardianDecisionRef,
+    GuardianDecisionStatus,
+    GuardianProtocol,
+)
 from .harness import HarnessProtocol, ModelRequest, ModelResponse
 from .intent import (
     ApprovalLevel,
@@ -26,6 +42,9 @@ __all__ = [
     "ApprovalEvent",
     "ApprovalLevel",
     "AuditEvent",
+    "ConsequentialActionRequest",
+    "ConsequentialActionType",
+    "DecisionAuditEvent",
     "DriverCapability",
     "DriverCommand",
     "DriverEvent",
@@ -34,6 +53,8 @@ __all__ = [
     "EvidenceRequirement",
     "GuardianContext",
     "GuardianDecision",
+    "GuardianDecisionRef",
+    "GuardianDecisionStatus",
     "GuardianProtocol",
     "HarnessProtocol",
     "HumanInput",
@@ -54,6 +75,7 @@ __all__ = [
     "SpineProtocol",
     "StorageProtocol",
     "TaskRecord",
+    "TerminalEvent",
     "ToolCallEvent",
     "ToolDefinition",
     "ToolPackManifest",

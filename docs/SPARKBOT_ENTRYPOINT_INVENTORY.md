@@ -137,3 +137,7 @@ Firehose risk: `backend/app/api/routes/chat/tools.py` aggregates many tools in o
 Recommended next branch: `phase-0-7-guardian-decision-id-contract`.
 
 Goal: define the durable `GuardianDecision.decision_id` and approval token linkage required before Guardian, Harness, Driver, Tool, Spine, or Sparkbot adapter extraction.
+
+## Phase 0.7 Follow-Up
+
+The unresolved risks from Phase 0.6 are carried into the GuardianDecision contract. Each risky entrypoint must later be mapped to `decision_id` before extraction, especially `stream_chat_with_tools()`, voice transcript routing, terminal/PTY routes, robotics bridge command planning, and broad tool catalogue execution.

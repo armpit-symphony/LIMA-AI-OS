@@ -36,7 +36,7 @@ class DriverResult:
 
 
 class DriverProtocol(Protocol):
-    """External driver boundary. Execution requires Guardian approval."""
+    """External driver boundary. Consequential execution requires decision_id."""
 
     def declare_capabilities(self) -> tuple[DriverCapability, ...]:
         """Declare available driver capabilities."""
@@ -47,5 +47,5 @@ class DriverProtocol(Protocol):
         ...
 
     async def execute(self, command: DriverCommand, decision: GuardianDecision) -> DriverResult:
-        """Execute only after Guardian approval or allow decision."""
+        """Execute only after Guardian issues a scoped decision_id."""
         ...

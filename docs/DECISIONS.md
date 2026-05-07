@@ -97,3 +97,20 @@ Consequences:
 - Sparkbot parity means preserving user-facing behavior, not preserving unsafe internal shortcuts.
 - Each entrypoint must map to `HumanInput`, `IntentEnvelope`, `GuardianDecision`, Harness, Driver, Spine, ToolPack, Shell, or be marked out-of-scope.
 - High-risk areas such as terminal, files, network, admin, and future robot actions require explicit Guardian coverage.
+
+## ADR-0010: GuardianDecision IDs Are Required For Consequential Execution
+
+Status: Accepted
+
+Decision: Every consequential LIMA Runtime action must be linked to a `GuardianDecision.decision_id` before execution.
+
+Rationale: LIMA must preserve human control, auditability, and safety across model calls, tools, drivers, terminal, files, network, browser, admin, payments, and robots.
+
+Consequences:
+
+- Raw language cannot execute directly.
+- Intent Compiler cannot approve or execute.
+- Harness/Tool/Driver execution requires `decision_id`.
+- Terminal/PTY and robot actions are critical risk.
+- Denied, escalated, expired, revoked, and superseded decisions are still audit records.
+- Sparkbot parity must adapt current behavior to decision-gated execution.

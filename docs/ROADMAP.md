@@ -73,6 +73,27 @@ Acceptance criteria:
 - Future Sparkbot adapter requirements are documented.
 - Phase 1 extraction remains blocked until inventory is reviewed.
 
+### M0.7: Guardian Decision ID Contract
+
+Goal: define the mandatory `decision_id` contract linking `IntentEnvelope` to every consequential action and audit event.
+
+Deliverables:
+
+- `docs/GUARDIAN_DECISION_CONTRACT.md`.
+- `GuardianDecisionStatus` contract.
+- `ConsequentialActionRequest` contract.
+- `decision_id` requirements for Harness, Tool, Driver, Terminal, Robot, File, Browser, Network, Admin, Payment actions.
+- Spine/Audit event linkage requirements.
+- Risk handling notes for terminal/PTY and robot actions.
+
+Acceptance criteria:
+
+- Every consequential execution path must require `decision_id` in architecture.
+- Denied, escalated, and expired decisions are auditable.
+- `decision_id` cannot be reused for unrelated actions.
+- Harness/Driver contracts mention `GuardianDecision` requirements.
+- Phase 1 extraction remains blocked until the `decision_id` contract is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
