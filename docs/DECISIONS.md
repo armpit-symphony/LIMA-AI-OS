@@ -114,3 +114,20 @@ Consequences:
 - Terminal/PTY and robot actions are critical risk.
 - Denied, escalated, expired, revoked, and superseded decisions are still audit records.
 - Sparkbot parity must adapt current behavior to decision-gated execution.
+
+## ADR-0011: Tool Exposure Is Deny-by-Default and Pack-Scoped
+
+Status: Accepted
+
+Decision: LIMA Runtime will expose tools through explicit tool packs scoped by shell, actor/session, intent, risk class, and `GuardianDecision`. No shell or model call receives the full catalogue by default.
+
+Rationale: Broad tool exposure creates safety, cost, privacy, and reliability risks. Sparkbot's current broad tool-aware path must be adapted into scoped packs before extraction.
+
+Consequences:
+
+- Shells declare allowed packs.
+- `GuardianDecision` constrains `allowed_tool_packs`.
+- Harness receives a tool shortlist.
+- Critical packs require explicit approval.
+- Tool exposure is auditable.
+- Sparkbot parity must preserve behavior without preserving full-catalogue exposure.

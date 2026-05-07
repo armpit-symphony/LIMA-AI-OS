@@ -56,6 +56,12 @@ Guardian gates every meaningful action. LIMA exists to make AI systems and robot
 
 Future thought/BCI input is documented as a research-facing, confirmation-only surface. It may produce low-confidence intent candidates, but it must never directly actuate tools, systems, payments, admin functions, or physical-world drivers. Explicit confirmation and Guardian approval are mandatory.
 
+## Tool-Pack Scoping
+
+LIMA Runtime uses deny-by-default tool-pack scoping so each shell receives only the tools it is allowed to use. Sparkbot, Arc / LIMA AI Office, SparkPit web, Robo-OS, and future robot shells must declare allowed packs; Guardian decisions constrain which packs can reach the Harness shortlist.
+
+No shell receives every tool by default. Consequential tool exposure and execution must carry `GuardianDecision.decision_id`.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -151,6 +157,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/INTENT_COMPILER_BOUNDARY.md](docs/INTENT_COMPILER_BOUNDARY.md)
 - [docs/SPARKBOT_ENTRYPOINT_INVENTORY.md](docs/SPARKBOT_ENTRYPOINT_INVENTORY.md)
 - [docs/GUARDIAN_DECISION_CONTRACT.md](docs/GUARDIAN_DECISION_CONTRACT.md)
+- [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
 - [docs/ROADMAP.md](docs/ROADMAP.md)
 - [docs/DECISIONS.md](docs/DECISIONS.md)

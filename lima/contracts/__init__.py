@@ -8,6 +8,7 @@ from .events import (
     DriverEvent,
     ModelCallEvent,
     TerminalEvent,
+    ToolExposureAuditEvent,
     ToolCallEvent,
 )
 from .guardian import (
@@ -36,7 +37,15 @@ from .intent import (
 from .shell import ShellManifest, ShellProtocol
 from .spine import SpineEvent, SpineProtocol, TaskRecord
 from .storage import StorageProtocol
-from .toolpack import ToolDefinition, ToolPackManifest, ToolPackProtocol
+from .toolpack import (
+    ShellToolScope,
+    ToolDefinition,
+    ToolExposureDecision,
+    ToolExposureRequest,
+    ToolPackManifest,
+    ToolPackName,
+    ToolPackProtocol,
+)
 
 __all__ = [
     "ApprovalEvent",
@@ -78,6 +87,11 @@ __all__ = [
     "TerminalEvent",
     "ToolCallEvent",
     "ToolDefinition",
+    "ToolExposureAuditEvent",
+    "ToolExposureDecision",
+    "ToolExposureRequest",
     "ToolPackManifest",
+    "ToolPackName",
     "ToolPackProtocol",
+    "ShellToolScope",
 ]

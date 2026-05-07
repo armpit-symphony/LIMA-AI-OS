@@ -304,19 +304,100 @@ Shells declare:
 
 ## ToolPack
 
-Tool packs group tools by capability and risk area.
+Tool packs group tools by capability and risk area. Tool exposure is deny-by-default: shells, actors, intents, and Guardian decisions narrow which tools can reach the Harness.
 
-Required pack model:
+### ToolPackName / ToolPackCategory
 
-- `packs/comms`
-- `packs/robo`
-- `packs/system`
-- `packs/browser`
-- `packs/files`
-- `packs/memory`
-- `packs/admin`
+Starter categories:
 
-Shells declare allowed packs. The Harness scopes the available tool catalogue from those packs. The model does not receive every available tool by default.
+- `core`
+- `memory`
+- `files`
+- `browser`
+- `network`
+- `comms`
+- `calendar`
+- `meeting`
+- `terminal`
+- `system`
+- `admin`
+- `deploy`
+- `payments`
+- `robo`
+- `sensors`
+- `model`
+- `research`
+- `moderation`
+- `unknown`
+
+### ToolPackManifest
+
+Fields:
+
+- `pack_name`
+- `description`
+- `default_risk_class`
+- `allowed_action_types`
+- `requires_decision`
+- `requires_approval_level`
+- `tools`
+- `constraints`
+- `metadata`
+
+### ShellToolScope
+
+Fields:
+
+- `shell_id`
+- `actor_id` or `role_ref`
+- `allowed_packs`
+- `denied_packs`
+- `default_packs`
+- `critical_packs`
+- `constraints`
+- `policy_version`
+- `metadata`
+
+### ToolExposureRequest
+
+Fields:
+
+- `request_id`
+- `shell_id`
+- `actor_id`
+- `intent_id`
+- `decision_id`
+- `requested_packs`
+- `requested_tools`
+- `risk_class`
+- `context_refs`
+- `metadata`
+
+### ToolExposureDecision
+
+Fields:
+
+- `exposure_id`
+- `request_id`
+- `decision_id`
+- `allowed_packs`
+- `denied_packs`
+- `selected_tools`
+- `risk_class`
+- `constraints`
+- `reason`
+- `policy_version`
+- `created_at`
+- `metadata`
+
+Rules:
+
+- ToolPack scoping does not execute tools.
+- Tool exposure does not replace `GuardianDecision`.
+- `decision_id` is required for consequential tool exposure.
+- Tool execution still requires `GuardianDecision.decision_id`.
+- Harness receives only `selected_tools`.
+- Deny-by-default.
 
 ## Approval
 
