@@ -21,6 +21,21 @@ A tool may be exposed only when all are true:
 - risk/approval policy allows the action
 - the tool belongs to the selected shortlist for the current request
 
+The required future chain is:
+
+```text
+HumanInput
+  -> IntentCompiler
+  -> IntentEnvelope
+  -> GuardianDecision
+  -> ToolPackScope
+  -> Harness tool shortlist
+  -> Approved tool execution
+  -> Spine / Audit event
+```
+
+Tool exposure does not replace `GuardianDecision`. It narrows the tools available after Guardian has produced a scoped decision.
+
 ## Shells and Tool Packs
 
 Future shells declare tool packs as part of their shell manifest. These examples are contract-level targets, not implementation wiring.
