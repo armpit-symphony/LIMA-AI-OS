@@ -9,6 +9,9 @@ def test_public_contract_imports() -> None:
         ApprovalLevel,
         AuditEvent,
         ClarificationRequest,
+        ConsequentialActionRequest,
+        ConsequentialActionType,
+        DecisionAuditEvent,
         DriverCapability,
         DriverCommand,
         DriverEvent,
@@ -17,6 +20,8 @@ def test_public_contract_imports() -> None:
         EvidenceRequirement,
         GuardianContext,
         GuardianDecision,
+        GuardianDecisionRef,
+        GuardianDecisionStatus,
         GuardianProtocol,
         HarnessProtocol,
         HumanInput,
@@ -36,6 +41,7 @@ def test_public_contract_imports() -> None:
         SpineProtocol,
         StorageProtocol,
         TaskRecord,
+        TerminalEvent,
         ToolCallEvent,
         ToolDefinition,
         ToolPackManifest,
@@ -51,6 +57,9 @@ def test_public_contract_imports() -> None:
             ApprovalLevel,
             AuditEvent,
             ClarificationRequest,
+            ConsequentialActionRequest,
+            ConsequentialActionType,
+            DecisionAuditEvent,
             DriverCapability,
             DriverCommand,
             DriverEvent,
@@ -59,6 +68,8 @@ def test_public_contract_imports() -> None:
             EvidenceRequirement,
             GuardianContext,
             GuardianProtocol,
+            GuardianDecisionRef,
+            GuardianDecisionStatus,
             HarnessProtocol,
             HumanInput,
             HumanInputSource,
@@ -77,6 +88,7 @@ def test_public_contract_imports() -> None:
             SpineProtocol,
             StorageProtocol,
             TaskRecord,
+            TerminalEvent,
             ToolCallEvent,
             ToolDefinition,
             ToolPackManifest,
@@ -165,3 +177,102 @@ def test_intent_compiler_protocol_is_non_executing() -> None:
     }
 
     assert public_callables == {"compile", "clarify", "revise"}
+
+
+def test_guardian_decision_contracts_instantiate() -> None:
+    from datetime import datetime, timezone
+
+    from lima.contracts import (
+        ConsequentialActionRequest,
+        ConsequentialActionType,
+        DecisionAuditEvent,
+        GuardianDecision,
+        GuardianDecisionRef,
+        GuardianDecisionStatus,
+        GuardianProtocol,
+        TerminalEvent,
+    )
+
+    request = ConsequentialActionRequest(
+        request_id="request-1",
+        intent_id="intent-1",
+        input_id="input-1",
+        actor_id="operator-1",
+        shell_id="sparkbot",
+        action_type=ConsequentialActionType.TERMINAL_COMMAND,
+        target_ref="terminal:session-1",
+        requested_tool_pack="terminal",
+        risk_class="critical",
+        typed_args={"command_ref": "cmd-ref-1"},
+        evidence_refs=("transcript-1",),
+    )
+    decision = GuardianDecision(
+        decision_id="decision-1",
+        request_id=request.request_id,
+        intent_id=request.intent_id,
+        input_id=request.input_id,
+        actor_id=request.actor_id,
+        shell_id=request.shell_id,
+        action_type=request.action_type,
+        target_ref=request.target_ref,
+        risk_class=request.risk_class,
+        status=GuardianDecisionStatus.NEEDS_OPERATOR_PIN,
+        approval_level="operator_pin",
+        allowed_tool_packs=("terminal",),
+        constraints={"dry_run_first": True},
+        evidence_refs=request.evidence_refs,
+        policy_version="phase-0.7",
+        created_at="2026-05-06T00:00:00Z",
+        reason="Terminal commands are critical risk.",
+    )
+    decision_ref = GuardianDecisionRef(
+        decision_id=decision.decision_id,
+        status=decision.status,
+        expires_at=decision.expires_at,
+    )
+    audit_event = DecisionAuditEvent(
+        event_id="event-1",
+        actor_id=request.actor_id,
+        shell_id=request.shell_id,
+        event_type="guardian.decision",
+        created_at=datetime(2026, 5, 6, tzinfo=timezone.utc),
+        decision_id=decision.decision_id,
+        intent_id=request.intent_id,
+        input_id=request.input_id,
+        action_type=request.action_type.value,
+        target_ref=request.target_ref,
+        risk_class=request.risk_class,
+        result_status=decision.status.value,
+        evidence_refs=tuple(request.evidence_refs),
+    )
+    terminal_event = TerminalEvent(
+        event_id="event-2",
+        actor_id=request.actor_id,
+        shell_id=request.shell_id,
+        event_type="terminal.command",
+        created_at=datetime(2026, 5, 6, tzinfo=timezone.utc),
+        decision_id=decision.decision_id,
+        intent_id=request.intent_id,
+        input_id=request.input_id,
+        terminal_id="session-1",
+        command_ref="cmd-ref-1",
+    )
+
+    public_callables = {
+        name
+        for name, value in GuardianProtocol.__dict__.items()
+        if not name.startswith("_") and callable(value)
+    }
+
+    assert GuardianDecisionStatus.APPROVED.value == "approved"
+    assert GuardianDecisionStatus.REVOKED.value == "revoked"
+    assert ConsequentialActionType.ROBOT_ACTION.value == "robot_action"
+    assert ConsequentialActionType.TERMINAL_COMMAND.value == "terminal_command"
+    assert request.action_type is ConsequentialActionType.TERMINAL_COMMAND
+    assert decision.decision_id == "decision-1"
+    assert decision_ref.decision_id == decision.decision_id
+    assert audit_event.decision_id == decision.decision_id
+    assert terminal_event.risk_class == "critical"
+    assert "evaluate_action" in public_callables
+    assert "record_decision" in public_callables
+    assert "execute" not in public_callables

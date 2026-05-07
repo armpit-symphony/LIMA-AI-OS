@@ -114,6 +114,8 @@ Every external action, tool execution, privileged operation, model call, robotic
 
 No public Harness API should directly execute tools without Guardian classification, approval, denial, or routing.
 
+Every consequential action must carry a scoped `GuardianDecision.decision_id` before execution. The `decision_id` is the audit identity that links typed intent to Harness, Tool, Driver, Terminal, Robot, Spine, and Audit events.
+
 ## Natural Language as an OS Primitive
 
 Natural language is the primary human control protocol for LIMA. Text, voice, console commands, gestures, and future thought/BCI-style inputs are human control surfaces that enter the runtime as `HumanInput` records.
@@ -123,7 +125,7 @@ Natural language is not allowed to bypass Guardian. Raw natural language must ne
 Every `IntentEnvelope` must be traceable to a Guardian decision and audit events:
 
 ```text
-HumanInput -> IntentEnvelope -> GuardianDecision -> Action/Event
+HumanInput -> IntentEnvelope -> GuardianDecision.decision_id -> Action/Event
 ```
 
 Voice transcripts are treated the same as text commands after transcription and normalization. Future thought/BCI signals are treated as uncertain intent candidates and require explicit confirmation, Guardian review, and approval. There is no direct actuation from thought input.
