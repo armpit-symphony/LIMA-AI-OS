@@ -163,3 +163,20 @@ Consequences:
 - Scheduled/autonomous execution must inherit or renew `decision_id`.
 - Critical packs require explicit approval metadata.
 - Harness extraction remains blocked until policy is reviewed.
+
+## ADR-0014: Approval Metadata Is Required for High and Critical Actions
+
+Status: Accepted
+
+Decision: High and critical LIMA actions must carry scoped approval metadata when policy requires explicit approval.
+
+Rationale: `GuardianDecision` establishes the policy decision, but high/critical execution also needs auditable proof of human/operator approval, method, scope, expiry, and constraints.
+
+Consequences:
+
+- Approval does not replace `GuardianDecision`.
+- Approval metadata is scoped to decision/action/target/tool pack.
+- Expired/revoked approvals cannot authorize execution.
+- Breakglass is short-lived and heavily audited.
+- Thought/BCI cannot directly approve critical execution.
+- Scheduled/autonomous actions must inherit or renew approval.

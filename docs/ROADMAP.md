@@ -161,6 +161,28 @@ Acceptance criteria:
 - Scheduled execution inherits `decision_id` or requires renewal.
 - Harness extraction remains blocked until this policy is reviewed.
 
+### M0.11: Approval Metadata Contract
+
+Goal: define approval metadata required for high/critical-risk actions.
+
+Deliverables:
+
+- `docs/APPROVAL_METADATA_CONTRACT.md`.
+- `ApprovalMetadata` contract.
+- `ApprovalStatus` / `ApprovalMethod` contract.
+- Breakglass approval rules.
+- Scheduled/autonomous approval inheritance.
+- Critical pack approval guidance.
+
+Acceptance criteria:
+
+- Approval metadata attaches to `GuardianDecision.decision_id`.
+- Approval does not replace `GuardianDecision`.
+- Critical packs have explicit approval requirements.
+- Breakglass is short-lived, scoped, and auditable.
+- Scheduled/autonomous execution renews approval when expired/out of scope.
+- No runtime implementation is added.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

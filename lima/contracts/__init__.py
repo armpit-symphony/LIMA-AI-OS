@@ -1,7 +1,15 @@
 """Public Phase 0 contracts for LIMA Runtime."""
 
+from .approval import (
+    ApprovalMetadata,
+    ApprovalMethod,
+    ApprovalProtocol,
+    ApprovalScope,
+    ApprovalStatus,
+)
 from .driver import DriverCapability, DriverCommand, DriverProtocol, DriverResult
 from .events import (
+    ApprovalAuditEvent,
     ApprovalEvent,
     AuditEvent,
     DecisionAuditEvent,
@@ -56,8 +64,14 @@ from .toolpack import (
 )
 
 __all__ = [
+    "ApprovalAuditEvent",
     "ApprovalEvent",
     "ApprovalLevel",
+    "ApprovalMetadata",
+    "ApprovalMethod",
+    "ApprovalProtocol",
+    "ApprovalScope",
+    "ApprovalStatus",
     "AuditEvent",
     "ConsequentialActionRequest",
     "ConsequentialActionType",

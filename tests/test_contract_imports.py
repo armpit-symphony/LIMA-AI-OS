@@ -5,8 +5,14 @@ def test_public_contract_imports() -> None:
     import lima
     from lima import contracts
     from lima.contracts import (
+        ApprovalAuditEvent,
         ApprovalEvent,
         ApprovalLevel,
+        ApprovalMetadata,
+        ApprovalMethod,
+        ApprovalProtocol,
+        ApprovalScope,
+        ApprovalStatus,
         AuditEvent,
         ClarificationRequest,
         ConsequentialActionRequest,
@@ -66,6 +72,12 @@ def test_public_contract_imports() -> None:
         for item in (
             ApprovalEvent,
             ApprovalLevel,
+            ApprovalAuditEvent,
+            ApprovalMetadata,
+            ApprovalMethod,
+            ApprovalProtocol,
+            ApprovalScope,
+            ApprovalStatus,
             AuditEvent,
             ClarificationRequest,
             ConsequentialActionRequest,
