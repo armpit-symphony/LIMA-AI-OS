@@ -69,6 +69,7 @@ from .privacy import (
     RetentionClass,
     VisibilityClass,
 )
+from .readiness import ExtractionReadinessRecord, ReadinessArea, ReadinessStatus
 from .shell import ShellManifest, ShellProtocol
 from .spine import SpineEvent, SpineProtocol, TaskRecord
 from .storage import StorageProtocol
@@ -107,6 +108,7 @@ __all__ = [
     "DriverProtocol",
     "DriverResult",
     "EvidenceRequirement",
+    "ExtractionReadinessRecord",
     "ExtractionStatus",
     "GuardianContext",
     "GuardianDecision",
@@ -134,6 +136,8 @@ __all__ = [
     "RedactionClass",
     "RedactionMetadata",
     "RetentionClass",
+    "ReadinessArea",
+    "ReadinessStatus",
     "RiskClass",
     "RuntimeBoundaryRecord",
     "ShellManifest",

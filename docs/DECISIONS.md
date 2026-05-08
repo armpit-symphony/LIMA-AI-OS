@@ -230,3 +230,19 @@ Consequences:
 - Guardian Suite coupling must be resolved before extraction.
 - Robo-OS is treated as a Guardian-gated driver integration.
 - Future adapters preserve behavior without preserving unsafe internals.
+
+## ADR-0018: Phase 1 Starts With Decoupling Audit, Not Runtime Execution
+
+Status: Accepted
+
+Decision: Phase 1 will begin with Guardian Suite decoupling audit and import-boundary work, not Harness/tool execution, terminal, Robo-OS physical action, or production runtime migration.
+
+Rationale: The safest extraction path is to remove coupling and prove boundaries before moving behavior. Sparkbot remains the spec, but unsafe shortcuts are not kernel primitives.
+
+Consequences:
+
+- Phase 1 PR #1 is non-executing decoupling/audit work.
+- Harness extraction remains deferred.
+- Terminal/PTY and robot physical action remain blocked.
+- Guardian Suite coupling is the first risk to reduce.
+- Runtime enforcement comes after contracts and import seams are stable.
