@@ -226,6 +226,29 @@ Acceptance criteria:
 - Robot sensor data has safety/privacy defaults.
 - Extraction remains blocked until redaction/privacy contract is reviewed.
 
+### M0.14: Runtime Boundary Map
+
+Goal: map current Sparkbot, Guardian Suite, and Robo-OS surfaces to future LIMA Runtime boundaries before extraction.
+
+Deliverables:
+
+- `docs/RUNTIME_BOUNDARY_MAP.md`.
+- reference repo commit table.
+- boundary classification types.
+- boundary matrix.
+- phase gate checklist.
+- do-not-extract-yet list.
+- future adapter plan.
+
+Acceptance criteria:
+
+- Sparkbot, LIMA Guardian Suite, and LIMA Robo-OS are inspected read-only.
+- Current surfaces are classified by boundary type.
+- Unsafe shortcuts are marked do-not-extract-yet.
+- Extraction gates from Phase 0 through 0.13 are consolidated.
+- No implementation is copied.
+- No runtime code is added.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

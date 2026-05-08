@@ -7,6 +7,12 @@ from .approval import (
     ApprovalScope,
     ApprovalStatus,
 )
+from .boundary import (
+    BoundaryClassification,
+    BoundaryMapProtocol,
+    ExtractionStatus,
+    RuntimeBoundaryRecord,
+)
 from .driver import DriverCapability, DriverCommand, DriverProtocol, DriverResult
 from .events import (
     ApprovalAuditEvent,
@@ -89,6 +95,8 @@ __all__ = [
     "AuditEventType",
     "AuditLineageRecord",
     "AuditStatus",
+    "BoundaryClassification",
+    "BoundaryMapProtocol",
     "ConsequentialActionRequest",
     "ConsequentialActionType",
     "DataReference",
@@ -99,6 +107,7 @@ __all__ = [
     "DriverProtocol",
     "DriverResult",
     "EvidenceRequirement",
+    "ExtractionStatus",
     "GuardianContext",
     "GuardianDecision",
     "GuardianDecisionRef",
@@ -126,6 +135,7 @@ __all__ = [
     "RedactionMetadata",
     "RetentionClass",
     "RiskClass",
+    "RuntimeBoundaryRecord",
     "ShellManifest",
     "ShellProtocol",
     "SpineAuditEvent",

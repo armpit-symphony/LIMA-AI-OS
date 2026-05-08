@@ -875,6 +875,75 @@ Rules:
 - Events may carry refs/summaries, not raw sensitive content.
 - Raw secrets are never written to audit events.
 
+## Runtime Boundary Map
+
+Runtime boundary contracts classify inspected Sparkbot, Guardian Suite, and Robo-OS surfaces before extraction. Boundary mapping does not migrate code, execute tools, or authorize extraction.
+
+### BoundaryClassification
+
+Classes:
+
+- `shell_adapter`
+- `human_input_adapter`
+- `intent_boundary`
+- `guardian_contract`
+- `harness_contract`
+- `tool_pack_candidate`
+- `policy_candidate`
+- `approval_candidate`
+- `spine_audit_candidate`
+- `privacy_redaction_candidate`
+- `driver_candidate`
+- `system_service`
+- `persistence_candidate`
+- `do_not_extract_yet`
+- `deprecated_or_unsafe_shortcut`
+- `unknown`
+
+### ExtractionStatus
+
+Statuses:
+
+- `ready_for_adapter_design`
+- `needs_contract_review`
+- `needs_pack_classification`
+- `needs_privacy_review`
+- `needs_decision_gate`
+- `needs_approval_metadata`
+- `needs_lineage_mapping`
+- `do_not_extract_yet`
+- `unknown`
+
+### RuntimeBoundaryRecord
+
+Fields:
+
+- `source_repo`
+- `source_path`
+- `surface_name`
+- `current_role`
+- `classification`
+- `future_lima_location`
+- `required_contracts`
+- `risk_level`
+- `extraction_status`
+- `notes`
+- `metadata`
+
+### BoundaryMapProtocol
+
+Protocol surface:
+
+- `list_records() -> Sequence[RuntimeBoundaryRecord]`
+
+Rules:
+
+- Boundary records do not extract implementation.
+- Boundary records do not authorize execution.
+- Unsafe shortcuts are marked do-not-extract-yet.
+- Sparkbot parity means preserving behavior, not unsafe internal shortcuts.
+- Robo-OS is classified as a Guardian-gated driver/runtime integration.
+
 ## AuditEvent
 
 Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.
