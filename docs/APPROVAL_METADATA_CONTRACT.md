@@ -206,6 +206,8 @@ If approval is expired, revoked, or scope changed, execution must request a new 
 
 ## Audit Requirements
 
+`ApprovalMetadata.approval_id` must appear in Spine/Audit events when policy requires approval.
+
 Approval audit events must record:
 
 - `approval_id`

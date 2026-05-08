@@ -190,6 +190,8 @@ Shortlist inputs:
 
 Every tool exposure decision should be auditable.
 
+`ToolExposureDecision.exposure_id` and `selected_tools` must be recorded in Spine/Audit events.
+
 Record:
 
 - `shell_id`

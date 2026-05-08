@@ -180,3 +180,21 @@ Consequences:
 - Breakglass is short-lived and heavily audited.
 - Thought/BCI cannot directly approve critical execution.
 - Scheduled/autonomous actions must inherit or renew approval.
+
+## ADR-0015: Every Consequential Action Requires Audit Lineage
+
+Status: Accepted
+
+Decision: Every consequential LIMA Runtime action must be traceable through a Spine/Audit lineage chain linking human input, typed intent, Guardian decision, approval metadata, policy/tool exposure, execution, and result.
+
+Rationale: LIMA is intended for human-controlled AI infrastructure. Traceability is required for trust, debugging, safety, compliance, replay, and future autonomous operation.
+
+Consequences:
+
+- `lineage_id` is required for consequential chains.
+- Downstream execution events carry `decision_id`.
+- `approval_id` is recorded when required.
+- Denied/blocked/failed actions are auditable.
+- Scheduled/autonomous work must preserve or renew lineage.
+- Secrets are referenced, not stored raw.
+- Extraction remains blocked until lineage contract is reviewed.

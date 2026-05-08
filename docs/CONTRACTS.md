@@ -279,6 +279,154 @@ Spine is the task/event/process ledger. It appends audit events, creates task re
 
 Spine records what happened. Guardian decides whether externally actionable work may happen.
 
+### AuditEventType
+
+Event types:
+
+- `human_input`
+- `intent_compiled`
+- `clarification_requested`
+- `guardian_decision`
+- `approval_recorded`
+- `policy_evaluated`
+- `tool_exposure_decided`
+- `model_call_planned`
+- `model_call_completed`
+- `tool_call_planned`
+- `tool_call_completed`
+- `driver_command_planned`
+- `driver_command_completed`
+- `terminal_command_planned`
+- `terminal_command_completed`
+- `robot_action_planned`
+- `robot_action_completed`
+- `task_created`
+- `task_updated`
+- `scheduled_action_requested`
+- `scheduled_action_executed`
+- `result_recorded`
+- `audit_warning`
+- `audit_error`
+- `lineage_closed`
+
+### AuditStatus
+
+Statuses:
+
+- `received`
+- `planned`
+- `approved`
+- `denied`
+- `escalated`
+- `needs_confirmation`
+- `needs_approval`
+- `executing`
+- `succeeded`
+- `failed`
+- `canceled`
+- `expired`
+- `revoked`
+- `superseded`
+- `blocked`
+- `unknown`
+
+### AuditLineageRecord
+
+Fields:
+
+- `lineage_id`
+- `root_event_id`
+- `latest_event_id`
+- `input_id`
+- `intent_id`
+- `decision_id`
+- `approval_id`
+- `policy_decision_id`
+- `exposure_id`
+- `execution_id`
+- `actor_id`
+- `shell_id`
+- `risk_class`
+- `status`
+- `created_at`
+- `updated_at`
+- `closed_at`
+- `metadata`
+
+### SpineEvent
+
+Fields:
+
+- `event_id`
+- `lineage_id`
+- `event_type`
+- `status`
+- `timestamp` / `created_at`
+- `actor_id`
+- `shell_id`
+- `input_id`
+- `intent_id`
+- `decision_id`
+- `approval_id`
+- `policy_decision_id`
+- `exposure_id`
+- `execution_id`
+- `parent_event_id`
+- `root_event_id`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `risk_class`
+- `approval_level`
+- `policy_version`
+- `evidence_refs`
+- `result_ref`
+- `error_ref`
+- `metadata`
+
+### SpineAuditEvent
+
+Fields:
+
+- `event_id`
+- `lineage_id`
+- `event_type`
+- `status`
+- `timestamp`
+- `actor_id`
+- `shell_id`
+- `input_id`
+- `intent_id`
+- `decision_id`
+- `approval_id`
+- `policy_decision_id`
+- `exposure_id`
+- `execution_id`
+- `parent_event_id`
+- `root_event_id`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `risk_class`
+- `approval_level`
+- `policy_version`
+- `evidence_refs`
+- `result_ref`
+- `error_ref`
+- `metadata`
+
+Rules:
+
+- Events do not execute actions.
+- Events do not approve actions.
+- Events record what happened or what was requested.
+- Downstream execution events must carry `decision_id`.
+- `approval_id` is required where policy requires approval.
+- Denied/blocked/failed events are still audit records.
+- Secrets are referenced, not stored raw.
+
 ## Driver
 
 Drivers expose capabilities, dry-run previews, telemetry expectations, and execution calls.
@@ -626,6 +774,8 @@ Rules:
 ## AuditEvent
 
 Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.
+
+Audit events that participate in a consequential chain should also carry `lineage_id`, parent/root event references when available, and result/error references. `AuditLineageRecord` tracks the latest known state of the chain without executing or approving any action.
 
 ## ModelCall
 

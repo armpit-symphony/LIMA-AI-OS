@@ -129,6 +129,8 @@ Approval metadata does not replace `GuardianDecision`. It records who approved, 
 
 ## Spine / Audit Requirements
 
+`GuardianDecision.decision_id` must appear in downstream Spine/Audit events for all consequential actions.
+
 Every downstream event must include:
 
 - `decision_id`
