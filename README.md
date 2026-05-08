@@ -62,6 +62,8 @@ LIMA Runtime uses deny-by-default tool-pack scoping so each shell receives only 
 
 No shell receives every tool by default. Consequential tool exposure and execution must carry `GuardianDecision.decision_id`.
 
+Phase 0.9 inventories Sparkbot tools into deny-by-default packs before extraction. Sparkbot behavior remains the parity source, but broad full-catalogue exposure must not become a LIMA Runtime primitive.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -156,6 +158,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/CONTRACTS.md](docs/CONTRACTS.md)
 - [docs/INTENT_COMPILER_BOUNDARY.md](docs/INTENT_COMPILER_BOUNDARY.md)
 - [docs/SPARKBOT_ENTRYPOINT_INVENTORY.md](docs/SPARKBOT_ENTRYPOINT_INVENTORY.md)
+- [docs/SPARKBOT_TOOL_PACK_INVENTORY.md](docs/SPARKBOT_TOOL_PACK_INVENTORY.md)
 - [docs/GUARDIAN_DECISION_CONTRACT.md](docs/GUARDIAN_DECISION_CONTRACT.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

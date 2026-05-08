@@ -216,6 +216,8 @@ Before Harness extraction:
 - prevent `stream_chat_with_tools()` from exposing all tools at once
 - ensure tool execution requires `GuardianDecision.decision_id`
 
+Phase 0.9 applies this contract to Sparkbot by inventorying current tools into proposed packs. This inventory is required before Harness/tool extraction.
+
 ## Acceptance Criteria
 
 - `ToolPackManifest` contract exists or is expanded.

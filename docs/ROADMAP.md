@@ -117,6 +117,28 @@ Acceptance criteria:
 - Critical packs require explicit approval metadata.
 - Harness extraction remains blocked until Sparkbot tools are grouped into packs.
 
+### M0.9: Sparkbot Tool-Pack Inventory
+
+Goal: map Sparkbot's current tool surfaces into future LIMA tool packs before Harness/tool extraction.
+
+Deliverables:
+
+- `docs/SPARKBOT_TOOL_PACK_INVENTORY.md`.
+- Proposed pack map for Sparkbot tools.
+- Shell allowance draft for Sparkbot, Arc, SparkPit, Robo-OS, and future humanoid/worker robots.
+- Full-catalogue exposure risk notes.
+- `GuardianDecision` pack constraint notes.
+- Extraction blockers.
+
+Acceptance criteria:
+
+- Sparkbot tools are inventoried by path/name where possible.
+- Each known tool surface has a proposed pack or unknown classification.
+- Critical packs are identified.
+- No runtime implementation is added.
+- No Sparkbot code is copied.
+- Harness extraction remains blocked until the inventory is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
