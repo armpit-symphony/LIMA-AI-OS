@@ -22,6 +22,8 @@ HumanInput
 
 Approval metadata proves the authorization context. It does not authorize execution by itself.
 
+Approval metadata must never store raw PINs, signed token secrets, hardware key material, or credential values.
+
 ## Approval Identity
 
 Approval metadata records:

@@ -244,6 +244,38 @@ Specific blockers:
 - Dynamic skills must record `exposure_id` and `execution_id`.
 - Audit events must not contain raw secrets.
 
+## Phase 0.13: Redaction / Privacy Contract
+
+Scope:
+
+- Define privacy, redaction, reference, retention, and visibility contracts before audit persistence.
+- Define default handling for secrets, transcripts, model context, tool args/results, terminal output, files, memory, browser/network data, robot sensors, and future BCI/thought-adjacent data.
+- Add optional audit/spine privacy metadata fields.
+- Keep redaction/privacy as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/REDACTION_PRIVACY_CONTRACT.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- No storage or redaction implementation is added.
+- Raw secrets are referenced, never stored in audit events.
+- Sensitive content has privacy/redaction/retention/visibility classes.
+
+Hard gate:
+
+No Spine storage, audit persistence, Sparkbot adapter emission, terminal/PTY audit capture, model prompt logging, tool result logging, browser/network capture, voice transcript persistence, memory persistence, or robot sensor logging until redaction/privacy contract is reviewed.
+
+Specific blockers:
+
+- Raw secrets must never be written to audit events.
+- Model prompts/tool args/results need privacy/redaction classes.
+- Terminal output must be redaction-safe.
+- Voice transcripts need `transcript_ref` and privacy class.
+- BCI/thought-adjacent data is biometric and confirm-only.
+- Robot sensor data needs safety/privacy defaults.
+- Audit views need visibility classes.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

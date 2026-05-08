@@ -54,6 +54,15 @@ from .policy import (
     ToolPackRiskPolicy,
     ToolPackRiskRule,
 )
+from .privacy import (
+    DataReference,
+    PrivacyClass,
+    PrivacyProtocol,
+    RedactionClass,
+    RedactionMetadata,
+    RetentionClass,
+    VisibilityClass,
+)
 from .shell import ShellManifest, ShellProtocol
 from .spine import SpineEvent, SpineProtocol, TaskRecord
 from .storage import StorageProtocol
@@ -82,6 +91,7 @@ __all__ = [
     "AuditStatus",
     "ConsequentialActionRequest",
     "ConsequentialActionType",
+    "DataReference",
     "DecisionAuditEvent",
     "DriverCapability",
     "DriverCommand",
@@ -110,6 +120,11 @@ __all__ = [
     "PolicyEvaluationContext",
     "PolicyExposure",
     "PolicyProtocol",
+    "PrivacyClass",
+    "PrivacyProtocol",
+    "RedactionClass",
+    "RedactionMetadata",
+    "RetentionClass",
     "RiskClass",
     "ShellManifest",
     "ShellProtocol",
@@ -129,5 +144,6 @@ __all__ = [
     "ToolPackProtocol",
     "ToolPackRiskPolicy",
     "ToolPackRiskRule",
+    "VisibilityClass",
     "ShellToolScope",
 ]

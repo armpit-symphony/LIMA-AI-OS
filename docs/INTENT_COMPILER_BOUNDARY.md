@@ -22,6 +22,8 @@ Voice transcripts follow the same path as text. Console/operator commands and ma
 
 Future BCI/thought input is research-facing only, low-confidence by default, confirmation-only, and never direct actuation. It can suggest candidate intent, but it cannot execute tools, drivers, files, network actions, browser actions, payments, admin changes, production actions, or robot/physical-world actions.
 
+HumanInput from voice and future BCI/thought-adjacent sources must carry privacy/biometric handling metadata before persistence or audit emission.
+
 ## Intent Pipeline
 
 1. Receive `HumanInput`.

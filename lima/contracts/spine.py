@@ -7,6 +7,7 @@ from datetime import datetime
 from typing import Any, Literal, Protocol, Sequence
 
 from .events import AuditEventType, AuditStatus
+from .privacy import DataReference
 
 
 @dataclass(frozen=True)
@@ -40,6 +41,18 @@ class SpineEvent:
     evidence_refs: Sequence[str] = field(default_factory=tuple)
     result_ref: str | None = None
     error_ref: str | None = None
+    privacy_class: str | None = None
+    redaction_class: str | None = None
+    retention_class: str | None = None
+    visibility_class: str | None = None
+    content_refs: Sequence[DataReference] = field(default_factory=tuple)
+    secret_refs: Sequence[str] = field(default_factory=tuple)
+    redacted_summary: str | None = None
+    contains_secret: bool = False
+    contains_biometric: bool = False
+    contains_safety_critical: bool = False
+    data_subject_ref: str | None = None
+    retention_expires_at: str | None = None
 
 
 TaskStatus = Literal["candidate", "open", "blocked", "approval_waiting", "done", "archived"]
