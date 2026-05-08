@@ -214,3 +214,19 @@ Consequences:
 - BCI/thought-adjacent data is biometric and never direct approval/control.
 - Robot sensor data requires safety/privacy defaults.
 - Extraction remains blocked until privacy/redaction is reviewed.
+
+## ADR-0017: Runtime Boundaries Must Be Mapped Before Extraction
+
+Status: Accepted
+
+Decision: Before extracting runtime code from Sparkbot, LIMA Guardian Suite, or LIMA Robo-OS, each candidate surface must be classified against the LIMA Runtime boundary model.
+
+Rationale: Sparkbot is the spec, but not every implementation detail is a kernel primitive. Boundary mapping prevents shell code, unsafe shortcuts, full-catalogue exposure, direct terminal execution, raw robot commands, or private data leakage from becoming part of LIMA Runtime.
+
+Consequences:
+
+- Phase 1 extraction is blocked until boundary mapping is reviewed.
+- Unsafe shortcuts are marked do-not-extract-yet.
+- Guardian Suite coupling must be resolved before extraction.
+- Robo-OS is treated as a Guardian-gated driver integration.
+- Future adapters preserve behavior without preserving unsafe internals.

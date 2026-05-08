@@ -276,6 +276,41 @@ Specific blockers:
 - Robot sensor data needs safety/privacy defaults.
 - Audit views need visibility classes.
 
+## Phase 0.14: Runtime Boundary Map
+
+Scope:
+
+- Map current Sparkbot, LIMA Guardian Suite, and LIMA Robo-OS surfaces to future LIMA Runtime boundaries.
+- Consolidate Phase 0 through Phase 0.13 extraction gates before Phase 1 begins.
+- Mark unsafe shortcuts and unclassified surfaces as do-not-extract-yet.
+- Keep the map as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/RUNTIME_BOUNDARY_MAP.md` is reviewed before Phase 1 extraction begins.
+- Reference repo commits are recorded.
+- Each candidate code path is classified.
+- Do-not-extract-yet paths are explicit.
+- Sparkbot parity preserves behavior, not unsafe shortcuts.
+- Guardian Suite coupling is documented.
+- Robo-OS is classified as driver/runtime integration.
+- All extraction candidates map to Phase 0 contracts.
+- No Sparkbot, Guardian Suite, or Robo-OS implementation is copied.
+- No runtime implementation is added.
+
+Hard gate:
+
+No Phase 1 extraction until Runtime Boundary Map is reviewed.
+
+Specific requirements:
+
+- each candidate code path must be classified
+- do-not-extract-yet paths must be explicit
+- Sparkbot parity must preserve behavior, not unsafe shortcuts
+- Guardian Suite coupling must be documented
+- Robo-OS must be classified as driver/runtime integration
+- all extraction candidates must map to Phase 0 contracts
+
 ## Phase 1: Decouple Guardian
 
 Scope:

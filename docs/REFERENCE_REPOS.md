@@ -56,3 +56,7 @@ Observed Phase 0 notes:
 ## No Secrets
 
 Reference repo inspection for Phase 0 is architectural only. Do not import secrets, tokens, local databases, production deployment settings, or live credentials into LIMA-AI-OS.
+
+## Phase 0.14 Boundary Map
+
+Phase 0.14 creates a runtime boundary map across Sparkbot, LIMA Guardian Suite, and LIMA Robo-OS, using inspected commits. The map classifies current surfaces before extraction and records which areas are adapter candidates, contract candidates, driver candidates, or do-not-extract-yet shortcuts.
