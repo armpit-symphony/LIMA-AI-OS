@@ -4,7 +4,7 @@
 
 Define how LIMA Runtime classifies, references, redacts, retains, and exposes sensitive data in audit/spine events.
 
-This contract does not implement redaction. This contract does not implement storage. This contract does not authorize access. This contract defines the required data handling model for future runtime work.
+This contract does not implement redaction. This contract does not implement storage. This contract does not implement authorization or access control. This contract does not authorize access. This contract defines the required data handling model for future runtime work.
 
 ## Core Rule
 
@@ -22,6 +22,8 @@ Sensitive data should be stored by reference when needed:
 - `memory_ref`
 - `sensor_ref`
 - `model_context_ref`
+- `approval_ref`
+- `policy_ref`
 
 ## Privacy Classes
 
@@ -201,6 +203,7 @@ policy_ref:
 
 - raw secrets are never stored in events
 - tokens/API keys/passwords are SECRET_REF_ONLY or DROP
+- vault secrets are never written raw
 - raw voice transcripts default to PRIVATE or CONFIDENTIAL and SUMMARY_ONLY or REFERENCE_ONLY
 - future BCI/thought-adjacent data defaults to BIOMETRIC and REFERENCE_ONLY or DROP
 - robot sensor data defaults to SAFETY_CRITICAL or BIOMETRIC depending content
@@ -219,7 +222,7 @@ Spine/Audit events should include:
 - `redaction_class`
 - `retention_class`
 - `visibility_class`
-- `content_ref` when raw content is externalized
+- `content_refs` when raw content is externalized
 - `evidence_refs`
 - `secret_refs` when applicable
 - `redacted_summary` when safe
