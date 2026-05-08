@@ -586,6 +586,34 @@ Fields:
 - `expires_at`
 - `policy_version`
 
+### ApprovalProtocol
+
+Methods:
+
+- `describe_required_approval(scope) -> ApprovalMetadata | None`
+- `record_approval(approval) -> None`
+
+Rules:
+
+- Approval protocol methods describe or record approval evidence.
+- Approval protocol methods do not execute actions.
+- Approval protocol methods do not enforce approval policy.
+
+### ApprovalAuditEvent
+
+Fields extend `AuditEvent` with:
+
+- `approval_id`
+- `approval_level`
+- `approval_method`
+- `status`
+- `risk_class`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `policy_version`
+
 Rules:
 
 - Approval metadata does not execute actions.

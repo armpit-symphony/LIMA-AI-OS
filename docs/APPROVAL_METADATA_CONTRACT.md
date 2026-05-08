@@ -28,18 +28,27 @@ Approval metadata records:
 
 - `approval_id`
 - `decision_id`
+- `input_id`
+- `intent_id`
 - `actor_id`
 - `shell_id`
 - `approved_by`
 - `approval_level`
 - `approval_method`
+- `status`
+- `risk_class`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `constraints`
+- `evidence_refs`
+- `policy_version`
 - `created_at`
 - `expires_at`
 - `revoked_at`
 - `superseded_by`
 - `reason`
-- `evidence_refs`
-- `constraints`
 - `metadata`
 
 ## Approval Levels
