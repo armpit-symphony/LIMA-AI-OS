@@ -94,6 +94,12 @@ It must not be reused for unrelated actions. A decision for a read-only model su
 - Phase 0.7 defines the contract only, not token issuance logic.
 - A decision can exist without an approval token, especially denied, escalated, expired, revoked, or superseded decisions.
 
+## Approval Metadata
+
+`GuardianDecision` may require `ApprovalMetadata` for high/critical-risk outcomes. `decision_id` remains the audit identity; `approval_id` records the human/operator authorization evidence.
+
+Approval metadata does not replace `GuardianDecision`. It records who approved, how approval happened, what scope was approved, when it expires, and which constraints apply.
+
 ## Risk Handling
 
 `LOW`: read-only / informational. May be auto-approved by policy later.

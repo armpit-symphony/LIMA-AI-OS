@@ -181,6 +181,36 @@ Specific blockers:
 - Terminal/admin/robot/payment/deploy packs must remain critical-risk.
 - Unknown tools are denied by default.
 
+## Phase 0.11: Approval Metadata Contract
+
+Scope:
+
+- Define approval metadata required for high/critical-risk actions.
+- Define approval status and method contracts.
+- Define breakglass approval rules.
+- Define scheduled/autonomous approval inheritance.
+- Keep approval metadata as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/APPROVAL_METADATA_CONTRACT.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Approval metadata attaches to `GuardianDecision.decision_id`.
+- Approval does not replace `GuardianDecision`.
+
+Hard gate:
+
+No terminal/admin/deploy/payment/secret/robot/critical action extraction until approval metadata is defined and reviewed.
+
+Specific blockers:
+
+- Terminal/PTY needs OPERATOR_PIN or BREAKGLASS metadata.
+- Deploy/payment/admin-write needs explicit approval metadata.
+- Robot physical-world action needs explicit confirmation and dry-run/simulation metadata where available.
+- Scheduled/autonomous execution must inherit or renew approval metadata.
+- Breakglass must be short-lived, scoped, and auditable.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

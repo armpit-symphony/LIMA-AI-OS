@@ -8,6 +8,8 @@ It does not implement enforcement. It does not execute tools. It does not replac
 
 `GuardianDecision` still gates execution. A policy decision can narrow or block exposure, but it cannot authorize execution by itself.
 
+Critical packs require `ApprovalMetadata` according to policy. Policy can require approval, but approval metadata and `GuardianDecision` are both required before execution.
+
 ## Core Rule
 
 Tool packs are deny-by-default.

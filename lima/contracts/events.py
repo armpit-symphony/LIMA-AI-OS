@@ -37,6 +37,20 @@ class ApprovalEvent(AuditEvent):
 
 
 @dataclass(frozen=True)
+class ApprovalAuditEvent(AuditEvent):
+    approval_id: str = ""
+    approval_level: str | None = None
+    approval_method: str | None = None
+    status: str = ""
+    risk_class: str = ""
+    action_type: str | None = None
+    target_ref: str | None = None
+    tool_pack: str | None = None
+    selected_tools: tuple[str, ...] = ()
+    policy_version: str | None = None
+
+
+@dataclass(frozen=True)
 class ModelCallEvent(AuditEvent):
     model: str = ""
     route: str | None = None

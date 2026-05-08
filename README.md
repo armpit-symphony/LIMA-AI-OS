@@ -66,6 +66,8 @@ Phase 0.9 inventories Sparkbot tools into deny-by-default packs before extractio
 
 Phase 0.10 defines default risk and approval policy for tool packs.
 
+Phase 0.11 defines approval metadata for high/critical-risk actions, including breakglass and scheduled/autonomous inheritance.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -162,6 +164,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/SPARKBOT_ENTRYPOINT_INVENTORY.md](docs/SPARKBOT_ENTRYPOINT_INVENTORY.md)
 - [docs/SPARKBOT_TOOL_PACK_INVENTORY.md](docs/SPARKBOT_TOOL_PACK_INVENTORY.md)
 - [docs/GUARDIAN_DECISION_CONTRACT.md](docs/GUARDIAN_DECISION_CONTRACT.md)
+- [docs/APPROVAL_METADATA_CONTRACT.md](docs/APPROVAL_METADATA_CONTRACT.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

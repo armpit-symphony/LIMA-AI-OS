@@ -514,6 +514,115 @@ Rules:
 
 Approval contracts represent pending, approved, denied, expired, and routed decisions. Approval state must be auditable and tied to a Guardian decision.
 
+### ApprovalStatus
+
+Statuses:
+
+- `pending`
+- `approved`
+- `denied`
+- `expired`
+- `revoked`
+- `superseded`
+
+### ApprovalMethod
+
+Methods:
+
+- `chat_confirmation`
+- `voice_confirmation`
+- `ui_button`
+- `operator_pin`
+- `hardware_key`
+- `signed_token`
+- `breakglass`
+- `delegated_admin`
+- `policy_auto_approval`
+- `external_system`
+- `unknown`
+
+### ApprovalMetadata
+
+Fields:
+
+- `approval_id`
+- `decision_id`
+- `input_id`
+- `intent_id`
+- `actor_id`
+- `shell_id`
+- `approved_by`
+- `approval_level`
+- `approval_method`
+- `status`
+- `risk_class`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `constraints`
+- `evidence_refs`
+- `policy_version`
+- `created_at`
+- `expires_at`
+- `revoked_at`
+- `superseded_by`
+- `reason`
+- `metadata`
+
+### ApprovalScope
+
+Fields:
+
+- `decision_id`
+- `actor_id`
+- `shell_id`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `risk_class`
+- `constraints`
+- `expires_at`
+- `policy_version`
+
+### ApprovalProtocol
+
+Methods:
+
+- `describe_required_approval(scope) -> ApprovalMetadata | None`
+- `record_approval(approval) -> None`
+
+Rules:
+
+- Approval protocol methods describe or record approval evidence.
+- Approval protocol methods do not execute actions.
+- Approval protocol methods do not enforce approval policy.
+
+### ApprovalAuditEvent
+
+Fields extend `AuditEvent` with:
+
+- `approval_id`
+- `approval_level`
+- `approval_method`
+- `status`
+- `risk_class`
+- `action_type`
+- `target_ref`
+- `tool_pack`
+- `selected_tools`
+- `policy_version`
+
+Rules:
+
+- Approval metadata does not execute actions.
+- Approval metadata does not replace `GuardianDecision`.
+- Approval must be scoped.
+- Approval can expire/revoke/supersede.
+- Critical actions require explicit approval metadata when policy says so.
+- Thought/BCI cannot directly approve critical actions.
+
 ## AuditEvent
 
 Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.
