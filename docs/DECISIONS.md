@@ -246,3 +246,18 @@ Consequences:
 - Terminal/PTY and robot physical action remain blocked.
 - Guardian Suite coupling is the first risk to reduce.
 - Runtime enforcement comes after contracts and import seams are stable.
+
+## ADR-0019: Guardian Extraction Starts With Import Boundary Decoupling
+
+Status: Accepted
+
+Decision: Phase 1 starts by auditing and blocking Sparkbot `app.crud` / `app.models` / `app.services` coupling before migrating Guardian runtime behavior.
+
+Rationale: Guardian is the trust boundary. It cannot become a reusable LIMA kernel module while depending on Sparkbot-specific backend internals.
+
+Consequences:
+
+- First Phase 1 work is audit/import-boundary only.
+- Runtime enforcement remains deferred.
+- Production Sparkbot remains untouched.
+- Guardian modules must depend on LIMA contracts, not Sparkbot app modules.

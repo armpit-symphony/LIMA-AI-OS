@@ -273,6 +273,28 @@ Acceptance criteria:
 - no implementation copied.
 - no runtime behavior added.
 
+### M1.0: Guardian Suite Decoupling Audit
+
+Goal: audit Guardian Suite coupling before any runtime behavior moves.
+
+Deliverables:
+
+- `docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md`.
+- Guardian Suite reference commit table.
+- coupling inventory for Sparkbot `app.crud`, `app.models`, `app.services`, direct database, vault/auth persistence, and runtime side effects.
+- forbidden imports list for future `lima.guardian` code.
+- first extraction seam recommendation.
+- import-boundary test for `lima.guardian`.
+
+Acceptance criteria:
+
+- LIMA-Guardian-Suite is inspected read-only.
+- Guardian Suite coupling blockers are explicit.
+- Future `lima.guardian` code is protected from Sparkbot backend imports.
+- No Guardian runtime behavior is migrated.
+- No Sparkbot or Guardian Suite production code is modified.
+- No enforcement, tool execution, vault migration, database migration, or live service wiring is added.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
