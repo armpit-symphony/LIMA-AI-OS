@@ -6,6 +6,8 @@ This policy defines default risk classes and approval expectations for each LIMA
 
 It does not implement enforcement. It does not execute tools. It does not replace `GuardianDecision`. It gives future Guardian and Harness extraction a clear policy target before any runtime enforcement exists.
 
+`GuardianDecision` still gates execution. A policy decision can narrow or block exposure, but it cannot authorize execution by itself.
+
 ## Core Rule
 
 Tool packs are deny-by-default.

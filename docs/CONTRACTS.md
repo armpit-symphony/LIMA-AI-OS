@@ -399,6 +399,19 @@ Rules:
 - Harness receives only `selected_tools`.
 - Deny-by-default.
 
+### PolicyExposure
+
+Values:
+
+- `allow`
+- `deny`
+- `require_confirmation`
+- `require_guardian_review`
+- `require_operator_pin`
+- `require_breakglass`
+
+These values describe policy exposure posture. They are not execution methods and do not replace `GuardianDecisionStatus`.
+
 ### ToolPackRiskRule
 
 Fields:
@@ -483,6 +496,19 @@ Rules:
 - A policy decision cannot expand `GuardianDecision.allowed_tool_packs`.
 - A policy decision cannot add tools that are not in the Harness `selected_tools` shortlist.
 - Denied policy decisions are still audit records.
+
+### PolicyProtocol
+
+Protocol surface:
+
+- `describe_policy() -> ToolPackRiskPolicy`
+- `evaluate(context: PolicyEvaluationContext) -> PolicyDecision`
+
+Rules:
+
+- `PolicyProtocol` has no execute method.
+- `evaluate` produces policy evidence only.
+- Execution remains behind `GuardianDecision` and later approved Harness, Tool, or Driver paths.
 
 ## Approval
 
