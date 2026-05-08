@@ -206,6 +206,26 @@ Acceptance criteria:
 - No runtime implementation is added.
 - Extraction remains blocked until lineage contract is reviewed.
 
+### M0.13: Redaction / Privacy Contract
+
+Goal: define privacy, redaction, reference, retention, and visibility contracts before Spine storage/audit persistence.
+
+Deliverables:
+
+- `docs/REDACTION_PRIVACY_CONTRACT.md`.
+- `PrivacyClass` / `RedactionClass` / `RetentionClass` / `VisibilityClass` contracts.
+- `DataReference` contract.
+- Audit/spine privacy fields.
+- Default handling for secrets, transcripts, model context, terminal output, files, memory, browser/network data, robot sensors, and future BCI/thought-adjacent data.
+
+Acceptance criteria:
+
+- Raw secrets are never stored in audit events.
+- Sensitive content uses refs/summaries/redaction.
+- BCI/thought data is biometric and confirm-only.
+- Robot sensor data has safety/privacy defaults.
+- Extraction remains blocked until redaction/privacy contract is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

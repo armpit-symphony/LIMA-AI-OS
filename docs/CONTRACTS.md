@@ -771,11 +771,130 @@ Rules:
 - Critical actions require explicit approval metadata when policy says so.
 - Thought/BCI cannot directly approve critical actions.
 
+## Redaction / Privacy
+
+Redaction and privacy contracts classify what audit/spine events may store directly, summarize, reference, retain, or hide from views. Redaction does not authorize execution.
+
+### PrivacyClass
+
+Classes:
+
+- `public`
+- `internal`
+- `private`
+- `confidential`
+- `secret`
+- `restricted`
+- `safety_critical`
+- `biometric`
+- `unknown`
+
+### RedactionClass
+
+Classes:
+
+- `none`
+- `summary_only`
+- `reference_only`
+- `hash_only`
+- `masked`
+- `secret_ref_only`
+- `drop`
+- `operator_only`
+- `breakglass_only`
+
+### RetentionClass
+
+Classes:
+
+- `ephemeral`
+- `short`
+- `standard`
+- `extended`
+- `legal_hold`
+- `do_not_store`
+
+### VisibilityClass
+
+Classes:
+
+- `public_view`
+- `operator_view`
+- `admin_view`
+- `security_view`
+- `breakglass_view`
+- `system_only`
+- `no_view`
+
+### DataReference
+
+Fields:
+
+- `ref_id`
+- `ref_type`
+- `uri`
+- `privacy_class`
+- `redaction_class`
+- `retention_class`
+- `visibility_class`
+- `content_hash`
+- `created_at`
+- `expires_at`
+- `metadata`
+
+### RedactionMetadata
+
+Fields:
+
+- `privacy_class`
+- `redaction_class`
+- `retention_class`
+- `visibility_class`
+- `content_refs`
+- `evidence_refs`
+- `secret_refs`
+- `redacted_summary`
+- `contains_secret`
+- `contains_biometric`
+- `contains_safety_critical`
+- `data_subject_ref`
+- `retention_expires_at`
+- `metadata`
+
+### PrivacyProtocol
+
+Protocol surface:
+
+- `describe_reference(ref) -> RedactionMetadata`
+
+Rules:
+
+- References do not expose raw content.
+- `secret_ref` never contains raw secret.
+- Redaction does not authorize execution.
+- Events may carry refs/summaries, not raw sensitive content.
+- Raw secrets are never written to audit events.
+
 ## AuditEvent
 
 Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.
 
 Audit events that participate in a consequential chain should also carry `lineage_id`, parent/root event references when available, and result/error references. `AuditLineageRecord` tracks the latest known state of the chain without executing or approving any action.
+
+Audit and Spine events may carry:
+
+- `privacy_class`
+- `redaction_class`
+- `retention_class`
+- `visibility_class`
+- `content_refs`
+- `secret_refs`
+- `redacted_summary`
+- `contains_secret`
+- `contains_biometric`
+- `contains_safety_critical`
+- `data_subject_ref`
+- `retention_expires_at`
 
 ## ModelCall
 

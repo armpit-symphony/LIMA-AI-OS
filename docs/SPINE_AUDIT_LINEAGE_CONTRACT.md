@@ -201,6 +201,7 @@ Require:
 
 ## Privacy / Redaction
 
+- Spine/Audit events must carry privacy/redaction/retention/visibility fields or references where sensitive data is involved
 - audit events should avoid raw secrets
 - raw transcripts may be stored by reference instead of inline
 - sensitive content should use `content_ref` / `evidence_ref`

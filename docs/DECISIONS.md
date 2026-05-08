@@ -198,3 +198,19 @@ Consequences:
 - Scheduled/autonomous work must preserve or renew lineage.
 - Secrets are referenced, not stored raw.
 - Extraction remains blocked until lineage contract is reviewed.
+
+## ADR-0016: Audit Lineage Must Use Redaction and References for Sensitive Data
+
+Status: Accepted
+
+Decision: LIMA Runtime audit/spine events must classify sensitive data and use references, summaries, hashes, masks, or secret refs instead of storing raw sensitive content.
+
+Rationale: LIMA is intended for human-controlled AI infrastructure across office agents, automation, and robots. Auditability must not leak secrets, private data, transcripts, sensor data, or future biometric/thought-adjacent data.
+
+Consequences:
+
+- Raw secrets are never written to audit events.
+- Sensitive content uses `content_ref`, `evidence_ref`, `secret_ref`, `transcript_ref`, or equivalent references.
+- BCI/thought-adjacent data is biometric and never direct approval/control.
+- Robot sensor data requires safety/privacy defaults.
+- Extraction remains blocked until privacy/redaction is reviewed.

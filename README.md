@@ -70,6 +70,8 @@ Phase 0.11 defines approval metadata for high/critical-risk actions, including b
 
 Phase 0.12 defines end-to-end Spine/Audit lineage from human input to result.
 
+Phase 0.13 defines redaction/privacy contracts so audit lineage can be useful without leaking secrets or private data.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -168,6 +170,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/GUARDIAN_DECISION_CONTRACT.md](docs/GUARDIAN_DECISION_CONTRACT.md)
 - [docs/APPROVAL_METADATA_CONTRACT.md](docs/APPROVAL_METADATA_CONTRACT.md)
 - [docs/SPINE_AUDIT_LINEAGE_CONTRACT.md](docs/SPINE_AUDIT_LINEAGE_CONTRACT.md)
+- [docs/REDACTION_PRIVACY_CONTRACT.md](docs/REDACTION_PRIVACY_CONTRACT.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
