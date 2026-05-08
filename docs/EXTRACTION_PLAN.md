@@ -364,6 +364,43 @@ Acceptance criteria:
 - Secret handling uses references, not raw secret event payloads.
 - Existing Sparkbot Guardian tests are mapped to runtime parity tests.
 
+## Phase 1.0: Guardian Suite Decoupling Audit
+
+Scope:
+
+- Inspect LIMA-Guardian-Suite read-only.
+- Identify coupling to Sparkbot `app.crud`, `app.models`, `app.services`, route modules, direct Sparkbot DB sessions, local deployment paths, and direct persistence.
+- Define forbidden imports for future `lima.guardian` code.
+- Add non-runtime import-boundary tests in LIMA-AI-OS.
+- Keep this phase as audit/import-boundary work only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md` exists.
+- Coupled Guardian Suite files are listed with recommended boundaries.
+- `lima.guardian` import-boundary tests reject Sparkbot backend imports.
+- First extraction seam is identified.
+- No Guardian enforcement is implemented.
+- No tool execution is implemented.
+- No vault secret migration or DB migration is added.
+- No Sparkbot or LIMA-Guardian-Suite files are modified.
+
+Hard gate:
+
+No Guardian extraction until Sparkbot `app.crud` / `app.models` / `app.services` coupling is removed or isolated behind LIMA contracts/adapters.
+
+Specific no-go areas:
+
+- modules importing `app.crud` directly
+- modules importing `app.models` directly
+- modules importing `app.services` directly
+- live vault secret storage/reveal/use
+- live PIN or breakglass enforcement
+- scheduled task execution
+- Sparkbot chat/tool route imports
+- direct SQLite stores as Guardian core
+- audit persistence
+
 ## Phase 2: Extract Model Harness
 
 Scope:
