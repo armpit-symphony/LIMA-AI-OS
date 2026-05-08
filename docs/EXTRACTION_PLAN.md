@@ -211,6 +211,39 @@ Specific blockers:
 - Scheduled/autonomous execution must inherit or renew approval metadata.
 - Breakglass must be short-lived, scoped, and auditable.
 
+## Phase 0.12: Spine / Audit Lineage Contract
+
+Scope:
+
+- Define end-to-end lineage across human input, typed intent, Guardian decision, approval, policy/tool exposure, execution, and result.
+- Define audit event categories and statuses.
+- Define `AuditLineageRecord` and expanded `SpineEvent` contract shape.
+- Define scheduled/autonomous lineage inheritance.
+- Define critical action lineage requirements.
+- Keep lineage as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/SPINE_AUDIT_LINEAGE_CONTRACT.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- `lineage_id` links consequential chains.
+- Downstream execution events carry `decision_id`.
+- Denied, blocked, failed, expired, revoked, and superseded actions remain auditable.
+
+Hard gate:
+
+No Guardian/Harness/Spine extraction until lineage contract is reviewed.
+
+Specific blockers:
+
+- `stream_chat_with_tools()` must be split/wrapped to emit lineage events.
+- Voice path must preserve `input_id` and transcript confidence.
+- Terminal/PTY must create critical lineage events.
+- Robotics bridge must create robot action lineage events.
+- Dynamic skills must record `exposure_id` and `execution_id`.
+- Audit events must not contain raw secrets.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

@@ -183,6 +183,29 @@ Acceptance criteria:
 - Scheduled/autonomous execution renews approval when expired/out of scope.
 - No runtime implementation is added.
 
+### M0.12: Spine / Audit Lineage Contract
+
+Goal: define end-to-end lineage across input, intent, Guardian decision, approval, policy/tool exposure, execution, and result.
+
+Deliverables:
+
+- `docs/SPINE_AUDIT_LINEAGE_CONTRACT.md`.
+- `AuditLineageRecord` contract.
+- Expanded `SpineEvent` fields.
+- Event category/status enums.
+- Scheduled/autonomous lineage rules.
+- Critical action lineage rules.
+- Privacy/redaction guidance.
+
+Acceptance criteria:
+
+- Every consequential action can be traced by `lineage_id`.
+- `decision_id` appears in downstream execution events.
+- `approval_id` appears where policy requires approval.
+- Denied, blocked, expired, revoked, superseded, and failed actions remain auditable.
+- No runtime implementation is added.
+- Extraction remains blocked until lineage contract is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
