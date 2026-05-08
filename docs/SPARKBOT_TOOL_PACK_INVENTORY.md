@@ -311,3 +311,7 @@ Future audit events must record:
 Recommended next branch: `phase-0-10-tool-pack-risk-policy`.
 
 Goal: define default approval/risk policy for each pack before any runtime enforcement.
+
+## Phase 0.10 Follow-Up
+
+This inventory is not enforcement. Pack classifications must be paired with risk/approval policy before extraction.

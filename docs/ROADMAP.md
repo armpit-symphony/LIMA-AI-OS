@@ -139,6 +139,28 @@ Acceptance criteria:
 - No Sparkbot code is copied.
 - Harness extraction remains blocked until the inventory is reviewed.
 
+### M0.10: Tool-Pack Risk Policy
+
+Goal: define default risk and approval policy for LIMA tool packs before enforcement or Harness extraction.
+
+Deliverables:
+
+- `docs/TOOL_PACK_RISK_POLICY.md`.
+- Default risk/approval table for all packs.
+- Mixed read/write pack rules.
+- Dynamic skill policy.
+- Scheduled/autonomous decision inheritance rules.
+- Shell-specific defaults.
+
+Acceptance criteria:
+
+- Every starter pack has default risk guidance.
+- Unknown tools are denied by default.
+- Terminal/admin/robot/payment/deploy packs are critical-risk.
+- Dynamic skills require classification before exposure.
+- Scheduled execution inherits `decision_id` or requires renewal.
+- Harness extraction remains blocked until this policy is reviewed.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

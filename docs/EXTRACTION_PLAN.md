@@ -151,6 +151,36 @@ Specific blockers:
 - Unknown tools must be classified before extraction.
 - `GuardianDecision.allowed_tool_packs` must constrain `selected_tools`.
 
+## Phase 0.10: Tool-Pack Risk Policy
+
+Scope:
+
+- Define default risk and approval policy for every starter tool pack.
+- Define mixed read/write pack rules before any enforcement exists.
+- Define dynamic skill classification requirements.
+- Define scheduled/autonomous decision inheritance requirements.
+- Keep policy as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/TOOL_PACK_RISK_POLICY.md` is reviewed before Phase 1 extraction begins.
+- No Sparkbot code is copied.
+- No runtime implementation is added.
+- Every starter pack has default risk and approval guidance.
+- Unknown and dynamic tools remain denied until classified.
+
+Hard gate:
+
+No Harness/tool execution extraction until pack risk policy exists and is reviewed.
+
+Specific blockers:
+
+- Mixed read/write packs must have action-level risk.
+- Dynamic skills must be classified before exposure.
+- Scheduled/autonomous actions must inherit or renew `decision_id`.
+- Terminal/admin/robot/payment/deploy packs must remain critical-risk.
+- Unknown tools are denied by default.
+
 ## Phase 1: Decouple Guardian
 
 Scope:

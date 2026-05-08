@@ -34,6 +34,14 @@ from .intent import (
     IntentType,
     RiskClass,
 )
+from .policy import (
+    PolicyDecision,
+    PolicyEvaluationContext,
+    PolicyExposure,
+    PolicyProtocol,
+    ToolPackRiskPolicy,
+    ToolPackRiskRule,
+)
 from .shell import ShellManifest, ShellProtocol
 from .spine import SpineEvent, SpineProtocol, TaskRecord
 from .storage import StorageProtocol
@@ -77,6 +85,10 @@ __all__ = [
     "ModelCallEvent",
     "ModelRequest",
     "ModelResponse",
+    "PolicyDecision",
+    "PolicyEvaluationContext",
+    "PolicyExposure",
+    "PolicyProtocol",
     "RiskClass",
     "ShellManifest",
     "ShellProtocol",
@@ -93,5 +105,7 @@ __all__ = [
     "ToolPackManifest",
     "ToolPackName",
     "ToolPackProtocol",
+    "ToolPackRiskPolicy",
+    "ToolPackRiskRule",
     "ShellToolScope",
 ]
