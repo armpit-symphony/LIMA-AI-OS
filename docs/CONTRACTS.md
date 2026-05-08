@@ -944,6 +944,57 @@ Rules:
 - Sparkbot parity means preserving behavior, not unsafe internal shortcuts.
 - Robo-OS is classified as a Guardian-gated driver/runtime integration.
 
+## Extraction Readiness
+
+Extraction readiness contracts describe which Phase 1 areas are ready, constrained, blocked, or unknown. They do not migrate implementation, authorize extraction, execute tools, or enforce Guardian policy.
+
+### ReadinessStatus
+
+Statuses:
+
+- `ready`
+- `ready_with_constraints`
+- `blocked`
+- `unknown`
+
+### ReadinessArea
+
+Areas:
+
+- `architecture`
+- `contracts`
+- `guardian`
+- `harness`
+- `tool_packs`
+- `approvals`
+- `spine_audit`
+- `privacy`
+- `robotics`
+- `terminal`
+- `persistence`
+- `adapters`
+- `unknown`
+
+### ExtractionReadinessRecord
+
+Fields:
+
+- `area`
+- `status`
+- `score`
+- `blockers`
+- `ready_items`
+- `next_action`
+- `metadata`
+
+Rules:
+
+- Readiness records are contract-level review evidence.
+- Readiness records do not extract implementation.
+- Readiness records do not authorize execution.
+- Readiness records do not replace `GuardianDecision`.
+- Blocked areas stay blocked until their Phase 0 gates are satisfied.
+
 ## AuditEvent
 
 Audit events are immutable evidence of runtime decisions and actions. They should contain safe metadata, actor identity, source shell, risk posture, correlation IDs, and `decision_id` for consequential execution.

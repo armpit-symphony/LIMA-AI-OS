@@ -249,6 +249,30 @@ Acceptance criteria:
 - No implementation is copied.
 - No runtime code is added.
 
+### M0.15: Extraction Readiness Review
+
+Goal: produce final Phase 0 readiness review and Phase 1 extraction order.
+
+Deliverables:
+
+- `docs/EXTRACTION_READINESS_REVIEW.md`.
+- readiness score.
+- ready/blocked area list.
+- first safe extraction target.
+- Phase 1 extraction order.
+- Phase 1 PR #1 work order.
+- go/no-go decision.
+- risk register.
+
+Acceptance criteria:
+
+- reference repos rechecked.
+- blocked items explicit.
+- first safe extraction target identified.
+- Phase 1 no-go areas documented.
+- no implementation copied.
+- no runtime behavior added.
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

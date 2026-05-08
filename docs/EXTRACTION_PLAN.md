@@ -311,6 +311,44 @@ Specific requirements:
 - Robo-OS must be classified as driver/runtime integration
 - all extraction candidates must map to Phase 0 contracts
 
+## Phase 0.15: Extraction Readiness Review
+
+Scope:
+
+- Produce the final Phase 0 readiness review before Phase 1 extraction.
+- Recheck Sparkbot, LIMA Guardian Suite, and LIMA Robo-OS reference commits.
+- Consolidate ready areas, blocked areas, do-not-extract-yet shortcuts, and Phase 1 no-go areas.
+- Identify the first safe Phase 1 target.
+- Keep the review as docs/contracts/tests only.
+
+Acceptance criteria:
+
+- `docs/EXTRACTION_READINESS_REVIEW.md` is merged.
+- Reference repos are rechecked read-only.
+- Blocked items are explicit.
+- First safe extraction target is identified.
+- Phase 1 no-go areas are documented.
+- No implementation is copied.
+- No runtime behavior is added.
+
+Hard gate:
+
+No Phase 1 extraction until Extraction Readiness Review is merged.
+
+Recommended first Phase 1 target:
+
+`phase-1-0-guardian-suite-decoupling-audit`
+
+No-go areas:
+
+- Harness/tool execution
+- `stream_chat_with_tools` extraction
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+- redaction runtime
+- policy/approval enforcement
+
 ## Phase 1: Decouple Guardian
 
 Scope:
