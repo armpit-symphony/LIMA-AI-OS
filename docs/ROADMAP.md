@@ -202,7 +202,7 @@ Acceptance criteria:
 - Every consequential action can be traced by `lineage_id`.
 - `decision_id` appears in downstream execution events.
 - `approval_id` appears where policy requires approval.
-- Denied/blocked/failed actions remain auditable.
+- Denied, blocked, expired, revoked, superseded, and failed actions remain auditable.
 - No runtime implementation is added.
 - Extraction remains blocked until lineage contract is reviewed.
 

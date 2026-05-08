@@ -424,7 +424,7 @@ Rules:
 - Events record what happened or what was requested.
 - Downstream execution events must carry `decision_id`.
 - `approval_id` is required where policy requires approval.
-- Denied/blocked/failed events are still audit records.
+- Denied, blocked, expired, revoked, superseded, and failed events are still audit records.
 - Secrets are referenced, not stored raw.
 
 ## Driver

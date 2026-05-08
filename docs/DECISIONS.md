@@ -194,7 +194,7 @@ Consequences:
 - `lineage_id` is required for consequential chains.
 - Downstream execution events carry `decision_id`.
 - `approval_id` is recorded when required.
-- Denied/blocked/failed actions are auditable.
+- Denied, blocked, expired, revoked, superseded, and failed actions are auditable.
 - Scheduled/autonomous work must preserve or renew lineage.
 - Secrets are referenced, not stored raw.
 - Extraction remains blocked until lineage contract is reviewed.

@@ -15,6 +15,7 @@ HumanInput.input_id
   -> IntentEnvelope.intent_id
   -> GuardianDecision.decision_id
   -> ApprovalMetadata.approval_id when required
+  -> ToolPackScope / ToolPackRiskPolicy
   -> ToolExposureDecision.exposure_id when tools are exposed
   -> ModelCallEvent / ToolCallEvent / DriverEvent / TerminalEvent / RobotEvent
   -> ResultEvent
@@ -153,6 +154,9 @@ Every audit/spine event should carry:
 - superseded actions reference prior event/decision/approval where possible
 - denied actions still emit audit events
 - blocked actions still emit audit events
+- expired actions still emit audit events
+- revoked actions still emit audit events
+- superseded actions still emit audit events
 - failed actions still emit audit events
 
 ## Scheduled / Autonomous Lineage
@@ -210,7 +214,7 @@ Require:
 - voice transcript path must preserve `input_id` and transcript confidence
 - terminal/PTY path must create critical lineage events
 - robotics bridge must produce typed intent, `decision_id`, approval metadata, and robot action events
-- dynamic skills must produce exposure and execution events with selected tools
+- dynamic skills must produce exposure and execution events with `exposure_id`, `execution_id`, and selected tools
 
 ## Acceptance Criteria
 
