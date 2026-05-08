@@ -218,6 +218,8 @@ Before Harness extraction:
 
 Phase 0.9 applies this contract to Sparkbot by inventorying current tools into proposed packs. This inventory is required before Harness/tool extraction.
 
+Phase 0.10 defines default risk/approval policy for packs. Scoping decides which packs may be exposed; risk policy decides what approval level is required for each pack/action.
+
 ## Acceptance Criteria
 
 - `ToolPackManifest` contract exists or is expanded.

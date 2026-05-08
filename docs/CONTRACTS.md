@@ -399,6 +399,117 @@ Rules:
 - Harness receives only `selected_tools`.
 - Deny-by-default.
 
+### PolicyExposure
+
+Values:
+
+- `allow`
+- `deny`
+- `require_confirmation`
+- `require_guardian_review`
+- `require_operator_pin`
+- `require_breakglass`
+
+These values describe policy exposure posture. They are not execution methods and do not replace `GuardianDecisionStatus`.
+
+### ToolPackRiskRule
+
+Fields:
+
+- `pack_name`
+- `default_risk_class`
+- `read_risk_class`
+- `write_risk_class`
+- `destructive_risk_class`
+- `default_exposure`
+- `required_approval_level`
+- `requires_decision`
+- `requires_explicit_confirmation`
+- `requires_operator_pin`
+- `requires_breakglass`
+- `requires_audit`
+- `constraints`
+- `metadata`
+
+Rules:
+
+- A risk rule is contract metadata, not enforcement logic.
+- Risk is action-level for mixed packs such as files, browser, network, comms, calendar, memory, meeting, and robo.
+- Terminal, admin, robot, payment, and deploy rules must default to critical risk.
+
+### ToolPackRiskPolicy
+
+Fields:
+
+- `policy_id`
+- `policy_version`
+- `shell_id`
+- `rules`
+- `default_unknown_risk`
+- `unknown_default_exposure`
+- `created_at`
+- `metadata`
+
+Rules:
+
+- Policy evaluation does not execute tools.
+- Policy decision does not replace `GuardianDecision`.
+- `GuardianDecision` still gates execution.
+- Unknown packs/tools are denied by default.
+- Dynamic tools require pack classification before exposure.
+
+### PolicyEvaluationContext
+
+Fields:
+
+- `shell_id`
+- `actor_id`
+- `intent_id`
+- `decision_id`
+- `requested_pack`
+- `requested_tool`
+- `action_type`
+- `risk_class`
+- `metadata`
+
+The context packages the inputs needed to evaluate risk policy after Guardian and tool-pack scoping have narrowed the request. It does not authorize execution by itself.
+
+### PolicyDecision
+
+Fields:
+
+- `policy_decision_id`
+- `policy_id`
+- `decision_id`
+- `allowed`
+- `pack_name`
+- `tool_name`
+- `risk_class`
+- `approval_level`
+- `reason`
+- `constraints`
+- `metadata`
+
+Rules:
+
+- A policy decision is auditable policy evidence.
+- A policy decision cannot expand `GuardianDecision.allowed_tool_packs`.
+- A policy decision cannot add tools that are not in the Harness `selected_tools` shortlist.
+- Denied policy decisions are still audit records.
+
+### PolicyProtocol
+
+Protocol surface:
+
+- `describe_policy() -> ToolPackRiskPolicy`
+- `evaluate(context: PolicyEvaluationContext) -> PolicyDecision`
+
+Rules:
+
+- `PolicyProtocol` has no execute method.
+- `evaluate` produces policy evidence only.
+- Execution remains behind `GuardianDecision` and later approved Harness, Tool, or Driver paths.
+
 ## Approval
 
 Approval contracts represent pending, approved, denied, expired, and routed decisions. Approval state must be auditable and tied to a Guardian decision.

@@ -146,3 +146,20 @@ Consequences:
 - Unknown tools remain denied by default.
 - Critical packs require explicit approval policy.
 - Sparkbot parity means behavior parity through scoped packs, not full firehose exposure.
+
+## ADR-0013: Tool-Pack Risk Policy Is Required Before Tool Enforcement
+
+Status: Accepted
+
+Decision: LIMA Runtime requires a default risk and approval policy for tool packs before Harness/tool catalogue extraction or runtime enforcement.
+
+Rationale: Tool-pack names alone are not enough. Many packs mix read/write/destructive behavior. Sparkbot's dynamic skills and scheduled actions can expand capability surface unless each tool pack has risk and approval policy.
+
+Consequences:
+
+- Unknown tools are denied by default.
+- Dynamic skills require classification.
+- Mixed read/write tools are risked by action.
+- Scheduled/autonomous execution must inherit or renew `decision_id`.
+- Critical packs require explicit approval metadata.
+- Harness extraction remains blocked until policy is reviewed.

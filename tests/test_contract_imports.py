@@ -35,6 +35,10 @@ def test_public_contract_imports() -> None:
         ModelCallEvent,
         ModelRequest,
         ModelResponse,
+        PolicyDecision,
+        PolicyEvaluationContext,
+        PolicyExposure,
+        PolicyProtocol,
         ShellManifest,
         ShellProtocol,
         SpineEvent,
@@ -50,6 +54,8 @@ def test_public_contract_imports() -> None:
         ToolPackManifest,
         ToolPackName,
         ToolPackProtocol,
+        ToolPackRiskPolicy,
+        ToolPackRiskRule,
         ShellToolScope,
     )
 
@@ -87,6 +93,10 @@ def test_public_contract_imports() -> None:
             ModelCallEvent,
             ModelRequest,
             ModelResponse,
+            PolicyDecision,
+            PolicyEvaluationContext,
+            PolicyExposure,
+            PolicyProtocol,
             ShellManifest,
             ShellProtocol,
             SpineEvent,
@@ -102,6 +112,8 @@ def test_public_contract_imports() -> None:
             ToolPackManifest,
             ToolPackName,
             ToolPackProtocol,
+            ToolPackRiskPolicy,
+            ToolPackRiskRule,
             ShellToolScope,
         )
     )
