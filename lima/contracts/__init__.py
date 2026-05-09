@@ -1,5 +1,11 @@
 """Public Phase 0 contracts for LIMA Runtime."""
 
+from .adapters import (
+    AdapterDesignProtocol,
+    HumanInputAdapterDesign,
+    HumanInputAdapterMapping,
+    HumanInputAdapterSurface,
+)
 from .approval import (
     ApprovalMetadata,
     ApprovalMethod,
@@ -101,6 +107,7 @@ from .vault import (
 )
 
 __all__ = [
+    "AdapterDesignProtocol",
     "ApprovalAuditEvent",
     "ApprovalEvent",
     "ApprovalLevel",
@@ -142,6 +149,9 @@ __all__ = [
     "GuardianDecisionStatus",
     "GuardianProtocol",
     "HarnessProtocol",
+    "HumanInputAdapterDesign",
+    "HumanInputAdapterMapping",
+    "HumanInputAdapterSurface",
     "HumanInput",
     "HumanInputSource",
     "ClarificationRequest",

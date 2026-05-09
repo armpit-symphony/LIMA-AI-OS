@@ -509,6 +509,27 @@ Acceptance criteria:
 - raw chat-to-tool shortcut remains blocked
 - production integration remains blocked
 
+### M1.11: HumanInput Adapter Contract
+
+Goal: create non-executing adapter design contracts for mapping Sparkbot input surfaces to LIMA `HumanInput`.
+
+Deliverables:
+
+- `lima/contracts/adapters.py`
+- `HumanInputAdapterSurface`
+- `HumanInputAdapterMapping`
+- `HumanInputAdapterDesign`
+- describe-only `AdapterDesignProtocol`
+- tests confirming no live adapter methods
+
+Acceptance criteria:
+
+- no Sparkbot imports
+- no runtime behavior
+- no adapt/execute methods
+- raw chat-to-tool shortcut remains blocked
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
