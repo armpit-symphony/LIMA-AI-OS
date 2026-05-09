@@ -146,15 +146,27 @@ def test_auth_vault_protocols_do_not_expose_execution_or_secret_methods() -> Non
         VaultProviderProtocol,
     )
 
-    auth_forbidden = {"execute", "enforce", "verify_pin", "login"}
+    auth_forbidden = {
+        "execute",
+        "enforce",
+        "verify_pin",
+        "login",
+        "authenticate_live",
+    }
     vault_forbidden = {
         "get_secret",
         "decrypt",
         "encrypt",
         "read_value",
         "write_value",
+        "return_secret",
     }
-    breakglass_forbidden = {"execute", "enforce"}
+    breakglass_forbidden = {
+        "execute",
+        "enforce",
+        "open_live_session",
+        "bypass",
+    }
 
     assert _public_callables(AuthProviderProtocol).isdisjoint(auth_forbidden)
     assert _public_callables(VaultProviderProtocol).isdisjoint(vault_forbidden)
