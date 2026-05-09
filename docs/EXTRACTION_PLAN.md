@@ -530,6 +530,37 @@ No real enforcement until:
 - redaction/privacy implementation
 - Sparkbot adapter review
 
+## Phase 1.5: Policy/Risk Fake Evaluator
+
+Scope:
+
+- Add a fake in-memory policy/risk evaluator for contract tests.
+- Turn `PolicyEvaluationContext` records into `PolicyDecision` records.
+- Use in-memory `ToolPackRiskPolicy` and `ToolPackRiskRule` objects only.
+- Keep real policy enforcement blocked.
+
+Acceptance criteria:
+
+- Unknown packs/tools deny by default.
+- High/critical packs do not auto-allow.
+- `PolicyDecision` does not replace `GuardianDecision`.
+- No tool, model, driver, terminal, file, network, browser, payment, deploy, or robot execution is added.
+- No live approval, Guardian, auth, breakglass, policy, or production behavior is added.
+- Boundary tests continue to pass.
+
+Hard gate:
+
+Fake policy/risk evaluator is allowed for tests only. Real policy enforcement remains blocked.
+
+No real enforcement until:
+
+- Guardian enforcement design
+- approval enforcement design
+- lineage emission design
+- redaction/privacy implementation
+- Sparkbot adapter review
+- tool-pack runtime enforcement design
+
 ## Phase 2: Extract Model Harness
 
 Scope:
