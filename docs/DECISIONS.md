@@ -293,3 +293,19 @@ Consequences:
 - live behavior remains deferred
 - adapters require explicit review
 - boundary tests become part of the safety gate
+
+## ADR-0022: Vault/Auth Fake Providers Are Test-Only
+
+Status: Accepted
+
+Decision: LIMA Runtime may include fake in-memory Auth/Vault/Breakglass providers for contract validation, but they must not read real secrets, verify PINs, enforce breakglass, touch databases, or import Sparkbot internals.
+
+Rationale: Fake providers allow safe tests and future adapter shape without moving production security behavior.
+
+Consequences:
+
+- test-only provider behavior is allowed
+- real adapter work remains blocked
+- live auth/vault/breakglass remains deferred
+- no raw secret values may be introduced
+- provider-boundary tests must pass

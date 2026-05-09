@@ -468,6 +468,39 @@ Specific blockers:
 - no breakglass bypass/open_live_session methods
 - no DB/session coupling
 
+## Phase 1.3: Vault/Auth Fake Providers
+
+Scope:
+
+- Add test-only fake Auth, Vault, and Breakglass providers.
+- Keep providers in memory only.
+- Use contract objects only.
+- Validate fake provider shape with tests.
+- Keep real adapters blocked.
+
+Acceptance criteria:
+
+- Fake providers implement the Phase 1.1 provider protocol shape.
+- Fake providers use in-memory contract metadata only.
+- Fake Vault provider stores only `VaultSecretRef` metadata.
+- Fake Breakglass provider stores only `BreakglassSessionRef` metadata.
+- No live auth, PIN verification, decryption, DB/storage, environment access, file access, or external service calls are added.
+- Provider-boundary tests continue to pass.
+
+Hard gate:
+
+Fake providers are allowed for tests only. Real adapters remain blocked.
+
+Specific blockers:
+
+- no live provider adapters
+- no real secret values
+- no DB/storage
+- no PIN verification
+- no vault encryption/decryption
+- no breakglass enforcement
+- no Sparkbot backend internals
+
 ## Phase 2: Extract Model Harness
 
 Scope:

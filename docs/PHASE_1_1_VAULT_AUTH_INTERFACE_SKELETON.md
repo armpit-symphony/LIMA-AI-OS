@@ -209,11 +209,11 @@ Phase 1.2:
 
 Phase 1.3:
 
-- create adapter stubs that can wrap Sparkbot behavior later, still no live secrets
+- create test-only fake providers, still no live secrets
 
 Phase 1.4+:
 
-- implement test-only fake providers
+- create adapter stubs that can wrap Sparkbot behavior later, still no live secrets
 
 Later:
 
