@@ -530,6 +530,31 @@ Acceptance criteria:
 - raw chat-to-tool shortcut remains blocked
 - tests pass
 
+### Phase 1.12A: Owner Autonomy & Safety Policy
+
+Goal: Define owner-controlled autonomy so LIMA can act naturally within configured boundaries without asking for PIN/approval for everything.
+
+Deliverables:
+
+- `docs/OWNER_AUTONOMY_SAFETY_POLICY.md`
+- autonomy levels for manual, assisted, trusted, bounded autonomous, robot-safe, and locked-down operation
+- capability rule matrix for owner policy
+- trusted device/session policy
+- identity confidence and verbal approval policy
+- breakglass configuration guidance
+- vault, personal data, external communication, destructive action, payment, deploy, terminal, and robot safety defaults
+- robot/humanoid safety constitution and robot safety modes
+
+Acceptance criteria:
+
+- owner autonomy policy is reviewed before behavior-bearing adapter, skeleton, enforcement, robot, or tool work
+- approval means owner policy plus trusted context, identity confidence, risk class, capability boundary, and escalation only when needed
+- low-risk owner-approved actions can avoid repeated prompts when Guardian verifies context
+- high/critical, secret, destructive, terminal/PTY, production deploy, payment, and physical-world actions escalate by policy
+- law, human safety, and configured safety policy override owner command
+- Guardian remains mandatory
+- no runtime behavior is added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

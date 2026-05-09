@@ -438,3 +438,21 @@ Consequences:
 - raw chat-to-tool shortcuts remain blocked
 - future adapters must target `HumanInput` first
 - tests block execution-style adapter methods
+
+## ADR-0032: Owner-Defined Autonomy Replaces Constant Approval Prompts
+
+Status: Accepted
+
+Decision: LIMA will use owner-defined autonomy profiles and capability rules instead of asking for approval on every action.
+
+Rationale: Future AI assistants, office bots, and humanoid/worker robots must act naturally inside owner-approved boundaries. Constant PIN prompts would make the system unusable. Safety is preserved through risk classes, trusted identity, device/session policy, approval metadata, breakglass, Guardian decisions, and audit lineage.
+
+Consequences:
+
+- owner config controls autonomy level
+- low-risk owner-approved actions can proceed without repeated prompts
+- high/critical actions escalate based on policy
+- vault/secrets/destructive actions remain strongly protected
+- robot actions require safety constitution and safety modes
+- law/human safety override owner command
+- Guardian remains mandatory
