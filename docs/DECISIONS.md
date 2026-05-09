@@ -456,3 +456,20 @@ Consequences:
 - robot actions require safety constitution and safety modes
 - law/human safety override owner command
 - Guardian remains mandatory
+
+## ADR-0033: First Sparkbot Adapter Uses Neutral Payloads and Passive Autonomy Metadata
+
+Status: Accepted
+
+Decision: The first Sparkbot HumanInput adapter skeleton must use neutral LIMA-owned payload dataclasses and may carry owner-autonomy context only as passive metadata.
+
+Rationale: Neutral payloads preserve the HumanInput boundary and prevent Sparkbot runtime coupling, raw chat-to-tool shortcuts, route wiring, accidental production behavior, or premature autonomy enforcement.
+
+Consequences:
+
+- no Sparkbot imports in Phase 1.13
+- no live route wiring
+- adapter returns HumanInput only
+- `stream_chat_with_tools` remains blocked
+- autonomy enforcement remains blocked
+- production adapter implementation remains deferred
