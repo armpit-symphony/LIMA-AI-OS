@@ -21,6 +21,15 @@ ConsequentialActionRequest
 
 The current fake pipeline is in-memory and test-only. It records contract-shaped decisions, approvals, and lineage evidence without executing or persisting anything.
 
+The fake pipeline proves contract composition only. It is not production runtime.
+
+Safety invariants:
+
+- Fake decisions are not production authorization.
+- `PolicyDecision` does not replace `GuardianDecision`.
+- `ApprovalMetadata` is evidence, not execution.
+- Spine records; it does not execute.
+
 ## What Is Proven
 
 - Contracts can compose across policy, Guardian decision, approval, and Spine/Audit lineage boundaries.
