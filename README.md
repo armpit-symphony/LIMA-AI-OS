@@ -80,6 +80,8 @@ Phase 1.0 audits Guardian Suite coupling and protects `lima.guardian` from Spark
 
 Phase 1.1 defines non-executing Vault/Auth interfaces to decouple Guardian from Sparkbot internals without moving live secret/auth behavior.
 
+Phase 1.2 adds provider-boundary tests to keep Vault/Auth seams free of Sparkbot internals and live secret/auth behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -183,6 +185,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/EXTRACTION_READINESS_REVIEW.md](docs/EXTRACTION_READINESS_REVIEW.md)
 - [docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md](docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md)
 - [docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md](docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md)
+- [docs/PHASE_1_2_VAULT_AUTH_PROVIDER_BOUNDARY_TESTS.md](docs/PHASE_1_2_VAULT_AUTH_PROVIDER_BOUNDARY_TESTS.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

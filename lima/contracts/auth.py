@@ -73,7 +73,7 @@ class AuthProviderProtocol(Protocol):
     """Describe auth state and requirements without logging in or verifying PINs."""
 
     def describe_actor(self, actor_id: str) -> AuthActor | None:
-        """Describe an actor by reference without loading Sparkbot models."""
+        """Describe an actor by reference without loading backend app models."""
         ...
 
     def describe_context(self, session_id: str) -> AuthContext | None:

@@ -436,6 +436,38 @@ Specific blockers:
 - no breakglass enforcement
 - no Sparkbot deployment paths
 
+## Phase 1.2: Vault/Auth Provider Boundary Tests
+
+Scope:
+
+- Add tests that protect future Vault/Auth providers and adapter skeletons from Sparkbot backend imports.
+- Block raw secret fields in Vault/Auth dataclasses.
+- Block live auth, vault, and breakglass method names from Vault/Auth provider protocols.
+- Keep tests repo-local and safe with the current minimal package layout.
+- Keep this phase as docs/tests only.
+
+Acceptance criteria:
+
+- Provider boundary tests exist.
+- Forbidden import strings are blocked in local LIMA provider/interface paths.
+- Forbidden secret/auth methods are blocked from Vault/Auth provider protocols.
+- Forbidden raw secret field names are blocked from Vault/Auth dataclasses.
+- No provider or adapter implementation is added.
+- No reference repo inspection occurs inside tests.
+
+Hard gate:
+
+No Vault/Auth adapter skeletons until provider-boundary tests are merged.
+
+Specific blockers:
+
+- no Sparkbot imports
+- no raw secret fields
+- no live auth methods
+- no decrypt/encrypt/get_secret methods
+- no breakglass bypass/open_live_session methods
+- no DB/session coupling
+
 ## Phase 2: Extract Model Harness
 
 Scope:
