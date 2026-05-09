@@ -445,6 +445,28 @@ Acceptance criteria:
 - no Sparkbot imports
 - tests pass
 
+### M1.8: Guardian Fake Pipeline
+
+Goal: compose fake policy, Guardian decision, approval, and Spine/Audit components into a test-only contract pipeline.
+
+Deliverables:
+
+- `FakeGuardianPipeline`
+- `FakeGuardianPipelineResult`
+- tests for low-risk, critical, and unknown requests
+- docs explaining no real enforcement/execution
+
+Acceptance criteria:
+
+- no real enforcement
+- no tool/model/driver execution
+- no Sparkbot imports
+- no audit persistence
+- critical actions do not auto-approve
+- unknown actions deny/escalate
+- fake lineage is recorded
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

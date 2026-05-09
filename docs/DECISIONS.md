@@ -374,3 +374,19 @@ Consequences:
 - no raw secrets or sensitive data are stored
 - real audit persistence remains deferred
 - future adapters must not rely on fake recorder in production
+
+## ADR-0027: Guardian Fake Pipeline Is Test-Only
+
+Status: Accepted
+
+Decision: LIMA may include a fake in-memory Guardian pipeline for contract tests, but it must not enforce policy, authorize execution, execute actions, or serve as production runtime behavior.
+
+Rationale: The contracts need an end-to-end integration proof before real enforcement or adapters are designed.
+
+Consequences:
+
+- fake pipeline results are test artifacts only
+- no real execution is authorized
+- critical actions do not auto-approve
+- real runtime pipeline remains deferred
+- future Sparkbot adapters must not rely on fake pipeline in production
