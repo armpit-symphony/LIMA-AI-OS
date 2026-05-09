@@ -687,6 +687,48 @@ GO only for Phase 1.10 Sparkbot HumanInput Adapter Design.
 
 NO-GO for production adapter wiring, real enforcement, tool execution, Harness extraction, terminal/PTY, Robo-OS physical action, audit persistence, and redaction runtime.
 
+## Phase 1.10: Sparkbot HumanInput Adapter Design
+
+Scope:
+
+- Design how Sparkbot chat, voice, meeting, Workstation, SparkBud, terminal/operator, MCP approval, and robotics natural language surfaces become LIMA `HumanInput` records.
+- Inventory current Sparkbot input surfaces against future LIMA adapter boundaries.
+- Define actor, shell, session, room, meeting, message, operator, and source-reference mapping candidates.
+- Define privacy and redaction defaults before any adapter implementation or audit persistence.
+- Keep this phase docs/tests-only.
+
+Acceptance criteria:
+
+- Sparkbot input surfaces are inventoried.
+- Chat, voice, meeting, Workstation, SparkBud, terminal/operator, MCP, approval, and robot request surfaces have future `HumanInput` mapping notes.
+- Raw chat-to-tool shortcut is blocked.
+- No Sparkbot code is modified.
+- No adapter implementation or production wiring is added.
+- No model, tool, terminal/PTY, driver, or Robo-OS physical action execution is added.
+- No audit persistence or redaction runtime is added.
+
+Hard gate:
+
+Sparkbot HumanInput adapter design is allowed. Production adapter implementation remains blocked.
+
+No adapter implementation until:
+
+- HumanInput mapping is reviewed
+- privacy/redaction defaults are reviewed
+- raw chat-to-tool shortcut is blocked
+- lineage plan is reviewed
+- Sparkbot `origin/main` is rechecked
+
+No-go:
+
+- `stream_chat_with_tools` extraction
+- tool execution
+- model execution
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+- production Sparkbot wiring
+
 ## Phase 2: Extract Model Harness
 
 Scope:

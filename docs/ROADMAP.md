@@ -487,6 +487,28 @@ Acceptance criteria:
 - production integration remains blocked
 - tests pass
 
+### M1.10: Sparkbot HumanInput Adapter Design
+
+Goal: design how Sparkbot input surfaces map to LIMA `HumanInput` records before any adapter implementation.
+
+Deliverables:
+
+- `docs/PHASE_1_10_SPARKBOT_HUMANINPUT_ADAPTER_DESIGN.md`
+- Sparkbot input surface inventory
+- HumanInput mapping table
+- actor/shell/session mapping notes
+- privacy/redaction defaults
+- raw chat-to-tool shortcut block
+
+Acceptance criteria:
+
+- no Sparkbot changes
+- no adapter wiring
+- no model/tool execution
+- HumanInput mapping exists for chat/voice/meeting/operator surfaces
+- raw chat-to-tool shortcut remains blocked
+- production integration remains blocked
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
