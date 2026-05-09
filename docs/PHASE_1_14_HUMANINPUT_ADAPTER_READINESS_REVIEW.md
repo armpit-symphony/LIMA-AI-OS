@@ -4,7 +4,9 @@
 
 Review whether the non-production Sparkbot HumanInput adapter skeleton is ready to be composed with the fake Guardian pipeline in a future test-only branch.
 
+This review is docs/review only.
 This review does not implement that composition.
+This review does not implement a HumanInput-to-fake-pipeline bridge.
 This review does not authorize production wiring.
 This review does not authorize real enforcement or execution.
 
@@ -142,6 +144,8 @@ Trusted context and autonomy notes are evidence for future policy and Guardian r
 ## Still Blocked
 
 - production Sparkbot route wiring
+- live WebSocket adapter
+- live frontend adapter
 - stream_chat_with_tools import/extraction
 - raw chat-to-tool shortcut
 - model execution
@@ -190,6 +194,6 @@ If GO, Phase 1.15 must satisfy:
 
 GO for Phase 1.15 HumanInput Fake Pipeline Bridge only if it is test-only and separated from SparkbotHumanInputAdapter.
 
-NO-GO for production integration, real IntentCompiler, real Guardian enforcement, tool/model execution, persistence, or live Sparkbot wiring.
+NO-GO for production integration, real IntentCompiler, real Guardian enforcement, real policy enforcement, real approval enforcement, tool/model execution, persistence, live Sparkbot wiring, terminal/PTY, Robo-OS physical action, or autonomy enforcement.
 
 The adapter remains the input boundary. The bridge may prove contract composition in memory, but it must not become a runtime path.

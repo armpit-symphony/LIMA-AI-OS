@@ -911,6 +911,7 @@ NO-GO:
 - adapter creating IntentEnvelope
 - adapter calling fake pipeline directly
 - real IntentCompiler
+- real Guardian enforcement
 - model/tool execution
 - persistence
 - autonomy enforcement
