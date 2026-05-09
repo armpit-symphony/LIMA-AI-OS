@@ -156,6 +156,41 @@ def test_critical_terminal_metadata_does_not_auto_approve() -> None:
     assert result.metadata["non_executing"] is True
 
 
+def test_critical_robot_payment_deploy_and_secret_metadata_do_not_auto_approve() -> None:
+    cases = (
+        (ConsequentialActionType.ROBOT_ACTION, "robo", "robot-ref"),
+        (ConsequentialActionType.PAYMENT_ACTION, "payments", "payment-ref"),
+        (ConsequentialActionType.DEPLOY_ACTION, "deploy", "deploy-ref"),
+        (ConsequentialActionType.SECRET_ACCESS, "vault", "secret-ref"),
+    )
+
+    for action_type, pack_name, target_ref in cases:
+        rule = ToolPackRiskRule(
+            pack_name=pack_name,
+            default_risk_class="critical",
+            default_exposure=PolicyExposure.ALLOW,
+            required_approval_level="operator_pin",
+        )
+        bridge, _spine = _bridge(rule)
+        human_input = _human_input(
+            {
+                "request_id": f"request-{action_type.value}",
+                "action_type": action_type.value,
+                "risk_class": "critical",
+                "target_ref": target_ref,
+                "requested_tool_pack": pack_name,
+            }
+        )
+
+        result = bridge.evaluate_human_input(human_input)
+
+        assert result.request.action_type is action_type
+        assert result.guardian_decision.status is GuardianDecisionStatus.NEEDS_OPERATOR_PIN
+        assert result.guardian_decision.status is not GuardianDecisionStatus.APPROVED
+        assert result.approval is not None
+        assert result.metadata["non_executing"] is True
+
+
 def test_autonomy_metadata_is_passive() -> None:
     bridge, _spine = _bridge()
     human_input = _human_input(
