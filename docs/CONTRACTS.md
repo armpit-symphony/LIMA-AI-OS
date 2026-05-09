@@ -1009,6 +1009,28 @@ Rules:
 - Critical actions require explicit approval metadata when policy says so.
 - Thought/BCI cannot directly approve critical actions.
 
+## Owner Autonomy
+
+Owner autonomy contracts may be added later to describe configured autonomy without implementing runtime behavior in this phase.
+
+Future contract candidates:
+
+- `OwnerAutonomyProfile`: owner-configured autonomy level, capability defaults, trusted context requirements, approval posture, and safety constraints.
+- `CapabilityRule`: action-level policy for read, write, communication, payment, deploy, terminal, vault, robot, physical-world, and regulated actions.
+- `TrustedDeviceContext`: device/session evidence such as `device_id`, owner account, session, recent unlock/auth, expiration, location confidence, biometric confidence, and anomaly score.
+- `IdentityConfidence`: identity evidence combining known device, login session, voice, face, PIN, hardware key, context, behavior pattern, and future biometric/BCI signals.
+- `SafetyMode`: robot/physical-world posture such as observe, assist, low-risk action, household helper, worker robot, humanoid helper, and emergency stop.
+- `RobotSafetyConstraint`: concrete geofence, speed, force, tool, proximity, sensor-confidence, emergency-stop, and audit requirements.
+
+Rules:
+
+- Owner autonomy does not replace Guardian.
+- Owner autonomy reduces repeated prompts only inside configured, verified boundaries.
+- High/critical, vault/secret, destructive, terminal/PTY, production deploy, payment, and physical-world actions escalate by owner policy and risk class.
+- Law, human safety, and configured safety policy override owner command.
+- BCI/thought-adjacent signals are biometric and confirm-only.
+- This section does not add code contracts, enforcement, adapters, production wiring, or runtime behavior.
+
 ## Redaction / Privacy
 
 Redaction and privacy contracts classify what audit/spine events may store directly, summarize, reference, retain, or hide from views. Redaction does not authorize execution.

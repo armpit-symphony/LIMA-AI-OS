@@ -768,6 +768,39 @@ No-go:
 - Robo-OS physical action
 - audit persistence
 
+## Phase 1.12A: Owner Autonomy & Safety Policy
+
+Scope:
+
+- Define how owner-controlled autonomy replaces constant approval prompts.
+- Define autonomy levels, capability rules, trusted device/session policy, identity confidence, verbal approval, breakglass configuration, vault/personal data protection, destructive action defaults, external communication rules, robot safety constitution, and robot safety modes.
+- Keep this phase docs/contracts/tests-only.
+
+Acceptance criteria:
+
+- `docs/OWNER_AUTONOMY_SAFETY_POLICY.md` exists and is reviewed.
+- Owner autonomy is defined as policy, trusted context, identity confidence, risk class, capability boundary, and escalation only when needed.
+- Guardian remains mandatory for consequential execution.
+- Law, human safety, and configured safety policy override owner command.
+- No runtime behavior, adapter implementation, production wiring, model/tool execution, terminal/PTY, Robo-OS physical action, audit persistence, or Sparkbot changes are added.
+
+Hard gate:
+
+No behavior-bearing adapter/skeleton/enforcement/robot/tool work until Owner Autonomy & Safety Policy is reviewed.
+
+No-go:
+
+- live Sparkbot routes
+- behavior-bearing adapters
+- production wiring
+- Guardian enforcement implementation
+- policy enforcement implementation
+- model/tool execution
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+- raw secret handling
+
 ## Phase 2: Extract Model Harness
 
 Scope:
