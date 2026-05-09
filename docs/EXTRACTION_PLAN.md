@@ -801,6 +801,45 @@ No-go:
 - audit persistence
 - raw secret handling
 
+## Phase 1.12: Sparkbot Adapter Readiness Review
+
+Scope:
+
+- Review whether LIMA is ready for a first non-production Sparkbot HumanInput adapter skeleton.
+- Recheck Sparkbot `origin/main` read-only for adapter-relevant input surfaces.
+- Include Owner Autonomy & Safety Policy as passive metadata context only.
+- Keep this phase review/docs/tests-only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md` exists.
+- Sparkbot `origin/main` is rechecked and the inspected commit is recorded.
+- GO/NO-GO decision for Phase 1.13 is documented.
+- Phase 1.13 allowed skeleton scope is limited to neutral payloads -> `HumanInput`.
+- Production wiring, `stream_chat_with_tools`, model/tool execution, terminal/PTY, robot action, persistence, and autonomy enforcement remain blocked.
+- No adapter implementation is added.
+
+Hard gate:
+
+No Sparkbot HumanInput adapter skeleton until Phase 1.12 readiness review is merged.
+
+After merge:
+
+GO only for Phase 1.13 non-production HumanInput adapter skeleton using neutral payloads.
+
+NO-GO:
+
+- Sparkbot imports
+- route wiring
+- `stream_chat_with_tools` import
+- `execute_tool` import
+- model/harness calls
+- terminal/PTY
+- robot action
+- audit persistence
+- production integration
+- autonomy enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

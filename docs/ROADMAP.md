@@ -555,6 +555,31 @@ Acceptance criteria:
 - Guardian remains mandatory
 - no runtime behavior is added
 
+### Phase 1.12: Sparkbot Adapter Readiness Review
+
+Goal: Decide whether LIMA is ready for first non-production Sparkbot HumanInput adapter skeleton.
+
+Deliverables:
+
+- `docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- readiness decision
+- Phase 1.13 scope
+- adapter skeleton guardrails
+- owner-autonomy context
+- still-blocked list
+- risk register
+
+Acceptance criteria:
+
+- Sparkbot origin/main rechecked
+- GO/NO-GO decision documented
+- Phase 1.13 allowed scope defined
+- owner autonomy policy included as passive metadata context only
+- production wiring remains blocked
+- `stream_chat_with_tools` remains blocked
+- no implementation added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
