@@ -318,6 +318,25 @@ Acceptance criteria:
 - no DB/storage
 - contracts/tests pass
 
+### M1.2: Vault/Auth Provider Boundary Tests
+
+Goal: add tests that prevent future Vault/Auth providers from importing Sparkbot internals or exposing live secret/auth behavior.
+
+Deliverables:
+
+- provider-boundary tests
+- forbidden import list
+- forbidden method/field checks
+- docs for future provider rules
+
+Acceptance criteria:
+
+- no Sparkbot imports under LIMA provider paths
+- no raw secret fields
+- no live auth/vault/breakglass methods in protocols
+- tests pass with current minimal package layout
+- no implementation added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

@@ -205,6 +205,7 @@ Phase 1.1:
 Phase 1.2:
 
 - add import-boundary tests for vault/auth provider skeletons
+- strengthen the boundary with provider tests before any adapter skeletons
 
 Phase 1.3:
 

@@ -277,3 +277,19 @@ Consequences:
 - live vault persistence/decryption remains deferred
 - breakglass remains metadata-only in this phase
 - future providers must be explicit adapters
+
+## ADR-0021: Vault/Auth Providers Must Pass Boundary Tests Before Adapter Work
+
+Status: Accepted
+
+Decision: Before LIMA adds Vault/Auth provider adapters, provider-boundary tests must block Sparkbot imports, raw secret fields, live auth methods, decryption methods, and breakglass bypass methods.
+
+Rationale: Vault/Auth are security-critical. Tests must preserve the seam created in Phase 1.1 before adapter code appears.
+
+Consequences:
+
+- future providers must depend on LIMA contracts
+- raw secret fields remain forbidden
+- live behavior remains deferred
+- adapters require explicit review
+- boundary tests become part of the safety gate
