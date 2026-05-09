@@ -491,3 +491,18 @@ Consequences:
 - no tool/model execution
 - autonomy metadata remains passive
 - future implementation still requires review
+
+## ADR-0035: HumanInput Adapter and Fake Pipeline Bridge Must Remain Separate
+
+Status: Accepted
+
+Decision: The Sparkbot HumanInput adapter must stop at HumanInput. Any future test-only bridge from HumanInput to the fake Guardian pipeline must be a separate component.
+
+Rationale: Keeping the adapter separate prevents raw chat-to-tool shortcuts, premature intent inference, production wiring creep, and fake pipeline misuse.
+
+Consequences:
+
+- adapter returns HumanInput only
+- bridge may be test-only and separate
+- adapter does not create IntentEnvelope, ConsequentialActionRequest, GuardianDecision, ApprovalMetadata, PolicyDecision, or SpineEvent
+- production integration remains blocked

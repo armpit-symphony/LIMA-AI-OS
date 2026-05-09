@@ -602,6 +602,28 @@ Acceptance criteria:
 - no autonomy enforcement
 - tests pass
 
+### Phase 1.14: HumanInput Adapter Readiness Review
+
+Goal: Decide whether the non-production HumanInput adapter skeleton is ready to be composed with the fake Guardian pipeline in a test-only branch.
+
+Deliverables:
+
+- `docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md`
+- readiness decision
+- Phase 1.15 allowed scope
+- bridge-vs-adapter boundary clarification
+- still-blocked list
+- risk register
+
+Acceptance criteria:
+
+- adapter remains HumanInput-only
+- bridge, if allowed, is separate and test-only
+- production wiring remains blocked
+- model/tool execution remains blocked
+- autonomy enforcement remains blocked
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
