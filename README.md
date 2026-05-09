@@ -90,6 +90,8 @@ Phase 1.5 adds a fake in-memory policy/risk evaluator for contract tests only; i
 
 Phase 1.6 adds a fake in-memory ApprovalMetadata recorder for contract tests only; it does not enforce approval, verify PINs, open breakglass, or authorize execution.
 
+Phase 1.7 adds a fake in-memory Spine/Audit recorder for contract tests only; it does not persist audit data or store raw sensitive content.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -198,6 +200,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_4_GUARDIAN_DECISION_FAKE_EVALUATOR.md](docs/PHASE_1_4_GUARDIAN_DECISION_FAKE_EVALUATOR.md)
 - [docs/PHASE_1_5_POLICY_RISK_FAKE_EVALUATOR.md](docs/PHASE_1_5_POLICY_RISK_FAKE_EVALUATOR.md)
 - [docs/PHASE_1_6_APPROVAL_FAKE_RECORDER.md](docs/PHASE_1_6_APPROVAL_FAKE_RECORDER.md)
+- [docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md](docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
