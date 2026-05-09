@@ -501,6 +501,35 @@ Specific blockers:
 - no breakglass enforcement
 - no Sparkbot backend internals
 
+## Phase 1.4: Guardian Decision Fake Evaluator
+
+Scope:
+
+- Add a fake in-memory Guardian decision evaluator for contract tests.
+- Turn `ConsequentialActionRequest` records into `GuardianDecision` records.
+- Record fake decisions in memory only.
+- Keep real Guardian enforcement blocked.
+
+Acceptance criteria:
+
+- Fake decisions carry `decision_id`.
+- Critical actions do not auto-approve by default.
+- No tool, model, driver, terminal, file, network, browser, payment, deploy, or robot execution is added.
+- No live approval, auth, breakglass, policy, or production behavior is added.
+- Boundary tests continue to pass.
+
+Hard gate:
+
+Fake Guardian decision evaluator is allowed for tests only. Real Guardian enforcement remains blocked.
+
+No real enforcement until:
+
+- policy enforcement design
+- approval enforcement design
+- lineage emission design
+- redaction/privacy implementation
+- Sparkbot adapter review
+
 ## Phase 2: Extract Model Harness
 
 Scope:
