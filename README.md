@@ -96,6 +96,8 @@ Phase 1.8 adds a fake in-memory Guardian pipeline proving contracts fit together
 
 Phase 1.9 reviews the fake Guardian pipeline and permits adapter-design planning only, not production integration.
 
+Phase 1.10 designs how Sparkbot input surfaces become LIMA HumanInput records without preserving raw chat-to-tool shortcuts.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -207,6 +209,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md](docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md)
 - [docs/PHASE_1_8_GUARDIAN_FAKE_PIPELINE.md](docs/PHASE_1_8_GUARDIAN_FAKE_PIPELINE.md)
 - [docs/PHASE_1_9_FAKE_PIPELINE_READINESS_REVIEW.md](docs/PHASE_1_9_FAKE_PIPELINE_READINESS_REVIEW.md)
+- [docs/PHASE_1_10_SPARKBOT_HUMANINPUT_ADAPTER_DESIGN.md](docs/PHASE_1_10_SPARKBOT_HUMANINPUT_ADAPTER_DESIGN.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

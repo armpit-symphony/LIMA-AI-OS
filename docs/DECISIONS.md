@@ -406,3 +406,19 @@ Consequences:
 - tool execution remains blocked
 - real Guardian/policy/approval enforcement remains blocked
 - audit persistence and redaction runtime remain blocked
+
+## ADR-0029: Sparkbot Inputs Must Adapt to HumanInput Before Execution
+
+Status: Accepted
+
+Decision: Sparkbot input surfaces must be adapted into LIMA `HumanInput` records before any `IntentEnvelope`, `GuardianDecision`, tool planning, or execution path.
+
+Rationale: Sparkbot is the spec, but raw chat-to-tool shortcuts are not kernel primitives. LIMA needs a clean input boundary before any runtime behavior is extracted.
+
+Consequences:
+
+- chat, voice, meeting, Workstation, SparkBud, and operator inputs map to `HumanInput`
+- production adapter wiring remains blocked
+- `stream_chat_with_tools` is not a direct extraction target
+- tool/model execution remains blocked
+- privacy/redaction defaults are required before persistence
