@@ -561,6 +561,38 @@ No real enforcement until:
 - Sparkbot adapter review
 - tool-pack runtime enforcement design
 
+## Phase 1.6: Approval Fake Recorder
+
+Scope:
+
+- Add a fake in-memory `ApprovalMetadata` recorder for contract tests.
+- Record and retrieve `ApprovalMetadata` and `ApprovalScope` records.
+- Keep real approval enforcement blocked.
+- Keep PIN and breakglass behavior blocked.
+
+Acceptance criteria:
+
+- Approval metadata remains evidence only.
+- Approval metadata does not replace `GuardianDecision`.
+- No approval tokens are issued.
+- No PIN verification or breakglass enforcement is added.
+- No tool, model, driver, terminal, file, network, browser, payment, deploy, or robot execution is added.
+- Boundary tests continue to pass.
+
+Hard gate:
+
+Fake approval recorder is allowed for tests only. Real approval enforcement remains blocked.
+
+No real approval enforcement until:
+
+- PIN verification design
+- breakglass enforcement design
+- Guardian enforcement design
+- policy enforcement design
+- lineage emission design
+- redaction/privacy implementation
+- Sparkbot adapter review
+
 ## Phase 2: Extract Model Harness
 
 Scope:
