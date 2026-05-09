@@ -401,6 +401,28 @@ Acceptance criteria:
 - `PolicyDecision` does not replace `GuardianDecision`
 - tests pass
 
+### M1.6: Approval Fake Recorder
+
+Goal: add fake in-memory `ApprovalMetadata` recorder for contract tests only.
+
+Deliverables:
+
+- fake approval recorder
+- tests for `ApprovalScope` / `ApprovalMetadata` recording
+- docs explaining no approval enforcement
+- safety rules preventing PIN/breakglass behavior
+
+Acceptance criteria:
+
+- no real enforcement
+- no PIN verification
+- no breakglass enforcement
+- no approval tokens
+- no tool/model/driver execution
+- no Sparkbot imports
+- approval metadata does not replace `GuardianDecision`
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

@@ -342,3 +342,19 @@ Consequences:
 - real policy enforcement remains deferred
 - `PolicyDecision` does not replace `GuardianDecision`
 - future adapters must not rely on fake evaluator in production
+
+## ADR-0025: Approval Fake Recorder Is Test-Only
+
+Status: Accepted
+
+Decision: LIMA may include a fake in-memory `ApprovalMetadata` recorder for contract tests, but it must not enforce approval, verify PINs, open breakglass, issue approval tokens, or authorize execution.
+
+Rationale: Contract tests need a safe way to record `ApprovalMetadata` before real approval enforcement exists.
+
+Consequences:
+
+- fake approvals are test artifacts only
+- `ApprovalMetadata` remains evidence, not execution
+- approval does not replace `GuardianDecision`
+- real approval enforcement remains deferred
+- future adapters must not rely on fake recorder in production
