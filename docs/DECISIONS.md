@@ -422,3 +422,19 @@ Consequences:
 - `stream_chat_with_tools` is not a direct extraction target
 - tool/model execution remains blocked
 - privacy/redaction defaults are required before persistence
+
+## ADR-0030: HumanInput Adapter Contracts Are Describe-Only
+
+Status: Accepted
+
+Decision: LIMA will define describe-only `HumanInput` adapter contracts before implementing any Sparkbot adapter.
+
+Rationale: Sparkbot input must become `HumanInput` before `IntentEnvelope`, `GuardianDecision`, planning, or execution. Describe-only contracts let LIMA define the boundary without touching live Sparkbot behavior.
+
+Consequences:
+
+- no live adapter implementation yet
+- no Sparkbot route wiring
+- raw chat-to-tool shortcuts remain blocked
+- future adapters must target `HumanInput` first
+- tests block execution-style adapter methods

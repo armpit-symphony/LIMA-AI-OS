@@ -293,6 +293,75 @@ Rules:
 - Future BCI input is future-facing only and can only produce low-confidence intent candidates requiring explicit confirmation.
 - Human input records are evidence, not execution commands.
 
+## HumanInput Adapter
+
+HumanInput adapter contracts describe how future Sparkbot input surfaces map to LIMA `HumanInput` records before any production adapter exists.
+
+### HumanInputAdapterSurface
+
+Surfaces:
+
+- `chat_message`
+- `voice_transcript`
+- `meeting_prompt`
+- `sparkbud_prompt`
+- `workstation_command`
+- `operator_console`
+- `terminal_request`
+- `approval_response`
+- `mcp_request`
+- `robot_request`
+- `frontend_chat`
+- `unknown`
+
+### HumanInputAdapterMapping
+
+Fields:
+
+- `surface`
+- `source_path`
+- `source_name`
+- `human_input_source`
+- `shell_id`
+- `actor_ref`
+- `session_ref`
+- `source_ref`
+- `privacy_class`
+- `redaction_class`
+- `risk_notes`
+- `shortcut_risks`
+- `notes`
+- `metadata`
+
+### HumanInputAdapterDesign
+
+Fields:
+
+- `design_id`
+- `source_system`
+- `mappings`
+- `blocked_shortcuts`
+- `lineage_notes`
+- `privacy_notes`
+- `created_at`
+- `metadata`
+
+### AdapterDesignProtocol
+
+Protocol surface:
+
+- `describe_mappings() -> Sequence[HumanInputAdapterMapping]`
+- `describe_design() -> HumanInputAdapterDesign`
+
+Rules:
+
+- HumanInput adapter contracts are describe-only.
+- HumanInput adapter contracts do not read live Sparkbot messages.
+- HumanInput adapter contracts do not implement adapters.
+- HumanInput adapter contracts do not call models, execute tools, wire routes, open terminal/PTY, call Robo-OS, persist audit data, enforce Guardian decisions, or bypass IntentCompiler.
+- Raw chat-to-tool shortcuts remain blocked.
+- Future adapters must map Sparkbot input to `HumanInput` before `IntentEnvelope`, `GuardianDecision`, planning, or execution.
+
 ## IntentEnvelope
 
 Intent envelopes are typed, auditable command candidates prepared for Guardian.

@@ -729,6 +729,45 @@ No-go:
 - audit persistence
 - production Sparkbot wiring
 
+## Phase 1.11: HumanInput Adapter Contract
+
+Scope:
+
+- Define describe-only contracts for mapping Sparkbot input surfaces to LIMA `HumanInput` records.
+- Formalize adapter surface names, mapping metadata, blocked shortcuts, lineage notes, and privacy notes.
+- Keep the protocol describe-only so future adapter implementation remains a separate reviewed phase.
+- Keep this phase contracts/docs/tests-only.
+
+Acceptance criteria:
+
+- `lima/contracts/adapters.py` exists.
+- `HumanInputAdapterSurface`, `HumanInputAdapterMapping`, `HumanInputAdapterDesign`, and `AdapterDesignProtocol` exist.
+- `AdapterDesignProtocol` exposes describe methods only.
+- No `adapt`, `execute`, `run`, `call_model`, `call_tool`, `wire_route`, `send`, `persist`, or `open_terminal` methods are added.
+- No Sparkbot imports are added.
+- No runtime behavior, production route wiring, model/tool execution, terminal/PTY, Robo-OS physical action, audit persistence, or redaction runtime is added.
+
+Hard gate:
+
+HumanInput adapter contracts are allowed. Production adapter implementation remains blocked.
+
+No implementation until:
+
+- contract reviewed
+- Sparkbot `origin/main` rechecked
+- identity/session mapping reviewed
+- privacy/redaction defaults reviewed
+- raw chat-to-tool shortcut block reviewed
+
+No-go:
+
+- live Sparkbot routes
+- `stream_chat_with_tools` extraction
+- model/tool execution
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+
 ## Phase 2: Extract Model Harness
 
 Scope:

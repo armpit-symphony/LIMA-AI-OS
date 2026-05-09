@@ -5,6 +5,7 @@ def test_public_contract_imports() -> None:
     import lima
     from lima import contracts
     from lima.contracts import (
+        AdapterDesignProtocol,
         ApprovalAuditEvent,
         ApprovalEvent,
         ApprovalLevel,
@@ -48,6 +49,9 @@ def test_public_contract_imports() -> None:
         GuardianProtocol,
         HarnessProtocol,
         HumanInput,
+        HumanInputAdapterDesign,
+        HumanInputAdapterMapping,
+        HumanInputAdapterSurface,
         HumanInputSource,
         IntentCompilationResult,
         IntentCompilerProtocol,
@@ -103,6 +107,7 @@ def test_public_contract_imports() -> None:
         for item in (
             ApprovalEvent,
             ApprovalLevel,
+            AdapterDesignProtocol,
             ApprovalAuditEvent,
             ApprovalMetadata,
             ApprovalMethod,
@@ -143,6 +148,9 @@ def test_public_contract_imports() -> None:
             GuardianDecisionStatus,
             HarnessProtocol,
             HumanInput,
+            HumanInputAdapterDesign,
+            HumanInputAdapterMapping,
+            HumanInputAdapterSurface,
             HumanInputSource,
             IntentCompilationResult,
             IntentCompilerProtocol,
