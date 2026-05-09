@@ -325,3 +325,20 @@ Consequences:
 - critical actions should not auto-approve by default
 - real enforcement remains deferred
 - future adapters must not rely on fake evaluator in production
+
+## ADR-0024: Policy/Risk Fake Evaluator Is Test-Only
+
+Status: Accepted
+
+Decision: LIMA may include a fake in-memory policy/risk evaluator for contract tests, but it must not authorize real execution or serve as production policy enforcement.
+
+Rationale: Contract tests need a safe way to produce `PolicyDecision` records before real policy enforcement exists.
+
+Consequences:
+
+- fake policy decisions are test artifacts only
+- unknown packs/tools deny by default
+- high/critical packs do not auto-allow
+- real policy enforcement remains deferred
+- `PolicyDecision` does not replace `GuardianDecision`
+- future adapters must not rely on fake evaluator in production

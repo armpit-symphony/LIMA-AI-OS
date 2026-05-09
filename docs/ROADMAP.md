@@ -380,6 +380,27 @@ Acceptance criteria:
 - critical actions do not auto-approve by default
 - tests pass
 
+### M1.5: Policy/Risk Fake Evaluator
+
+Goal: add fake in-memory policy/risk evaluator for contract tests only.
+
+Deliverables:
+
+- fake policy/risk evaluator
+- tests for `PolicyEvaluationContext` to `PolicyDecision`
+- docs explaining no real enforcement
+- safety rules preventing high/critical auto-approval
+
+Acceptance criteria:
+
+- no real enforcement
+- no tool/model/driver execution
+- no Sparkbot imports
+- unknown packs/tools denied by default
+- high/critical packs do not auto-allow
+- `PolicyDecision` does not replace `GuardianDecision`
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
