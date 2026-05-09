@@ -337,6 +337,29 @@ Acceptance criteria:
 - tests pass with current minimal package layout
 - no implementation added
 
+### M1.3: Vault/Auth Fake Providers
+
+Goal: add test-only fake Auth, Vault, and Breakglass providers for contract validation.
+
+Deliverables:
+
+- fake auth provider
+- fake vault provider
+- fake breakglass provider
+- tests proving fake providers are in-memory and non-executing
+- docs for fake provider safety rules
+
+Acceptance criteria:
+
+- fake providers are in-memory only
+- no real secrets
+- no live auth or PIN verification
+- no encryption/decryption
+- no DB/storage
+- no breakglass enforcement
+- provider-boundary tests pass
+- no implementation copied from reference repos
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
