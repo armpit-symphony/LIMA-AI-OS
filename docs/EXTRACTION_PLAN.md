@@ -879,6 +879,44 @@ Still blocked:
 - PolicyDecision creation
 - SpineEvent creation
 
+## Phase 1.14: HumanInput Adapter Readiness Review
+
+Scope:
+
+- Review whether the non-production Sparkbot HumanInput adapter skeleton is ready to be composed with the fake Guardian pipeline in a future test-only branch.
+- Decide whether current identity, session, privacy, and passive autonomy metadata are sufficient for fake-pipeline composition.
+- Clarify that any HumanInput-to-fake-pipeline bridge must remain separate from the adapter.
+- Keep this phase review/docs/tests-only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md` exists.
+- GO/NO-GO decision for Phase 1.15 is documented.
+- Adapter remains HumanInput-only.
+- Bridge, if allowed, is separate and test-only.
+- Production wiring, model/tool execution, real enforcement, persistence, and autonomy enforcement remain blocked.
+
+Hard gate:
+
+No HumanInput-to-fake-pipeline bridge until Phase 1.14 readiness review is merged.
+
+After merge:
+
+GO only for Phase 1.15 test-only HumanInput Fake Pipeline Bridge.
+
+NO-GO:
+
+- production Sparkbot wiring
+- adapter creating GuardianDecision
+- adapter creating IntentEnvelope
+- adapter calling fake pipeline directly
+- real IntentCompiler
+- model/tool execution
+- persistence
+- autonomy enforcement
+- terminal/PTY
+- Robo-OS physical action
+
 ## Phase 2: Extract Model Harness
 
 Scope:
