@@ -199,7 +199,7 @@ Future identity signals may include:
 
 Identity confidence is combined with action risk and owner policy. It is not a standalone permission.
 
-BCI/thought-adjacent signals are biometric and confirm-only. They cannot directly approve critical execution.
+BCI/thought-adjacent signals are biometric and confirm-only. They cannot directly approve execution, directly control tools/drivers/robots, or bypass Guardian.
 
 ## Verbal Approval
 
