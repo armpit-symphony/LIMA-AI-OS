@@ -659,6 +659,34 @@ No real pipeline until:
 - Sparkbot adapter review
 - tool-pack runtime enforcement design
 
+## Phase 1.9: Fake Pipeline Readiness Review
+
+Scope:
+
+- Review the fake Guardian pipeline after Phase 1.8.
+- Decide whether contract composition is ready for the first adapter-design branch.
+- Document what the fake pipeline proves and what remains blocked.
+- Keep this phase docs/tests-only.
+
+Acceptance criteria:
+
+- Fake pipeline readiness review exists.
+- GO/NO-GO decision is documented.
+- First adapter-design branch is identified.
+- Production integration remains blocked.
+- Real enforcement, execution, persistence, and adapters remain blocked.
+- Tests continue to pass.
+
+Hard gate:
+
+No adapter design until fake pipeline readiness review is merged.
+
+After merge:
+
+GO only for Phase 1.10 Sparkbot HumanInput Adapter Design.
+
+NO-GO for production adapter wiring, real enforcement, tool execution, Harness extraction, terminal/PTY, Robo-OS physical action, audit persistence, and redaction runtime.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

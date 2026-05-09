@@ -390,3 +390,19 @@ Consequences:
 - critical actions do not auto-approve
 - real runtime pipeline remains deferred
 - future Sparkbot adapters must not rely on fake pipeline in production
+
+## ADR-0028: Fake Pipeline Enables Adapter Design, Not Runtime Integration
+
+Status: Accepted
+
+Decision: The fake Guardian pipeline allows LIMA to begin adapter-design work, but it does not authorize production runtime integration or real enforcement.
+
+Rationale: The fake pipeline proves contract composition but does not prove runtime safety. Adapter design can proceed only as docs/contracts/tests.
+
+Consequences:
+
+- Phase 1.10 may design Sparkbot `HumanInput` adapter boundaries
+- production Sparkbot wiring remains blocked
+- tool execution remains blocked
+- real Guardian/policy/approval enforcement remains blocked
+- audit persistence and redaction runtime remain blocked

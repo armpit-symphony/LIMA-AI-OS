@@ -467,6 +467,26 @@ Acceptance criteria:
 - fake lineage is recorded
 - tests pass
 
+### M1.9: Fake Pipeline Readiness Review
+
+Goal: review fake pipeline integration and decide whether LIMA is ready for first adapter-design work.
+
+Deliverables:
+
+- `docs/PHASE_1_9_FAKE_PIPELINE_READINESS_REVIEW.md`
+- fake pipeline readiness decision
+- blocked areas list
+- recommended next branch
+- Phase 1.10 acceptance criteria
+
+Acceptance criteria:
+
+- fake pipeline reviewed
+- ready/not-ready decision documented
+- first adapter-design branch identified
+- production integration remains blocked
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

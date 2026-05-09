@@ -94,6 +94,8 @@ Phase 1.7 adds a fake in-memory Spine/Audit recorder for contract tests only; it
 
 Phase 1.8 adds a fake in-memory Guardian pipeline proving contracts fit together without real enforcement, execution, persistence, or Sparkbot integration.
 
+Phase 1.9 reviews the fake Guardian pipeline and permits adapter-design planning only, not production integration.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -204,6 +206,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_6_APPROVAL_FAKE_RECORDER.md](docs/PHASE_1_6_APPROVAL_FAKE_RECORDER.md)
 - [docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md](docs/PHASE_1_7_SPINE_AUDIT_FAKE_RECORDER.md)
 - [docs/PHASE_1_8_GUARDIAN_FAKE_PIPELINE.md](docs/PHASE_1_8_GUARDIAN_FAKE_PIPELINE.md)
+- [docs/PHASE_1_9_FAKE_PIPELINE_READINESS_REVIEW.md](docs/PHASE_1_9_FAKE_PIPELINE_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
