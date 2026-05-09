@@ -473,3 +473,21 @@ Consequences:
 - `stream_chat_with_tools` remains blocked
 - autonomy enforcement remains blocked
 - production adapter implementation remains deferred
+
+## ADR-0034: Sparkbot HumanInput Adapter Skeleton Returns HumanInput Only
+
+Status: Accepted
+
+Decision: The first Sparkbot adapter skeleton may convert neutral payload dataclasses into HumanInput records only.
+
+Rationale: This allows LIMA to test input-boundary shape without importing Sparkbot, wiring routes, or preserving raw chat-to-tool shortcuts.
+
+Consequences:
+
+- no production wiring
+- no Sparkbot imports
+- no IntentEnvelope creation
+- no GuardianDecision creation
+- no tool/model execution
+- autonomy metadata remains passive
+- future implementation still requires review

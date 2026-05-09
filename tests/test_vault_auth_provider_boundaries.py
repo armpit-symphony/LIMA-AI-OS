@@ -1,5 +1,6 @@
-"""Boundary tests for future Vault/Auth providers and adapters."""
+"""Boundary tests for future Vault/Auth providers and live-coupled adapters."""
 
+import ast
 from dataclasses import fields
 from pathlib import Path
 
@@ -30,6 +31,9 @@ FORBIDDEN_IMPORT_STRINGS = (
     "vault.db",
     "sqlmodel",
     "SQLModel",
+)
+
+FORBIDDEN_IMPORT_MODULE_STRINGS = (
     "Sparkbot",
     "sparkbot",
 )
@@ -83,6 +87,17 @@ def _public_callables(protocol: type) -> set[str]:
     }
 
 
+def _imported_modules(path: Path) -> list[str]:
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    modules: list[str] = []
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            modules.extend(alias.name for alias in node.names)
+        elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+            modules.append(node.module)
+    return modules
+
+
 def test_vault_auth_provider_paths_do_not_import_sparkbot_internals() -> None:
     violations: list[str] = []
     for path in _protected_python_files():
@@ -90,6 +105,10 @@ def test_vault_auth_provider_paths_do_not_import_sparkbot_internals() -> None:
         for forbidden in FORBIDDEN_IMPORT_STRINGS:
             if forbidden in text:
                 violations.append(f"{path.relative_to(LIMA_ROOT)} contains {forbidden!r}")
+        imported_text = "\n".join(_imported_modules(path))
+        for forbidden in FORBIDDEN_IMPORT_MODULE_STRINGS:
+            if forbidden.lower() in imported_text.lower():
+                violations.append(f"{path.relative_to(LIMA_ROOT)} imports {forbidden!r}")
 
     assert violations == []
 
