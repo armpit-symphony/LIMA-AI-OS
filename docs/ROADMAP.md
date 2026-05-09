@@ -360,6 +360,26 @@ Acceptance criteria:
 - provider-boundary tests pass
 - no implementation copied from reference repos
 
+### M1.4: Guardian Decision Fake Evaluator
+
+Goal: add fake in-memory Guardian decision evaluator for contract tests only.
+
+Deliverables:
+
+- fake evaluator
+- tests for `ConsequentialActionRequest` to `GuardianDecision`
+- docs explaining no real enforcement
+- safety rules preventing execution
+
+Acceptance criteria:
+
+- no real enforcement
+- no tool/model/driver execution
+- no Sparkbot imports
+- fake decisions carry `decision_id`
+- critical actions do not auto-approve by default
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

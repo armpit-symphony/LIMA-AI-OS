@@ -309,3 +309,19 @@ Consequences:
 - live auth/vault/breakglass remains deferred
 - no raw secret values may be introduced
 - provider-boundary tests must pass
+
+## ADR-0023: Guardian Decision Fake Evaluator Is Test-Only
+
+Status: Accepted
+
+Decision: LIMA may include a fake in-memory Guardian decision evaluator for contract tests, but it must not execute actions or serve as production enforcement.
+
+Rationale: Contract tests need a safe way to produce `GuardianDecision` records before real Guardian enforcement exists.
+
+Consequences:
+
+- fake decisions are test artifacts only
+- no real action is authorized by the fake evaluator
+- critical actions should not auto-approve by default
+- real enforcement remains deferred
+- future adapters must not rely on fake evaluator in production

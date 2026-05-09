@@ -84,6 +84,8 @@ Phase 1.2 adds provider-boundary tests to keep Vault/Auth seams free of Sparkbot
 
 Phase 1.3 adds test-only fake Auth/Vault/Breakglass providers with no real secret/auth behavior.
 
+Phase 1.4 adds a fake in-memory Guardian decision evaluator for contract tests only; it does not enforce real policy or execute actions.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -189,6 +191,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md](docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md)
 - [docs/PHASE_1_2_VAULT_AUTH_PROVIDER_BOUNDARY_TESTS.md](docs/PHASE_1_2_VAULT_AUTH_PROVIDER_BOUNDARY_TESTS.md)
 - [docs/PHASE_1_3_VAULT_AUTH_FAKE_PROVIDERS.md](docs/PHASE_1_3_VAULT_AUTH_FAKE_PROVIDERS.md)
+- [docs/PHASE_1_4_GUARDIAN_DECISION_FAKE_EVALUATOR.md](docs/PHASE_1_4_GUARDIAN_DECISION_FAKE_EVALUATOR.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
