@@ -840,6 +840,42 @@ NO-GO:
 - production integration
 - autonomy enforcement
 
+## Phase 1.13: Sparkbot HumanInput Adapter Skeleton
+
+Scope:
+
+- Add a non-production LIMA-owned Sparkbot HumanInput adapter skeleton.
+- Convert neutral payload dataclasses into `HumanInput` records only.
+- Carry trusted context and owner-autonomy notes as passive metadata only.
+- Keep production Sparkbot wiring and execution paths blocked.
+
+Acceptance criteria:
+
+- `lima/adapters/sparkbot_humaninput.py` exists.
+- Neutral chat, voice, meeting, and operator payload dataclasses exist.
+- Adapter methods return `HumanInput` only.
+- No Sparkbot imports, route wiring, model/tool execution, persistence, autonomy enforcement, `IntentEnvelope`, or `GuardianDecision` creation is added.
+- Tests prove mappings and forbidden import/method boundaries.
+
+Hard gate:
+
+Sparkbot HumanInput adapter skeleton may exist only as non-production neutral-payload conversion.
+
+Still blocked:
+
+- production Sparkbot route wiring
+- live WebSocket integration
+- `stream_chat_with_tools`
+- `execute_tool`
+- model/harness calls
+- tool execution
+- terminal/PTY
+- Robo-OS
+- persistence
+- autonomy enforcement
+- GuardianDecision creation
+- IntentEnvelope creation
+
 ## Phase 2: Extract Model Harness
 
 Scope:

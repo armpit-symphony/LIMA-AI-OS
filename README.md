@@ -104,6 +104,8 @@ Phase 1.12A defines owner-controlled autonomy so bots can act freely inside conf
 
 Phase 1.12 reviews readiness for a non-production Sparkbot HumanInput adapter skeleton using neutral payloads and passive owner-autonomy metadata only.
 
+Phase 1.13 adds a non-production Sparkbot HumanInput adapter skeleton using neutral payloads only.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -219,6 +221,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_11_HUMANINPUT_ADAPTER_CONTRACT.md](docs/PHASE_1_11_HUMANINPUT_ADAPTER_CONTRACT.md)
 - [docs/OWNER_AUTONOMY_SAFETY_POLICY.md](docs/OWNER_AUTONOMY_SAFETY_POLICY.md)
 - [docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md)
+- [docs/PHASE_1_13_SPARKBOT_HUMANINPUT_ADAPTER_SKELETON.md](docs/PHASE_1_13_SPARKBOT_HUMANINPUT_ADAPTER_SKELETON.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

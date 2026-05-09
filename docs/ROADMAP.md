@@ -580,6 +580,28 @@ Acceptance criteria:
 - `stream_chat_with_tools` remains blocked
 - no implementation added
 
+### Phase 1.13: Sparkbot HumanInput Adapter Skeleton
+
+Goal: Create non-production adapter skeleton converting neutral Sparkbot-style payloads into HumanInput records.
+
+Deliverables:
+
+- `lima/adapters/sparkbot_humaninput.py`
+- `docs/PHASE_1_13_SPARKBOT_HUMANINPUT_ADAPTER_SKELETON.md`
+- neutral payload dataclasses for chat, voice, meeting, and operator input
+- pure conversion methods returning `HumanInput`
+- tests proving mapping behavior and forbidden import/method boundaries
+
+Acceptance criteria:
+
+- neutral payloads only
+- returns HumanInput only
+- no Sparkbot imports
+- no route wiring
+- no model/tool execution
+- no autonomy enforcement
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
