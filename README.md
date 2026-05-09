@@ -76,6 +76,10 @@ Phase 0.14 maps Sparkbot, Guardian Suite, and Robo-OS surfaces to LIMA Runtime b
 
 Phase 0.15 completes the extraction readiness review and identifies Phase 1.0 as Guardian Suite decoupling audit/import-boundary work.
 
+Phase 1.0 audits Guardian Suite coupling and protects `lima.guardian` from Sparkbot backend imports.
+
+Phase 1.1 defines non-executing Vault/Auth interfaces to decouple Guardian from Sparkbot internals without moving live secret/auth behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -177,6 +181,8 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/REDACTION_PRIVACY_CONTRACT.md](docs/REDACTION_PRIVACY_CONTRACT.md)
 - [docs/RUNTIME_BOUNDARY_MAP.md](docs/RUNTIME_BOUNDARY_MAP.md)
 - [docs/EXTRACTION_READINESS_REVIEW.md](docs/EXTRACTION_READINESS_REVIEW.md)
+- [docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md](docs/PHASE_1_0_GUARDIAN_SUITE_DECOUPLING_AUDIT.md)
+- [docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md](docs/PHASE_1_1_VAULT_AUTH_INTERFACE_SKELETON.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

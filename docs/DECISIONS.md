@@ -261,3 +261,19 @@ Consequences:
 - Runtime enforcement remains deferred.
 - Production Sparkbot remains untouched.
 - Guardian modules must depend on LIMA contracts, not Sparkbot app modules.
+
+## ADR-0020: Vault/Auth Extraction Starts With Non-Executing Interfaces
+
+Status: Accepted
+
+Decision: LIMA Runtime will define Vault/Auth interfaces before extracting any live Sparkbot or Guardian Suite vault/auth behavior.
+
+Rationale: Vault/Auth are security-critical. LIMA must first define contracts that prevent raw secret exposure and remove Sparkbot backend coupling before runtime behavior is moved.
+
+Consequences:
+
+- no raw secret values in contracts
+- live auth and PIN verification remain deferred
+- live vault persistence/decryption remains deferred
+- breakglass remains metadata-only in this phase
+- future providers must be explicit adapters

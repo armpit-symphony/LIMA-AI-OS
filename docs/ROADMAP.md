@@ -295,6 +295,29 @@ Acceptance criteria:
 - No Sparkbot or Guardian Suite production code is modified.
 - No enforcement, tool execution, vault migration, database migration, or live service wiring is added.
 
+### M1.1: Vault/Auth Interface Skeleton
+
+Goal: define non-executing Vault/Auth contracts to decouple Guardian from Sparkbot backend internals.
+
+Deliverables:
+
+- auth contract
+- vault contract
+- breakglass session reference contract
+- non-executing provider protocols
+- tests proving no forbidden Guardian imports
+- documentation of forbidden live behavior
+
+Acceptance criteria:
+
+- no raw secret value fields
+- no Sparkbot imports
+- no live auth/vault behavior
+- no PIN verification
+- no encryption/decryption
+- no DB/storage
+- contracts/tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

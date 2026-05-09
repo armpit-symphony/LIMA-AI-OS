@@ -102,6 +102,175 @@ Decision rules:
 
 Consequential actions include model calls with user/project context, tool calls, driver commands, terminal/PTY commands, file operations, browser/network actions, external communications, private data access, state changes, admin actions, payments, deployments, robot/physical-world actions, and any operation requiring approvals, auth, vault, breakglass, or elevated permissions.
 
+## Auth
+
+Auth contracts describe actors, auth context, auth requirements, and auth decisions without depending on Sparkbot `ChatUser`, Sparkbot DB sessions, operator env conventions, or live PIN behavior.
+
+Auth contracts do not verify PINs or log users in. They do not create sessions, enforce permissions, or replace `GuardianDecision` or `ApprovalMetadata`.
+
+### AuthActor
+
+Fields:
+
+- `actor_id`
+- `actor_type`
+- `display_name`
+- `roles`
+- `shell_id`
+- `metadata`
+
+### AuthContext
+
+Fields:
+
+- `actor`
+- `session_id`
+- `shell_id`
+- `auth_level`
+- `authenticated_at`
+- `expires_at`
+- `metadata`
+
+### AuthRequirement
+
+Fields:
+
+- `requirement_id`
+- `required_level`
+- `reason`
+- `risk_class`
+- `action_type`
+- `metadata`
+
+### AuthDecision
+
+Fields:
+
+- `auth_decision_id`
+- `requirement_id`
+- `actor_id`
+- `allowed`
+- `auth_level`
+- `reason`
+- `created_at`
+- `expires_at`
+- `metadata`
+
+### AuthProviderProtocol
+
+Protocol surface:
+
+- `describe_actor(actor_id) -> AuthActor | None`
+- `describe_context(session_id) -> AuthContext | None`
+- `evaluate_requirement(requirement, context) -> AuthDecision`
+
+Rules:
+
+- Auth provider protocols do not log users in.
+- Auth provider protocols do not verify PINs.
+- Auth provider protocols do not create breakglass sessions.
+- Auth decisions are auth metadata only.
+- Auth contracts do not replace `GuardianDecision` or `ApprovalMetadata`.
+- Real providers must be explicit adapters later.
+
+## Vault / Breakglass
+
+Vault contracts describe secret references, access requests, access decisions, and breakglass session references without exposing raw secret material or implementing storage.
+
+Vault contracts do not return raw secrets. Breakglass references are metadata only. Real providers must be explicit adapters later. Vault/Auth do not replace `GuardianDecision` or `ApprovalMetadata`.
+
+### VaultSecretRef
+
+Fields:
+
+- `secret_ref`
+- `secret_name`
+- `namespace`
+- `privacy_class`
+- `redaction_class`
+- `created_at`
+- `expires_at`
+- `metadata`
+
+Rules:
+
+- `VaultSecretRef` never contains raw secret values.
+- Secret data is represented by references only.
+- Raw secret fields such as raw secret, plaintext, token, password, or value are forbidden.
+
+### VaultAccessRequest
+
+Fields:
+
+- `request_id`
+- `actor_id`
+- `shell_id`
+- `decision_id`
+- `approval_id`
+- `secret_ref`
+- `purpose`
+- `risk_class`
+- `metadata`
+
+### VaultAccessDecision
+
+Fields:
+
+- `vault_decision_id`
+- `request_id`
+- `allowed`
+- `reason`
+- `constraints`
+- `created_at`
+- `expires_at`
+- `metadata`
+
+### BreakglassSessionRef
+
+Fields:
+
+- `breakglass_id`
+- `actor_id`
+- `shell_id`
+- `decision_id`
+- `approval_id`
+- `reason`
+- `scope`
+- `created_at`
+- `expires_at`
+- `revoked_at`
+- `metadata`
+
+Rules:
+
+- Breakglass references are metadata only.
+- A breakglass reference does not create runtime privileges.
+- A breakglass reference does not enforce policy.
+
+### VaultProviderProtocol
+
+Protocol surface:
+
+- `describe_secret(secret_ref) -> VaultSecretRef | None`
+- `request_access(request) -> VaultAccessDecision`
+
+### BreakglassProviderProtocol
+
+Protocol surface:
+
+- `describe_session(breakglass_id) -> BreakglassSessionRef | None`
+- `record_session(session) -> None`
+
+Rules:
+
+- Vault provider protocols do not decrypt secrets.
+- Vault provider protocols do not read or write vault databases.
+- Vault provider protocols do not return raw secret values.
+- Breakglass provider protocols do not enforce breakglass.
+- Provider protocols do not execute privileged actions.
+- Real auth, vault, and breakglass providers must be explicit adapters later.
+- Vault/Auth do not replace `GuardianDecision` or `ApprovalMetadata`.
+
 ## HumanInput
 
 Human input records capture the operator-facing control surface before intent is compiled.
