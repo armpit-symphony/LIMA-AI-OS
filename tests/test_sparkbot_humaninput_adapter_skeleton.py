@@ -145,7 +145,7 @@ def test_autonomy_metadata_is_passive() -> None:
     assert "intent_id" not in result.metadata
 
 
-def test_adapter_does_not_create_intent_or_guardian_decision() -> None:
+def test_adapter_does_not_create_decision_or_event_records() -> None:
     adapter = SparkbotHumanInputAdapter()
     payload = SparkbotOperatorInputPayload(
         actor_ref="operator-2",
@@ -164,6 +164,9 @@ def test_adapter_does_not_create_intent_or_guardian_decision() -> None:
     ).read_text(encoding="utf-8")
     assert "IntentEnvelope" not in source
     assert "GuardianDecision" not in source
+    assert "ApprovalMetadata" not in source
+    assert "PolicyDecision" not in source
+    assert "SpineEvent" not in source
 
 
 def test_forbidden_methods_absent() -> None:
@@ -209,6 +212,15 @@ def test_forbidden_imports_absent_in_lima_adapters() -> None:
         "pty",
         "Robo",
         "robo",
+        "requests",
+        "httpx",
+        "urllib",
+        "sqlite3",
+        "sqlalchemy",
+        "sqlmodel",
+        "Session",
+        "dotenv",
+        "os",
     }
     forbidden_symbols = {
         "stream_chat_with_tools",

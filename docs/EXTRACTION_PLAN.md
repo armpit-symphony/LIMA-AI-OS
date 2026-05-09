@@ -854,7 +854,7 @@ Acceptance criteria:
 - `lima/adapters/sparkbot_humaninput.py` exists.
 - Neutral chat, voice, meeting, and operator payload dataclasses exist.
 - Adapter methods return `HumanInput` only.
-- No Sparkbot imports, route wiring, model/tool execution, persistence, autonomy enforcement, `IntentEnvelope`, or `GuardianDecision` creation is added.
+- No Sparkbot imports, route wiring, model/tool execution, persistence, autonomy enforcement, `IntentEnvelope`, `GuardianDecision`, `ApprovalMetadata`, `PolicyDecision`, or `SpineEvent` creation is added.
 - Tests prove mappings and forbidden import/method boundaries.
 
 Hard gate:
@@ -875,6 +875,9 @@ Still blocked:
 - autonomy enforcement
 - GuardianDecision creation
 - IntentEnvelope creation
+- ApprovalMetadata creation
+- PolicyDecision creation
+- SpineEvent creation
 
 ## Phase 2: Extract Model Harness
 

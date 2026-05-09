@@ -45,6 +45,7 @@ Each method accepts a neutral payload and returns a `HumanInput` contract object
 - no autonomy enforcement
 - no approval decisions
 - no IntentEnvelope or GuardianDecision creation
+- no ApprovalMetadata, PolicyDecision, or SpineEvent creation
 
 ## Owner Autonomy Metadata
 
@@ -73,5 +74,6 @@ The skeleton does not preserve any raw chat-to-tool shortcut and does not provid
 - no route wiring
 - no model/tool calls
 - no persistence
+- no decision, approval, policy, or spine event creation
 - tests prove mappings
 - tests prove forbidden imports/methods absent
