@@ -401,6 +401,41 @@ Specific no-go areas:
 - direct SQLite stores as Guardian core
 - audit persistence
 
+## Phase 1.1: Vault/Auth Interface Skeleton
+
+Scope:
+
+- Define non-executing Auth, Vault, and Breakglass reference contracts.
+- Define provider protocols that describe actors, auth context, secret references, vault access decisions, and breakglass metadata.
+- Keep all provider protocols as interfaces only.
+- Document forbidden live behavior before any vault/auth extraction.
+
+Acceptance criteria:
+
+- Auth contracts exist.
+- Vault contracts exist.
+- Breakglass session reference contract exists.
+- Protocols are non-executing.
+- No raw secret value fields exist.
+- No Sparkbot imports are added.
+- No live auth/vault behavior is added.
+- No PIN verification, encryption/decryption, DB/storage, or breakglass enforcement is added.
+- Existing Guardian import-boundary tests pass.
+
+Hard gate:
+
+No vault/auth extraction until non-executing interfaces are reviewed.
+
+Specific blockers:
+
+- no raw secret value fields
+- no direct Sparkbot DB access
+- no Sparkbot `ChatUser` dependency
+- no live PIN verification
+- no live decryption
+- no breakglass enforcement
+- no Sparkbot deployment paths
+
 ## Phase 2: Extract Model Harness
 
 Scope:

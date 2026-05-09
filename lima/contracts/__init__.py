@@ -7,6 +7,15 @@ from .approval import (
     ApprovalScope,
     ApprovalStatus,
 )
+from .auth import (
+    AuthActor,
+    AuthActorType,
+    AuthContext,
+    AuthDecision,
+    AuthLevel,
+    AuthProviderProtocol,
+    AuthRequirement,
+)
 from .boundary import (
     BoundaryClassification,
     BoundaryMapProtocol,
@@ -82,6 +91,14 @@ from .toolpack import (
     ToolPackName,
     ToolPackProtocol,
 )
+from .vault import (
+    BreakglassProviderProtocol,
+    BreakglassSessionRef,
+    VaultAccessDecision,
+    VaultAccessRequest,
+    VaultProviderProtocol,
+    VaultSecretRef,
+)
 
 __all__ = [
     "ApprovalAuditEvent",
@@ -96,8 +113,17 @@ __all__ = [
     "AuditEventType",
     "AuditLineageRecord",
     "AuditStatus",
+    "AuthActor",
+    "AuthActorType",
+    "AuthContext",
+    "AuthDecision",
+    "AuthLevel",
+    "AuthProviderProtocol",
+    "AuthRequirement",
     "BoundaryClassification",
     "BoundaryMapProtocol",
+    "BreakglassProviderProtocol",
+    "BreakglassSessionRef",
     "ConsequentialActionRequest",
     "ConsequentialActionType",
     "DataReference",
@@ -158,6 +184,10 @@ __all__ = [
     "ToolPackProtocol",
     "ToolPackRiskPolicy",
     "ToolPackRiskRule",
+    "VaultAccessDecision",
+    "VaultAccessRequest",
+    "VaultProviderProtocol",
+    "VaultSecretRef",
     "VisibilityClass",
     "ShellToolScope",
 ]
