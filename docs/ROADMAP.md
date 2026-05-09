@@ -423,6 +423,28 @@ Acceptance criteria:
 - approval metadata does not replace `GuardianDecision`
 - tests pass
 
+### M1.7: Spine/Audit Fake Recorder
+
+Goal: add fake in-memory Spine/Audit recorder for contract tests only.
+
+Deliverables:
+
+- fake Spine/Audit recorder
+- tests for `SpineEvent` / `AuditLineageRecord` recording
+- docs explaining no persistence
+- safety rules preventing raw sensitive data persistence
+
+Acceptance criteria:
+
+- no real persistence
+- no DB/storage
+- no file writes
+- no raw secrets
+- no raw prompts/transcripts/tool outputs/terminal output/sensor data
+- no tool/model/driver execution
+- no Sparkbot imports
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

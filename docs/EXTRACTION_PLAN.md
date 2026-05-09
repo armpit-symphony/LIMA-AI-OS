@@ -593,6 +593,38 @@ No real approval enforcement until:
 - redaction/privacy implementation
 - Sparkbot adapter review
 
+## Phase 1.7: Spine/Audit Fake Recorder
+
+Scope:
+
+- Add a fake in-memory Spine/Audit recorder for contract tests.
+- Record and retrieve `SpineEvent` and `AuditLineageRecord` contract objects.
+- Keep real Spine storage and audit persistence blocked.
+- Keep redaction implementation blocked.
+
+Acceptance criteria:
+
+- No real persistence is added.
+- No DB/storage or file writes are added.
+- No raw secrets are stored.
+- No raw prompts, transcripts, tool outputs, terminal output, or sensor data are stored.
+- No tool, model, driver, terminal, file, network, browser, payment, deploy, or robot execution is added.
+- Boundary tests continue to pass.
+
+Hard gate:
+
+Fake Spine/Audit recorder is allowed for tests only. Real Spine storage and audit persistence remain blocked.
+
+No real persistence until:
+
+- storage design
+- redaction/privacy implementation
+- audit view filtering
+- secret scanning
+- retention enforcement
+- Sparkbot adapter emission review
+- Guardian/policy/approval enforcement review
+
 ## Phase 2: Extract Model Harness
 
 Scope:

@@ -358,3 +358,19 @@ Consequences:
 - approval does not replace `GuardianDecision`
 - real approval enforcement remains deferred
 - future adapters must not rely on fake recorder in production
+
+## ADR-0026: Spine/Audit Fake Recorder Is Test-Only
+
+Status: Accepted
+
+Decision: LIMA may include a fake in-memory Spine/Audit recorder for contract tests, but it must not persist data, store raw sensitive content, or execute actions.
+
+Rationale: Contract tests need a safe way to record lineage events before real Spine storage and audit persistence exist.
+
+Consequences:
+
+- fake audit events are test artifacts only
+- no real persistence is added
+- no raw secrets or sensitive data are stored
+- real audit persistence remains deferred
+- future adapters must not rely on fake recorder in production
