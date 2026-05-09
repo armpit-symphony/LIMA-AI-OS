@@ -625,6 +625,40 @@ No real persistence until:
 - Sparkbot adapter emission review
 - Guardian/policy/approval enforcement review
 
+## Phase 1.8: Guardian Fake Pipeline
+
+Scope:
+
+- Add a fake in-memory Guardian pipeline for contract tests.
+- Compose fake policy, Guardian decision, approval, and Spine/Audit components.
+- Turn `ConsequentialActionRequest` records into fake policy, decision, approval, and lineage records.
+- Keep real Guardian pipeline behavior blocked.
+
+Acceptance criteria:
+
+- Critical actions do not auto-approve.
+- Unknown actions deny or escalate and remain auditable.
+- Fake lineage is recorded.
+- `PolicyDecision` does not replace `GuardianDecision`.
+- `ApprovalMetadata` remains evidence, not execution.
+- No real Guardian, policy, or approval enforcement is added.
+- No tool, model, driver, terminal, file, network, browser, payment, deploy, or robot execution is added.
+- Boundary tests continue to pass.
+
+Hard gate:
+
+Fake Guardian pipeline is allowed for tests only. Real Guardian pipeline remains blocked.
+
+No real pipeline until:
+
+- Guardian enforcement design
+- policy enforcement design
+- approval enforcement design
+- redaction/privacy implementation
+- lineage emission design
+- Sparkbot adapter review
+- tool-pack runtime enforcement design
+
 ## Phase 2: Extract Model Harness
 
 Scope:
