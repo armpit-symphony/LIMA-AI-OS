@@ -506,3 +506,19 @@ Consequences:
 - bridge may be test-only and separate
 - adapter does not create IntentEnvelope, ConsequentialActionRequest, GuardianDecision, ApprovalMetadata, PolicyDecision, or SpineEvent
 - production integration remains blocked
+
+## ADR-0036: HumanInput-to-Fake-Pipeline Bridge Is Test-Only and Separate From Adapter
+
+Status: Accepted
+
+Decision: LIMA may include a test-only bridge from HumanInput to FakeGuardianPipeline, but the Sparkbot HumanInput adapter must remain separate and stop at HumanInput.
+
+Rationale: This proves contract composition without turning the adapter into an intent parser, GuardianDecision creator, or production execution path.
+
+Consequences:
+
+- bridge may create test-only ConsequentialActionRequest from explicit metadata
+- bridge must not infer intent from natural language
+- adapter remains HumanInput-only
+- production wiring remains blocked
+- fake pipeline remains test-only

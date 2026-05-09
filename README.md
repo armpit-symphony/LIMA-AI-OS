@@ -108,6 +108,8 @@ Phase 1.13 adds a non-production Sparkbot HumanInput adapter skeleton using neut
 
 Phase 1.14 reviews readiness to compose HumanInput with the fake Guardian pipeline while keeping the adapter boundary separate and non-production.
 
+Phase 1.15 adds a test-only HumanInput-to-fake-pipeline bridge while keeping the Sparkbot adapter HumanInput-only.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -225,6 +227,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_12_SPARKBOT_ADAPTER_READINESS_REVIEW.md)
 - [docs/PHASE_1_13_SPARKBOT_HUMANINPUT_ADAPTER_SKELETON.md](docs/PHASE_1_13_SPARKBOT_HUMANINPUT_ADAPTER_SKELETON.md)
 - [docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md)
+- [docs/PHASE_1_15_HUMANINPUT_FAKE_PIPELINE_BRIDGE.md](docs/PHASE_1_15_HUMANINPUT_FAKE_PIPELINE_BRIDGE.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
