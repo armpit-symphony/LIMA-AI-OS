@@ -603,3 +603,18 @@ Consequences:
 - no route wiring
 - no `stream_chat_with_tools`
 - no model/tool execution
+
+## ADR-0042: Sparkbot Payload Fixtures Are LIMA-Owned Mirrors
+
+Status: Accepted
+
+Decision: LIMA may maintain synthetic fixture mirrors of Sparkbot payload shapes, but must not import Sparkbot route/request objects for adapter tests.
+
+Rationale: Fixture mirrors reduce payload drift risk while preserving LIMA's boundary from Sparkbot runtime internals.
+
+Consequences:
+
+- fixtures are synthetic
+- no Sparkbot imports
+- payload fixtures are not production contracts
+- drift must be reviewed before real adapter work

@@ -1,0 +1,42 @@
+[
+  {
+    "fixture_id": "robotics-command-request",
+    "source_surface": "robotics_command",
+    "sparkbot_reference_path": "backend/app/api/routes/chat/robotics.py:RobotCommandRequest",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "robot_id": "fixture-robot",
+      "environment": "simulation",
+      "requested_action": "fixture inspect simulated robot status",
+      "mcp_tool_name": "fixture-robot-tool",
+      "mcp_args": {"fixture_mode": "dry"},
+      "dry_run": true,
+      "command_ref": "fixture-robot-command-ref"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of robotics natural-language command shape; fixture does not call a driver."
+  },
+  {
+    "fixture_id": "robotics-emergency-stop-request",
+    "source_surface": "robotics_emergency_stop",
+    "sparkbot_reference_path": "backend/app/api/routes/chat/robotics.py:EmergencyStopRequest",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "robot_id": "fixture-robot",
+      "requested_action_ref": "fixture-emergency-stop-ref",
+      "command_ref": "fixture-robot-stop-ref"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of emergency-stop request shape for fixture tracking only; no physical action is triggered."
+  }
+]

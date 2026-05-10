@@ -1,0 +1,42 @@
+[
+  {
+    "fixture_id": "meeting-roundtable-launch-message",
+    "source_surface": "meeting_roundtable_prompt",
+    "sparkbot_reference_path": "frontend/src/lib/workstationMeeting.ts:launchMeetingRoom",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "meeting_id": "fixture-meeting",
+      "room_id": "fixture-room",
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "prompt": "fixture roundtable kickoff",
+      "participants": ["fixture-chair", "fixture-analyst"],
+      "protocol_label": "fixture protocol"
+    },
+    "expected_humaninput_source": "text",
+    "privacy_class": "confidential",
+    "redaction_class": "summary_only",
+    "notes": "Synthetic mirror of Workstation launching a roundtable room and posting the kickoff message."
+  },
+  {
+    "fixture_id": "meeting-artifact-create",
+    "source_surface": "meeting_artifact_create",
+    "sparkbot_reference_path": "backend/app/schemas/chat.py:MeetingArtifactCreate",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "meeting_id": "fixture-meeting",
+      "room_id": "fixture-room",
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "type": "notes",
+      "prompt_ref": "fixture-meeting-artifact-ref",
+      "content_markdown_ref": "fixture-meeting-content-ref",
+      "window_start_ts": "2026-05-09T00:00:00Z",
+      "window_end_ts": "2026-05-09T00:10:00Z"
+    },
+    "expected_humaninput_source": "text",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of manual meeting artifact creation using content references."
+  }
+]

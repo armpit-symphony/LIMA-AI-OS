@@ -736,6 +736,18 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 1.21: Sparkbot Payload Fixture Mirror
+
+Goal: Create LIMA-owned synthetic fixtures mirroring Sparkbot input payload shapes to reduce drift risk before real adapter work.
+
+Acceptance criteria:
+
+- synthetic fixtures exist
+- Sparkbot commit recorded
+- fixture tests pass
+- no Sparkbot imports
+- production adapter remains blocked
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

@@ -1,0 +1,40 @@
+[
+  {
+    "fixture_id": "operator-terminal-session-create",
+    "source_surface": "operator_terminal_session",
+    "sparkbot_reference_path": "backend/app/api/routes/terminal.py:SessionCreateRequest",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "host": "localhost",
+      "shell": "fixture-shell",
+      "station_id": "fixture-workstation",
+      "command_ref": "fixture-terminal-session-request"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of terminal session creation shape; no PTY is opened."
+  },
+  {
+    "fixture_id": "operator-terminal-websocket-input",
+    "source_surface": "operator_terminal_ws_input",
+    "sparkbot_reference_path": "frontend/src/types/terminal.ts:WsInputMsg",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "type": "input",
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "station_id": "fixture-workstation",
+      "command_ref": "fixture-terminal-input-ref",
+      "data_ref": "fixture-base64-bytes-ref"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of terminal WebSocket input shape using a data reference only."
+  }
+]
