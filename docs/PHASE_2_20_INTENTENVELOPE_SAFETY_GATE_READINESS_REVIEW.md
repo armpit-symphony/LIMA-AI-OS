@@ -4,8 +4,10 @@
 
 Review whether `docs/INTENTENVELOPE_SAFETY_GATE.md` is complete enough to serve as the standing safety gate for IntentEnvelope-adjacent work.
 
+This review is review-only.
 This review does not implement real IntentCompiler.
 This review does not parse natural language.
+This review does not create GuardianDecision.
 This review does not authorize execution.
 
 ## Current Gate Status
