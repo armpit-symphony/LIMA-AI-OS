@@ -864,3 +864,18 @@ Consequences:
 - production adapter remains blocked
 - manual review remains required
 - future production adapter discussion requires explicit readiness review
+
+## ADR-0059: Adapter Safety Gate Is Ready as Standing Gate
+
+Status: Accepted
+
+Decision: `docs/ADAPTER_SAFETY_GATE.md` is ready to serve as the standing review gate for adapter-adjacent work.
+
+Rationale: The gate consolidates checks, tests, Sparkbot freshness, forbidden imports/behaviors, manual review rules, PR blockers, and production adapter NO-GO status.
+
+Consequences:
+
+- adapter safety gate work may pause
+- production adapter remains blocked
+- future adapter-adjacent PRs must satisfy the gate
+- next work may move to the next non-production kernel boundary
