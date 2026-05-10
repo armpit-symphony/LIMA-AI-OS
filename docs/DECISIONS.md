@@ -944,3 +944,19 @@ Consequences:
 - no execution
 - no GuardianDecision creation
 - IntentEnvelope remains non-authorizing
+
+## ADR-0064: IntentEnvelope Harness Requires Standing Safety Gate
+
+Status: Accepted
+
+Decision: Before further IntentEnvelope-adjacent work, LIMA will define a standing safety gate for explicit metadata, `raw_text` inertness, and no-real-compiler rules.
+
+Rationale: IntentEnvelope is a critical boundary between HumanInput and GuardianDecision. A test harness helps, but future work needs a consolidated gate.
+
+Consequences:
+
+- real IntentCompiler remains blocked
+- natural-language inference remains blocked
+- fixture harness remains test-only
+- IntentEnvelope remains non-authorizing
+- GuardianDecision remains mandatory later
