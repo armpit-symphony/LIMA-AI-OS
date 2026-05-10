@@ -1528,6 +1528,26 @@ GO only for Phase 2.10 Regression Report Gate Hardening.
 
 Production adapter remains blocked.
 
+## Phase 2.10: Regression Report Gate Hardening
+
+Scope:
+
+- Add gate/review fields to fixture regression markdown and dict report output.
+- Keep report fields reviewability-only.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Fixture regression reports may include gate context for reviewability only.
+- Report `gate_status` does not authorize production adapter work.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+Report gate context must not become audit persistence, production telemetry, Guardian evidence, production authorization, or runtime state.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

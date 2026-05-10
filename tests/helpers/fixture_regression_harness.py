@@ -15,6 +15,9 @@ from lima.guardian import AdapterFixtureHarness
 PASSED = "passed"
 UNSUPPORTED_NONEXECUTING = "unsupported_nonexecuting"
 FAILED = "failed"
+GATE_PASS = "pass"
+GATE_FAIL = "fail"
+GATE_NEEDS_REVIEW = "needs_review"
 REPORT_SCHEMA_VERSION = "fixture-regression-report/v1"
 SAFETY_NOTICE = (
     "non-production review artifact only",
@@ -117,15 +120,33 @@ def run_fixture_regression(
 
 def fixture_regression_report_to_dict(
     report: FixtureRegressionReport,
+    *,
+    sparkbot_commit: str | None = None,
+    drift_summary: Mapping[str, Any] | None = None,
+    gate_status: str | None = None,
+    boundary_status: Mapping[str, Any] | None = None,
+    production_adapter_status: str = "blocked",
+    reviewed_at: str | None = None,
+    reviewer_notes: str | None = None,
 ) -> Mapping[str, Any]:
     """Format a fixture regression report as a review-only dictionary."""
 
+    resolved_gate_status = gate_status or _derive_gate_status(report)
+    resolved_drift_summary = _drift_summary(drift_summary)
+    resolved_boundary_status = _boundary_status(report, boundary_status)
     return {
         "schema_version": REPORT_SCHEMA_VERSION,
         "total": report.total,
         "executed": report.executed,
         "unsupported_nonexecuting": report.unsupported_nonexecuting,
         "failed": report.failed,
+        "gate_status": resolved_gate_status,
+        "sparkbot_commit": sparkbot_commit,
+        "drift_summary": resolved_drift_summary,
+        "boundary_status": resolved_boundary_status,
+        "production_adapter_status": production_adapter_status,
+        "reviewed_at": reviewed_at,
+        "reviewer_notes": reviewer_notes,
         "results": [
             {
                 "fixture_id": result.fixture_id,
@@ -145,9 +166,22 @@ def fixture_regression_report_to_dict(
     }
 
 
-def fixture_regression_report_to_markdown(report: FixtureRegressionReport) -> str:
+def fixture_regression_report_to_markdown(
+    report: FixtureRegressionReport,
+    *,
+    sparkbot_commit: str | None = None,
+    drift_summary: Mapping[str, Any] | None = None,
+    gate_status: str | None = None,
+    boundary_status: Mapping[str, Any] | None = None,
+    production_adapter_status: str = "blocked",
+    reviewed_at: str | None = None,
+    reviewer_notes: str | None = None,
+) -> str:
     """Format a fixture regression report as markdown for human review."""
 
+    resolved_gate_status = gate_status or _derive_gate_status(report)
+    resolved_drift_summary = _drift_summary(drift_summary)
+    resolved_boundary_status = _boundary_status(report, boundary_status)
     lines = [
         "# Fixture Regression Report",
         "",
@@ -158,20 +192,46 @@ def fixture_regression_report_to_markdown(report: FixtureRegressionReport) -> st
         f"- unsupported_nonexecuting: {report.unsupported_nonexecuting}",
         f"- failed: {report.failed}",
         "",
-        "## Status Summary",
+        "## Gate Context",
         "",
-        f"- passed: {sum(1 for result in report.results if result.status == PASSED)}",
-        f"- unsupported_nonexecuting: {report.unsupported_nonexecuting}",
-        f"- failed: {report.failed}",
-        "",
-        "## Fixture Results",
-        "",
-        (
-            "| fixture_id | source_surface | status | humaninput_source | "
-            "pipeline_status | decision_status | unsupported_reason | safety_notes |"
-        ),
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        f"- Gate status: {_markdown_cell(resolved_gate_status)}",
+        f"- Sparkbot commit: {_markdown_cell(sparkbot_commit)}",
+        "- Drift summary:",
     ]
+    lines.extend(
+        f"  - {_markdown_cell(key)}: {_markdown_cell(value)}"
+        for key, value in resolved_drift_summary.items()
+    )
+    lines.extend(
+        [
+            "- Boundary status:",
+        ]
+    )
+    lines.extend(
+        f"  - {_markdown_cell(key)}: {_markdown_cell(value)}"
+        for key, value in resolved_boundary_status.items()
+    )
+    lines.extend(
+        [
+            f"- Production adapter status: {_markdown_cell(production_adapter_status)}",
+            f"- Reviewed at: {_markdown_cell(reviewed_at)}",
+            f"- Reviewer notes: {_markdown_cell(reviewer_notes)}",
+            "",
+            "## Status Summary",
+            "",
+            f"- passed: {sum(1 for result in report.results if result.status == PASSED)}",
+            f"- unsupported_nonexecuting: {report.unsupported_nonexecuting}",
+            f"- failed: {report.failed}",
+            "",
+            "## Fixture Results",
+            "",
+            (
+                "| fixture_id | source_surface | status | humaninput_source | "
+                "pipeline_status | decision_status | unsupported_reason | safety_notes |"
+            ),
+            "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        ]
+    )
     for result in report.results:
         lines.append(
             "| "
@@ -198,6 +258,12 @@ def fixture_regression_report_to_markdown(report: FixtureRegressionReport) -> st
         ]
     )
     lines.extend(f"- {notice}" for notice in SAFETY_NOTICE)
+    lines.append("- Report is not audit persistence.")
+    lines.append("- Report is not production telemetry.")
+    lines.append("- Report is not Guardian evidence.")
+    lines.append("- Report is not production authorization.")
+    lines.append("- Report is not runtime state.")
+    lines.append("- Production adapter remains blocked.")
     return "\n".join(lines) + "\n"
 
 
@@ -319,6 +385,54 @@ def _enum_value(value: Any) -> str:
     if isinstance(enum_value, str):
         return enum_value
     return str(value)
+
+
+def _derive_gate_status(report: FixtureRegressionReport) -> str:
+    if report.failed > 0:
+        return GATE_FAIL
+    if report.unsupported_nonexecuting > 0:
+        return GATE_NEEDS_REVIEW
+    return GATE_PASS
+
+
+def _drift_summary(drift_summary: Mapping[str, Any] | None) -> Mapping[str, Any]:
+    if drift_summary is not None:
+        return dict(drift_summary)
+    return {
+        "status": "not_checked",
+        "notes": "No Sparkbot drift review supplied to report helper.",
+    }
+
+
+def _boundary_status(
+    report: FixtureRegressionReport,
+    boundary_status: Mapping[str, Any] | None,
+) -> Mapping[str, Any]:
+    default_status = {
+        "adapter_boundary_tests": "required",
+        "fixture_regression": "required",
+        "unsupported_categories_explicit": all(
+            result.status != UNSUPPORTED_NONEXECUTING or bool(result.unsupported_reason)
+            for result in report.results
+        ),
+        "critical_unknown_auto_approval_blocked": _critical_unknown_auto_approval_blocked(
+            report
+        ),
+    }
+    if boundary_status is None:
+        return default_status
+    return {**default_status, **dict(boundary_status)}
+
+
+def _critical_unknown_auto_approval_blocked(report: FixtureRegressionReport) -> bool:
+    guarded_results = [
+        result
+        for result in report.results
+        if result.metadata.get("action_type") == "unknown"
+        or str(result.metadata.get("risk_class")).lower() == "critical"
+        or result.source_surface.startswith(("operator_", "robotics_"))
+    ]
+    return all(result.decision_status != "approved" for result in guarded_results)
 
 
 def _markdown_cell(value: object) -> str:
