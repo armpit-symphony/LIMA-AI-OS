@@ -142,6 +142,8 @@ Phase 2.5 reviews the fixture regression harness as a future adapter safety gate
 
 Phase 2.6 documents fixture regression as a standing safety gate for adapter-adjacent work.
 
+Phase 2.7 reviews Phase 2 progress and recommends fixture regression report artifacts as the next safe step.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -276,6 +278,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_4_FIXTURE_REGRESSION_HARNESS.md](docs/PHASE_2_4_FIXTURE_REGRESSION_HARNESS.md)
 - [docs/PHASE_2_5_FIXTURE_REGRESSION_READINESS_REVIEW.md](docs/PHASE_2_5_FIXTURE_REGRESSION_READINESS_REVIEW.md)
 - [docs/PHASE_2_6_FIXTURE_REGRESSION_CI_GATE_DOCS.md](docs/PHASE_2_6_FIXTURE_REGRESSION_CI_GATE_DOCS.md)
+- [docs/PHASE_2_7_PHASE_TWO_READINESS_REVIEW.md](docs/PHASE_2_7_PHASE_TWO_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

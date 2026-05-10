@@ -919,6 +919,28 @@ Acceptance criteria:
 - tests pass
 - no runtime behavior added
 
+### Phase 2.7: Phase Two Readiness Review
+
+Goal: Review Phase 2 progress and choose next safe branch.
+
+Deliverables:
+
+- `docs/PHASE_2_7_PHASE_TWO_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- Phase 2 proven/not-proven list
+- safety gate status
+- Phase 2.8 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- Sparkbot origin/main checked
+- production adapter remains blocked
+- next safe branch identified
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
