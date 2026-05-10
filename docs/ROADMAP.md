@@ -973,6 +973,18 @@ Acceptance criteria:
 - report remains non-persistent/non-production
 - tests pass
 
+### Phase 2.10: Regression Report Gate Hardening
+
+Goal: Add explicit gate/review context to fixture regression report outputs.
+
+Acceptance criteria:
+
+- gate fields present
+- markdown/dict reports include gate context
+- report remains non-production
+- no file writes by default
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

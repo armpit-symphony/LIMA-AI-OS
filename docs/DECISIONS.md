@@ -818,3 +818,18 @@ Consequences:
 - next work hardens report fields
 - report remains non-production and non-persistent
 - report is not audit evidence
+
+## ADR-0056: Regression Report Gate Status Does Not Authorize Production
+
+Status: Accepted
+
+Decision: Fixture regression reports may include `gate_status` and review context, but report gate status does not authorize production adapter work.
+
+Rationale: A pass/fail report improves reviewability but must not be confused with Guardian evidence, audit persistence, or production authorization.
+
+Consequences:
+
+- production adapter remains blocked
+- report context is review-only
+- manual review remains required
+- report artifacts are not audit persistence
