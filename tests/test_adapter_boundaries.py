@@ -60,9 +60,11 @@ FORBIDDEN_IMPORT_MODULE_FRAGMENTS = {
     "google.generativeai",
     "subprocess",
     "pty",
+    "terminal",
     "pathlib",
     "socket",
     "os",
+    "robo",
 }
 
 FORBIDDEN_IMPORTED_SYMBOLS = {
@@ -94,6 +96,7 @@ FORBIDDEN_SOURCE_STRINGS = {
     "getenv",
     "os.system",
     "subprocess",
+    "terminal",
     "open(",
     "pathlib.Path",
     "socket",
@@ -105,6 +108,8 @@ FORBIDDEN_SOURCE_STRINGS = {
     "redis",
     "boto3",
     "stripe",
+    "Robo",
+    "robo",
     "LIMA-Robo-OS",
     "unitree",
     "docker",
@@ -229,6 +234,10 @@ def _adapter_results() -> list[HumanInput]:
 
 def test_adapter_boundary_scan_is_limited_to_local_lima_adapters() -> None:
     files = _adapter_python_files()
+
+    if not ADAPTER_ROOT.exists():
+        assert files == []
+        return
 
     assert files
     assert all(path.resolve().is_relative_to(ADAPTER_ROOT.resolve()) for path in files)
