@@ -4,6 +4,10 @@
 
 Make non-production fixture regression results easier for humans to review.
 
+This phase adds review-only helpers.
+It does not add production runtime.
+It does not write report files by default.
+
 ## Report Is Not Persistence
 
 The report artifact is not:
@@ -36,6 +40,7 @@ The report includes:
 - no terminal/PTY
 - no Robo-OS physical action
 - no persistence by default
+- no production runtime
 - production adapter remains blocked
 
 ## Acceptance Criteria

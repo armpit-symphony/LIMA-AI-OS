@@ -19,6 +19,10 @@ REPORT_SCHEMA_VERSION = "fixture-regression-report/v1"
 SAFETY_NOTICE = (
     "non-production review artifact only",
     "not audit persistence",
+    "not production telemetry",
+    "not Guardian evidence",
+    "not production authorization",
+    "not runtime state",
     "no Sparkbot imports",
     "no execution",
     "production adapter blocked",

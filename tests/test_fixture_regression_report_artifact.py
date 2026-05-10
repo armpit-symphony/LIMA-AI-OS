@@ -91,6 +91,10 @@ def test_fixture_regression_markdown_report_is_reviewable() -> None:
     assert f"- failed: {report.failed}" in markdown
     assert "non-production review artifact only" in markdown
     assert "not audit persistence" in markdown
+    assert "not production telemetry" in markdown
+    assert "not Guardian evidence" in markdown
+    assert "not production authorization" in markdown
+    assert "not runtime state" in markdown
     assert "production adapter blocked" in markdown
     for result in report.results:
         assert result.fixture_id in markdown
@@ -108,6 +112,10 @@ def test_fixture_regression_dict_report_matches_regression_counts() -> None:
     assert len(artifact["results"]) == report.total
     assert "safety_notice" in artifact
     assert "not audit persistence" in artifact["safety_notice"]
+    assert "not production telemetry" in artifact["safety_notice"]
+    assert "not Guardian evidence" in artifact["safety_notice"]
+    assert "not production authorization" in artifact["safety_notice"]
+    assert "not runtime state" in artifact["safety_notice"]
 
 
 def test_fixture_regression_report_helpers_do_not_write_files_by_default() -> None:
