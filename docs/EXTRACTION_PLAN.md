@@ -1618,6 +1618,37 @@ GO only for selected Phase 2.14 safe branch.
 
 Production adapter remains blocked.
 
+## Phase 2.14: IntentEnvelope Test Design Review
+
+Scope:
+
+- Review how LIMA should safely design a test-only HumanInput-to-IntentEnvelope path in a future phase.
+- Define the explicit typed intent metadata expected for future fixtures.
+- Keep natural-language inference, real IntentCompiler, execution, production wiring, and GuardianDecision creation blocked.
+
+Acceptance criteria:
+
+- No HumanInput-to-IntentEnvelope implementation until Phase 2.14 review is merged.
+- After merge, GO only for Phase 2.15 IntentEnvelope Test Fixtures.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, real IntentCompiler, natural-language inference, GuardianDecision creation from adapter, or real enforcement is added.
+- Tests continue to pass.
+
+NO-GO:
+
+- real IntentCompiler
+- natural-language inference
+- model calls
+- tool execution
+- GuardianDecision creation from adapter
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- terminal/PTY
+- Robo-OS physical action
+- live auth/session lookup
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
