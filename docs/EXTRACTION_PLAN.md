@@ -956,6 +956,46 @@ Still blocked:
 - redaction runtime
 - autonomy enforcement
 
+## Phase 1.16: Phase One Readiness Review
+
+Scope:
+
+- Review Phase 1 progress after the HumanInput fake pipeline bridge.
+- Decide whether LIMA is ready for any real Sparkbot adapter implementation.
+- Recheck Sparkbot `origin/main` read-only for adapter-relevant surface movement.
+- Keep this phase review/docs/tests-only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_16_PHASE_ONE_READINESS_REVIEW.md` exists.
+- Sparkbot `origin/main` is rechecked and the inspected commit is recorded.
+- Proven and not-proven areas are documented.
+- Readiness decision is documented.
+- Recommended next branch is identified.
+- Production adapter remains blocked.
+- No runtime behavior is added.
+
+Hard gate:
+
+No production Sparkbot adapter implementation until Phase 1.16 is merged.
+
+After merge:
+
+GO only for Phase 1.17 Identity / Session / Trust Context Mapping Review.
+
+NO-GO:
+
+- production adapter
+- live auth/session lookup
+- trusted device enforcement
+- autonomy enforcement
+- model/tool execution
+- `stream_chat_with_tools`
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

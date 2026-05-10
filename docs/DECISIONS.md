@@ -522,3 +522,19 @@ Consequences:
 - adapter remains HumanInput-only
 - production wiring remains blocked
 - fake pipeline remains test-only
+
+## ADR-0037: Identity and Trust Context Must Be Reviewed Before Real Adapter Work
+
+Status: Accepted
+
+Decision: LIMA will not begin production Sparkbot adapter implementation until identity, session, trusted-context, autonomy, and privacy mapping are reviewed.
+
+Rationale: The current adapter skeleton uses neutral metadata. Real adapter work must not treat `actor_ref`, `session_ref`, `trusted_context_ref`, or `autonomy_notes` as verified authority.
+
+Consequences:
+
+- next phase is identity/session/trust mapping review
+- production adapter remains blocked
+- autonomy metadata remains passive
+- actor/session metadata is not verified auth
+- fake pipeline remains test-only
