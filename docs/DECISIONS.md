@@ -895,3 +895,20 @@ Consequences:
 - no real IntentCompiler yet
 - no natural-language inference
 - no execution or GuardianDecision creation
+
+## ADR-0061: IntentEnvelope Fixtures Use Explicit Metadata Only
+
+Status: Accepted
+
+Decision: LIMA may add IntentEnvelope test fixtures using explicit typed metadata, but `raw_text` must not be parsed or interpreted to infer intent.
+
+Rationale: IntentEnvelope is a safety-critical boundary. Hidden natural-language inference would recreate raw chat-to-tool shortcuts.
+
+Consequences:
+
+- fixtures are synthetic
+- explicit metadata required for expected IntentEnvelope shape
+- no real IntentCompiler yet
+- no model calls
+- no execution
+- GuardianDecision remains mandatory later

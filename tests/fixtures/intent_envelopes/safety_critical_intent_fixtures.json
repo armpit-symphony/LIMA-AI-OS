@@ -1,0 +1,278 @@
+[
+  {
+    "fixture_id": "intent-safety-robot-motion-001",
+    "fixture_type": "safety_critical_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-safety-robot-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Move the synthetic robot arm.",
+    "explicit_metadata": {
+      "intent_type": "control_robot",
+      "action_type": "robot_action",
+      "risk_class": "critical",
+      "target_ref": "fixture-robot:arm-motion",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_ref": "fixture-arm-motion",
+        "dry_run_required": true
+      },
+      "evidence_refs": [
+        "fixture-evidence:safety-zone",
+        "fixture-evidence:operator-confirmation-required"
+      ],
+      "requested_tool_packs": [
+        "robo"
+      ],
+      "approval_level": "operator_pin",
+      "privacy_class": "safety_critical",
+      "redaction_class": "operator_only",
+      "lineage_id": "lineage-safety-robot-001",
+      "reason": "Synthetic robot movement candidate requiring later Guardian review.",
+      "confidence": 0.8
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-safety-robot-motion-001",
+      "source_input_id": "humaninput-safety-robot-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic robot arm motion",
+      "intent_type": "control_robot",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_ref": "fixture-arm-motion",
+        "dry_run_required": true
+      },
+      "confidence": 0.8,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:safety-zone",
+        "fixture-evidence:operator-confirmation-required"
+      ],
+      "required_approval_level": "operator_pin",
+      "proposed_tool_packs": [
+        "robo"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-safety-robot-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Critical robot fixture is an envelope candidate only and requires later Guardian/policy/approval review.",
+    "privacy_class": "safety_critical",
+    "redaction_class": "operator_only",
+    "notes": "No authorization, no auto-approval, no physical action, Guardian remains mandatory."
+  },
+  {
+    "fixture_id": "intent-safety-terminal-command-001",
+    "fixture_type": "safety_critical_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-safety-terminal-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Run the synthetic terminal action.",
+    "explicit_metadata": {
+      "intent_type": "run_tool",
+      "action_type": "terminal_command",
+      "risk_class": "critical",
+      "target_ref": "fixture-terminal:review-command",
+      "typed_args": {
+        "command_ref": "fixture-terminal-review-command",
+        "execution_mode": "blocked"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-pin-required"
+      ],
+      "requested_tool_packs": [
+        "terminal"
+      ],
+      "approval_level": "operator_pin",
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "lineage_id": "lineage-safety-terminal-001",
+      "reason": "Synthetic terminal command candidate requiring later Guardian/policy/approval review.",
+      "confidence": 0.79
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-safety-terminal-command-001",
+      "source_input_id": "humaninput-safety-terminal-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic terminal action",
+      "intent_type": "run_tool",
+      "typed_args": {
+        "command_ref": "fixture-terminal-review-command",
+        "execution_mode": "blocked"
+      },
+      "confidence": 0.79,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:operator-pin-required"
+      ],
+      "required_approval_level": "operator_pin",
+      "proposed_tool_packs": [
+        "terminal"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-safety-terminal-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Critical terminal fixture is not execution and requires later Guardian/policy/approval review.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "No authorization, no auto-approval, no terminal/PTY use."
+  },
+  {
+    "fixture_id": "intent-safety-secret-access-001",
+    "fixture_type": "safety_critical_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-safety-secret-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Review synthetic secret access.",
+    "explicit_metadata": {
+      "intent_type": "run_tool",
+      "action_type": "secret_access",
+      "risk_class": "critical",
+      "target_ref": "fixture-secret-ref:review-only",
+      "typed_args": {
+        "secret_ref": "fixture-secret-ref",
+        "purpose_ref": "fixture-purpose-review"
+      },
+      "evidence_refs": [
+        "fixture-evidence:breakglass-policy"
+      ],
+      "requested_tool_packs": [
+        "admin"
+      ],
+      "approval_level": "breakglass",
+      "privacy_class": "secret",
+      "redaction_class": "secret_ref_only",
+      "lineage_id": "lineage-safety-secret-001",
+      "reason": "Synthetic secret access candidate requiring later Guardian/policy/approval review.",
+      "confidence": 0.75
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-safety-secret-access-001",
+      "source_input_id": "humaninput-safety-secret-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic secret access",
+      "intent_type": "run_tool",
+      "typed_args": {
+        "secret_ref": "fixture-secret-ref",
+        "purpose_ref": "fixture-purpose-review"
+      },
+      "confidence": 0.75,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:breakglass-policy"
+      ],
+      "required_approval_level": "breakglass",
+      "proposed_tool_packs": [
+        "admin"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-safety-secret-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Critical secret access fixture remains review-only, requires later Guardian/policy/approval review, and does not expose secret material.",
+    "privacy_class": "secret",
+    "redaction_class": "secret_ref_only",
+    "notes": "No authorization, no raw secret, no auto-approval, no vault access."
+  },
+  {
+    "fixture_id": "intent-safety-payment-deploy-admin-001",
+    "fixture_type": "safety_critical_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-safety-admin-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Review a synthetic payment, deploy, admin, and destructive-change bundle.",
+    "explicit_metadata": {
+      "intent_type": "administer_system",
+      "action_type": "admin_action",
+      "risk_class": "critical",
+      "target_ref": "fixture-admin:blocked-bundle",
+      "typed_args": {
+        "payment_ref": "fixture-payment-ref",
+        "deploy_ref": "fixture-deploy-ref",
+        "admin_change_ref": "fixture-admin-change-ref",
+        "destructive_change_ref": "fixture-destructive-change-ref",
+        "execution_mode": "blocked"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-pin-required",
+        "fixture-evidence:change-review-required"
+      ],
+      "requested_tool_packs": [
+        "payments",
+        "deploy",
+        "admin"
+      ],
+      "approval_level": "operator_pin",
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "lineage_id": "lineage-safety-admin-001",
+      "reason": "Synthetic payment/deploy/admin/destructive candidate requiring later Guardian/policy/approval review.",
+      "confidence": 0.7
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-safety-payment-deploy-admin-001",
+      "source_input_id": "humaninput-safety-admin-001",
+      "actor_id": "fixture-actor-safety",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic payment deploy admin destructive bundle",
+      "intent_type": "administer_system",
+      "typed_args": {
+        "payment_ref": "fixture-payment-ref",
+        "deploy_ref": "fixture-deploy-ref",
+        "admin_change_ref": "fixture-admin-change-ref",
+        "destructive_change_ref": "fixture-destructive-change-ref",
+        "execution_mode": "blocked"
+      },
+      "confidence": 0.7,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:operator-pin-required",
+        "fixture-evidence:change-review-required"
+      ],
+      "required_approval_level": "operator_pin",
+      "proposed_tool_packs": [
+        "payments",
+        "deploy",
+        "admin"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-safety-admin-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Critical payment/deploy/admin/destructive fixture is review-only and requires later Guardian/policy/approval review.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "No authorization, no auto-approval, no payment, deploy, admin, or destructive action."
+  }
+]
