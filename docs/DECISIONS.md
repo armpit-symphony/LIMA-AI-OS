@@ -586,3 +586,20 @@ Consequences:
 - adapter remains HumanInput-only
 - live auth/trust enforcement remains blocked
 - references are not authority
+
+## ADR-0041: Real Sparkbot Adapter Requires Payload Stability and Verified Context
+
+Status: Accepted
+
+Decision: LIMA will not implement a production Sparkbot adapter until Sparkbot payload surfaces are stable/mirrored and identity/session/trust context handling is ready.
+
+Rationale: Real adapter work would connect LIMA to live Sparkbot surfaces. Payload drift, identity ambiguity, trust-context ambiguity, and raw chat-to-tool shortcuts remain high-risk.
+
+Consequences:
+
+- production adapter remains blocked
+- next work is fixture/boundary hardening
+- no Sparkbot imports
+- no route wiring
+- no `stream_chat_with_tools`
+- no model/tool execution

@@ -1097,6 +1097,34 @@ NO-GO:
 - terminal/PTY
 - Robo-OS physical action
 
+## Phase 1.20: Real Adapter Readiness Review
+
+Scope:
+
+- Review readiness for real Sparkbot adapter implementation after fake AuthContext fixture tests.
+- Recheck Sparkbot `origin/main` read-only for adapter-relevant movement.
+- Decide the next safe Phase 1.21 branch.
+- Keep this phase review/docs/tests-only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md` exists.
+- Sparkbot `origin/main` is rechecked.
+- Production adapter go/no-go decision is documented.
+- Next safe branch is identified.
+- No runtime behavior is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No production Sparkbot adapter implementation until Real Adapter Readiness Review is merged.
+
+After merge:
+
+Proceed only with the selected Phase 1.21 safe branch.
+
+Production wiring remains blocked unless explicitly approved.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

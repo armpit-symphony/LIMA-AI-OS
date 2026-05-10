@@ -715,6 +715,27 @@ Acceptance criteria:
 - no live auth/trust/autonomy enforcement
 - tests pass
 
+### Phase 1.20: Real Adapter Readiness Review
+
+Goal: Review readiness for real Sparkbot adapter implementation after fake AuthContext fixture tests.
+
+Deliverables:
+
+- `docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- ready/not-ready list
+- production adapter go/no-go decision
+- recommended Phase 1.21 branch
+- risk register
+
+Acceptance criteria:
+
+- Sparkbot origin/main rechecked
+- production adapter decision documented
+- next safe branch identified
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
