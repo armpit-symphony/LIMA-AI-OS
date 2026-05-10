@@ -1009,3 +1009,20 @@ Consequences:
 - no execution
 - requested tool packs are requests only
 - autonomy and approval refs remain passive/descriptive
+
+## ADR-0068: Guardian Request Fixtures Are Not Decisions
+
+Status: Accepted
+
+Decision: LIMA may add Guardian request test fixtures, but Guardian requests must not be treated as GuardianDecision, approval, enforcement, or execution.
+
+Rationale: The request-to-decision boundary is safety-critical. A request describes what should be reviewed; it does not authorize action.
+
+Consequences:
+
+- no GuardianDecision creation yet
+- no approval
+- no policy enforcement
+- no execution
+- requested tool packs remain requests only
+- approval refs remain descriptive

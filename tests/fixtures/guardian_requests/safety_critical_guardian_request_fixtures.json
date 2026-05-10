@@ -1,0 +1,338 @@
+[
+  {
+    "fixture_id": "guardian-request-safety-terminal-critical-001",
+    "fixture_type": "safety_critical_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-terminal-critical-001",
+      "lineage_id": "lineage-intent-terminal-001",
+      "source_fixture_id": "intent-typed-terminal-critical-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-terminal-critical-001",
+      "lineage_id": "lineage-intent-terminal-001",
+      "intent_envelope_ref": "intent-terminal-critical-001",
+      "actor_ref": "fixture-actor-ops",
+      "session_ref": "fixture-session-ops",
+      "shell_id": "lima-test-shell",
+      "action_type": "terminal_command",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "terminal"
+      ],
+      "target_ref": "fixture-terminal:command-ref",
+      "typed_args": {
+        "command_ref": "fixture-terminal-command",
+        "mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-critical",
+      "reason": "Synthetic critical terminal request shape.",
+      "confidence": 0.84,
+      "created_at": "2026-01-01T02:00:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "requires_later_guardian_policy_approval_review": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-terminal-critical-001",
+      "lineage_id": "lineage-intent-terminal-001",
+      "intent_envelope_ref": "intent-terminal-critical-001",
+      "actor_ref": "fixture-actor-ops",
+      "session_ref": "fixture-session-ops",
+      "shell_id": "lima-test-shell",
+      "action_type": "terminal_command",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "terminal"
+      ],
+      "target_ref": "fixture-terminal:command-ref",
+      "typed_args": {
+        "command_ref": "fixture-terminal-command",
+        "mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-critical",
+      "reason": "Synthetic critical terminal request shape.",
+      "confidence": 0.84,
+      "created_at": "2026-01-01T02:00:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_auto_approval": true,
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "safety_critical",
+    "expected_reason": "Critical terminal request requires later Guardian/policy/approval review.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Requires later Guardian/policy/approval review; no auto-approval, no execution, and no GuardianDecision."
+  },
+  {
+    "fixture_id": "guardian-request-safety-robot-critical-001",
+    "fixture_type": "safety_critical_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-robot-critical-001",
+      "lineage_id": "lineage-intent-robot-001",
+      "source_fixture_id": "intent-typed-robot-critical-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-robot-critical-001",
+      "lineage_id": "lineage-intent-robot-001",
+      "intent_envelope_ref": "intent-robot-critical-001",
+      "actor_ref": "fixture-actor-robot",
+      "session_ref": "fixture-session-robot",
+      "shell_id": "lima-test-shell",
+      "action_type": "robot_action",
+      "risk_class": "safety_critical",
+      "requested_tool_packs": [
+        "robo"
+      ],
+      "target_ref": "fixture-robot:motion-plan",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_plan_ref": "fixture-motion-plan",
+        "mode": "dry_run_required"
+      },
+      "evidence_refs": [
+        "fixture-evidence:robot-safety-zone",
+        "fixture-evidence:operator-presence"
+      ],
+      "privacy_class": "safety_critical",
+      "redaction_class": "operator_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-robot",
+      "reason": "Synthetic robot movement request shape.",
+      "confidence": 0.81,
+      "created_at": "2026-01-01T02:01:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "requires_later_guardian_policy_approval_review": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-robot-critical-001",
+      "lineage_id": "lineage-intent-robot-001",
+      "intent_envelope_ref": "intent-robot-critical-001",
+      "actor_ref": "fixture-actor-robot",
+      "session_ref": "fixture-session-robot",
+      "shell_id": "lima-test-shell",
+      "action_type": "robot_action",
+      "risk_class": "safety_critical",
+      "requested_tool_packs": [
+        "robo"
+      ],
+      "target_ref": "fixture-robot:motion-plan",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_plan_ref": "fixture-motion-plan",
+        "mode": "dry_run_required"
+      },
+      "evidence_refs": [
+        "fixture-evidence:robot-safety-zone",
+        "fixture-evidence:operator-presence"
+      ],
+      "privacy_class": "safety_critical",
+      "redaction_class": "operator_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-robot",
+      "reason": "Synthetic robot movement request shape.",
+      "confidence": 0.81,
+      "created_at": "2026-01-01T02:01:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_auto_approval": true,
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "safety_critical",
+    "expected_reason": "Robot movement request requires later Guardian/policy/approval review.",
+    "privacy_class": "safety_critical",
+    "redaction_class": "operator_only",
+    "notes": "Requires later Guardian/policy/approval review; no auto-approval, no execution, and no GuardianDecision."
+  },
+  {
+    "fixture_id": "guardian-request-safety-secret-critical-001",
+    "fixture_type": "safety_critical_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-secret-critical-001",
+      "lineage_id": "lineage-intent-secret-001",
+      "source_fixture_id": "intent-synthetic-secret-critical-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-secret-critical-001",
+      "lineage_id": "lineage-intent-secret-001",
+      "intent_envelope_ref": "intent-secret-critical-001",
+      "actor_ref": "fixture-actor-admin",
+      "session_ref": "fixture-session-admin",
+      "shell_id": "lima-test-shell",
+      "action_type": "secret_access",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "admin"
+      ],
+      "target_ref": "fixture-vault:secret-reference",
+      "typed_args": {
+        "secret_ref": "fixture-secret-reference",
+        "access_mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:security-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:breakglass-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-admin",
+      "reason": "Synthetic secret access request shape.",
+      "confidence": 0.77,
+      "created_at": "2026-01-01T02:02:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "requires_later_guardian_policy_approval_review": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-secret-critical-001",
+      "lineage_id": "lineage-intent-secret-001",
+      "intent_envelope_ref": "intent-secret-critical-001",
+      "actor_ref": "fixture-actor-admin",
+      "session_ref": "fixture-session-admin",
+      "shell_id": "lima-test-shell",
+      "action_type": "secret_access",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "admin"
+      ],
+      "target_ref": "fixture-vault:secret-reference",
+      "typed_args": {
+        "secret_ref": "fixture-secret-reference",
+        "access_mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:security-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:breakglass-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-admin",
+      "reason": "Synthetic secret access request shape.",
+      "confidence": 0.77,
+      "created_at": "2026-01-01T02:02:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_auto_approval": true,
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "safety_critical",
+    "expected_reason": "Secret access request requires later Guardian/policy/approval review.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Requires later Guardian/policy/approval review; no auto-approval, no approval, and no GuardianDecision."
+  },
+  {
+    "fixture_id": "guardian-request-safety-admin-critical-001",
+    "fixture_type": "safety_critical_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-admin-critical-001",
+      "lineage_id": "lineage-intent-admin-001",
+      "source_fixture_id": "intent-synthetic-admin-critical-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-admin-critical-001",
+      "lineage_id": "lineage-intent-admin-001",
+      "intent_envelope_ref": "intent-admin-critical-001",
+      "actor_ref": "fixture-actor-admin",
+      "session_ref": "fixture-session-admin",
+      "shell_id": "lima-test-shell",
+      "action_type": "admin_action",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "admin"
+      ],
+      "target_ref": "fixture-admin:destructive-candidate",
+      "typed_args": {
+        "admin_ref": "fixture-admin-change",
+        "mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-admin",
+      "reason": "Synthetic payment/deploy/admin/destructive request shape.",
+      "confidence": 0.79,
+      "created_at": "2026-01-01T02:03:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "requires_later_guardian_policy_approval_review": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-admin-critical-001",
+      "lineage_id": "lineage-intent-admin-001",
+      "intent_envelope_ref": "intent-admin-critical-001",
+      "actor_ref": "fixture-actor-admin",
+      "session_ref": "fixture-session-admin",
+      "shell_id": "lima-test-shell",
+      "action_type": "admin_action",
+      "risk_class": "critical",
+      "requested_tool_packs": [
+        "admin"
+      ],
+      "target_ref": "fixture-admin:destructive-candidate",
+      "typed_args": {
+        "admin_ref": "fixture-admin-change",
+        "mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "approval_requirement_ref": "fixture-approval:operator-pin-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-admin",
+      "reason": "Synthetic payment/deploy/admin/destructive request shape.",
+      "confidence": 0.79,
+      "created_at": "2026-01-01T02:03:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_auto_approval": true,
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "safety_critical",
+    "expected_reason": "Payment/deploy/admin/destructive request requires later Guardian/policy/approval review.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Requires later Guardian/policy/approval review; no auto-approval, no execution, and no GuardianDecision."
+  }
+]

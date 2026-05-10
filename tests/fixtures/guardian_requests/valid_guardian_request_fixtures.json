@@ -1,0 +1,338 @@
+[
+  {
+    "fixture_id": "guardian-request-valid-info-low-001",
+    "fixture_type": "valid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-info-low-001",
+      "lineage_id": "lineage-intent-info-001",
+      "source_fixture_id": "intent-typed-info-low-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-info-low-001",
+      "lineage_id": "lineage-intent-info-001",
+      "intent_envelope_ref": "intent-info-low-001",
+      "actor_ref": "fixture-actor-info",
+      "session_ref": "fixture-session-info",
+      "shell_id": "lima-test-shell",
+      "action_type": "model_call",
+      "risk_class": "low",
+      "requested_tool_packs": [
+        "model"
+      ],
+      "target_ref": "fixture-report:latest-audit-notes",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes",
+        "format": "summary"
+      },
+      "evidence_refs": [
+        "fixture-evidence:audit-notes"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:none-required",
+      "autonomy_context_ref": "fixture-autonomy:passive-low-risk",
+      "reason": "Synthetic low-risk Guardian request shape.",
+      "confidence": 0.97,
+      "created_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "guardian_request_is_not_decision": true,
+        "requested_tool_packs_are_requests_only": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-info-low-001",
+      "lineage_id": "lineage-intent-info-001",
+      "intent_envelope_ref": "intent-info-low-001",
+      "actor_ref": "fixture-actor-info",
+      "session_ref": "fixture-session-info",
+      "shell_id": "lima-test-shell",
+      "action_type": "model_call",
+      "risk_class": "low",
+      "requested_tool_packs": [
+        "model"
+      ],
+      "target_ref": "fixture-report:latest-audit-notes",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes",
+        "format": "summary"
+      },
+      "evidence_refs": [
+        "fixture-evidence:audit-notes"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:none-required",
+      "autonomy_context_ref": "fixture-autonomy:passive-low-risk",
+      "reason": "Synthetic low-risk Guardian request shape.",
+      "confidence": 0.97,
+      "created_at": "2026-01-01T00:00:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "guardian_request_is_not_decision": true,
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "valid",
+    "expected_reason": "Complete explicit request metadata is available for a synthetic low-risk review request.",
+    "privacy_class": "internal",
+    "redaction_class": "summary_only",
+    "notes": "Guardian request is not GuardianDecision or approval; requested_tool_packs are requests only."
+  },
+  {
+    "fixture_id": "guardian-request-valid-calendar-medium-001",
+    "fixture_type": "valid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-calendar-medium-001",
+      "lineage_id": "lineage-intent-calendar-001",
+      "source_fixture_id": "intent-typed-calendar-medium-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-calendar-medium-001",
+      "lineage_id": "lineage-intent-calendar-001",
+      "intent_envelope_ref": "intent-calendar-medium-001",
+      "actor_ref": "fixture-actor-calendar",
+      "session_ref": "fixture-session-calendar",
+      "shell_id": "lima-test-shell",
+      "action_type": "task_mutation",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "calendar"
+      ],
+      "target_ref": "fixture-calendar:planning-block",
+      "typed_args": {
+        "calendar_ref": "fixture-calendar",
+        "time_window_ref": "fixture-time-window",
+        "title_ref": "fixture-title-planning-block"
+      },
+      "evidence_refs": [
+        "fixture-evidence:calendar-availability"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-assisted",
+      "reason": "Synthetic scheduling Guardian request shape.",
+      "confidence": 0.9,
+      "created_at": "2026-01-01T00:01:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "privacy_metadata_is_not_enforcement": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-calendar-medium-001",
+      "lineage_id": "lineage-intent-calendar-001",
+      "intent_envelope_ref": "intent-calendar-medium-001",
+      "actor_ref": "fixture-actor-calendar",
+      "session_ref": "fixture-session-calendar",
+      "shell_id": "lima-test-shell",
+      "action_type": "task_mutation",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "calendar"
+      ],
+      "target_ref": "fixture-calendar:planning-block",
+      "typed_args": {
+        "calendar_ref": "fixture-calendar",
+        "time_window_ref": "fixture-time-window",
+        "title_ref": "fixture-title-planning-block"
+      },
+      "evidence_refs": [
+        "fixture-evidence:calendar-availability"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-assisted",
+      "reason": "Synthetic scheduling Guardian request shape.",
+      "confidence": 0.9,
+      "created_at": "2026-01-01T00:01:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "valid",
+    "expected_reason": "Complete explicit request metadata is available for a synthetic scheduling request.",
+    "privacy_class": "private",
+    "redaction_class": "reference_only",
+    "notes": "No calendar action is approved or executed; this is request shape only."
+  },
+  {
+    "fixture_id": "guardian-request-valid-draft-comms-001",
+    "fixture_type": "valid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-001",
+      "source_fixture_id": "intent-typed-draft-comms-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-001",
+      "intent_envelope_ref": "intent-draft-comms-001",
+      "actor_ref": "fixture-actor-comms",
+      "session_ref": "fixture-session-comms",
+      "shell_id": "lima-test-shell",
+      "action_type": "send_message",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "target_ref": "fixture-message:draft-only",
+      "typed_args": {
+        "draft_ref": "fixture-draft-status-note",
+        "recipient_group_ref": "fixture-recipient-group",
+        "send_mode": "draft_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:project-summary"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-draft",
+      "reason": "Synthetic draft-only Guardian request shape.",
+      "confidence": 0.92,
+      "created_at": "2026-01-01T00:02:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "draft_only": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-001",
+      "intent_envelope_ref": "intent-draft-comms-001",
+      "actor_ref": "fixture-actor-comms",
+      "session_ref": "fixture-session-comms",
+      "shell_id": "lima-test-shell",
+      "action_type": "send_message",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "target_ref": "fixture-message:draft-only",
+      "typed_args": {
+        "draft_ref": "fixture-draft-status-note",
+        "recipient_group_ref": "fixture-recipient-group",
+        "send_mode": "draft_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:project-summary"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-draft",
+      "reason": "Synthetic draft-only Guardian request shape.",
+      "confidence": 0.92,
+      "created_at": "2026-01-01T00:02:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "valid",
+    "expected_reason": "Complete explicit request metadata is available for a synthetic draft-only request.",
+    "privacy_class": "private",
+    "redaction_class": "summary_only",
+    "notes": "Draft request is not send authorization; no message is sent."
+  },
+  {
+    "fixture_id": "guardian-request-valid-email-high-001",
+    "fixture_type": "valid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-email-send-high-001",
+      "lineage_id": "lineage-intent-email-send-001",
+      "source_fixture_id": "intent-typed-email-send-high-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-email-high-001",
+      "lineage_id": "lineage-intent-email-send-001",
+      "intent_envelope_ref": "intent-email-send-high-001",
+      "actor_ref": "fixture-actor-comms",
+      "session_ref": "fixture-session-comms",
+      "shell_id": "lima-test-shell",
+      "action_type": "send_message",
+      "risk_class": "high",
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "target_ref": "fixture-message:external-send-candidate",
+      "typed_args": {
+        "message_ref": "fixture-message-update",
+        "recipient_group_ref": "fixture-external-recipient-group",
+        "send_mode": "requires_later_approval"
+      },
+      "evidence_refs": [
+        "fixture-evidence:approved-draft"
+      ],
+      "privacy_class": "confidential",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:guardian-review-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-high-risk",
+      "reason": "Synthetic high-risk send request shape requiring later approval review.",
+      "confidence": 0.88,
+      "created_at": "2026-01-01T00:03:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "requires_later_guardian_review": true
+      }
+    },
+    "expected_guardian_request": {
+      "request_id": "guardian-request-email-high-001",
+      "lineage_id": "lineage-intent-email-send-001",
+      "intent_envelope_ref": "intent-email-send-high-001",
+      "actor_ref": "fixture-actor-comms",
+      "session_ref": "fixture-session-comms",
+      "shell_id": "lima-test-shell",
+      "action_type": "send_message",
+      "risk_class": "high",
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "target_ref": "fixture-message:external-send-candidate",
+      "typed_args": {
+        "message_ref": "fixture-message-update",
+        "recipient_group_ref": "fixture-external-recipient-group",
+        "send_mode": "requires_later_approval"
+      },
+      "evidence_refs": [
+        "fixture-evidence:approved-draft"
+      ],
+      "privacy_class": "confidential",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:guardian-review-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-high-risk",
+      "reason": "Synthetic high-risk send request shape requiring later approval review.",
+      "confidence": 0.88,
+      "created_at": "2026-01-01T00:03:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request",
+        "no_approval": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "valid",
+    "expected_reason": "Complete explicit request metadata is available, but any send remains blocked until later Guardian/policy/approval review.",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "No approval is granted, no GuardianDecision is created, and no message is sent."
+  }
+]

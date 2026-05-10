@@ -1,0 +1,222 @@
+[
+  {
+    "fixture_id": "guardian-request-invalid-missing-request-id-001",
+    "fixture_type": "invalid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-info-low-001",
+      "lineage_id": "lineage-intent-info-001",
+      "source_fixture_id": "intent-typed-info-low-001"
+    },
+    "explicit_request": {
+      "lineage_id": "lineage-intent-info-001",
+      "intent_envelope_ref": "intent-info-low-001",
+      "actor_ref": "fixture-actor-info",
+      "session_ref": "fixture-session-info",
+      "shell_id": "lima-test-shell",
+      "action_type": "model_call",
+      "risk_class": "low",
+      "requested_tool_packs": [
+        "model"
+      ],
+      "target_ref": "fixture-report:latest-audit-notes",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes"
+      },
+      "evidence_refs": [
+        "fixture-evidence:audit-notes"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:none-required",
+      "autonomy_context_ref": "fixture-autonomy:passive-low-risk",
+      "reason": "Missing request_id makes this invalid.",
+      "confidence": 0.9,
+      "created_at": "2026-01-01T01:00:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request"
+      }
+    },
+    "expected_guardian_request": null,
+    "expected_status": "invalid",
+    "expected_reason": "Missing request_id must not imply Guardian request acceptance.",
+    "privacy_class": "internal",
+    "redaction_class": "summary_only",
+    "notes": "No GuardianDecision, no approval, and no execution."
+  },
+  {
+    "fixture_id": "guardian-request-invalid-missing-risk-001",
+    "fixture_type": "invalid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-calendar-medium-001",
+      "lineage_id": "lineage-intent-calendar-001",
+      "source_fixture_id": "intent-typed-calendar-medium-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-invalid-risk-001",
+      "lineage_id": "lineage-intent-calendar-001",
+      "intent_envelope_ref": "intent-calendar-medium-001",
+      "actor_ref": "fixture-actor-calendar",
+      "session_ref": "fixture-session-calendar",
+      "shell_id": "lima-test-shell",
+      "action_type": "task_mutation",
+      "requested_tool_packs": [
+        "calendar"
+      ],
+      "target_ref": "fixture-calendar:planning-block",
+      "typed_args": {
+        "calendar_ref": "fixture-calendar"
+      },
+      "evidence_refs": [
+        "fixture-evidence:calendar-availability"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "reference_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-assisted",
+      "reason": "Missing risk_class requires review before any request can be accepted.",
+      "confidence": 0.74,
+      "created_at": "2026-01-01T01:01:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request"
+      }
+    },
+    "expected_guardian_request": null,
+    "expected_status": "needs_review",
+    "expected_reason": "Missing risk_class must produce needs_review or invalid status.",
+    "privacy_class": "private",
+    "redaction_class": "reference_only",
+    "notes": "No GuardianDecision, no approval, and no execution."
+  },
+  {
+    "fixture_id": "guardian-request-invalid-missing-action-001",
+    "fixture_type": "invalid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-001",
+      "source_fixture_id": "intent-typed-draft-comms-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-invalid-action-001",
+      "lineage_id": "lineage-intent-draft-001",
+      "intent_envelope_ref": "intent-draft-comms-001",
+      "actor_ref": "fixture-actor-comms",
+      "session_ref": "fixture-session-comms",
+      "shell_id": "lima-test-shell",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "target_ref": "fixture-message:draft-only",
+      "typed_args": {
+        "draft_ref": "fixture-draft-status-note"
+      },
+      "evidence_refs": [
+        "fixture-evidence:project-summary"
+      ],
+      "privacy_class": "private",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:confirm-later",
+      "autonomy_context_ref": "fixture-autonomy:passive-draft",
+      "reason": "Missing action_type makes request semantics incomplete.",
+      "confidence": 0.7,
+      "created_at": "2026-01-01T01:02:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request"
+      }
+    },
+    "expected_guardian_request": null,
+    "expected_status": "invalid",
+    "expected_reason": "Missing action_type must not imply request acceptance.",
+    "privacy_class": "private",
+    "redaction_class": "summary_only",
+    "notes": "No GuardianDecision, no approval, and no execution."
+  },
+  {
+    "fixture_id": "guardian-request-invalid-missing-intent-ref-001",
+    "fixture_type": "invalid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": null,
+      "lineage_id": "lineage-intent-missing-ref-001",
+      "source_fixture_id": "intent-fixture-missing-ref"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-invalid-intent-ref-001",
+      "lineage_id": "lineage-intent-missing-ref-001",
+      "actor_ref": "fixture-actor-unknown",
+      "session_ref": "fixture-session-unknown",
+      "shell_id": "lima-test-shell",
+      "action_type": "unknown",
+      "risk_class": "medium",
+      "requested_tool_packs": [
+        "unknown"
+      ],
+      "target_ref": "fixture-target:unknown",
+      "typed_args": {},
+      "evidence_refs": [],
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:needs-review",
+      "autonomy_context_ref": "fixture-autonomy:passive-unknown",
+      "reason": "Missing intent_envelope_ref requires clarification.",
+      "confidence": 0.41,
+      "created_at": "2026-01-01T01:03:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request"
+      }
+    },
+    "expected_guardian_request": null,
+    "expected_status": "clarification_needed",
+    "expected_reason": "Missing intent_envelope_ref must require clarification or review.",
+    "privacy_class": "internal",
+    "redaction_class": "summary_only",
+    "notes": "No GuardianDecision, no approval, and no execution."
+  },
+  {
+    "fixture_id": "guardian-request-invalid-tool-packs-malformed-001",
+    "fixture_type": "invalid_guardian_request",
+    "intent_envelope_ref": {
+      "intent_id": "intent-info-low-001",
+      "lineage_id": "lineage-intent-info-001",
+      "source_fixture_id": "intent-typed-info-low-001"
+    },
+    "explicit_request": {
+      "request_id": "guardian-request-invalid-tool-packs-001",
+      "lineage_id": "lineage-intent-info-001",
+      "intent_envelope_ref": "intent-info-low-001",
+      "actor_ref": "fixture-actor-info",
+      "session_ref": "fixture-session-info",
+      "shell_id": "lima-test-shell",
+      "action_type": "model_call",
+      "risk_class": "low",
+      "requested_tool_packs": "model",
+      "target_ref": "fixture-report:latest-audit-notes",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes"
+      },
+      "evidence_refs": [
+        "fixture-evidence:audit-notes"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "approval_requirement_ref": "fixture-approval:none-required",
+      "autonomy_context_ref": "fixture-autonomy:passive-low-risk",
+      "reason": "requested_tool_packs is malformed and must remain request metadata only.",
+      "confidence": 0.82,
+      "created_at": "2026-01-01T01:04:00Z",
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_request"
+      }
+    },
+    "expected_guardian_request": null,
+    "expected_status": "invalid",
+    "expected_reason": "Malformed requested_tool_packs must not imply allowed tools or request acceptance.",
+    "privacy_class": "internal",
+    "redaction_class": "summary_only",
+    "notes": "requested_tool_packs are requests only; no GuardianDecision, no approval, and no execution."
+  }
+]

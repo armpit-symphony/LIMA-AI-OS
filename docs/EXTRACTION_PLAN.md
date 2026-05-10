@@ -1778,6 +1778,25 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.22: Guardian Request Test Fixtures
+
+Guardian request test fixtures are allowed.
+
+Still blocked:
+
+- real GuardianDecision creation
+- Guardian enforcement
+- policy enforcement
+- approval enforcement
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

@@ -172,6 +172,8 @@ Phase 2.20 reviews the IntentEnvelope safety gate and recommends Guardian reques
 
 Phase 2.21 reviews test-only Guardian request design and keeps GuardianDecision/enforcement blocked.
 
+Phase 2.22 adds synthetic Guardian request fixtures and keeps GuardianDecision/enforcement blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
