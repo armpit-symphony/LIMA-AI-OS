@@ -118,6 +118,8 @@ Phase 1.18 adds trust-context contracts while keeping identity/session/trust/aut
 
 Phase 1.19 adds test-only adapter fixtures with fake AuthContext/trust metadata while keeping references passive.
 
+Phase 1.20 reviews real Sparkbot adapter readiness and keeps production wiring blocked pending payload/identity/trust stability.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -240,6 +242,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md](docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md)
 - [docs/PHASE_1_18_AUTHCONTEXT_TRUST_CONTRACT_EXTENSION.md](docs/PHASE_1_18_AUTHCONTEXT_TRUST_CONTRACT_EXTENSION.md)
 - [docs/PHASE_1_19_ADAPTER_FIXTURE_TESTS_WITH_FAKE_AUTHCONTEXT.md](docs/PHASE_1_19_ADAPTER_FIXTURE_TESTS_WITH_FAKE_AUTHCONTEXT.md)
+- [docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
