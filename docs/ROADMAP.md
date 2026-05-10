@@ -1226,6 +1226,20 @@ Acceptance criteria:
 - no execution
 - tests pass
 
+### Phase 2.24: Guardian Request Fixture Harness
+
+Goal: Add a test-only harness validating explicit Guardian request fixture shapes.
+
+Acceptance criteria:
+
+- test-only harness exists
+- no GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
