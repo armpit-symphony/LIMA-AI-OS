@@ -1729,6 +1729,14 @@ NO-GO:
 - `execute_tool`
 - real enforcement
 
+## Phase 2.19: IntentEnvelope Safety Gate Docs
+
+`docs/INTENTENVELOPE_SAFETY_GATE.md` is now the standing gate for IntentEnvelope-adjacent work.
+
+No IntentEnvelope-adjacent PR may merge without satisfying it.
+
+Real IntentCompiler remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

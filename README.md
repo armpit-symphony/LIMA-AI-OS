@@ -166,6 +166,8 @@ Phase 2.17 adds a test-only IntentEnvelope fixture harness that validates explic
 
 Phase 2.18 reviews the IntentEnvelope fixture harness and recommends a standing safety gate for future IntentEnvelope work.
 
+Phase 2.19 finalizes `docs/INTENTENVELOPE_SAFETY_GATE.md` as the standing safety gate for IntentEnvelope-adjacent work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -311,6 +313,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md](docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md)
 - [docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md](docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md)
 - [docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md](docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md)
+- [docs/INTENTENVELOPE_SAFETY_GATE.md](docs/INTENTENVELOPE_SAFETY_GATE.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)
