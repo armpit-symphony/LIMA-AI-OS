@@ -624,6 +624,28 @@ Acceptance criteria:
 - autonomy enforcement remains blocked
 - tests pass
 
+### Phase 1.15: HumanInput Fake Pipeline Bridge
+
+Goal: Create test-only bridge from HumanInput to FakeGuardianPipeline while keeping adapter and bridge separate.
+
+Deliverables:
+
+- `lima/guardian/humaninput_pipeline_fakes.py`
+- `docs/PHASE_1_15_HUMANINPUT_FAKE_PIPELINE_BRIDGE.md`
+- tests proving explicit-metadata request creation
+- tests proving adapter/bridge separation
+
+Acceptance criteria:
+
+- bridge is test-only
+- adapter remains HumanInput-only
+- no Sparkbot imports
+- no production wiring
+- no natural-language intent inference
+- no model/tool execution
+- fake pipeline only
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

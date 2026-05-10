@@ -918,6 +918,44 @@ NO-GO:
 - terminal/PTY
 - Robo-OS physical action
 
+## Phase 1.15: HumanInput Fake Pipeline Bridge
+
+Scope:
+
+- Add a test-only bridge from `HumanInput` to `FakeGuardianPipeline`.
+- Keep the bridge separate from `SparkbotHumanInputAdapter`.
+- Build test-only `ConsequentialActionRequest` objects from explicit HumanInput metadata only.
+- Keep adapter output limited to `HumanInput`.
+- Keep production wiring, real enforcement, and execution blocked.
+
+Acceptance criteria:
+
+- `lima/guardian/humaninput_pipeline_fakes.py` exists.
+- Bridge is test-only and calls `FakeGuardianPipeline` only.
+- Adapter remains HumanInput-only and does not create `ConsequentialActionRequest`.
+- No natural-language intent inference, real IntentCompiler, model/tool execution, driver calls, persistence, or autonomy enforcement is added.
+- Critical/unknown requests do not auto-approve.
+- Tests prove boundary separation.
+
+Hard gate:
+
+HumanInput fake pipeline bridge is allowed for tests only.
+
+Still blocked:
+
+- production Sparkbot wiring
+- real IntentCompiler
+- natural-language intent inference
+- adapter-created ConsequentialActionRequest
+- adapter-created IntentEnvelope
+- adapter-created GuardianDecision
+- model/tool execution
+- terminal/PTY
+- Robo-OS physical action
+- audit persistence
+- redaction runtime
+- autonomy enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
