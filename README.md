@@ -134,6 +134,8 @@ Phase 2.1 reviews non-production fixture harness coverage and keeps production a
 
 Phase 2.2 expands synthetic Sparkbot fixture coverage for frontend, Workstation, SparkBud, auth/session, and model-routing contexts.
 
+Phase 2.3 reviews expanded fixture harness coverage and keeps production adapter wiring blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -264,6 +266,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_0_NONPRODUCTION_ADAPTER_FIXTURE_HARNESS.md](docs/PHASE_2_0_NONPRODUCTION_ADAPTER_FIXTURE_HARNESS.md)
 - [docs/PHASE_2_1_FIXTURE_HARNESS_COVERAGE_REVIEW.md](docs/PHASE_2_1_FIXTURE_HARNESS_COVERAGE_REVIEW.md)
 - [docs/PHASE_2_2_FIXTURE_COVERAGE_EXPANSION.md](docs/PHASE_2_2_FIXTURE_COVERAGE_EXPANSION.md)
+- [docs/PHASE_2_3_HARNESS_COVERAGE_READINESS_REVIEW.md](docs/PHASE_2_3_HARNESS_COVERAGE_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

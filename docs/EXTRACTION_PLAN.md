@@ -1336,6 +1336,34 @@ No production adapter until:
 - unsupported/non-executing categories are documented
 - identity/session/privacy/autonomy metadata remains passive
 
+## Phase 2.3: Harness Coverage Readiness Review
+
+Scope:
+
+- Review expanded Phase 2.2 fixture and harness coverage.
+- Confirm Sparkbot `origin/main` freshness.
+- Decide whether a repeatable fixture regression harness is safe as the next non-production step.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Harness coverage readiness review exists.
+- Sparkbot `origin/main` is checked.
+- Coverage readiness matrix and risks are documented.
+- Phase 2.4 safe branch is identified.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No fixture regression harness until Phase 2.3 coverage readiness review is merged.
+
+After merge:
+
+GO only for selected Phase 2.4 safe branch: `phase-2-4-fixture-regression-harness`.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
