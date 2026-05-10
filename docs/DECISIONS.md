@@ -1026,3 +1026,19 @@ Consequences:
 - no execution
 - requested tool packs remain requests only
 - approval refs remain descriptive
+
+## ADR-0069: Guardian Request Fixture Harness Requires Readiness Review
+
+Status: Accepted
+
+Decision: Before creating a test-only Guardian request fixture harness, LIMA must review fixture coverage and confirm Guardian request remains non-authorizing.
+
+Rationale: Guardian request sits directly before GuardianDecision. A test harness must not create hidden approval, enforcement, or execution behavior.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- fixture harness must validate request shape only
