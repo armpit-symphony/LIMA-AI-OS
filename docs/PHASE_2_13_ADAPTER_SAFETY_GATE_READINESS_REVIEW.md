@@ -4,9 +4,11 @@
 
 Review whether `docs/ADAPTER_SAFETY_GATE.md` is complete enough to serve as the standing safety gate for adapter-adjacent work.
 
+This review is docs/review only.
 This review does not implement runtime behavior.
 This review does not authorize production adapter wiring.
 This review does not authorize execution.
+Production adapter remains NO-GO.
 
 ## Sparkbot Reference Check
 
