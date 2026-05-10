@@ -996,6 +996,46 @@ NO-GO:
 - audit persistence
 - real enforcement
 
+## Phase 1.17: Identity / Session / Trust Context Mapping Review
+
+Scope:
+
+- Review how adapter metadata should map to future identity, session, trust context, and owner autonomy contracts.
+- Keep `actor_ref`, `session_ref`, `trusted_context_ref`, `autonomy_notes`, and privacy metadata passive.
+- Recheck Sparkbot `origin/main` read-only for identity/session/auth and adapter-relevant surfaces.
+- Keep this phase review/docs/tests-only.
+
+Acceptance criteria:
+
+- `docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md` exists.
+- Sparkbot `origin/main` is rechecked and the inspected commit is recorded.
+- Future `AuthContext` mapping is proposed.
+- Future `TrustedDeviceContext` mapping is proposed.
+- Future `IdentityConfidence` mapping is proposed.
+- Owner autonomy mapping notes remain policy-only.
+- No runtime auth/session/trust/autonomy behavior is added.
+
+Hard gate:
+
+No production Sparkbot adapter until identity/session/trust-context mapping is reviewed and contract extensions are added if needed.
+
+After merge:
+
+GO only for Phase 1.18 AuthContext / Trust Contract Extension.
+
+NO-GO:
+
+- live auth/session lookup
+- trusted device enforcement
+- autonomy enforcement
+- PIN verification
+- face/voice recognition
+- production adapter
+- model/tool execution
+- `stream_chat_with_tools`
+- terminal/PTY
+- Robo-OS physical action
+
 ## Phase 2: Extract Model Harness
 
 Scope:

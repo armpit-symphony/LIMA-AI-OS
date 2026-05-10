@@ -668,6 +668,29 @@ Acceptance criteria:
 - next step identified
 - tests pass
 
+### Phase 1.17: Identity / Session / Trust Context Mapping Review
+
+Goal: Review how actor/session/trusted-context/autonomy metadata should map to future AuthContext and trust contracts before real adapter work.
+
+Deliverables:
+
+- `docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md`
+- Sparkbot freshness check
+- identity mapping proposal
+- session mapping proposal
+- trusted device mapping proposal
+- identity confidence mapping proposal
+- owner autonomy mapping notes
+- Phase 1.18 recommendation
+
+Acceptance criteria:
+
+- no live auth/session lookup
+- no trusted device enforcement
+- no autonomy enforcement
+- actor/session/trusted context remain passive metadata
+- next contract extension identified
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
