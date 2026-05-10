@@ -4,6 +4,7 @@
 
 Harden fixture regression reports with explicit review/gate context.
 
+The report improves reviewability only.
 This phase changes test/report helpers and docs only.
 It does not add production runtime.
 It does not authorize execution.
@@ -37,6 +38,7 @@ These fields are report metadata only. They do not authorize anything, inspect S
 - `fail` means one or more regression checks failed.
 - `needs_review` means unsupported/non-executing categories, drift, or manual review remain.
 - Production adapter remains blocked regardless of `gate_status`.
+- `gate_status` does not authorize production adapter work.
 
 ## Boundary Status Rules
 
@@ -55,6 +57,7 @@ These fields are report metadata only. They do not authorize anything, inspect S
 - report does not write files by default
 - report does not replace manual review
 - report does not authorize production adapter
+- manual review remains required
 - report gate status is not audit persistence, production telemetry, Guardian evidence, production authorization, or runtime state
 
 ## Acceptance Criteria
