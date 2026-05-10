@@ -12,7 +12,7 @@ This review does not modify Sparkbot.
 
 | Repo | Branch | Commit | Checked surfaces | Modified? yes/no | Adapter-relevant changes since Phase 2.2 |
 | --- | --- | --- | --- | --- | --- |
-| Sparkbot | `main` / `origin/main` | `4a08838ba500fec4ef85c163b3249a2db80da9d6` | Chat/WebSocket, `stream_chat_with_tools`, chat model routing, voice/transcript, meeting/roundtable, SparkBud, Workstation, operator/terminal input, MCP explain-plan/run approval, robotics natural-language surfaces, frontend chat input, auth/session/user context, and Token Guardian reporting/config related to chat/model routing. | No tracked Sparkbot modifications by this task; local checkout still has untracked `scripts/file_v1_6_72_proposals.py`. | None. Sparkbot `origin/main` has not moved since Phase 2.2. Review used Sparkbot `origin/main`, not dirty local files. |
+| Sparkbot | `main` / `origin/main` | `92128daef23f6ef0434972d9cb5edf83213f80da` | Chat/WebSocket, `stream_chat_with_tools`, chat model routing, voice/transcript, meeting/roundtable, SparkBud, Workstation, operator/terminal input, MCP explain-plan/run approval, robotics natural-language surfaces, frontend chat input, auth/session/user context, Token Guardian reporting/config, and Guardian policy changes related to execution gating. | No Sparkbot modifications by this LIMA task. The local checkout has untracked `scripts/file_v1_6_72_proposals.py`; previously reported `backend/app/services/guardian/policy.py` and `backend/tests/services/test_guardian_policy.py` changes are now present in Sparkbot `origin/main` as v1.6.73. | Sparkbot moved from `4a08838ba500fec4ef85c163b3249a2db80da9d6` to `92128daef23f6ef0434972d9cb5edf83213f80da`. The movement changes break-glass execution-gate policy behavior and related tests, not LIMA fixture payload shapes. Review used Sparkbot `origin/main`, not dirty local files. |
 
 ## Current Coverage Inventory
 
@@ -54,19 +54,23 @@ This review does not modify Sparkbot.
 - core payload categories exist
 - expanded categories exist
 - harness can safely handle supported categories
-- no current category needs hidden unsupported handling
+- unsupported/non-executing handling exists if needed, and no current category needs hidden unsupported handling
 - boundary tests protect adapters
 - production adapter remains blocked
 
 ## What Is Not Ready
 
+- live Sparkbot payload extraction
+- real route/WebSocket data
+- production adapter wiring
 - live route/WebSocket integration
 - live frontend payload capture
 - real Sparkbot adapter
-- real auth/session lookup
-- trusted device enforcement
-- owner autonomy enforcement
 - model/tool execution
+- real auth/session verification
+- real trusted device enforcement
+- real autonomy enforcement
+- live robot/MCP execution
 - `stream_chat_with_tools` safety
 - terminal/PTY
 - Robo-OS physical action
