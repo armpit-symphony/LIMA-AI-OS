@@ -788,3 +788,18 @@ Consequences:
 - report artifacts are not audit persistence
 - fixture regression remains non-production
 - no Sparkbot imports or execution are allowed
+
+## ADR-0054: Fixture Regression Reports Are Review Artifacts, Not Audit Persistence
+
+Status: Accepted
+
+Decision: LIMA may generate fixture regression report artifacts for human review, but these reports are not audit persistence or production telemetry.
+
+Rationale: Readable reports improve review quality without changing runtime behavior.
+
+Consequences:
+
+- reports are test/review artifacts only
+- production adapter remains blocked
+- no runtime persistence is introduced
+- audit persistence remains a future reviewed phase

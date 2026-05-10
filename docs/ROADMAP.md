@@ -941,6 +941,18 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.8: Fixture Regression Report Artifact
+
+Goal: Add test-only report helpers for fixture regression results.
+
+Acceptance criteria:
+
+- markdown/dict report helpers exist
+- report includes safety notice
+- no file writes by default
+- report is not audit persistence
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

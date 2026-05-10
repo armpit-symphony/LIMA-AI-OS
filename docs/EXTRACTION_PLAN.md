@@ -1481,6 +1481,27 @@ GO only for selected Phase 2.8 branch.
 
 Production adapter remains blocked.
 
+## Phase 2.8: Fixture Regression Report Artifact
+
+Scope:
+
+- Add test-only markdown/dict report helpers for fixture regression results.
+- Keep report artifacts review-only and non-production.
+- Do not write files by default.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Fixture regression report artifact is allowed for reviewability only.
+- Report artifacts are not audit persistence.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+Report artifacts must not become audit persistence, production telemetry, Guardian evidence, production authorization, or runtime state.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

@@ -15,6 +15,14 @@ from lima.guardian import AdapterFixtureHarness
 PASSED = "passed"
 UNSUPPORTED_NONEXECUTING = "unsupported_nonexecuting"
 FAILED = "failed"
+REPORT_SCHEMA_VERSION = "fixture-regression-report/v1"
+SAFETY_NOTICE = (
+    "non-production review artifact only",
+    "not audit persistence",
+    "no Sparkbot imports",
+    "no execution",
+    "production adapter blocked",
+)
 
 SUPPORTED_SURFACE_PREFIXES = (
     "auth_session_",
@@ -101,6 +109,92 @@ def run_fixture_regression(
             "executed_means_fake_harness_processed": True,
         },
     )
+
+
+def fixture_regression_report_to_dict(
+    report: FixtureRegressionReport,
+) -> Mapping[str, Any]:
+    """Format a fixture regression report as a review-only dictionary."""
+
+    return {
+        "schema_version": REPORT_SCHEMA_VERSION,
+        "total": report.total,
+        "executed": report.executed,
+        "unsupported_nonexecuting": report.unsupported_nonexecuting,
+        "failed": report.failed,
+        "results": [
+            {
+                "fixture_id": result.fixture_id,
+                "source_surface": result.source_surface,
+                "status": result.status,
+                "humaninput_source": result.humaninput_source,
+                "pipeline_status": result.pipeline_status,
+                "decision_status": result.decision_status,
+                "unsupported_reason": result.unsupported_reason,
+                "safety_notes": tuple(result.safety_notes),
+                "metadata": dict(result.metadata),
+            }
+            for result in report.results
+        ],
+        "metadata": dict(report.metadata),
+        "safety_notice": tuple(SAFETY_NOTICE),
+    }
+
+
+def fixture_regression_report_to_markdown(report: FixtureRegressionReport) -> str:
+    """Format a fixture regression report as markdown for human review."""
+
+    lines = [
+        "# Fixture Regression Report",
+        "",
+        "## Summary",
+        "",
+        f"- total: {report.total}",
+        f"- executed: {report.executed}",
+        f"- unsupported_nonexecuting: {report.unsupported_nonexecuting}",
+        f"- failed: {report.failed}",
+        "",
+        "## Status Summary",
+        "",
+        f"- passed: {sum(1 for result in report.results if result.status == PASSED)}",
+        f"- unsupported_nonexecuting: {report.unsupported_nonexecuting}",
+        f"- failed: {report.failed}",
+        "",
+        "## Fixture Results",
+        "",
+        (
+            "| fixture_id | source_surface | status | humaninput_source | "
+            "pipeline_status | decision_status | unsupported_reason | safety_notes |"
+        ),
+        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for result in report.results:
+        lines.append(
+            "| "
+            + " | ".join(
+                _markdown_cell(value)
+                for value in (
+                    result.fixture_id,
+                    result.source_surface,
+                    result.status,
+                    result.humaninput_source,
+                    result.pipeline_status,
+                    result.decision_status,
+                    result.unsupported_reason,
+                    ", ".join(result.safety_notes),
+                )
+            )
+            + " |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Safety Notice",
+            "",
+        ]
+    )
+    lines.extend(f"- {notice}" for notice in SAFETY_NOTICE)
+    return "\n".join(lines) + "\n"
 
 
 def _run_one_fixture(
@@ -221,3 +315,9 @@ def _enum_value(value: Any) -> str:
     if isinstance(enum_value, str):
         return enum_value
     return str(value)
+
+
+def _markdown_cell(value: object) -> str:
+    if value is None:
+        return ""
+    return str(value).replace("|", "\\|").replace("\n", " ")
