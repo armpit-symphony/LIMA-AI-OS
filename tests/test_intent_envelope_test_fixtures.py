@@ -204,6 +204,7 @@ def test_safety_critical_fixtures_mark_critical_risk_and_no_authorization() -> N
         assert envelope["risk_class"] in {"critical", "safety_critical"}
         assert "no authorization" in safety_text
         assert "no auto-approval" in safety_text
+        assert "guardian/policy/approval review" in safety_text
         assert envelope["metadata"]["no_auto_approval"] is True
         assert envelope["required_approval_level"] in {
             "operator_pin",
