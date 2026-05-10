@@ -1136,6 +1136,18 @@ Acceptance criteria:
 - no natural-language inference
 - tests pass
 
+### Phase 2.19: IntentEnvelope Safety Gate Docs
+
+Goal: Create a standing safety gate for IntentEnvelope-adjacent work.
+
+Acceptance criteria:
+
+- gate doc exists
+- tests validate gate doc
+- real IntentCompiler remains blocked
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

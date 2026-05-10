@@ -960,3 +960,19 @@ Consequences:
 - fixture harness remains test-only
 - IntentEnvelope remains non-authorizing
 - GuardianDecision remains mandatory later
+
+## ADR-0065: IntentEnvelope Safety Gate Is the Standing Review Gate
+
+Status: Accepted
+
+Decision: LIMA will use `docs/INTENTENVELOPE_SAFETY_GATE.md` as the standing safety gate for IntentEnvelope-adjacent work.
+
+Rationale: IntentEnvelope is the boundary between HumanInput and GuardianDecision. A consolidated gate prevents hidden natural-language inference and premature compiler/execution behavior.
+
+Consequences:
+
+- real IntentCompiler remains blocked
+- `raw_text` remains inert
+- explicit metadata required for tests
+- IntentEnvelope remains non-authorizing
+- manual review required for future compiler work
