@@ -168,6 +168,8 @@ Phase 2.18 reviews the IntentEnvelope fixture harness and recommends a standing 
 
 Phase 2.19 finalizes `docs/INTENTENVELOPE_SAFETY_GATE.md` as the standing safety gate for IntentEnvelope-adjacent work.
 
+Phase 2.20 reviews the IntentEnvelope safety gate and recommends Guardian request test design as the next non-production kernel boundary.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
