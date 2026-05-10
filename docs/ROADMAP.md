@@ -808,6 +808,28 @@ Acceptance criteria:
 - critical/unknown requests do not auto-approve
 - tests pass
 
+### Phase 2.1: Fixture Harness Coverage Review
+
+Goal: Review fixture and harness coverage before expanding the non-production harness.
+
+Deliverables:
+
+- `docs/PHASE_2_1_FIXTURE_HARNESS_COVERAGE_REVIEW.md`
+- Sparkbot freshness check
+- coverage matrix
+- gap decision
+- recommended Phase 2.2 branch
+- still-blocked list
+
+Acceptance criteria:
+
+- coverage review exists
+- Sparkbot origin/main checked
+- production adapter remains blocked
+- next safe branch identified
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
