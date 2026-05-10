@@ -4,6 +4,8 @@ These fixtures are LIMA-owned synthetic mirrors of Sparkbot input payload shapes
 
 They are not copied Sparkbot request objects, production contracts, verified identity evidence, authorization evidence, or route wiring. They contain no real user messages, credentials, live tokens, or private data.
 
+No fixture imports Sparkbot, wires production routes, calls models, executes tools, opens terminal/PTY, triggers robot actions, or creates authority. Production adapter work remains blocked.
+
 Fixture categories:
 
 - `chat_payloads.json`: chat message stream and WebSocket message input shapes.
@@ -14,3 +16,5 @@ Fixture categories:
 - `robot_request_payloads.json`: robotics natural-language command request shapes.
 
 If a fixture category is not confirmed in a future inspected Sparkbot commit, keep the file with an empty array and note the missing surface here before updating tests.
+
+Before real adapter work, Sparkbot `origin/main` must be rechecked, payload drift must be reviewed, and these mirrors must be updated if Sparkbot shapes changed.

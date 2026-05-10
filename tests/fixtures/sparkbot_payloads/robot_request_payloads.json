@@ -19,7 +19,7 @@
     "expected_humaninput_source": "console",
     "privacy_class": "confidential",
     "redaction_class": "reference_only",
-    "notes": "Synthetic mirror of robotics natural-language command shape; fixture does not call a driver."
+    "notes": "Synthetic mirror of robotics natural-language command shape; safety-critical and non-executing. Fixture does not call a driver, execute an MCP tool, or trigger physical action."
   },
   {
     "fixture_id": "robotics-emergency-stop-request",
@@ -37,6 +37,6 @@
     "expected_humaninput_source": "console",
     "privacy_class": "confidential",
     "redaction_class": "reference_only",
-    "notes": "Synthetic mirror of emergency-stop request shape for fixture tracking only; no physical action is triggered."
+    "notes": "Synthetic mirror of emergency-stop request shape for fixture tracking only; safety-critical and non-executing. No driver call or physical action is triggered."
   }
 ]

@@ -160,6 +160,19 @@ def test_each_fixture_has_required_shape() -> None:
         assert fixture["redaction_class"] in {"summary_only", "reference_only"}
 
 
+def test_fixture_readme_documents_boundary_rules() -> None:
+    readme = (FIXTURE_ROOT / "README.md").read_text(encoding="utf-8").lower()
+
+    for required in (
+        "lima-owned synthetic mirrors",
+        "production adapter work remains blocked",
+        "no fixture imports sparkbot",
+        "payload drift must be reviewed",
+        "before real adapter work",
+    ):
+        assert required in readme
+
+
 def test_fixtures_contain_no_obvious_secrets() -> None:
     for fixture in _all_fixtures():
         serialized = json.dumps(fixture, sort_keys=True).lower()
@@ -181,6 +194,14 @@ def test_fixtures_use_synthetic_actor_session_and_message_values() -> None:
             assert str(payload["requested_action"]).startswith("fixture ")
         if "user_request" in payload:
             assert str(payload["user_request"]).startswith("fixture ")
+
+
+def test_robot_fixtures_are_safety_critical_and_non_executing() -> None:
+    for fixture in _load_fixture_file("robot_request_payloads.json"):
+        notes = fixture["notes"].lower()
+        assert "safety-critical" in notes
+        assert "non-executing" in notes
+        assert "physical action" in notes
 
 
 def test_fixture_examples_adapt_to_expected_humaninput_source() -> None:

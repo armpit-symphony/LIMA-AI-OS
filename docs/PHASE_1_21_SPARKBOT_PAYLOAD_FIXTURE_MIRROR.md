@@ -6,11 +6,13 @@ Mirror current Sparkbot input payload shapes into LIMA-owned synthetic fixtures.
 
 This helps detect payload shape drift without importing Sparkbot or wiring live routes.
 
+This phase does not implement production adapter work, live route wiring, model calls, tool calls, terminal/PTY access, robotics execution, live auth/session lookup, trusted device enforcement, autonomy enforcement, audit persistence, redaction runtime, or real Guardian/policy/approval enforcement.
+
 ## Sparkbot Reference Commit
 
 | Repo | Branch | Commit | Checked paths | Modified? yes/no | Adapter-relevant notes |
 | --- | --- | --- | --- | --- | --- |
-| Sparkbot | `main` / `origin/main` | `f7d5ee2054794ea7156ffb51a009c058cb7757e6` | `backend/app/schemas/chat.py`, `backend/app/api/routes/chat/rooms.py`, `backend/app/api/routes/chat/websocket.py`, `backend/app/api/routes/chat/voice.py`, `backend/app/api/routes/chat/mcp.py`, `backend/app/api/routes/chat/robotics.py`, `backend/app/api/routes/terminal.py`, `frontend/src/pages/SparkbotDmPage.tsx`, `frontend/src/lib/workstationMeeting.ts`, `frontend/src/lib/mcpRegistry.ts`, `frontend/src/types/terminal.ts`, and Workstation session/context snippets. | Yes, local checkout only | `origin/main` did not move since Phase 1.20 and remains at `f7d5ee2`. The local Sparkbot worktree had pre-existing changes in `backend/app/api/routes/chat/rooms.py` plus untracked correction-lock files; LIMA did not modify Sparkbot. Fixture shapes are synthetic LIMA-owned mirrors of the inspected origin surfaces, not copied production request objects. |
+| Sparkbot | `main` / `origin/main` | `f7d5ee2054794ea7156ffb51a009c058cb7757e6` | `backend/app/schemas/chat.py`, `backend/app/api/routes/chat/rooms.py`, `backend/app/api/routes/chat/websocket.py`, `backend/app/api/routes/chat/voice.py`, `backend/app/api/routes/chat/mcp.py`, `backend/app/api/routes/chat/robotics.py`, `backend/app/api/routes/terminal.py`, `frontend/src/pages/SparkbotDmPage.tsx`, `frontend/src/lib/workstationMeeting.ts`, `frontend/src/lib/mcpRegistry.ts`, `frontend/src/types/terminal.ts`, and Workstation session/context snippets. | Yes, local checkout only | `origin/main` did not move since Phase 1.20 and remains at `f7d5ee2`. The local Sparkbot worktree had pre-existing changes in chat/Spine/Guardian/frontend files plus untracked correction-lock files; LIMA did not modify Sparkbot. Fixture shapes are synthetic LIMA-owned mirrors based on `origin/main` / the checked commit, not uncommitted local dirty files or copied production request objects. |
 
 ## Fixture Rules
 
@@ -22,6 +24,9 @@ This helps detect payload shape drift without importing Sparkbot or wiring live 
 - no Sparkbot imports
 - no route wiring
 - no execution
+- no model/tool calls
+- fixtures are not authority
+- production adapter remains blocked
 
 ## Fixture Categories
 
@@ -31,6 +36,8 @@ This helps detect payload shape drift without importing Sparkbot or wiring live 
 - operator payloads
 - MCP approval payloads
 - robot request payloads
+
+Robot request payloads are safety-critical mirrors. They remain blocked, non-executing fixtures and do not call drivers, execute MCP tools, or trigger physical-world action.
 
 ## How Fixtures Are Used
 
