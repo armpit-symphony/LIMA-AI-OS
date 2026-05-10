@@ -1502,6 +1502,32 @@ Hard gate:
 
 Report artifacts must not become audit persistence, production telemetry, Guardian evidence, production authorization, or runtime state.
 
+## Phase 2.9: Regression Report Readiness Review
+
+Scope:
+
+- Review whether the Phase 2.8 report artifact is ready as a standing human-readable review artifact.
+- Identify missing gate context before adapter-adjacent expansion.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Regression Report Readiness Review is merged before adapter-adjacent expansion.
+- Report remains non-persistent and non-production.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No adapter-adjacent expansion until Regression Report Readiness Review is merged.
+
+After merge:
+
+GO only for Phase 2.10 Regression Report Gate Hardening.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

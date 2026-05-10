@@ -146,6 +146,8 @@ Phase 2.7 reviews Phase 2 progress and recommends fixture regression report arti
 
 Phase 2.8 adds test-only fixture regression report helpers for human review; reports are not audit persistence.
 
+Phase 2.9 reviews fixture regression report readiness and keeps production adapter wiring blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -282,6 +284,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_6_FIXTURE_REGRESSION_CI_GATE_DOCS.md](docs/PHASE_2_6_FIXTURE_REGRESSION_CI_GATE_DOCS.md)
 - [docs/PHASE_2_7_PHASE_TWO_READINESS_REVIEW.md](docs/PHASE_2_7_PHASE_TWO_READINESS_REVIEW.md)
 - [docs/PHASE_2_8_FIXTURE_REGRESSION_REPORT_ARTIFACT.md](docs/PHASE_2_8_FIXTURE_REGRESSION_REPORT_ARTIFACT.md)
+- [docs/PHASE_2_9_REGRESSION_REPORT_READINESS_REVIEW.md](docs/PHASE_2_9_REGRESSION_REPORT_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

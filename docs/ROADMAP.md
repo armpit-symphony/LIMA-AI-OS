@@ -953,6 +953,26 @@ Acceptance criteria:
 - report is not audit persistence
 - tests pass
 
+### Phase 2.9: Regression Report Readiness Review
+
+Goal: Review fixture regression report artifact readiness before using it as a standing adapter review artifact.
+
+Deliverables:
+
+- `docs/PHASE_2_9_REGRESSION_REPORT_READINESS_REVIEW.md`
+- readiness decision
+- report status
+- gap list
+- recommended Phase 2.10 branch
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- production adapter remains blocked
+- report remains non-persistent/non-production
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
