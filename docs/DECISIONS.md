@@ -633,3 +633,18 @@ Consequences:
 - fixture drift metadata is required
 - dirty local Sparkbot state must be ignored or explicitly documented
 - no Sparkbot imports are allowed
+
+## ADR-0044: Adapter Modules Must Remain Runtime-Isolated Until Approved
+
+Status: Accepted
+
+Decision: LIMA adapter modules must not import Sparkbot runtime modules, route layers, model/tool execution, persistence, terminal, robot, or external service dependencies until a future approved phase.
+
+Rationale: Adapters are the likely entry point for production wiring creep. Boundary tests protect the HumanInput-first architecture.
+
+Consequences:
+
+- adapter code remains isolated
+- adapter methods remain non-executing
+- production wiring remains blocked
+- future adapter expansion requires explicit review

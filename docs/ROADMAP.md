@@ -760,6 +760,20 @@ Acceptance criteria:
 - tests pass
 - production adapter remains blocked
 
+### Phase 1.23: Adapter Boundary Hardening
+
+Goal: Add tests preventing unsafe imports and behavior-bearing methods from entering lima/adapters.
+
+Acceptance criteria:
+
+- adapter boundary tests exist
+- no Sparkbot imports
+- no route wiring
+- no model/tool execution
+- no terminal/PTY
+- no persistence
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
