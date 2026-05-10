@@ -1,0 +1,398 @@
+[
+  {
+    "fixture_id": "intent-typed-info-low-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-info-001",
+      "actor_id": "fixture-actor-info",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Summarize the latest fixture audit notes.",
+    "explicit_metadata": {
+      "intent_type": "ask_information",
+      "action_type": "model_call",
+      "risk_class": "low",
+      "target_ref": "fixture-report:latest-audit-notes",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes",
+        "format": "summary"
+      },
+      "evidence_refs": [
+        "fixture-evidence:audit-notes"
+      ],
+      "requested_tool_packs": [
+        "model"
+      ],
+      "approval_level": "none",
+      "privacy_class": "internal",
+      "redaction_class": "summary_only",
+      "lineage_id": "lineage-intent-info-001",
+      "reason": "Synthetic low-risk informational intent.",
+      "confidence": 0.97
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-info-low-001",
+      "source_input_id": "humaninput-intent-info-001",
+      "actor_id": "fixture-actor-info",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "summarize fixture audit notes",
+      "intent_type": "ask_information",
+      "typed_args": {
+        "topic_ref": "fixture-audit-notes",
+        "format": "summary"
+      },
+      "confidence": 0.97,
+      "risk_class": "low",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:audit-notes"
+      ],
+      "required_approval_level": "none",
+      "proposed_tool_packs": [
+        "model"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-info-001"
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Complete explicit metadata is available for a synthetic low-risk information request.",
+    "privacy_class": "internal",
+    "redaction_class": "summary_only",
+    "notes": "raw_text is inert and must not be parsed; the expected envelope comes from explicit_metadata only."
+  },
+  {
+    "fixture_id": "intent-typed-calendar-medium-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-calendar-001",
+      "actor_id": "fixture-actor-calendar",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Place a planning block on the fixture calendar.",
+    "explicit_metadata": {
+      "intent_type": "schedule_task",
+      "action_type": "task_mutation",
+      "risk_class": "medium",
+      "target_ref": "fixture-calendar:planning-block",
+      "typed_args": {
+        "calendar_ref": "fixture-calendar",
+        "time_window_ref": "fixture-time-window",
+        "title_ref": "fixture-title-planning-block"
+      },
+      "evidence_refs": [
+        "fixture-evidence:calendar-availability"
+      ],
+      "requested_tool_packs": [
+        "calendar"
+      ],
+      "approval_level": "confirm",
+      "privacy_class": "private",
+      "redaction_class": "reference_only",
+      "lineage_id": "lineage-intent-calendar-001",
+      "reason": "Synthetic scheduling-style intent with explicit references.",
+      "confidence": 0.9
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-calendar-medium-001",
+      "source_input_id": "humaninput-intent-calendar-001",
+      "actor_id": "fixture-actor-calendar",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "schedule fixture planning block",
+      "intent_type": "schedule_task",
+      "typed_args": {
+        "calendar_ref": "fixture-calendar",
+        "time_window_ref": "fixture-time-window",
+        "title_ref": "fixture-title-planning-block"
+      },
+      "confidence": 0.9,
+      "risk_class": "medium",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:calendar-availability"
+      ],
+      "required_approval_level": "confirm",
+      "proposed_tool_packs": [
+        "calendar"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-calendar-001"
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Complete explicit metadata is available for a synthetic scheduling candidate.",
+    "privacy_class": "private",
+    "redaction_class": "reference_only",
+    "notes": "No calendar service is called and no event is created."
+  },
+  {
+    "fixture_id": "intent-typed-draft-comms-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-draft-001",
+      "actor_id": "fixture-actor-comms",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Draft a fixture status note.",
+    "explicit_metadata": {
+      "intent_type": "draft_content",
+      "action_type": "send_message",
+      "risk_class": "medium",
+      "target_ref": "fixture-message:draft-only",
+      "typed_args": {
+        "draft_ref": "fixture-draft-status-note",
+        "recipient_group_ref": "fixture-recipient-group",
+        "send_mode": "draft_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:project-summary"
+      ],
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "approval_level": "confirm",
+      "privacy_class": "private",
+      "redaction_class": "summary_only",
+      "lineage_id": "lineage-intent-draft-001",
+      "reason": "Synthetic draft-only communication intent.",
+      "confidence": 0.92
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-draft-comms-001",
+      "source_input_id": "humaninput-intent-draft-001",
+      "actor_id": "fixture-actor-comms",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "draft fixture status note",
+      "intent_type": "draft_content",
+      "typed_args": {
+        "draft_ref": "fixture-draft-status-note",
+        "recipient_group_ref": "fixture-recipient-group",
+        "send_mode": "draft_only"
+      },
+      "confidence": 0.92,
+      "risk_class": "medium",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:project-summary"
+      ],
+      "required_approval_level": "confirm",
+      "proposed_tool_packs": [
+        "comms"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-draft-001"
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Complete explicit metadata is available for a draft-only candidate.",
+    "privacy_class": "private",
+    "redaction_class": "summary_only",
+    "notes": "IntentEnvelope is not authorization and does not send a message."
+  },
+  {
+    "fixture_id": "intent-typed-email-send-high-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-email-send-001",
+      "actor_id": "fixture-actor-comms",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Send the fixture update after review.",
+    "explicit_metadata": {
+      "intent_type": "send_message",
+      "action_type": "send_message",
+      "risk_class": "high",
+      "target_ref": "fixture-message:external-send-candidate",
+      "typed_args": {
+        "message_ref": "fixture-message-update",
+        "recipient_group_ref": "fixture-external-recipient-group",
+        "send_mode": "requires_later_approval"
+      },
+      "evidence_refs": [
+        "fixture-evidence:approved-draft"
+      ],
+      "requested_tool_packs": [
+        "comms"
+      ],
+      "approval_level": "guardian_review",
+      "privacy_class": "confidential",
+      "redaction_class": "reference_only",
+      "lineage_id": "lineage-intent-email-send-001",
+      "reason": "Synthetic high-risk send candidate that needs later approval metadata.",
+      "confidence": 0.88
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-email-send-high-001",
+      "source_input_id": "humaninput-intent-email-send-001",
+      "actor_id": "fixture-actor-comms",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "send fixture update after review",
+      "intent_type": "send_message",
+      "typed_args": {
+        "message_ref": "fixture-message-update",
+        "recipient_group_ref": "fixture-external-recipient-group",
+        "send_mode": "requires_later_approval"
+      },
+      "confidence": 0.88,
+      "risk_class": "high",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:approved-draft"
+      ],
+      "required_approval_level": "guardian_review",
+      "proposed_tool_packs": [
+        "comms"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-email-send-001"
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Complete explicit metadata is available, but execution remains blocked until Guardian later reviews.",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "No message is sent; this fixture only describes expected IntentEnvelope shape."
+  },
+  {
+    "fixture_id": "intent-typed-terminal-critical-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-terminal-001",
+      "actor_id": "fixture-actor-ops",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Inspect a synthetic terminal command candidate.",
+    "explicit_metadata": {
+      "intent_type": "run_tool",
+      "action_type": "terminal_command",
+      "risk_class": "critical",
+      "target_ref": "fixture-terminal:command-ref",
+      "typed_args": {
+        "command_ref": "fixture-terminal-command",
+        "mode": "review_only"
+      },
+      "evidence_refs": [
+        "fixture-evidence:operator-review"
+      ],
+      "requested_tool_packs": [
+        "terminal"
+      ],
+      "approval_level": "operator_pin",
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "lineage_id": "lineage-intent-terminal-001",
+      "reason": "Synthetic terminal-like request marked critical.",
+      "confidence": 0.84
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-terminal-critical-001",
+      "source_input_id": "humaninput-intent-terminal-001",
+      "actor_id": "fixture-actor-ops",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic terminal command candidate",
+      "intent_type": "run_tool",
+      "typed_args": {
+        "command_ref": "fixture-terminal-command",
+        "mode": "review_only"
+      },
+      "confidence": 0.84,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:operator-review"
+      ],
+      "required_approval_level": "operator_pin",
+      "proposed_tool_packs": [
+        "terminal"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-terminal-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Terminal-like intent may be shaped for review only; it does not authorize execution.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Critical terminal-like request requires later Guardian/policy/approval review and has no auto-approval."
+  },
+  {
+    "fixture_id": "intent-typed-robot-critical-001",
+    "fixture_type": "typed_intent",
+    "human_input_ref": {
+      "input_id": "humaninput-intent-robot-001",
+      "actor_id": "fixture-actor-robot",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Review a synthetic robot motion candidate.",
+    "explicit_metadata": {
+      "intent_type": "control_robot",
+      "action_type": "robot_action",
+      "risk_class": "critical",
+      "target_ref": "fixture-robot:motion-plan",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_plan_ref": "fixture-motion-plan",
+        "mode": "dry_run_required"
+      },
+      "evidence_refs": [
+        "fixture-evidence:robot-safety-zone",
+        "fixture-evidence:operator-presence"
+      ],
+      "requested_tool_packs": [
+        "robo"
+      ],
+      "approval_level": "operator_pin",
+      "privacy_class": "safety_critical",
+      "redaction_class": "operator_only",
+      "lineage_id": "lineage-intent-robot-001",
+      "reason": "Synthetic robot request marked safety-critical.",
+      "confidence": 0.81
+    },
+    "expected_intent_envelope": {
+      "intent_id": "intent-robot-critical-001",
+      "source_input_id": "humaninput-intent-robot-001",
+      "actor_id": "fixture-actor-robot",
+      "shell_id": "lima-test-shell",
+      "normalized_text": "review synthetic robot motion candidate",
+      "intent_type": "control_robot",
+      "typed_args": {
+        "robot_ref": "fixture-robot-unit",
+        "motion_plan_ref": "fixture-motion-plan",
+        "mode": "dry_run_required"
+      },
+      "confidence": 0.81,
+      "risk_class": "critical",
+      "ambiguity_flags": [],
+      "required_evidence": [
+        "fixture-evidence:robot-safety-zone",
+        "fixture-evidence:operator-presence"
+      ],
+      "required_approval_level": "operator_pin",
+      "proposed_tool_packs": [
+        "robo"
+      ],
+      "metadata": {
+        "fixture_only": true,
+        "source": "explicit_metadata",
+        "lineage_id": "lineage-intent-robot-001",
+        "no_auto_approval": true
+      }
+    },
+    "expected_status": "compiled",
+    "expected_reason": "Robot intent shape is safety-critical and requires later Guardian review before any physical action.",
+    "privacy_class": "safety_critical",
+    "redaction_class": "operator_only",
+    "notes": "No robot command is executed; IntentEnvelope is not authorization and Guardian remains mandatory."
+  }
+]

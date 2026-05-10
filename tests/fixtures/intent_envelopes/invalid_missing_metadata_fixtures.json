@@ -1,0 +1,68 @@
+[
+  {
+    "fixture_id": "intent-invalid-raw-text-only-001",
+    "fixture_type": "invalid_missing_metadata",
+    "human_input_ref": {
+      "input_id": "humaninput-invalid-raw-text-001",
+      "actor_id": "fixture-actor-invalid",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Schedule something important tomorrow.",
+    "explicit_metadata": {},
+    "expected_intent_envelope": null,
+    "expected_status": "unknown",
+    "expected_reason": "raw_text alone is not intent metadata and must not create an IntentEnvelope.",
+    "privacy_class": "private",
+    "redaction_class": "summary_only",
+    "notes": "No hidden parser, no model call, no heuristic interpretation, no execution, and no GuardianDecision."
+  },
+  {
+    "fixture_id": "intent-invalid-missing-intent-type-001",
+    "fixture_type": "invalid_missing_metadata",
+    "human_input_ref": {
+      "input_id": "humaninput-invalid-missing-intent-type-001",
+      "actor_id": "fixture-actor-invalid",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Prepare a fixture operation.",
+    "explicit_metadata": {
+      "action_type": "tool_call",
+      "risk_class": "medium",
+      "target_ref": "fixture-target:incomplete",
+      "typed_args": {
+        "operation_ref": "fixture-operation"
+      }
+    },
+    "expected_intent_envelope": null,
+    "expected_status": "invalid",
+    "expected_reason": "intent_type and other required explicit metadata are missing.",
+    "privacy_class": "internal",
+    "redaction_class": "reference_only",
+    "notes": "Incomplete metadata must not be completed from raw_text; no GuardianDecision is expected or created."
+  },
+  {
+    "fixture_id": "intent-invalid-missing-target-001",
+    "fixture_type": "invalid_missing_metadata",
+    "human_input_ref": {
+      "input_id": "humaninput-invalid-missing-target-001",
+      "actor_id": "fixture-actor-invalid",
+      "shell_id": "lima-test-shell"
+    },
+    "raw_text": "Send the fixture update.",
+    "explicit_metadata": {
+      "intent_type": "send_message",
+      "action_type": "send_message",
+      "risk_class": "high",
+      "typed_args": {
+        "message_ref": "fixture-message-incomplete"
+      },
+      "approval_level": "guardian_review"
+    },
+    "expected_intent_envelope": null,
+    "expected_status": "clarification_needed",
+    "expected_reason": "target_ref and full explicit routing metadata are missing.",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "A future test compiler should ask for clarification or return invalid without execution; no GuardianDecision is expected or created."
+  }
+]

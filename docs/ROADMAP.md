@@ -1069,6 +1069,19 @@ Acceptance criteria:
 - adapter remains HumanInput-only
 - tests pass
 
+### Phase 2.15: IntentEnvelope Test Fixtures
+
+Goal: Add synthetic fixtures for explicit typed intent metadata and expected IntentEnvelope shapes.
+
+Acceptance criteria:
+
+- fixtures exist
+- explicit typed metadata only
+- raw_text not parsed
+- no real IntentCompiler
+- no GuardianDecision
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
