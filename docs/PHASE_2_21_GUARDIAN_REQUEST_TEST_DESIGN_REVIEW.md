@@ -4,8 +4,10 @@
 
 Review how LIMA should safely design a test-only IntentEnvelope-to-Guardian-request path in a future phase.
 
+This review is design/review only.
 This review does not create GuardianDecision.
 This review does not enforce policy.
+This review does not add action approval.
 This review does not approve actions.
 This review does not execute tools.
 This review does not persist audit data.
