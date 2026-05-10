@@ -748,6 +748,18 @@ Acceptance criteria:
 - no Sparkbot imports
 - production adapter remains blocked
 
+### Phase 1.22: Payload Drift Check Contract
+
+Goal: Define repeatable payload drift review between LIMA-owned fixtures and Sparkbot origin/main before real adapter work.
+
+Acceptance criteria:
+
+- drift contract/doc exists
+- fixture metadata includes drift fields
+- dirty worktree rule exists
+- tests pass
+- production adapter remains blocked
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

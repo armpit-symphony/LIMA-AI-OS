@@ -1154,6 +1154,38 @@ No production adapter until:
 - identity/session/trust mapping reviewed
 - redaction/privacy reviewed
 
+## Phase 1.22: Payload Drift Check Contract
+
+Scope:
+
+- Define the repeatable payload drift review contract.
+- Add fixture drift metadata.
+- Record Sparkbot `origin/main` review requirements.
+- Keep this phase docs/contracts/tests only.
+
+Acceptance criteria:
+
+- Payload drift check contract exists.
+- Fixture drift metadata exists.
+- Dirty local Sparkbot files are not source of truth.
+- Production adapter remains blocked.
+- No Sparkbot imports, route wiring, model/tool execution, or behavior changes are added.
+- Tests continue to pass.
+
+Hard gate:
+
+No production Sparkbot adapter until payload drift check is reviewed against Sparkbot `origin/main`.
+
+NO-GO:
+
+- using dirty local Sparkbot files as source of truth
+- Sparkbot imports
+- production wiring
+- model/tool execution
+- `stream_chat_with_tools`
+- live auth/session lookup
+- trusted device enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

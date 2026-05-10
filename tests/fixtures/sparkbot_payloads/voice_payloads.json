@@ -1,41 +1,51 @@
 [
-  {
-    "fixture_id": "voice-message-upload",
-    "source_surface": "voice_message",
-    "sparkbot_reference_path": "backend/app/api/routes/chat/voice.py:voice_message",
-    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
-    "payload": {
-      "room_id": "fixture-room",
-      "actor_ref": "fixture-user",
-      "shell_id": "sparkbot",
-      "session_ref": "fixture-session",
-      "filename": "fixture-recording.webm",
-      "transcript_ref": "fixture-transcript-ref",
-      "transcribed_text_ref": "fixture-transcribed-text-ref",
-      "confidence": 0.72
+    {
+        "fixture_id":  "voice-message-upload",
+        "source_surface":  "voice_message",
+        "sparkbot_reference_path":  "backend/app/api/routes/chat/voice.py:voice_message",
+        "inspected_commit":  "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+        "payload":  {
+                        "room_id":  "fixture-room",
+                        "actor_ref":  "fixture-user",
+                        "shell_id":  "sparkbot",
+                        "session_ref":  "fixture-session",
+                        "filename":  "fixture-recording.webm",
+                        "transcript_ref":  "fixture-transcript-ref",
+                        "transcribed_text_ref":  "fixture-transcribed-text-ref",
+                        "confidence":  0.72
+                    },
+        "expected_humaninput_source":  "voice",
+        "privacy_class":  "private",
+        "redaction_class":  "reference_only",
+        "notes":  "Synthetic mirror of voice upload resulting in transcript reference; no audio bytes are stored.",
+        "shape_version":  "phase-1.21",
+        "reviewed_at":  "2026-05-09",
+        "reviewed_against":  "4da833858428e076645cac8fca942205e80bcc6e",
+        "drift_status":  "current",
+        "drift_notes":  "Initial mirror from Phase 1.21 review; Phase 1.22 checked Sparkbot origin/main and found no fixture shape update required."
     },
-    "expected_humaninput_source": "voice",
-    "privacy_class": "private",
-    "redaction_class": "reference_only",
-    "notes": "Synthetic mirror of voice upload resulting in transcript reference; no audio bytes are stored."
-  },
-  {
-    "fixture_id": "voice-transcribe-only",
-    "source_surface": "voice_transcribe_only",
-    "sparkbot_reference_path": "backend/app/api/routes/chat/voice.py:transcribe_only",
-    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
-    "payload": {
-      "room_id": "fixture-room",
-      "actor_ref": "fixture-user",
-      "shell_id": "sparkbot",
-      "session_ref": "fixture-session",
-      "filename": "fixture-quick-capture.webm",
-      "transcript_ref": "fixture-transcript-ref-quick",
-      "confidence": 0.68
-    },
-    "expected_humaninput_source": "voice",
-    "privacy_class": "private",
-    "redaction_class": "reference_only",
-    "notes": "Synthetic mirror of transcribe-only voice input; fixture stores references only."
-  }
+    {
+        "fixture_id":  "voice-transcribe-only",
+        "source_surface":  "voice_transcribe_only",
+        "sparkbot_reference_path":  "backend/app/api/routes/chat/voice.py:transcribe_only",
+        "inspected_commit":  "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+        "payload":  {
+                        "room_id":  "fixture-room",
+                        "actor_ref":  "fixture-user",
+                        "shell_id":  "sparkbot",
+                        "session_ref":  "fixture-session",
+                        "filename":  "fixture-quick-capture.webm",
+                        "transcript_ref":  "fixture-transcript-ref-quick",
+                        "confidence":  0.68
+                    },
+        "expected_humaninput_source":  "voice",
+        "privacy_class":  "private",
+        "redaction_class":  "reference_only",
+        "notes":  "Synthetic mirror of transcribe-only voice input; fixture stores references only.",
+        "shape_version":  "phase-1.21",
+        "reviewed_at":  "2026-05-09",
+        "reviewed_against":  "4da833858428e076645cac8fca942205e80bcc6e",
+        "drift_status":  "current",
+        "drift_notes":  "Initial mirror from Phase 1.21 review; Phase 1.22 checked Sparkbot origin/main and found no fixture shape update required."
+    }
 ]

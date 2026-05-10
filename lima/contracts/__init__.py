@@ -38,6 +38,13 @@ from .boundary import (
     RuntimeBoundaryRecord,
 )
 from .driver import DriverCapability, DriverCommand, DriverProtocol, DriverResult
+from .drift import (
+    DriftDecision,
+    DriftStatus,
+    PayloadDriftReview,
+    PayloadDriftReviewProtocol,
+    PayloadFixtureDriftRecord,
+)
 from .events import (
     ApprovalAuditEvent,
     ApprovalEvent,
@@ -150,6 +157,8 @@ __all__ = [
     "DriverEvent",
     "DriverProtocol",
     "DriverResult",
+    "DriftDecision",
+    "DriftStatus",
     "EvidenceRequirement",
     "ExtractionReadinessRecord",
     "ExtractionStatus",
@@ -176,6 +185,9 @@ __all__ = [
     "ModelRequest",
     "ModelResponse",
     "OwnerAutonomyContext",
+    "PayloadDriftReview",
+    "PayloadDriftReviewProtocol",
+    "PayloadFixtureDriftRecord",
     "PolicyDecision",
     "PolicyEvaluationContext",
     "PolicyExposure",
