@@ -1069,6 +1069,34 @@ NO-GO:
 - terminal/PTY
 - Robo-OS physical action
 
+## Phase 1.19: Adapter Fixture Tests with Fake AuthContext
+
+Scope:
+
+- Add test-only adapter fixture tests with fake AuthContext and trust contract references.
+- Prove the Sparkbot HumanInput adapter skeleton can carry identity/session/trust/autonomy refs passively.
+- Keep the adapter HumanInput-only.
+
+Acceptance criteria:
+
+- Adapter fixture tests with fake AuthContext are allowed.
+- Live auth/session/trust/autonomy remains blocked.
+- No enforcement or production Sparkbot adapter behavior is added.
+- Tests continue to pass.
+
+NO-GO:
+
+- live auth/session lookup
+- trusted device enforcement
+- autonomy enforcement
+- PIN verification
+- face/voice recognition
+- production adapter
+- model/tool execution
+- `stream_chat_with_tools`
+- terminal/PTY
+- Robo-OS physical action
+
 ## Phase 2: Extract Model Harness
 
 Scope:
