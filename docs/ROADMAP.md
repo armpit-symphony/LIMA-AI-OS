@@ -1007,6 +1007,25 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.12: Adapter Safety Gate Finalization
+
+Goal: Consolidate adapter safety rules into one standing safety gate doc.
+
+Deliverables:
+
+- `docs/ADAPTER_SAFETY_GATE.md`
+- `docs/PHASE_2_12_ADAPTER_SAFETY_GATE_FINALIZATION.md`
+- adapter safety gate doc tests
+
+Acceptance criteria:
+
+- consolidated gate doc exists
+- required checks listed
+- forbidden imports/behaviors listed
+- production adapter remains blocked
+- tests pass
+- no runtime behavior added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
