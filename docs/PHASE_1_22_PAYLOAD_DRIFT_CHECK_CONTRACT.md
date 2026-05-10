@@ -7,7 +7,8 @@ Define the review contract for detecting drift between LIMA-owned Sparkbot paylo
 This does not import Sparkbot.
 This does not wire routes.
 This does not execute code.
-This does not make fixtures runtime authority.
+Fixtures are mirrors, not runtime.
+Fixtures are not authority.
 
 ## Sparkbot Reference Check
 
@@ -53,7 +54,7 @@ Every fixture object must include:
 - `redaction_class`
 - `notes`
 
-Every fixture object should also include drift metadata:
+Every fixture object must also include drift metadata:
 
 - `shape_version`
 - `reviewed_at`
