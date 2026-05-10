@@ -4,6 +4,8 @@
 
 Create `docs/INTENTENVELOPE_SAFETY_GATE.md` as the standing gate for IntentEnvelope-adjacent work.
 
+No runtime behavior was added.
+
 ## What Was Consolidated
 
 - explicit metadata rules

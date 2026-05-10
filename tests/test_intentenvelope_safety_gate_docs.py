@@ -30,7 +30,10 @@ REQUIRED_FORBIDDEN_BEHAVIORS = {
     "`execute_tool`",
     "terminal/PTY",
     "Robo-OS physical action",
+    "live auth/session lookup",
+    "trusted device/autonomy enforcement",
     "audit persistence",
+    "redaction runtime",
     "real Guardian / policy / approval enforcement",
 }
 
@@ -50,7 +53,7 @@ def test_intentenvelope_safety_gate_doc_states_core_rules() -> None:
     assert "Explicit typed metadata is required" in text
     assert "IntentEnvelope is not authorization." in text
     assert "GuardianDecision remains mandatory" in text
-    assert "real IntentCompiler" in text
+    assert "no real IntentCompiler" in text or "real IntentCompiler implementation" in text
     assert "natural-language inference" in text
 
 
