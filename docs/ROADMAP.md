@@ -795,6 +795,19 @@ Acceptance criteria:
 - tests pass
 - no runtime behavior added
 
+### Phase 2.0: Non-production Adapter Fixture Harness
+
+Goal: Create a fixture-only harness proving LIMA-owned Sparkbot payload fixtures can flow through SparkbotHumanInputAdapter, HumanInputFakePipelineBridge, FakeGuardianPipeline, and fake lineage.
+
+Acceptance criteria:
+
+- fixture harness exists
+- no Sparkbot imports
+- no production wiring
+- no execution
+- critical/unknown requests do not auto-approve
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

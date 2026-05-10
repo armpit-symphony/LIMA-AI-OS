@@ -1245,6 +1245,42 @@ NO-GO:
 - audit persistence
 - real enforcement
 
+## Phase 2.0: Non-production Adapter Fixture Harness
+
+Scope:
+
+- Compose LIMA-owned Sparkbot payload fixtures with the non-production adapter and fake Guardian pipeline.
+- Run fixture dictionaries through `SparkbotHumanInputAdapter`, `HumanInputFakePipelineBridge`, `FakeGuardianPipeline`, and fake lineage records.
+- Keep the harness fixture-only, in-memory, and non-production.
+- Keep adapter output limited to `HumanInput`.
+
+Acceptance criteria:
+
+- Non-production adapter fixture harness is allowed.
+- LIMA-owned fixtures are the only inputs.
+- No Sparkbot imports, live routes, production wiring, model/tool/driver execution, persistence, or real enforcement is added.
+- Critical and unknown requests do not auto-approve.
+- Tests continue to pass.
+
+Hard gate:
+
+Phase 2.0 is fixture harness only. Production Sparkbot wiring remains blocked.
+
+Still blocked:
+
+- production Sparkbot wiring
+- live routes/WebSocket adapter
+- `stream_chat_with_tools`
+- `execute_tool`
+- model/tool execution
+- terminal/PTY
+- Robo-OS physical action
+- live auth/session lookup
+- trusted device/autonomy enforcement
+- audit persistence
+- redaction runtime
+- real IntentCompiler / Guardian / policy / approval enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
