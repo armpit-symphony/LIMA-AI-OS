@@ -124,6 +124,8 @@ Phase 1.21 adds synthetic Sparkbot payload fixture mirrors for adapter tests wit
 
 Phase 1.22 defines payload drift checks so LIMA fixtures are reviewed against Sparkbot origin/main before adapter work.
 
+Phase 1.23 hardens adapter boundaries so adapters remain isolated from Sparkbot runtime and execution paths.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -249,6 +251,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md)
 - [docs/PHASE_1_21_SPARKBOT_PAYLOAD_FIXTURE_MIRROR.md](docs/PHASE_1_21_SPARKBOT_PAYLOAD_FIXTURE_MIRROR.md)
 - [docs/PHASE_1_22_PAYLOAD_DRIFT_CHECK_CONTRACT.md](docs/PHASE_1_22_PAYLOAD_DRIFT_CHECK_CONTRACT.md)
+- [docs/PHASE_1_23_ADAPTER_BOUNDARY_HARDENING.md](docs/PHASE_1_23_ADAPTER_BOUNDARY_HARDENING.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

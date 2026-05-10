@@ -1186,6 +1186,28 @@ NO-GO:
 - live auth/session lookup
 - trusted device enforcement
 
+## Phase 1.23: Adapter Boundary Hardening
+
+Scope:
+
+- Add tests that scan local `lima/adapters` modules.
+- Block Sparkbot runtime imports, route layers, model/tool execution paths, terminal/PTY, persistence, robot paths, and external service dependencies.
+- Block behavior-bearing adapter methods.
+- Keep the current adapter HumanInput-only.
+
+Acceptance criteria:
+
+- Adapter boundary tests exist.
+- No Sparkbot imports, route wiring, model/tool execution, terminal/PTY, persistence, or production behavior is added.
+- Current adapter returns HumanInput only.
+- Tests continue to pass.
+
+Hard gate:
+
+No further adapter work until adapter boundary hardening is merged.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
