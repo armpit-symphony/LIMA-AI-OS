@@ -4,6 +4,7 @@
 
 Review whether the fixture regression report artifact is ready to serve as the human-readable review artifact for future adapter-adjacent work.
 
+This is a review-only phase.
 This review does not implement production wiring.
 This review does not authorize execution.
 This review does not create audit persistence.
@@ -71,7 +72,12 @@ Add review-gate fields to report output:
 - `reviewed_at`
 - `reviewer_notes`
 
-Still test-only. Still no file writes by default.
+Phase 2.10 must remain:
+
+- test-only/report-only
+- no file writes by default unless explicitly reviewed
+- no production runtime
+- no audit persistence
 
 ## Still Blocked
 
