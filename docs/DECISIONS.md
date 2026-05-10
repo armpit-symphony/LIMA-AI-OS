@@ -648,3 +648,20 @@ Consequences:
 - adapter methods remain non-executing
 - production wiring remains blocked
 - future adapter expansion requires explicit review
+
+## ADR-0045: Phase 2 Starts With a Non-Production Fixture Harness
+
+Status: Accepted
+
+Decision: Phase 2 will begin with a non-production adapter fixture harness, not production Sparkbot wiring.
+
+Rationale: Phase 1 proved adapter safety, fixture mirroring, drift metadata, and fake pipeline composition. It did not prove production runtime safety.
+
+Consequences:
+
+- production adapter remains blocked
+- Phase 2 starts with LIMA-owned fixtures only
+- no Sparkbot imports
+- no model/tool execution
+- no real enforcement
+- no persistence

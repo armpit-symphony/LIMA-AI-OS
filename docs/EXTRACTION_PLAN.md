@@ -1208,6 +1208,43 @@ No further adapter work until adapter boundary hardening is merged.
 
 Production adapter remains blocked.
 
+## Phase 1.24: Phase One Adapter Safety Review
+
+Scope:
+
+- Review Phase 1 adapter safety work.
+- Record Sparkbot freshness.
+- Decide whether Phase 1 can close.
+- Define the safe Phase 2.0 starting point.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Phase 1 adapter safety review exists.
+- Production adapter remains blocked.
+- Phase 2 start is defined.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No Phase 2 work until Phase 1.24 is merged.
+
+After merge:
+
+GO only for Phase 2.0 Non-production Adapter Fixture Harness.
+
+NO-GO:
+
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- model/tool execution
+- live auth/session lookup
+- trusted device enforcement
+- autonomy enforcement
+- audit persistence
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
