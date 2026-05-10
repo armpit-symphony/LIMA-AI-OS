@@ -4,7 +4,9 @@
 
 Review whether the Phase 2.15 IntentEnvelope test fixtures are ready for a future test-only IntentEnvelope fixture harness.
 
+This review is review-only.
 This review does not implement real IntentCompiler.
+This review does not implement an IntentEnvelope fixture harness.
 This review does not parse natural language.
 This review does not authorize execution.
 
