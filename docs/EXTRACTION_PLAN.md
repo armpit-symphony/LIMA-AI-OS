@@ -1690,6 +1690,25 @@ NO-GO:
 - Robo-OS physical action
 - real enforcement
 
+## Phase 2.17: IntentEnvelope Fixture Harness
+
+IntentEnvelope fixture harness is allowed for tests only.
+
+Still blocked:
+
+- real IntentCompiler
+- natural-language inference
+- model calls
+- tool execution
+- GuardianDecision creation
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- terminal/PTY
+- Robo-OS physical action
+- live auth/session lookup
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

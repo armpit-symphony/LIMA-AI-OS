@@ -1103,6 +1103,19 @@ Acceptance criteria:
 - no execution
 - tests pass
 
+### Phase 2.17: IntentEnvelope Fixture Harness
+
+Goal: Add a test-only harness validating explicit typed intent metadata and expected IntentEnvelope fixture shapes.
+
+Acceptance criteria:
+
+- test-only harness exists
+- no real IntentCompiler
+- no natural-language inference
+- raw_text not parsed
+- no GuardianDecision
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
