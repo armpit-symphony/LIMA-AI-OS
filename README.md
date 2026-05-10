@@ -120,6 +120,8 @@ Phase 1.19 adds test-only adapter fixtures with fake AuthContext/trust metadata 
 
 Phase 1.20 reviews real Sparkbot adapter readiness and keeps production wiring blocked pending payload/identity/trust stability.
 
+Phase 1.21 adds synthetic Sparkbot payload fixture mirrors for adapter tests without importing Sparkbot.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -243,6 +245,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_18_AUTHCONTEXT_TRUST_CONTRACT_EXTENSION.md](docs/PHASE_1_18_AUTHCONTEXT_TRUST_CONTRACT_EXTENSION.md)
 - [docs/PHASE_1_19_ADAPTER_FIXTURE_TESTS_WITH_FAKE_AUTHCONTEXT.md](docs/PHASE_1_19_ADAPTER_FIXTURE_TESTS_WITH_FAKE_AUTHCONTEXT.md)
 - [docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_20_REAL_ADAPTER_READINESS_REVIEW.md)
+- [docs/PHASE_1_21_SPARKBOT_PAYLOAD_FIXTURE_MIRROR.md](docs/PHASE_1_21_SPARKBOT_PAYLOAD_FIXTURE_MIRROR.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

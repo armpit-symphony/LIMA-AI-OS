@@ -1,0 +1,40 @@
+[
+  {
+    "fixture_id": "mcp-explain-plan-request",
+    "source_surface": "mcp_explain_plan",
+    "sparkbot_reference_path": "backend/app/api/routes/chat/mcp.py:McpExplainPlanRequest",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "room_id": "fixture-room",
+      "manifest_id": "fixture-mcp-manifest",
+      "tool_args": {"fixture_arg": "fixture-value"},
+      "user_request": "fixture explain this plan",
+      "command_ref": "fixture-mcp-explain-plan-ref"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of MCP explain-plan request shape; fixture does not execute or approve a run."
+  },
+  {
+    "fixture_id": "mcp-run-deny-request",
+    "source_surface": "mcp_run_approval",
+    "sparkbot_reference_path": "backend/app/api/routes/chat/mcp.py:McpDenyRunRequest",
+    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+    "payload": {
+      "actor_ref": "fixture-user",
+      "shell_id": "sparkbot",
+      "session_ref": "fixture-session",
+      "run_id": "fixture-mcp-run",
+      "reason": "fixture deny reason",
+      "command_ref": "fixture-mcp-deny-ref"
+    },
+    "expected_humaninput_source": "console",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic mirror of MCP deny request shape; fixture does not approve or execute anything."
+  }
+]

@@ -1125,6 +1125,35 @@ Proceed only with the selected Phase 1.21 safe branch.
 
 Production wiring remains blocked unless explicitly approved.
 
+## Phase 1.21: Sparkbot Payload Fixture Mirror
+
+Scope:
+
+- Create LIMA-owned synthetic fixture mirrors of Sparkbot input payload shapes.
+- Cover chat, voice/transcript, meeting, operator, MCP approval, and robot request surfaces where inspected.
+- Keep fixtures as tests/docs only.
+
+Acceptance criteria:
+
+- Payload fixture mirroring is allowed.
+- Production adapter remains blocked.
+- Fixtures use synthetic data only.
+- Sparkbot `origin/main` is rechecked and recorded.
+- No Sparkbot imports, route wiring, execution, or behavior changes are added.
+- Tests continue to pass.
+
+Hard gate:
+
+Production adapter remains blocked.
+
+No production adapter until:
+
+- fixture mirror reviewed
+- Sparkbot `origin/main` rechecked
+- payload drift reviewed
+- identity/session/trust mapping reviewed
+- redaction/privacy reviewed
+
 ## Phase 2: Extract Model Harness
 
 Scope:
