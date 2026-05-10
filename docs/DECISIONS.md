@@ -803,3 +803,18 @@ Consequences:
 - production adapter remains blocked
 - no runtime persistence is introduced
 - audit persistence remains a future reviewed phase
+
+## ADR-0055: Regression Report Must Include Gate Context Before Adapter Expansion
+
+Status: Accepted
+
+Decision: Fixture regression reports must include enough review context before they are used as a standing adapter-adjacent safety artifact.
+
+Rationale: A readable report without commit, drift, boundary, and gate verdict context can create false confidence.
+
+Consequences:
+
+- production adapter remains blocked
+- next work hardens report fields
+- report remains non-production and non-persistent
+- report is not audit evidence
