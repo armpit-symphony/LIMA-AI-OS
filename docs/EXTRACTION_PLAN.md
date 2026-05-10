@@ -1453,6 +1453,34 @@ Before future adapter-adjacent PRs:
 
 Production adapter remains blocked.
 
+## Phase 2.7: Phase Two Readiness Review
+
+Scope:
+
+- Review Phase 2 progress and choose the next safe branch.
+- Recheck Sparkbot `origin/main` read-only for fixture/harness-relevant movement.
+- Summarize proven and not-proven areas.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Phase Two Readiness Review exists.
+- Sparkbot `origin/main` is checked.
+- Next safe Phase 2.8 branch is identified.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No adapter-adjacent expansion until Phase 2.7 is merged.
+
+After merge:
+
+GO only for selected Phase 2.8 branch.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

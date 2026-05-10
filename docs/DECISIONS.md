@@ -773,3 +773,18 @@ Consequences:
 - production adapter remains blocked
 - manual review still required for drift and new fixture categories
 - regression harness remains non-production
+
+## ADR-0053: Phase 2 Continues With Reviewable Fixture Regression Artifacts
+
+Status: Accepted
+
+Decision: Phase 2 should continue by making fixture regression results easier to review before any adapter-adjacent expansion.
+
+Rationale: The regression harness is useful only if humans can easily inspect what passed, what was unsupported, and what safety statuses were produced.
+
+Consequences:
+
+- production adapter remains blocked
+- report artifacts are not audit persistence
+- fixture regression remains non-production
+- no Sparkbot imports or execution are allowed
