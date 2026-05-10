@@ -128,6 +128,8 @@ Phase 1.23 hardens adapter boundaries so adapters remain isolated from Sparkbot 
 
 Phase 1.24 reviews adapter safety and recommends Phase 2.0 as a non-production adapter fixture harness.
 
+Phase 2.0 starts with a non-production fixture harness that validates fixture -> HumanInput -> fake pipeline flow without Sparkbot imports or execution.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -255,6 +257,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_22_PAYLOAD_DRIFT_CHECK_CONTRACT.md](docs/PHASE_1_22_PAYLOAD_DRIFT_CHECK_CONTRACT.md)
 - [docs/PHASE_1_23_ADAPTER_BOUNDARY_HARDENING.md](docs/PHASE_1_23_ADAPTER_BOUNDARY_HARDENING.md)
 - [docs/PHASE_1_24_PHASE_ONE_ADAPTER_SAFETY_REVIEW.md](docs/PHASE_1_24_PHASE_ONE_ADAPTER_SAFETY_REVIEW.md)
+- [docs/PHASE_2_0_NONPRODUCTION_ADAPTER_FIXTURE_HARNESS.md](docs/PHASE_2_0_NONPRODUCTION_ADAPTER_FIXTURE_HARNESS.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

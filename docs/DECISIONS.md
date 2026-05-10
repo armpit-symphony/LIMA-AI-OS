@@ -665,3 +665,20 @@ Consequences:
 - no model/tool execution
 - no real enforcement
 - no persistence
+
+## ADR-0046: Phase 2 Starts With Non-production Fixture Harness
+
+Status: Accepted
+
+Decision: Phase 2 begins with a non-production fixture harness that runs LIMA-owned payload fixtures through the adapter and fake pipeline only.
+
+Rationale: Phase 1 proved adapter safety and fake contract composition. The next safe step is end-to-end fixture validation without Sparkbot imports, production wiring, execution, or persistence.
+
+Consequences:
+
+- production adapter remains blocked
+- fixtures remain synthetic mirrors
+- fake pipeline remains non-production
+- no model/tool execution
+- no real enforcement
+- no audit persistence
