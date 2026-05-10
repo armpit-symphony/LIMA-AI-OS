@@ -1668,6 +1668,28 @@ Still blocked:
 - live auth/session lookup
 - real enforcement
 
+## Phase 2.16: IntentEnvelope Fixture Readiness Review
+
+No IntentEnvelope fixture harness until Phase 2.16 readiness review is merged.
+
+After merge:
+
+GO only for Phase 2.17 IntentEnvelope Fixture Harness.
+
+NO-GO:
+
+- real IntentCompiler
+- natural-language inference
+- model calls
+- tool execution
+- GuardianDecision creation
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- terminal/PTY
+- Robo-OS physical action
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
