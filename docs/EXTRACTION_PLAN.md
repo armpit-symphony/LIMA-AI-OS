@@ -1548,6 +1548,32 @@ Hard gate:
 
 Report gate context must not become audit persistence, production telemetry, Guardian evidence, production authorization, or runtime state.
 
+## Phase 2.11: Regression Gate Readiness Review
+
+Scope:
+
+- Review whether fixture regression reports and gate fields are strong enough as the standing adapter-adjacent safety gate.
+- Recheck Sparkbot `origin/main` read-only for adapter/gate-relevant movement.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Regression Gate Readiness Review is merged before adapter-adjacent expansion.
+- Sparkbot `origin/main` is checked.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No adapter-adjacent expansion until Regression Gate Readiness Review is merged.
+
+After merge:
+
+GO only for selected Phase 2.12 safe branch.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

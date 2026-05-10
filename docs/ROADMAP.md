@@ -985,6 +985,28 @@ Acceptance criteria:
 - no file writes by default
 - tests pass
 
+### Phase 2.11: Regression Gate Readiness Review
+
+Goal: Review whether the fixture regression report gate is strong enough to serve as the standing adapter-adjacent safety gate.
+
+Deliverables:
+
+- `docs/PHASE_2_11_REGRESSION_GATE_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- current gate status
+- proven/not-proven list
+- Phase 2.12 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- Sparkbot origin/main checked
+- production adapter remains blocked
+- next safe branch identified
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

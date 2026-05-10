@@ -833,3 +833,19 @@ Consequences:
 - report context is review-only
 - manual review remains required
 - report artifacts are not audit persistence
+
+## ADR-0057: Regression Gate Requires Final Consolidated Adapter Safety Policy
+
+Status: Accepted
+
+Decision: Before further adapter-adjacent work, LIMA will consolidate fixture regression, adapter boundaries, drift checks, and report gate requirements into one final adapter safety gate.
+
+Rationale: The safety rules now exist across several docs and tests. A consolidated gate reduces confusion and prevents production wiring creep.
+
+Consequences:
+
+- production adapter remains blocked
+- next work finalizes adapter safety gate documentation
+- fixture regression remains non-production
+- report `gate_status` remains non-authorizing
+- manual review remains required
