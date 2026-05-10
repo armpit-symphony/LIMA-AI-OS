@@ -571,3 +571,18 @@ Consequences:
 - production adapter remains blocked
 - live auth/trust/autonomy enforcement remains deferred
 - Guardian remains mandatory
+
+## ADR-0040: Adapter AuthContext Fixtures Are Passive Test Metadata
+
+Status: Accepted
+
+Decision: LIMA may use fake AuthContext/trust fixtures in adapter tests, but these references do not confer authority, verify identity, or enforce autonomy.
+
+Rationale: Future adapters need to carry identity/session/trust references, but carrying a reference is not the same as verifying it.
+
+Consequences:
+
+- fixture tests are allowed
+- adapter remains HumanInput-only
+- live auth/trust enforcement remains blocked
+- references are not authority

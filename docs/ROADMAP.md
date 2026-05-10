@@ -703,6 +703,18 @@ Acceptance criteria:
 - references remain passive
 - tests pass
 
+### Phase 1.19: Adapter Fixture Tests with Fake AuthContext
+
+Goal: Add test-only fixtures proving HumanInput adapter metadata can carry fake AuthContext/trust references passively.
+
+Acceptance criteria:
+
+- fake AuthContext/trust fixtures only
+- references remain passive
+- adapter returns HumanInput only
+- no live auth/trust/autonomy enforcement
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
