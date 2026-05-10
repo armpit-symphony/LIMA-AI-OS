@@ -1116,6 +1116,26 @@ Acceptance criteria:
 - no GuardianDecision
 - tests pass
 
+### Phase 2.18: IntentEnvelope Harness Readiness Review
+
+Goal: Review the test-only IntentEnvelope fixture harness and decide whether it is ready to become a standing safety gate.
+
+Deliverables:
+
+- `docs/PHASE_2_18_INTENTENVELOPE_HARNESS_READINESS_REVIEW.md`
+- harness status summary
+- proven/not-proven list
+- readiness decision
+- Phase 2.19 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real IntentCompiler
+- no natural-language inference
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

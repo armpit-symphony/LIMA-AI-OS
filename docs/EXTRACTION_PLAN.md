@@ -1709,6 +1709,26 @@ Still blocked:
 - live auth/session lookup
 - real enforcement
 
+## Phase 2.18: IntentEnvelope Harness Readiness Review
+
+No IntentEnvelope-adjacent expansion until Phase 2.18 readiness review is merged.
+
+After merge:
+
+GO only for Phase 2.19 IntentEnvelope Safety Gate Docs.
+
+NO-GO:
+
+- real IntentCompiler
+- natural-language inference
+- model calls
+- tool execution
+- GuardianDecision creation
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
