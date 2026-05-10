@@ -1049,14 +1049,19 @@ Rules:
 
 ## Owner Autonomy
 
-Owner autonomy contracts may be added later to describe configured autonomy without implementing runtime behavior in this phase.
+Phase 1.18 adds `OwnerAutonomyContext` as a descriptive reference to future owner autonomy profile/capability rules. It does not implement autonomy enforcement, action approval, risk reduction, or production wiring.
+
+Related Phase 1.18 trust contracts:
+
+- `TrustedDeviceContext`: describes device/session evidence such as device reference, actor reference, session reference, trust level, confidence, verification timestamps, signals, anomaly flags, and metadata.
+- `IdentityConfidence`: describes identity evidence combining known device, login session, voice, face, PIN, hardware key, context, behavior pattern, and future biometric/BCI signals.
+- `SessionContext`: describes session state and scope without creating or verifying live sessions.
+- `OwnerAutonomyContext`: describes owner autonomy references, capability references, constraints, and metadata without granting autonomy.
 
 Future contract candidates:
 
 - `OwnerAutonomyProfile`: owner-configured autonomy level, capability defaults, trusted context requirements, approval posture, and safety constraints.
 - `CapabilityRule`: action-level policy for read, write, communication, payment, deploy, terminal, vault, robot, physical-world, and regulated actions.
-- `TrustedDeviceContext`: device/session evidence such as `device_id`, owner account, session, recent unlock/auth, expiration, location confidence, biometric confidence, and anomaly score.
-- `IdentityConfidence`: identity evidence combining known device, login session, voice, face, PIN, hardware key, context, behavior pattern, and future biometric/BCI signals.
 - `SafetyMode`: robot/physical-world posture such as observe, assist, low-risk action, household helper, worker robot, humanoid helper, and emergency stop.
 - `RobotSafetyConstraint`: concrete geofence, speed, force, tool, proximity, sensor-confidence, emergency-stop, and audit requirements.
 
