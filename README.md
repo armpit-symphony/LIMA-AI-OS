@@ -152,6 +152,8 @@ Phase 2.10 hardens fixture regression reports with review gate fields while keep
 
 Phase 2.11 reviews regression gate readiness and recommends a final consolidated adapter safety gate.
 
+Phase 2.12 finalizes `docs/ADAPTER_SAFETY_GATE.md` as the standing safety gate for adapter-adjacent work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -291,6 +293,8 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_9_REGRESSION_REPORT_READINESS_REVIEW.md](docs/PHASE_2_9_REGRESSION_REPORT_READINESS_REVIEW.md)
 - [docs/PHASE_2_10_REGRESSION_REPORT_GATE_HARDENING.md](docs/PHASE_2_10_REGRESSION_REPORT_GATE_HARDENING.md)
 - [docs/PHASE_2_11_REGRESSION_GATE_READINESS_REVIEW.md](docs/PHASE_2_11_REGRESSION_GATE_READINESS_REVIEW.md)
+- [docs/ADAPTER_SAFETY_GATE.md](docs/ADAPTER_SAFETY_GATE.md)
+- [docs/PHASE_2_12_ADAPTER_SAFETY_GATE_FINALIZATION.md](docs/PHASE_2_12_ADAPTER_SAFETY_GATE_FINALIZATION.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

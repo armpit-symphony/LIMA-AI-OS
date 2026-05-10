@@ -849,3 +849,18 @@ Consequences:
 - fixture regression remains non-production
 - report `gate_status` remains non-authorizing
 - manual review remains required
+
+## ADR-0058: Adapter Safety Gate Is the Standing Review Gate
+
+Status: Accepted
+
+Decision: LIMA will use `docs/ADAPTER_SAFETY_GATE.md` as the standing safety gate for adapter-adjacent work.
+
+Rationale: Adapter safety rules were spread across many phase docs. A consolidated gate reduces confusion and prevents production wiring creep.
+
+Consequences:
+
+- adapter-adjacent PRs must satisfy the gate
+- production adapter remains blocked
+- manual review remains required
+- future production adapter discussion requires explicit readiness review

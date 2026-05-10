@@ -1574,6 +1574,28 @@ GO only for selected Phase 2.12 safe branch.
 
 Production adapter remains blocked.
 
+## Phase 2.12: Adapter Safety Gate Finalization
+
+Scope:
+
+- Consolidate adapter-adjacent safety rules into `docs/ADAPTER_SAFETY_GATE.md`.
+- Document required tests, Sparkbot freshness, fixture drift, forbidden imports, forbidden behaviors, regression report rules, and manual review requirements.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- `docs/ADAPTER_SAFETY_GATE.md` is now the standing gate for adapter-adjacent work.
+- No adapter-adjacent PR may merge without satisfying that gate.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No adapter-adjacent PR may merge without satisfying `docs/ADAPTER_SAFETY_GATE.md`.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
