@@ -112,6 +112,8 @@ Phase 1.15 adds a test-only HumanInput-to-fake-pipeline bridge while keeping the
 
 Phase 1.16 reviews Phase 1 progress and routes next work toward identity/session/trust-context mapping before any real adapter implementation.
 
+Phase 1.17 reviews identity/session/trust context mapping before any real Sparkbot adapter implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -231,6 +233,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md](docs/PHASE_1_14_HUMANINPUT_ADAPTER_READINESS_REVIEW.md)
 - [docs/PHASE_1_15_HUMANINPUT_FAKE_PIPELINE_BRIDGE.md](docs/PHASE_1_15_HUMANINPUT_FAKE_PIPELINE_BRIDGE.md)
 - [docs/PHASE_1_16_PHASE_ONE_READINESS_REVIEW.md](docs/PHASE_1_16_PHASE_ONE_READINESS_REVIEW.md)
+- [docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md](docs/PHASE_1_17_IDENTITY_SESSION_TRUST_CONTEXT_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

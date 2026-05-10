@@ -538,3 +538,21 @@ Consequences:
 - autonomy metadata remains passive
 - actor/session metadata is not verified auth
 - fake pipeline remains test-only
+
+## ADR-0038: Actor and Trust References Are Passive Until Verified
+
+Status: Accepted
+
+Decision: `actor_ref`, `session_ref`, `trusted_context_ref`, `autonomy_notes`, and privacy metadata must remain passive metadata until mapped into explicit `AuthContext`, `TrustedDeviceContext`, `IdentityConfidence`, `OwnerAutonomyProfile`, and redaction/visibility enforcement.
+
+Rationale: Real adapter work must not confuse references with authority. A string pointing to an actor, session, trusted device, or autonomy note is not proof of identity or permission.
+
+Consequences:
+
+- production adapter remains blocked
+- next phase adds/extends contracts
+- `actor_ref` does not equal verified identity
+- `session_ref` does not equal verified session
+- `trusted_context_ref` does not equal trusted device
+- `autonomy_notes` do not enforce autonomy
+- privacy metadata does not enforce redaction
