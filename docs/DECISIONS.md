@@ -712,3 +712,18 @@ Consequences:
 - expanded fixtures are synthetic mirrors
 - unsupported categories may be explicitly non-executing
 - references and routing metadata remain passive
+
+## ADR-0049: Fixture Regression Requires Coverage Readiness Review
+
+Status: Accepted
+
+Decision: Before adding a fixture regression harness, LIMA must review fixture coverage and explicitly document unsupported or non-executing categories.
+
+Rationale: A regression harness can create false confidence if unsupported categories pass silently or if robot/MCP/model-routing fixtures are mistaken for execution readiness.
+
+Consequences:
+
+- production adapter remains blocked
+- unsupported/non-executing categories must be explicit
+- fixture regression remains non-production
+- no Sparkbot imports or execution

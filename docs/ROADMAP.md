@@ -842,6 +842,28 @@ Acceptance criteria:
 - no runtime behavior added
 - production adapter remains blocked
 
+### Phase 2.3: Harness Coverage Readiness Review
+
+Goal: Review expanded fixture/harness coverage and decide whether to build a fixture regression harness.
+
+Deliverables:
+
+- `docs/PHASE_2_3_HARNESS_COVERAGE_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- coverage readiness matrix
+- Phase 2.4 recommendation
+- still-blocked list
+- risk register
+
+Acceptance criteria:
+
+- coverage reviewed
+- Sparkbot origin/main checked
+- production adapter remains blocked
+- next safe branch identified
+- tests pass
+- no runtime behavior added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
