@@ -335,6 +335,36 @@ Rules:
 
 HumanInput adapter contracts describe how future Sparkbot input surfaces map to LIMA `HumanInput` records before any production adapter exists.
 
+## Payload Drift
+
+Payload drift contracts describe review evidence for comparing LIMA-owned Sparkbot payload fixtures against Sparkbot `origin/main` or an explicit reviewed commit.
+
+New enums:
+
+- `DriftStatus`
+- `DriftDecision`
+
+New dataclasses:
+
+- `PayloadFixtureDriftRecord`
+- `PayloadDriftReview`
+
+Describe-only protocol:
+
+- `PayloadDriftReviewProtocol`
+
+Rules:
+
+- Payload drift contracts do not import Sparkbot.
+- Payload drift contracts do not fetch reference repos.
+- Payload drift contracts do not compare live files.
+- Payload drift contracts do not mutate fixtures.
+- Payload drift contracts do not execute code, wire routes, call models, execute tools, open terminal/PTY, or trigger robotics actions.
+- Dirty local Sparkbot files are not a source of truth.
+- Reviews must use Sparkbot `origin/main`, `git show origin/main:path`, an explicit reviewed commit, or a clean temporary checkout.
+- Fixtures are mirrors, not runtime authority.
+- Production adapter work remains blocked until payload drift review passes.
+
 ### HumanInputAdapterSurface
 
 Surfaces:

@@ -618,3 +618,18 @@ Consequences:
 - no Sparkbot imports
 - payload fixtures are not production contracts
 - drift must be reviewed before real adapter work
+
+## ADR-0043: Payload Fixture Drift Must Be Reviewed Against Sparkbot Origin
+
+Status: Accepted
+
+Decision: Before real Sparkbot adapter work, LIMA payload fixtures must be reviewed against Sparkbot origin/main or an explicit reviewed commit. Dirty local Sparkbot files are not a source of truth.
+
+Rationale: Sparkbot moves quickly and local worktrees may contain uncommitted changes. LIMA needs stable fixture mirrors before adapter implementation.
+
+Consequences:
+
+- production adapter remains blocked
+- fixture drift metadata is required
+- dirty local Sparkbot state must be ignored or explicitly documented
+- no Sparkbot imports are allowed

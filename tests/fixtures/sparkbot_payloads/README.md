@@ -18,3 +18,31 @@ Fixture categories:
 If a fixture category is not confirmed in a future inspected Sparkbot commit, keep the file with an empty array and note the missing surface here before updating tests.
 
 Before real adapter work, Sparkbot `origin/main` must be rechecked, payload drift must be reviewed, and these mirrors must be updated if Sparkbot shapes changed.
+
+## Drift Check Rule
+
+Before any real Sparkbot adapter work:
+
+- fetch Sparkbot `origin/main`
+- record the exact reviewed commit
+- compare adapter-relevant Sparkbot surfaces to fixture metadata
+- update fixture mirrors if payload shape changed
+- keep production adapter work blocked until drift review passes
+
+## Dirty Worktree Rule
+
+If the local Sparkbot checkout is dirty, do not use local files as the source of truth. Use Sparkbot `origin/main`, `git show origin/main:path`, an explicit reviewed commit hash, or a clean temporary checkout.
+
+Dirty local files can be noted, but they cannot update fixtures unless deliberately reviewed and committed upstream.
+
+## Drift Metadata
+
+Each fixture object carries:
+
+- `shape_version`: fixture mirror shape version
+- `reviewed_at`: date of the LIMA drift review
+- `reviewed_against`: Sparkbot commit used for the drift review
+- `drift_status`: `current`, `needs_review`, `stale`, or `unknown`
+- `drift_notes`: short review note
+
+`current` means the fixture shape was reviewed against the recorded Sparkbot commit and no fixture shape update was required. It does not mean production adapter work is approved.

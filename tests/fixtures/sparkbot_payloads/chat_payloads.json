@@ -1,44 +1,56 @@
 [
-  {
-    "fixture_id": "chat-stream-message-basic",
-    "source_surface": "chat_message_stream",
-    "sparkbot_reference_path": "backend/app/api/routes/chat/rooms.py:StreamMessageRequest",
-    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
-    "payload": {
-      "room_id": "fixture-room",
-      "actor_ref": "fixture-user",
-      "shell_id": "sparkbot",
-      "session_ref": "fixture-session",
-      "message_id": "fixture-message",
-      "content": "fixture hello",
-      "reply_to_id": "fixture-reply",
-      "confirm_id": null,
-      "participants": ["fixture-agent"]
+    {
+        "fixture_id":  "chat-stream-message-basic",
+        "source_surface":  "chat_message_stream",
+        "sparkbot_reference_path":  "backend/app/api/routes/chat/rooms.py:StreamMessageRequest",
+        "inspected_commit":  "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+        "payload":  {
+                        "room_id":  "fixture-room",
+                        "actor_ref":  "fixture-user",
+                        "shell_id":  "sparkbot",
+                        "session_ref":  "fixture-session",
+                        "message_id":  "fixture-message",
+                        "content":  "fixture hello",
+                        "reply_to_id":  "fixture-reply",
+                        "confirm_id":  null,
+                        "participants":  [
+                                             "fixture-agent"
+                                         ]
+                    },
+        "expected_humaninput_source":  "text",
+        "privacy_class":  "private",
+        "redaction_class":  "summary_only",
+        "notes":  "Synthetic mirror of chat stream body fields: content, reply_to_id, confirm_id, and participants.",
+        "shape_version":  "phase-1.21",
+        "reviewed_at":  "2026-05-09",
+        "reviewed_against":  "4da833858428e076645cac8fca942205e80bcc6e",
+        "drift_status":  "current",
+        "drift_notes":  "Initial mirror from Phase 1.21 review; Phase 1.22 checked Sparkbot origin/main and found no fixture shape update required."
     },
-    "expected_humaninput_source": "text",
-    "privacy_class": "private",
-    "redaction_class": "summary_only",
-    "notes": "Synthetic mirror of chat stream body fields: content, reply_to_id, confirm_id, and participants."
-  },
-  {
-    "fixture_id": "chat-websocket-message-basic",
-    "source_surface": "chat_websocket_message",
-    "sparkbot_reference_path": "backend/app/api/routes/chat/websocket.py:websocket_chat",
-    "inspected_commit": "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
-    "payload": {
-      "type": "message",
-      "room_id": "fixture-room",
-      "actor_ref": "fixture-user",
-      "shell_id": "sparkbot",
-      "session_ref": "fixture-session",
-      "message_id": "fixture-ws-message",
-      "content": "fixture hello from websocket",
-      "client_msg_id": "fixture-client-message",
-      "reply_to_id": null
-    },
-    "expected_humaninput_source": "text",
-    "privacy_class": "private",
-    "redaction_class": "summary_only",
-    "notes": "Synthetic mirror of documented WebSocket client message shape."
-  }
+    {
+        "fixture_id":  "chat-websocket-message-basic",
+        "source_surface":  "chat_websocket_message",
+        "sparkbot_reference_path":  "backend/app/api/routes/chat/websocket.py:websocket_chat",
+        "inspected_commit":  "f7d5ee2054794ea7156ffb51a009c058cb7757e6",
+        "payload":  {
+                        "type":  "message",
+                        "room_id":  "fixture-room",
+                        "actor_ref":  "fixture-user",
+                        "shell_id":  "sparkbot",
+                        "session_ref":  "fixture-session",
+                        "message_id":  "fixture-ws-message",
+                        "content":  "fixture hello from websocket",
+                        "client_msg_id":  "fixture-client-message",
+                        "reply_to_id":  null
+                    },
+        "expected_humaninput_source":  "text",
+        "privacy_class":  "private",
+        "redaction_class":  "summary_only",
+        "notes":  "Synthetic mirror of documented WebSocket client message shape.",
+        "shape_version":  "phase-1.21",
+        "reviewed_at":  "2026-05-09",
+        "reviewed_against":  "4da833858428e076645cac8fca942205e80bcc6e",
+        "drift_status":  "current",
+        "drift_notes":  "Initial mirror from Phase 1.21 review; Phase 1.22 checked Sparkbot origin/main and found no fixture shape update required."
+    }
 ]

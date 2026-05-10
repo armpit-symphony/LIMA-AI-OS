@@ -37,7 +37,16 @@ REQUIRED_KEYS = {
     "redaction_class",
     "notes",
 }
+DRIFT_KEYS = {
+    "shape_version",
+    "reviewed_at",
+    "reviewed_against",
+    "drift_status",
+    "drift_notes",
+}
 INSPECTED_COMMIT = "f7d5ee2054794ea7156ffb51a009c058cb7757e6"
+REVIEWED_AGAINST = "4da833858428e076645cac8fca942205e80bcc6e"
+DRIFT_STATUSES = {"current", "needs_review", "stale", "unknown"}
 SECRET_MARKERS = (
     "api_key",
     "token",
@@ -149,7 +158,9 @@ def test_each_fixture_has_required_shape() -> None:
 
     for fixture in fixtures:
         assert REQUIRED_KEYS.issubset(fixture)
+        assert DRIFT_KEYS.issubset(fixture)
         assert fixture["inspected_commit"] == INSPECTED_COMMIT
+        assert fixture["reviewed_against"] == REVIEWED_AGAINST
         assert isinstance(fixture["payload"], dict)
         assert fixture["expected_humaninput_source"] in {
             HumanInputSource.TEXT.value,
@@ -158,6 +169,11 @@ def test_each_fixture_has_required_shape() -> None:
         }
         assert fixture["privacy_class"] in {"private", "confidential"}
         assert fixture["redaction_class"] in {"summary_only", "reference_only"}
+        assert fixture["drift_status"] in DRIFT_STATUSES
+        assert fixture["shape_version"] == "phase-1.21"
+        assert fixture["reviewed_at"] == "2026-05-09"
+        assert len(fixture["reviewed_against"]) == 40
+        assert all(char in "0123456789abcdef" for char in fixture["reviewed_against"])
 
 
 def test_fixture_readme_documents_boundary_rules() -> None:
