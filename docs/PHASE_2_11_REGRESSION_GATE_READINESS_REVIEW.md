@@ -4,6 +4,8 @@
 
 Review whether the fixture regression report gate is strong enough to remain the standing safety gate before future adapter-adjacent work.
 
+This review is docs/review only.
+This review does not implement runtime behavior.
 This review does not implement production wiring.
 This review does not authorize execution.
 This review does not create audit persistence.
@@ -12,15 +14,21 @@ This review does not create audit persistence.
 
 | Repo | Branch | Commit | Checked surfaces | Modified? | Adapter/gate-relevant changes since Phase 2.10 |
 | --- | --- | --- | --- | --- | --- |
-| `armpit-symphony/Sparkbot` | `origin/main` | `92128daef23f6ef0434972d9cb5edf83213f80da` | chat/WebSocket, `stream_chat_with_tools`, chat model routing, voice/transcript, meeting/roundtable, SparkBud, Workstation, operator/terminal input, MCP explain-plan/run approval, robotics natural-language surfaces, frontend chat input, auth/session/user context, Token Guardian reporting/config, break-glass / Guardian changes | Yes, local worktree has dirty files; `origin/main` was used as source of truth | None observed. `origin/main` remains on the previously reviewed `92128da` baseline. |
+| `armpit-symphony/Sparkbot` | `origin/main` | `27bd7dd8ce9e164c6068a13b1855ccc62c7bbe7c` | chat/WebSocket, `stream_chat_with_tools`, chat model routing, voice/transcript, meeting/roundtable, SparkBud, Workstation, operator/terminal input, MCP explain-plan/run approval, robotics natural-language surfaces, frontend chat input, auth/session/user context, Token Guardian reporting/config, break-glass / Guardian changes | Yes, local worktree has a dirty file; `origin/main` was used as source of truth | Moved from the previously reviewed `92128da` baseline to `27bd7dd` (`desktop-v1.6.74`). Changes reviewed were self-diagnostic server operation profiles, log hygiene, tests, and release metadata; no fixture regression gate contract change was observed. |
 
 Local Sparkbot dirty files observed during this review:
 
-- `backend/app/api/routes/chat/tools.py`
-- `backend/tests/api/routes/test_chat_server_ops.py`
 - `scripts/file_v1_6_72_proposals.py`
 
 These local files were not used as fixture, adapter, or gate authority and were not modified by this review.
+
+Sparkbot movement inspected during this review:
+
+- `backend/app/api/routes/chat/tools.py` added curated `host_identity` and `toolchain_versions` server diagnostic profiles and clarified enum-validation errors for self-diagnostic audits.
+- `backend/app/main.py` quieted LiteLLM logging by default to avoid prompt/tool-schema/memory excerpts in backend logs.
+- `backend/tests/api/routes/test_chat_server_ops.py` added coverage for the new diagnostic profiles and platform-specific service-log paths.
+- Release/docs/package metadata moved to `desktop-v1.6.74`.
+- No LIMA-owned fixture file, regression report field, adapter boundary rule, or production-adapter authorization change was observed from this movement.
 
 ## Current Gate Status
 
@@ -63,7 +71,7 @@ These local files were not used as fixture, adapter, or gate authority and were 
 
 ## Readiness Decision
 
-GO for Phase 2.12 Adapter-Adjacent Safety Gate Finalization.
+GO for Phase 2.12 Adapter Safety Gate Finalization.
 
 Reason:
 
