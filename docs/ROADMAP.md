@@ -1148,6 +1148,28 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.20: IntentEnvelope Safety Gate Readiness Review
+
+Goal: Review whether `docs/INTENTENVELOPE_SAFETY_GATE.md` is sufficient as the standing gate for IntentEnvelope-adjacent work.
+
+Deliverables:
+
+- `docs/PHASE_2_20_INTENTENVELOPE_SAFETY_GATE_READINESS_REVIEW.md`
+- current gate status
+- proven/not-proven list
+- readiness decision
+- Phase 2.21 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real IntentCompiler
+- no natural-language inference
+- production behavior remains blocked
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

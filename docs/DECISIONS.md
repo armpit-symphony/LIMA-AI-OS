@@ -976,3 +976,19 @@ Consequences:
 - explicit metadata required for tests
 - IntentEnvelope remains non-authorizing
 - manual review required for future compiler work
+
+## ADR-0066: IntentEnvelope Safety Gate Is Ready as Standing Gate
+
+Status: Accepted
+
+Decision: `docs/INTENTENVELOPE_SAFETY_GATE.md` is ready to serve as the standing review gate for IntentEnvelope-adjacent work.
+
+Rationale: The gate consolidates `raw_text` inertness, explicit metadata, fixture rules, forbidden behaviors, PR blockers, manual review, and real IntentCompiler exit criteria.
+
+Consequences:
+
+- IntentEnvelope safety-gate work may pause
+- real IntentCompiler remains blocked
+- natural-language inference remains blocked
+- next work may move to Guardian request test design
+- IntentEnvelope remains non-authorizing

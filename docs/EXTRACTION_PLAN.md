@@ -1737,6 +1737,24 @@ No IntentEnvelope-adjacent PR may merge without satisfying it.
 
 Real IntentCompiler remains blocked.
 
+## Phase 2.20: IntentEnvelope Safety Gate Readiness Review
+
+IntentEnvelope safety-gate work may pause after Phase 2.20 if readiness decision approves.
+
+After merge:
+
+GO only for Phase 2.21 Guardian Request Test Design Review.
+
+NO-GO:
+
+- real IntentCompiler
+- natural-language inference
+- model calls
+- tool execution
+- GuardianDecision creation
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
