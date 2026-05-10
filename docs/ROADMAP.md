@@ -646,6 +646,28 @@ Acceptance criteria:
 - fake pipeline only
 - tests pass
 
+### Phase 1.16: Phase One Readiness Review
+
+Goal: Review Phase 1 fake pipeline and adapter skeleton progress before deciding next step.
+
+Deliverables:
+
+- `docs/PHASE_1_16_PHASE_ONE_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- proven/not-proven list
+- readiness decision
+- recommended next branch
+- updated roadmap recommendation
+- risk register
+
+Acceptance criteria:
+
+- no runtime behavior added
+- Sparkbot origin/main checked
+- production adapter remains blocked unless explicitly approved
+- next step identified
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
