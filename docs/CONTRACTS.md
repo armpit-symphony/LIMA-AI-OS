@@ -173,6 +173,44 @@ Rules:
 - Auth contracts do not replace `GuardianDecision` or `ApprovalMetadata`.
 - Real providers must be explicit adapters later.
 
+### Auth / Trust Context Extension
+
+Phase 1.18 adds descriptive trust context contracts so future adapters can carry structured references without treating those references as authority.
+
+New enums:
+
+- `TrustLevel`
+- `IdentityFactor`
+- `SessionStatus`
+- `AutonomyAuthority`
+
+New dataclasses:
+
+- `TrustedDeviceContext`
+- `IdentityConfidence`
+- `SessionContext`
+- `OwnerAutonomyContext`
+
+Optional describe-only protocol:
+
+- `TrustContextProtocol`
+
+Rules:
+
+- `TrustedDeviceContext` describes trusted-context signals and confidence only.
+- `IdentityConfidence` records identity factors and confidence only.
+- `SessionContext` describes session state and scope only.
+- `OwnerAutonomyContext` references owner autonomy profile/capability rules only.
+- These contracts do not verify identity.
+- These contracts do not log users in.
+- These contracts do not verify PINs, faces, voices, biometrics, or BCI/thought-adjacent signals.
+- These contracts do not enforce trusted device policy.
+- These contracts do not enforce autonomy.
+- These contracts do not approve or authorize actions.
+- These contracts do not reduce risk by themselves.
+- These contracts do not bypass Guardian, law, human safety, policy, approval, or audit requirements.
+- `actor_ref`, `session_ref`, `trusted_context_ref`, `autonomy_notes`, and privacy metadata remain passive until future verified contracts and Guardian policy resolve them.
+
 ## Vault / Breakglass
 
 Vault contracts describe secret references, access requests, access decisions, and breakglass session references without exposing raw secret material or implementing storage.
@@ -1011,14 +1049,19 @@ Rules:
 
 ## Owner Autonomy
 
-Owner autonomy contracts may be added later to describe configured autonomy without implementing runtime behavior in this phase.
+Phase 1.18 adds `OwnerAutonomyContext` as a descriptive reference to future owner autonomy profile/capability rules. It does not implement autonomy enforcement, action approval, risk reduction, or production wiring.
+
+Related Phase 1.18 trust contracts:
+
+- `TrustedDeviceContext`: describes device/session evidence such as device reference, actor reference, session reference, trust level, confidence, verification timestamps, signals, anomaly flags, and metadata.
+- `IdentityConfidence`: describes identity evidence combining known device, login session, voice, face, PIN, hardware key, context, behavior pattern, and future biometric/BCI signals.
+- `SessionContext`: describes session state and scope without creating or verifying live sessions.
+- `OwnerAutonomyContext`: describes owner autonomy references, capability references, constraints, and metadata without granting autonomy.
 
 Future contract candidates:
 
 - `OwnerAutonomyProfile`: owner-configured autonomy level, capability defaults, trusted context requirements, approval posture, and safety constraints.
 - `CapabilityRule`: action-level policy for read, write, communication, payment, deploy, terminal, vault, robot, physical-world, and regulated actions.
-- `TrustedDeviceContext`: device/session evidence such as `device_id`, owner account, session, recent unlock/auth, expiration, location confidence, biometric confidence, and anomaly score.
-- `IdentityConfidence`: identity evidence combining known device, login session, voice, face, PIN, hardware key, context, behavior pattern, and future biometric/BCI signals.
 - `SafetyMode`: robot/physical-world posture such as observe, assist, low-risk action, household helper, worker robot, humanoid helper, and emergency stop.
 - `RobotSafetyConstraint`: concrete geofence, speed, force, tool, proximity, sensor-confidence, emergency-stop, and audit requirements.
 
