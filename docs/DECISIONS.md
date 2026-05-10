@@ -928,3 +928,19 @@ Consequences:
 - fixture harness must use explicit typed metadata only
 - IntentEnvelope remains non-authorizing
 - GuardianDecision remains mandatory later
+
+## ADR-0063: IntentEnvelope Fixture Harness Does Not Infer Intent
+
+Status: Accepted
+
+Decision: LIMA may include a test-only IntentEnvelope fixture harness, but it must validate explicit metadata only and must not parse `raw_text` or infer intent.
+
+Rationale: A fixture harness can harden the IntentEnvelope boundary without creating a hidden compiler or raw chat-to-tool shortcut.
+
+Consequences:
+
+- no real IntentCompiler
+- no natural-language inference
+- no execution
+- no GuardianDecision creation
+- IntentEnvelope remains non-authorizing

@@ -162,6 +162,8 @@ Phase 2.15 adds synthetic IntentEnvelope fixtures using explicit typed metadata 
 
 Phase 2.16 reviews IntentEnvelope fixture readiness before any test-only harness.
 
+Phase 2.17 adds a test-only IntentEnvelope fixture harness that validates explicit typed metadata without parsing raw text.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
