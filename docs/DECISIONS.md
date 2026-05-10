@@ -682,3 +682,18 @@ Consequences:
 - no model/tool execution
 - no real enforcement
 - no audit persistence
+
+## ADR-0047: Fixture Harness Expansion Requires Coverage Review
+
+Status: Accepted
+
+Decision: Before expanding the non-production adapter fixture harness, LIMA must review current fixture/harness coverage and identify gaps.
+
+Rationale: Fixture harnesses can create false confidence if important Sparkbot surfaces are missing or undercovered.
+
+Consequences:
+
+- production adapter remains blocked
+- fixture gaps must be documented
+- Phase 2.2 scope is based on coverage review
+- MCP/robot fixtures remain non-executing

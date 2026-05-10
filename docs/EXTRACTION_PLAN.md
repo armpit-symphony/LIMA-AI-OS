@@ -1281,6 +1281,33 @@ Still blocked:
 - redaction runtime
 - real IntentCompiler / Guardian / policy / approval enforcement
 
+## Phase 2.1: Fixture Harness Coverage Review
+
+Scope:
+
+- Review current LIMA-owned fixture categories and Phase 2.0 harness coverage.
+- Recheck Sparkbot `origin/main` read-only for adapter-relevant movement.
+- Identify fixture/harness coverage gaps before expanding the non-production harness.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Fixture harness coverage review exists.
+- Sparkbot `origin/main` is checked.
+- Coverage gaps and next branch are documented.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No further fixture harness expansion until coverage review is merged.
+
+After merge:
+
+Proceed only with selected Phase 2.2 safe branch.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
