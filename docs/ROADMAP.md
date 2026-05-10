@@ -691,6 +691,18 @@ Acceptance criteria:
 - actor/session/trusted context remain passive metadata
 - next contract extension identified
 
+### Phase 1.18: AuthContext / Trust Contract Extension
+
+Goal: Add contract types for trusted device context, identity confidence, session context, and owner-autonomy context.
+
+Acceptance criteria:
+
+- contracts exist
+- no live verification
+- no enforcement
+- references remain passive
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

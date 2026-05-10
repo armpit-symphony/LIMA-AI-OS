@@ -556,3 +556,18 @@ Consequences:
 - `trusted_context_ref` does not equal trusted device
 - `autonomy_notes` do not enforce autonomy
 - privacy metadata does not enforce redaction
+
+## ADR-0039: Trust Context Contracts Do Not Confer Authority
+
+Status: Accepted
+
+Decision: `TrustedDeviceContext`, `IdentityConfidence`, `SessionContext`, and `OwnerAutonomyContext` are descriptive contracts only. They do not verify identity, authorize actions, enforce autonomy, or bypass Guardian.
+
+Rationale: LIMA must distinguish references and confidence metadata from authority. Future adapters need structured fields, but execution authority still belongs to `GuardianDecision` and policy.
+
+Consequences:
+
+- references remain passive
+- production adapter remains blocked
+- live auth/trust/autonomy enforcement remains deferred
+- Guardian remains mandatory

@@ -1036,6 +1036,39 @@ NO-GO:
 - terminal/PTY
 - Robo-OS physical action
 
+## Phase 1.18: AuthContext / Trust Contract Extension
+
+Scope:
+
+- Add descriptive contract types for trusted device context, identity confidence, session context, and owner-autonomy context.
+- Keep trust and autonomy references passive.
+- Keep this phase contracts/docs/tests-only.
+
+Acceptance criteria:
+
+- AuthContext/trust contract extensions are allowed.
+- Live auth/session/trust/autonomy implementation remains blocked.
+- No enforcement or production Sparkbot adapter behavior is added.
+- Tests continue to pass.
+
+Hard gate:
+
+AuthContext/trust contract extensions are allowed.
+Live auth/session/trust/autonomy implementation remains blocked.
+
+NO-GO:
+
+- live auth/session lookup
+- trusted device enforcement
+- autonomy enforcement
+- PIN verification
+- face/voice recognition
+- production adapter
+- model/tool execution
+- `stream_chat_with_tools`
+- terminal/PTY
+- Robo-OS physical action
+
 ## Phase 2: Extract Model Harness
 
 Scope:
