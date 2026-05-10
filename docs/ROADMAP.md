@@ -1082,6 +1082,27 @@ Acceptance criteria:
 - no GuardianDecision
 - tests pass
 
+### Phase 2.16: IntentEnvelope Fixture Readiness Review
+
+Goal: Review IntentEnvelope test fixtures before creating a test-only fixture harness.
+
+Deliverables:
+
+- `docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md`
+- fixture inventory
+- coverage assessment
+- readiness decision
+- Phase 2.17 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real IntentCompiler
+- no natural-language inference
+- no execution
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

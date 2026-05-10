@@ -160,6 +160,8 @@ Phase 2.14 reviews IntentEnvelope test design and keeps natural-language inferen
 
 Phase 2.15 adds synthetic IntentEnvelope fixtures using explicit typed metadata only; raw text is not parsed.
 
+Phase 2.16 reviews IntentEnvelope fixture readiness before any test-only harness.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -304,6 +306,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_13_ADAPTER_SAFETY_GATE_READINESS_REVIEW.md](docs/PHASE_2_13_ADAPTER_SAFETY_GATE_READINESS_REVIEW.md)
 - [docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md](docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md)
 - [docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md](docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md)
+- [docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md](docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

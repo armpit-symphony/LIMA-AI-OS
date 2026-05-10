@@ -912,3 +912,19 @@ Consequences:
 - no model calls
 - no execution
 - GuardianDecision remains mandatory later
+
+## ADR-0062: IntentEnvelope Fixture Harness Requires Readiness Review
+
+Status: Accepted
+
+Decision: Before creating a test-only IntentEnvelope fixture harness, LIMA must review fixture coverage and confirm `raw_text` remains inert.
+
+Rationale: IntentEnvelope sits between HumanInput and GuardianDecision. A test harness must not become hidden intent inference.
+
+Consequences:
+
+- real IntentCompiler remains blocked
+- natural-language inference remains blocked
+- fixture harness must use explicit typed metadata only
+- IntentEnvelope remains non-authorizing
+- GuardianDecision remains mandatory later
