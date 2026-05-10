@@ -758,3 +758,18 @@ Consequences:
 - production adapter remains blocked
 - fixture regression remains non-production
 - no Sparkbot imports or execution are allowed
+
+## ADR-0052: Fixture Regression Is Required for Adapter-Adjacent Changes
+
+Status: Accepted
+
+Decision: Future adapter-adjacent changes must pass fixture regression and adapter boundary tests before merge.
+
+Rationale: Adapter work is the path toward production wiring. Fixture regression reduces drift, shortcut, and safety-regression risk.
+
+Consequences:
+
+- fixture regression becomes a standing gate
+- production adapter remains blocked
+- manual review still required for drift and new fixture categories
+- regression harness remains non-production
