@@ -878,6 +878,28 @@ Acceptance criteria:
 - no production wiring
 - tests pass
 
+### Phase 2.5: Fixture Regression Readiness Review
+
+Goal: Review whether the fixture regression harness is ready to become a standing safety gate for future adapter work.
+
+Deliverables:
+
+- `docs/PHASE_2_5_FIXTURE_REGRESSION_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- regression status summary
+- safety gate decision
+- Phase 2.6 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- regression harness reviewed
+- Sparkbot origin/main checked
+- safety gate decision documented
+- production adapter remains blocked
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

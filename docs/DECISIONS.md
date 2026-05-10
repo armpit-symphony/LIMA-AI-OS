@@ -743,3 +743,18 @@ Consequences:
 - no Sparkbot imports
 - no execution
 - production adapter remains blocked
+
+## ADR-0051: Fixture Regression Must Gate Future Adapter Expansion
+
+Status: Accepted
+
+Decision: The fixture regression harness must become a required safety gate before future adapter expansion.
+
+Rationale: Adapter work is high-risk because it is the path toward production wiring. Regression tests over LIMA-owned fixtures reduce drift and shortcut risk.
+
+Consequences:
+
+- future adapter work must pass fixture regression
+- production adapter remains blocked
+- fixture regression remains non-production
+- no Sparkbot imports or execution are allowed

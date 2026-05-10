@@ -1395,6 +1395,34 @@ No production adapter until:
 - identity/session/trust mapping remains passive
 - redaction/privacy reviewed
 
+## Phase 2.5: Fixture Regression Readiness Review
+
+Scope:
+
+- Review whether the Phase 2.4 fixture regression harness is ready to become a standing safety gate.
+- Recheck Sparkbot `origin/main` read-only for fixture-relevant movement.
+- Decide the next safe Phase 2.6 branch.
+- Keep production adapter wiring blocked.
+
+Acceptance criteria:
+
+- Fixture Regression Readiness Review is merged before future adapter expansion.
+- Sparkbot `origin/main` is checked.
+- Safety gate decision is documented.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+No future adapter expansion until Fixture Regression Readiness Review is merged.
+
+After merge:
+
+Proceed only with selected Phase 2.6 safe branch.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
