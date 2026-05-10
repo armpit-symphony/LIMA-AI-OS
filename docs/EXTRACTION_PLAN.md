@@ -1308,6 +1308,34 @@ Proceed only with selected Phase 2.2 safe branch.
 
 Production adapter remains blocked.
 
+## Phase 2.2: Fixture Coverage Expansion
+
+Scope:
+
+- Add LIMA-owned synthetic fixtures for frontend chat variants, Workstation launch context, SparkBud launch context, passive auth/session refs, and model-routing/autonomous pacing context.
+- Update fixture metadata and harness tests for safe non-executing coverage.
+- Keep all expanded fixtures synthetic mirrors only.
+
+Acceptance criteria:
+
+- Expanded fixture categories exist.
+- Drift metadata is present and current for the new fixtures.
+- Fixture tests and non-production harness tests cover the new categories.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, live auth/session lookup, trusted device/autonomy enforcement, or real enforcement is added.
+
+Hard gate:
+
+Fixture coverage expansion is allowed.
+
+Production adapter remains blocked.
+
+No production adapter until:
+
+- expanded fixtures are reviewed
+- drift metadata is current
+- unsupported/non-executing categories are documented
+- identity/session/privacy/autonomy metadata remains passive
+
 ## Phase 2: Extract Model Harness
 
 Scope:

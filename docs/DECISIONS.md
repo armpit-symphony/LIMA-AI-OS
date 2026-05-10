@@ -697,3 +697,18 @@ Consequences:
 - fixture gaps must be documented
 - Phase 2.2 scope is based on coverage review
 - MCP/robot fixtures remain non-executing
+
+## ADR-0048: Fixture Coverage Expansion Reduces False Confidence
+
+Status: Accepted
+
+Decision: LIMA will expand synthetic fixture coverage for undercovered Sparkbot surfaces before considering any production adapter work.
+
+Rationale: A fixture harness can create false confidence if frontend, Workstation, SparkBud, auth/session, or model-routing contexts are missing.
+
+Consequences:
+
+- production adapter remains blocked
+- expanded fixtures are synthetic mirrors
+- unsupported categories may be explicitly non-executing
+- references and routing metadata remain passive

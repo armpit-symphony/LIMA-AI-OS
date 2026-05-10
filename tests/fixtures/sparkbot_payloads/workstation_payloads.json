@@ -1,0 +1,28 @@
+[
+    {
+        "fixture_id": "workstation-launch-context",
+        "source_surface": "workstation_launch_context",
+        "sparkbot_reference_path": "frontend/src/lib/workstationMeeting.ts:launchMeetingRoom",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "station_id": "fixture-workstation",
+            "workspace_id": "fixture-workspace",
+            "launch_context_ref": "fixture-workstation-launch",
+            "room_id": "fixture-room",
+            "requested_action": "fixture launch workstation meeting context",
+            "command_ref": "fixture-workstation-command-ref"
+        },
+        "expected_humaninput_source": "console",
+        "privacy_class": "confidential",
+        "redaction_class": "reference_only",
+        "notes": "Synthetic Workstation launch-context mirror; station and launch refs are non-executing context only.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; Workstation context mirrors committed origin/main only."
+    }
+]

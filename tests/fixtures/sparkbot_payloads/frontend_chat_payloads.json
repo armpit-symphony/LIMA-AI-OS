@@ -1,0 +1,53 @@
+[
+    {
+        "fixture_id": "frontend-chat-body-variant",
+        "source_surface": "frontend_chat_body_variant",
+        "sparkbot_reference_path": "frontend/src/pages/SparkbotDmPage.tsx:4736",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "room_id": "fixture-room",
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-frontend-body-message",
+            "body": "fixture frontend body text",
+            "content": "fixture frontend body text",
+            "reply_to_id": "fixture-reply",
+            "client_msg_id": "fixture-client-message"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "summary_only",
+        "notes": "Synthetic frontend chat send-body mirror; body/content variants remain passive fixture data only.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; frontend body variant mirrors committed origin/main only."
+    },
+    {
+        "fixture_id": "frontend-chat-message-variant",
+        "source_surface": "frontend_chat_message_variant",
+        "sparkbot_reference_path": "frontend/src/pages/SparkbotDmPage.tsx:4876",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "room_id": "fixture-room",
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-frontend-confirm-message",
+            "message": "fixture frontend message text",
+            "content": "fixture frontend message text",
+            "confirm_id": "fixture-confirmation-ref"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "summary_only",
+        "notes": "Synthetic frontend chat confirmation/message variant; confirm_id does not approve execution.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; frontend message variant mirrors committed origin/main only."
+    }
+]

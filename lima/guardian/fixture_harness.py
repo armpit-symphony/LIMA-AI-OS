@@ -83,7 +83,7 @@ class AdapterFixtureHarness:
         source_surface: str,
         payload: Mapping[str, Any],
     ) -> HumanInput:
-        if source_surface.startswith("chat_"):
+        if self._is_text_fixture_surface(source_surface):
             return self._with_bridge_metadata(
                 self.adapter.adapt_chat_payload(
                     SparkbotChatInputPayload(
@@ -91,13 +91,26 @@ class AdapterFixtureHarness:
                         actor_ref=self._required_str(payload, "actor_ref"),
                         shell_id=self._required_str(payload, "shell_id"),
                         session_ref=self._optional_str(payload.get("session_ref")),
-                        text=self._optional_str(payload.get("content")),
-                        source_ref=self._optional_str(
-                            payload.get("room_id") or payload.get("client_msg_id"),
+                        text=self._optional_str(
+                            payload.get("content")
+                            or payload.get("message")
+                            or payload.get("body")
+                            or payload.get("draft_prompt"),
                         ),
+                        source_ref=self._optional_str(
+                            payload.get("room_id")
+                            or payload.get("client_msg_id")
+                            or payload.get("source_ref")
+                            or payload.get("launch_context_ref"),
+                        ),
+                        trusted_context_ref=self._optional_str(
+                            payload.get("trusted_context_ref"),
+                        ),
+                        autonomy_notes=self._autonomy_notes(payload),
                         metadata=self._payload_metadata(
                             fixture_id=fixture_id,
                             source_surface=source_surface,
+                            **self._passive_context_metadata(payload),
                         ),
                     )
                 )
@@ -112,10 +125,15 @@ class AdapterFixtureHarness:
                         shell_id=self._required_str(payload, "shell_id"),
                         session_ref=self._optional_str(payload.get("session_ref")),
                         confidence=self._optional_float(payload.get("confidence")),
+                        trusted_context_ref=self._optional_str(
+                            payload.get("trusted_context_ref"),
+                        ),
+                        autonomy_notes=self._autonomy_notes(payload),
                         metadata=self._payload_metadata(
                             fixture_id=fixture_id,
                             source_surface=source_surface,
                             voice_recognition_performed=False,
+                            **self._passive_context_metadata(payload),
                         ),
                     )
                 )
@@ -134,9 +152,14 @@ class AdapterFixtureHarness:
                             payload.get("prompt_ref")
                             or payload.get("content_markdown_ref"),
                         ),
+                        trusted_context_ref=self._optional_str(
+                            payload.get("trusted_context_ref"),
+                        ),
+                        autonomy_notes=self._autonomy_notes(payload),
                         metadata=self._payload_metadata(
                             fixture_id=fixture_id,
                             source_surface=source_surface,
+                            **self._passive_context_metadata(payload),
                         ),
                     )
                 )
@@ -159,8 +182,23 @@ class AdapterFixtureHarness:
                     command_ref=self._optional_str(
                         payload.get("command_ref") or payload.get("requested_action_ref"),
                     ),
+                    trusted_context_ref=self._optional_str(
+                        payload.get("trusted_context_ref"),
+                    ),
+                    autonomy_notes=self._autonomy_notes(payload),
                     metadata=metadata,
                 )
+            )
+        )
+
+    def _is_text_fixture_surface(self, source_surface: str) -> bool:
+        return source_surface.startswith(
+            (
+                "chat_",
+                "frontend_chat",
+                "sparkbud_",
+                "auth_session_",
+                "model_routing_",
             )
         )
 
@@ -208,7 +246,34 @@ class AdapterFixtureHarness:
         return self._payload_metadata(
             fixture_id=fixture_id,
             source_surface=source_surface,
+            **self._passive_context_metadata(payload),
         )
+
+    def _passive_context_metadata(self, payload: Mapping[str, Any]) -> Mapping[str, Any]:
+        passive_keys = (
+            "auth_context_ref",
+            "identity_confidence_ref",
+            "trusted_context_ref",
+            "autonomy_context_ref",
+            "routing_context_ref",
+            "model_hint",
+            "token_budget_ref",
+            "autonomous_turn_policy_ref",
+        )
+        return {
+            key: payload[key]
+            for key in passive_keys
+            if isinstance(payload.get(key), str) and payload.get(key)
+        }
+
+    def _autonomy_notes(self, payload: Mapping[str, Any]) -> Mapping[str, Any]:
+        value = payload.get("autonomy_notes")
+        notes: dict[str, Any] = dict(value) if isinstance(value, Mapping) else {}
+        autonomy_context_ref = payload.get("autonomy_context_ref")
+        if isinstance(autonomy_context_ref, str) and autonomy_context_ref:
+            notes["autonomy_context_ref"] = autonomy_context_ref
+            notes["autonomy_metadata_passive"] = True
+        return notes
 
     def _payload_metadata(
         self,

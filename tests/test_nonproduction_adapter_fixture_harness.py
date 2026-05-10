@@ -261,6 +261,89 @@ def test_robot_fixtures_are_safety_critical_and_not_auto_approved() -> None:
         _assert_fake_lineage_exists(result, spine)
 
 
+def test_frontend_chat_fixtures_run_as_text_without_execution() -> None:
+    harness, spine = _make_harness()
+    results = harness.run_fixtures(_load_fixture_file("frontend_chat_payloads.json"))
+
+    assert results
+    for result in results:
+        payload = result.human_input.metadata["payload_metadata"]
+        assert result.human_input.source is HumanInputSource.TEXT
+        assert result.expected_humaninput_source == "text"
+        assert payload["model_call_performed"] is False
+        assert payload["tool_execution_performed"] is False
+        assert result.pipeline_result.request.action_type is ConsequentialActionType.UNKNOWN
+        assert result.pipeline_result.guardian_decision.status is GuardianDecisionStatus.DENIED
+        _assert_fake_lineage_exists(result, spine)
+
+
+def test_workstation_fixture_remains_console_context_only() -> None:
+    harness, spine = _make_harness()
+    results = harness.run_fixtures(_load_fixture_file("workstation_payloads.json"))
+
+    assert results
+    for result in results:
+        payload = result.human_input.metadata["payload_metadata"]
+        assert result.human_input.source is HumanInputSource.CONSOLE
+        assert result.expected_humaninput_source == "console"
+        assert payload["non_executing"] is True
+        assert payload["persistence_performed"] is False
+        assert result.pipeline_result.request.action_type is ConsequentialActionType.UNKNOWN
+        assert result.pipeline_result.guardian_decision.status is GuardianDecisionStatus.DENIED
+        _assert_fake_lineage_exists(result, spine)
+
+
+def test_sparkbud_fixture_runs_as_text_without_launching_runtime() -> None:
+    harness, spine = _make_harness()
+    results = harness.run_fixtures(_load_fixture_file("sparkbud_payloads.json"))
+
+    assert results
+    for result in results:
+        payload = result.human_input.metadata["payload_metadata"]
+        assert result.human_input.source is HumanInputSource.TEXT
+        assert result.expected_humaninput_source == "text"
+        assert payload["non_production"] is True
+        assert payload["model_call_performed"] is False
+        assert result.pipeline_result.request.action_type is ConsequentialActionType.UNKNOWN
+        assert result.pipeline_result.guardian_decision.status is GuardianDecisionStatus.DENIED
+        _assert_fake_lineage_exists(result, spine)
+
+
+def test_auth_session_context_fixture_refs_remain_passive() -> None:
+    harness, spine = _make_harness()
+    results = harness.run_fixtures(_load_fixture_file("auth_session_context_payloads.json"))
+
+    assert results
+    for result in results:
+        metadata = result.human_input.metadata
+        payload = metadata["payload_metadata"]
+        assert result.human_input.source is HumanInputSource.TEXT
+        assert metadata["session_ref"] == "fixture-session"
+        assert metadata["trusted_context_ref"] == "fixture-trusted-context"
+        assert metadata["autonomy_notes"]["autonomy_context_ref"] == "fixture-autonomy-context"
+        assert payload["auth_context_ref"] == "fixture-auth-context"
+        assert payload["identity_confidence_ref"] == "fixture-identity-confidence"
+        assert result.pipeline_result.guardian_decision.status is GuardianDecisionStatus.DENIED
+        _assert_fake_lineage_exists(result, spine)
+
+
+def test_model_routing_context_fixtures_are_passive_and_do_not_call_models() -> None:
+    harness, spine = _make_harness()
+    results = harness.run_fixtures(_load_fixture_file("model_routing_context_payloads.json"))
+
+    assert results
+    for result in results:
+        payload = result.human_input.metadata["payload_metadata"]
+        assert result.human_input.source is HumanInputSource.TEXT
+        assert payload["model_call_performed"] is False
+        assert payload["tool_execution_performed"] is False
+        assert payload["routing_context_ref"].startswith("fixture-")
+        assert payload["autonomous_turn_policy_ref"] == "fixture-autonomous-turn-policy"
+        assert result.pipeline_result.request.action_type is ConsequentialActionType.UNKNOWN
+        assert result.pipeline_result.guardian_decision.status is GuardianDecisionStatus.DENIED
+        _assert_fake_lineage_exists(result, spine)
+
+
 def test_harness_boundary_has_no_forbidden_methods_or_imports() -> None:
     public_callables = {
         name
