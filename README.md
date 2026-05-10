@@ -156,6 +156,8 @@ Phase 2.12 finalizes `docs/ADAPTER_SAFETY_GATE.md` as the standing safety gate f
 
 Phase 2.13 reviews the finalized adapter safety gate and recommends the next non-production kernel boundary.
 
+Phase 2.14 reviews IntentEnvelope test design and keeps natural-language inference blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
@@ -298,6 +300,7 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/ADAPTER_SAFETY_GATE.md](docs/ADAPTER_SAFETY_GATE.md)
 - [docs/PHASE_2_12_ADAPTER_SAFETY_GATE_FINALIZATION.md](docs/PHASE_2_12_ADAPTER_SAFETY_GATE_FINALIZATION.md)
 - [docs/PHASE_2_13_ADAPTER_SAFETY_GATE_READINESS_REVIEW.md](docs/PHASE_2_13_ADAPTER_SAFETY_GATE_READINESS_REVIEW.md)
+- [docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md](docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)
 - [docs/REFERENCE_REPOS.md](docs/REFERENCE_REPOS.md)

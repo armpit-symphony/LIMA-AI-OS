@@ -1048,6 +1048,27 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.14: IntentEnvelope Test Design Review
+
+Goal: Design the next safe kernel boundary for HumanInput-to-IntentEnvelope testing without real IntentCompiler or natural-language inference.
+
+Deliverables:
+
+- `docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md`
+- IntentEnvelope boundary decision
+- explicit typed intent metadata design
+- raw_text inference block
+- Phase 2.15 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no natural-language inference
+- no model/tool execution
+- adapter remains HumanInput-only
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

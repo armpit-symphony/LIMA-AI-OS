@@ -879,3 +879,19 @@ Consequences:
 - production adapter remains blocked
 - future adapter-adjacent PRs must satisfy the gate
 - next work may move to the next non-production kernel boundary
+
+## ADR-0060: IntentEnvelope Test Design Requires Explicit Typed Metadata
+
+Status: Accepted
+
+Decision: LIMA may design test-only IntentEnvelope fixtures using explicit typed metadata, but must not infer intent from raw natural language.
+
+Rationale: The IntentEnvelope boundary is safety-critical. Hidden inference would recreate raw chat-to-tool shortcuts.
+
+Consequences:
+
+- adapter remains HumanInput-only
+- future IntentEnvelope test fixtures must use explicit metadata
+- no real IntentCompiler yet
+- no natural-language inference
+- no execution or GuardianDecision creation
