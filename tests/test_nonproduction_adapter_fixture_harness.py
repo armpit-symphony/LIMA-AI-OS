@@ -38,7 +38,7 @@ FORBIDDEN_HARNESS_METHODS = {
     "import_sparkbot",
     "stream_chat_with_tools",
     "execute_tool",
-    "persist(",
+    "persist",
     "save_to_db",
     "deploy",
     "trigger_robot",
@@ -47,8 +47,13 @@ FORBIDDEN_HARNESS_METHODS = {
 FORBIDDEN_IMPORT_MODULES = {
     "aiohttp",
     "anthropic",
+    "app.api.routes",
+    "app.crud",
+    "app.models",
+    "app.services",
     "app",
     "backend",
+    "backend.app",
     "boto3",
     "fastapi",
     "google.generativeai",
@@ -62,25 +67,55 @@ FORBIDDEN_IMPORT_MODULES = {
     "sqlalchemy",
     "sqlite",
     "sqlite3",
+    "stripe",
     "subprocess",
+    "terminal",
+    "robo",
+}
+
+FORBIDDEN_IMPORTED_SYMBOLS = {
+    "APIRouter",
+    "ChatUser",
+    "FastAPI",
+    "WebSocket",
+    "execute_tool",
+    "stream_chat_with_tools",
 }
 
 FORBIDDEN_SOURCE_STRINGS = {
+    "APIRouter",
+    "ChatUser",
     "FastAPI",
+    "Robo",
     "WebSocket",
+    "aiohttp",
+    "anthropic",
+    "app.api.routes",
+    "app.crud",
+    "app.models",
+    "app.services",
+    "backend.app",
+    "boto3",
     "call_driver",
     "call_model",
     "call_tool",
     "execute_tool",
+    "google.generativeai",
     "getenv",
+    "httpx",
     "import_sparkbot",
+    "openai",
     "open(",
     "os.environ",
     "persist(",
+    "redis",
     "requests",
     "run_live",
     "save_to_db",
     "socket",
+    "sqlalchemy",
+    "sqlite",
+    "stripe",
     "stream_chat_with_tools",
     "subprocess",
     "wire_route",
@@ -232,17 +267,25 @@ def test_harness_boundary_has_no_forbidden_methods_or_imports() -> None:
         for name, value in AdapterFixtureHarness.__dict__.items()
         if not name.startswith("_") and callable(value)
     }
+    class_methods = {
+        name
+        for name, value in AdapterFixtureHarness.__dict__.items()
+        if callable(value)
+    }
     assert public_callables == {"run_fixture", "run_fixtures"}
     assert public_callables.isdisjoint(FORBIDDEN_HARNESS_METHODS)
+    assert class_methods.isdisjoint(FORBIDDEN_HARNESS_METHODS)
 
     source = HARNESS_PATH.read_text(encoding="utf-8")
     tree = ast.parse(source)
     imported_modules: list[str] = []
+    imported_symbols: list[str] = []
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):
             imported_modules.extend(alias.name for alias in node.names)
         elif isinstance(node, ast.ImportFrom) and node.module:
             imported_modules.append(node.module)
+            imported_symbols.extend(alias.name for alias in node.names)
 
     imported_text = "\n".join(imported_modules).lower()
     violations = [
@@ -251,6 +294,12 @@ def test_harness_boundary_has_no_forbidden_methods_or_imports() -> None:
         if forbidden in imported_text
     ]
     assert violations == []
+    symbol_violations = [
+        imported
+        for imported in imported_symbols
+        if imported in FORBIDDEN_IMPORTED_SYMBOLS
+    ]
+    assert symbol_violations == []
 
     source_violations = [
         forbidden for forbidden in FORBIDDEN_SOURCE_STRINGS if forbidden in source
