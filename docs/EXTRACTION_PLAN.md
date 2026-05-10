@@ -1596,6 +1596,28 @@ No adapter-adjacent PR may merge without satisfying `docs/ADAPTER_SAFETY_GATE.md
 
 Production adapter remains blocked.
 
+## Phase 2.13: Adapter Safety Gate Readiness Review
+
+Scope:
+
+- Review whether `docs/ADAPTER_SAFETY_GATE.md` is complete enough as the standing adapter-adjacent safety gate.
+- Decide whether adapter-safety gate work may pause.
+- Identify the next non-production kernel boundary.
+
+Acceptance criteria:
+
+- Adapter safety gate work may pause after Phase 2.13 if the readiness decision approves.
+- Sparkbot `origin/main` is checked.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, audit persistence, or real enforcement is added.
+- Tests continue to pass.
+
+After merge:
+
+GO only for selected Phase 2.14 safe branch.
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

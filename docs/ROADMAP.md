@@ -1026,6 +1026,28 @@ Acceptance criteria:
 - tests pass
 - no runtime behavior added
 
+### Phase 2.13: Adapter Safety Gate Readiness Review
+
+Goal: Review whether `docs/ADAPTER_SAFETY_GATE.md` is sufficient as the standing adapter-adjacent safety gate.
+
+Deliverables:
+
+- `docs/PHASE_2_13_ADAPTER_SAFETY_GATE_READINESS_REVIEW.md`
+- Sparkbot freshness check
+- gate status summary
+- readiness decision
+- recommended next area
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- Sparkbot origin/main checked
+- production adapter remains blocked
+- next safe branch identified
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
