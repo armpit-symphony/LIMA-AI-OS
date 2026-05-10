@@ -864,6 +864,20 @@ Acceptance criteria:
 - tests pass
 - no runtime behavior added
 
+### Phase 2.4: Fixture Regression Harness
+
+Goal: Add non-production regression harness over all LIMA-owned Sparkbot payload fixtures.
+
+Acceptance criteria:
+
+- all fixtures loaded
+- compatible fixtures run through harness
+- unsupported categories explicit
+- critical/unknown no auto-approval
+- no Sparkbot imports
+- no production wiring
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

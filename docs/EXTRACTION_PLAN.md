@@ -1364,6 +1364,37 @@ GO only for selected Phase 2.4 safe branch: `phase-2-4-fixture-regression-harnes
 
 Production adapter remains blocked.
 
+## Phase 2.4: Fixture Regression Harness
+
+Scope:
+
+- Add a test-only fixture regression harness for LIMA-owned synthetic Sparkbot payload fixtures.
+- Load every fixture file under `tests/fixtures/sparkbot_payloads`.
+- Run compatible fixtures through `AdapterFixtureHarness`.
+- Report unsupported/non-executing categories explicitly.
+- Verify critical and unknown paths do not auto-approve.
+
+Acceptance criteria:
+
+- Fixture regression harness is allowed for tests only.
+- Production adapter remains blocked.
+- Regression harness is reviewed before any production adapter work.
+- Fixture drift is reviewed before real adapter work.
+- Unsupported categories are documented and cannot pass silently.
+- Identity/session/trust mapping remains passive.
+- Redaction/privacy remains reviewed before persistence.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+
+Hard gate:
+
+No production adapter until:
+
+- regression harness reviewed
+- fixture drift reviewed
+- unsupported categories documented
+- identity/session/trust mapping remains passive
+- redaction/privacy reviewed
+
 ## Phase 2: Extract Model Harness
 
 Scope:

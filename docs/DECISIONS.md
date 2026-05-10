@@ -727,3 +727,19 @@ Consequences:
 - unsupported/non-executing categories must be explicit
 - fixture regression remains non-production
 - no Sparkbot imports or execution
+
+## ADR-0050: Fixture Regression Harness Is Non-production
+
+Status: Accepted
+
+Decision: LIMA may include a fixture regression harness for synthetic Sparkbot payload fixtures, but it must not become production runtime.
+
+Rationale: Regression testing reduces drift risk, but production adapter safety is still unproven.
+
+Consequences:
+
+- fixture harness remains under tests/helpers or clearly non-production namespace
+- unsupported categories must be explicit
+- no Sparkbot imports
+- no execution
+- production adapter remains blocked
