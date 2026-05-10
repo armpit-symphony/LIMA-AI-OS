@@ -1797,6 +1797,29 @@ Still blocked:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.23: Guardian Request Fixture Readiness Review
+
+No Guardian request fixture harness until Phase 2.23 readiness review is merged.
+
+After merge:
+
+GO only for Phase 2.24 Guardian Request Fixture Harness.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

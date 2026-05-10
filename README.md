@@ -174,6 +174,8 @@ Phase 2.21 reviews test-only Guardian request design and keeps GuardianDecision/
 
 Phase 2.22 adds synthetic Guardian request fixtures and keeps GuardianDecision/enforcement blocked.
 
+Phase 2.23 reviews Guardian request fixture readiness before any test-only harness.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

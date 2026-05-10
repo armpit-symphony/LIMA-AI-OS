@@ -1204,6 +1204,28 @@ Acceptance criteria:
 - no approval/enforcement/execution
 - tests pass
 
+### Phase 2.23: Guardian Request Fixture Readiness Review
+
+Goal: Review Guardian request fixtures before creating a test-only Guardian request fixture harness.
+
+Deliverables:
+
+- docs/PHASE_2_23_GUARDIAN_REQUEST_FIXTURE_READINESS_REVIEW.md
+- fixture inventory
+- coverage assessment
+- readiness decision
+- Phase 2.24 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
