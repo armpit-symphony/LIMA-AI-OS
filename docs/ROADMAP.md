@@ -1191,6 +1191,19 @@ Acceptance criteria:
 - no execution
 - tests pass
 
+### Phase 2.22: Guardian Request Test Fixtures
+
+Goal: Add synthetic fixtures for expected Guardian request shapes after IntentEnvelope.
+
+Acceptance criteria:
+
+- fixtures exist
+- request shape fields present
+- Guardian request remains non-authorizing
+- no GuardianDecision
+- no approval/enforcement/execution
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
