@@ -774,6 +774,27 @@ Acceptance criteria:
 - no persistence
 - tests pass
 
+### Phase 1.24: Phase One Adapter Safety Review
+
+Goal: Review adapter safety work and decide whether Phase 1 can close.
+
+Deliverables:
+
+- docs/PHASE_1_24_PHASE_ONE_ADAPTER_SAFETY_REVIEW.md
+- Sparkbot freshness check
+- adapter safety summary
+- fixture/drift status
+- identity/trust status
+- Phase 2 recommendation
+- no-go list
+
+Acceptance criteria:
+
+- production adapter remains blocked
+- Phase 2 start defined
+- tests pass
+- no runtime behavior added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
