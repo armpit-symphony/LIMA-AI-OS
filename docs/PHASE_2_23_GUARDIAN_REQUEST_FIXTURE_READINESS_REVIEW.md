@@ -4,6 +4,8 @@
 
 Review whether the Phase 2.22 Guardian request fixtures are ready for a future test-only Guardian request fixture harness.
 
+This review is review-only.
+This review does not implement a Guardian request fixture harness.
 This review does not create GuardianDecision.
 This review does not enforce policy.
 This review does not approve actions.
