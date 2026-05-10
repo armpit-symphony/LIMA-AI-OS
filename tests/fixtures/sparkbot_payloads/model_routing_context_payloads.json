@@ -1,0 +1,54 @@
+[
+    {
+        "fixture_id": "model-routing-context-passive",
+        "source_surface": "model_routing_context_passive",
+        "sparkbot_reference_path": "backend/app/api/routes/chat/llm.py:Token Guardian routing context",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-model-routing-message",
+            "content": "fixture model routing context",
+            "model_hint": "fixture-model",
+            "routing_context_ref": "fixture-routing-context",
+            "token_budget_ref": "fixture-budget-ref",
+            "autonomous_turn_policy_ref": "fixture-autonomous-turn-policy"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "reference_only",
+        "notes": "Token Guardian and model-routing metadata is passive fixture context only; it does not call models or route requests.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; model-routing context mirrors committed origin/main only."
+    },
+    {
+        "fixture_id": "autonomous-turn-pacing-context-passive",
+        "source_surface": "model_routing_autonomous_pacing_context",
+        "sparkbot_reference_path": "backend/app/services/guardian/autonomous_turn_pacing.py",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-autonomous-pacing-message",
+            "content": "fixture autonomous turn pacing context",
+            "room_id": "fixture-room",
+            "routing_context_ref": "fixture-pacing-context",
+            "autonomous_turn_policy_ref": "fixture-autonomous-turn-policy",
+            "pacing_status": "fixture-paused"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "reference_only",
+        "notes": "Autonomous-turn pacing metadata is passive fixture context only; it does not start autonomous execution.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; autonomous pacing context mirrors committed origin/main only."
+    }
+]

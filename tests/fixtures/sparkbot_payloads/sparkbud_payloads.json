@@ -1,0 +1,27 @@
+[
+    {
+        "fixture_id": "sparkbud-prompt-launch-context",
+        "source_surface": "sparkbud_prompt_launch",
+        "sparkbot_reference_path": "frontend/src/lib/sparkbudLaunch.ts:SparkBudLaunchDraft",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-sparkbud-message",
+            "sparkbud_role": "fixture-sparkbud-role",
+            "draft_prompt": "fixture sparkbud draft prompt",
+            "content": "fixture sparkbud draft prompt",
+            "source_ref": "fixture-sparkbud-source"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "summary_only",
+        "notes": "Synthetic SparkBud launch draft mirror; prompt context does not launch a production specialist.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; SparkBud launch context mirrors committed origin/main only."
+    }
+]

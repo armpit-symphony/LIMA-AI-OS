@@ -830,6 +830,18 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.2: Fixture Coverage Expansion
+
+Goal: Add synthetic fixtures for frontend chat, Workstation, SparkBud, auth/session context, and model-routing/autonomous pacing context.
+
+Acceptance criteria:
+
+- new fixture categories exist
+- tests cover fixture metadata
+- safe harness handling exists
+- no runtime behavior added
+- production adapter remains blocked
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

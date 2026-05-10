@@ -14,6 +14,11 @@ Fixture categories:
 - `operator_payloads.json`: terminal/operator request and WebSocket input shapes.
 - `mcp_approval_payloads.json`: MCP explain-plan and approval input shapes.
 - `robot_request_payloads.json`: robotics natural-language command request shapes.
+- `frontend_chat_payloads.json`: frontend chat body/message variants from the Chat UI.
+- `workstation_payloads.json`: Workstation station and launch-context shapes.
+- `sparkbud_payloads.json`: SparkBud prompt and launch-draft context shapes.
+- `auth_session_context_payloads.json`: passive auth/session/trust/autonomy reference context.
+- `model_routing_context_payloads.json`: model-routing, Token Guardian, and autonomous-turn pacing context.
 
 If a fixture category is not confirmed in a future inspected Sparkbot commit, keep the file with an empty array and note the missing surface here before updating tests.
 
@@ -46,3 +51,13 @@ Each fixture object carries:
 - `drift_notes`: short review note
 
 `current` means the fixture shape was reviewed against the recorded Sparkbot commit and no fixture shape update was required. It does not mean production adapter work is approved.
+
+## Phase 2.2 Coverage Categories
+
+Phase 2.2 adds synthetic coverage for frontend chat variants, Workstation launch context, SparkBud launch prompts, passive auth/session context, and model-routing / Token Guardian / autonomous pacing context.
+
+These fixtures are mirrors, not runtime. References are not authority. `actor_ref`, `session_ref`, `trusted_context_ref`, `identity_confidence_ref`, and `autonomy_context_ref` do not verify identity, validate a session, prove trusted-device state, or enforce autonomy.
+
+Model-routing and Token Guardian metadata does not call models, route requests, change budgets, or start autonomous execution. Autonomous-turn pacing metadata is passive fixture context only.
+
+Production adapter work remains blocked until expanded fixtures, drift metadata, identity/session/privacy/autonomy handling, and non-executing categories are reviewed.

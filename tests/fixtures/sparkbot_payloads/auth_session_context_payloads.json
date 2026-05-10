@@ -1,0 +1,28 @@
+[
+    {
+        "fixture_id": "auth-session-context-passive",
+        "source_surface": "auth_session_context_passive",
+        "sparkbot_reference_path": "backend/app/api/routes/chat/users.py:current_user_context",
+        "inspected_commit": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "payload": {
+            "actor_ref": "fixture-user",
+            "shell_id": "sparkbot",
+            "session_ref": "fixture-session",
+            "message_id": "fixture-auth-session-message",
+            "content": "fixture auth session context",
+            "auth_context_ref": "fixture-auth-context",
+            "trusted_context_ref": "fixture-trusted-context",
+            "identity_confidence_ref": "fixture-identity-confidence",
+            "autonomy_context_ref": "fixture-autonomy-context"
+        },
+        "expected_humaninput_source": "text",
+        "privacy_class": "private",
+        "redaction_class": "reference_only",
+        "notes": "References are not authority: actor/session/trust/autonomy refs are passive metadata and do not verify identity or session.",
+        "shape_version": "phase-2.2",
+        "reviewed_at": "2026-05-10",
+        "reviewed_against": "4a08838ba500fec4ef85c163b3249a2db80da9d6",
+        "drift_status": "current",
+        "drift_notes": "Added during Phase 2.2 after Sparkbot origin/main recheck; auth/session context remains passive."
+    }
+]
