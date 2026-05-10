@@ -1423,6 +1423,36 @@ Proceed only with selected Phase 2.6 safe branch.
 
 Production adapter remains blocked.
 
+## Phase 2.6: Fixture Regression CI Gate Docs
+
+Scope:
+
+- Document fixture regression as a required safety gate before adapter-adjacent changes.
+- List required validation commands and test files.
+- List PR blocking conditions and manual review requirements.
+- Keep this phase docs/tests only.
+
+Acceptance criteria:
+
+- Fixture regression CI gate documentation exists.
+- Required tests and commands are documented.
+- PR blocking conditions are documented.
+- Manual review requirements are documented.
+- Production adapter remains blocked.
+- No runtime behavior, Sparkbot imports, production wiring, model/tool execution, persistence, or real enforcement is added.
+- Tests continue to pass.
+
+Hard gate:
+
+Before future adapter-adjacent PRs:
+
+- fixture regression tests must pass
+- adapter boundary tests must pass
+- payload drift metadata must be current
+- Sparkbot origin/main must be reviewed if relevant
+
+Production adapter remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:

@@ -900,6 +900,25 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.6: Fixture Regression CI Gate Docs
+
+Goal: Document fixture regression as required safety gate before adapter-adjacent changes.
+
+Deliverables:
+
+- `docs/PHASE_2_6_FIXTURE_REGRESSION_CI_GATE_DOCS.md`
+- required test list
+- PR blocking conditions
+- manual review requirements
+- non-production reminder
+
+Acceptance criteria:
+
+- docs exist
+- production adapter remains blocked
+- tests pass
+- no runtime behavior added
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
