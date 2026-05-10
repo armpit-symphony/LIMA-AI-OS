@@ -1170,6 +1170,27 @@ Acceptance criteria:
 - production behavior remains blocked
 - tests pass
 
+### Phase 2.21: Guardian Request Test Design Review
+
+Goal: Design test-only Guardian request shape after IntentEnvelope, without real GuardianDecision or enforcement.
+
+Deliverables:
+
+- `docs/PHASE_2_21_GUARDIAN_REQUEST_TEST_DESIGN_REVIEW.md`
+- Guardian request boundary rule
+- proposed test shape
+- risk/safety rules
+- Phase 2.22 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no GuardianDecision creation
+- no enforcement
+- no execution
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

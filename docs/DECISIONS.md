@@ -992,3 +992,20 @@ Consequences:
 - natural-language inference remains blocked
 - next work may move to Guardian request test design
 - IntentEnvelope remains non-authorizing
+
+## ADR-0067: Guardian Request Is Not GuardianDecision
+
+Status: Accepted
+
+Decision: LIMA may design test-only Guardian request shapes, but a Guardian request must not be treated as GuardianDecision or authorization.
+
+Rationale: The Guardian boundary is safety-critical. A request for decision is not a decision, approval, enforcement, or execution.
+
+Consequences:
+
+- no GuardianDecision creation yet
+- no enforcement
+- no approval
+- no execution
+- requested tool packs are requests only
+- autonomy and approval refs remain passive/descriptive

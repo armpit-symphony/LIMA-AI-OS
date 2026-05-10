@@ -1755,6 +1755,29 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.21: Guardian Request Test Design Review
+
+No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
+
+After merge:
+
+GO only for Phase 2.22 Guardian Request Test Fixtures.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
