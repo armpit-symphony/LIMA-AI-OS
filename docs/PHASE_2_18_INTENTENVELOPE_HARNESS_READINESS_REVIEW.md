@@ -4,6 +4,7 @@
 
 Review whether the test-only IntentEnvelope fixture harness is ready to become the standing safety gate for future IntentEnvelope-adjacent work.
 
+This review is review-only.
 This review does not implement real IntentCompiler.
 This review does not parse natural language.
 This review does not authorize execution.
