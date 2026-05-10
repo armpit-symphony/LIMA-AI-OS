@@ -1042,3 +1042,19 @@ Consequences:
 - approval remains blocked
 - execution remains blocked
 - fixture harness must validate request shape only
+
+## ADR-0070: Guardian Request Fixture Harness Does Not Decide
+
+Status: Accepted
+
+Decision: LIMA may include a test-only Guardian request fixture harness, but it must not create GuardianDecision, enforce policy, approve actions, execute tools, or persist audit records.
+
+Rationale: A fixture harness can harden the Guardian request boundary without turning requests into decisions.
+
+Consequences:
+
+- Guardian request remains non-authorizing
+- requested tool packs remain requests only
+- approval refs remain descriptive
+- no real Guardian enforcement
+- no execution

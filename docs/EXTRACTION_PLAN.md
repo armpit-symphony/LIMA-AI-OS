@@ -1820,6 +1820,29 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.24: Guardian Request Fixture Harness
+
+Guardian request fixture harness is allowed for tests only.
+
+Still blocked:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- terminal/PTY
+- Robo-OS physical action
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
