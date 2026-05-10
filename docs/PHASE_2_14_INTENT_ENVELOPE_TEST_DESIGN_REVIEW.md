@@ -4,8 +4,11 @@
 
 Review how LIMA should safely design a test-only HumanInput-to-IntentEnvelope path in a future phase.
 
+This review is review/design only.
+This review does not implement runtime behavior.
 This review does not implement real IntentCompiler.
 This review does not infer intent from natural language.
+This review does not authorize production wiring.
 This review does not authorize execution.
 
 ## Current Boundary State
