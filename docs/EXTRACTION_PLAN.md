@@ -1823,6 +1823,30 @@ Still blocked:
 - Robo-OS physical action
 - real enforcement
 
+## Phase 2.32 Gate: Fake GuardianDecision Harness Readiness Review
+
+No fake GuardianDecision-adjacent expansion until Phase 2.32 readiness review is merged.
+
+After merge:
+
+GO only for Phase 2.33 Fake GuardianDecision Safety Gate Docs.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

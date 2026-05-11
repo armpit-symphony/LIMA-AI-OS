@@ -1114,6 +1114,25 @@ Consequences:
 - execution remains blocked
 - audit persistence remains blocked
 
+## ADR-0078: Fake GuardianDecision Harness Requires Standing Safety Gate
+
+Decision:
+
+Before further fake GuardianDecision-adjacent work, LIMA will define a standing safety gate for fake GuardianDecision fixtures and harnesses.
+
+Rationale:
+
+Fake GuardianDecision is the closest test artifact to production authorization. A harness helps validate fixture shape, but future work needs a consolidated gate to prevent fake decisions from becoming hidden authorization.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+- fake GuardianDecision fixture harness remains test-only
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

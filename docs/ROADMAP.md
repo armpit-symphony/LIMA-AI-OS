@@ -1446,3 +1446,28 @@ Acceptance criteria:
 - no execution
 - no audit persistence
 - tests pass
+
+## Phase 2.32 — Fake GuardianDecision Harness Readiness Review
+
+Goal:
+
+Review the test-only fake GuardianDecision fixture harness and decide whether it is ready to become a standing safety gate.
+
+Deliverables:
+
+- `docs/PHASE_2_32_FAKE_GUARDIANDECISION_HARNESS_READINESS_REVIEW.md`
+- harness status summary
+- proven/not-proven list
+- readiness decision
+- Phase 2.33 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
