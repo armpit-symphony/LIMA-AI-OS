@@ -1843,6 +1843,30 @@ Still blocked:
 - Robo-OS physical action
 - real enforcement
 
+## Phase 2.25: Guardian Request Harness Readiness Review
+
+No Guardian-request-adjacent expansion until Phase 2.25 readiness review is merged.
+
+After merge:
+
+GO only for Phase 2.26 Guardian Request Safety Gate Docs.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:

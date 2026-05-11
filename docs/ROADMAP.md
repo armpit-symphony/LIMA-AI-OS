@@ -1240,6 +1240,29 @@ Acceptance criteria:
 - no audit persistence
 - tests pass
 
+### Phase 2.25: Guardian Request Harness Readiness Review
+
+Goal: Review the test-only Guardian request fixture harness and decide whether it is ready to become a standing safety gate.
+
+Deliverables:
+
+- docs/PHASE_2_25_GUARDIAN_REQUEST_HARNESS_READINESS_REVIEW.md
+- harness status summary
+- proven/not-proven list
+- readiness decision
+- Phase 2.26 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
