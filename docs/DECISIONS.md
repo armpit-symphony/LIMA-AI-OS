@@ -1133,6 +1133,25 @@ Consequences:
 - audit persistence remains blocked
 - fake GuardianDecision fixture harness remains test-only
 
+## ADR-0079: Fake GuardianDecision Safety Gate Is the Standing Review Gate
+
+Decision:
+
+LIMA will use `docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` as the standing safety gate for fake GuardianDecision-adjacent work.
+
+Rationale:
+
+Fake GuardianDecision is the closest current test artifact to production authorization. A consolidated gate prevents fake decisions from becoming hidden real decisions, approvals, enforcement, execution, or audit persistence.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+- manual review is required for future real GuardianDecision work
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

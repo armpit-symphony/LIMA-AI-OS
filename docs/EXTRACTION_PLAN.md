@@ -1847,6 +1847,14 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.33 Gate: Fake GuardianDecision Safety Gate Docs
+
+`docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` is now the standing gate for fake GuardianDecision-adjacent work.
+
+No fake GuardianDecision-adjacent PR may merge without satisfying it.
+
+Real GuardianDecision remains blocked.
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

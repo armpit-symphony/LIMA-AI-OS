@@ -194,6 +194,8 @@ Phase 2.31 adds a test-only fake GuardianDecision fixture harness and keeps real
 
 Phase 2.32 reviews the fake GuardianDecision fixture harness and recommends a standing safety gate for future fake GuardianDecision work.
 
+Phase 2.33 finalizes `docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` as the standing safety gate for fake GuardianDecision-adjacent work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
