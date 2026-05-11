@@ -1191,6 +1191,25 @@ Consequences:
 - execution and audit persistence remain blocked
 - safety gates remain required
 
+## ADR-0082: Phase 3 Begins With Non-production Kernel Pipeline Design
+
+Decision:
+
+Phase 3 begins with design-only non-production kernel pipeline work, not production integration.
+
+Rationale:
+
+Phase 2 established fixtures, harnesses, reports, and safety gates for each boundary. The next safe step is designing how those boundaries compose without creating runtime behavior.
+
+Consequences:
+
+- Phase 3.0 is design/review only
+- production integration remains blocked
+- real IntentCompiler remains blocked
+- real GuardianDecision remains blocked
+- enforcement/approval/execution/audit persistence remain blocked
+- standing gates remain mandatory
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
