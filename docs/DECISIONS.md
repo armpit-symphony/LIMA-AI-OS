@@ -1287,6 +1287,29 @@ Consequences:
 - the next likely phase is Phase 3.5, LIMA Product Family and Adaptive Trust Doctrine
 - product-family and adaptive-trust doctrine is deferred and not implemented in Phase 3.4
 
+## ADR-0087: Product Family And Adaptive Trust Doctrine Is Non-runtime
+
+Decision:
+
+LIMA may document product-family, adaptive trust, breakglass evolution, and human-safety doctrine as non-runtime reference material before returning to pipeline report/map artifact work.
+
+Rationale:
+
+Phase 3.4 identified product-family and adaptive-trust doctrine as deferred strategic context. Capturing that context helps keep LIMA AI OS positioned as the trust-governed runtime underneath shells while preventing product doctrine from becoming hidden implementation.
+
+Consequences:
+
+- Phase 3.5 is docs/tests/fixtures only
+- LIMA AI OS is documented as the governed runtime/kernel
+- Sparkbot remains reference-only and is not imported or wired
+- ARC Bot remains future commercial shell doctrine only
+- custom business/private-sector bots remain future shell doctrine only
+- Robo/automation consumers remain future driver-plane doctrine only
+- adaptive trust gates remain doctrine only
+- breakglass behavior is unchanged
+- human-safety doctrine is non-runtime and non-executable
+- runtime trust gate engine, approvals, enforcement, execution, audit persistence, robot control, and production wiring remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

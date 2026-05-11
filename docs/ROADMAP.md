@@ -1638,7 +1638,47 @@ Acceptance criteria:
 - safety gates referenced
 - tests pass
 
+Status:
+
+- complete
+- tagged as `phase-3.4-nonproduction-kernel-pipeline-relationship-metadata-readiness-review`
+
+## Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
+
+Goal:
+
+Document the non-runtime product-family, adaptive trust, breakglass evolution, and human-safety doctrine for LIMA AI OS.
+
+Deliverables:
+
+- `docs/LIMA_PRODUCT_FAMILY.md`
+- `docs/HUMAN_SAFETY_DOCTRINE.md`
+- `docs/ADAPTIVE_TRUST_GATES.md`
+- `docs/BREAKGLASS_EVOLUTION.md`
+- `docs/PHASE_3_5_LIMA_PRODUCT_FAMILY_ADAPTIVE_TRUST_DOCTRINE.md`
+- product-family fixture
+- adaptive trust gate fixture
+- human-safety doctrine fixture
+- doctrine metadata tests
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no Sparkbot import or wiring
+- ARC Bot remains future shell doctrine only
+- custom business/private-sector bots remain future shell doctrine only
+- Robo/automation consumers remain future driver-plane doctrine only
+- adaptive trust gates remain doctrine only
+- breakglass behavior remains unchanged
+- human-safety doctrine remains non-runtime and non-executable
+- tests pass
+
 Next likely phase:
+
+- return to non-production pipeline report/map artifact work unless a readiness review says otherwise
+
+Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
 - product-family and adaptive-trust doctrine is deferred and not implemented in Phase 3.4

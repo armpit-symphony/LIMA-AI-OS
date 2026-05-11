@@ -1,0 +1,32 @@
+{
+  "phase": "3.5",
+  "status": "non_runtime_human_safety_doctrine",
+  "non_runtime": true,
+  "inspiration": [
+    "three_laws_reference"
+  ],
+  "lima_doctrine": [
+    "human_safety_first",
+    "authorized_human_intent_second",
+    "runtime_preservation_third",
+    "accountability_always",
+    "least_dangerous_adequate_path"
+  ],
+  "limitations": [
+    "not_executable_policy",
+    "not_guardian_enforcement",
+    "not_robot_safety_certification",
+    "not_physical_world_authorization",
+    "not_deterministic_driver_safety",
+    "not_emergency_stop_system",
+    "not_formal_safety_standard"
+  ],
+  "physical_world_status": "blocked_until_later_explicit_phases",
+  "assertions": [
+    "Human safety is the highest doctrine priority.",
+    "Authorized human intent is honored only when understood, scoped, allowed, and safe.",
+    "Runtime preservation is subordinate to human safety and authorized human intent.",
+    "Accountability is always required but does not authorize action.",
+    "The least dangerous adequate path is preferred when multiple actions could satisfy a request."
+  ]
+}

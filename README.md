@@ -208,7 +208,9 @@ Phase 3.2 reviews the non-production kernel pipeline fixture map before adding r
 
 Phase 3.3 added non-runtime relationship metadata across kernel fixture families and is tagged as `phase-3.3-nonproduction-kernel-pipeline-relationship-metadata`.
 
-Phase 3.4 reviews the Phase 3.3 relationship metadata for readiness before future non-production report/map artifact work. It is docs/tests/fixtures only and does not permit runtime behavior, executable pipeline work, production integration, enforcement, approval, execution, audit persistence, or Sparkbot wiring. The next likely phase after Phase 3.4 is Phase 3.5, LIMA Product Family and Adaptive Trust Doctrine; that doctrine work is deferred and not implemented in Phase 3.4.
+Phase 3.4 reviewed the Phase 3.3 relationship metadata for readiness before future non-production report/map artifact work and is tagged as `phase-3.4-nonproduction-kernel-pipeline-relationship-metadata-readiness-review`.
+
+Phase 3.5 adds non-runtime LIMA Product Family and Adaptive Trust Doctrine docs, tests, and fixtures. It does not implement Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior.
 
 ## Runtime Shape
 
