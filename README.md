@@ -178,6 +178,8 @@ Phase 2.23 reviews Guardian request fixture readiness before any test-only harne
 
 Phase 2.24 adds a test-only Guardian request fixture harness and keeps GuardianDecision/enforcement blocked.
 
+Phase 2.25 reviews the Guardian request fixture harness and recommends a standing safety gate for future Guardian request work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

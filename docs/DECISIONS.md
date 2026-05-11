@@ -1058,3 +1058,20 @@ Consequences:
 - approval refs remain descriptive
 - no real Guardian enforcement
 - no execution
+
+## ADR-0071: Guardian Request Harness Requires Standing Safety Gate
+
+Status: Accepted
+
+Decision: Before further Guardian-request-adjacent work, LIMA will define a standing safety gate for Guardian request fixtures and harnesses.
+
+Rationale: Guardian request sits directly before GuardianDecision. A harness helps validate fixture shape, but future work needs a consolidated gate to prevent requests from becoming hidden decisions or approvals.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+- Guardian request fixture harness remains test-only
