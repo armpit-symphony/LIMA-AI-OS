@@ -1095,6 +1095,25 @@ Consequences:
 - audit persistence remains blocked
 - fixture harness must validate fake decision shape only
 
+## ADR-0077: Fake GuardianDecision Fixture Harness Does Not Authorize
+
+Decision:
+
+LIMA may include a test-only fake GuardianDecision fixture harness, but it must not create real GuardianDecision, enforce policy, approve actions, execute tools, or persist audit records.
+
+Rationale:
+
+A fixture harness can harden fake decision shape validation without turning fake decisions into production authorization.
+
+Consequences:
+
+- fake GuardianDecision remains test-only
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

@@ -1430,3 +1430,19 @@ Acceptance criteria:
 - no execution
 - no audit persistence
 - tests pass
+
+## Phase 2.31 — Fake GuardianDecision Fixture Harness
+
+Goal:
+
+Add a test-only harness validating fake GuardianDecision fixture shapes and test-only statuses.
+
+Acceptance criteria:
+
+- test-only harness exists
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
