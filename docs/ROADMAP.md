@@ -1560,3 +1560,17 @@ Acceptance criteria:
 - no enforcement
 - no execution
 - tests pass
+
+## Phase 3.1 — Non-production Kernel Pipeline Fixture Map
+
+Goal:
+
+Map fixture families across the proposed non-production kernel pipeline without implementing runtime behavior.
+
+Acceptance criteria:
+
+- fixture map doc exists
+- compatibility matrix exists
+- safety gates listed
+- no runtime behavior added
+- tests pass

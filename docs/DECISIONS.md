@@ -1210,6 +1210,24 @@ Consequences:
 - enforcement/approval/execution/audit persistence remain blocked
 - standing gates remain mandatory
 
+## ADR-0083: Kernel Pipeline Fixture Map Is Not Runtime
+
+Decision:
+
+LIMA may map fixture families across kernel pipeline stages, but the map is not an executable pipeline or runtime behavior.
+
+Rationale:
+
+Mapping fixture families helps prepare safe non-production composition without creating hidden runtime behavior.
+
+Consequences:
+
+- no data transformation yet
+- no execution
+- no audit persistence
+- no production integration
+- safety gates remain mandatory
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

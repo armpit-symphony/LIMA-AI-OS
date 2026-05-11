@@ -1922,6 +1922,36 @@ NO-GO:
 - audit persistence
 - real runtime behavior
 
+## Phase 3.1 Gate: Non-production Kernel Pipeline Fixture Map
+
+Kernel pipeline fixture mapping is allowed as docs/tests only.
+
+No runtime pipeline may be implemented.
+
+After merge:
+
+GO only for Phase 3.2 Non-production Kernel Pipeline Map Readiness Review.
+
+NO-GO:
+
+- runtime pipeline
+- production Sparkbot integration
+- real IntentCompiler
+- natural-language inference
+- real GuardianDecision
+- Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- redaction runtime
+- terminal/PTY
+- Robo-OS physical action
+- live auth/session/trust/autonomy enforcement
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
