@@ -184,6 +184,8 @@ Phase 2.26 finalizes `docs/GUARDIAN_REQUEST_SAFETY_GATE.md` as the standing safe
 
 Phase 2.27 reviews the Guardian request safety gate and recommends fake GuardianDecision test design as the next non-production kernel boundary.
 
+Phase 2.28 designs fake GuardianDecision test shapes while keeping real GuardianDecision and enforcement blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

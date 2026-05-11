@@ -1108,3 +1108,21 @@ Consequences:
 - approval remains blocked
 - execution remains blocked
 - next work may move to fake GuardianDecision test design
+## ADR-0074: Fake GuardianDecision Is Not Production Authorization
+
+Decision:
+
+LIMA may design fake GuardianDecision test shapes, but fake GuardianDecision must not be treated as real GuardianDecision, approval, enforcement, or production authorization.
+
+Rationale:
+
+GuardianDecision is the safety-critical authorization boundary. Fake decisions are useful for tests, but must not create production authority.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- fake decision statuses must be clearly test-only
+- approval refs remain references only
+- no enforcement
+- no execution
+- no audit persistence
