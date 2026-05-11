@@ -204,6 +204,8 @@ Phase 3.0 begins non-production kernel pipeline design while keeping production 
 
 Phase 3.1 maps fixture families across the non-production kernel pipeline while keeping runtime behavior blocked.
 
+Phase 3.2 reviews the non-production kernel pipeline fixture map before adding relationship metadata.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
