@@ -61,6 +61,11 @@ Deferred:
 
 - LIMA Product Family and Adaptive Trust Doctrine
 - ARC Bot, custom business bot, and shell-family doctrine
+- LIMA AI OS as the trust-governed runtime underneath shells
+- Sparkbot as the open-source hobby/R&D shell and reference source
+- ARC Bot as a future commercial office-worker shell
+- custom business and private-sector bots as future client-specific shells
+- Robo/automation systems as future driver-plane consumers
 - adaptive trust gates as default UX
 - breakglass as rare emergency or privileged override
 - practical human-safety doctrine for the LIMA Runtime

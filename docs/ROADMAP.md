@@ -1642,3 +1642,9 @@ Next likely phase:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
 - product-family and adaptive-trust doctrine is deferred and not implemented in Phase 3.4
+- reserve LIMA AI OS as the trust-governed runtime underneath shells
+- reserve Sparkbot as the open-source hobby/R&D shell and reference source
+- reserve ARC Bot as a future commercial office-worker shell
+- reserve custom business and private-sector bots as future client-specific shells
+- reserve Robo/automation systems as future driver-plane consumers
+- reserve adaptive trust gates as the default future UX, with breakglass as rare emergency or privileged override

@@ -27,7 +27,12 @@
   ],
   "deferred_to_future_phase": [
     "lima_product_family_and_adaptive_trust_doctrine",
+    "lima_ai_os_trust_governed_runtime_under_shells",
+    "sparkbot_open_source_reference_shell",
     "arc_bot_and_custom_business_bot_shell_doctrine",
+    "arc_bot_future_commercial_office_worker_shell",
+    "custom_business_private_sector_client_shells",
+    "robo_automation_future_driver_plane_consumers",
     "adaptive_trust_gates_as_default_ux",
     "breakglass_as_rare_emergency_or_privileged_override",
     "practical_human_safety_doctrine"
@@ -52,6 +57,7 @@
     "Relationship metadata is not ready for real IntentCompiler or real GuardianDecision behavior.",
     "Relationship metadata is not authorization, approval, enforcement, execution, or audit persistence.",
     "Relationship metadata remains protected by existing safety gates.",
-    "Product-family and adaptive-trust doctrine is deferred to a future phase and is not implemented here."
+    "Product-family and adaptive-trust doctrine is deferred to a future phase and is not implemented here.",
+    "Sparkbot, ARC Bot, custom business shells, and Robo/automation consumers remain future product-family context only."
   ]
 }

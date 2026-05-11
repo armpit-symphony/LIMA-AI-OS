@@ -54,8 +54,14 @@ REQUIRED_NOT_READY_FOR = {
 
 REQUIRED_DEFERRED = {
     "lima_product_family_and_adaptive_trust_doctrine",
+    "lima_ai_os_trust_governed_runtime_under_shells",
+    "sparkbot_open_source_reference_shell",
     "arc_bot_and_custom_business_bot_shell_doctrine",
+    "arc_bot_future_commercial_office_worker_shell",
+    "custom_business_private_sector_client_shells",
+    "robo_automation_future_driver_plane_consumers",
     "adaptive_trust_gates_as_default_ux",
+    "breakglass_as_rare_emergency_or_privileged_override",
     "practical_human_safety_doctrine",
 }
 
@@ -134,6 +140,8 @@ def test_future_product_family_and_adaptive_trust_doctrine_is_deferred() -> None
     deferred = set(review["deferred_to_future_phase"])
     assert REQUIRED_DEFERRED <= deferred
     assert "lima_product_family_and_adaptive_trust_doctrine" in deferred
+    assert "adaptive_trust_gates_as_default_ux" in deferred
+    assert "breakglass_as_rare_emergency_or_privileged_override" in deferred
 
 
 def test_safety_gates_are_referenced() -> None:
