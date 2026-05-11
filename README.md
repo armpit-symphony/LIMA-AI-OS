@@ -192,6 +192,8 @@ Phase 2.30 reviews fake GuardianDecision fixture readiness before any test-only 
 
 Phase 2.31 adds a test-only fake GuardianDecision fixture harness and keeps real GuardianDecision/enforcement blocked.
 
+Phase 2.32 reviews the fake GuardianDecision fixture harness and recommends a standing safety gate for future fake GuardianDecision work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
