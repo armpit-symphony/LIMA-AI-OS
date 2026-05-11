@@ -1978,6 +1978,7 @@ Acceptance criteria:
 - Existing Guardian Suite code shows useful module boundaries but still has Sparkbot app coupling.
 - Robo-OS has real physical-world execution surfaces; integration must default to dry-run, simulation, and explicit Guardian approval.
 - Tool catalogues can grow beyond safe model context; tool-pack scoping is required.
+
 ## Phase 2.28 Gate: Fake GuardianDecision Test Design Review
 
 No fake GuardianDecision fixtures until Phase 2.28 design review is merged.

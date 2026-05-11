@@ -1360,6 +1360,7 @@ The runtime is credible only if the trust boundary is real:
 ## Current Status
 
 Phase 0 only. No runtime implementation yet.
+
 ## Phase 2.28 — Fake GuardianDecision Test Design Review
 
 Goal:

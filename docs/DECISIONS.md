@@ -1108,6 +1108,7 @@ Consequences:
 - approval remains blocked
 - execution remains blocked
 - next work may move to fake GuardianDecision test design
+
 ## ADR-0074: Fake GuardianDecision Is Not Production Authorization
 
 Decision:
