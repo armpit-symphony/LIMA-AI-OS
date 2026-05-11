@@ -198,6 +198,8 @@ Phase 2.33 finalizes `docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` as the standing
 
 Phase 2.34 reviews the fake GuardianDecision safety gate and recommends Phase 2 final readiness review.
 
+Phase 2.35 performs the final Phase 2 readiness review and recommends Phase 3.0 as non-production kernel pipeline design.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

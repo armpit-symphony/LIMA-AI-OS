@@ -1511,3 +1511,26 @@ Acceptance criteria:
 - no execution
 - no audit persistence
 - tests pass
+
+## Phase 2.35 — Phase Two Final Readiness Review
+
+Goal:
+
+Review all Phase 2 non-production kernel boundary work and decide whether Phase 3 can begin.
+
+Deliverables:
+
+- `docs/PHASE_2_35_PHASE_TWO_FINAL_READINESS_REVIEW.md`
+- standing gate summary
+- proven/not-proven list
+- validation baseline
+- Phase 3 readiness decision
+- Phase 3.0 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- Phase 3.0 scope defined
+- production integration remains blocked
+- tests pass

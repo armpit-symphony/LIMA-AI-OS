@@ -1879,6 +1879,26 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.35 Gate: Phase Two Final Readiness Review
+
+No Phase 3 work until Phase 2.35 final readiness review is merged.
+
+After merge:
+
+GO only for Phase 3.0 Non-production Kernel Pipeline Design Review.
+
+NO-GO:
+
+- production Sparkbot integration
+- real IntentCompiler
+- real GuardianDecision
+- Guardian enforcement
+- policy enforcement
+- approval enforcement
+- execution
+- audit persistence
+- real runtime behavior
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
