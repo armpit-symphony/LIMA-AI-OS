@@ -75,6 +75,12 @@ def test_fake_guardiandecision_safety_gate_doc_lists_forbidden_behaviors() -> No
     assert "## Forbidden Behaviors" in text
     for forbidden_behavior in REQUIRED_FORBIDDEN_BEHAVIORS:
         assert forbidden_behavior in text
+    assert "real GuardianDecision creation" in text
+    assert "Guardian enforcement" in text
+    assert "approval enforcement" in text
+    assert "action approval" in text
+    assert "tool execution" in text
+    assert "audit persistence" in text
 
 
 def test_fake_guardiandecision_safety_gate_doc_lists_review_and_blocking_rules() -> None:
