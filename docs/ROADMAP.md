@@ -1485,3 +1485,29 @@ Acceptance criteria:
 - real GuardianDecision remains blocked
 - no runtime behavior added
 - tests pass
+
+## Phase 2.34 — Fake GuardianDecision Safety Gate Readiness Review
+
+Goal:
+
+Review whether `docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` is sufficient as the standing gate for fake GuardianDecision-adjacent work.
+
+Deliverables:
+
+- `docs/PHASE_2_34_FAKE_GUARDIANDECISION_SAFETY_GATE_READINESS_REVIEW.md`
+- current gate status
+- proven/not-proven list
+- readiness decision
+- Phase 2.35 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass

@@ -1152,6 +1152,26 @@ Consequences:
 - audit persistence remains blocked
 - manual review is required for future real GuardianDecision work
 
+## ADR-0080: Fake GuardianDecision Safety Gate Is Ready as Standing Gate
+
+Decision:
+
+`docs/FAKE_GUARDIANDECISION_SAFETY_GATE.md` is ready to serve as the standing review gate for fake GuardianDecision-adjacent work.
+
+Rationale:
+
+The gate consolidates fake-vs-real decision rules, non-authorization rules, test-only status rules, fixture/harness rules, forbidden behaviors, PR blockers, manual review, and real GuardianDecision exit criteria.
+
+Consequences:
+
+- fake GuardianDecision safety-gate work may pause
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+- next work may move to Phase 2 final readiness review
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

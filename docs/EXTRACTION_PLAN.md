@@ -1855,6 +1855,30 @@ No fake GuardianDecision-adjacent PR may merge without satisfying it.
 
 Real GuardianDecision remains blocked.
 
+## Phase 2.34 Gate: Fake GuardianDecision Safety Gate Readiness Review
+
+Fake GuardianDecision safety-gate work may pause after Phase 2.34 if readiness decision approves.
+
+After merge:
+
+GO only for Phase 2.35 Phase Two Final Readiness Review.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
