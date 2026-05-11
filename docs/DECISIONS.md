@@ -1172,6 +1172,25 @@ Consequences:
 - audit persistence remains blocked
 - next work may move to Phase 2 final readiness review
 
+## ADR-0081: Phase 3 Starts With Non-production Kernel Pipeline Design
+
+Decision:
+
+Phase 3 may begin only as non-production kernel pipeline design, not production integration.
+
+Rationale:
+
+Phase 2 established fixtures, harnesses, reports, and safety gates for the major kernel boundaries. The next safe step is designing an end-to-end non-production fixture pipeline while keeping real runtime behavior blocked.
+
+Consequences:
+
+- Phase 3.0 is design/review only
+- production Sparkbot integration remains blocked
+- real IntentCompiler remains blocked
+- real GuardianDecision/enforcement remains blocked
+- execution and audit persistence remain blocked
+- safety gates remain required
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
