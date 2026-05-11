@@ -1091,3 +1091,20 @@ Consequences:
 - approval remains blocked
 - execution remains blocked
 - manual review is required for future GuardianDecision work
+
+## ADR-0073: Guardian Request Safety Gate Is Ready as Standing Gate
+
+Status: Accepted
+
+Decision: `docs/GUARDIAN_REQUEST_SAFETY_GATE.md` is ready to serve as the standing review gate for Guardian-request-adjacent work.
+
+Rationale: The gate consolidates request-vs-decision, request-vs-approval, tool-pack request semantics, approval/autonomy reference rules, fixture rules, forbidden behaviors, PR blockers, manual review, and real GuardianDecision exit criteria.
+
+Consequences:
+
+- Guardian-request safety-gate work may pause
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- next work may move to fake GuardianDecision test design
