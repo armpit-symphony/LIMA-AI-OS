@@ -1275,6 +1275,30 @@ Acceptance criteria:
 - no runtime behavior added
 - tests pass
 
+### Phase 2.27: Guardian Request Safety Gate Readiness Review
+
+Goal: Review whether `docs/GUARDIAN_REQUEST_SAFETY_GATE.md` is sufficient as the standing safety gate for Guardian-request-adjacent work.
+
+Deliverables:
+
+- docs/PHASE_2_27_GUARDIAN_REQUEST_SAFETY_GATE_READINESS_REVIEW.md
+- current gate status
+- proven/not-proven list
+- readiness decision
+- Phase 2.28 recommendation
+- still-blocked list
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.

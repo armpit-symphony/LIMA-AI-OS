@@ -1875,6 +1875,30 @@ No Guardian-request-adjacent PR may merge without satisfying it.
 
 Real GuardianDecision remains blocked.
 
+## Phase 2.27: Guardian Request Safety Gate Readiness Review
+
+Guardian-request safety-gate work may pause after Phase 2.27 if readiness decision approves.
+
+After merge:
+
+GO only for Phase 2.28 Fake GuardianDecision Test Design Review.
+
+NO-GO:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2: Extract Model Harness
 
 Scope:
