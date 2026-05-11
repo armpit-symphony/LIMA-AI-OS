@@ -1263,6 +1263,18 @@ Acceptance criteria:
 - no audit persistence
 - tests pass
 
+### Phase 2.26: Guardian Request Safety Gate Docs
+
+Goal: Create a standing safety gate for Guardian-request-adjacent work.
+
+Acceptance criteria:
+
+- gate doc exists
+- tests validate gate doc
+- real GuardianDecision remains blocked
+- no runtime behavior added
+- tests pass
+
 ### M1: Guardian Extraction Readiness
 
 - Map recent Sparkbot Guardian behavior.
