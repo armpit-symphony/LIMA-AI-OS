@@ -2030,6 +2030,51 @@ Deferred:
 - breakglass UX doctrine
 - practical human-safety doctrine
 
+Status:
+
+- complete
+- tagged as `phase-3.4-nonproduction-kernel-pipeline-relationship-metadata-readiness-review`
+
+After merge:
+
+GO only for Phase 3.5 LIMA Product Family and Adaptive Trust Doctrine.
+
+## Phase 3.5 Gate: LIMA Product Family and Adaptive Trust Doctrine
+
+Phase 3.5 may add non-runtime product-family, adaptive trust, breakglass evolution, and human-safety doctrine docs/tests/fixtures only.
+
+GO only for:
+
+- non-runtime product-family reference docs
+- non-runtime adaptive trust doctrine reference
+- non-runtime breakglass evolution doctrine
+- non-runtime human-safety doctrine reference
+- doctrine fixtures
+- doctrine metadata tests
+
+Still blocked:
+
+- runtime behavior
+- runtime trust gate engine
+- adaptive trust enforcement
+- production approvals
+- real GuardianDecision
+- real IntentCompiler
+- Sparkbot import or wiring
+- ARC Bot implementation
+- custom business bot implementation
+- bot generator
+- robot control
+- Robo-OS driver behavior
+- physical-world action
+- enforcement
+- execution
+- audit persistence
+
+After merge:
+
+- likely return to non-production pipeline report/map artifact work unless a readiness review says otherwise
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

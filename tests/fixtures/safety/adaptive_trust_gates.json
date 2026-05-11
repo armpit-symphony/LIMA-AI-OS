@@ -1,0 +1,63 @@
+{
+  "phase": "3.5",
+  "status": "non_runtime_adaptive_trust_doctrine",
+  "non_runtime": true,
+  "gate_categories": [
+    "silent_or_logged",
+    "normal_confirmation",
+    "screen_confirmation",
+    "step_up_auth",
+    "companion_device_confirmation",
+    "voice_challenge_confirmation",
+    "dual_control",
+    "dry_run_required",
+    "physical_safety_interlock_required",
+    "breakglass_required"
+  ],
+  "risk_dimensions": [
+    "reversibility",
+    "data_sensitivity",
+    "financial_impact",
+    "security_impact",
+    "operational_impact",
+    "physical_world_consequence",
+    "actor_trust",
+    "environment_trust",
+    "shell_type",
+    "tool_or_driver_capability"
+  ],
+  "channel_examples": {
+    "screen_based": [
+      "normal_confirmation",
+      "screen_confirmation",
+      "step_up_auth",
+      "companion_device_confirmation",
+      "dual_control"
+    ],
+    "voice_based": [
+      "voice_challenge_confirmation",
+      "known_speaker_confidence",
+      "repeated_intent",
+      "companion_device_confirmation"
+    ],
+    "physical_world": [
+      "dry_run_required",
+      "environmental_check",
+      "physical_safety_interlock_required",
+      "emergency_stop_support",
+      "operator_confirmation"
+    ]
+  },
+  "breakglass_posture": {
+    "emergency_or_privileged_override": true,
+    "not_default_ux": true
+  },
+  "not_implemented": [
+    "trust_gate_engine",
+    "approval_engine",
+    "runtime_enforcement",
+    "GuardianDecision behavior",
+    "execution behavior",
+    "breakglass behavior change"
+  ]
+}

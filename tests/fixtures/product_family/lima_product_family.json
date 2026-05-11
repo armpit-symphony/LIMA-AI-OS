@@ -1,0 +1,90 @@
+{
+  "phase": "3.5",
+  "status": "non_runtime_product_family_doctrine",
+  "non_runtime": true,
+  "products": {
+    "lima_ai_os": {
+      "role": "trust-governed operating runtime and kernel underneath shells",
+      "current_status": "doctrine reference only",
+      "future_status": "governed runtime for approved shells and future driver-plane consumers",
+      "implementation_status": "not implemented in this phase",
+      "non_runtime": true,
+      "not_implemented_in_phase": true,
+      "blocked_runtime_implications": [
+        "runtime behavior",
+        "trust gate engine",
+        "GuardianDecision behavior",
+        "approval behavior",
+        "execution behavior",
+        "audit persistence"
+      ]
+    },
+    "sparkbot": {
+      "role": "open-source hobby and R&D shell plus reference source",
+      "current_status": "reference shell and lessons-learned source",
+      "future_status": "possible shell on LIMA AI OS after explicit approved integration phases",
+      "implementation_status": "not imported or wired in this phase",
+      "non_runtime": true,
+      "not_implemented_in_phase": true,
+      "blocked_runtime_implications": [
+        "Sparkbot import",
+        "Sparkbot route wiring",
+        "production Sparkbot integration",
+        "runtime dependency",
+        "behavior migration"
+      ]
+    },
+    "arc_bot": {
+      "role": "future commercial office-worker shell",
+      "current_status": "future product doctrine only",
+      "future_status": "office, admin, IT, research, reporting, and workflow support shell",
+      "implementation_status": "not implemented in this phase",
+      "non_runtime": true,
+      "not_implemented_in_phase": true,
+      "blocked_runtime_implications": [
+        "ARC Bot implementation",
+        "commercial shell wiring",
+        "office workflow automation",
+        "tool-pack activation",
+        "runtime shell behavior"
+      ]
+    },
+    "custom_business_bots": {
+      "role": "future client-specific shells",
+      "current_status": "future shell doctrine only",
+      "future_status": "client shells with shell manifest, tool-pack scope, policy profile, trust gates, and audit posture",
+      "implementation_status": "not generated or implemented in this phase",
+      "non_runtime": true,
+      "not_implemented_in_phase": true,
+      "blocked_runtime_implications": [
+        "bot generator",
+        "client shell implementation",
+        "client shell scope settings",
+        "tool-pack activation",
+        "production deployment"
+      ]
+    },
+    "robo_automation_consumers": {
+      "role": "future deterministic driver-plane consumers",
+      "current_status": "future driver-plane doctrine only",
+      "future_status": "Guardian-gated consumers using deterministic drivers for physical execution in later phases",
+      "implementation_status": "not implemented in this phase",
+      "non_runtime": true,
+      "not_implemented_in_phase": true,
+      "blocked_runtime_implications": [
+        "robot control",
+        "Robo-OS driver behavior",
+        "physical-world action",
+        "device command authorization",
+        "driver execution"
+      ]
+    }
+  },
+  "provider": {
+    "sparkpit_labs": {
+      "role": "product and service provider building the LIMA family",
+      "non_runtime": true,
+      "not_implemented_in_phase": true
+    }
+  }
+}
