@@ -1264,6 +1264,29 @@ Consequences:
 - no production integration
 - safety gates remain mandatory
 
+## ADR-0086: Relationship Metadata Requires Readiness Review Before Artifact Work
+
+Decision:
+
+Before future report/map artifact work or any later test-only composition harness, LIMA must review Phase 3.3 relationship metadata for clarity, safety, completeness, and non-runtime status.
+
+Rationale:
+
+Phase 3.3 has landed and is tagged as `phase-3.3-nonproduction-kernel-pipeline-relationship-metadata`. Relationship metadata can look like pipeline wiring if it is not explicitly reviewed. The readiness review preserves the boundary that scenario groups, stage references, and compatibility notes are descriptive fixture metadata only.
+
+Consequences:
+
+- Phase 3.4 is docs/tests/fixtures only
+- relationship metadata remains non-runtime
+- report/map artifact work may be considered after readiness review
+- executable pipeline work remains blocked
+- composition harness work remains blocked
+- production Sparkbot integration remains blocked
+- real IntentCompiler and real GuardianDecision remain blocked
+- enforcement, approval, execution, and audit persistence remain blocked
+- the next likely phase is Phase 3.5, LIMA Product Family and Adaptive Trust Doctrine
+- product-family and adaptive-trust doctrine is deferred and not implemented in Phase 3.4
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
