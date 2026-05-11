@@ -202,6 +202,8 @@ Phase 2.35 performs the final Phase 2 readiness review and recommends Phase 3.0 
 
 Phase 3.0 begins non-production kernel pipeline design while keeping production integration and runtime behavior blocked.
 
+Phase 3.1 maps fixture families across the non-production kernel pipeline while keeping runtime behavior blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
