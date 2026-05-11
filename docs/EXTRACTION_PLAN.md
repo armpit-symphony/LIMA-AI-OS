@@ -1799,6 +1799,30 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.31 Gate: Fake GuardianDecision Fixture Harness
+
+Fake GuardianDecision fixture harness is allowed for tests only.
+
+Still blocked:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- `stream_chat_with_tools`
+- `execute_tool`
+- terminal/PTY
+- Robo-OS physical action
+- real enforcement
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
