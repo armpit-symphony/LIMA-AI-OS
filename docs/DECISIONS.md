@@ -1228,6 +1228,24 @@ Consequences:
 - no production integration
 - safety gates remain mandatory
 
+## ADR-0084: Fixture Map Requires Readiness Review Before Relationship Metadata
+
+Decision:
+
+Before adding fixture relationship metadata, LIMA must review the non-production kernel pipeline fixture map.
+
+Rationale:
+
+Relationship metadata could be mistaken for runtime wiring unless the map is explicitly reviewed as non-executable.
+
+Consequences:
+
+- fixture relationship metadata remains metadata only
+- no runtime pipeline
+- no data transformation
+- no production integration
+- safety gates remain mandatory
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

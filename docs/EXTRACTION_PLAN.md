@@ -1952,6 +1952,26 @@ NO-GO:
 - Robo-OS physical action
 - live auth/session/trust/autonomy enforcement
 
+## Phase 3.2 Gate: Non-production Kernel Pipeline Map Readiness Review
+
+No fixture relationship metadata until Phase 3.2 readiness review is merged.
+
+After merge:
+
+GO only for Phase 3.3 Non-production Kernel Pipeline Relationship Metadata.
+
+NO-GO:
+
+- runtime pipeline
+- production Sparkbot integration
+- real IntentCompiler
+- real GuardianDecision
+- enforcement
+- approval
+- execution
+- audit persistence
+- real runtime behavior
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

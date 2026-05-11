@@ -1574,3 +1574,25 @@ Acceptance criteria:
 - safety gates listed
 - no runtime behavior added
 - tests pass
+
+## Phase 3.2 — Non-production Kernel Pipeline Map Readiness Review
+
+Goal:
+
+Review the Phase 3.1 fixture map before adding relationship metadata.
+
+Deliverables:
+
+- `docs/PHASE_3_2_NONPRODUCTION_KERNEL_PIPELINE_MAP_READINESS_REVIEW.md`
+- Phase 3.1 tag check
+- map status
+- proven/not-proven list
+- Phase 3.3 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no pipeline implementation
+- production integration remains blocked
+- tests pass
