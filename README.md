@@ -200,6 +200,8 @@ Phase 2.34 reviews the fake GuardianDecision safety gate and recommends Phase 2 
 
 Phase 2.35 performs the final Phase 2 readiness review and recommends Phase 3.0 as non-production kernel pipeline design.
 
+Phase 3.0 begins non-production kernel pipeline design while keeping production integration and runtime behavior blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

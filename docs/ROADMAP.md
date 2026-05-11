@@ -1534,3 +1534,29 @@ Acceptance criteria:
 - Phase 3.0 scope defined
 - production integration remains blocked
 - tests pass
+
+## Phase 3.0 — Non-production Kernel Pipeline Design Review
+
+Goal:
+
+Design the end-to-end non-production kernel fixture pipeline without implementing runtime behavior.
+
+Deliverables:
+
+- `docs/PHASE_3_0_NONPRODUCTION_KERNEL_PIPELINE_DESIGN_REVIEW.md`
+- Phase 2 baseline
+- pipeline design path
+- boundary responsibility table
+- required gate list
+- Phase 3.1 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no production integration
+- no real IntentCompiler
+- no real GuardianDecision
+- no enforcement
+- no execution
+- tests pass
