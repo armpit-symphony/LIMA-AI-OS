@@ -1755,6 +1755,26 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.29 Gate: Fake GuardianDecision Test Fixtures
+
+Fake GuardianDecision test fixtures are allowed.
+
+Still blocked:
+
+- real GuardianDecision creation
+- real Guardian enforcement
+- policy enforcement
+- approval enforcement
+- ApprovalMetadata recording
+- action approval
+- tool execution
+- model calls
+- audit persistence
+- real IntentCompiler
+- natural-language inference
+- production Sparkbot wiring
+- real enforcement
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

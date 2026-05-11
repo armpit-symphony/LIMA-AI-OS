@@ -1,0 +1,246 @@
+[
+  {
+    "fixture_id": "fake-guardian-decision-safety-robot-physical-001",
+    "fixture_type": "safety_critical_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-robot-physical-001",
+      "lineage_id": "lineage-intent-robot-physical-001",
+      "source_fixture_id": "guardian-request-safety-robot-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic robot physical action needs later review."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-safety-robot-physical-001",
+      "request_id": "guardian-request-safety-robot-physical-001",
+      "lineage_id": "lineage-intent-robot-physical-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "safety_critical",
+      "action_type": "robot_action",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Robot physical action requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:robot-physical-review-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:robot-operator-review",
+      "approval_ref": "fixture-approval-ref:reference-only-robot",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:robo-requested-not-executed"
+      ],
+      "safety_flags": [
+        "robot_physical_action",
+        "later_guardian_policy_approval_review_required",
+        "no_auto_approval"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "requires_later_guardian_policy_approval_review": true,
+        "safety_critical_fake_decision_is_not_approval": true,
+        "not_production_authorization": true,
+        "no_auto_approval": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Robot physical action is safety-critical and cannot auto-approve.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; safety-critical fake decision is not approval and requires later Guardian/policy/approval review."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-safety-terminal-pty-001",
+    "fixture_type": "safety_critical_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-terminal-pty-001",
+      "lineage_id": "lineage-intent-terminal-pty-001",
+      "source_fixture_id": "guardian-request-safety-terminal-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic terminal/PTY action is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-safety-terminal-pty-001",
+      "request_id": "guardian-request-safety-terminal-pty-001",
+      "lineage_id": "lineage-intent-terminal-pty-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "critical",
+      "action_type": "terminal_command",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Terminal/PTY action is safety-critical and blocked test-only.",
+      "policy_refs": [
+        "fixture-policy:terminal-pty-block-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:terminal-operator-review",
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:terminal-requested-not-executed"
+      ],
+      "safety_flags": [
+        "terminal_pty_action",
+        "later_guardian_policy_approval_review_required",
+        "no_auto_approval"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "requires_later_guardian_policy_approval_review": true,
+        "safety_critical_fake_decision_is_not_approval": true,
+        "not_production_authorization": true,
+        "no_auto_approval": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Terminal/PTY action is safety-critical and cannot auto-approve.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; safety-critical fake decision is not approval and requires later Guardian/policy/approval review."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-safety-secret-001",
+    "fixture_type": "safety_critical_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-secret-001",
+      "lineage_id": "lineage-intent-secret-safety-001",
+      "source_fixture_id": "guardian-request-safety-secret-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic secret access action needs later review."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-safety-secret-001",
+      "request_id": "guardian-request-safety-secret-001",
+      "lineage_id": "lineage-intent-secret-safety-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "critical",
+      "action_type": "secret_access",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Secret access requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:secret-review-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:secret-review",
+      "approval_ref": "fixture-approval-ref:reference-only-secret-safety",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:secrets-requested-not-executed"
+      ],
+      "safety_flags": [
+        "secret_access",
+        "later_guardian_policy_approval_review_required",
+        "no_auto_approval"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "requires_later_guardian_policy_approval_review": true,
+        "safety_critical_fake_decision_is_not_approval": true,
+        "not_production_authorization": true,
+        "no_auto_approval": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Secret access is safety-critical and cannot auto-approve.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; safety-critical fake decision is not approval and requires later Guardian/policy/approval review."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-safety-admin-destructive-001",
+    "fixture_type": "safety_critical_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-admin-destructive-001",
+      "lineage_id": "lineage-intent-admin-destructive-001",
+      "source_fixture_id": "guardian-request-safety-admin-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic destructive admin operation is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-safety-admin-destructive-001",
+      "request_id": "guardian-request-safety-admin-destructive-001",
+      "lineage_id": "lineage-intent-admin-destructive-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "critical",
+      "action_type": "admin_action",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Destructive admin operation is safety-critical and blocked test-only.",
+      "policy_refs": [
+        "fixture-policy:admin-destructive-block-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:admin-review",
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:admin-requested-not-executed"
+      ],
+      "safety_flags": [
+        "destructive_admin_operation",
+        "later_guardian_policy_approval_review_required",
+        "no_auto_approval"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "requires_later_guardian_policy_approval_review": true,
+        "safety_critical_fake_decision_is_not_approval": true,
+        "not_production_authorization": true,
+        "no_auto_approval": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Destructive admin action is safety-critical and cannot auto-approve.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; safety-critical fake decision is not approval and requires later Guardian/policy/approval review."
+  }
+]

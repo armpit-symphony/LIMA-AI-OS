@@ -186,6 +186,8 @@ Phase 2.27 reviews the Guardian request safety gate and recommends fake Guardian
 
 Phase 2.28 designs fake GuardianDecision test shapes while keeping real GuardianDecision and enforcement blocked.
 
+Phase 2.29 adds fake GuardianDecision test fixtures while keeping real GuardianDecision and enforcement blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

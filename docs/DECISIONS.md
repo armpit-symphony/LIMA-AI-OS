@@ -1127,3 +1127,22 @@ Consequences:
 - no enforcement
 - no execution
 - no audit persistence
+
+## ADR-0075: Fake GuardianDecision Fixtures Are Not Production Authorization
+
+Decision:
+
+LIMA may add fake GuardianDecision test fixtures, but fake decisions must not be treated as real GuardianDecision, approval, enforcement, audit evidence, or production authorization.
+
+Rationale:
+
+GuardianDecision is the safety-critical authorization boundary. Fake decision fixtures are useful for testing shape and risk behavior, but must remain clearly non-production.
+
+Consequences:
+
+- fake statuses must be test-only
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
