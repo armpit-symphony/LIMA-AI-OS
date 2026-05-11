@@ -63,7 +63,7 @@ def test_guardian_request_safety_gate_doc_states_core_rules() -> None:
     assert "`autonomy_context_ref` is passive only." in text
     assert "privacy/redaction metadata is not enforcement." in text
     assert "no ApprovalMetadata recording" in text
-    assert "audit persistence" in text
+    assert "no audit persistence expected/created" in text
 
 
 def test_guardian_request_safety_gate_doc_lists_forbidden_behaviors() -> None:

@@ -34,6 +34,7 @@ This gate applies to any PR touching:
 - privacy/redaction metadata is not enforcement.
 - GuardianDecision remains mandatory before consequential behavior.
 - ApprovalMetadata remains evidence only.
+- no ApprovalMetadata recording is allowed in Guardian request fixtures or harnesses.
 - Spine/Audit lineage records; it does not execute.
 - Owner autonomy metadata does not approve or lower risk by itself.
 - Human safety and law override owner command.
@@ -80,7 +81,6 @@ Required tests:
 - policy enforcement
 - approval enforcement
 - ApprovalMetadata recording
-- no ApprovalMetadata recording
 - action approval
 - tool execution
 - model calls
