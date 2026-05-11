@@ -1386,3 +1386,21 @@ Acceptance criteria:
 - no execution
 - no audit persistence
 - tests pass
+
+## Phase 2.29 — Fake GuardianDecision Test Fixtures
+
+Goal:
+
+Add synthetic fixtures for fake/test GuardianDecision shapes while keeping real GuardianDecision blocked.
+
+Acceptance criteria:
+
+- fixtures exist
+- statuses are test-only
+- fake decision is not production authorization
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass

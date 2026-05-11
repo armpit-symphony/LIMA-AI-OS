@@ -1,0 +1,168 @@
+[
+  {
+    "fixture_id": "fake-guardian-decision-allow-info-low-001",
+    "fixture_type": "allow_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-valid-readonly-001",
+      "lineage_id": "lineage-intent-readonly-001",
+      "source_fixture_id": "guardian-request-valid-readonly-001"
+    },
+    "explicit_decision": {
+      "decision_status": "allow_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic low-risk informational request is allowed only inside fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-allow-info-low-001",
+      "request_id": "guardian-request-valid-readonly-001",
+      "lineage_id": "lineage-intent-readonly-001",
+      "decision_status": "allow_test_only",
+      "risk_class": "low",
+      "action_type": "model_call",
+      "allow": true,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": false,
+      "reason": "Low-risk informational request may be represented as allow_test_only in fixtures.",
+      "policy_refs": [
+        "fixture-policy:read-only-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:read-only-requested-not-granted"
+      ],
+      "safety_flags": [],
+      "privacy_class": "internal",
+      "redaction_class": "none",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "allow_test_only",
+    "expected_reason": "allow_test_only is a fake fixture status and not production authorization.",
+    "privacy_class": "internal",
+    "redaction_class": "none",
+    "notes": "Synthetic fake GuardianDecision fixture only; not production authorization, no execution, no ApprovalMetadata."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-allow-draft-comms-001",
+    "fixture_type": "allow_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-valid-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-comms-001",
+      "source_fixture_id": "guardian-request-valid-draft-comms-001"
+    },
+    "explicit_decision": {
+      "decision_status": "allow_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic draft-only communication shape does not send messages."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-allow-draft-comms-001",
+      "request_id": "guardian-request-valid-draft-comms-001",
+      "lineage_id": "lineage-intent-draft-comms-001",
+      "decision_status": "allow_test_only",
+      "risk_class": "low",
+      "action_type": "send_message",
+      "allow": true,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": false,
+      "reason": "Draft-only communication may be represented as allow_test_only when no send occurs.",
+      "policy_refs": [
+        "fixture-policy:draft-only-comms-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:comms-requested-not-executed"
+      ],
+      "safety_flags": [],
+      "privacy_class": "internal",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "draft_only": true,
+        "no_send": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "allow_test_only",
+    "expected_reason": "Draft-only allow_test_only fixture does not send or authorize production action.",
+    "privacy_class": "internal",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; not production authorization, no send, no execution, no ApprovalMetadata."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-allow-schedule-plan-001",
+    "fixture_type": "allow_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-valid-schedule-plan-001",
+      "lineage_id": "lineage-intent-schedule-plan-001",
+      "source_fixture_id": "guardian-request-valid-schedule-plan-001"
+    },
+    "explicit_decision": {
+      "decision_status": "allow_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic scheduling planning shape does not write calendar state."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-allow-schedule-plan-001",
+      "request_id": "guardian-request-valid-schedule-plan-001",
+      "lineage_id": "lineage-intent-schedule-plan-001",
+      "decision_status": "allow_test_only",
+      "risk_class": "low",
+      "action_type": "task_mutation",
+      "allow": true,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": false,
+      "reason": "Harmless scheduling planning may be represented as allow_test_only when no write occurs.",
+      "policy_refs": [
+        "fixture-policy:scheduling-plan-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:calendar-planning-requested-not-executed"
+      ],
+      "safety_flags": [],
+      "privacy_class": "internal",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "planning_only": true,
+        "no_calendar_write": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "allow_test_only",
+    "expected_reason": "Scheduling planning allow_test_only fixture does not write state or authorize production action.",
+    "privacy_class": "internal",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; not production authorization, no state write, no execution, no ApprovalMetadata."
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "fixture_id": "fake-guardian-decision-blocked-robot-unsafe-001",
+    "fixture_type": "blocked_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-robot-unsafe-001",
+      "lineage_id": "lineage-intent-robot-unsafe-001",
+      "source_fixture_id": "guardian-request-safety-robot-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic unsafe robot movement shape is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-blocked-robot-unsafe-001",
+      "request_id": "guardian-request-safety-robot-unsafe-001",
+      "lineage_id": "lineage-intent-robot-unsafe-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "safety_critical",
+      "action_type": "robot_action",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Unsafe robot movement violates safety posture and is blocked test-only.",
+      "policy_refs": [
+        "fixture-policy:robot-safety-block-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:robo-requested-not-executed"
+      ],
+      "safety_flags": [
+        "unsafe_robot_movement",
+        "human_safety_review_required"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "owner_autonomy_override_allowed": false,
+        "human_safety_law_override_owner_command": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Unsafe robot movement is blocked test-only with no owner autonomy override.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; blocked test-only, no owner autonomy override, no robot action, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-blocked-filesystem-destructive-001",
+    "fixture_type": "blocked_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-filesystem-destructive-001",
+      "lineage_id": "lineage-intent-filesystem-destructive-001",
+      "source_fixture_id": "guardian-request-safety-filesystem-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic destructive filesystem shape is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-blocked-filesystem-destructive-001",
+      "request_id": "guardian-request-safety-filesystem-destructive-001",
+      "lineage_id": "lineage-intent-filesystem-destructive-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "critical",
+      "action_type": "file_operation",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Destructive filesystem operation is blocked test-only and cannot execute.",
+      "policy_refs": [
+        "fixture-policy:destructive-filesystem-block-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:filesystem-requested-not-executed"
+      ],
+      "safety_flags": [
+        "destructive_filesystem_operation"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "owner_autonomy_override_allowed": false,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Destructive filesystem action is blocked test-only and non-executable.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; blocked test-only, no owner autonomy override, no file operation, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-blocked-terminal-critical-001",
+    "fixture_type": "blocked_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-terminal-critical-001",
+      "lineage_id": "lineage-intent-terminal-critical-001",
+      "source_fixture_id": "guardian-request-safety-terminal-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic terminal command shape is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-blocked-terminal-critical-001",
+      "request_id": "guardian-request-safety-terminal-critical-001",
+      "lineage_id": "lineage-intent-terminal-critical-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "critical",
+      "action_type": "terminal_command",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Terminal command is blocked test-only and cannot execute.",
+      "policy_refs": [
+        "fixture-policy:terminal-critical-block-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:terminal-requested-not-executed"
+      ],
+      "safety_flags": [
+        "terminal_command_blocked",
+        "critical_action_requires_review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "owner_autonomy_override_allowed": false,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Terminal command is blocked test-only and non-executable.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; blocked test-only, no owner autonomy override, no terminal action, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-blocked-human-safety-law-001",
+    "fixture_type": "blocked_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-safety-law-violation-001",
+      "lineage_id": "lineage-intent-safety-law-001",
+      "source_fixture_id": "guardian-request-safety-law-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "blocked_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic request violating human safety/law is blocked in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-blocked-human-safety-law-001",
+      "request_id": "guardian-request-safety-law-violation-001",
+      "lineage_id": "lineage-intent-safety-law-001",
+      "decision_status": "blocked_test_only",
+      "risk_class": "safety_critical",
+      "action_type": "driver_command",
+      "allow": false,
+      "requires_approval": false,
+      "denied": false,
+      "blocked": true,
+      "reason": "Human safety and law override owner command in fake decision shape.",
+      "policy_refs": [
+        "fixture-policy:human-safety-law-block-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:driver-requested-not-executed"
+      ],
+      "safety_flags": [
+        "human_safety_violation",
+        "law_override_required"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "owner_autonomy_override_allowed": false,
+        "human_safety_law_override_owner_command": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "blocked_test_only",
+    "expected_reason": "Human safety/law violation is blocked test-only with no owner autonomy override.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; human safety and law override owner command, no execution, no audit persistence."
+  }
+]

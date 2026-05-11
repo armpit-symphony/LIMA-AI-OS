@@ -1,0 +1,223 @@
+[
+  {
+    "fixture_id": "fake-guardian-decision-deny-malformed-001",
+    "fixture_type": "deny_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-invalid-malformed-001",
+      "lineage_id": "lineage-intent-invalid-malformed-001",
+      "source_fixture_id": "guardian-request-invalid-malformed-001"
+    },
+    "explicit_decision": {
+      "decision_status": "deny_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic malformed request shape is denied in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-deny-malformed-001",
+      "request_id": "guardian-request-invalid-malformed-001",
+      "lineage_id": "lineage-intent-invalid-malformed-001",
+      "decision_status": "deny_test_only",
+      "risk_class": "blocked",
+      "action_type": "unknown",
+      "allow": false,
+      "requires_approval": false,
+      "denied": true,
+      "blocked": false,
+      "reason": "Malformed synthetic request is denied test-only and cannot execute.",
+      "policy_refs": [
+        "fixture-policy:malformed-request-deny-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [],
+      "safety_flags": [
+        "malformed_request"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "none",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "deny_test_only",
+    "expected_reason": "Malformed request receives deny_test_only and remains non-executable.",
+    "privacy_class": "internal",
+    "redaction_class": "none",
+    "notes": "Synthetic fake GuardianDecision fixture only; denied test-only, not production authorization, no execution, no audit persistence."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-deny-missing-actor-session-001",
+    "fixture_type": "deny_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-invalid-missing-actor-session-001",
+      "lineage_id": "lineage-intent-invalid-actor-session-001",
+      "source_fixture_id": "guardian-request-invalid-missing-actor-session-001"
+    },
+    "explicit_decision": {
+      "decision_status": "deny_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic request missing actor/session context is denied in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-deny-missing-actor-session-001",
+      "request_id": "guardian-request-invalid-missing-actor-session-001",
+      "lineage_id": "lineage-intent-invalid-actor-session-001",
+      "decision_status": "deny_test_only",
+      "risk_class": "blocked",
+      "action_type": "model_call",
+      "allow": false,
+      "requires_approval": false,
+      "denied": true,
+      "blocked": false,
+      "reason": "Missing actor/session context denies the fake decision shape.",
+      "policy_refs": [
+        "fixture-policy:identity-context-required-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [],
+      "safety_flags": [
+        "missing_actor_context",
+        "missing_session_context"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "none",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "live_auth_lookup_blocked": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "deny_test_only",
+    "expected_reason": "Missing actor/session request receives deny_test_only without live auth lookup.",
+    "privacy_class": "internal",
+    "redaction_class": "none",
+    "notes": "Synthetic fake GuardianDecision fixture only; no live auth/session lookup, no execution, no audit persistence."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-deny-disallowed-pack-001",
+    "fixture_type": "deny_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-invalid-disallowed-pack-001",
+      "lineage_id": "lineage-intent-invalid-pack-001",
+      "source_fixture_id": "guardian-request-invalid-disallowed-pack-001"
+    },
+    "explicit_decision": {
+      "decision_status": "deny_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic disallowed tool-pack request is denied in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-deny-disallowed-pack-001",
+      "request_id": "guardian-request-invalid-disallowed-pack-001",
+      "lineage_id": "lineage-intent-invalid-pack-001",
+      "decision_status": "deny_test_only",
+      "risk_class": "blocked",
+      "action_type": "tool_call",
+      "allow": false,
+      "requires_approval": false,
+      "denied": true,
+      "blocked": false,
+      "reason": "Requested tool pack is denied test-only and is not granted.",
+      "policy_refs": [
+        "fixture-policy:deny-by-default-tool-pack-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:unclassified-requested-not-granted"
+      ],
+      "safety_flags": [
+        "disallowed_tool_pack"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "requested_tool_packs_not_granted": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "deny_test_only",
+    "expected_reason": "Disallowed tool-pack request receives deny_test_only and grants no tools.",
+    "privacy_class": "internal",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; requested tool pack is not granted, no execution, no audit persistence."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-deny-unknown-action-001",
+    "fixture_type": "deny_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-invalid-unknown-action-001",
+      "lineage_id": "lineage-intent-invalid-action-001",
+      "source_fixture_id": "guardian-request-invalid-unknown-action-001"
+    },
+    "explicit_decision": {
+      "decision_status": "deny_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic unknown action type is denied in fake fixture tests."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-deny-unknown-action-001",
+      "request_id": "guardian-request-invalid-unknown-action-001",
+      "lineage_id": "lineage-intent-invalid-action-001",
+      "decision_status": "deny_test_only",
+      "risk_class": "blocked",
+      "action_type": "unknown",
+      "allow": false,
+      "requires_approval": false,
+      "denied": true,
+      "blocked": false,
+      "reason": "Unknown action type is denied test-only and cannot execute.",
+      "policy_refs": [
+        "fixture-policy:unknown-action-deny-test-shape"
+      ],
+      "approval_requirement_ref": null,
+      "approval_ref": null,
+      "tool_pack_refs": [],
+      "safety_flags": [
+        "unknown_action_type"
+      ],
+      "privacy_class": "internal",
+      "redaction_class": "none",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "deny_test_only",
+    "expected_reason": "Unknown action type receives deny_test_only and remains non-executable.",
+    "privacy_class": "internal",
+    "redaction_class": "none",
+    "notes": "Synthetic fake GuardianDecision fixture only; denied test-only, not production authorization, no execution."
+  }
+]

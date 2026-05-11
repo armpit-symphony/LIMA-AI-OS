@@ -1,0 +1,287 @@
+[
+  {
+    "fixture_id": "fake-guardian-decision-needs-approval-email-001",
+    "fixture_type": "needs_approval_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-approval-email-001",
+      "lineage_id": "lineage-intent-email-send-001",
+      "source_fixture_id": "guardian-request-approval-email-high-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic external email send shape needs later approval."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-needs-approval-email-001",
+      "request_id": "guardian-request-approval-email-001",
+      "lineage_id": "lineage-intent-email-send-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "high",
+      "action_type": "send_message",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "External send requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:external-comms-approval-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:external-send-review",
+      "approval_ref": "fixture-approval-ref:reference-only-external-send",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:comms-requested-not-executed"
+      ],
+      "safety_flags": [
+        "external_send_requires_review"
+      ],
+      "privacy_class": "confidential",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "approval_ref_is_reference_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Email send fake decision requires later approval and grants none.",
+    "privacy_class": "confidential",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; approval_ref is reference only, no approval is granted, no ApprovalMetadata is created, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-needs-approval-payment-001",
+    "fixture_type": "needs_approval_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-approval-payment-001",
+      "lineage_id": "lineage-intent-payment-001",
+      "source_fixture_id": "guardian-request-approval-payment-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic payment shape needs later approval."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-needs-approval-payment-001",
+      "request_id": "guardian-request-approval-payment-001",
+      "lineage_id": "lineage-intent-payment-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "critical",
+      "action_type": "payment_action",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Payment action requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:payment-critical-approval-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:payment-operator-review",
+      "approval_ref": "fixture-approval-ref:reference-only-payment",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:payments-requested-not-executed"
+      ],
+      "safety_flags": [
+        "payment_requires_review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "approval_ref_is_reference_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Payment fake decision requires later approval and grants none.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; payment is not approved, approval_ref is reference only, no ApprovalMetadata is created, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-needs-approval-deploy-001",
+    "fixture_type": "needs_approval_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-approval-deploy-001",
+      "lineage_id": "lineage-intent-deploy-001",
+      "source_fixture_id": "guardian-request-approval-deploy-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic deploy shape needs later approval."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-needs-approval-deploy-001",
+      "request_id": "guardian-request-approval-deploy-001",
+      "lineage_id": "lineage-intent-deploy-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "critical",
+      "action_type": "deploy_action",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Deploy action requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:deploy-critical-approval-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:deploy-operator-review",
+      "approval_ref": "fixture-approval-ref:reference-only-deploy",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:deploy-requested-not-executed"
+      ],
+      "safety_flags": [
+        "deploy_requires_review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "approval_ref_is_reference_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Deploy fake decision requires later approval and grants none.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; deploy is not approved, approval_ref is reference only, no ApprovalMetadata is created, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-needs-approval-admin-001",
+    "fixture_type": "needs_approval_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-approval-admin-001",
+      "lineage_id": "lineage-intent-admin-001",
+      "source_fixture_id": "guardian-request-approval-admin-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic admin change shape needs later approval."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-needs-approval-admin-001",
+      "request_id": "guardian-request-approval-admin-001",
+      "lineage_id": "lineage-intent-admin-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "critical",
+      "action_type": "admin_action",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Admin change requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:admin-critical-approval-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:admin-operator-review",
+      "approval_ref": "fixture-approval-ref:reference-only-admin",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:admin-requested-not-executed"
+      ],
+      "safety_flags": [
+        "admin_change_requires_review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "operator_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "approval_ref_is_reference_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Admin fake decision requires later approval and grants none.",
+    "privacy_class": "restricted",
+    "redaction_class": "operator_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; admin change is not approved, approval_ref is reference only, no ApprovalMetadata is created, no execution."
+  },
+  {
+    "fixture_id": "fake-guardian-decision-needs-approval-secret-001",
+    "fixture_type": "needs_approval_test_only_fake_guardian_decision",
+    "guardian_request_ref": {
+      "request_id": "guardian-request-approval-secret-001",
+      "lineage_id": "lineage-intent-secret-001",
+      "source_fixture_id": "guardian-request-approval-secret-critical-001"
+    },
+    "explicit_decision": {
+      "decision_status": "needs_approval_test_only",
+      "fixture_only": true,
+      "source": "explicit_decision",
+      "reason": "Synthetic secret access shape needs later approval."
+    },
+    "expected_fake_guardian_decision": {
+      "decision_id": "fake-guardian-decision-needs-approval-secret-001",
+      "request_id": "guardian-request-approval-secret-001",
+      "lineage_id": "lineage-intent-secret-001",
+      "decision_status": "needs_approval_test_only",
+      "risk_class": "critical",
+      "action_type": "secret_access",
+      "allow": false,
+      "requires_approval": true,
+      "denied": false,
+      "blocked": false,
+      "reason": "Secret access requires later Guardian/policy/approval review.",
+      "policy_refs": [
+        "fixture-policy:secret-critical-approval-test-shape"
+      ],
+      "approval_requirement_ref": "fixture-approval-requirement:secret-operator-review",
+      "approval_ref": "fixture-approval-ref:reference-only-secret",
+      "tool_pack_refs": [
+        "fixture-tool-pack-ref:secrets-requested-not-executed"
+      ],
+      "safety_flags": [
+        "secret_access_requires_review"
+      ],
+      "privacy_class": "restricted",
+      "redaction_class": "reference_only",
+      "expires_at": null,
+      "supersedes_decision_id": null,
+      "metadata": {
+        "fixture_only": true,
+        "fake_guardian_decision_only": true,
+        "approval_ref_is_reference_only": true,
+        "not_production_authorization": true,
+        "no_approval_metadata": true,
+        "no_execution": true,
+        "no_audit_persistence": true
+      }
+    },
+    "expected_status": "needs_approval_test_only",
+    "expected_reason": "Secret access fake decision requires later approval and grants none.",
+    "privacy_class": "restricted",
+    "redaction_class": "reference_only",
+    "notes": "Synthetic fake GuardianDecision fixture only; secret access is not approved, approval_ref is reference only, no ApprovalMetadata is created, no execution."
+  }
+]
