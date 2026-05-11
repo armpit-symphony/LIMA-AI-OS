@@ -4,6 +4,7 @@
 
 Review whether the test-only fake GuardianDecision fixture harness is ready to become a standing safety gate for fake GuardianDecision-adjacent work.
 
+This is review-only.
 This review does not create real GuardianDecision.
 This review does not enforce policy.
 This review does not approve actions.
