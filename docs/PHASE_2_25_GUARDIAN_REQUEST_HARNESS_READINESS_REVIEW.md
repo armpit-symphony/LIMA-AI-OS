@@ -7,6 +7,7 @@ Review whether the test-only Guardian request fixture harness is ready to become
 This review does not create GuardianDecision.
 This review does not enforce policy.
 This review does not approve actions.
+This review does not record ApprovalMetadata.
 This review does not execute tools.
 This review does not persist audit data.
 
@@ -124,7 +125,7 @@ The gate should require:
 | --- | --- | --- | --- |
 | Guardian request mistaken for GuardianDecision | High | Harness metadata and docs state request is not decision. | Safety gate must block decision fields and creation behavior. |
 | harness mistaken for production Guardian | High | Harness lives under `tests/helpers` and validates shapes only. | Safety gate must require test-only placement and no production imports. |
-| `requested_tool_packs` mistaken for allowed tools | High | Harness rejects allowed/granted tool pack fields. | Safety gate must preserve requested-only semantics. |
+| `requested_tool_packs` mistaken for allowed/granted tools | High | Harness rejects allowed/granted tool pack fields. | Safety gate must preserve requested-only semantics. |
 | `approval_requirement_ref` mistaken for ApprovalMetadata | High | Harness treats approval refs as descriptive and rejects approval metadata fields. | Safety gate must keep approval recording blocked. |
 | `autonomy_context_ref` mistaken for authorization | High | Harness treats autonomy refs as passive. | Safety gate must block autonomy enforcement and risk reduction. |
 | privacy metadata mistaken for redaction enforcement | Medium | Harness treats privacy/redaction fields as metadata only. | Safety gate must keep redaction runtime blocked. |
