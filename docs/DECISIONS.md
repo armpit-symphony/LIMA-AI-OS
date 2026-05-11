@@ -1076,6 +1076,25 @@ Consequences:
 - audit persistence remains blocked
 - Guardian request fixture harness remains test-only
 
+## ADR-0076: Fake GuardianDecision Fixture Harness Requires Readiness Review
+
+Decision:
+
+Before creating a test-only fake GuardianDecision fixture harness, LIMA must review fixture coverage and confirm fake GuardianDecision remains non-authorizing.
+
+Rationale:
+
+Fake GuardianDecision sits at the most sensitive boundary so far. A harness must not convert fake decisions into hidden production authorization.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- audit persistence remains blocked
+- fixture harness must validate fake decision shape only
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

@@ -1404,3 +1404,29 @@ Acceptance criteria:
 - no execution
 - no audit persistence
 - tests pass
+
+## Phase 2.30 — Fake GuardianDecision Fixture Readiness Review
+
+Goal:
+
+Review fake GuardianDecision fixtures before creating a test-only fixture harness.
+
+Deliverables:
+
+- `docs/PHASE_2_30_FAKE_GUARDIANDECISION_FIXTURE_READINESS_REVIEW.md`
+- tag/milestone check
+- fixture inventory
+- coverage assessment
+- readiness decision
+- Phase 2.31 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
