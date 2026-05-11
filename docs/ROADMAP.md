@@ -1360,3 +1360,29 @@ The runtime is credible only if the trust boundary is real:
 ## Current Status
 
 Phase 0 only. No runtime implementation yet.
+
+## Phase 2.28 — Fake GuardianDecision Test Design Review
+
+Goal:
+
+Design fake/test GuardianDecision fixture shapes without creating real GuardianDecision or enforcement.
+
+Deliverables:
+
+- `docs/PHASE_2_28_FAKE_GUARDIANDECISION_TEST_DESIGN_REVIEW.md`
+- fake GuardianDecision boundary rule
+- proposed fake decision shape
+- decision status rules
+- safety/risk rules
+- Phase 2.29 recommendation
+
+Acceptance criteria:
+
+- review exists
+- no runtime behavior added
+- no real GuardianDecision
+- no enforcement
+- no approval
+- no execution
+- no audit persistence
+- tests pass
