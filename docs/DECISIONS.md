@@ -1246,6 +1246,24 @@ Consequences:
 - no production integration
 - safety gates remain mandatory
 
+## ADR-0085: Kernel Pipeline Relationship Metadata Is Not Runtime Wiring
+
+Decision:
+
+LIMA may add relationship metadata connecting fixture families across kernel pipeline stages, but this metadata must not be treated as runtime wiring or executable pipeline behavior.
+
+Rationale:
+
+Relationship metadata helps prepare safe non-production composition while preventing hidden runtime behavior.
+
+Consequences:
+
+- metadata is non-runtime
+- no data transformation
+- no execution
+- no production integration
+- safety gates remain mandatory
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
