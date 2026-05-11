@@ -1972,6 +1972,22 @@ NO-GO:
 - audit persistence
 - real runtime behavior
 
+## Phase 3.3 Gate: Non-production Kernel Pipeline Relationship Metadata
+
+Fixture relationship metadata is allowed as non-runtime metadata only.
+
+Still blocked:
+
+- runtime pipeline
+- production Sparkbot integration
+- real IntentCompiler
+- real GuardianDecision
+- enforcement
+- approval
+- execution
+- audit persistence
+- real runtime behavior
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

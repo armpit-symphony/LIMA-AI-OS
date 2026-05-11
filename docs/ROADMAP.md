@@ -1596,3 +1596,17 @@ Acceptance criteria:
 - no pipeline implementation
 - production integration remains blocked
 - tests pass
+
+## Phase 3.3 — Non-production Kernel Pipeline Relationship Metadata
+
+Goal:
+
+Add non-runtime relationship metadata across fixture families.
+
+Acceptance criteria:
+
+- relationship metadata exists
+- metadata is non_runtime
+- safety gates referenced
+- no runtime behavior added
+- tests pass
