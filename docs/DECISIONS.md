@@ -1075,3 +1075,19 @@ Consequences:
 - execution remains blocked
 - audit persistence remains blocked
 - Guardian request fixture harness remains test-only
+
+## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
+
+Status: Accepted
+
+Decision: LIMA will use `docs/GUARDIAN_REQUEST_SAFETY_GATE.md` as the standing safety gate for Guardian-request-adjacent work.
+
+Rationale: Guardian request is the boundary directly before GuardianDecision. A consolidated gate prevents requests from becoming hidden decisions, approvals, enforcement, or execution.
+
+Consequences:
+
+- real GuardianDecision remains blocked
+- enforcement remains blocked
+- approval remains blocked
+- execution remains blocked
+- manual review is required for future GuardianDecision work

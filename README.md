@@ -180,6 +180,8 @@ Phase 2.24 adds a test-only Guardian request fixture harness and keeps GuardianD
 
 Phase 2.25 reviews the Guardian request fixture harness and recommends a standing safety gate for future Guardian request work.
 
+Phase 2.26 finalizes `docs/GUARDIAN_REQUEST_SAFETY_GATE.md` as the standing safety gate for Guardian-request-adjacent work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

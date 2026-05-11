@@ -1867,6 +1867,14 @@ NO-GO:
 - production Sparkbot wiring
 - real enforcement
 
+## Phase 2.26: Guardian Request Safety Gate Docs
+
+`docs/GUARDIAN_REQUEST_SAFETY_GATE.md` is now the standing gate for Guardian-request-adjacent work.
+
+No Guardian-request-adjacent PR may merge without satisfying it.
+
+Real GuardianDecision remains blocked.
+
 ## Phase 2: Extract Model Harness
 
 Scope:
