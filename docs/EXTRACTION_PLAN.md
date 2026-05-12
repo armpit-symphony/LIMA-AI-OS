@@ -2414,6 +2414,51 @@ After merge:
 
 - GO only for Phase 4.4 Boundary Fixture Contract Extension if explicitly approved
 
+## Phase 4.4 Gate: Boundary Fixture Contract Extension
+
+Phase 4.4 may extend synthetic HumanInput intake fixture/contract metadata for the selected chat and voice boundary.
+
+GO only for:
+
+- fixture/contract extension documentation
+- synthetic text input fixture shape
+- synthetic voice transcript fixture shape
+- static inertness and boundary tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness
+- live adapter code
+- Sparkbot import, wiring, route import, or code copy
+- production Sparkbot adapter implementation
+- live auth/session/trust lookup
+- natural-language parsing into action
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 4.5 Boundary Readiness Review
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

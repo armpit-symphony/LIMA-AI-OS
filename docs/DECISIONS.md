@@ -1502,6 +1502,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - physical-world control remains blocked
 
+## ADR-0096: HumanInput Intake Fixtures Are Synthetic And Non-Authorizing
+
+Status: Accepted
+
+Decision:
+
+Phase 4.4 extends synthetic HumanInput intake fixture/contract metadata for the selected chat and voice boundary. The fixtures are inert, reference-only, and cannot imply authorization, approval, execution, trust lookup, Sparkbot integration, or production runtime behavior.
+
+Rationale:
+
+HumanInput intake needs concrete text and voice fixture shapes before readiness can be reviewed, but the fixture shape must not become a hidden adapter or authority surface. The metadata therefore carries only synthetic content references, actor/session/trust references, privacy classes, lineage seeds, and handoff requirements toward future IntentEnvelope and GuardianDecision boundaries.
+
+Consequences:
+
+- Phase 4.4 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- fixture records are synthetic and non-runtime
+- HumanInput intake cannot parse, approve, enforce, execute, persist audit data, or perform live lookup
+- Phase 4.5 may review boundary readiness
+- runtime extraction implementation remains blocked
+- physical-world control remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

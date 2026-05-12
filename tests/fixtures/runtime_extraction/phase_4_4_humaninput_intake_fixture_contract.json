@@ -1,0 +1,302 @@
+{
+  "phase": "4.4",
+  "status": "boundary_fixture_contract_extension_only",
+  "non_runtime": true,
+  "contract_document": "docs/PHASE_4_4_BOUNDARY_FIXTURE_CONTRACT_EXTENSION.md",
+  "source_phase": "4.3",
+  "source_tag": "phase-4.3-boundary-extraction-safety-gate",
+  "source_merge_commit": "9e2acfa",
+  "boundary_id": "humaninput_intake_boundary_for_chat_and_voice",
+  "approved_scope": [
+    "synthetic_text_input_fixture_shape",
+    "synthetic_voice_transcript_fixture_shape",
+    "source_metadata_shell_channel_room_actor_session_refs",
+    "passive_trust_autonomy_refs",
+    "transcript_confidence_metadata",
+    "privacy_redaction_retention_visibility_fields",
+    "lineage_seed_refs",
+    "handoff_requirements_toward_intentenvelope_and_guardiandecision"
+  ],
+  "contract_shape": {
+    "required_record_fields": [
+      "fixture_id",
+      "boundary_id",
+      "input_kind",
+      "synthetic",
+      "non_runtime",
+      "content",
+      "source",
+      "actor",
+      "session",
+      "trust_context",
+      "privacy",
+      "lineage",
+      "handoff",
+      "capability_flags",
+      "blocked_capabilities"
+    ],
+    "voice_required_fields": [
+      "voice"
+    ],
+    "input_kinds": [
+      "text",
+      "voice_transcript"
+    ]
+  },
+  "fixture_records": [
+    {
+      "fixture_id": "phase4_4_text_humaninput_synthetic_001",
+      "boundary_id": "humaninput_intake_boundary_for_chat_and_voice",
+      "input_kind": "text",
+      "synthetic": true,
+      "non_runtime": true,
+      "content": {
+        "content_ref": "ref.synthetic.humaninput.text.001",
+        "content_summary": "synthetic planning request summary only",
+        "raw_content_included": false,
+        "normalized_language": "en",
+        "attachment_refs": [
+          "ref.synthetic.attachment.none"
+        ]
+      },
+      "source": {
+        "shell_ref": "shell.synthetic.sparkbot.reference",
+        "channel_ref": "channel.synthetic.chat",
+        "room_ref": "room.synthetic.reference",
+        "conversation_ref": "conversation.synthetic.reference",
+        "surface": "chat_text",
+        "live_route": false,
+        "sparkbot_wired": false
+      },
+      "actor": {
+        "actor_ref": "actor.synthetic.owner",
+        "actor_kind": "human_operator_reference",
+        "identity_verified": false,
+        "live_lookup_performed": false
+      },
+      "session": {
+        "session_ref": "session.synthetic.chat.001",
+        "live_session": false,
+        "auth_lookup_performed": false,
+        "trust_lookup_performed": false
+      },
+      "trust_context": {
+        "trust_context_ref": "trust.synthetic.passive.owner_autonomy",
+        "owner_autonomy_ref": "autonomy.synthetic.owner_controlled",
+        "trusted_device_ref": "device.synthetic.reference_only",
+        "grants_trust": false,
+        "enforces_trust": false,
+        "live_lookup_performed": false
+      },
+      "privacy": {
+        "privacy_class": "private",
+        "redaction_class": "reference_only",
+        "retention_class": "short_lived",
+        "visibility_class": "operator_only",
+        "raw_content_allowed_in_fixture": false
+      },
+      "lineage": {
+        "lineage_seed_ref": "lineage.synthetic.seed.text.001",
+        "audit_persisted": false,
+        "spine_event_created": false
+      },
+      "handoff": {
+        "next_boundary": "future_intentenvelope",
+        "requires_intentenvelope": true,
+        "requires_guardiandecision_before_consequential_behavior": true,
+        "authorizes_action": false,
+        "approves_action": false,
+        "executes_action": false
+      },
+      "capability_flags": {
+        "can_parse_action": false,
+        "can_call_model": false,
+        "can_select_tools": false,
+        "can_expose_tools": false,
+        "can_execute_tools": false,
+        "can_write_terminal": false,
+        "can_call_robotics": false,
+        "can_approve": false,
+        "can_enforce_policy": false,
+        "can_persist_audit": false,
+        "can_perform_live_auth_session_trust_lookup": false,
+        "can_import_sparkbot": false,
+        "can_wire_sparkbot": false
+      },
+      "blocked_capabilities": [
+        "natural_language_parsing_into_action",
+        "model_calls",
+        "tool_exposure_or_execution",
+        "terminal_pty_behavior",
+        "robotics_behavior",
+        "approval_or_policy_enforcement",
+        "audit_persistence",
+        "live_auth_session_trust_lookup",
+        "sparkbot_import_or_wiring",
+        "production_integration"
+      ]
+    },
+    {
+      "fixture_id": "phase4_4_voice_humaninput_synthetic_001",
+      "boundary_id": "humaninput_intake_boundary_for_chat_and_voice",
+      "input_kind": "voice_transcript",
+      "synthetic": true,
+      "non_runtime": true,
+      "content": {
+        "content_ref": "ref.synthetic.humaninput.voice.001",
+        "content_summary": "synthetic voice transcript summary only",
+        "raw_content_included": false,
+        "normalized_language": "en",
+        "attachment_refs": [
+          "ref.synthetic.audio.none"
+        ]
+      },
+      "voice": {
+        "transcript_ref": "transcript.synthetic.voice.001",
+        "transcript_confidence": 0.92,
+        "transcript_confidence_required": true,
+        "audio_ref": "audio.synthetic.reference_only",
+        "raw_audio_included": false,
+        "transcription_engine_ref": "engine.synthetic.reference_only"
+      },
+      "source": {
+        "shell_ref": "shell.synthetic.sparkbot.reference",
+        "channel_ref": "channel.synthetic.voice",
+        "room_ref": "room.synthetic.reference",
+        "conversation_ref": "conversation.synthetic.reference",
+        "surface": "voice_transcript",
+        "live_route": false,
+        "sparkbot_wired": false
+      },
+      "actor": {
+        "actor_ref": "actor.synthetic.owner",
+        "actor_kind": "human_operator_reference",
+        "identity_verified": false,
+        "live_lookup_performed": false
+      },
+      "session": {
+        "session_ref": "session.synthetic.voice.001",
+        "live_session": false,
+        "auth_lookup_performed": false,
+        "trust_lookup_performed": false
+      },
+      "trust_context": {
+        "trust_context_ref": "trust.synthetic.passive.owner_autonomy",
+        "owner_autonomy_ref": "autonomy.synthetic.owner_controlled",
+        "trusted_device_ref": "device.synthetic.reference_only",
+        "grants_trust": false,
+        "enforces_trust": false,
+        "live_lookup_performed": false
+      },
+      "privacy": {
+        "privacy_class": "confidential",
+        "redaction_class": "reference_only",
+        "retention_class": "short_lived",
+        "visibility_class": "operator_only",
+        "raw_content_allowed_in_fixture": false
+      },
+      "lineage": {
+        "lineage_seed_ref": "lineage.synthetic.seed.voice.001",
+        "audit_persisted": false,
+        "spine_event_created": false
+      },
+      "handoff": {
+        "next_boundary": "future_intentenvelope",
+        "requires_intentenvelope": true,
+        "requires_guardiandecision_before_consequential_behavior": true,
+        "authorizes_action": false,
+        "approves_action": false,
+        "executes_action": false
+      },
+      "capability_flags": {
+        "can_parse_action": false,
+        "can_call_model": false,
+        "can_select_tools": false,
+        "can_expose_tools": false,
+        "can_execute_tools": false,
+        "can_write_terminal": false,
+        "can_call_robotics": false,
+        "can_approve": false,
+        "can_enforce_policy": false,
+        "can_persist_audit": false,
+        "can_perform_live_auth_session_trust_lookup": false,
+        "can_import_sparkbot": false,
+        "can_wire_sparkbot": false
+      },
+      "blocked_capabilities": [
+        "natural_language_parsing_into_action",
+        "model_calls",
+        "tool_exposure_or_execution",
+        "terminal_pty_behavior",
+        "robotics_behavior",
+        "approval_or_policy_enforcement",
+        "audit_persistence",
+        "live_auth_session_trust_lookup",
+        "sparkbot_import_or_wiring",
+        "production_integration"
+      ]
+    }
+  ],
+  "phase_4_4_no_go": [
+    "runtime_behavior",
+    "executable_pipeline",
+    "test_only_composition_harness",
+    "live_adapter_code",
+    "sparkbot_import_wiring_route_import_or_code_copy",
+    "model_calls",
+    "tool_execution",
+    "terminal_or_pty_behavior",
+    "robotics_behavior",
+    "live_auth_session_trust_lookup",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "policy_enforcement",
+    "adaptive_trust_enforcement",
+    "audit_persistence",
+    "lima_ai_office_implementation",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "drone_control",
+    "iot_control",
+    "physical_world_action",
+    "production_shell_implementation"
+  ],
+  "ready_for": [
+    "phase_4_5_boundary_readiness_review"
+  ],
+  "not_ready_for": [
+    "runtime_extraction_implementation",
+    "sparkbot_runtime_integration",
+    "sparkbot_import_or_wiring",
+    "tool_execution",
+    "terminal_pty_execution",
+    "robotics_command_execution",
+    "physical_world_action",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "production_wiring"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_files_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "sparkbot_code_copied": false,
+    "live_adapter_code_added": false,
+    "model_calls_added": false,
+    "tool_execution_added": false,
+    "terminal_behavior_added": false,
+    "robotics_behavior_added": false,
+    "live_auth_session_trust_lookup_added": false,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}

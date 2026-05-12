@@ -238,6 +238,8 @@ Phase 4.2 selects the non-executing HumanInput intake boundary for chat and voic
 
 Phase 4.3 defines the Boundary Extraction Safety Gate for the selected HumanInput intake boundary. It permits only a future Phase 4.4 fixture/contract extension if explicitly approved and keeps adapters, runtime extraction, Sparkbot wiring, live lookup, model/tool/terminal/robotics behavior, approval enforcement, audit persistence, product shells, and physical-world action blocked.
 
+Phase 4.4 extends synthetic HumanInput intake fixture/contract metadata for text and voice. The fixtures carry reference-only source, actor, session, trust, privacy, lineage, and handoff metadata and prove they cannot imply authorization, approval, execution, trust lookup, Sparkbot integration, or production runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
