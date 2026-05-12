@@ -1,5 +1,7 @@
 # Extraction Plan
 
+Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using this extraction plan for implementation sequencing.
+
 LIMA Runtime is extracted from Sparkbot in phases. Phase 0 is contracts/docs/stubs only.
 
 Do not migrate code until contracts are approved.

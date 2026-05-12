@@ -6,6 +6,10 @@ This is not a greenfield rewrite. Sparkbot is the battle-tested source of truth.
 
 Company context: [SparkPit Labs](https://sparkpitlabs.com).
 
+## Current Project State
+
+Read `AGENTS.md` and `docs/CURRENT_PROJECT_STATE.md` before acting on roadmap or extraction-plan work. `docs/CURRENT_PROJECT_STATE.md` carries the current phase, latest approved main commit/tag, next intended branch, standing blocked items, and validation policy for Codex/operator workflows.
+
 ## What This Repo Is
 
 LIMA Runtime is the trust-gated operating layer that should eventually sit underneath:

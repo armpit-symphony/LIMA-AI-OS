@@ -1,5 +1,7 @@
 # Architecture Decisions
 
+Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
+
 ## ADR-0001: Extract, Do Not Greenfield
 
 Status: Accepted
