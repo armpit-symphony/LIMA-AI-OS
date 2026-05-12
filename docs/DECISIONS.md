@@ -1365,6 +1365,28 @@ Consequences:
 - LIMA AI Office, ARC Bot, custom bots, robots, drones, IoT, and physical-world action remain blocked
 - next likely work is Phase 3.8 Pipeline Composition Safety Gate Readiness Review
 
+## ADR-0090: Pipeline Composition Safety Gate Is Ready For Final Phase 3 Review
+
+Status: Accepted
+
+Decision:
+
+The Phase 3.7 Pipeline Composition Safety Gate is clear enough to stand as the review gate for future pipeline-composition-adjacent work. Phase 3.8 may route the project to a final Phase 3 readiness review.
+
+Rationale:
+
+The safety gate clearly states that it is not a pipeline, not a harness, not authorization, not approval, not enforcement, not execution, not audit persistence, and not production wiring. It also keeps future harness work behind a separate explicit design review.
+
+Consequences:
+
+- Phase 3.8 is docs/tests/fixtures only
+- test-only composition harness work remains unapproved
+- Phase 3 final readiness review becomes the next safe step
+- Phase 4 planning remains blocked until final Phase 3 readiness review lands
+- production Sparkbot integration remains blocked
+- product shells and physical-world control remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

@@ -226,6 +226,8 @@ Phase 3.6 added a static, non-runtime report/map artifact for the current fixtur
 
 Phase 3.7 adds Pipeline Composition Safety Gate Docs. It is docs/tests/fixtures only and defines preconditions, blockers, and future test-only harness conditions before any later readiness review. It does not add a pipeline, harness, runtime composition, approval, execution, enforcement, audit persistence, Sparkbot wiring, product shell implementation, or physical-world action. The next likely phase after Phase 3.7 is Phase 3.8, Pipeline Composition Safety Gate Readiness Review.
 
+Phase 3.8 reviews the Pipeline Composition Safety Gate and keeps harness work blocked. It is docs/tests/fixtures only and recommends Phase 3 final readiness review before any Phase 4 planning.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

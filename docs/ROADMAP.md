@@ -1776,6 +1776,41 @@ Next likely phase:
 
 - Phase 3.8 - Pipeline Composition Safety Gate Readiness Review
 
+Status:
+
+- complete
+- tagged as `phase-3.7-pipeline-composition-safety-gate-docs`
+
+## Phase 3.8 - Pipeline Composition Safety Gate Readiness Review
+
+Goal:
+
+Review the Phase 3.7 Pipeline Composition Safety Gate before any final Phase 3 readiness decision.
+
+Deliverables:
+
+- `docs/PIPELINE_COMPOSITION_SAFETY_GATE_READINESS_REVIEW.md`
+- `docs/PHASE_3_8_PIPELINE_COMPOSITION_SAFETY_GATE_READINESS_REVIEW.md`
+- `tests/fixtures/kernel_pipeline/pipeline_composition_safety_gate_readiness_review.json`
+- readiness review tests
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no executable pipeline added
+- no test-only composition harness added
+- no Sparkbot import or wiring
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- no approval, enforcement, execution, or audit persistence
+- readiness result identifies Phase 3 final readiness review as the next safe step
+- tests pass
+
+Next likely phase:
+
+- Phase 3 final readiness review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
