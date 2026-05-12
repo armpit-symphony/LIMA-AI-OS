@@ -12,29 +12,31 @@ Phase 3.6 is complete, merged to `main`, and tagged.
 
 Phase 3.7 is complete, merged to `main`, and tagged.
 
-Phase 3.8 is in progress on the implementation branch. It is a readiness review only and must not add a test-only composition harness, runtime pipeline, execution, approval, enforcement, audit persistence, Sparkbot wiring, product shell implementation, or physical-world action.
+Phase 3.8 is complete, merged to `main`, and tagged.
+
+Phase 3.9 final readiness review is in progress on the implementation branch. It is a closing review only and must not start Phase 4 implementation, runtime extraction, Sparkbot integration, execution, approval, enforcement, audit persistence, product shell implementation, or physical-world action.
 
 Latest main commit:
 
-`b34a8eb69f6a939daa22afda7640bb16ac9d5a90`
+`5062553b041ee881beedda72378ff6090b71ac75`
 
 Latest tag:
 
-`phase-3.7-pipeline-composition-safety-gate-docs`
+`phase-3.8-pipeline-composition-safety-gate-readiness-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 3.8 Pipeline Composition Safety Gate Readiness Review, then merge/tag under standing operator approval if validation and boundary checks pass.
+Complete Phase 3 final readiness review, then merge/tag under standing operator approval if validation and boundary checks pass.
 
 Current implementation branch:
 
-`phase-3-8-pipeline-composition-safety-gate-readiness-review`
+`phase-3-9-final-readiness-review`
 
 Latest completed merge:
 
-`b34a8eb69f6a939daa22afda7640bb16ac9d5a90`
+`5062553b041ee881beedda72378ff6090b71ac75`
 
 Recommended PR target:
 
@@ -42,9 +44,9 @@ Recommended PR target:
 
 Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
 
-Next intended milestone after Phase 3.8 lands:
+Next intended milestone after Phase 3 final readiness review lands:
 
-Phase 3 final readiness review.
+Phase 4.0 - Runtime Extraction Readiness Planning.
 
 ## Completed Phase 3 Status
 
@@ -53,7 +55,8 @@ Phase 3 final readiness review.
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine: complete/tagged.
 - Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete/tagged.
 - Phase 3.7 - Pipeline Composition Safety Gate Docs: complete/tagged.
-- Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: in progress.
+- Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: complete/tagged.
+- Phase 3.9 - Final Readiness Review: in progress.
 
 ## Product Direction
 

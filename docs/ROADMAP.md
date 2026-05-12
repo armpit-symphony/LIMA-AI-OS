@@ -1811,6 +1811,41 @@ Next likely phase:
 
 - Phase 3 final readiness review
 
+Status:
+
+- complete
+- tagged as `phase-3.8-pipeline-composition-safety-gate-readiness-review`
+
+## Phase 3.9 - Final Readiness Review
+
+Goal:
+
+Review Phase 3 as a whole and decide whether Phase 4 planning may begin.
+
+Deliverables:
+
+- `docs/PHASE_3_FINAL_READINESS_REVIEW.md`
+- `docs/PHASE_3_9_FINAL_READINESS_REVIEW.md`
+- `tests/fixtures/kernel_pipeline/phase_3_final_readiness_review.json`
+- final readiness review tests
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no executable pipeline added
+- no test-only composition harness added
+- no Sparkbot import or wiring
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- no approval, enforcement, execution, or audit persistence
+- Phase 4 is recommended for planning only
+- tests pass
+
+Next likely phase:
+
+- Phase 4.0 - Runtime Extraction Readiness Planning
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

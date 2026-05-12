@@ -228,6 +228,8 @@ Phase 3.7 adds Pipeline Composition Safety Gate Docs. It is docs/tests/fixtures 
 
 Phase 3.8 reviews the Pipeline Composition Safety Gate and keeps harness work blocked. It is docs/tests/fixtures only and recommends Phase 3 final readiness review before any Phase 4 planning.
 
+Phase 3.9 is the final Phase 3 readiness review. It closes Phase 3 as non-runtime kernel pipeline safety work and recommends Phase 4.0 Runtime Extraction Readiness Planning only. It does not approve Phase 4 implementation, Sparkbot integration, product shell implementation, approval, execution, audit persistence, robot control, or physical-world action.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

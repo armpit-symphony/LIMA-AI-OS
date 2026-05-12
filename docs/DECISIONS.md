@@ -1387,6 +1387,30 @@ Consequences:
 - product shells and physical-world control remain blocked
 - approval, enforcement, execution, and audit persistence remain blocked
 
+## ADR-0091: Phase 3 Completes As Non-runtime Kernel Pipeline Safety Work
+
+Status: Accepted
+
+Decision:
+
+Phase 3 may close as non-runtime kernel pipeline safety work and route the project to Phase 4.0 Runtime Extraction Readiness Planning only.
+
+Rationale:
+
+Phase 3 mapped fixture families, reviewed relationship metadata, added product-family and adaptive-trust doctrine, created a static report/map artifact, established a pipeline composition safety gate, and reviewed that gate. This is enough to plan the next runtime-extraction readiness sequence, but not enough to move behavior.
+
+Consequences:
+
+- Phase 3.9 is docs/tests/fixtures only
+- Phase 4.0 may begin as planning/review only
+- no Phase 4 runtime implementation is approved
+- test-only composition harness work remains separately gated
+- production Sparkbot integration remains blocked
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- product shell implementation remains blocked
+- robot, drone, IoT, and physical-world action remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
