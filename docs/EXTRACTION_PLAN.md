@@ -2201,6 +2201,47 @@ After merge:
 
 - GO only for Phase 3 final readiness review
 
+## Phase 3.9 Gate: Final Readiness Review
+
+Phase 3.9 may review all Phase 3 non-production kernel pipeline safety work and decide whether Phase 4 planning may begin.
+
+GO only for:
+
+- final readiness review documentation
+- final readiness fixture metadata
+- final readiness tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness unless separately approved
+- runtime composition
+- production Sparkbot integration
+- Sparkbot import or wiring
+- real IntentCompiler
+- real GuardianDecision
+- model calls
+- tool execution
+- terminal or PTY execution
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 4.0 Runtime Extraction Readiness Planning
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

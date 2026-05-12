@@ -67,8 +67,8 @@ Current expected sequence:
 
 - Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete/tagged.
 - Phase 3.7 - Pipeline Composition Safety Gate Docs: complete/tagged.
-- Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: current.
-- Phase 3 final readiness review.
+- Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: complete/tagged.
+- Phase 3.9 - Final Readiness Review: current.
 - Phase 3.9 - Optional Test-only Composition Harness Design Review, if explicitly approved later.
 - Phase 3.10 - Optional Test-only Composition Harness, if Phase 3.9 approves it.
 - Phase 3.11 - Optional Composition Harness Readiness Review.
