@@ -43,6 +43,13 @@
       "voice_transcript"
     ]
   },
+  "hardening_rules": {
+    "all_can_flags_must_be_false": true,
+    "authority_ids_forbidden": true,
+    "synthetic_refs_only": true,
+    "unknown_affirmative_capabilities_forbidden": true,
+    "live_integration_identifiers_forbidden": true
+  },
   "fixture_records": [
     {
       "fixture_id": "phase4_4_text_humaninput_synthetic_001",
