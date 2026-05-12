@@ -4,7 +4,9 @@ This file is the first project-state anchor for Codex and operator workflows. Re
 
 ## Current State
 
-Phase 3.5 is complete and tagged.
+Phase 3.5 is complete and tagged on `main`.
+
+Phase 3.6 is complete on the implementation branch and pending PR/review/merge/tag. Do not start Phase 3.7 until Phase 3.6 has been reviewed, merged to `main`, and tagged with explicit operator approval.
 
 Latest main commit:
 
@@ -16,23 +18,34 @@ Latest tag:
 
 ## Current Next Step
 
-Next intended phase:
+Current operator step:
 
-Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact
+Open/review a PR from the Phase 3.6 branch into `main`; merge and tag only after explicit operator approval.
 
-Next intended branch:
+Current completed implementation branch:
 
 `phase-3-6-nonproduction-kernel-pipeline-report-map-artifact`
 
+Phase 3.6 artifact commit:
+
+`32461337a34ae7a097d35dd938841aaa9ad7bdbf`
+
+Recommended PR target:
+
+`main`
+
 Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
 
-After Phase 3.6, the likely next phase is Phase 3.7 - Pipeline Composition Safety Gate Docs.
+Next intended milestone after Phase 3.6 lands:
+
+Phase 3.7 - Pipeline Composition Safety Gate Docs.
 
 ## Completed Phase 3 Status
 
 - Phase 3.3 - Non-production Kernel Pipeline Relationship Metadata: complete/tagged.
 - Phase 3.4 - Relationship Metadata Readiness Review: complete/tagged.
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine: complete/tagged.
+- Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete on branch, pending PR/merge/tag.
 
 ## Product Direction
 
