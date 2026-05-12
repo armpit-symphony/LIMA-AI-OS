@@ -18,29 +18,31 @@ Phase 3.9 final readiness review is complete, merged to `main`, and tagged.
 
 Phase 3 is complete as non-runtime kernel pipeline safety work.
 
-Phase 4.0 is in progress on the implementation branch. It is Runtime Extraction Readiness Planning only and must not start runtime implementation, Sparkbot integration, execution, approval, enforcement, audit persistence, product shell implementation, or physical-world action.
+Phase 4.0 is complete, merged to `main`, and tagged.
+
+Phase 4.1 is the next intended milestone. It is Sparkbot Runtime Reference Refresh only and should inspect Sparkbot as read-only reference/spec material without importing, wiring, copying, or moving behavior.
 
 Latest completed phase merge:
 
-`3c922b3`
+`7846c06`
 
 Latest tag:
 
-`phase-3.9-final-readiness-review`
+`phase-4.0-runtime-extraction-readiness-planning`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 4.0 Runtime Extraction Readiness Planning, then merge/tag under standing operator approval if validation and boundary checks pass.
+Start Phase 4.1 Sparkbot Runtime Reference Refresh when instructed.
 
-Current implementation branch:
+Recommended next branch:
 
-`phase-4-0-runtime-extraction-readiness-planning`
+`phase-4-1-sparkbot-runtime-reference-refresh`
 
 Latest completed merge:
 
-`3c922b3`
+`7846c06`
 
 Recommended PR target:
 
@@ -48,15 +50,15 @@ Recommended PR target:
 
 Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
 
-Next intended milestone after Phase 4.0 lands:
+Next intended milestone:
 
 Phase 4.1 - Sparkbot Runtime Reference Refresh.
 
 ## Active Phase 4 Status
 
-- Phase 4.0 - Runtime Extraction Readiness Planning: in progress.
+- Phase 4.0 - Runtime Extraction Readiness Planning: complete/tagged.
 
-Phase 4.0 is planning only. Phase 4.1 is expected to be read-only Sparkbot reference refresh. Runtime extraction implementation remains blocked.
+Phase 4.1 is expected to be read-only Sparkbot reference refresh. Runtime extraction implementation remains blocked.
 
 ## Completed Phase 3 Status
 
