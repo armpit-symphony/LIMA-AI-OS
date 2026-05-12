@@ -2160,6 +2160,47 @@ After merge:
 
 - GO only for Phase 3.8 Pipeline Composition Safety Gate Readiness Review
 
+## Phase 3.8 Gate: Pipeline Composition Safety Gate Readiness Review
+
+Phase 3.8 may review the Phase 3.7 safety gate and decide whether Phase 3 can move to final readiness review.
+
+GO only for:
+
+- safety gate readiness review documentation
+- readiness review fixture metadata
+- readiness review tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness
+- runtime composition
+- production Sparkbot integration
+- Sparkbot import or wiring
+- real IntentCompiler
+- real GuardianDecision
+- model calls
+- tool execution
+- terminal or PTY execution
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 3 final readiness review
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
