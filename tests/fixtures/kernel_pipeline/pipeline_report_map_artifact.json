@@ -1,0 +1,218 @@
+{
+  "phase": "3.6",
+  "status": "non_runtime_report_map_artifact",
+  "non_runtime": true,
+  "source_phases": [
+    "3.3",
+    "3.4",
+    "3.5"
+  ],
+  "source_tags": [
+    "phase-3.3-nonproduction-kernel-pipeline-relationship-metadata",
+    "phase-3.4-nonproduction-kernel-pipeline-relationship-metadata-readiness-review",
+    "phase-3.5-lima-product-family-adaptive-trust-doctrine"
+  ],
+  "source_commits": [
+    {
+      "phase": "3.3",
+      "merge_commit": "ecb41b1825ff9f4537846c81739f25d3d7184f83"
+    },
+    {
+      "phase": "3.4",
+      "merge_commit": "ce8c8172f06d61c996af486dc20fd32046323361"
+    },
+    {
+      "phase": "3.5",
+      "merge_commit": "5b0c8586267f6f7bab544634422b4a04d2221d2a"
+    }
+  ],
+  "source_fixtures": [
+    "pipeline_relationships.json",
+    "relationship_metadata_readiness_review.json",
+    "lima_product_family.json",
+    "adaptive_trust_gates.json",
+    "human_safety_doctrine.json"
+  ],
+  "report_sections": [
+    "purpose",
+    "source phases",
+    "source fixtures",
+    "conceptual stage map",
+    "relationship summary",
+    "readiness summary",
+    "doctrine context",
+    "known gaps",
+    "blocked interpretations",
+    "ready_for",
+    "not_ready_for"
+  ],
+  "conceptual_stage_map": [
+    {
+      "stage_family": "sparkbot_payload_or_humaninput",
+      "fixture_family_status": "existing_and_partial_reference_fixtures",
+      "description": "Conceptual non-production input-shape family used for reference-only review of Sparkbot-shaped payload and HumanInput-adjacent fixture coverage.",
+      "descriptive_only": true,
+      "does_not_define_execution_order": true,
+      "does_not_define_callable_behavior": true
+    },
+    {
+      "stage_family": "intent_envelope",
+      "fixture_family_status": "existing_typed_metadata_fixtures",
+      "description": "Conceptual typed-intent fixture family based on explicit metadata only, with raw language inference still blocked.",
+      "descriptive_only": true,
+      "does_not_define_execution_order": true,
+      "does_not_define_callable_behavior": true
+    },
+    {
+      "stage_family": "guardian_request",
+      "fixture_family_status": "existing_request_shape_fixtures",
+      "description": "Conceptual Guardian request fixture family that remains a request shape only, not a GuardianDecision or approval grant.",
+      "descriptive_only": true,
+      "does_not_define_execution_order": true,
+      "does_not_define_callable_behavior": true
+    },
+    {
+      "stage_family": "fake_guardian_decision",
+      "fixture_family_status": "existing_test_only_decision_shape_fixtures",
+      "description": "Conceptual fake decision fixture family for test-only decision-shape review, not production authorization.",
+      "descriptive_only": true,
+      "does_not_define_execution_order": true,
+      "does_not_define_callable_behavior": true
+    },
+    {
+      "stage_family": "report_artifact_placeholder",
+      "fixture_family_status": "phase_3_3_placeholder_now_described_by_phase_3_6_static_artifact",
+      "description": "Conceptual report placeholder family now documented by this static non-runtime report/map artifact.",
+      "descriptive_only": true,
+      "does_not_define_execution_order": true,
+      "does_not_define_callable_behavior": true
+    }
+  ],
+  "relationship_summary": {
+    "relationship_metadata_status": "non_runtime_relationship_metadata",
+    "relationships_count": 60,
+    "non_runtime_relationships_count": 60,
+    "scenario_groups": [
+      "low_risk_informational",
+      "calendar_scheduling",
+      "draft_only_communication",
+      "email_send_requires_approval",
+      "terminal_critical",
+      "robot_safety_critical",
+      "secret_access",
+      "payment_deploy_admin_destructive",
+      "invalid_missing_metadata",
+      "clarification_needed",
+      "blocked_unsafe_request",
+      "expired_revoked_superseded_fake_decision"
+    ],
+    "scenario_groups_are_labels_only": true,
+    "stage_references_are_reference_only": true,
+    "relationship_map_is_not_execution_order": true,
+    "relationship_map_is_not_compatibility_proof": true,
+    "relationship_map_does_not_prove_runtime_compatibility": true,
+    "relationship_map_does_not_authorize_runtime_integration": true
+  },
+  "readiness_summary": {
+    "phase_3_4_status": "non_runtime_readiness_review",
+    "ready_for_non_runtime_report_map_artifact": true,
+    "not_ready_for_runtime_pipeline_composition": true,
+    "readiness_finding_is_not_authorization": true,
+    "readiness_finding_is_not_approval": true,
+    "readiness_finding_is_not_enforcement": true,
+    "readiness_finding_is_not_execution": true,
+    "readiness_finding_is_not_audit_persistence": true,
+    "readiness_review_remains_non_runtime": true
+  },
+  "doctrine_context": {
+    "phase_3_5_status": "non_runtime_product_family_adaptive_trust_doctrine",
+    "context_only": true,
+    "non_runtime": true,
+    "non_executable": true,
+    "references": [
+      "LIMA AI OS product-family doctrine",
+      "adaptive trust doctrine",
+      "breakglass evolution doctrine",
+      "human-safety doctrine"
+    ],
+    "doctrine_references_are_not_policy_enforcement": true,
+    "product_family_references_do_not_imply_shell_implementation": true,
+    "future_driver_plane_references_do_not_imply_robot_control": true,
+    "adaptive_trust_references_do_not_imply_adaptive_trust_enforcement": true,
+    "human_safety_references_do_not_imply_executable_policy": true,
+    "sparkbot_reference_remains_reference_only": true,
+    "arc_bot_reference_remains_doctrine_only": true,
+    "custom_bot_reference_remains_doctrine_only": true,
+    "robo_automation_reference_remains_doctrine_only": true
+  },
+  "known_gaps": [
+    "No composition safety gate document exists yet for this mapped fixture path.",
+    "No future readiness review has approved any test-only composition harness.",
+    "No executable pipeline exists.",
+    "No runtime compatibility proof exists.",
+    "No real IntentCompiler exists.",
+    "No real GuardianDecision behavior exists.",
+    "No approval, enforcement, execution, or audit persistence behavior exists.",
+    "No Sparkbot, ARC Bot, custom bot, or robot consumer integration exists.",
+    "Fixture identifiers and scenario coverage may need future standardization before any later harness work."
+  ],
+  "blocked_interpretations": [
+    "executable_pipeline",
+    "test_only_composition_harness",
+    "runtime_composition",
+    "production_sparkbot_integration",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval",
+    "enforcement",
+    "execution",
+    "audit_persistence",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "physical_world_action",
+    "adaptive_trust_enforcement",
+    "policy_enforcement",
+    "shell_implementation",
+    "production_wiring"
+  ],
+  "ready_for": [
+    "non_production_pipeline_composition_safety_gate_documentation",
+    "further_non_runtime_review_of_mapped_fixture_path",
+    "future_readiness_review_before_any_test_only_harness"
+  ],
+  "not_ready_for": [
+    "executable_pipeline",
+    "test_only_composition_harness",
+    "runtime_composition",
+    "production_sparkbot_integration",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval",
+    "enforcement",
+    "execution",
+    "audit_persistence",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "physical_world_action",
+    "adaptive_trust_enforcement",
+    "policy_enforcement",
+    "shell_implementation",
+    "production_wiring"
+  ],
+  "phase_3_6_boundary": {
+    "report_map_artifact_is_not_a_pipeline": true,
+    "stage_map_is_not_execution_order": true,
+    "relationship_map_is_not_compatibility_proof": true,
+    "readiness_finding_is_not_authorization": true,
+    "doctrine_references_are_not_policy_enforcement": true,
+    "product_family_references_do_not_imply_shell_implementation": true,
+    "future_driver_plane_references_do_not_imply_robot_control": true,
+    "no_phase_3_6_artifact_may_be_used_as_approval": true,
+    "no_phase_3_6_artifact_may_be_used_as_enforcement": true,
+    "no_phase_3_6_artifact_may_be_used_as_execution": true,
+    "no_phase_3_6_artifact_may_be_used_as_audit_persistence": true,
+    "no_phase_3_6_artifact_may_be_used_as_production_wiring": true
+  }
+}

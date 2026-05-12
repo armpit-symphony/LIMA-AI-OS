@@ -210,7 +210,9 @@ Phase 3.3 added non-runtime relationship metadata across kernel fixture families
 
 Phase 3.4 reviewed the Phase 3.3 relationship metadata for readiness before future non-production report/map artifact work and is tagged as `phase-3.4-nonproduction-kernel-pipeline-relationship-metadata-readiness-review`.
 
-Phase 3.5 adds non-runtime LIMA Product Family and Adaptive Trust Doctrine docs, tests, and fixtures. It does not implement Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior.
+Phase 3.5 added non-runtime LIMA Product Family and Adaptive Trust Doctrine docs, tests, and fixtures and is tagged as `phase-3.5-lima-product-family-adaptive-trust-doctrine`. It does not implement Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior.
+
+Phase 3.6 is the current non-production kernel pipeline report/map artifact milestone. It is docs/tests/fixtures only and adds a static, non-runtime report/map artifact for the current fixture path. It does not implement a report generator, pipeline, test-only harness, Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior. The next likely phase after Phase 3.6 is Phase 3.7, Pipeline Composition Safety Gate Docs.
 
 ## Runtime Shape
 
@@ -357,6 +359,8 @@ Each shell declares allowed tool packs and permissions. No shell receives every 
 - [docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md](docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md)
 - [docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md](docs/PHASE_2_15_INTENT_ENVELOPE_TEST_FIXTURES.md)
 - [docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md](docs/PHASE_2_16_INTENTENVELOPE_FIXTURE_READINESS_REVIEW.md)
+- [docs/KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md](docs/KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md)
+- [docs/PHASE_3_6_NONPRODUCTION_KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md](docs/PHASE_3_6_NONPRODUCTION_KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md)
 - [docs/INTENTENVELOPE_SAFETY_GATE.md](docs/INTENTENVELOPE_SAFETY_GATE.md)
 - [docs/TOOL_PACK_SCOPING.md](docs/TOOL_PACK_SCOPING.md)
 - [docs/TOOL_PACK_RISK_POLICY.md](docs/TOOL_PACK_RISK_POLICY.md)

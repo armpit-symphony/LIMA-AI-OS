@@ -2075,6 +2075,48 @@ After merge:
 
 - likely return to non-production pipeline report/map artifact work unless a readiness review says otherwise
 
+Status:
+
+- complete
+- tagged as `phase-3.5-lima-product-family-adaptive-trust-doctrine`
+
+## Phase 3.6 Gate: Non-production Kernel Pipeline Report Map Artifact
+
+Phase 3.6 may add a static non-runtime report/map artifact for the current non-production kernel pipeline fixture path.
+
+GO only for:
+
+- report/map artifact documentation
+- report/map artifact fixture
+- report/map artifact tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- report generator
+- executable pipeline
+- test-only composition harness
+- runtime composition
+- production Sparkbot integration
+- Sparkbot import or wiring
+- real IntentCompiler
+- real GuardianDecision
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- Robo-OS driver behavior
+- adaptive trust enforcement
+- approval
+- enforcement
+- execution
+- audit persistence
+- physical-world action
+
+After merge:
+
+- GO only for Phase 3.7 Pipeline Composition Safety Gate Docs
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
