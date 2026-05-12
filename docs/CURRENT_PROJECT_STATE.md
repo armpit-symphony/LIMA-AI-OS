@@ -14,29 +14,33 @@ Phase 3.7 is complete, merged to `main`, and tagged.
 
 Phase 3.8 is complete, merged to `main`, and tagged.
 
-Phase 3.9 final readiness review is in progress on the implementation branch. It is a closing review only and must not start Phase 4 implementation, runtime extraction, Sparkbot integration, execution, approval, enforcement, audit persistence, product shell implementation, or physical-world action.
+Phase 3.9 final readiness review is complete, merged to `main`, and tagged.
 
-Latest main commit:
+Phase 3 is complete as non-runtime kernel pipeline safety work.
 
-`5062553b041ee881beedda72378ff6090b71ac75`
+Phase 4.0 is the next intended milestone. It is Runtime Extraction Readiness Planning only and must not start runtime implementation, Sparkbot integration, execution, approval, enforcement, audit persistence, product shell implementation, or physical-world action.
+
+Latest completed phase merge:
+
+`3c922b3`
 
 Latest tag:
 
-`phase-3.8-pipeline-composition-safety-gate-readiness-review`
+`phase-3.9-final-readiness-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 3 final readiness review, then merge/tag under standing operator approval if validation and boundary checks pass.
+Start Phase 4.0 Runtime Extraction Readiness Planning when instructed.
 
-Current implementation branch:
+Recommended next branch:
 
-`phase-3-9-final-readiness-review`
+`phase-4-0-runtime-extraction-readiness-planning`
 
 Latest completed merge:
 
-`5062553b041ee881beedda72378ff6090b71ac75`
+`3c922b3`
 
 Recommended PR target:
 
@@ -44,7 +48,7 @@ Recommended PR target:
 
 Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
 
-Next intended milestone after Phase 3 final readiness review lands:
+Next intended milestone:
 
 Phase 4.0 - Runtime Extraction Readiness Planning.
 
@@ -56,7 +60,7 @@ Phase 4.0 - Runtime Extraction Readiness Planning.
 - Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete/tagged.
 - Phase 3.7 - Pipeline Composition Safety Gate Docs: complete/tagged.
 - Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: complete/tagged.
-- Phase 3.9 - Final Readiness Review: in progress.
+- Phase 3.9 - Final Readiness Review: complete/tagged.
 
 ## Product Direction
 
