@@ -2242,6 +2242,46 @@ After merge:
 
 - GO only for Phase 4.0 Runtime Extraction Readiness Planning
 
+## Phase 4.0 Gate: Runtime Extraction Readiness Planning
+
+Phase 4.0 may define the runtime-extraction readiness sequence after Phase 3.
+
+GO only for:
+
+- runtime extraction readiness planning documentation
+- static planning fixture metadata
+- planning tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness
+- Sparkbot import or wiring
+- production route imports
+- model calls
+- tool execution
+- terminal or PTY execution
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 4.1 Sparkbot Runtime Reference Refresh
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

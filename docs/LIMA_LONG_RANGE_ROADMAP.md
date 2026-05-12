@@ -69,13 +69,25 @@ Current expected sequence:
 - Phase 3.7 - Pipeline Composition Safety Gate Docs: complete/tagged.
 - Phase 3.8 - Pipeline Composition Safety Gate Readiness Review: complete/tagged.
 - Phase 3.9 - Final Readiness Review: complete/tagged.
-- Phase 4.0 - Runtime Extraction Readiness Planning: next.
-- Phase 3.9 - Optional Test-only Composition Harness Design Review, if explicitly approved later.
-- Phase 3.10 - Optional Test-only Composition Harness, if Phase 3.9 approves it.
-- Phase 3.11 - Optional Composition Harness Readiness Review.
-- Phase 3 final readiness review before any Phase 4 runtime or shell integration planning.
+- Phase 4.0 - Runtime Extraction Readiness Planning: current.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
+
+## Phase 4 Direction
+
+Phase 4 is the runtime extraction readiness phase.
+
+The first safe Phase 4 sequence is:
+
+- Phase 4.0 - Runtime Extraction Readiness Planning.
+- Phase 4.1 - Sparkbot Runtime Reference Refresh.
+- Phase 4.2 - Runtime Boundary Candidate Selection.
+- Phase 4.3 - Boundary Extraction Safety Gate.
+- Phase 4.4 - Boundary Fixture Contract Extension, if approved.
+- Phase 4.5 - Boundary Readiness Review.
+- Explicitly approved narrow non-production extraction or adapter work only after readiness gates.
+
+Phase 4 must not move behavior until a readiness review approves the specific boundary and scope.
 
 ## Standing Phase 3 Boundaries
 

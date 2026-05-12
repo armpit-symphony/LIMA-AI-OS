@@ -1411,6 +1411,29 @@ Consequences:
 - product shell implementation remains blocked
 - robot, drone, IoT, and physical-world action remain blocked
 
+## ADR-0092: Phase 4 Starts With Runtime Extraction Readiness Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 4 begins with runtime extraction readiness planning only. The first recommended boundary is a read-only Sparkbot Runtime Reference Refresh.
+
+Rationale:
+
+Phase 3 closed the non-production kernel pipeline safety work, but it did not prove runtime compatibility or authorize behavior movement. Before extracting anything, LIMA must refresh Sparkbot reference knowledge, choose a narrow boundary, and define the contract, fixture, test, and safety gates required for that boundary.
+
+Consequences:
+
+- Phase 4.0 is docs/tests/fixtures only
+- no runtime behavior is moved
+- Sparkbot remains the spec but is not imported or wired
+- local Sparkbot inspection is deferred to Phase 4.1 and remains read-only
+- Phase 4.1 becomes Sparkbot Runtime Reference Refresh
+- real IntentCompiler and GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- product shells and physical-world control remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

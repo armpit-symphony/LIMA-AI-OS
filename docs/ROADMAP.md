@@ -1846,6 +1846,43 @@ Next likely phase:
 
 - Phase 4.0 - Runtime Extraction Readiness Planning
 
+Status:
+
+- complete
+- tagged as `phase-3.9-final-readiness-review`
+
+## Phase 4.0 - Runtime Extraction Readiness Planning
+
+Goal:
+
+Define the safe Phase 4 runtime-extraction readiness sequence before moving any behavior.
+
+Deliverables:
+
+- `docs/PHASE_4_0_RUNTIME_EXTRACTION_READINESS_PLANNING.md`
+- `tests/fixtures/runtime_extraction/phase_4_0_runtime_extraction_readiness_planning.json`
+- planning tests
+- project tracking updates
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no Sparkbot import or wiring
+- no production route imports
+- no model calls or tool execution
+- no terminal or PTY execution
+- no real IntentCompiler or GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- recommended Phase 4.1 is read-only Sparkbot Runtime Reference Refresh
+- tests pass
+
+Next likely phase:
+
+- Phase 4.1 - Sparkbot Runtime Reference Refresh
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

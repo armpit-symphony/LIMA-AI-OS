@@ -230,6 +230,8 @@ Phase 3.8 reviews the Pipeline Composition Safety Gate and keeps harness work bl
 
 Phase 3.9 is the final Phase 3 readiness review. It closes Phase 3 as non-runtime kernel pipeline safety work and recommends Phase 4.0 Runtime Extraction Readiness Planning only. It does not approve Phase 4 implementation, Sparkbot integration, product shell implementation, approval, execution, audit persistence, robot control, or physical-world action.
 
+Phase 4.0 starts Runtime Extraction Readiness Planning. It is planning only and recommends Phase 4.1 Sparkbot Runtime Reference Refresh as the next read-only step. It does not move runtime behavior, import Sparkbot, wire routes, call models, execute tools, enforce approvals, persist audit events, implement product shells, or control physical-world systems.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
