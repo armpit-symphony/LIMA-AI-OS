@@ -236,6 +236,8 @@ Phase 4.1 refreshes Sparkbot runtime reference knowledge from the local Sparkbot
 
 Phase 4.2 selects the non-executing HumanInput intake boundary for chat and voice as the first runtime boundary candidate to carry into a Phase 4.3 safety gate. It does not implement adapters, import Sparkbot, wire routes, parse natural language into action, call models, expose tools, execute commands, enforce policy, persist audit events, or control physical-world systems.
 
+Phase 4.3 defines the Boundary Extraction Safety Gate for the selected HumanInput intake boundary. It permits only a future Phase 4.4 fixture/contract extension if explicitly approved and keeps adapters, runtime extraction, Sparkbot wiring, live lookup, model/tool/terminal/robotics behavior, approval enforcement, audit persistence, product shells, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

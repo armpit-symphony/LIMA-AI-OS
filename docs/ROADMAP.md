@@ -1964,6 +1964,47 @@ Next likely phase:
 
 - Phase 4.3 - Boundary Extraction Safety Gate
 
+Status:
+
+- complete
+- pending merge/tag as `phase-4.3-boundary-extraction-safety-gate`
+
+## Phase 4.3 - Boundary Extraction Safety Gate
+
+Goal:
+
+Define the safety gate for the selected HumanInput intake boundary before any fixture/contract extension or extraction work.
+
+Deliverables:
+
+- `docs/PHASE_4_3_BOUNDARY_EXTRACTION_SAFETY_GATE.md`
+- `tests/fixtures/runtime_extraction/phase_4_3_boundary_extraction_safety_gate.json`
+- static safety gate tests
+- project tracking updates
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- selected candidate remains HumanInput intake boundary for chat and voice
+- gate permits only Phase 4.4 fixture/contract extension if explicitly approved
+- no Sparkbot files modified
+- no Sparkbot code copied into LIMA
+- no Sparkbot import or wiring
+- no production route imports
+- no model calls or tool execution
+- no terminal or PTY execution
+- no robotics command execution
+- no real IntentCompiler or GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no live auth/session/trust lookup
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- tests pass
+
+Next possible phase:
+
+- Phase 4.4 - Boundary Fixture Contract Extension, if explicitly approved
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
