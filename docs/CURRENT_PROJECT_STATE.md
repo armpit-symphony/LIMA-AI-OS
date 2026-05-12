@@ -2,6 +2,8 @@
 
 This file is the first project-state anchor for Codex and operator workflows. Read it before acting on roadmap, extraction-plan, or older thread context.
 
+For long-range product direction, Phase 3 continuation assumptions, and operator decisions that prevent repeated stops, read `docs/LIMA_LONG_RANGE_ROADMAP.md`.
+
 ## Current State
 
 Phase 3.5 is complete and tagged on `main`.

@@ -7,10 +7,11 @@ LIMA-AI-OS belongs to SparkPit Labs. It is the trust-governed natural-language o
 Before doing work, read these files in order:
 
 1. `docs/CURRENT_PROJECT_STATE.md`
-2. `README.md`
-3. `docs/ROADMAP.md`
-4. `docs/DECISIONS.md`
-5. `docs/EXTRACTION_PLAN.md`
+2. `docs/LIMA_LONG_RANGE_ROADMAP.md`
+3. `README.md`
+4. `docs/ROADMAP.md`
+5. `docs/DECISIONS.md`
+6. `docs/EXTRACTION_PLAN.md`
 
 Follow the LIMA Runtime Architect discipline:
 
