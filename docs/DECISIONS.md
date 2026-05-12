@@ -1434,6 +1434,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - product shells and physical-world control remain blocked
 
+## ADR-0093: Sparkbot Reference Refresh Selects HumanInput Candidate Direction
+
+Status: Accepted
+
+Decision:
+
+Phase 4.1 refreshes Sparkbot runtime reference knowledge as read-only planning material and recommends HumanInput intake for chat and voice as the first boundary candidate to evaluate in Phase 4.2.
+
+Rationale:
+
+Sparkbot shows text and voice paths converging into a tool-aware chat loop that also handles model routing, tool selection, Guardian policy, approvals, guarded execution, audit, verifier, and memory concerns. That loop is too coupled and too action-capable to extract first. A HumanInput intake boundary can preserve the text/voice reference shape while staying non-executing and forcing typed intent plus Guardian decision gates before consequential behavior.
+
+Consequences:
+
+- Phase 4.1 is docs/tests/fixtures only
+- Sparkbot remains read-only reference/spec material
+- no Sparkbot code is copied, imported, or wired
+- Phase 4.2 should select and bound a non-executing HumanInput intake candidate
+- tool-aware loop, tool dispatcher, terminal/PTY, robotics, approval execution, and product shells remain deferred
+- runtime extraction implementation remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- physical-world control remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
