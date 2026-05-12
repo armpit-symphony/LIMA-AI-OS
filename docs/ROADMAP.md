@@ -1926,7 +1926,7 @@ Next likely phase:
 Status:
 
 - complete
-- pending merge/tag as `phase-4.2-runtime-boundary-candidate-selection`
+- tagged as `phase-4.2-runtime-boundary-candidate-selection`
 
 ## Phase 4.2 - Runtime Boundary Candidate Selection
 
