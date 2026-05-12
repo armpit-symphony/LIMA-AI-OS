@@ -22,7 +22,9 @@ Phase 4.0 is complete, merged to `main`, and tagged.
 
 Phase 4.1 Sparkbot Runtime Reference Refresh is complete, merged to `main`, and tagged. It inspected Sparkbot as read-only reference/spec material without importing, wiring, copying, or moving behavior.
 
-Phase 4.2 is the next intended milestone. It should select a narrow runtime boundary candidate before any extraction work.
+Phase 4.2 Runtime Boundary Candidate Selection is complete in the current implementation branch. It selects the non-executing HumanInput intake boundary for chat and voice as the first candidate to carry into a safety gate.
+
+Phase 4.3 is the next intended milestone after Phase 4.2 is merged and tagged. It should define the Boundary Extraction Safety Gate for the selected HumanInput intake boundary.
 
 Latest completed phase merge:
 
@@ -36,15 +38,15 @@ Latest tag:
 
 Current operator step:
 
-Start Phase 4.2 Runtime Boundary Candidate Selection when instructed.
+Review, merge, and tag Phase 4.2 Runtime Boundary Candidate Selection, then start Phase 4.3 Boundary Extraction Safety Gate.
 
 Recommended next branch:
 
-`phase-4-2-runtime-boundary-candidate-selection`
+`phase-4-3-boundary-extraction-safety-gate`
 
 Latest completed merge:
 
-`7846c06`
+`8fb9a09`
 
 Recommended PR target:
 
@@ -54,14 +56,15 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.2 - Runtime Boundary Candidate Selection.
+Phase 4.3 - Boundary Extraction Safety Gate.
 
 ## Active Phase 4 Status
 
 - Phase 4.0 - Runtime Extraction Readiness Planning: complete/tagged.
 - Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
+- Phase 4.2 - Runtime Boundary Candidate Selection: branch complete; pending merge/tag.
 
-Phase 4.1 found the safest next candidate direction is non-executing HumanInput intake boundary selection for chat and voice. Runtime extraction implementation remains blocked.
+Phase 4.2 selects non-executing HumanInput intake boundary for chat and voice as the first safety-gate candidate. Runtime extraction implementation remains blocked.
 
 ## Completed Phase 3 Status
 

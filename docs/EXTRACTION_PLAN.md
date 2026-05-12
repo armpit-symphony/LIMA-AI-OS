@@ -2323,6 +2323,50 @@ After merge:
 
 - GO only for Phase 4.2 Runtime Boundary Candidate Selection
 
+## Phase 4.2 Gate: Runtime Boundary Candidate Selection
+
+Phase 4.2 may select one runtime boundary candidate to carry into a safety gate. It does not approve extraction implementation.
+
+GO only for:
+
+- candidate selection documentation
+- static candidate-selection fixture metadata
+- static candidate-selection tests
+- project tracking doc updates
+
+Selected candidate:
+
+- HumanInput intake boundary for chat and voice
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness
+- Sparkbot import, wiring, route import, or code copy
+- model calls
+- tool execution
+- terminal or PTY execution
+- robotics command execution
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 4.3 Boundary Extraction Safety Gate
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.
