@@ -65,8 +65,8 @@ Phase 3 must continue to keep runtime behavior blocked unless an explicit future
 
 Current expected sequence:
 
-- Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact.
-- Phase 3.7 - Pipeline Composition Safety Gate Docs.
+- Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete/tagged.
+- Phase 3.7 - Pipeline Composition Safety Gate Docs: current.
 - Phase 3.8 - Pipeline Composition Safety Gate Readiness Review.
 - Phase 3.9 - Optional Test-only Composition Harness Design Review, if explicitly approved.
 - Phase 3.10 - Optional Test-only Composition Harness, if Phase 3.9 approves it.

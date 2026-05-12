@@ -8,29 +8,31 @@ For long-range product direction, Phase 3 continuation assumptions, and operator
 
 Phase 3.5 is complete and tagged on `main`.
 
-Phase 3.6 is complete on the implementation branch and pending PR/review/merge/tag. Do not start Phase 3.7 until Phase 3.6 has been reviewed, merged to `main`, and tagged with explicit operator approval.
+Phase 3.6 is complete, merged to `main`, and tagged.
+
+Phase 3.7 is in progress on the implementation branch. It is docs/tests/fixtures only and must not add a test-only composition harness, runtime pipeline, execution, approval, enforcement, audit persistence, Sparkbot wiring, product shell implementation, or physical-world action.
 
 Latest main commit:
 
-`5b0c8586267f6f7bab544634422b4a04d2221d2a`
+`8073df2af44560986af5bc07142e413fde4be58a`
 
 Latest tag:
 
-`phase-3.5-lima-product-family-adaptive-trust-doctrine`
+`phase-3.6-nonproduction-kernel-pipeline-report-map-artifact`
 
 ## Current Next Step
 
 Current operator step:
 
-Open/review a PR from the Phase 3.6 branch into `main`; merge and tag only after explicit operator approval.
+Complete Phase 3.7 Pipeline Composition Safety Gate Docs, then merge/tag under standing operator approval if validation and boundary checks pass.
 
-Current completed implementation branch:
+Current implementation branch:
 
-`phase-3-6-nonproduction-kernel-pipeline-report-map-artifact`
+`phase-3-7-pipeline-composition-safety-gate-docs`
 
-Phase 3.6 artifact commit:
+Latest completed merge:
 
-`32461337a34ae7a097d35dd938841aaa9ad7bdbf`
+`8073df2af44560986af5bc07142e413fde4be58a`
 
 Recommended PR target:
 
@@ -38,16 +40,17 @@ Recommended PR target:
 
 Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
 
-Next intended milestone after Phase 3.6 lands:
+Next intended milestone after Phase 3.7 lands:
 
-Phase 3.7 - Pipeline Composition Safety Gate Docs.
+Phase 3.8 - Pipeline Composition Safety Gate Readiness Review.
 
 ## Completed Phase 3 Status
 
 - Phase 3.3 - Non-production Kernel Pipeline Relationship Metadata: complete/tagged.
 - Phase 3.4 - Relationship Metadata Readiness Review: complete/tagged.
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine: complete/tagged.
-- Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete on branch, pending PR/merge/tag.
+- Phase 3.6 - Non-production Kernel Pipeline Report/Map Artifact: complete/tagged.
+- Phase 3.7 - Pipeline Composition Safety Gate Docs: in progress.
 
 ## Product Direction
 

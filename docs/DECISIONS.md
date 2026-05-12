@@ -1338,6 +1338,33 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - next likely work is Phase 3.7 Pipeline Composition Safety Gate Docs
 
+## ADR-0089: Pipeline Composition Safety Gate Must Precede Harness Work
+
+Status: Accepted
+
+Decision:
+
+LIMA will add a non-runtime pipeline composition safety gate before any future test-only composition harness can be proposed.
+
+Rationale:
+
+Phase 3.6 made the current fixture path easier to review, but report/map artifacts can be mistaken for executable order or compatibility proof. A standing safety gate preserves the boundary that fixture families, stage maps, relationship metadata, readiness findings, and doctrine references remain descriptive until a later readiness review explicitly approves any test-only harness design.
+
+Consequences:
+
+- Phase 3.7 is docs/tests/fixtures only
+- the safety gate is not a pipeline
+- the safety gate is not a harness
+- test-only composition harness work remains blocked
+- runtime composition remains blocked
+- production Sparkbot integration remains blocked
+- Sparkbot remains reference-only and is not imported or wired
+- real IntentCompiler remains blocked
+- real GuardianDecision remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- LIMA AI Office, ARC Bot, custom bots, robots, drones, IoT, and physical-world action remain blocked
+- next likely work is Phase 3.8 Pipeline Composition Safety Gate Readiness Review
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

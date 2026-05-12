@@ -222,7 +222,9 @@ Phase 3.4 reviewed the Phase 3.3 relationship metadata for readiness before futu
 
 Phase 3.5 added non-runtime LIMA Product Family and Adaptive Trust Doctrine docs, tests, and fixtures and is tagged as `phase-3.5-lima-product-family-adaptive-trust-doctrine`. It does not implement Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior.
 
-Phase 3.6 is the current non-production kernel pipeline report/map artifact milestone. It is docs/tests/fixtures only and adds a static, non-runtime report/map artifact for the current fixture path. It does not implement a report generator, pipeline, test-only harness, Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior. The next likely phase after Phase 3.6 is Phase 3.7, Pipeline Composition Safety Gate Docs.
+Phase 3.6 added a static, non-runtime report/map artifact for the current fixture path and is tagged as `phase-3.6-nonproduction-kernel-pipeline-report-map-artifact`. It does not implement a report generator, pipeline, test-only harness, Sparkbot, ARC Bot, custom bots, robot control, adaptive trust enforcement, approval, execution, audit persistence, or runtime behavior.
+
+Phase 3.7 adds Pipeline Composition Safety Gate Docs. It is docs/tests/fixtures only and defines preconditions, blockers, and future test-only harness conditions before any later readiness review. It does not add a pipeline, harness, runtime composition, approval, execution, enforcement, audit persistence, Sparkbot wiring, product shell implementation, or physical-world action. The next likely phase after Phase 3.7 is Phase 3.8, Pipeline Composition Safety Gate Readiness Review.
 
 ## Runtime Shape
 
