@@ -1,5 +1,7 @@
 # Architecture Decisions
 
+Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
+
 ## ADR-0001: Extract, Do Not Greenfield
 
 Status: Accepted
@@ -1309,6 +1311,32 @@ Consequences:
 - breakglass behavior is unchanged
 - human-safety doctrine is non-runtime and non-executable
 - runtime trust gate engine, approvals, enforcement, execution, audit persistence, robot control, and production wiring remain blocked
+
+## ADR-0088: Kernel Pipeline Report Map Artifact Is Not Runtime Wiring
+
+Decision:
+
+LIMA may add a static non-runtime report/map artifact for the current non-production kernel pipeline fixture path, but the artifact must not be treated as a pipeline, execution order, compatibility proof, authorization, policy enforcement, approval, execution, audit persistence, or production wiring.
+
+Rationale:
+
+Phase 3.3 relationship metadata and Phase 3.4 readiness findings are useful review material, and Phase 3.5 doctrine gives product-family context. A static report/map artifact helps reviewers understand those sources before any future composition safety gate, while keeping runtime behavior blocked.
+
+Consequences:
+
+- Phase 3.6 is docs/tests/fixtures only
+- no report generator is added
+- no executable pipeline is added
+- no test-only composition harness is added
+- production Sparkbot integration remains blocked
+- Sparkbot remains reference-only and is not imported or wired
+- ARC Bot and custom bots remain doctrine/reference only
+- Robo and automation consumers remain doctrine/reference only
+- real IntentCompiler remains blocked
+- real GuardianDecision remains blocked
+- adaptive trust enforcement remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- next likely work is Phase 3.7 Pipeline Composition Safety Gate Docs
 
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 

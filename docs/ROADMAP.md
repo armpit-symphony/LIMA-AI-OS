@@ -1,5 +1,7 @@
 # Roadmap
 
+Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using this roadmap for implementation sequencing.
+
 LIMA Runtime is SparkPit Labs' trust-gated automation and robotics runtime. Sparkbot is the R&D shell and parity source. Arc / LIMA AI Office becomes the office shell. Robo-OS becomes the robotics driver layer. SparkPit becomes the web, community, and research shell.
 
 ## Near-Term Milestones
@@ -1677,6 +1679,66 @@ Acceptance criteria:
 Next likely phase:
 
 - return to non-production pipeline report/map artifact work unless a readiness review says otherwise
+
+Status:
+
+- complete
+- tagged as `phase-3.5-lima-product-family-adaptive-trust-doctrine`
+
+## Phase 3.6 - Non-production Kernel Pipeline Report Map Artifact
+
+Goal:
+
+Add a static, non-runtime report/map artifact summarizing the current non-production kernel pipeline fixture path, relationship metadata, readiness status, known gaps, and doctrine references.
+
+Deliverables:
+
+- `docs/KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md`
+- `docs/PHASE_3_6_NONPRODUCTION_KERNEL_PIPELINE_REPORT_MAP_ARTIFACT.md`
+- `tests/fixtures/kernel_pipeline/pipeline_report_map_artifact.json`
+- report/map artifact tests
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no report generator added
+- no executable pipeline added
+- no test-only composition harness added
+- no Sparkbot import or wiring
+- no ARC Bot implementation
+- no custom bot implementation
+- no robot control or Robo-OS driver behavior
+- no adaptive trust enforcement
+- no approval, execution, enforcement, or audit persistence
+- Phase 3.3 relationships remain `non_runtime: true`
+- Phase 3.4 readiness metadata remains non-runtime
+- Phase 3.5 doctrine metadata remains non-runtime
+- tests pass
+
+Ready for:
+
+- non-production pipeline composition safety gate documentation
+- further non-runtime review of the mapped fixture path
+- future readiness review before any test-only harness
+
+Not ready for:
+
+- executable pipeline
+- test-only composition harness
+- runtime composition
+- production Sparkbot integration
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- physical-world action
+
+Next likely phase:
+
+- Phase 3.7 - Pipeline Composition Safety Gate Docs
 
 Reserved from Phase 3.4:
 
