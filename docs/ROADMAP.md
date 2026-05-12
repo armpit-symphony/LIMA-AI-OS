@@ -1967,7 +1967,7 @@ Next likely phase:
 Status:
 
 - complete
-- pending merge/tag as `phase-4.3-boundary-extraction-safety-gate`
+- tagged as `phase-4.3-boundary-extraction-safety-gate`
 
 ## Phase 4.3 - Boundary Extraction Safety Gate
 

@@ -24,23 +24,23 @@ Phase 4.1 Sparkbot Runtime Reference Refresh is complete, merged to `main`, and 
 
 Phase 4.2 Runtime Boundary Candidate Selection is complete, merged to `main`, and tagged. It selects the non-executing HumanInput intake boundary for chat and voice as the first candidate to carry into a safety gate.
 
-Phase 4.3 Boundary Extraction Safety Gate is complete in the current implementation branch. It defines the safety gate for the selected HumanInput intake boundary.
+Phase 4.3 Boundary Extraction Safety Gate is complete, merged to `main`, and tagged. It defines the safety gate for the selected HumanInput intake boundary.
 
 Phase 4.4 Boundary Fixture Contract Extension is the next possible milestone only if explicitly approved. It should remain fixtures/contracts/tests only and must not implement adapters or runtime behavior.
 
 Latest completed phase merge:
 
-`0149c0b`
+`9e2acfa`
 
 Latest tag:
 
-`phase-4.2-runtime-boundary-candidate-selection`
+`phase-4.3-boundary-extraction-safety-gate`
 
 ## Current Next Step
 
 Current operator step:
 
-Review, merge, and tag Phase 4.3 Boundary Extraction Safety Gate.
+Approve or decline Phase 4.4 Boundary Fixture Contract Extension.
 
 Recommended next branch:
 
@@ -65,7 +65,7 @@ Phase 4.4 - Boundary Fixture Contract Extension, if explicitly approved.
 - Phase 4.0 - Runtime Extraction Readiness Planning: complete/tagged.
 - Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
-- Phase 4.3 - Boundary Extraction Safety Gate: branch complete; pending merge/tag.
+- Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 
 Phase 4.3 defines the safety gate for non-executing HumanInput intake boundary for chat and voice. Runtime extraction implementation remains blocked.
 
