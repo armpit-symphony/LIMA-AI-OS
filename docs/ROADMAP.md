@@ -1886,7 +1886,7 @@ Next likely phase:
 Status:
 
 - complete
-- pending merge/tag as `phase-4.1-sparkbot-runtime-reference-refresh`
+- tagged as `phase-4.1-sparkbot-runtime-reference-refresh`
 
 ## Phase 4.1 - Sparkbot Runtime Reference Refresh
 

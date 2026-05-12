@@ -20,23 +20,23 @@ Phase 3 is complete as non-runtime kernel pipeline safety work.
 
 Phase 4.0 is complete, merged to `main`, and tagged.
 
-Phase 4.1 Sparkbot Runtime Reference Refresh is complete in the current implementation branch. It inspected Sparkbot as read-only reference/spec material without importing, wiring, copying, or moving behavior.
+Phase 4.1 Sparkbot Runtime Reference Refresh is complete, merged to `main`, and tagged. It inspected Sparkbot as read-only reference/spec material without importing, wiring, copying, or moving behavior.
 
-Phase 4.2 is the next intended milestone after Phase 4.1 is merged and tagged. It should select a narrow runtime boundary candidate before any extraction work.
+Phase 4.2 is the next intended milestone. It should select a narrow runtime boundary candidate before any extraction work.
 
 Latest completed phase merge:
 
-`7846c06`
+`8fb9a09`
 
 Latest tag:
 
-`phase-4.0-runtime-extraction-readiness-planning`
+`phase-4.1-sparkbot-runtime-reference-refresh`
 
 ## Current Next Step
 
 Current operator step:
 
-Review, merge, and tag Phase 4.1 Sparkbot Runtime Reference Refresh, then start Phase 4.2 Runtime Boundary Candidate Selection.
+Start Phase 4.2 Runtime Boundary Candidate Selection when instructed.
 
 Recommended next branch:
 
@@ -59,7 +59,7 @@ Phase 4.2 - Runtime Boundary Candidate Selection.
 ## Active Phase 4 Status
 
 - Phase 4.0 - Runtime Extraction Readiness Planning: complete/tagged.
-- Phase 4.1 - Sparkbot Runtime Reference Refresh: branch complete; pending merge/tag.
+- Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
 
 Phase 4.1 found the safest next candidate direction is non-executing HumanInput intake boundary selection for chat and voice. Runtime extraction implementation remains blocked.
 
