@@ -2282,6 +2282,47 @@ After merge:
 
 - GO only for Phase 4.1 Sparkbot Runtime Reference Refresh
 
+## Phase 4.1 Gate: Sparkbot Runtime Reference Refresh
+
+Phase 4.1 may inspect Sparkbot as read-only reference/spec material before selecting a runtime boundary candidate.
+
+GO only for:
+
+- read-only Sparkbot reference inspection
+- reference refresh documentation
+- static reference fixture metadata
+- static reference tests
+- project tracking doc updates
+
+Still blocked:
+
+- runtime behavior
+- executable pipeline
+- test-only composition harness
+- Sparkbot import, wiring, route import, or code copy
+- model calls
+- tool execution
+- terminal or PTY execution
+- robotics command execution
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- policy enforcement
+- adaptive trust enforcement
+- audit persistence
+- LIMA AI Office implementation
+- ARC Bot implementation
+- custom bot implementation
+- robot control
+- drone control
+- IoT control
+- physical-world action
+- production shell implementation
+
+After merge:
+
+- GO only for Phase 4.2 Runtime Boundary Candidate Selection
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

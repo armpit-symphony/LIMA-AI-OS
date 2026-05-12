@@ -1883,6 +1883,46 @@ Next likely phase:
 
 - Phase 4.1 - Sparkbot Runtime Reference Refresh
 
+Status:
+
+- complete
+- pending merge/tag as `phase-4.1-sparkbot-runtime-reference-refresh`
+
+## Phase 4.1 - Sparkbot Runtime Reference Refresh
+
+Goal:
+
+Refresh Sparkbot runtime reference knowledge as read-only planning material before choosing any extraction candidate.
+
+Deliverables:
+
+- `docs/PHASE_4_1_SPARKBOT_RUNTIME_REFERENCE_REFRESH.md`
+- `tests/fixtures/runtime_extraction/phase_4_1_sparkbot_runtime_reference_refresh.json`
+- static reference-refresh tests
+- project tracking updates
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- local Sparkbot is inspected read-only
+- no Sparkbot files modified
+- no Sparkbot code copied into LIMA
+- no Sparkbot import or wiring
+- no production route imports
+- no model calls or tool execution
+- no terminal or PTY execution
+- no robotics command execution
+- no real IntentCompiler or GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- recommended Phase 4.2 is Runtime Boundary Candidate Selection
+- tests pass
+
+Next likely phase:
+
+- Phase 4.2 - Runtime Boundary Candidate Selection
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

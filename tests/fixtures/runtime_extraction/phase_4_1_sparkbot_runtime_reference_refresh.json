@@ -1,0 +1,159 @@
+{
+  "phase": "4.1",
+  "status": "sparkbot_runtime_reference_refresh_only",
+  "non_runtime": true,
+  "reference_document": "docs/PHASE_4_1_SPARKBOT_RUNTIME_REFERENCE_REFRESH.md",
+  "source_phase": "4.0",
+  "source_tag": "phase-4.0-runtime-extraction-readiness-planning",
+  "local_sparkbot_reference": {
+    "inspected": true,
+    "read_only": true,
+    "path": "C:/Users/limap/Sparkbot",
+    "branch": "main",
+    "commit": "27bd7dd8ce9e164c6068a13b1855ccc62c7bbe7c",
+    "dirty": true,
+    "untracked_files": [
+      "scripts/file_v1_6_72_proposals.py",
+      "scripts/file_v1_6_75_proposals.py"
+    ],
+    "sparkbot_files_modified": false,
+    "code_copied_into_lima": false,
+    "sparkbot_imported_or_wired": false
+  },
+  "reviewed_surfaces": [
+    "chat_websocket_room_surfaces",
+    "voice_to_chat_transcription_surface",
+    "tool_aware_chat_model_loop",
+    "tool_catalogue_and_dispatcher",
+    "guardian_policy_decision_surface",
+    "guardian_suite_entrypoint",
+    "dashboard_approval_execution_surface",
+    "breakglass_vault_task_guardian_routes",
+    "mcp_registry_explain_plan_and_approval_routes",
+    "robotics_bridge_route_and_service",
+    "terminal_route_and_pty_manager",
+    "workstation_command_center_spine_frontend_surfaces"
+  ],
+  "surface_findings": {
+    "chat_and_voice": {
+      "text_and_voice_converge": true,
+      "future_boundary": "humaninput_intake",
+      "requires_typed_intent_before_consequential_execution": true
+    },
+    "tool_aware_loop": {
+      "combines_model_routing_tool_selection_policy_approval_execution_audit_memory": true,
+      "extract_as_single_kernel_primitive": false,
+      "requires_split_boundaries": true
+    },
+    "tool_catalogue": {
+      "broad_catalogue": true,
+      "includes_terminal_robotics_dynamic_and_external_surfaces": true,
+      "requires_deny_by_default_tool_pack_scoping": true
+    },
+    "guardian": {
+      "useful_reference": true,
+      "sparkbot_coupled": true,
+      "requires_contract_and_decoupling_work_before_behavior_moves": true
+    },
+    "mcp": {
+      "dry_run_planning_reference": true,
+      "approval_state_reference": true,
+      "execution_not_selected_for_first_boundary": true
+    },
+    "terminal": {
+      "critical_risk": true,
+      "raw_pty_input_surface": true,
+      "command_level_policy_not_kernel_ready": true,
+      "do_not_extract_first": true
+    },
+    "robotics": {
+      "critical_risk": true,
+      "has_dry_run_and_approval_metadata": true,
+      "has_execution_surface": true,
+      "physical_world_action_blocked": true,
+      "do_not_extract_first": true
+    },
+    "frontend_shells": {
+      "useful_shell_reference": true,
+      "kernel_code": false
+    }
+  },
+  "recommended_phase_4_2_focus": "runtime_boundary_candidate_selection",
+  "recommended_first_candidate": "humaninput_intake_boundary_for_chat_and_voice",
+  "candidate_rationale": [
+    "can_be_described_without_runtime_execution",
+    "preserves_text_voice_convergence_as_reference",
+    "keeps_raw_language_from_becoming_execution",
+    "does_not_require_sparkbot_imports_or_wiring",
+    "does_not_require_tool_model_terminal_robotics_or_physical_world_behavior"
+  ],
+  "deferred_candidates": [
+    "model_harness_and_tool_aware_loop_extraction",
+    "broad_tool_catalogue_dispatcher_extraction",
+    "real_guardian_policy_or_enforcement_extraction",
+    "dashboard_approval_execution_extraction",
+    "terminal_pty_extraction",
+    "robotics_command_execution_extraction",
+    "production_sparkbot_adapter_wiring",
+    "lima_ai_office_arc_or_custom_bot_implementation"
+  ],
+  "phase_4_1_go": [
+    "reference_refresh_documentation",
+    "static_reference_fixture_metadata",
+    "static_reference_tests",
+    "project_tracking_updates"
+  ],
+  "phase_4_1_no_go": [
+    "runtime_behavior",
+    "executable_pipeline",
+    "test_only_composition_harness",
+    "sparkbot_import_wiring_route_import_or_code_copy",
+    "model_calls",
+    "tool_execution",
+    "terminal_or_pty_execution",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "policy_enforcement",
+    "adaptive_trust_enforcement",
+    "audit_persistence",
+    "lima_ai_office_implementation",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "drone_control",
+    "iot_control",
+    "physical_world_action",
+    "production_shell_implementation"
+  ],
+  "ready_for": [
+    "phase_4_2_runtime_boundary_candidate_selection"
+  ],
+  "not_ready_for": [
+    "runtime_extraction_implementation",
+    "sparkbot_runtime_integration",
+    "sparkbot_import_or_wiring",
+    "tool_execution",
+    "terminal_pty_execution",
+    "robotics_command_execution",
+    "physical_world_action",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "production_wiring"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_files_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "sparkbot_code_copied": false,
+    "model_calls_added": false,
+    "tool_execution_added": false,
+    "terminal_execution_added": false,
+    "robot_control_added": false,
+    "physical_world_action_added": false
+  }
+}
