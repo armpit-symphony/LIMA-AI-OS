@@ -1740,6 +1740,42 @@ Next likely phase:
 
 - Phase 3.7 - Pipeline Composition Safety Gate Docs
 
+Status:
+
+- complete
+- tagged as `phase-3.6-nonproduction-kernel-pipeline-report-map-artifact`
+
+## Phase 3.7 - Pipeline Composition Safety Gate Docs
+
+Goal:
+
+Add a standing non-runtime safety gate for future kernel pipeline composition work.
+
+Deliverables:
+
+- `docs/PIPELINE_COMPOSITION_SAFETY_GATE.md`
+- `docs/PHASE_3_7_PIPELINE_COMPOSITION_SAFETY_GATE_DOCS.md`
+- `tests/fixtures/kernel_pipeline/pipeline_composition_safety_gate.json`
+- safety gate tests
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime behavior added
+- no executable pipeline added
+- no test-only composition harness added
+- no Sparkbot import or wiring
+- no real IntentCompiler or GuardianDecision
+- no model calls or tool execution
+- no approval, enforcement, execution, or audit persistence
+- no ARC Bot, LIMA AI Office, custom bot, robot, drone, IoT, or physical-world implementation
+- future harness conditions require later readiness review
+- tests pass
+
+Next likely phase:
+
+- Phase 3.8 - Pipeline Composition Safety Gate Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
