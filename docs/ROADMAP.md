@@ -2005,6 +2005,50 @@ Next possible phase:
 
 - Phase 4.4 - Boundary Fixture Contract Extension, if explicitly approved
 
+Status:
+
+- complete
+- pending merge/tag as `phase-4.4-boundary-fixture-contract-extension`
+
+## Phase 4.4 - Boundary Fixture Contract Extension
+
+Goal:
+
+Extend synthetic HumanInput intake fixture/contract metadata for the selected chat and voice boundary while keeping all behavior blocked.
+
+Deliverables:
+
+- `docs/PHASE_4_4_BOUNDARY_FIXTURE_CONTRACT_EXTENSION.md`
+- `tests/fixtures/runtime_extraction/phase_4_4_humaninput_intake_fixture_contract.json`
+- static inertness and boundary tests
+- project tracking updates
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- synthetic text input fixture shape exists
+- synthetic voice transcript fixture shape exists
+- source, actor, session, trust, privacy, lineage, and handoff metadata are reference-only
+- fixtures cannot imply authorization, approval, execution, trust lookup, or production integration
+- no Sparkbot files modified
+- no Sparkbot code copied into LIMA
+- no live adapter code
+- no Sparkbot import or wiring
+- no production route imports
+- no model calls or tool execution
+- no terminal or PTY behavior
+- no robotics behavior
+- no live auth/session/trust lookup
+- no real IntentCompiler or GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- tests pass
+
+Next likely phase:
+
+- Phase 4.5 - Boundary Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
