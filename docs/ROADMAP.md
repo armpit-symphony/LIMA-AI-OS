@@ -1,5 +1,7 @@
 # Roadmap
 
+Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using this roadmap for implementation sequencing.
+
 LIMA Runtime is SparkPit Labs' trust-gated automation and robotics runtime. Sparkbot is the R&D shell and parity source. Arc / LIMA AI Office becomes the office shell. Robo-OS becomes the robotics driver layer. SparkPit becomes the web, community, and research shell.
 
 ## Near-Term Milestones
