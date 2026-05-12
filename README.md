@@ -234,6 +234,8 @@ Phase 4.0 starts Runtime Extraction Readiness Planning. It is planning only and 
 
 Phase 4.1 refreshes Sparkbot runtime reference knowledge from the local Sparkbot checkout as read-only spec material. It identifies HumanInput intake for chat and voice as the safest Phase 4.2 candidate-selection direction and keeps runtime extraction, Sparkbot wiring, tool execution, terminal/PTY, robotics, product shells, approval enforcement, execution, audit persistence, and physical-world action blocked.
 
+Phase 4.2 selects the non-executing HumanInput intake boundary for chat and voice as the first runtime boundary candidate to carry into a Phase 4.3 safety gate. It does not implement adapters, import Sparkbot, wire routes, parse natural language into action, call models, expose tools, execute commands, enforce policy, persist audit events, or control physical-world systems.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

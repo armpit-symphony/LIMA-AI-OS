@@ -1457,6 +1457,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - physical-world control remains blocked
 
+## ADR-0094: HumanInput Intake Is The First Phase 4 Boundary Candidate
+
+Status: Accepted
+
+Decision:
+
+Phase 4.2 selects HumanInput intake for chat and voice as the first runtime boundary candidate to carry into Phase 4.3 Boundary Extraction Safety Gate.
+
+Rationale:
+
+HumanInput intake can preserve Sparkbot's text/voice convergence while staying non-executing. It is safer than extracting the model harness, tool-aware loop, tool dispatcher, terminal/PTY surface, robotics bridge, dashboard approval execution, or real Guardian enforcement because it can be bounded as source metadata, transcript metadata, actor/session references, privacy references, and downstream handoff requirements.
+
+Consequences:
+
+- Phase 4.2 is docs/tests/fixtures only
+- selected candidate is for safety-gate review, not extraction implementation
+- HumanInput intake cannot parse action, select tools, call models, approve, enforce policy, persist audit data, touch terminal/PTY, or touch robotics
+- Phase 4.3 should define safety gates for this selected candidate
+- Sparkbot remains read-only reference/spec material
+- runtime extraction implementation remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- physical-world control remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

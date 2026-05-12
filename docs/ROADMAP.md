@@ -1923,6 +1923,47 @@ Next likely phase:
 
 - Phase 4.2 - Runtime Boundary Candidate Selection
 
+Status:
+
+- complete
+- pending merge/tag as `phase-4.2-runtime-boundary-candidate-selection`
+
+## Phase 4.2 - Runtime Boundary Candidate Selection
+
+Goal:
+
+Select the first runtime boundary candidate to carry into a safety gate before any extraction work.
+
+Deliverables:
+
+- `docs/PHASE_4_2_RUNTIME_BOUNDARY_CANDIDATE_SELECTION.md`
+- `tests/fixtures/runtime_extraction/phase_4_2_runtime_boundary_candidate_selection.json`
+- static candidate-selection tests
+- project tracking updates
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- selected candidate is HumanInput intake boundary for chat and voice
+- candidate is selected for a safety gate, not extraction
+- no Sparkbot files modified
+- no Sparkbot code copied into LIMA
+- no Sparkbot import or wiring
+- no production route imports
+- no model calls or tool execution
+- no terminal or PTY execution
+- no robotics command execution
+- no real IntentCompiler or GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no product shell implementation
+- no robot, drone, IoT, or physical-world control
+- recommended Phase 4.3 is Boundary Extraction Safety Gate
+- tests pass
+
+Next likely phase:
+
+- Phase 4.3 - Boundary Extraction Safety Gate
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
