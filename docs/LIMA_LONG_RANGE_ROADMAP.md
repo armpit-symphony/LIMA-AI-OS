@@ -73,8 +73,8 @@ Current expected sequence:
 - Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
-- Phase 4.4 - Boundary Fixture Contract Extension: branch complete; pending merge/tag.
-- Phase 4.5 - Boundary Readiness Review: next after Phase 4.4 lands.
+- Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged.
+- Phase 4.5 - Boundary Readiness Review: next.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 

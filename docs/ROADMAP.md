@@ -2008,7 +2008,7 @@ Next possible phase:
 Status:
 
 - complete
-- pending merge/tag as `phase-4.4-boundary-fixture-contract-extension`
+- tagged as `phase-4.4-boundary-fixture-contract-extension`
 
 ## Phase 4.4 - Boundary Fixture Contract Extension
 
