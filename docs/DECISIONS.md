@@ -1480,6 +1480,28 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - physical-world control remains blocked
 
+## ADR-0095: HumanInput Intake Needs A Safety Gate Before Fixture Extension
+
+Status: Accepted
+
+Decision:
+
+Phase 4.3 defines a Boundary Extraction Safety Gate for the selected HumanInput intake boundary. The gate permits only a future fixture/contract extension if explicitly approved; it does not approve adapters, runtime extraction, Sparkbot wiring, or behavior movement.
+
+Rationale:
+
+HumanInput intake is the safest first boundary candidate, but even input records can become unsafe if they perform live lookup, preserve raw private content, parse language into action, or create shortcuts around IntentEnvelope and GuardianDecision. The safety gate requires synthetic or redacted fixture material, reference-only identity/trust fields, no Sparkbot imports, and no execution-capable behavior.
+
+Consequences:
+
+- Phase 4.3 is docs/tests/fixtures only
+- Phase 4.4 may proceed only as fixture/contract extension if explicitly approved
+- HumanInput intake remains before IntentEnvelope and GuardianDecision
+- live auth/session/trust lookup remains blocked
+- runtime extraction implementation remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- physical-world control remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

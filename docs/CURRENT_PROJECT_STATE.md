@@ -24,7 +24,9 @@ Phase 4.1 Sparkbot Runtime Reference Refresh is complete, merged to `main`, and 
 
 Phase 4.2 Runtime Boundary Candidate Selection is complete, merged to `main`, and tagged. It selects the non-executing HumanInput intake boundary for chat and voice as the first candidate to carry into a safety gate.
 
-Phase 4.3 is the next intended milestone. It should define the Boundary Extraction Safety Gate for the selected HumanInput intake boundary.
+Phase 4.3 Boundary Extraction Safety Gate is complete in the current implementation branch. It defines the safety gate for the selected HumanInput intake boundary.
+
+Phase 4.4 Boundary Fixture Contract Extension is the next possible milestone only if explicitly approved. It should remain fixtures/contracts/tests only and must not implement adapters or runtime behavior.
 
 Latest completed phase merge:
 
@@ -38,15 +40,15 @@ Latest tag:
 
 Current operator step:
 
-Start Phase 4.3 Boundary Extraction Safety Gate when instructed.
+Review, merge, and tag Phase 4.3 Boundary Extraction Safety Gate.
 
 Recommended next branch:
 
-`phase-4-3-boundary-extraction-safety-gate`
+`phase-4-4-boundary-fixture-contract-extension`
 
 Latest completed merge:
 
-`8fb9a09`
+`0149c0b`
 
 Recommended PR target:
 
@@ -56,15 +58,16 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.3 - Boundary Extraction Safety Gate.
+Phase 4.4 - Boundary Fixture Contract Extension, if explicitly approved.
 
 ## Active Phase 4 Status
 
 - Phase 4.0 - Runtime Extraction Readiness Planning: complete/tagged.
 - Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
+- Phase 4.3 - Boundary Extraction Safety Gate: branch complete; pending merge/tag.
 
-Phase 4.2 selects non-executing HumanInput intake boundary for chat and voice as the first safety-gate candidate. Runtime extraction implementation remains blocked.
+Phase 4.3 defines the safety gate for non-executing HumanInput intake boundary for chat and voice. Runtime extraction implementation remains blocked.
 
 ## Completed Phase 3 Status
 
