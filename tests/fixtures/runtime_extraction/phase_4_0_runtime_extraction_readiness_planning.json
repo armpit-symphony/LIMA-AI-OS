@@ -1,0 +1,99 @@
+{
+  "phase": "4.0",
+  "status": "runtime_extraction_readiness_planning_only",
+  "non_runtime": true,
+  "source_phase": "3.9",
+  "source_tag": "phase-3.9-final-readiness-review",
+  "source_merge_commit": "3c922b3",
+  "planning_document": "docs/PHASE_4_0_RUNTIME_EXTRACTION_READINESS_PLANNING.md",
+  "readiness_result": "go_for_phase_4_1_sparkbot_runtime_reference_refresh",
+  "recommended_first_boundary": "sparkbot_runtime_reference_refresh",
+  "recommended_phase_4_sequence": [
+    "phase_4_0_runtime_extraction_readiness_planning",
+    "phase_4_1_sparkbot_runtime_reference_refresh",
+    "phase_4_2_runtime_boundary_candidate_selection",
+    "phase_4_3_boundary_extraction_safety_gate",
+    "phase_4_4_boundary_fixture_contract_extension_if_approved",
+    "phase_4_5_boundary_readiness_review",
+    "explicitly_approved_narrow_nonproduction_extraction_or_adapter_work"
+  ],
+  "sparkbot_reference_refresh_focus": [
+    "humaninput_chat_voice_entrypoints",
+    "intent_envelope_adjacent_payload_shapes",
+    "guardian_request_and_fake_guardiandecision_adjacent_paths",
+    "model_routing_boundaries",
+    "tool_catalogue_and_tool_pack_scoping_boundaries",
+    "approval_and_breakglass_surfaces",
+    "audit_spine_lineage_surfaces",
+    "terminal_pty_and_operator_control_surfaces",
+    "file_browser_network_action_surfaces",
+    "robotics_robo_os_adjacent_action_surfaces_if_present"
+  ],
+  "phase_4_0_go": [
+    "planning_documentation",
+    "static_planning_fixture_metadata",
+    "static_planning_tests",
+    "project_tracking_updates"
+  ],
+  "phase_4_0_no_go": [
+    "runtime_behavior",
+    "executable_pipeline",
+    "test_only_composition_harness",
+    "sparkbot_import_or_wiring",
+    "production_route_imports",
+    "model_calls",
+    "tool_execution",
+    "terminal_or_pty_execution",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "policy_enforcement",
+    "adaptive_trust_enforcement",
+    "audit_persistence",
+    "lima_ai_office_implementation",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "drone_control",
+    "iot_control",
+    "physical_world_action",
+    "production_shell_implementation"
+  ],
+  "sparkbot_handling": {
+    "sparkbot_is_spec": true,
+    "phase_4_0_inspects_sparkbot": false,
+    "phase_4_1_is_first_safe_reference_refresh": true,
+    "local_sparkbot_may_be_dirty_prototype": true,
+    "do_not_copy_blindly": true,
+    "read_only_until_explicit_future_approval": true
+  },
+  "ready_for": [
+    "phase_4_1_sparkbot_runtime_reference_refresh"
+  ],
+  "not_ready_for": [
+    "runtime_extraction_implementation",
+    "sparkbot_runtime_integration",
+    "sparkbot_import_or_wiring",
+    "lima_ai_office_implementation",
+    "arc_bot_implementation",
+    "custom_bot_implementation",
+    "robot_control",
+    "drone_control",
+    "iot_control",
+    "physical_world_action",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "production_wiring"
+  ],
+  "phase_4_0_boundary": {
+    "planning_is_not_implementation": true,
+    "planning_is_not_runtime_extraction": true,
+    "planning_is_not_sparkbot_integration": true,
+    "planning_is_not_product_shell_implementation": true,
+    "planning_is_not_robot_control": true,
+    "planning_is_not_approval": true,
+    "planning_is_not_execution": true,
+    "planning_is_not_audit_persistence": true
+  }
+}
