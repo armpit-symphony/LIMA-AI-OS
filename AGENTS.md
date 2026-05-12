@@ -2,6 +2,8 @@
 
 This repository is the source of truth for LIMA-AI-OS / LIMA Runtime project direction.
 
+LIMA-AI-OS belongs to SparkPit Labs. It is the trust-governed natural-language operating runtime/kernel for AI-controlled software, workflows, automation, devices, robots, drones, and humanoid systems. Sparkbot is the open-source hobby/R&D shell and publicity/reference model, not the kernel. LIMA AI Office, ARC Bot, custom office-worker bots, and physical-world systems are future product shells or consumers on top of the runtime.
+
 Before doing work, read these files in order:
 
 1. `docs/CURRENT_PROJECT_STATE.md`

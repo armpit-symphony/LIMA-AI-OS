@@ -10,6 +10,12 @@ Company context: [SparkPit Labs](https://sparkpitlabs.com).
 
 Read `AGENTS.md` and `docs/CURRENT_PROJECT_STATE.md` before acting on roadmap or extraction-plan work. `docs/CURRENT_PROJECT_STATE.md` carries the current phase, latest approved main commit/tag, next intended branch, standing blocked items, and validation policy for Codex/operator workflows.
 
+## Product North Star
+
+LIMA-AI-OS is the trust-governed natural-language operating runtime/kernel for SparkPit Labs. Its long-term job is to let humans safely command AI models, assistant bots, office-worker bots, automation systems, IoT devices, drones, robots, and future humanoid systems through explicit Guardian-controlled trust boundaries.
+
+Sparkbot is the open-source hobby/R&D shell and reference/publicity model. LIMA AI Office, ARC Bot, custom office-worker bots, and physical-world driver consumers are future product shells or runtime consumers. They are not implementation scope unless an explicit future phase approves them.
+
 ## What This Repo Is
 
 LIMA Runtime is the trust-gated operating layer that should eventually sit underneath:
