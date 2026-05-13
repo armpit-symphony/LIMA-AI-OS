@@ -2698,6 +2698,37 @@ After merge:
 
 - GO only for Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review
 
+## Phase 4.15 Gate: Test-only HumanInput Adapter Harness Implementation Readiness Review
+
+Phase 4.15 may review whether the Phase 4.14 harness stayed constrained, deterministic, synthetic-only, and non-runtime.
+
+GO only for:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- new harness behavior unless fixing a safety bug under `tests/support/`
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 4.16 HumanInput Boundary Lane Closeout Review
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

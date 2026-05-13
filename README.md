@@ -260,6 +260,8 @@ Phase 4.13 reviews the full Phase 4 HumanInput boundary lane as docs/tests/fixtu
 
 Phase 4.14 adds a deterministic test-only HumanInput adapter harness under `tests/support/`. It validates synthetic Phase 4.4 fixture records and converts them into HumanInput-shaped test dictionaries only, while rejecting live/runtime/prod markers and keeping runtime code, Sparkbot integration, IntentEnvelope, GuardianDecision, approval, enforcement, execution, audit persistence, live lookup, and physical-world action blocked.
 
+Phase 4.15 reviews the Phase 4.14 test-only harness as constrained, deterministic, synthetic-only, and non-runtime. It recommends Phase 4.16 HumanInput boundary lane closeout review only, not live adapter code, runtime wiring, Sparkbot integration, approval/enforcement/execution/audit persistence, or physical-world action.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
