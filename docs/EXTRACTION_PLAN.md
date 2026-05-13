@@ -2898,6 +2898,43 @@ Current status:
 - tagged as `phase-4.20-phase-5-gate-implementation-readiness-closeout`
 - Phase 5 gate reached
 
+## Phase 5.0 Gate: Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record
+
+Phase 5.0 may open Phase 5 as non-runtime planning only.
+
+GO only for:
+
+- Phase 5 scope charter documentation
+- HumanInput to IntentEnvelope boundary decision record metadata
+- static charter fixture metadata
+- static charter tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- bridge code
+- test-only bridge code
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- natural-language inference
+- model calls
+- tool execution
+- shell execution
+- browser execution
+- network action
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 5.1 HumanInput to IntentEnvelope Contract Proposal
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
