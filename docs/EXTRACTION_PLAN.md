@@ -3190,6 +3190,43 @@ After merge:
 
 Continue only to Phase 5.8 docs/tests/fixtures-only threat modeling under the approved design lane.
 
+## Phase 5.8 Gate: HumanInput Runtime Bridge Threat Model
+
+Phase 5.8 may threat-model a future runtime bridge as docs/tests/fixtures only.
+
+GO:
+
+- prompt injection risk
+- operator impersonation risk
+- trust bypass risk
+- accidental execution risk
+- shell/browser/network/file/robotics escalation risk
+- audit gap risk
+- approval confusion risk
+- helper classifier misuse risk
+- unsafe test-code reuse risk
+- malformed, replayed, stale, and ambiguous input risks
+- mitigations and residual-risk metadata
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 5.9 docs/tests/fixtures-only boundary validation matrix work under the approved design lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

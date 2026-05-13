@@ -2981,6 +2981,53 @@ Status:
 - complete
 - tagged as `phase-5.7-humaninput-runtime-bridge-design-proposal`
 
+## Phase 5.8 - HumanInput Runtime Bridge Threat Model
+
+Goal:
+
+Threat-model a future HumanInput to IntentEnvelope runtime bridge without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_5_8_HUMANINPUT_RUNTIME_BRIDGE_THREAT_MODEL.md`
+- `tests/fixtures/runtime_extraction/phase_5_8_humaninput_runtime_bridge_threat_model.json`
+- `tests/test_phase_5_8_humaninput_runtime_bridge_threat_model.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- threat model only
+- prompt injection covered
+- operator impersonation covered
+- trust bypass covered
+- accidental execution covered
+- shell/browser/network/file/robotics action escalation covered
+- audit gaps covered
+- approval confusion covered
+- helper classifier misuse covered
+- unsafe reuse of test-only code covered
+- malformed, replayed, stale, and ambiguous input risks covered
+- future runtime review and semantic tests required before live behavior
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix
+
+Status:
+
+- complete
+- tagged as `phase-5.8-humaninput-runtime-bridge-threat-model`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
