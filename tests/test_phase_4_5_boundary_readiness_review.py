@@ -34,6 +34,14 @@ REQUIRED_READY_INPUTS = {
     "authority_and_live_integration_identifiers_forbidden_rule",
 }
 
+REQUIRED_REVIEWED_SOURCES = {
+    "phase_4_1_sparkbot_runtime_reference_refresh",
+    "phase_4_2_runtime_boundary_candidate_selection",
+    "phase_4_3_boundary_extraction_safety_gate",
+    "phase_4_4_boundary_fixture_contract_extension",
+    "phase_4_4_fixture_contract_hardening",
+}
+
 REQUIRED_BLOCKED = {
     "runtime_behavior",
     "live_adapter_code",
@@ -138,6 +146,10 @@ def test_phase_four_four_hardening_source_is_recorded() -> None:
     assert fixture["source_tag"] == "phase-4.4-boundary-fixture-contract-hardening"
     assert fixture["source_merge_commit"] == "db02a25"
     assert fixture["reviewed_boundary"] == "humaninput_intake_boundary_for_chat_and_voice"
+
+
+def test_review_covers_phase_four_reference_candidate_gate_fixture_and_hardening() -> None:
+    assert REQUIRED_REVIEWED_SOURCES <= set(_load_fixture()["reviewed_sources"])
 
 
 def test_readiness_result_is_conditional_and_non_runtime() -> None:
