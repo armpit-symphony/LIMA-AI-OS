@@ -1859,6 +1859,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.19 may review readiness of the proposal
 
+## ADR-0111: HumanInput to IntentEnvelope Readiness Review Is Not Implementation Readiness
+
+Status: Accepted
+
+Decision:
+
+Phase 4.19 may review the Phase 4.18 HumanInput to IntentEnvelope schema/contract proposal as docs/tests/fixtures only. It may decide whether the proposal is clear enough for a Phase 5 gate / implementation readiness closeout, but it does not approve bridge code, test-only bridge code, real IntentCompiler behavior, real GuardianDecision behavior, or runtime wiring.
+
+Rationale:
+
+The schema proposal is useful only if the project explicitly preserves the standing IntentEnvelope safety gate. A readiness review creates a final non-runtime check before any Phase 5 gate discussion and prevents a metadata proposal from becoming hidden implementation approval.
+
+Consequences:
+
+- Phase 4.19 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code or test-only bridge code is added
+- no IntentEnvelope record is created
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.20 may close the Phase 4 lane at a Phase 5 gate
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
