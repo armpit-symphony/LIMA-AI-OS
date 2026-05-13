@@ -1,0 +1,88 @@
+{
+  "phase": "4.17",
+  "status": "non_runtime_humaninput_to_intentenvelope_boundary_planning",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "phase_document": "docs/PHASE_4_17_HUMANINPUT_TO_INTENTENVELOPE_BOUNDARY_PLANNING.md",
+  "source_phase": "4.16",
+  "source_tag": "phase-4.16-humaninput-boundary-lane-closeout-review",
+  "source_merge_commit": "e69d6813513dad7e709358334d74a2b590e254af",
+  "latest_main_after_source_state_sync": "3fb0fcb853c4b41fca0b95201a33f56d66b34212",
+  "planning_id": "humaninput_to_intentenvelope_boundary_planning",
+  "key_rule": "planning_is_not_schema_or_implementation",
+  "planning_is": {
+    "non_runtime": true,
+    "docs_tests_fixtures_only": true,
+    "boundary_planning_only": true,
+    "intentenvelope_safety_gate_aligned": true,
+    "phase_4_lane_extension": true
+  },
+  "planning_is_not": {
+    "schema_contract_proposal": true,
+    "test_only_bridge": true,
+    "runtime_bridge": true,
+    "intentcompiler": true,
+    "guardiandecision": true,
+    "authorization": true,
+    "approval": true,
+    "execution": true,
+    "audit_persistence": true,
+    "sparkbot_integration": true
+  },
+  "standing_gate_refs": [
+    "docs/INTENTENVELOPE_SAFETY_GATE.md",
+    "docs/PHASE_2_14_INTENT_ENVELOPE_TEST_DESIGN_REVIEW.md",
+    "docs/PHASE_4_16_HUMANINPUT_BOUNDARY_LANE_CLOSEOUT_REVIEW.md"
+  ],
+  "required_invariants": {
+    "humaninput_is_not_intentenvelope": true,
+    "intentenvelope_is_not_authorization": true,
+    "guardiandecision_remains_mandatory": true,
+    "raw_text_is_inert": true,
+    "explicit_typed_metadata_required_for_tests": true,
+    "no_hidden_parser": true,
+    "no_heuristic_free_text_interpretation": true,
+    "no_model_calls": true,
+    "no_tool_execution": true,
+    "no_live_adapter_code": true,
+    "no_production_sparkbot_wiring": true,
+    "no_approval_enforcement_execution_or_audit_persistence": true
+  },
+  "ready_for": [
+    "phase_4_18_humaninput_to_intentenvelope_boundary_schema_contract_proposal",
+    "further_non_runtime_review"
+  ],
+  "not_ready_for": [
+    "humaninput_to_intentenvelope_implementation",
+    "test_only_bridge_code",
+    "runtime_wiring",
+    "live_adapter_code",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "model_calls",
+    "tool_execution",
+    "terminal_pty_behavior",
+    "robotics_behavior",
+    "physical_world_action",
+    "sparkbot_import_or_wiring",
+    "production_shell_implementation"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "live_adapter_code_added": false,
+    "test_only_bridge_code_added": false,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}

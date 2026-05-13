@@ -2519,6 +2519,38 @@ Status:
 - complete
 - tagged as `phase-4.16-humaninput-boundary-lane-closeout-review`
 
+## Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning
+
+Goal:
+
+Open the HumanInput to IntentEnvelope boundary planning lane while preserving the standing IntentEnvelope safety gate.
+
+Deliverables:
+
+- `docs/PHASE_4_17_HUMANINPUT_TO_INTENTENVELOPE_BOUNDARY_PLANNING.md`
+- `tests/fixtures/runtime_extraction/phase_4_17_humaninput_to_intentenvelope_boundary_planning.json`
+- `tests/test_phase_4_17_humaninput_to_intentenvelope_boundary_planning.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- planning only
+- no schema implementation
+- no bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

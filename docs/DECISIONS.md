@@ -1811,6 +1811,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - next lane requires explicit operator approval
 
+## ADR-0109: HumanInput to IntentEnvelope Lane Starts With Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 4.17 may open HumanInput to IntentEnvelope boundary planning as docs/tests/fixtures only. It may recommend a later schema/contract proposal, but it does not approve schema implementation, bridge code, real IntentCompiler behavior, or runtime behavior.
+
+Rationale:
+
+Phase 4.16 closed the HumanInput lane and recommended HumanInput to IntentEnvelope planning. Existing IntentEnvelope safety gates require explicit typed metadata, inert raw text, and no hidden parser before any test-only bridge or compiler-adjacent work.
+
+Consequences:
+
+- Phase 4.17 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code is added
+- no schema implementation is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.18 may propose a boundary schema/contract as metadata only
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

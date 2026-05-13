@@ -58,6 +58,8 @@ Phase 4.16 HumanInput Boundary Lane Closeout Review is complete, merged to `main
 
 The approved Phase 4.14 through Phase 4.16 queue is exhausted.
 
+Phase 4.17 HumanInput to IntentEnvelope Boundary Planning is in progress on branch `phase-4-17-humaninput-to-intentenvelope-boundary-planning`. It is docs/tests/fixtures only and must not add schema implementation, bridge code, real IntentCompiler behavior, or runtime behavior.
+
 Latest completed phase merge:
 
 `e69d6813513dad7e709358334d74a2b590e254af`
@@ -70,11 +72,11 @@ Latest tag:
 
 Current operator step:
 
-Stop for explicit operator approval before starting any next lane.
+Continue through the approved HumanInput to IntentEnvelope non-runtime lane unless a real product/flow or runtime gate is hit.
 
 Recommended next branch:
 
-TBD after explicit operator approval.
+`phase-4-17-humaninput-to-intentenvelope-boundary-planning`
 
 Latest completed merge:
 
@@ -88,7 +90,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Next explicitly approved phase.
+Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning.
 
 ## Active Phase 4 Status
 
@@ -109,6 +111,7 @@ Next explicitly approved phase.
 - Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: complete/tagged.
 - Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: complete/tagged.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: complete/tagged.
+- Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -133,6 +136,8 @@ Phase 4.14 was the approved narrow implementation of a deterministic test-only h
 Phase 4.15 was the approved docs/tests/fixtures-only readiness review of Phase 4.14. It did not add new harness behavior.
 
 Phase 4.16 was the approved docs/tests/fixtures-only closeout review for the HumanInput boundary lane. It did not add new harness behavior or runtime behavior. It recommends the next explicitly approved lane be HumanInput to IntentEnvelope boundary planning.
+
+Phase 4.17 opens that lane as planning only. It aligns the lane with the standing IntentEnvelope safety gate and does not approve bridge code, schema implementation, real IntentCompiler behavior, GuardianDecision behavior, runtime wiring, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 
