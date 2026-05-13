@@ -296,6 +296,8 @@ Phase 5.10 closes the HumanInput runtime bridge design lane with a docs/tests/fi
 
 Phase 5.11 archives the completed Phase 5 HumanInput bridge design lane as docs/tests/fixtures-only planning/specification work. It confirms Phase 5.0 through Phase 5.10 are complete, the Phase 5.4 helper remains test-only, no live/runtime bridge exists, and future runtime work requires new explicit Phil approval.
 
+Phase 6.0 starts broader LIMA OS roadmap planning as docs/tests/fixtures only. It reorients from the archived Phase 5 bridge lane toward kernel lifecycle planning and keeps runtime bridge implementation, `lima/` changes, Sparkbot wiring, execution, approval enforcement, audit persistence, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

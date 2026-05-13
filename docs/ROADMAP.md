@@ -3160,6 +3160,45 @@ Status:
 - complete
 - tagged as `phase-5.11-phase-5-humaninput-bridge-design-lane-audit-archive-closeout`
 
+## Phase 6.0 - Post-Phase-5 Roadmap Reorientation
+
+Goal:
+
+Reorient the roadmap after the Phase 5 HumanInput bridge design lane archive and select the safest next architectural planning lane.
+
+Deliverables:
+
+- `docs/PHASE_6_0_POST_PHASE_5_ROADMAP_REORIENTATION.md`
+- `tests/fixtures/runtime_extraction/phase_6_0_post_phase_5_roadmap_reorientation.json`
+- `tests/test_phase_6_0_post_phase_5_roadmap_reorientation.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 5 closeout preserved
+- kernel lifecycle planning selected as the safest next lane
+- future lanes separated
+- runtime bridge prerequisites listed
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 6.1 - LIMA Kernel Lifecycle Planning
+
+Status:
+
+- complete
+- tagged as `phase-6.0-post-phase-5-roadmap-reorientation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

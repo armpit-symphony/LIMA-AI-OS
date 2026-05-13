@@ -2217,6 +2217,27 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - the next step requires explicit operator scope selection
 
+## ADR-0126: Phase 6 Starts With Kernel Lifecycle Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 6.0 reorients the roadmap after Phase 5 and selects broader LIMA Kernel lifecycle planning as the safest next architectural lane. Runtime bridge work remains blocked until kernel, IntentEnvelope, GuardianDecision, approval, audit/spine/memory, Sparkbot, and physical-world boundaries are clearer.
+
+Rationale:
+
+The Phase 5 HumanInput bridge design lane produced useful planning artifacts, but runtime bridge implementation still depends on broader kernel lifecycle decisions.
+
+Consequences:
+
+- Phase 6.0 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime bridge implementation remains blocked
+- Phase 6.1 may continue only as docs/tests/fixtures-only LIMA Kernel Lifecycle Planning
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

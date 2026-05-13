@@ -3329,6 +3329,37 @@ After merge:
 
 STOP until the operator explicitly approves the next scope.
 
+## Phase 6.0 Gate: Post-Phase-5 Roadmap Reorientation
+
+Phase 6.0 may reorient the roadmap after Phase 5 as docs/tests/fixtures only.
+
+GO:
+
+- Phase 5 closeout review
+- safest next architectural lane selection
+- future lane separation
+- runtime bridge prerequisite list
+- kernel lifecycle planning recommendation
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 6.1 docs/tests/fixtures-only kernel lifecycle planning under the approved Phase 6 planning lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

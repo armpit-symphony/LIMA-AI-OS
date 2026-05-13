@@ -90,6 +90,8 @@ Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is complete, mer
 
 Phase 5.11 Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 5.0 through Phase 5.10 as planning/specification work.
 
+Phase 6.0 Post-Phase-5 Roadmap Reorientation is the current approved docs/tests/fixtures-only planning scope. It reorients the roadmap toward kernel lifecycle planning after the Phase 5 archive.
+
 Latest completed phase merge:
 
 `3f12b0985482c16a1341c2b211ff779827a5c3eb`
@@ -102,7 +104,7 @@ Latest tag:
 
 Current operator step:
 
-Stop at the Phase 5 HumanInput bridge design lane archive. Do not proceed to any next phase until the operator explicitly approves the next scope.
+Complete Phase 6.0, then continue only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -120,7 +122,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit operator next-scope decision required.
+Phase 6.0 - Post-Phase-5 Roadmap Reorientation.
 
 ## Active Phase 4 Status
 
@@ -207,6 +209,8 @@ No next phase is approved. Live/runtime HumanInput to IntentEnvelope implementat
 Phase 5.11 Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 No next phase is approved. Future runtime work requires new explicit Phil approval.
+
+Phase 6.0 Post-Phase-5 Roadmap Reorientation is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
