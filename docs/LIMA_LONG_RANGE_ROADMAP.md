@@ -78,7 +78,7 @@ Current expected sequence:
 - Phase 4.6 - Non-production HumanInput Adapter Proposal: complete/tagged.
 - Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review: complete/tagged.
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
-- Phase 4.9 - HumanInput Adapter Implementation Readiness Review: in progress.
+- Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -120,7 +120,7 @@ Phase 4.8 defined the HumanInput adapter safety gate as docs/tests/fixtures only
 
 After Phase 4.8, stop for explicit operator approval before any next narrow non-production phase.
 
-Phase 4.9 may review whether the boundary is ready for a future explicitly approved test-only HumanInput adapter harness proposal. That readiness is not readiness for runtime adapter implementation, live Sparkbot integration, production wiring, approval, enforcement, execution, audit persistence, or physical-world action.
+Phase 4.9 reviewed whether the boundary is ready for a future explicitly approved test-only HumanInput adapter harness proposal. That readiness is not readiness for runtime adapter implementation, live Sparkbot integration, production wiring, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Standing Phase 3 Boundaries
 
