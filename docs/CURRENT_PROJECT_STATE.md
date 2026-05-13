@@ -50,6 +50,8 @@ Phase 4.13 Phase 4 HumanInput Boundary Readiness Review is complete, merged to `
 
 The approved Phase 4.10 through Phase 4.13 docs/tests/fixtures-only queue is exhausted.
 
+Phase 4.14 Test-only HumanInput Adapter Harness Implementation is in progress on branch `phase-4-14-test-only-humaninput-adapter-harness-implementation`. It may add deterministic test-only helper code under `tests/` and must not modify files under `lima/`.
+
 Latest completed phase merge:
 
 `c1888b7a376a1ccbee9ec1eb35763d9bdd10b614`
@@ -62,11 +64,11 @@ Latest tag:
 
 Current operator step:
 
-Stop for explicit operator approval before starting any next phase.
+Continue through the approved Phase 4.14 through Phase 4.16 queue unless a real gate is hit.
 
 Recommended next branch:
 
-TBD after explicit operator approval.
+`phase-4-14-test-only-humaninput-adapter-harness-implementation`
 
 Latest completed merge:
 
@@ -80,7 +82,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Next explicitly approved phase.
+Phase 4.14 - Test-only HumanInput Adapter Harness Implementation.
 
 ## Active Phase 4 Status
 
@@ -98,6 +100,7 @@ Next explicitly approved phase.
 - Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: complete/tagged.
 - Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: complete/tagged.
 - Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: complete/tagged.
+- Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -116,6 +119,8 @@ Phase 4.11 was readiness-review metadata only. It recommended Phase 4.12 safety 
 Phase 4.12 was safety gate documentation only. It did not add harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 Phase 4.13 was the final approved Phase 4 HumanInput boundary readiness review in the current queue. It summarized known gaps and readiness for a future explicitly approved test-only harness implementation phase or further non-runtime review, but did not implement harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
+
+Phase 4.14 is the approved narrow implementation of a deterministic test-only harness under `tests/`. It may validate synthetic fixture shapes and produce HumanInput-shaped test dictionaries only. It must not add runtime code, live adapter code, Sparkbot imports/wiring, real IntentEnvelope or GuardianDecision behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 

@@ -2412,6 +2412,39 @@ Status:
 - complete
 - tagged as `phase-4.13-phase-4-humaninput-boundary-readiness-review`
 
+## Phase 4.14 - Test-only HumanInput Adapter Harness Implementation
+
+Goal:
+
+Implement a deterministic test-only harness that validates synthetic shell intake fixture shapes against the HumanInput boundary fixture/contract shape.
+
+Deliverables:
+
+- `docs/PHASE_4_14_TEST_ONLY_HUMANINPUT_ADAPTER_HARNESS_IMPLEMENTATION.md`
+- `tests/support/test_only_humaninput_adapter_harness.py`
+- `tests/fixtures/runtime_extraction/phase_4_14_test_only_humaninput_adapter_harness.json`
+- `tests/test_phase_4_14_test_only_humaninput_adapter_harness.py`
+
+Acceptance criteria:
+
+- test-only helper code stays under `tests/`
+- docs/tests/fixtures only outside test support
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- fail closed on missing synthetic/test-only/non-runtime markers
+- tests pass
+
+Next likely phase:
+
+- Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -1739,6 +1739,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - physical-world action remains blocked
 
+## ADR-0106: Test-only HumanInput Harness Stays Under Tests
+
+Status: Accepted
+
+Decision:
+
+Phase 4.14 may implement a deterministic test-only HumanInput adapter harness under `tests/`. The harness may validate synthetic fixture records and produce HumanInput-shaped test dictionaries only.
+
+Rationale:
+
+Phase 4.13 found the HumanInput boundary lane ready for a future explicitly approved test-only harness implementation. The first implementation must prove fixture shape validation without moving code into `lima/`, importing Sparkbot, creating runtime adapter behavior, or producing downstream authority artifacts.
+
+Consequences:
+
+- Phase 4.14 test-only helper code stays under `tests/`
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- no IntentEnvelope or GuardianDecision is produced
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.15 should review whether the harness stayed deterministic, synthetic-only, and non-runtime
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

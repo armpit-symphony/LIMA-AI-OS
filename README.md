@@ -258,6 +258,8 @@ Phase 4.12 adds Test-only HumanInput Adapter Harness Safety Gate Docs. It states
 
 Phase 4.13 reviews the full Phase 4 HumanInput boundary lane as docs/tests/fixtures only. It finds the lane ready only for a future explicitly approved test-only HumanInput adapter harness implementation phase or further non-runtime review, while keeping live adapter code, production Sparkbot integration, runtime wiring, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, live lookup, model/tool/terminal/robot behavior, and physical-world action blocked.
 
+Phase 4.14 adds a deterministic test-only HumanInput adapter harness under `tests/support/`. It validates synthetic Phase 4.4 fixture records and converts them into HumanInput-shaped test dictionaries only, while rejecting live/runtime/prod markers and keeping runtime code, Sparkbot integration, IntentEnvelope, GuardianDecision, approval, enforcement, execution, audit persistence, live lookup, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

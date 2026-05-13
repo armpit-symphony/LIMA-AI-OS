@@ -2666,6 +2666,38 @@ After merge:
 
 - STOP for the next explicitly approved phase
 
+## Phase 4.14 Gate: Test-only HumanInput Adapter Harness Implementation
+
+Phase 4.14 may implement a deterministic test-only HumanInput adapter harness under `tests/`.
+
+GO only for:
+
+- test-only helper code under `tests/` or `tests/support/`
+- synthetic fixture loading
+- deterministic fixture-to-HumanInput-shaped dictionary conversion
+- schema and shape validation
+- negative tests for live, runtime, production, Sparkbot, IntentEnvelope, GuardianDecision, approval, execution, audit, lookup, model, tool, terminal, robot, and physical-world indicators
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
