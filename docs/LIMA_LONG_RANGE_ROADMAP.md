@@ -74,7 +74,7 @@ Current expected sequence:
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
-- Phase 4.5 - Boundary Readiness Review: next.
+- Phase 4.5 - Boundary Readiness Review: branch complete; pending merge/tag.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -101,6 +101,8 @@ Phase 4.2 selects HumanInput intake for chat and voice as the first boundary can
 Phase 4.3 defines that safety gate and allows only a future Phase 4.4 fixture/contract extension if explicitly approved. Runtime extraction, Sparkbot wiring, live auth/session lookup, model calls, tool execution, terminal/PTY, robotics, and product shells remain blocked.
 
 Phase 4.4 adds synthetic HumanInput intake fixture/contract metadata for text and voice only. It does not approve adapters or runtime extraction. Phase 4.5 should review whether the boundary is ready for a later narrow non-production extraction or adapter proposal, and should keep behavior blocked unless a future explicit phase approves it.
+
+Phase 4.5 reviews the HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. It does not approve runtime extraction, live Sparkbot integration, live adapter code, model/tool/terminal/robotics behavior, approval/enforcement/execution/audit persistence, product shells, or physical-world action.
 
 ## Standing Phase 3 Boundaries
 

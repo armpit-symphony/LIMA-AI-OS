@@ -1526,6 +1526,29 @@ Consequences:
 - runtime extraction implementation remains blocked
 - physical-world control remains blocked
 
+## ADR-0097: HumanInput Intake Boundary Is Conditionally Ready For An Explicit Future Proposal
+
+Status: Accepted
+
+Decision:
+
+Phase 4.5 reviews the selected HumanInput intake boundary and finds it conditionally ready only for a future explicitly approved narrow non-production proposal. It does not approve runtime extraction implementation, Sparkbot integration, live adapter code, or behavior movement.
+
+Rationale:
+
+Phase 4.1 through Phase 4.4 established the reference basis, selected the HumanInput intake boundary, defined the safety gate, and added hardened synthetic text and voice fixture metadata. That is enough to support a future proposal discussion, but not enough to move behavior into runtime code.
+
+Consequences:
+
+- Phase 4.5 is docs/tests/fixtures only
+- HumanInput intake remains non-authorizing input
+- IntentEnvelope remains the next semantic boundary
+- GuardianDecision remains required before consequential behavior
+- any next narrow non-production extraction or adapter proposal requires explicit operator approval
+- runtime extraction implementation remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- physical-world control remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
