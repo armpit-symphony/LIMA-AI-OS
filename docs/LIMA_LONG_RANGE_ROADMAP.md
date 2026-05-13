@@ -95,7 +95,8 @@ Current expected sequence:
 - Phase 5.2 - Test-only Bridge Harness Proposal: complete/tagged.
 - Phase 5.3 - Test-only Bridge Harness Readiness Review: complete/tagged.
 - Phase 5.4 - Test-only HumanInput to IntentEnvelope Bridge Harness Implementation: complete/tagged.
-- Phase 5.5 - explicit operator scope decision required.
+- Phase 5.5 - Test-only Bridge Harness Readiness Review: complete/tagged.
+- Phase 5.6 - explicit operator scope decision required.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -179,7 +180,9 @@ Phase 5.3 is complete and tagged as docs/tests/fixtures-only readiness review wo
 
 Phase 5.4 is complete and tagged. It adds deterministic test-only bridge helper code under `tests/support/` only and keeps live runtime implementation blocked.
 
-Phase 5.5 is not approved. Any next review, helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior requires explicit operator approval.
+Phase 5.5 is complete and tagged as docs/tests/fixtures-only readiness review work. It confirms the Phase 5.4 helper remains test-only and must not be reused as runtime classifier logic.
+
+Phase 5.6 is not approved. Any next review, helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior requires explicit operator approval.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

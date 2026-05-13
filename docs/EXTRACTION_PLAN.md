@@ -3094,6 +3094,37 @@ After merge:
 
 STOP until the operator explicitly approves any Phase 5.5 scope.
 
+## Phase 5.5 Gate: Test-only Bridge Harness Readiness Review
+
+Phase 5.5 may review the Phase 5.4 helper as docs/tests/fixtures only.
+
+GO:
+
+- readiness review documentation
+- readiness fixture metadata
+- static tests that inspect the Phase 5.4 helper boundary
+- confirmation that helper classifier logic is not runtime classifier logic
+- confirmation that Phase 5.6 or later remains gated
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+STOP until the operator explicitly approves any Phase 5.6 scope.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
