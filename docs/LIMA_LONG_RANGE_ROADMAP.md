@@ -82,7 +82,7 @@ Current expected sequence:
 - Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: complete/tagged.
 - Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: complete/tagged.
 - Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: complete/tagged.
-- Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: in progress.
+- Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: complete/tagged.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -136,7 +136,7 @@ Phase 4.11 reviews the Phase 4.10 proposal as ready only for Phase 4.12 safety g
 
 Phase 4.12 defines the safety gate for any future test-only HumanInput adapter harness and preserves that test-only harness work cannot imply production adapter readiness.
 
-Phase 4.13 is the final approved HumanInput boundary readiness review for this Phase 4 queue. It may decide readiness only for a future explicitly approved test-only harness implementation phase or further non-runtime review, not runtime adapter implementation.
+Phase 4.13 is complete and tagged. It is the final approved HumanInput boundary readiness review for this Phase 4 queue. It decides readiness only for a future explicitly approved test-only harness implementation phase or further non-runtime review, not runtime adapter implementation.
 
 After Phase 4.13, stop for explicit operator approval before any test-only harness implementation, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
