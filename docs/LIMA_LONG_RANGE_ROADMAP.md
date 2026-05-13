@@ -87,7 +87,8 @@ Current expected sequence:
 - Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: complete/tagged.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: complete/tagged.
 - Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: complete/tagged.
-- Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: in progress.
+- Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: complete/tagged.
+- Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: approved next.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: approved next.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
@@ -152,7 +153,7 @@ Phase 4.16 is complete and tagged. It closes the HumanInput boundary lane and re
 
 Phase 4.17 is complete and tagged. It opened the HumanInput to IntentEnvelope lane as planning only and stayed aligned with the standing IntentEnvelope safety gate.
 
-Phase 4.18 proposes static boundary metadata only. It must not create IntentEnvelope records, implement bridge code, or start real IntentCompiler behavior.
+Phase 4.18 is complete and tagged. It proposes static boundary metadata only and does not create IntentEnvelope records, implement bridge code, or start real IntentCompiler behavior.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
