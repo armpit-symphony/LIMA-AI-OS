@@ -76,6 +76,8 @@ Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is complete, merged to `main`, and tagged. It adds deterministic test-only helper code under `tests/support/` and does not modify files under `lima/`.
 
+Phase 5.5 Test-only Bridge Harness Readiness Review is the current approved docs/tests/fixtures-only readiness review scope. It reviews the Phase 5.4 helper without changing helper behavior, adding runtime behavior, modifying `lima/`, or approving live implementation.
+
 Latest completed phase merge:
 
 `390692f80b4a0d49606394448b2dd1f4aba5af0a`
@@ -88,7 +90,7 @@ Latest tag:
 
 Current operator step:
 
-Stop at the Phase 5.5 gate. Do not proceed to Phase 5.5 until the operator explicitly approves or declines the next narrow review or implementation scope.
+Complete Phase 5.5, then stop. Do not proceed to Phase 5.6 until the operator explicitly approves or declines the next narrow review or implementation scope.
 
 Recommended next branch:
 
@@ -106,7 +108,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.5 - explicit operator scope decision required before any next phase.
+Phase 5.5 - Test-only Bridge Harness Readiness Review.
 
 ## Active Phase 4 Status
 
@@ -176,7 +178,9 @@ Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is complete, merged to `main`, and tagged. It adds a test-only helper under `tests/support/` that converts synthetic HumanInput-shaped dictionaries into non-executable IntentEnvelope-candidate-shaped test dictionaries only.
 
-Phase 5.5 is not approved. Before Phase 5.5 starts, the operator must explicitly approve or decline the next narrow scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
+Phase 5.5 Test-only Bridge Harness Readiness Review is approved as a docs/tests/fixtures-only scope. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 5.6 is not approved. Before Phase 5.6 starts, the operator must explicitly approve or decline the next narrow scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
 
 ## Completed Phase 3 Status
 

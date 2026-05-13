@@ -2051,6 +2051,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.5 or later requires explicit operator approval
 
+## ADR-0119: Test-only Bridge Harness Readiness Review Blocks Runtime Reuse
+
+Status: Accepted
+
+Decision:
+
+Phase 5.5 may review the Phase 5.4 helper as docs/tests/fixtures only. It must not change helper behavior. The Phase 5.4 helper's keyword risk classifier is test metadata only and must not be reused as runtime classifier logic.
+
+Rationale:
+
+The helper is useful for checking candidate shape and fail-closed behavior, but it is not an IntentCompiler and not a runtime bridge. A readiness review prevents test-only semantics from quietly becoming live runtime semantics.
+
+Consequences:
+
+- Phase 5.5 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.6 or later requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
