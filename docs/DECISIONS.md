@@ -1786,6 +1786,31 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.16 may close out the HumanInput boundary lane
 
+## ADR-0108: HumanInput Boundary Lane Closeout Stops Phase 4 HumanInput Work
+
+Status: Accepted
+
+Decision:
+
+Phase 4.16 may close out the HumanInput boundary lane as docs/tests/fixtures only. It may recommend a future explicitly approved HumanInput to IntentEnvelope boundary planning lane, but it does not approve next-lane implementation or runtime behavior.
+
+Rationale:
+
+The HumanInput lane now has boundary selection, fixture contracts, safety gates, proposal reviews, test-only harness implementation, and readiness review. The safest next move is to stop this lane and require explicit approval before planning the HumanInput to IntentEnvelope boundary.
+
+Consequences:
+
+- Phase 4.16 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no new harness behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- HumanInput to IntentEnvelope implementation remains blocked
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- next lane requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

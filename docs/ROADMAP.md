@@ -2486,6 +2486,34 @@ Status:
 - complete
 - tagged as `phase-4.15-test-only-humaninput-adapter-harness-implementation-readiness-review`
 
+## Phase 4.16 - HumanInput Boundary Lane Closeout Review
+
+Goal:
+
+Close out the HumanInput boundary lane and decide whether it is complete enough to stop Phase 4 HumanInput work and propose the next explicitly approved lane, likely HumanInput to IntentEnvelope boundary planning.
+
+Deliverables:
+
+- `docs/PHASE_4_16_HUMANINPUT_BOUNDARY_LANE_CLOSEOUT_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_4_16_humaninput_boundary_lane_closeout_review.json`
+- `tests/test_phase_4_16_humaninput_boundary_lane_closeout_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no new harness behavior
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no HumanInput to IntentEnvelope implementation
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- tests pass
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
