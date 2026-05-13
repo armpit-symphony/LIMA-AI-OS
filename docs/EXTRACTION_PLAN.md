@@ -3012,6 +3012,11 @@ After merge:
 
 - GO only for Phase 5.3 Test-only Bridge Harness Readiness Review
 
+Current status:
+
+- complete
+- tagged as `phase-5.1-humaninput-to-intentenvelope-contract-proposal`
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

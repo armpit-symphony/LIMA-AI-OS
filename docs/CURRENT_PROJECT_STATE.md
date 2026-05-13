@@ -68,13 +68,15 @@ Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged 
 
 Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is complete, merged to `main`, and tagged. It opens Phase 5 as non-runtime planning only and keeps implementation, bridge code, runtime wiring, live adapter code, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, audit persistence, Sparkbot integration, and physical-world action blocked.
 
+Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to `main`, and tagged. It proposes static contract metadata only and does not create IntentEnvelope records, implement bridge code, run IntentCompiler behavior, enforce approvals, execute actions, persist audit, or add runtime wiring.
+
 Latest completed phase merge:
 
-`46ade88b6f41edabc63af4b5236d3154a6d96450`
+`dee3b6d866510f8319c4e34e821c2cfee59634c8`
 
 Latest tag:
 
-`phase-5.0-phase-5-scope-charter-humaninput-intentenvelope-boundary-decision-record`
+`phase-5.1-humaninput-to-intentenvelope-contract-proposal`
 
 ## Current Next Step
 
@@ -88,7 +90,7 @@ Recommended next branch:
 
 Latest completed merge:
 
-`46ade88b6f41edabc63af4b5236d3154a6d96450`
+`dee3b6d866510f8319c4e34e821c2cfee59634c8`
 
 Recommended PR target:
 
@@ -160,9 +162,9 @@ Phase 5 is not pre-approved. Before Phase 5 starts, the operator must decide whe
 
 Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is complete, merged to `main`, and tagged. It opens Phase 5 as non-runtime planning only and records the approved HumanInput to IntentEnvelope boundary scope.
 
-Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is approved next as docs/tests/fixtures-only contract proposal work. It may propose static contract metadata, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
+Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to `main`, and tagged. It proposes static contract metadata only.
 
-Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is in progress. It proposes static contract metadata only.
+Phase 5.2 Test-only Bridge Harness Proposal is approved next as docs/tests/fixtures-only proposal work. It may propose a future test-only bridge harness, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 
