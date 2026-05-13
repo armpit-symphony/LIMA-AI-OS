@@ -75,6 +75,7 @@ Current expected sequence:
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
 - Phase 4.5 - Boundary Readiness Review: complete/tagged.
+- Phase 4.6 - Non-production HumanInput Adapter Proposal: in progress.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -90,6 +91,7 @@ The first safe Phase 4 sequence is:
 - Phase 4.3 - Boundary Extraction Safety Gate.
 - Phase 4.4 - Boundary Fixture Contract Extension, if approved.
 - Phase 4.5 - Boundary Readiness Review.
+- Phase 4.6 - Non-production HumanInput Adapter Proposal, explicitly approved as docs/tests/fixtures only.
 - Explicitly approved narrow non-production extraction or adapter work only after readiness gates.
 
 Phase 4 must not move behavior until a readiness review approves the specific boundary and scope.
@@ -103,6 +105,8 @@ Phase 4.3 defines that safety gate and allows only a future Phase 4.4 fixture/co
 Phase 4.4 adds synthetic HumanInput intake fixture/contract metadata for text and voice only. It does not approve adapters or runtime extraction. Phase 4.5 should review whether the boundary is ready for a later narrow non-production extraction or adapter proposal, and should keep behavior blocked unless a future explicit phase approves it.
 
 Phase 4.5 reviews the HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. It does not approve runtime extraction, live Sparkbot integration, live adapter code, model/tool/terminal/robotics behavior, approval/enforcement/execution/audit persistence, product shells, or physical-world action.
+
+Phase 4.6 is that narrow proposal only. It may describe how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape, but it is not an adapter, not executable, not runtime wiring, not Sparkbot integration, not authorization, not approval, not execution, not audit persistence, and not a trust lookup.
 
 ## Standing Phase 3 Boundaries
 

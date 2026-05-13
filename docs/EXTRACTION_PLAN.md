@@ -2501,7 +2501,46 @@ Still blocked:
 
 After merge:
 
-- STOP for explicit operator approval before any next narrow non-production extraction or adapter proposal
+- GO only for Phase 4.6 Non-production HumanInput Adapter Proposal if explicitly approved
+
+## Phase 4.6 Gate: Non-production HumanInput Adapter Proposal
+
+Phase 4.6 may add proposal metadata describing how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape.
+
+GO only for:
+
+- proposal documentation
+- static proposal fixture metadata
+- static proposal tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+Required proof:
+
+- fixture is valid JSON
+- status is non-runtime proposal
+- proposal is docs/tests/fixtures only
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.5 readiness review remains non-runtime
+- tests pass
+
+After merge:
+
+- STOP for explicit operator approval before any next narrow non-production phase
 
 ## Phase 2.21: Guardian Request Test Design Review
 

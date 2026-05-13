@@ -2090,7 +2090,49 @@ Acceptance criteria:
 
 Next gate:
 
-- explicit operator approval for any next narrow non-production phase
+- Phase 4.6 - Non-production HumanInput Adapter Proposal, explicitly approved as docs/tests/fixtures only
+
+Status:
+
+- complete
+- tagged as `phase-4.5-boundary-readiness-review`
+
+## Phase 4.6 - Non-production HumanInput Adapter Proposal
+
+Goal:
+
+Add a non-production proposal describing how a future shell intake adapter could convert selected shell input context into the existing HumanInput boundary fixture/contract shape.
+
+Deliverables:
+
+- `docs/PHASE_4_6_NONPRODUCTION_HUMANINPUT_ADAPTER_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_4_6_humaninput_adapter_proposal.json`
+- `tests/test_phase_4_6_humaninput_adapter_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- proposal is metadata only
+- proposal is not a HumanInput adapter
+- no files under `lima/` are modified
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no model calls
+- no tool execution
+- no terminal or PTY behavior
+- no robotics or physical-world behavior
+- no live auth/session/trust lookup
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.5 readiness review remains non-runtime
+- tests pass
+
+Next gate:
+
+- STOP for explicit operator approval before any next narrow non-production phase
 
 Reserved from Phase 3.4:
 

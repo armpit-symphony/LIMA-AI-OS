@@ -1549,6 +1549,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - physical-world control remains blocked
 
+## ADR-0098: HumanInput Adapter Proposal Is Not A HumanInput Adapter
+
+Status: Accepted
+
+Decision:
+
+Phase 4.6 may add a non-production HumanInput adapter proposal as docs/tests/fixtures only. The proposal may describe how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape, but it is not a HumanInput adapter and does not approve live adapter code.
+
+Rationale:
+
+Phase 4.5 found the HumanInput intake boundary conditionally ready for an explicitly approved narrow non-production proposal. A proposal gives the project a reviewable shape for future adapter design while keeping HumanInput as non-authorizing input before IntentEnvelope and GuardianDecision.
+
+Consequences:
+
+- Phase 4.6 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- no live auth/session/trust lookup is added
+- the proposal cannot authorize, approve, enforce, execute, persist audit data, or perform physical-world action
+- real IntentCompiler and real GuardianDecision remain blocked
+- any next narrow non-production phase requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
