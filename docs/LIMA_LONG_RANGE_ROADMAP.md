@@ -103,7 +103,8 @@ Current expected sequence:
 - Phase 5.10 - Runtime Bridge Implementation Gate / Closeout Review: complete/tagged.
 - Phase 5.11 - Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout: complete/tagged.
 - Phase 6.0 - Post-Phase-5 Roadmap Reorientation: complete/tagged.
-- Phase 6.1 - LIMA Kernel Lifecycle Planning: approved docs/tests/fixtures-only lane.
+- Phase 6.1 - LIMA Kernel Lifecycle Planning: complete/tagged.
+- Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map: approved docs/tests/fixtures-only lane.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -203,7 +204,9 @@ Phase 5.11 is complete and tagged as a docs/tests/fixtures-only audit archive / 
 
 Phase 6.0 is complete and tagged as docs/tests/fixtures-only roadmap reorientation. It selects kernel lifecycle planning as the safest next lane after Phase 5.
 
-Phase 6.1 may continue as docs/tests/fixtures-only LIMA Kernel Lifecycle Planning. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior remain blocked.
+Phase 6.1 is complete and tagged as docs/tests/fixtures-only LIMA Kernel Lifecycle Planning. It maps shell intake through blocked driver handoff without implementing runtime behavior.
+
+Phase 6.2 may continue as docs/tests/fixtures-only IntentEnvelope and GuardianDecision lifecycle boundary mapping. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior remain blocked.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

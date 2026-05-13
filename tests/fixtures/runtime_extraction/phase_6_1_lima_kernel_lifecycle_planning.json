@@ -1,0 +1,68 @@
+{
+  "phase": "6.1",
+  "status": "lima_kernel_lifecycle_planning",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "kernel_lifecycle_planning_only": true,
+  "phase_document": "docs/PHASE_6_1_LIMA_KERNEL_LIFECYCLE_PLANNING.md",
+  "source_phase": "6.0",
+  "source_tag": "phase-6.0-post-phase-5-roadmap-reorientation",
+  "source_merge_commit": "cc695492d66184e77da10c62b5cd30ed1f0eef95",
+  "latest_main_after_source_state_sync": "639caf3bd143b44b5ce704ef708ec4264f001be4",
+  "kernel_lifecycle_stages": [
+    "shell_intake",
+    "boundary_normalization",
+    "intent_candidate_formation",
+    "guardian_review",
+    "guardiandecision_record",
+    "spine_audit_memory_handoff",
+    "driver_tool_handoff_blocked_until_approved"
+  ],
+  "lifecycle_rules": {
+    "humaninput_is_intent_context_not_execution_permission": true,
+    "intentenvelope_candidates_non_executable": true,
+    "guardiandecision_is_future_authority_boundary": true,
+    "audit_spine_memory_designed_before_persistence": true,
+    "sparkbot_reference_shell_not_kernel": true,
+    "robo_os_physical_world_surfaces_remain_gated": true
+  },
+  "runtime_prerequisites_before_bridge_implementation": [
+    "kernel_lifecycle_review",
+    "intentenvelope_lifecycle_boundary_map",
+    "guardiandecision_lifecycle_boundary_map",
+    "approval_boundary_model",
+    "audit_spine_memory_boundary_model",
+    "driver_handoff_gate",
+    "explicit_operator_runtime_approval"
+  ],
+  "ready_for": [
+    "phase_6_2_docs_tests_fixtures_only_intentenvelope_guardiandecision_lifecycle_boundary_map"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "runtime_bridge_implementation",
+    "live_adapter_code",
+    "sparkbot_import_or_wiring",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "physical_world_action"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
