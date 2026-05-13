@@ -58,15 +58,15 @@ Phase 4.16 HumanInput Boundary Lane Closeout Review is complete, merged to `main
 
 The approved Phase 4.14 through Phase 4.16 queue is exhausted.
 
-Phase 4.17 HumanInput to IntentEnvelope Boundary Planning is in progress on branch `phase-4-17-humaninput-to-intentenvelope-boundary-planning`. It is docs/tests/fixtures only and must not add schema implementation, bridge code, real IntentCompiler behavior, or runtime behavior.
+Phase 4.17 HumanInput to IntentEnvelope Boundary Planning is complete, merged to `main`, and tagged. It is docs/tests/fixtures only and did not add schema implementation, bridge code, real IntentCompiler behavior, or runtime behavior.
 
 Latest completed phase merge:
 
-`e69d6813513dad7e709358334d74a2b590e254af`
+`29f8993b5adb34b9fc6d9d0155e6bd79e915847a`
 
 Latest tag:
 
-`phase-4.16-humaninput-boundary-lane-closeout-review`
+`phase-4.17-humaninput-to-intentenvelope-boundary-planning`
 
 ## Current Next Step
 
@@ -76,11 +76,11 @@ Continue through the approved HumanInput to IntentEnvelope non-runtime lane unle
 
 Recommended next branch:
 
-`phase-4-17-humaninput-to-intentenvelope-boundary-planning`
+`phase-4-18-humaninput-to-intentenvelope-boundary-schema-contract-proposal`
 
 Latest completed merge:
 
-`e69d6813513dad7e709358334d74a2b590e254af`
+`29f8993b5adb34b9fc6d9d0155e6bd79e915847a`
 
 Recommended PR target:
 
@@ -90,7 +90,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning.
+Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal.
 
 ## Active Phase 4 Status
 
@@ -111,7 +111,8 @@ Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning.
 - Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: complete/tagged.
 - Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: complete/tagged.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: complete/tagged.
-- Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: in progress.
+- Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: complete/tagged.
+- Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: approved next.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -137,7 +138,9 @@ Phase 4.15 was the approved docs/tests/fixtures-only readiness review of Phase 4
 
 Phase 4.16 was the approved docs/tests/fixtures-only closeout review for the HumanInput boundary lane. It did not add new harness behavior or runtime behavior. It recommends the next explicitly approved lane be HumanInput to IntentEnvelope boundary planning.
 
-Phase 4.17 opens that lane as planning only. It aligns the lane with the standing IntentEnvelope safety gate and does not approve bridge code, schema implementation, real IntentCompiler behavior, GuardianDecision behavior, runtime wiring, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
+Phase 4.17 opened that lane as planning only. It aligned the lane with the standing IntentEnvelope safety gate and did not approve bridge code, schema implementation, real IntentCompiler behavior, GuardianDecision behavior, runtime wiring, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
+
+Phase 4.18 is the approved docs/tests/fixtures-only boundary schema/contract proposal. It may propose static metadata shape, but must not implement a bridge, parser, compiler, adapter, or runtime behavior.
 
 ## Completed Phase 3 Status
 
