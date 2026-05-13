@@ -52,6 +52,8 @@ The approved Phase 4.10 through Phase 4.13 docs/tests/fixtures-only queue is exh
 
 Phase 4.14 Test-only HumanInput Adapter Harness Implementation is complete, merged to `main`, and tagged. It adds deterministic test-only helper code under `tests/` and does not modify files under `lima/`.
 
+Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review is in progress on branch `phase-4-15-test-only-humaninput-adapter-harness-implementation-readiness-review`. It is docs/tests/fixtures only and must not add harness behavior unless fixing a safety bug in `tests/support/` is necessary and remains test-only.
+
 Latest completed phase merge:
 
 `1870157a9d1d1dffdf7cb99c8e822cde5d4a9927`
@@ -101,7 +103,7 @@ Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Revie
 - Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: complete/tagged.
 - Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: complete/tagged.
 - Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: complete/tagged.
-- Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: approved next.
+- Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 

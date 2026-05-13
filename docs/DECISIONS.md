@@ -1762,6 +1762,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.15 should review whether the harness stayed deterministic, synthetic-only, and non-runtime
 
+## ADR-0107: Test-only HumanInput Harness Readiness Allows Closeout Review Only
+
+Status: Accepted
+
+Decision:
+
+Phase 4.15 may review the Phase 4.14 harness as docs/tests/fixtures only. It may recommend Phase 4.16 HumanInput boundary lane closeout review, but it does not approve live adapter code, runtime wiring, Sparkbot integration, or any authority/execution behavior.
+
+Rationale:
+
+The Phase 4.14 harness stayed under `tests/`, converted only synthetic fixtures to HumanInput-shaped dictionaries, and rejected runtime/prod markers. A readiness review confirms the constraint before closing the HumanInput boundary lane.
+
+Consequences:
+
+- Phase 4.15 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no new harness behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.16 may close out the HumanInput boundary lane
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
