@@ -2075,6 +2075,31 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.6 or later requires explicit operator approval
 
+## ADR-0120: Runtime Bridge Work Requires Safety Gate and Design First
+
+Status: Accepted
+
+Decision:
+
+Phase 5.6 records that the Phase 5.4 helper remains test-only and that any future live/runtime HumanInput to IntentEnvelope bridge requires separate explicit Phil approval. Future runtime bridge work must begin with a runtime design proposal before implementation.
+
+Rationale:
+
+The test-only helper and readiness review are useful boundary scaffolding, but they are not sufficient to approve runtime behavior. A safety gate prevents test classifier semantics, operator wording, or candidate metadata from becoming execution permission.
+
+Consequences:
+
+- Phase 5.6 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- HumanInput remains intent context, not execution permission
+- operator/admin/Phil/trusted wording cannot bypass approval
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.7 or later requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
