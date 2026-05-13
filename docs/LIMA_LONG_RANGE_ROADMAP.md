@@ -80,7 +80,8 @@ Current expected sequence:
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
 - Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: complete/tagged.
-- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: in progress.
+- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: complete/tagged.
+- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: approved next.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 

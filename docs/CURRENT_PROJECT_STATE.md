@@ -42,15 +42,17 @@ Phase 4.9 HumanInput Adapter Implementation Readiness Review is complete, merged
 
 Phase 4.10 Non-production Test-only HumanInput Adapter Harness Proposal is complete, merged to `main`, and tagged. It describes a future test-only harness proposal as docs/tests/fixtures only, but does not implement harness code.
 
-Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review is in progress on branch `phase-4-11-test-only-humaninput-adapter-harness-proposal-readiness-review`. It may review the Phase 4.10 proposal as docs/tests/fixtures only, but must not implement harness code.
+Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 4.10 proposal as docs/tests/fixtures only, but does not implement harness code.
+
+Phase 4.12 Test-only HumanInput Adapter Harness Safety Gate Docs is approved next as docs/tests/fixtures only.
 
 Latest completed phase merge:
 
-`e7c7fb2fdaae6981aa1d6f984ba1e74c6a0c1dfe`
+`f1442326a9290c70b341c177d876fc68de87091b`
 
 Latest tag:
 
-`phase-4.10-nonproduction-test-only-humaninput-adapter-harness-proposal`
+`phase-4.11-test-only-humaninput-adapter-harness-proposal-readiness-review`
 
 ## Current Next Step
 
@@ -60,7 +62,7 @@ Continue through the approved Phase 4.10-4.13 docs/tests/fixtures-only queue unl
 
 Recommended next branch:
 
-`phase-4-11-test-only-humaninput-adapter-harness-proposal-readiness-review`
+`phase-4-12-test-only-humaninput-adapter-harness-safety-gate-docs`
 
 Latest completed merge:
 
@@ -74,7 +76,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review.
+Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs.
 
 ## Active Phase 4 Status
 
@@ -89,7 +91,8 @@ Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review.
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
 - Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: complete/tagged.
-- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: in progress.
+- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: complete/tagged.
+- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: approved next.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -103,7 +106,7 @@ Phase 4.9 was a readiness review only. Readiness to discuss a future test-only a
 
 Phase 4.10 was proposal metadata only. It did not add harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
-Phase 4.11 is readiness-review metadata only. It may recommend Phase 4.12 safety gate docs, not harness implementation.
+Phase 4.11 was readiness-review metadata only. It recommended Phase 4.12 safety gate docs, not harness implementation.
 
 ## Completed Phase 3 Status
 
