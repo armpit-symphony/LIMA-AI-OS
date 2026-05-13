@@ -1,0 +1,120 @@
+{
+  "phase": "4.18",
+  "status": "non_runtime_humaninput_to_intentenvelope_boundary_schema_contract_proposal",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "phase_document": "docs/PHASE_4_18_HUMANINPUT_TO_INTENTENVELOPE_BOUNDARY_SCHEMA_CONTRACT_PROPOSAL.md",
+  "source_phase": "4.17",
+  "source_tag": "phase-4.17-humaninput-to-intentenvelope-boundary-planning",
+  "source_merge_commit": "29f8993b5adb34b9fc6d9d0155e6bd79e915847a",
+  "latest_main_after_source_state_sync": "e1332ee745e0451cfd8d924ce23333d3501bcec3",
+  "proposal_id": "humaninput_to_intentenvelope_boundary_schema_contract_proposal",
+  "key_rule": "schema_contract_proposal_is_not_bridge_or_intentcompiler",
+  "proposal_is": {
+    "non_runtime": true,
+    "docs_tests_fixtures_only": true,
+    "schema_contract_metadata_only": true,
+    "explicit_metadata_only": true,
+    "intentenvelope_safety_gate_aligned": true
+  },
+  "proposal_is_not": {
+    "bridge_implementation": true,
+    "intentcompiler": true,
+    "intentenvelope_created": true,
+    "guardiandecision": true,
+    "authorization": true,
+    "approval": true,
+    "execution": true,
+    "audit_persistence": true,
+    "sparkbot_integration": true,
+    "runtime_wiring": true
+  },
+  "proposed_input_groups": {
+    "humaninput_refs": [
+      "input_ref",
+      "boundary_id",
+      "input_kind",
+      "source_ref",
+      "actor_ref",
+      "session_ref",
+      "lineage_seed_ref"
+    ],
+    "explicit_typed_intent_metadata": [
+      "intent_type",
+      "action_type",
+      "risk_class",
+      "target_ref",
+      "typed_args",
+      "evidence_refs",
+      "requested_tool_packs",
+      "approval_level",
+      "privacy_class",
+      "redaction_class",
+      "lineage_id",
+      "reason",
+      "confidence"
+    ],
+    "safety_markers": [
+      "raw_text_inert",
+      "explicit_metadata_only",
+      "no_hidden_parser",
+      "no_model_call",
+      "no_tool_execution",
+      "no_guardian_decision",
+      "no_authorization",
+      "guardian_required_before_consequential_behavior"
+    ]
+  },
+  "required_invariants": {
+    "humaninput_is_not_intentenvelope": true,
+    "intentenvelope_is_not_authorization": true,
+    "guardiandecision_remains_mandatory": true,
+    "raw_text_is_inert": true,
+    "explicit_typed_metadata_required": true,
+    "no_hidden_parser": true,
+    "no_heuristic_free_text_interpretation": true,
+    "no_model_calls": true,
+    "no_tool_execution": true,
+    "no_live_adapter_code": true,
+    "no_production_sparkbot_wiring": true,
+    "no_approval_enforcement_execution_or_audit_persistence": true
+  },
+  "ready_for": [
+    "phase_4_19_humaninput_to_intentenvelope_boundary_readiness_review",
+    "further_non_runtime_review"
+  ],
+  "not_ready_for": [
+    "humaninput_to_intentenvelope_implementation",
+    "test_only_bridge_code",
+    "runtime_wiring",
+    "live_adapter_code",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "model_calls",
+    "tool_execution",
+    "terminal_pty_behavior",
+    "robotics_behavior",
+    "physical_world_action",
+    "sparkbot_import_or_wiring",
+    "production_shell_implementation"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "live_adapter_code_added": false,
+    "test_only_bridge_code_added": false,
+    "intentenvelope_created": false,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}

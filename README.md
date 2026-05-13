@@ -266,6 +266,8 @@ Phase 4.16 closes the HumanInput boundary lane as complete enough to stop Phase 
 
 Phase 4.17 opens HumanInput to IntentEnvelope boundary planning as docs/tests/fixtures only. It aligns the next lane with the standing IntentEnvelope safety gate and keeps schema implementation, bridge code, real IntentCompiler, GuardianDecision, model/tool execution, Sparkbot wiring, approval/enforcement/execution/audit persistence, and physical-world action blocked.
 
+Phase 4.18 proposes a static HumanInput to IntentEnvelope boundary schema/contract as docs/tests/fixtures only. It identifies HumanInput references, explicit typed intent metadata, and safety markers for future review, but does not create IntentEnvelope records, implement a bridge, implement IntentCompiler behavior, or approve runtime wiring.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

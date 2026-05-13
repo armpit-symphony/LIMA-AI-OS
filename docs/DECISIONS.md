@@ -1835,6 +1835,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.18 may propose a boundary schema/contract as metadata only
 
+## ADR-0110: HumanInput to IntentEnvelope Schema Proposal Is Not A Bridge
+
+Status: Accepted
+
+Decision:
+
+Phase 4.18 may propose a static HumanInput to IntentEnvelope boundary schema/contract as docs/tests/fixtures only. It may list HumanInput references, explicit typed intent metadata, and safety markers, but it does not create IntentEnvelope records or implement bridge code.
+
+Rationale:
+
+The IntentEnvelope safety gate requires explicit typed metadata and inert raw text before any test-only bridge discussion. A schema proposal gives the next readiness review a stable, reviewable target without introducing compiler behavior.
+
+Consequences:
+
+- Phase 4.18 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code is added
+- no IntentEnvelope record is created
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.19 may review readiness of the proposal
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
