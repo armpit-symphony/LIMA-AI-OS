@@ -3227,6 +3227,44 @@ After merge:
 
 Continue only to Phase 5.9 docs/tests/fixtures-only boundary validation matrix work under the approved design lane.
 
+## Phase 5.9 Gate: HumanInput Runtime Bridge Boundary Validation Matrix
+
+Phase 5.9 may define a boundary validation matrix as docs/tests/fixtures only.
+
+GO:
+
+- low-risk informational category
+- shell command category
+- browser/network category
+- file mutation category
+- robotics/physical-world category
+- admin/trusted/Phil bypass category
+- ambiguous request category
+- empty request category
+- malformed request category
+- replayed/stale request category
+- non-executable expected posture for every category
+- approval-required or blocked posture for side-effect-bearing categories
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 5.10 docs/tests/fixtures-only implementation gate / closeout review under the approved design lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

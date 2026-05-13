@@ -84,6 +84,8 @@ Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main
 
 Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It documents future bridge threats and mitigations without implementation.
 
+Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is the current approved docs/tests/fixtures-only validation-matrix scope. It documents future bridge boundary categories without implementation.
+
 Latest completed phase merge:
 
 `6de81e3845c1836264ce9be903044db3ed53a67c`
@@ -96,7 +98,7 @@ Latest tag:
 
 Current operator step:
 
-Continue to Phase 5.9 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Complete Phase 5.9, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -191,6 +193,8 @@ Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is 
 Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 

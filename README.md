@@ -290,6 +290,8 @@ Phase 5.7 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Design Propo
 
 Phase 5.8 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Threat Model. It documents injection, impersonation, trust bypass, accidental execution, side-effect escalation, audit gaps, approval confusion, helper misuse, malformed input, replay, and ambiguity threats while keeping live/runtime implementation blocked.
 
+Phase 5.9 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Boundary Validation Matrix. It makes low-risk, side-effecting, bypass, ambiguous, empty, malformed, and replay/stale categories machine-checkable while keeping every output non-executable and keeping runtime implementation blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

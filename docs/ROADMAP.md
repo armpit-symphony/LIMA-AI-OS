@@ -3028,6 +3028,55 @@ Status:
 - complete
 - tagged as `phase-5.8-humaninput-runtime-bridge-threat-model`
 
+## Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix
+
+Goal:
+
+Define a machine-checkable matrix of allowed, blocked, approval-required, and rejected HumanInput categories for a future runtime bridge design.
+
+Deliverables:
+
+- `docs/PHASE_5_9_HUMANINPUT_RUNTIME_BRIDGE_BOUNDARY_VALIDATION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_5_9_humaninput_runtime_bridge_boundary_validation_matrix.json`
+- `tests/test_phase_5_9_humaninput_runtime_bridge_boundary_validation_matrix.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- validation matrix only
+- low-risk informational request included
+- shell command request included
+- browser/network request included
+- file mutation request included
+- robotics/physical-world request included
+- admin/trusted/Phil bypass attempt included
+- ambiguous request included
+- empty request included
+- malformed request included
+- replayed/stale request included
+- every row is non-executable
+- side-effect-bearing rows require approval or are blocked
+- empty, malformed, replayed, or stale rows are rejected or blocked
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 5.10 - Runtime Bridge Implementation Gate / Closeout Review
+
+Status:
+
+- complete
+- tagged as `phase-5.9-humaninput-runtime-bridge-boundary-validation-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
