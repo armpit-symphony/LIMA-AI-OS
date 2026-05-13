@@ -1692,6 +1692,29 @@ Consequences:
 - no runtime behavior is added
 - approval, enforcement, execution, and audit persistence remain blocked
 
+## ADR-0104: Test-only Harness Safety Gate Does Not Prove Production Readiness
+
+Status: Accepted
+
+Decision:
+
+Phase 4.12 may define the Test-only HumanInput Adapter Harness Safety Gate as docs/tests/fixtures only. The gate states that a future test-only harness is not runtime, not Sparkbot integration, cannot call models/tools/terminal/robots, cannot approve/enforce/execute/audit, cannot perform live lookup, and cannot imply production adapter readiness.
+
+Rationale:
+
+Even a test-only harness can be mistaken for adapter implementation readiness. A dedicated safety gate preserves the distinction between static fixture validation and runtime adapter safety.
+
+Consequences:
+
+- Phase 4.12 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no harness implementation is added
+- no live adapter implementation is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.13 may summarize HumanInput boundary readiness as a final non-runtime review
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

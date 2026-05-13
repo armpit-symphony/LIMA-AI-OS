@@ -254,6 +254,8 @@ Phase 4.10 proposes a future test-only HumanInput adapter harness as docs/tests/
 
 Phase 4.11 reviews the Phase 4.10 test-only harness proposal as clear enough for future safety gate documentation only. It keeps harness code, live adapter code, runtime behavior, Sparkbot integration, live lookup, model/tool/terminal/robot behavior, approval/enforcement/execution/audit persistence, and physical-world action blocked.
 
+Phase 4.12 adds Test-only HumanInput Adapter Harness Safety Gate Docs. It states that any future test-only harness is not runtime, not Sparkbot integration, cannot call models/tools/terminal/robots, cannot approve/enforce/execute/audit, cannot perform live lookup, and cannot imply production adapter readiness.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
