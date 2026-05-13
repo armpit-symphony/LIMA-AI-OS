@@ -86,21 +86,21 @@ Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, 
 
 Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It documents future bridge boundary categories without implementation.
 
-Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is the current approved docs/tests/fixtures-only closeout scope. It closes the design lane and keeps live/runtime implementation blocked.
+Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is complete, merged to `main`, and tagged. It closes the design lane and keeps live/runtime implementation blocked.
 
 Latest completed phase merge:
 
-`6628c9a9e3a51a2c7eadbfe885378d39730a5f9e`
+`1b1036cdde8026d1f1c287a5d02c1ac3f142ff32`
 
 Latest tag:
 
-`phase-5.9-humaninput-runtime-bridge-boundary-validation-matrix`
+`phase-5.10-runtime-bridge-implementation-gate-closeout-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.10, then stop. Do not proceed to any next phase until the operator explicitly approves the next scope.
+Stop at the Phase 5 runtime bridge implementation gate. Do not proceed to any next phase until the operator explicitly approves the next scope.
 
 Recommended next branch:
 
@@ -108,7 +108,7 @@ not selected
 
 Latest completed merge:
 
-`6628c9a9e3a51a2c7eadbfe885378d39730a5f9e`
+`1b1036cdde8026d1f1c287a5d02c1ac3f142ff32`
 
 Recommended PR target:
 
@@ -118,7 +118,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.10 - Runtime Bridge Implementation Gate / Closeout Review.
+Explicit operator next-scope decision required.
 
 ## Active Phase 4 Status
 
@@ -198,7 +198,9 @@ Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, 
 
 Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+No next phase is approved. Live/runtime HumanInput to IntentEnvelope implementation remains blocked pending explicit operator next-scope approval.
 
 ## Completed Phase 3 Status
 
