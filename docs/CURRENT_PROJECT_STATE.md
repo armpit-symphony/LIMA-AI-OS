@@ -72,27 +72,29 @@ Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to 
 
 Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and tagged. It proposes a future test-only bridge harness only and does not implement the harness.
 
+Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.2 proposal as ready only for an explicit operator implementation-scope decision and stops at the implementation gate.
+
 Latest completed phase merge:
 
-`cf4bfb06c7f5372927531582983cb10ef5676b2d`
+`c3818f22094c5928c5b0d2ae7ab4c47a1d7ff8d5`
 
 Latest tag:
 
-`phase-5.2-test-only-bridge-harness-proposal`
+`phase-5.3-test-only-bridge-harness-readiness-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Proceed through the approved Phase 5 non-runtime planning lane until a new implementation gate or product/safety decision is reached.
+Stop at the Phase 5.4 implementation gate until the operator explicitly approves or declines a narrow test-only bridge harness implementation scope.
 
 Recommended next branch:
 
-`phase-5-3-test-only-bridge-harness-readiness-review`
+not selected
 
 Latest completed merge:
 
-`cf4bfb06c7f5372927531582983cb10ef5676b2d`
+`c3818f22094c5928c5b0d2ae7ab4c47a1d7ff8d5`
 
 Recommended PR target:
 
@@ -102,7 +104,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.3 - Test-only Bridge Harness Readiness Review.
+Phase 5.4 - explicit operator implementation-scope decision required.
 
 ## Active Phase 4 Status
 
@@ -168,9 +170,9 @@ Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to 
 
 Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and tagged. It proposes a future test-only bridge harness only and does not implement the harness.
 
-Phase 5.3 Test-only Bridge Harness Readiness Review is approved next as docs/tests/fixtures-only readiness review work. It must stop at an implementation gate before any bridge code or test-only helper code.
+Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.2 proposal and stops at an implementation gate.
 
-Phase 5.3 Test-only Bridge Harness Readiness Review is in progress. It reviews the Phase 5.2 proposal and should stop at an implementation gate.
+Phase 5.4 is not approved. Before Phase 5.4 starts, the operator must explicitly approve or decline a narrow test-only bridge harness implementation scope, including allowed write scope, helper location, exact synthetic inputs, exact output shape, validation rules, and blocked behavior tests.
 
 ## Completed Phase 3 Status
 
