@@ -264,6 +264,8 @@ Phase 4.15 reviews the Phase 4.14 test-only harness as constrained, deterministi
 
 Phase 4.16 closes the HumanInput boundary lane as complete enough to stop Phase 4 HumanInput work and propose the next explicitly approved lane, likely HumanInput to IntentEnvelope boundary planning. It does not approve next-lane implementation, live adapter code, runtime wiring, Sparkbot integration, approval/enforcement/execution/audit persistence, or physical-world action.
 
+Phase 4.17 opens HumanInput to IntentEnvelope boundary planning as docs/tests/fixtures only. It aligns the next lane with the standing IntentEnvelope safety gate and keeps schema implementation, bridge code, real IntentCompiler, GuardianDecision, model/tool execution, Sparkbot wiring, approval/enforcement/execution/audit persistence, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
