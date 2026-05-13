@@ -170,6 +170,8 @@ Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and t
 
 Phase 5.3 Test-only Bridge Harness Readiness Review is approved next as docs/tests/fixtures-only readiness review work. It must stop at an implementation gate before any bridge code or test-only helper code.
 
+Phase 5.3 Test-only Bridge Harness Readiness Review is in progress. It reviews the Phase 5.2 proposal and should stop at an implementation gate.
+
 ## Completed Phase 3 Status
 
 - Phase 3.3 - Non-production Kernel Pipeline Relationship Metadata: complete/tagged.
