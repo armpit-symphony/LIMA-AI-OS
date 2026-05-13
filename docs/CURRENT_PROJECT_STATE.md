@@ -30,7 +30,9 @@ Phase 4.4 Boundary Fixture Contract Extension is complete, merged to `main`, tag
 
 Phase 4.5 Boundary Readiness Review is complete, merged to `main`, and tagged. It reviews the HumanInput intake boundary as ready only for a future explicitly approved narrow non-production proposal, while keeping runtime extraction and blocked behavior closed.
 
-The next phase is not automatically approved unless it remains docs/tests/fixtures-only and is explicitly documented as safe. Any narrow non-production extraction or adapter work requires explicit operator approval.
+Phase 4.6 Non-production HumanInput Adapter Proposal is in progress on branch `phase-4-6-nonproduction-humaninput-adapter-proposal`. It may add docs/tests/fixtures-only proposal metadata describing how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape.
+
+Phase 4.6 is not a HumanInput adapter. It is not executable, not runtime wiring, not Sparkbot integration, not authorization, not approval, not execution, not audit persistence, and not a trust lookup.
 
 Latest completed phase merge:
 
@@ -44,15 +46,15 @@ Latest tag:
 
 Current operator step:
 
-Request explicit operator approval for any next narrow non-production extraction or adapter proposal.
+Complete Phase 4.6 as docs/tests/fixtures only, then merge/tag only if validation passes and no runtime or blocked behavior is added.
 
 Recommended next branch:
 
-`pending-explicit-approval`
+`phase-4-6-nonproduction-humaninput-adapter-proposal`
 
 Latest completed merge:
 
-`9e2acfa`
+`d826810`
 
 Recommended PR target:
 
@@ -62,7 +64,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit operator approval for the next narrow non-production phase.
+Phase 4.6 - Non-production HumanInput Adapter Proposal.
 
 ## Active Phase 4 Status
 
@@ -72,8 +74,11 @@ Explicit operator approval for the next narrow non-production phase.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
 - Phase 4.5 - Boundary Readiness Review: complete/tagged.
+- Phase 4.6 - Non-production HumanInput Adapter Proposal: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
+
+Phase 4.6 is the approved narrow proposal. It remains docs/tests/fixtures only and must not add adapter code, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 
