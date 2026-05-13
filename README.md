@@ -298,6 +298,8 @@ Phase 5.11 archives the completed Phase 5 HumanInput bridge design lane as docs/
 
 Phase 6.0 starts broader LIMA OS roadmap planning as docs/tests/fixtures only. It reorients from the archived Phase 5 bridge lane toward kernel lifecycle planning and keeps runtime bridge implementation, `lima/` changes, Sparkbot wiring, execution, approval enforcement, audit persistence, and physical-world action blocked.
 
+Phase 6.1 adds docs/tests/fixtures-only LIMA Kernel Lifecycle Planning. It maps shell intake, boundary normalization, IntentEnvelope candidate formation, Guardian review, GuardianDecision record, spine/audit/memory handoff, and blocked driver handoff without implementing runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

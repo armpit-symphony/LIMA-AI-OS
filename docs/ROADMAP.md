@@ -3199,6 +3199,48 @@ Status:
 - complete
 - tagged as `phase-6.0-post-phase-5-roadmap-reorientation`
 
+## Phase 6.1 - LIMA Kernel Lifecycle Planning
+
+Goal:
+
+Define a planning-only lifecycle map for the LIMA Kernel before any future runtime bridge implementation.
+
+Deliverables:
+
+- `docs/PHASE_6_1_LIMA_KERNEL_LIFECYCLE_PLANNING.md`
+- `tests/fixtures/runtime_extraction/phase_6_1_lima_kernel_lifecycle_planning.json`
+- `tests/test_phase_6_1_lima_kernel_lifecycle_planning.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- shell intake, boundary normalization, candidate formation, Guardian review, GuardianDecision, spine/audit/memory, and driver handoff stages documented
+- HumanInput remains intent context
+- IntentEnvelope candidates remain non-executable
+- GuardianDecision remains future authority boundary
+- audit/spine/memory design precedes persistence
+- Sparkbot remains reference shell, not kernel
+- Robo-OS remains gated driver-plane surface
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map
+
+Status:
+
+- complete
+- tagged as `phase-6.1-lima-kernel-lifecycle-planning`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

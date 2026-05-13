@@ -2238,6 +2238,27 @@ Consequences:
 - live/runtime bridge implementation remains blocked
 - Phase 6.1 may continue only as docs/tests/fixtures-only LIMA Kernel Lifecycle Planning
 
+## ADR-0127: Kernel Lifecycle Planning Precedes Runtime Boundaries
+
+Status: Accepted
+
+Decision:
+
+Phase 6.1 records a planning-only LIMA Kernel lifecycle. The lifecycle runs from shell intake to boundary normalization, IntentEnvelope candidate formation, Guardian review, GuardianDecision record, spine/audit/memory handoff, and blocked driver handoff.
+
+Rationale:
+
+Runtime bridge work should not proceed until the kernel lifecycle is explicit enough to place future runtime behavior behind Guardian and persistence boundaries.
+
+Consequences:
+
+- Phase 6.1 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime behavior remains blocked
+- Phase 6.2 may continue only as docs/tests/fixtures-only IntentEnvelope and GuardianDecision lifecycle boundary mapping
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

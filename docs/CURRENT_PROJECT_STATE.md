@@ -92,6 +92,8 @@ Phase 5.11 Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout is com
 
 Phase 6.0 Post-Phase-5 Roadmap Reorientation is complete, merged to `main`, and tagged. It reorients the roadmap toward kernel lifecycle planning after the Phase 5 archive.
 
+Phase 6.1 LIMA Kernel Lifecycle Planning is the current approved docs/tests/fixtures-only planning scope. It maps the kernel lifecycle without implementation.
+
 Latest completed phase merge:
 
 `cc695492d66184e77da10c62b5cd30ed1f0eef95`
@@ -104,7 +106,7 @@ Latest tag:
 
 Current operator step:
 
-Continue to Phase 6.1 only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
+Complete Phase 6.1, then continue only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -211,6 +213,8 @@ Phase 5.11 Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout is com
 No next phase is approved. Future runtime work requires new explicit Phil approval.
 
 Phase 6.0 Post-Phase-5 Roadmap Reorientation is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 6.1 LIMA Kernel Lifecycle Planning is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
