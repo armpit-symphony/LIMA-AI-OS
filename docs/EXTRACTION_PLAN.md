@@ -2826,6 +2826,39 @@ After merge:
 
 - GO only for Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review
 
+## Phase 4.19 Gate: HumanInput to IntentEnvelope Boundary Readiness Review
+
+Phase 4.19 may review whether the Phase 4.18 schema/contract proposal is clear, safe, constrained, and explicitly non-runtime enough before a Phase 5 gate / implementation readiness closeout.
+
+GO only for:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- bridge code
+- test-only bridge code
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- natural-language inference
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

@@ -76,7 +76,7 @@ Continue through the approved HumanInput to IntentEnvelope non-runtime lane unle
 
 Recommended next branch:
 
-`phase-4-19-humaninput-to-intentenvelope-boundary-readiness-review`
+`phase-4-20-phase-5-gate-implementation-readiness-closeout`
 
 Latest completed merge:
 
@@ -90,7 +90,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review.
+Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout.
 
 ## Active Phase 4 Status
 
@@ -113,7 +113,7 @@ Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: complete/tagged.
 - Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: complete/tagged.
 - Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: complete/tagged.
-- Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: approved next.
+- Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -143,7 +143,7 @@ Phase 4.17 opened that lane as planning only. It aligned the lane with the stand
 
 Phase 4.18 HumanInput to IntentEnvelope Boundary Schema / Contract Proposal is complete, merged to `main`, and tagged. It proposed static metadata shape and did not implement a bridge, parser, compiler, adapter, or runtime behavior.
 
-Phase 4.19 is the approved docs/tests/fixtures-only readiness review of the Phase 4.18 schema/contract proposal.
+Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review is in progress. It reviews the Phase 4.18 schema/contract proposal as docs/tests/fixtures-only readiness metadata before a Phase 5 gate / implementation readiness closeout.
 
 ## Completed Phase 3 Status
 
