@@ -2170,6 +2170,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.10 may continue only as docs/tests/fixtures-only implementation gate / closeout review
 
+## ADR-0124: Runtime Bridge Design Lane Stops at Implementation Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 5.10 closes the HumanInput runtime bridge design lane at an implementation gate. The lane designed the safety gate, future bridge shape, threat model, and validation matrix, but it does not approve live/runtime implementation.
+
+Rationale:
+
+The repository now has enough non-runtime design metadata to support an explicit operator decision. Proceeding further without a new scope would risk turning planning artifacts into implicit implementation approval.
+
+Consequences:
+
+- Phase 5.10 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- future runtime implementation requires separate explicit Phil approval
+- future runtime implementation must define production boundaries, Guardian handoff, provenance validation, replay/staleness handling, malformed-input rejection, approval semantics, audit design, and semantic tests
+- approval, enforcement, execution, and audit persistence remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

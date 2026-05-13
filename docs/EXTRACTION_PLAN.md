@@ -3265,6 +3265,38 @@ After merge:
 
 Continue only to Phase 5.10 docs/tests/fixtures-only implementation gate / closeout review under the approved design lane.
 
+## Phase 5.10 Gate: Runtime Bridge Implementation Gate / Closeout Review
+
+Phase 5.10 may close the HumanInput runtime bridge design lane as docs/tests/fixtures only.
+
+GO:
+
+- designed-artifacts summary
+- unimplemented runtime pieces list
+- future runtime implementation requirements
+- explicit operator next-scope requirement
+- live/runtime implementation blocked statement
+- Phase 5.4 helper remains test-only statement
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+STOP until the operator explicitly approves the next scope.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

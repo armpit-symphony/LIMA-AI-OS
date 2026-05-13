@@ -86,6 +86,8 @@ Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, 
 
 Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It documents future bridge boundary categories without implementation.
 
+Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is the current approved docs/tests/fixtures-only closeout scope. It closes the design lane and keeps live/runtime implementation blocked.
+
 Latest completed phase merge:
 
 `6628c9a9e3a51a2c7eadbfe885378d39730a5f9e`
@@ -98,7 +100,7 @@ Latest tag:
 
 Current operator step:
 
-Continue to Phase 5.10 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Complete Phase 5.10, then stop. Do not proceed to any next phase until the operator explicitly approves the next scope.
 
 Recommended next branch:
 
@@ -195,6 +197,8 @@ Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main
 Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 5.10 Runtime Bridge Implementation Gate / Closeout Review is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
