@@ -82,21 +82,21 @@ Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is 
 
 Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It documents future runtime bridge shape without implementation.
 
-Phase 5.8 HumanInput Runtime Bridge Threat Model is the current approved docs/tests/fixtures-only threat-model scope. It documents future bridge threats and mitigations without implementation.
+Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It documents future bridge threats and mitigations without implementation.
 
 Latest completed phase merge:
 
-`ae7a0bf967dacf88a3eb196002e387305f48b8da`
+`6de81e3845c1836264ce9be903044db3ed53a67c`
 
 Latest tag:
 
-`phase-5.7-humaninput-runtime-bridge-design-proposal`
+`phase-5.8-humaninput-runtime-bridge-threat-model`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.8, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Continue to Phase 5.9 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -104,7 +104,7 @@ not selected
 
 Latest completed merge:
 
-`ae7a0bf967dacf88a3eb196002e387305f48b8da`
+`6de81e3845c1836264ce9be903044db3ed53a67c`
 
 Recommended PR target:
 
@@ -114,7 +114,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.8 - HumanInput Runtime Bridge Threat Model.
+Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix.
 
 ## Active Phase 4 Status
 
@@ -190,7 +190,7 @@ Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is 
 
 Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.8 HumanInput Runtime Bridge Threat Model is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
