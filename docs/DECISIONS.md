@@ -1979,6 +1979,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.2 may propose a test-only bridge harness, not implement it
 
+## ADR-0116: Test-only Bridge Harness Must Start As Proposal
+
+Status: Accepted
+
+Decision:
+
+Phase 5.2 may propose a future test-only HumanInput to IntentEnvelope bridge harness as docs/tests/fixtures only. It must not implement harness code or create IntentEnvelope records.
+
+Rationale:
+
+Even test-only bridge code can create implementation momentum. A proposal phase lets the repo verify boundaries, inputs, outputs, failure modes, and blocked interpretations before any helper code is considered.
+
+Consequences:
+
+- Phase 5.2 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge implementation or test-only bridge code is added
+- no runtime behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.3 may review readiness before any implementation gate
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

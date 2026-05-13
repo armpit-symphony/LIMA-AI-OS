@@ -274,6 +274,8 @@ Phase 4.20 closes the HumanInput to IntentEnvelope non-runtime planning lane at 
 
 Phase 5.0 opens Phase 5 as non-runtime planning only. It records the HumanInput to IntentEnvelope boundary charter, treats HumanInput as an operator-originated request envelope rather than an execution command, and keeps implementation, bridge code, runtime wiring, live adapter code, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, audit persistence, Sparkbot integration, and physical-world action blocked.
 
+Phase 5.1 proposes the HumanInput to IntentEnvelope contract as static non-runtime metadata. It defines preserved request fields and descriptive candidate states, but does not create IntentEnvelope records, implement bridge code, run IntentCompiler behavior, enforce approvals, execute actions, persist audit, or add runtime wiring.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

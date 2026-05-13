@@ -2735,6 +2735,38 @@ Next likely phase:
 
 - Phase 5.2 - Test-only Bridge Harness Proposal
 
+## Phase 5.2 - Test-only Bridge Harness Proposal
+
+Goal:
+
+Propose a future test-only HumanInput to IntentEnvelope bridge harness as non-runtime metadata, without implementing the harness.
+
+Deliverables:
+
+- `docs/PHASE_5_2_TEST_ONLY_BRIDGE_HARNESS_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_5_2_test_only_bridge_harness_proposal.json`
+- `tests/test_phase_5_2_test_only_bridge_harness_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- harness proposal only
+- no bridge implementation
+- no test-only bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 5.3 - Test-only Bridge Harness Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
