@@ -66,13 +66,15 @@ Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review is complete, m
 
 Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged to `main`, and tagged. It confirms Phase 5 gate is reached and identifies operator decisions needed before any Phase 5 runtime, test-only bridge, or implementation work.
 
+Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is complete, merged to `main`, and tagged. It opens Phase 5 as non-runtime planning only and keeps implementation, bridge code, runtime wiring, live adapter code, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, audit persistence, Sparkbot integration, and physical-world action blocked.
+
 Latest completed phase merge:
 
-`fc7735c80b3016ee675150a9f1c024f38f2cb34a`
+`46ade88b6f41edabc63af4b5236d3154a6d96450`
 
 Latest tag:
 
-`phase-4.20-phase-5-gate-implementation-readiness-closeout`
+`phase-5.0-phase-5-scope-charter-humaninput-intentenvelope-boundary-decision-record`
 
 ## Current Next Step
 
@@ -82,11 +84,11 @@ Proceed through the approved Phase 5 non-runtime planning lane until a new imple
 
 Recommended next branch:
 
-`phase-5-0-phase-5-scope-charter-humaninput-intentenvelope-boundary-decision-record`
+`phase-5-1-humaninput-to-intentenvelope-contract-proposal`
 
 Latest completed merge:
 
-`fc7735c80b3016ee675150a9f1c024f38f2cb34a`
+`46ade88b6f41edabc63af4b5236d3154a6d96450`
 
 Recommended PR target:
 
@@ -96,7 +98,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.0 - Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record.
+Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal.
 
 ## Active Phase 4 Status
 
@@ -156,7 +158,9 @@ Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged 
 
 Phase 5 is not pre-approved. Before Phase 5 starts, the operator must decide whether Phase 5 begins as further non-runtime planning or as a narrow explicitly approved test-only HumanInput to IntentEnvelope bridge implementation, plus the human UX flow, approval semantics, trust/autonomy handling, safety boundary, and code scope.
 
-Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is in progress. It opens Phase 5 as non-runtime planning only and records the approved HumanInput to IntentEnvelope boundary scope.
+Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is complete, merged to `main`, and tagged. It opens Phase 5 as non-runtime planning only and records the approved HumanInput to IntentEnvelope boundary scope.
+
+Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is approved next as docs/tests/fixtures-only contract proposal work. It may propose static contract metadata, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 

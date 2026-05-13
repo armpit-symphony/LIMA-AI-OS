@@ -2698,6 +2698,43 @@ Next likely phase:
 
 - Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal
 
+Status:
+
+- complete
+- tagged as `phase-5.0-phase-5-scope-charter-humaninput-intentenvelope-boundary-decision-record`
+
+## Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal
+
+Goal:
+
+Propose the HumanInput to IntentEnvelope contract as static non-runtime metadata, preserving source, operator intent, requested action, risk tier, approval state, and not-executable-yet status.
+
+Deliverables:
+
+- `docs/PHASE_5_1_HUMANINPUT_TO_INTENTENVELOPE_CONTRACT_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_5_1_humaninput_to_intentenvelope_contract_proposal.json`
+- `tests/test_phase_5_1_humaninput_to_intentenvelope_contract_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- contract proposal only
+- no bridge code
+- no test-only bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 5.2 - Test-only Bridge Harness Proposal
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

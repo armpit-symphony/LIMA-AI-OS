@@ -1955,6 +1955,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.1 may propose a contract, not implement it
 
+## ADR-0115: HumanInput To IntentEnvelope Contract Proposal Is Metadata Only
+
+Status: Accepted
+
+Decision:
+
+Phase 5.1 may propose the HumanInput to IntentEnvelope contract as static metadata only. The contract may define source, operator intent, requested action, risk tier, approval state, candidate state, and not-executable-yet markers, but it does not create IntentEnvelope records or implement bridge code.
+
+Rationale:
+
+The Phase 5 charter makes operator intent high-priority context without making it permission. A contract proposal lets reviewers inspect the required fields before any test-only bridge harness proposal.
+
+Consequences:
+
+- Phase 5.1 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code or test-only bridge code is added
+- no runtime behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.2 may propose a test-only bridge harness, not implement it
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
