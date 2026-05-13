@@ -52,15 +52,15 @@ The approved Phase 4.10 through Phase 4.13 docs/tests/fixtures-only queue is exh
 
 Phase 4.14 Test-only HumanInput Adapter Harness Implementation is complete, merged to `main`, and tagged. It adds deterministic test-only helper code under `tests/` and does not modify files under `lima/`.
 
-Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review is in progress on branch `phase-4-15-test-only-humaninput-adapter-harness-implementation-readiness-review`. It is docs/tests/fixtures only and must not add harness behavior unless fixing a safety bug in `tests/support/` is necessary and remains test-only.
+Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review is complete, merged to `main`, and tagged. It is docs/tests/fixtures only and did not add harness behavior.
 
 Latest completed phase merge:
 
-`1870157a9d1d1dffdf7cb99c8e822cde5d4a9927`
+`5458123c1dca2a9cf0ef2c59695c48d607497d47`
 
 Latest tag:
 
-`phase-4.14-test-only-humaninput-adapter-harness-implementation`
+`phase-4.15-test-only-humaninput-adapter-harness-implementation-readiness-review`
 
 ## Current Next Step
 
@@ -70,11 +70,11 @@ Continue through the approved Phase 4.14 through Phase 4.16 queue unless a real 
 
 Recommended next branch:
 
-`phase-4-15-test-only-humaninput-adapter-harness-implementation-readiness-review`
+`phase-4-16-humaninput-boundary-lane-closeout-review`
 
 Latest completed merge:
 
-`1870157a9d1d1dffdf7cb99c8e822cde5d4a9927`
+`5458123c1dca2a9cf0ef2c59695c48d607497d47`
 
 Recommended PR target:
 
@@ -84,7 +84,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review.
+Phase 4.16 - HumanInput Boundary Lane Closeout Review.
 
 ## Active Phase 4 Status
 
@@ -103,7 +103,8 @@ Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Revie
 - Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: complete/tagged.
 - Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: complete/tagged.
 - Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: complete/tagged.
-- Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: in progress.
+- Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: complete/tagged.
+- Phase 4.16 - HumanInput Boundary Lane Closeout Review: approved next.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -125,7 +126,9 @@ Phase 4.13 was the final approved Phase 4 HumanInput boundary readiness review i
 
 Phase 4.14 was the approved narrow implementation of a deterministic test-only harness under `tests/`. It validates synthetic fixture shapes and produces HumanInput-shaped test dictionaries only. It did not add runtime code, live adapter code, Sparkbot imports/wiring, real IntentEnvelope or GuardianDecision behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
-Phase 4.15 is the approved docs/tests/fixtures-only readiness review of Phase 4.14. It must not add new harness behavior unless fixing a safety bug in `tests/support/` is necessary and remains test-only.
+Phase 4.15 was the approved docs/tests/fixtures-only readiness review of Phase 4.14. It did not add new harness behavior.
+
+Phase 4.16 is the approved docs/tests/fixtures-only closeout review for the HumanInput boundary lane. It must not add new harness behavior or runtime behavior.
 
 ## Completed Phase 3 Status
 
