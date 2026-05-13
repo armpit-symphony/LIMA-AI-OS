@@ -2265,6 +2265,38 @@ Status:
 - complete
 - tagged as `phase-4.9-humaninput-adapter-implementation-readiness-review`
 
+## Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal
+
+Goal:
+
+Propose a future test-only harness that could validate synthetic shell intake metadata against the HumanInput boundary fixture contract in a later explicitly approved phase.
+
+Deliverables:
+
+- `docs/PHASE_4_10_NONPRODUCTION_TEST_ONLY_HUMANINPUT_ADAPTER_HARNESS_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_4_10_test_only_humaninput_adapter_harness_proposal.json`
+- `tests/test_phase_4_10_test_only_humaninput_adapter_harness_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- proposal metadata only
+- no harness code
+- no live adapter code
+- no files under `lima/`
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- tests pass
+
+Next likely phase:
+
+- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

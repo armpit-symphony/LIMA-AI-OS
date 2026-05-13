@@ -79,6 +79,7 @@ Current expected sequence:
 - Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review: complete/tagged.
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
+- Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: in progress.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -98,6 +99,10 @@ The first safe Phase 4 sequence is:
 - Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review.
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs, if Phase 4.7 lands cleanly.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review, explicitly approved as docs/tests/fixtures only.
+- Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal.
+- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review.
+- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs.
+- Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review.
 - Explicitly approved narrow non-production extraction or adapter work only after readiness gates.
 
 Phase 4 must not move behavior until a readiness review approves the specific boundary and scope.
@@ -121,6 +126,8 @@ Phase 4.8 defined the HumanInput adapter safety gate as docs/tests/fixtures only
 After Phase 4.8, stop for explicit operator approval before any next narrow non-production phase.
 
 Phase 4.9 reviewed whether the boundary is ready for a future explicitly approved test-only HumanInput adapter harness proposal. That readiness is not readiness for runtime adapter implementation, live Sparkbot integration, production wiring, approval, enforcement, execution, audit persistence, or physical-world action.
+
+Phase 4.10 through Phase 4.13 are approved as docs/tests/fixtures-only queue work. They may propose, review, gate, and summarize a future test-only harness lane, but must not implement harness code, adapter code, runtime behavior, Sparkbot wiring, model/tool/terminal/robot behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Standing Phase 3 Boundaries
 
