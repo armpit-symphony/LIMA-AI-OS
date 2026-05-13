@@ -2936,6 +2936,51 @@ Status:
 - complete
 - tagged as `phase-5.6-humaninput-runtime-bridge-safety-gate-next-scope-decision-record`
 
+## Phase 5.7 - HumanInput Runtime Bridge Design Proposal
+
+Goal:
+
+Document the shape of a future runtime HumanInput to IntentEnvelope bridge without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_5_7_HUMANINPUT_RUNTIME_BRIDGE_DESIGN_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_5_7_humaninput_runtime_bridge_design_proposal.json`
+- `tests/test_phase_5_7_humaninput_runtime_bridge_design_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- design proposal only
+- allowed inputs documented
+- rejected inputs documented
+- provenance requirements documented
+- non-executable candidate requirements documented
+- approval-required semantics documented
+- risk-tier semantics documented
+- trust/autonomy rules documented
+- operator/admin/Phil/trusted wording cannot bypass approval
+- live/runtime implementation remains blocked
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 5.8 - HumanInput Runtime Bridge Threat Model
+
+Status:
+
+- complete
+- tagged as `phase-5.7-humaninput-runtime-bridge-design-proposal`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

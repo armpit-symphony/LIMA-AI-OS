@@ -286,6 +286,8 @@ Phase 5.5 reviews the Phase 5.4 helper as docs/tests/fixtures only. It confirms 
 
 Phase 5.6 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record. It requires explicit Phil approval before any future live/runtime bridge and requires runtime design before implementation, while keeping the Phase 5.4 helper test-only and keeping Phase 5.7 gated.
 
+Phase 5.7 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Design Proposal. It documents allowed/rejected inputs, provenance, non-executable candidates, approval-required semantics, risk metadata, trust/autonomy boundaries, and blocked behavior without implementing a runtime bridge or changing helper behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

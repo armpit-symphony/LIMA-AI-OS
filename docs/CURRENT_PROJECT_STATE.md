@@ -80,6 +80,8 @@ Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It defines next-scope options and keeps live/runtime HumanInput to IntentEnvelope implementation blocked.
 
+Phase 5.7 HumanInput Runtime Bridge Design Proposal is the current approved docs/tests/fixtures-only design scope. It documents future runtime bridge shape without implementation.
+
 Latest completed phase merge:
 
 `af507feb1e6bae17d90e8589287592de2a1cd571`
@@ -92,7 +94,7 @@ Latest tag:
 
 Current operator step:
 
-Stop at the Phase 5.7 gate. Do not proceed to Phase 5.7 until the operator explicitly chooses and approves the next narrow review or implementation scope.
+Complete Phase 5.7, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -110,7 +112,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.7 - explicit operator scope decision required before any next phase.
+Phase 5.7 - HumanInput Runtime Bridge Design Proposal.
 
 ## Active Phase 4 Status
 
@@ -184,7 +186,7 @@ Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.7 is not approved. Before Phase 5.7 starts, the operator must explicitly choose and approve the next scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
+Phase 5.7 HumanInput Runtime Bridge Design Proposal is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
