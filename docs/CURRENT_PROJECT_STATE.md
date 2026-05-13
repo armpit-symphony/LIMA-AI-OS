@@ -84,21 +84,21 @@ Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main
 
 Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It documents future bridge threats and mitigations without implementation.
 
-Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is the current approved docs/tests/fixtures-only validation-matrix scope. It documents future bridge boundary categories without implementation.
+Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It documents future bridge boundary categories without implementation.
 
 Latest completed phase merge:
 
-`6de81e3845c1836264ce9be903044db3ed53a67c`
+`6628c9a9e3a51a2c7eadbfe885378d39730a5f9e`
 
 Latest tag:
 
-`phase-5.8-humaninput-runtime-bridge-threat-model`
+`phase-5.9-humaninput-runtime-bridge-boundary-validation-matrix`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.9, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Continue to Phase 5.10 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -106,7 +106,7 @@ not selected
 
 Latest completed merge:
 
-`6de81e3845c1836264ce9be903044db3ed53a67c`
+`6628c9a9e3a51a2c7eadbfe885378d39730a5f9e`
 
 Recommended PR target:
 
@@ -116,7 +116,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix.
+Phase 5.10 - Runtime Bridge Implementation Gate / Closeout Review.
 
 ## Active Phase 4 Status
 
@@ -194,7 +194,7 @@ Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main
 
 Phase 5.8 HumanInput Runtime Bridge Threat Model is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+Phase 5.9 HumanInput Runtime Bridge Boundary Validation Matrix is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
