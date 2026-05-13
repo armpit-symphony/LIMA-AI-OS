@@ -276,6 +276,8 @@ Phase 5.0 opens Phase 5 as non-runtime planning only. It records the HumanInput 
 
 Phase 5.1 proposes the HumanInput to IntentEnvelope contract as static non-runtime metadata. It defines preserved request fields and descriptive candidate states, but does not create IntentEnvelope records, implement bridge code, run IntentCompiler behavior, enforce approvals, execute actions, persist audit, or add runtime wiring.
 
+Phase 5.2 proposes a future test-only HumanInput to IntentEnvelope bridge harness as docs/tests/fixtures only. It describes required synthetic inputs, future output constraints, and fail-closed conditions, but does not implement bridge code, create IntentEnvelope records, call models/tools, execute actions, persist audit, or add runtime wiring.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

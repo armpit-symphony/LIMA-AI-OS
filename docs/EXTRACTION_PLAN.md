@@ -3017,6 +3017,42 @@ Current status:
 - complete
 - tagged as `phase-5.1-humaninput-to-intentenvelope-contract-proposal`
 
+## Phase 5.3 Gate: Test-only Bridge Harness Readiness Review
+
+Phase 5.3 may review whether the Phase 5.2 proposal is clear and safe enough before an implementation gate.
+
+GO only for:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- bridge implementation
+- test-only bridge code
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- natural-language inference
+- model calls
+- tool execution
+- shell execution
+- browser execution
+- network action
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- STOP at implementation gate until the operator explicitly approves any test-only bridge harness implementation scope
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

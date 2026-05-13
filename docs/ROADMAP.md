@@ -2772,6 +2772,38 @@ Status:
 - complete
 - tagged as `phase-5.1-humaninput-to-intentenvelope-contract-proposal`
 
+## Phase 5.3 - Test-only Bridge Harness Readiness Review
+
+Goal:
+
+Review whether the Phase 5.2 test-only bridge harness proposal is clear and safe enough to stop at an implementation gate before any harness code.
+
+Deliverables:
+
+- `docs/PHASE_5_3_TEST_ONLY_BRIDGE_HARNESS_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_5_3_test_only_bridge_harness_readiness_review.json`
+- `tests/test_phase_5_3_test_only_bridge_harness_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- readiness review only
+- no bridge implementation
+- no test-only bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- implementation gate requiring explicit operator approval
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

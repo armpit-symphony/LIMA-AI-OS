@@ -86,7 +86,7 @@ Proceed through the approved Phase 5 non-runtime planning lane until a new imple
 
 Recommended next branch:
 
-`phase-5-2-test-only-bridge-harness-proposal`
+`phase-5-3-test-only-bridge-harness-readiness-review`
 
 Latest completed merge:
 
@@ -100,7 +100,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.2 - Test-only Bridge Harness Proposal.
+Phase 5.3 - Test-only Bridge Harness Readiness Review.
 
 ## Active Phase 4 Status
 
@@ -165,6 +165,8 @@ Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Re
 Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to `main`, and tagged. It proposes static contract metadata only.
 
 Phase 5.2 Test-only Bridge Harness Proposal is approved next as docs/tests/fixtures-only proposal work. It may propose a future test-only bridge harness, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
+
+Phase 5.2 Test-only Bridge Harness Proposal is in progress. It proposes a future test-only bridge harness only and does not implement the harness.
 
 ## Completed Phase 3 Status
 

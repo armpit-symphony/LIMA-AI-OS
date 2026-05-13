@@ -2003,6 +2003,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.3 may review readiness before any implementation gate
 
+## ADR-0117: Bridge Harness Readiness Review Must Stop At Implementation Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 5.3 may review the Phase 5.2 proposal as docs/tests/fixtures only. If the proposal is ready, Phase 5.3 must stop at an implementation gate before any test-only bridge harness code.
+
+Rationale:
+
+The next step after a safe proposal is an implementation decision. That decision must be explicit because even test-only bridge code begins shaping behavior around HumanInput and IntentEnvelope candidates.
+
+Consequences:
+
+- Phase 5.3 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge implementation or test-only bridge code is added
+- no runtime behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- any Phase 5.4 implementation scope requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
