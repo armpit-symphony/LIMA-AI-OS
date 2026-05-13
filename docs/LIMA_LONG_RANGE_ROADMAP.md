@@ -89,7 +89,8 @@ Current expected sequence:
 - Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: complete/tagged.
 - Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: complete/tagged.
 - Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: complete/tagged.
-- Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout: in progress.
+- Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout: complete/tagged.
+- Phase 5 - explicit operator scope decision required.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: approved next.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
@@ -158,7 +159,9 @@ Phase 4.18 is complete and tagged. It proposes static boundary metadata only and
 
 Phase 4.19 is complete and tagged. It reviewed the Phase 4.18 schema/contract proposal as non-runtime readiness metadata before a Phase 5 gate / implementation readiness closeout.
 
-Phase 4.20 is in progress as the Phase 5 gate / implementation readiness closeout. It should stop at operator decisions for any Phase 5 runtime, test-only bridge, or implementation scope.
+Phase 4.20 is complete and tagged. It confirms the Phase 5 gate is reached and stops at operator decisions for any Phase 5 runtime, test-only bridge, or implementation scope.
+
+Phase 5 is not pre-approved. The next step is an explicit operator scope decision.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

@@ -1907,6 +1907,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5 requires explicit operator approval
 
+## ADR-0113: Phase 5 Gate Is Reached
+
+Status: Accepted
+
+Decision:
+
+Phase 4.20 confirms the Phase 5 gate is reached. Phase 5 is not pre-approved and requires an explicit operator scope decision before further work.
+
+Rationale:
+
+The HumanInput boundary lane and HumanInput to IntentEnvelope planning lane are complete enough to expose the next real product and safety decisions. Continuing without a scope decision would risk turning non-runtime planning into implementation by momentum.
+
+Consequences:
+
+- stop at Phase 5 gate
+- Phase 5 scope must be explicitly approved
+- human UX flow must be decided before implementation
+- approval semantics must be decided before implementation
+- trust/autonomy handling must be decided before implementation
+- runtime behavior remains blocked
+- test-only bridge code remains blocked until explicitly approved
+- files under `lima/` remain blocked unless explicitly approved
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

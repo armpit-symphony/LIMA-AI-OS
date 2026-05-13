@@ -64,27 +64,29 @@ Phase 4.18 HumanInput to IntentEnvelope Boundary Schema / Contract Proposal is c
 
 Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review is complete, merged to `main`, and tagged. It reviewed the Phase 4.18 schema/contract proposal as docs/tests/fixtures-only readiness metadata before a Phase 5 gate / implementation readiness closeout.
 
+Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged to `main`, and tagged. It confirms Phase 5 gate is reached and identifies operator decisions needed before any Phase 5 runtime, test-only bridge, or implementation work.
+
 Latest completed phase merge:
 
-`22f5988c475465645eed4a0d3205089dd7238fc3`
+`fc7735c80b3016ee675150a9f1c024f38f2cb34a`
 
 Latest tag:
 
-`phase-4.19-humaninput-to-intentenvelope-boundary-readiness-review`
+`phase-4.20-phase-5-gate-implementation-readiness-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue through the approved HumanInput to IntentEnvelope non-runtime lane unless a real product/flow or runtime gate is hit.
+Stop at the Phase 5 gate until the operator explicitly approves the Phase 5 lane scope.
 
 Recommended next branch:
 
-`phase-4-20-phase-5-gate-implementation-readiness-closeout`
+not selected
 
 Latest completed merge:
 
-`22f5988c475465645eed4a0d3205089dd7238fc3`
+`fc7735c80b3016ee675150a9f1c024f38f2cb34a`
 
 Recommended PR target:
 
@@ -94,7 +96,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout.
+Phase 5 - explicit operator scope decision required.
 
 ## Active Phase 4 Status
 
@@ -118,7 +120,7 @@ Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout.
 - Phase 4.17 - HumanInput to IntentEnvelope Boundary Planning: complete/tagged.
 - Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal: complete/tagged.
 - Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: complete/tagged.
-- Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout: in progress.
+- Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout: complete/tagged.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -150,7 +152,9 @@ Phase 4.18 HumanInput to IntentEnvelope Boundary Schema / Contract Proposal is c
 
 Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review is complete, merged to `main`, and tagged. It reviewed the Phase 4.18 schema/contract proposal as docs/tests/fixtures-only readiness metadata before a Phase 5 gate / implementation readiness closeout.
 
-Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is in progress. It should determine whether Phase 4 has reached a clear Phase 5 gate and identify operator decisions needed before any Phase 5 runtime, test-only bridge, or implementation work.
+Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged to `main`, and tagged. It confirms Phase 5 gate is reached and identifies operator decisions needed before any Phase 5 runtime, test-only bridge, or implementation work.
+
+Phase 5 is not pre-approved. Before Phase 5 starts, the operator must decide whether Phase 5 begins as further non-runtime planning or as a narrow explicitly approved test-only HumanInput to IntentEnvelope bridge implementation, plus the human UX flow, approval semantics, trust/autonomy handling, safety boundary, and code scope.
 
 ## Completed Phase 3 Status
 
