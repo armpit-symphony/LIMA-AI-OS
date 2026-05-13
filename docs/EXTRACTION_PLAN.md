@@ -2729,6 +2729,38 @@ After merge:
 
 - GO only for Phase 4.16 HumanInput Boundary Lane Closeout Review
 
+## Phase 4.16 Gate: HumanInput Boundary Lane Closeout Review
+
+Phase 4.16 may close out the HumanInput boundary lane and recommend the next explicitly approved lane.
+
+GO only for:
+
+- closeout review documentation
+- static closeout fixture metadata
+- static closeout tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- new harness behavior
+- HumanInput to IntentEnvelope implementation
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- STOP for explicit operator approval before any next lane
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
