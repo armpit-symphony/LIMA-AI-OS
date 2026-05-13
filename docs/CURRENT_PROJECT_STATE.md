@@ -26,17 +26,17 @@ Phase 4.2 Runtime Boundary Candidate Selection is complete, merged to `main`, an
 
 Phase 4.3 Boundary Extraction Safety Gate is complete, merged to `main`, and tagged. It defines the safety gate for the selected HumanInput intake boundary.
 
-Phase 4.4 Boundary Fixture Contract Extension is complete, merged to `main`, and tagged. It adds synthetic HumanInput intake fixture/contract metadata for text and voice while keeping adapters, runtime behavior, live lookup, authority, approval, execution, and production integration blocked.
+Phase 4.4 Boundary Fixture Contract Extension is complete, merged to `main`, tagged, and hardened. It adds synthetic HumanInput intake fixture/contract metadata for text and voice while keeping adapters, runtime behavior, live lookup, authority, approval, execution, and production integration blocked.
 
 Phase 4.5 Boundary Readiness Review is the next intended milestone.
 
 Latest completed phase merge:
 
-`e0e3a89`
+`db02a25`
 
 Latest tag:
 
-`phase-4.4-boundary-fixture-contract-extension`
+`phase-4.4-boundary-fixture-contract-hardening`
 
 ## Current Next Step
 
@@ -68,7 +68,7 @@ Phase 4.5 - Boundary Readiness Review.
 - Phase 4.1 - Sparkbot Runtime Reference Refresh: complete/tagged.
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
-- Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged.
+- Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
 
 Phase 4.4 extends synthetic, inert fixture/contract metadata for non-executing HumanInput intake boundary for chat and voice. Runtime extraction implementation remains blocked.
 
