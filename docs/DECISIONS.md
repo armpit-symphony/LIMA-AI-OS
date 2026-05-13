@@ -1670,6 +1670,28 @@ Consequences:
 - real IntentCompiler and real GuardianDecision remain blocked
 - approval, enforcement, execution, and audit persistence remain blocked
 
+## ADR-0103: Test-only Harness Proposal Readiness Allows Safety Gate Docs Only
+
+Status: Accepted
+
+Decision:
+
+Phase 4.11 may review the Phase 4.10 test-only HumanInput adapter harness proposal as docs/tests/fixtures only. It may recommend safety gate documentation, but it does not approve harness code, adapter code, Sparkbot integration, or runtime behavior.
+
+Rationale:
+
+The proposal is clear enough to gate, but a standing safety gate must exist before any future harness implementation can be considered. The readiness review keeps the next step documentation-only.
+
+Consequences:
+
+- Phase 4.11 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no harness code is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- approval, enforcement, execution, and audit persistence remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

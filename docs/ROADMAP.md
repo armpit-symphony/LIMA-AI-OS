@@ -2302,6 +2302,38 @@ Status:
 - complete
 - tagged as `phase-4.10-nonproduction-test-only-humaninput-adapter-harness-proposal`
 
+## Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review
+
+Goal:
+
+Review whether the Phase 4.10 test-only harness proposal is clear and safe enough for a future safety gate documentation phase.
+
+Deliverables:
+
+- `docs/PHASE_4_11_TEST_ONLY_HUMANINPUT_ADAPTER_HARNESS_PROPOSAL_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_4_11_test_only_humaninput_adapter_harness_proposal_readiness_review.json`
+- `tests/test_phase_4_11_test_only_humaninput_adapter_harness_proposal_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- readiness review metadata only
+- no harness code
+- no live adapter code
+- no files under `lima/`
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- tests pass
+
+Next likely phase:
+
+- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

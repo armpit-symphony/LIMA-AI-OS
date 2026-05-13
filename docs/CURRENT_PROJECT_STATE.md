@@ -42,7 +42,7 @@ Phase 4.9 HumanInput Adapter Implementation Readiness Review is complete, merged
 
 Phase 4.10 Non-production Test-only HumanInput Adapter Harness Proposal is complete, merged to `main`, and tagged. It describes a future test-only harness proposal as docs/tests/fixtures only, but does not implement harness code.
 
-Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review is approved next as docs/tests/fixtures only.
+Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review is in progress on branch `phase-4-11-test-only-humaninput-adapter-harness-proposal-readiness-review`. It may review the Phase 4.10 proposal as docs/tests/fixtures only, but must not implement harness code.
 
 Latest completed phase merge:
 
@@ -89,7 +89,7 @@ Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review.
 - Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
 - Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: complete/tagged.
-- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: approved next.
+- Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -102,6 +102,8 @@ Phase 4.8 defined adapter safety gate docs only. It did not add live adapter cod
 Phase 4.9 was a readiness review only. Readiness to discuss a future test-only adapter harness is not readiness for runtime adapter implementation.
 
 Phase 4.10 was proposal metadata only. It did not add harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
+
+Phase 4.11 is readiness-review metadata only. It may recommend Phase 4.12 safety gate docs, not harness implementation.
 
 ## Completed Phase 3 Status
 
