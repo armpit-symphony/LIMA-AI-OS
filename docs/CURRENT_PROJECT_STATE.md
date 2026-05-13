@@ -36,25 +36,27 @@ Phase 4.6 is not a HumanInput adapter. It is not executable, not runtime wiring,
 
 Phase 4.7 Non-production HumanInput Adapter Proposal Readiness Review is complete, merged to `main`, and tagged. It adds docs/tests/fixtures-only readiness metadata reviewing whether Phase 4.6 is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate docs.
 
-Phase 4.8 HumanInput Adapter Safety Gate Docs is in progress on branch `phase-4-8-humaninput-adapter-safety-gate-docs`. It may define safety gate documentation for any future HumanInput adapter, but must not implement adapter code.
+Phase 4.8 HumanInput Adapter Safety Gate Docs is complete, merged to `main`, and tagged. It defines safety gate documentation for any future HumanInput adapter, but does not implement adapter code.
+
+The next phase is not automatically approved. Any next narrow non-production phase requires explicit operator approval.
 
 Latest completed phase merge:
 
-`94ca10c66090f57da6e20d5105849e96abfb1f0a`
+`ad72435909ee09b19ca83a10900cd628b88b6a1d`
 
 Latest tag:
 
-`phase-4.7-nonproduction-humaninput-adapter-proposal-readiness-review`
+`phase-4.8-humaninput-adapter-safety-gate-docs`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 4.8 HumanInput Adapter Safety Gate Docs as docs/tests/fixtures only, then stop unless a next phase is explicitly approved.
+Request explicit operator approval for any next narrow non-production phase.
 
 Recommended next branch:
 
-`phase-4-8-humaninput-adapter-safety-gate-docs`
+`pending-explicit-approval`
 
 Latest completed merge:
 
@@ -68,7 +70,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.8 - HumanInput Adapter Safety Gate Docs.
+Explicit operator approval for the next narrow non-production phase.
 
 ## Active Phase 4 Status
 
@@ -80,7 +82,7 @@ Phase 4.8 - HumanInput Adapter Safety Gate Docs.
 - Phase 4.5 - Boundary Readiness Review: complete/tagged.
 - Phase 4.6 - Non-production HumanInput Adapter Proposal: complete/tagged.
 - Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review: complete/tagged.
-- Phase 4.8 - HumanInput Adapter Safety Gate Docs: in progress.
+- Phase 4.8 - HumanInput Adapter Safety Gate Docs: complete/tagged.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -88,7 +90,7 @@ Phase 4.6 was the approved narrow proposal. It remained docs/tests/fixtures only
 
 Phase 4.7 was an approved readiness review only. It remained docs/tests/fixtures only and recommended Phase 4.8 HumanInput Adapter Safety Gate Docs, not live adapter code.
 
-Phase 4.8 must define adapter safety gate docs only. It must not add live adapter code, Sparkbot imports or wiring, runtime behavior, model/tool/terminal/robot behavior, live auth/session/trust lookup, real IntentCompiler, real GuardianDecision, approval, enforcement, execution, audit persistence, or physical-world action.
+Phase 4.8 defined adapter safety gate docs only. It did not add live adapter code, Sparkbot imports or wiring, runtime behavior, model/tool/terminal/robot behavior, live auth/session/trust lookup, real IntentCompiler, real GuardianDecision, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 
