@@ -2542,6 +2542,37 @@ After merge:
 
 - STOP for explicit operator approval before any next narrow non-production phase
 
+## Phase 4.10 Gate: Non-production Test-only HumanInput Adapter Harness Proposal
+
+Phase 4.10 may propose a future test-only HumanInput adapter harness as docs/tests/fixtures only.
+
+GO only for:
+
+- proposal documentation
+- static proposal fixture metadata
+- static proposal tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- harness code
+- live adapter code
+- Sparkbot imports or wiring
+- runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

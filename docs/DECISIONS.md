@@ -1647,6 +1647,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - any next narrow non-production phase requires explicit operator approval
 
+## ADR-0102: Test-only HumanInput Adapter Harness Proposal Is Not Harness Code
+
+Status: Accepted
+
+Decision:
+
+Phase 4.10 may propose a future test-only HumanInput adapter harness as docs/tests/fixtures only. It does not approve harness code, live adapter code, runtime wiring, Sparkbot integration, or behavior movement.
+
+Rationale:
+
+Phase 4.9 found the HumanInput boundary ready to discuss a future test-only harness proposal. The proposal must describe purpose, synthetic inputs, expected HumanInput fixture shape, safety boundaries, and validation requirements before any code exists.
+
+Consequences:
+
+- Phase 4.10 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no harness code is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
