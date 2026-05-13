@@ -2583,6 +2583,46 @@ After merge:
 
 - GO only for Phase 4.8 HumanInput Adapter Safety Gate Docs if Phase 4.7 recommends it
 
+## Phase 4.8 Gate: HumanInput Adapter Safety Gate Docs
+
+Phase 4.8 may define safety gate documentation for any future HumanInput adapter.
+
+GO only for:
+
+- HumanInput adapter safety gate documentation
+- static safety gate fixture metadata
+- static safety gate tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+Required proof:
+
+- fixture is valid JSON
+- status is non-runtime safety gate docs
+- safety gate is docs/tests/fixtures only
+- adapter output rule is HumanInput only
+- blocked behavior list is explicit
+- Phase 4.7 readiness review remains non-runtime
+- tests pass
+
+After merge:
+
+- STOP for explicit operator approval before any next narrow non-production phase
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

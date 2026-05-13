@@ -1597,6 +1597,31 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.8 may proceed only as HumanInput Adapter Safety Gate Docs
 
+## ADR-0100: HumanInput Adapter Safety Gate Requires HumanInput-only Output
+
+Status: Accepted
+
+Decision:
+
+Phase 4.8 establishes the HumanInput Adapter Safety Gate as docs/tests/fixtures only. Any future HumanInput adapter must return HumanInput only and must stop before IntentEnvelope, GuardianDecision, model/tool/terminal/robot behavior, approval, enforcement, execution, and audit persistence.
+
+Rationale:
+
+The HumanInput boundary is the first safe intake boundary, but adapter work can easily become runtime wiring if it performs live lookup, imports Sparkbot, creates semantic intent, or reaches toward action. A standing safety gate keeps future adapter work narrow and reviewable before any code phase is approved.
+
+Consequences:
+
+- Phase 4.8 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- no live auth/session/trust lookup is added
+- adapter output must remain HumanInput only
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- any next narrow non-production phase requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
