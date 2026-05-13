@@ -2556,6 +2556,37 @@ Status:
 - complete
 - tagged as `phase-4.17-humaninput-to-intentenvelope-boundary-planning`
 
+## Phase 4.18 - HumanInput to IntentEnvelope Boundary Schema / Contract Proposal
+
+Goal:
+
+Propose a static non-runtime boundary schema/contract for future test-only HumanInput to IntentEnvelope work.
+
+Deliverables:
+
+- `docs/PHASE_4_18_HUMANINPUT_TO_INTENTENVELOPE_BOUNDARY_SCHEMA_CONTRACT_PROPOSAL.md`
+- `tests/fixtures/runtime_extraction/phase_4_18_humaninput_to_intentenvelope_boundary_schema_contract_proposal.json`
+- `tests/test_phase_4_18_humaninput_to_intentenvelope_boundary_schema_contract_proposal.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- schema/contract proposal only
+- no bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
