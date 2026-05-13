@@ -78,21 +78,21 @@ Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation i
 
 Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.4 helper without changing helper behavior, adding runtime behavior, modifying `lima/`, or approving live implementation.
 
-Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is the current approved docs/tests/fixtures-only safety gate scope. It defines next-scope options and keeps live/runtime HumanInput to IntentEnvelope implementation blocked.
+Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It defines next-scope options and keeps live/runtime HumanInput to IntentEnvelope implementation blocked.
 
 Latest completed phase merge:
 
-`176ffa0a68e8ef8efb1d9302046713eec8052f0b`
+`af507feb1e6bae17d90e8589287592de2a1cd571`
 
 Latest tag:
 
-`phase-5.5-test-only-bridge-harness-readiness-review`
+`phase-5.6-humaninput-runtime-bridge-safety-gate-next-scope-decision-record`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.6, then stop. Do not proceed to Phase 5.7 until the operator explicitly approves or declines the next narrow review or implementation scope.
+Stop at the Phase 5.7 gate. Do not proceed to Phase 5.7 until the operator explicitly chooses and approves the next narrow review or implementation scope.
 
 Recommended next branch:
 
@@ -100,7 +100,7 @@ not selected
 
 Latest completed merge:
 
-`176ffa0a68e8ef8efb1d9302046713eec8052f0b`
+`af507feb1e6bae17d90e8589287592de2a1cd571`
 
 Recommended PR target:
 
@@ -110,7 +110,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.6 - HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record.
+Phase 5.7 - explicit operator scope decision required before any next phase.
 
 ## Active Phase 4 Status
 
@@ -182,7 +182,7 @@ Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation i
 
 Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is approved as a docs/tests/fixtures-only scope. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 5.7 is not approved. Before Phase 5.7 starts, the operator must explicitly choose and approve the next scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
 
