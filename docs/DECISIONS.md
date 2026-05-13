@@ -2147,6 +2147,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.9 may continue only as docs/tests/fixtures-only boundary validation matrix work
 
+## ADR-0123: Boundary Validation Matrix Keeps Candidate Outputs Non-executable
+
+Status: Accepted
+
+Decision:
+
+Phase 5.9 records a validation matrix for a future HumanInput to IntentEnvelope runtime bridge design. Every matrix category remains non-executable, side-effecting categories require approval or are blocked, and empty, malformed, replayed, or stale requests are rejected or blocked.
+
+Rationale:
+
+A future bridge needs clear category expectations before implementation. Matrix rows make the boundary easier to audit without turning the matrix into a runtime classifier.
+
+Consequences:
+
+- Phase 5.9 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- the matrix is not a runtime schema or classifier implementation
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.10 may continue only as docs/tests/fixtures-only implementation gate / closeout review
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

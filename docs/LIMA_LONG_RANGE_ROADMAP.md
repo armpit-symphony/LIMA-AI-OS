@@ -99,7 +99,8 @@ Current expected sequence:
 - Phase 5.6 - HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record: complete/tagged.
 - Phase 5.7 - HumanInput Runtime Bridge Design Proposal: complete/tagged.
 - Phase 5.8 - HumanInput Runtime Bridge Threat Model: complete/tagged.
-- Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix: approved docs/tests/fixtures-only lane.
+- Phase 5.9 - HumanInput Runtime Bridge Boundary Validation Matrix: complete/tagged.
+- Phase 5.10 - Runtime Bridge Implementation Gate / Closeout Review: approved docs/tests/fixtures-only lane.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -191,7 +192,9 @@ Phase 5.7 is complete and tagged as a docs/tests/fixtures-only runtime bridge de
 
 Phase 5.8 is complete and tagged as a docs/tests/fixtures-only runtime bridge threat model. It documents future bridge risks and mitigations while keeping live/runtime implementation blocked.
 
-Phase 5.9 may continue as docs/tests/fixtures-only boundary validation matrix work under the approved design lane. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior remain blocked.
+Phase 5.9 is complete and tagged as a docs/tests/fixtures-only runtime bridge boundary validation matrix. It makes future category expectations machine-checkable while keeping live/runtime implementation blocked.
+
+Phase 5.10 may continue as docs/tests/fixtures-only implementation gate / closeout review under the approved design lane. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior remain blocked.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
