@@ -2183,6 +2183,41 @@ Status:
 - complete
 - tagged as `phase-4.7-nonproduction-humaninput-adapter-proposal-readiness-review`
 
+## Phase 4.8 - HumanInput Adapter Safety Gate Docs
+
+Goal:
+
+Define safety gate documentation for any future HumanInput adapter while keeping adapter code and runtime behavior blocked.
+
+Deliverables:
+
+- `docs/HUMANINPUT_ADAPTER_SAFETY_GATE.md`
+- `docs/PHASE_4_8_HUMANINPUT_ADAPTER_SAFETY_GATE_DOCS.md`
+- `tests/fixtures/runtime_extraction/phase_4_8_humaninput_adapter_safety_gate_docs.json`
+- `tests/test_phase_4_8_humaninput_adapter_safety_gate_docs.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- safety gate is metadata only
+- adapter must return HumanInput only
+- no files under `lima/` are modified
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.7 readiness review remains non-runtime and recommends safety gate docs only
+- tests pass
+
+Next gate:
+
+- STOP for explicit operator approval before any next narrow non-production phase
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

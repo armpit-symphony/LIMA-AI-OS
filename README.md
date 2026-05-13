@@ -246,6 +246,8 @@ Phase 4.6 adds a non-production HumanInput adapter proposal as docs/tests/fixtur
 
 Phase 4.7 reviews the Phase 4.6 proposal as ready only for future HumanInput Adapter Safety Gate Docs. It keeps live adapter code, Sparkbot wiring, runtime behavior, model/tool/terminal/robotics behavior, live trust lookup, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, product shells, and physical-world action blocked.
 
+Phase 4.8 adds HumanInput Adapter Safety Gate Docs. It requires any future HumanInput adapter to return HumanInput only and keeps live adapter code, Sparkbot imports/wiring, runtime behavior, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, model/tool/terminal/robot behavior, live lookup, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

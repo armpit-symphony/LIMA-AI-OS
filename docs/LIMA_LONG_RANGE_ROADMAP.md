@@ -77,7 +77,7 @@ Current expected sequence:
 - Phase 4.5 - Boundary Readiness Review: complete/tagged.
 - Phase 4.6 - Non-production HumanInput Adapter Proposal: complete/tagged.
 - Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review: complete/tagged.
-- Phase 4.8 - HumanInput Adapter Safety Gate Docs: approved next.
+- Phase 4.8 - HumanInput Adapter Safety Gate Docs: in progress.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -115,6 +115,8 @@ Phase 4.6 is that narrow proposal only. It describes how a future shell intake a
 Phase 4.7 reviews the proposal as ready only for future HumanInput Adapter Safety Gate Docs. It does not approve live adapter code, Sparkbot wiring, runtime behavior, real IntentCompiler, real GuardianDecision, approval, enforcement, execution, audit persistence, product shells, or physical-world action.
 
 Phase 4.8 may define the HumanInput adapter safety gate as docs/tests/fixtures only. It must require any future adapter to return HumanInput only and must keep live adapter code, Sparkbot imports/wiring, runtime behavior, live trust/session/auth lookup, real IntentCompiler, real GuardianDecision, approval, enforcement, execution, audit persistence, model/tool/terminal/robot behavior, and physical-world action blocked.
+
+After Phase 4.8, stop for explicit operator approval before any next narrow non-production phase.
 
 ## Standing Phase 3 Boundaries
 
