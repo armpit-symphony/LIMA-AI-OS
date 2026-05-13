@@ -84,7 +84,7 @@ Proceed through the approved Phase 5 non-runtime planning lane until a new imple
 
 Recommended next branch:
 
-`phase-5-1-humaninput-to-intentenvelope-contract-proposal`
+`phase-5-2-test-only-bridge-harness-proposal`
 
 Latest completed merge:
 
@@ -98,7 +98,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal.
+Phase 5.2 - Test-only Bridge Harness Proposal.
 
 ## Active Phase 4 Status
 
@@ -161,6 +161,8 @@ Phase 5 is not pre-approved. Before Phase 5 starts, the operator must decide whe
 Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is complete, merged to `main`, and tagged. It opens Phase 5 as non-runtime planning only and records the approved HumanInput to IntentEnvelope boundary scope.
 
 Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is approved next as docs/tests/fixtures-only contract proposal work. It may propose static contract metadata, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
+
+Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is in progress. It proposes static contract metadata only.
 
 ## Completed Phase 3 Status
 

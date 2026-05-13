@@ -2976,6 +2976,42 @@ After merge:
 
 - GO only for Phase 5.2 Test-only Bridge Harness Proposal
 
+## Phase 5.2 Gate: Test-only Bridge Harness Proposal
+
+Phase 5.2 may propose a future test-only HumanInput to IntentEnvelope bridge harness, but must not implement it.
+
+GO only for:
+
+- test-only bridge harness proposal documentation
+- static proposal fixture metadata
+- static proposal tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- bridge implementation
+- test-only bridge code
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- natural-language inference
+- model calls
+- tool execution
+- shell execution
+- browser execution
+- network action
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- GO only for Phase 5.3 Test-only Bridge Harness Readiness Review
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

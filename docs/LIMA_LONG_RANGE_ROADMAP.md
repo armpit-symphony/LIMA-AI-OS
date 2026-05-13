@@ -91,7 +91,7 @@ Current expected sequence:
 - Phase 4.19 - HumanInput to IntentEnvelope Boundary Readiness Review: complete/tagged.
 - Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout: complete/tagged.
 - Phase 5.0 - Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record: complete/tagged.
-- Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal: approved next.
+- Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal: in progress.
 - Phase 4.16 - HumanInput Boundary Lane Closeout Review: approved next.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
@@ -167,6 +167,8 @@ Phase 5 is not pre-approved. The next step is an explicit operator scope decisio
 Phase 5.0 is complete and tagged. It records the approved Phase 5 scope and keeps implementation, bridge code, runtime wiring, live adapter code, real IntentCompiler, real GuardianDecision, approval enforcement, execution, audit persistence, and physical-world action blocked.
 
 Phase 5.1 is approved next as a static HumanInput to IntentEnvelope contract proposal only.
+
+Phase 5.2 is the expected next proposal phase for a future test-only bridge harness. It must remain proposal-only unless explicitly approved later.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
