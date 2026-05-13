@@ -74,7 +74,7 @@ Current expected sequence:
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
-- Phase 4.5 - Boundary Readiness Review: branch complete; pending merge/tag.
+- Phase 4.5 - Boundary Readiness Review: complete/tagged.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 

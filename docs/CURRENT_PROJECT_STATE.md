@@ -28,23 +28,23 @@ Phase 4.3 Boundary Extraction Safety Gate is complete, merged to `main`, and tag
 
 Phase 4.4 Boundary Fixture Contract Extension is complete, merged to `main`, tagged, and hardened. It adds synthetic HumanInput intake fixture/contract metadata for text and voice while keeping adapters, runtime behavior, live lookup, authority, approval, execution, and production integration blocked.
 
-Phase 4.5 Boundary Readiness Review is complete in the current implementation branch. It reviews the HumanInput intake boundary as ready only for a future explicitly approved narrow non-production proposal, while keeping runtime extraction and blocked behavior closed.
+Phase 4.5 Boundary Readiness Review is complete, merged to `main`, and tagged. It reviews the HumanInput intake boundary as ready only for a future explicitly approved narrow non-production proposal, while keeping runtime extraction and blocked behavior closed.
 
 The next phase is not automatically approved unless it remains docs/tests/fixtures-only and is explicitly documented as safe. Any narrow non-production extraction or adapter work requires explicit operator approval.
 
 Latest completed phase merge:
 
-`db02a25`
+`d826810`
 
 Latest tag:
 
-`phase-4.4-boundary-fixture-contract-hardening`
+`phase-4.5-boundary-readiness-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Review, merge, and tag Phase 4.5 Boundary Readiness Review, then request explicit operator approval for any next narrow non-production extraction or adapter proposal.
+Request explicit operator approval for any next narrow non-production extraction or adapter proposal.
 
 Recommended next branch:
 
@@ -71,7 +71,7 @@ Explicit operator approval for the next narrow non-production phase.
 - Phase 4.2 - Runtime Boundary Candidate Selection: complete/tagged.
 - Phase 4.3 - Boundary Extraction Safety Gate: complete/tagged.
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
-- Phase 4.5 - Boundary Readiness Review: branch complete; pending merge/tag.
+- Phase 4.5 - Boundary Readiness Review: complete/tagged.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 

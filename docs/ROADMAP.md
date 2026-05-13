@@ -2053,7 +2053,7 @@ Next likely phase:
 Status:
 
 - complete
-- pending merge/tag as `phase-4.5-boundary-readiness-review`
+- tagged as `phase-4.5-boundary-readiness-review`
 
 ## Phase 4.5 - Boundary Readiness Review
 
