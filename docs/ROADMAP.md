@@ -2804,6 +2804,11 @@ Next likely phase:
 
 - implementation gate requiring explicit operator approval
 
+Status:
+
+- complete
+- tagged as `phase-5.2-test-only-bridge-harness-proposal`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

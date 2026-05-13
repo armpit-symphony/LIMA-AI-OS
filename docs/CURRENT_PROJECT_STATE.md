@@ -70,13 +70,15 @@ Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Re
 
 Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to `main`, and tagged. It proposes static contract metadata only and does not create IntentEnvelope records, implement bridge code, run IntentCompiler behavior, enforce approvals, execute actions, persist audit, or add runtime wiring.
 
+Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and tagged. It proposes a future test-only bridge harness only and does not implement the harness.
+
 Latest completed phase merge:
 
-`dee3b6d866510f8319c4e34e821c2cfee59634c8`
+`cf4bfb06c7f5372927531582983cb10ef5676b2d`
 
 Latest tag:
 
-`phase-5.1-humaninput-to-intentenvelope-contract-proposal`
+`phase-5.2-test-only-bridge-harness-proposal`
 
 ## Current Next Step
 
@@ -90,7 +92,7 @@ Recommended next branch:
 
 Latest completed merge:
 
-`dee3b6d866510f8319c4e34e821c2cfee59634c8`
+`cf4bfb06c7f5372927531582983cb10ef5676b2d`
 
 Recommended PR target:
 
@@ -164,9 +166,9 @@ Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Re
 
 Phase 5.1 HumanInput to IntentEnvelope Contract Proposal is complete, merged to `main`, and tagged. It proposes static contract metadata only.
 
-Phase 5.2 Test-only Bridge Harness Proposal is approved next as docs/tests/fixtures-only proposal work. It may propose a future test-only bridge harness, but must not implement bridge code, runtime wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, or physical-world action.
+Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and tagged. It proposes a future test-only bridge harness only and does not implement the harness.
 
-Phase 5.2 Test-only Bridge Harness Proposal is in progress. It proposes a future test-only bridge harness only and does not implement the harness.
+Phase 5.3 Test-only Bridge Harness Readiness Review is approved next as docs/tests/fixtures-only readiness review work. It must stop at an implementation gate before any bridge code or test-only helper code.
 
 ## Completed Phase 3 Status
 
