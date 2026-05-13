@@ -248,6 +248,8 @@ Phase 4.7 reviews the Phase 4.6 proposal as ready only for future HumanInput Ada
 
 Phase 4.8 adds HumanInput Adapter Safety Gate Docs. It requires any future HumanInput adapter to return HumanInput only and keeps live adapter code, Sparkbot imports/wiring, runtime behavior, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, model/tool/terminal/robot behavior, live lookup, and physical-world action blocked.
 
+Phase 4.9 reviews HumanInput adapter implementation readiness as docs/tests/fixtures only. It finds the boundary ready only for a future explicitly approved test-only HumanInput adapter harness proposal, while keeping live adapter code, production Sparkbot integration, runtime wiring, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, model/tool/terminal/robot behavior, live lookup, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

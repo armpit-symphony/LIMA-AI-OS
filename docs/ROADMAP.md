@@ -2223,6 +2223,43 @@ Status:
 - complete
 - tagged as `phase-4.8-humaninput-adapter-safety-gate-docs`
 
+## Phase 4.9 - HumanInput Adapter Implementation Readiness Review
+
+Goal:
+
+Review whether the HumanInput intake boundary, fixture contract, adapter proposal, readiness review, and safety gate are clear enough before any future test-only adapter harness proposal.
+
+Deliverables:
+
+- `docs/PHASE_4_9_HUMANINPUT_ADAPTER_IMPLEMENTATION_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_4_9_humaninput_adapter_implementation_readiness_review.json`
+- `tests/test_phase_4_9_humaninput_adapter_implementation_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- readiness review is metadata only
+- readiness review is not an adapter
+- readiness review is not a test-only harness
+- no files under `lima/` are modified
+- no live adapter code
+- no test-only adapter harness code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.8 safety gate remains non-runtime
+- readiness is limited to a future explicitly approved test-only adapter harness proposal or further non-runtime review
+- tests pass
+
+Next gate:
+
+- STOP for explicit operator approval before any next narrow non-production phase
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
