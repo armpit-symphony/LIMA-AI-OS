@@ -1,0 +1,165 @@
+{
+  "phase": "5.8",
+  "status": "humaninput_runtime_bridge_threat_model",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "threat_model_only": true,
+  "phase_document": "docs/PHASE_5_8_HUMANINPUT_RUNTIME_BRIDGE_THREAT_MODEL.md",
+  "source_phase": "5.7",
+  "source_tag": "phase-5.7-humaninput-runtime-bridge-design-proposal",
+  "source_merge_commit": "ae7a0bf967dacf88a3eb196002e387305f48b8da",
+  "latest_main_after_source_state_sync": "765327d0ac26d1af0a7002116ee11327d1498a25",
+  "threats": [
+    {
+      "id": "prompt_injection",
+      "category": "policy_override",
+      "risk": "HumanInput text attempts to override system policy or Guardian review.",
+      "mitigation": "Treat HumanInput as intent context only and preserve Guardian review."
+    },
+    {
+      "id": "operator_impersonation",
+      "category": "identity_claim",
+      "risk": "Input claims to be Phil, admin, trusted, or operator to bypass review.",
+      "mitigation": "Do not treat wording as approval or identity verification."
+    },
+    {
+      "id": "trust_bypass",
+      "category": "trust_autonomy",
+      "risk": "Passive trust/autonomy references are treated as permission.",
+      "mitigation": "Keep trust and autonomy references passive until GuardianDecision enforcement is approved."
+    },
+    {
+      "id": "accidental_execution",
+      "category": "execution_confusion",
+      "risk": "Candidate metadata is treated as executable command state.",
+      "mitigation": "Default executable, execution_allowed, and side_effects_allowed to false."
+    },
+    {
+      "id": "side_effect_escalation",
+      "category": "driver_plane",
+      "risk": "Shell, browser, network, file, robotics, or physical-world requests are normalized without approval-required status.",
+      "mitigation": "Require approval_required or blocked status for all side-effect-bearing categories."
+    },
+    {
+      "id": "audit_gaps",
+      "category": "lineage",
+      "risk": "Candidate lineage lacks source, actor, session, timestamp, redaction, or retention context.",
+      "mitigation": "Require provenance and privacy metadata before candidate creation."
+    },
+    {
+      "id": "approval_confusion",
+      "category": "approval_state",
+      "risk": "Proposed, denied, approval-required, and ready-for-review states are collapsed into approval.",
+      "mitigation": "Keep approval state descriptive until explicit enforcement work is approved."
+    },
+    {
+      "id": "helper_classifier_misuse",
+      "category": "test_code_reuse",
+      "risk": "Phase 5.4 test-only keyword classifier is reused as runtime logic.",
+      "mitigation": "Block runtime reuse of the helper and require fresh runtime design."
+    },
+    {
+      "id": "unsafe_test_code_reuse",
+      "category": "import_boundary",
+      "risk": "tests/support helpers are imported from production runtime paths.",
+      "mitigation": "Keep production runtime from importing tests/support."
+    },
+    {
+      "id": "malformed_input",
+      "category": "input_validation",
+      "risk": "Missing, empty, partial, or invalid records produce candidates.",
+      "mitigation": "Reject malformed inputs before candidate creation."
+    },
+    {
+      "id": "replayed_input",
+      "category": "lineage",
+      "risk": "Stale or duplicate HumanInput is accepted without lineage review.",
+      "mitigation": "Require future replay and freshness checks before runtime implementation."
+    },
+    {
+      "id": "ambiguous_commands",
+      "category": "classification",
+      "risk": "Unclear requests are treated as low-risk or executable.",
+      "mitigation": "Treat ambiguous requests as approval_required or blocked."
+    }
+  ],
+  "required_mitigations": [
+    "humaninput_is_intent_context_only",
+    "provenance_required_before_candidate_creation",
+    "candidates_default_non_executable",
+    "side_effect_categories_require_approval_required_or_blocked",
+    "risk_and_approval_state_remain_metadata",
+    "operator_admin_phil_trusted_wording_cannot_bypass_approval",
+    "phase_5_4_helper_remains_test_only",
+    "production_runtime_must_not_import_tests_support",
+    "future_runtime_design_required_before_implementation",
+    "future_runtime_tests_required_for_malformed_replayed_stale_ambiguous_and_side_effect_requests"
+  ],
+  "residual_risk": {
+    "static_model_only": true,
+    "runtime_safety_proven": false,
+    "requires_future_runtime_design_review": true,
+    "requires_future_semantic_tests": true,
+    "requires_future_guardian_gate_review": true,
+    "requires_explicit_operator_approval_before_live_behavior": true
+  },
+  "blocked_scope": {
+    "runtime_bridge_implementation": true,
+    "live_adapter_code": true,
+    "tests_support_changes": true,
+    "helper_behavior_changes": true,
+    "files_under_lima": true,
+    "sparkbot_wiring": true,
+    "intentcompiler_runtime_changes": true,
+    "guardiandecision_runtime_changes": true,
+    "approval_enforcement": true,
+    "execution": true,
+    "audit_persistence": true,
+    "shell_behavior": true,
+    "browser_behavior": true,
+    "network_behavior": true,
+    "file_mutation": true,
+    "robotics_behavior": true,
+    "physical_world_action": true
+  },
+  "ready_for": [
+    "phase_5_9_docs_tests_fixtures_only_boundary_validation_matrix"
+  ],
+  "not_ready_for": [
+    "runtime_bridge_implementation",
+    "runtime_wiring",
+    "live_adapter_code",
+    "phase_5_4_helper_runtime_reuse",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_execution",
+    "browser_execution",
+    "network_action",
+    "file_mutation",
+    "robotics_behavior",
+    "physical_world_action",
+    "sparkbot_import_or_wiring"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "new_helper_implementation_added": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "live_adapter_code_added": false,
+    "runtime_bridge_added": false,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "external_side_effect_added": false,
+    "physical_world_action_added": false
+  }
+}

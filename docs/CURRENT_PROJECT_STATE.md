@@ -82,6 +82,8 @@ Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is 
 
 Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It documents future runtime bridge shape without implementation.
 
+Phase 5.8 HumanInput Runtime Bridge Threat Model is the current approved docs/tests/fixtures-only threat-model scope. It documents future bridge threats and mitigations without implementation.
+
 Latest completed phase merge:
 
 `ae7a0bf967dacf88a3eb196002e387305f48b8da`
@@ -94,7 +96,7 @@ Latest tag:
 
 Current operator step:
 
-Continue to Phase 5.8 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Complete Phase 5.8, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -187,6 +189,8 @@ Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main
 Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 5.8 HumanInput Runtime Bridge Threat Model is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 

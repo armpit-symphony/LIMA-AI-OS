@@ -2124,6 +2124,29 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.8 may continue only as docs/tests/fixtures-only threat modeling
 
+## ADR-0122: Runtime Bridge Threat Model Precedes Validation Matrix
+
+Status: Accepted
+
+Decision:
+
+Phase 5.8 records a threat model for a future HumanInput to IntentEnvelope runtime bridge before any boundary validation matrix or implementation gate. It covers prompt injection, operator impersonation, trust bypass, accidental execution, side-effect escalation, audit gaps, approval confusion, helper classifier misuse, unsafe test-code reuse, malformed input, replayed input, and ambiguous commands.
+
+Rationale:
+
+The future bridge would sit near sensitive operator intent and eventual Guardian review. Threat modeling must preserve the distinction between candidate metadata and executable runtime behavior.
+
+Consequences:
+
+- Phase 5.8 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- future runtime work requires fresh design, semantic tests, and Guardian gate review
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.9 may continue only as docs/tests/fixtures-only boundary validation matrix work
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
