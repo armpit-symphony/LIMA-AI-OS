@@ -80,21 +80,21 @@ Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It defines next-scope options and keeps live/runtime HumanInput to IntentEnvelope implementation blocked.
 
-Phase 5.7 HumanInput Runtime Bridge Design Proposal is the current approved docs/tests/fixtures-only design scope. It documents future runtime bridge shape without implementation.
+Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It documents future runtime bridge shape without implementation.
 
 Latest completed phase merge:
 
-`af507feb1e6bae17d90e8589287592de2a1cd571`
+`ae7a0bf967dacf88a3eb196002e387305f48b8da`
 
 Latest tag:
 
-`phase-5.6-humaninput-runtime-bridge-safety-gate-next-scope-decision-record`
+`phase-5.7-humaninput-runtime-bridge-design-proposal`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.7, then continue only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
+Continue to Phase 5.8 only within the approved docs/tests/fixtures-only design/review/threat-model lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -102,7 +102,7 @@ not selected
 
 Latest completed merge:
 
-`af507feb1e6bae17d90e8589287592de2a1cd571`
+`ae7a0bf967dacf88a3eb196002e387305f48b8da`
 
 Recommended PR target:
 
@@ -112,7 +112,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.7 - HumanInput Runtime Bridge Design Proposal.
+Phase 5.8 - HumanInput Runtime Bridge Threat Model.
 
 ## Active Phase 4 Status
 
@@ -186,7 +186,7 @@ Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main
 
 Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.7 HumanInput Runtime Bridge Design Proposal is approved as docs/tests/fixtures-only work. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+Phase 5.7 HumanInput Runtime Bridge Design Proposal is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
