@@ -1930,6 +1930,31 @@ Consequences:
 - test-only bridge code remains blocked until explicitly approved
 - files under `lima/` remain blocked unless explicitly approved
 
+## ADR-0114: Phase 5 Starts As Non-runtime Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 5.0 opens Phase 5 as non-runtime planning only. HumanInput is treated as an operator-originated request envelope, not an execution command. The lane may plan and propose HumanInput to IntentEnvelope boundaries, but it does not approve implementation, bridge code, runtime wiring, or live behavior.
+
+Rationale:
+
+The Phase 4.20 gate identified the correct next work: planning the HumanInput to IntentEnvelope boundary while preserving Guardian-first execution discipline. Operator intent is important context, but it cannot bypass classification, approval semantics, or GuardianDecision boundaries.
+
+Consequences:
+
+- Phase 5.0 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code or test-only bridge code is added
+- no runtime behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- HumanInput is not execution permission
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.1 may propose a contract, not implement it
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

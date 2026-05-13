@@ -2666,6 +2666,38 @@ Status:
 - complete
 - tagged as `phase-4.20-phase-5-gate-implementation-readiness-closeout`
 
+## Phase 5.0 - Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record
+
+Goal:
+
+Open Phase 5 as non-runtime planning only and record the approved HumanInput to IntentEnvelope boundary scope, human UX flow, approval semantics, trust/autonomy handling, and safety boundary.
+
+Deliverables:
+
+- `docs/PHASE_5_0_PHASE_5_SCOPE_CHARTER_HUMANINPUT_INTENTENVELOPE_BOUNDARY_DECISION_RECORD.md`
+- `tests/fixtures/runtime_extraction/phase_5_0_phase_5_scope_charter_humaninput_intentenvelope_boundary_decision_record.json`
+- `tests/test_phase_5_0_phase_5_scope_charter_humaninput_intentenvelope_boundary_decision_record.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- scope charter / decision record only
+- no bridge code
+- no test-only bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 5.1 - HumanInput to IntentEnvelope Contract Proposal
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -78,11 +78,11 @@ Latest tag:
 
 Current operator step:
 
-Stop at the Phase 5 gate until the operator explicitly approves the Phase 5 lane scope.
+Proceed through the approved Phase 5 non-runtime planning lane until a new implementation gate or product/safety decision is reached.
 
 Recommended next branch:
 
-not selected
+`phase-5-0-phase-5-scope-charter-humaninput-intentenvelope-boundary-decision-record`
 
 Latest completed merge:
 
@@ -96,7 +96,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5 - explicit operator scope decision required.
+Phase 5.0 - Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record.
 
 ## Active Phase 4 Status
 
@@ -155,6 +155,8 @@ Phase 4.19 HumanInput to IntentEnvelope Boundary Readiness Review is complete, m
 Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout is complete, merged to `main`, and tagged. It confirms Phase 5 gate is reached and identifies operator decisions needed before any Phase 5 runtime, test-only bridge, or implementation work.
 
 Phase 5 is not pre-approved. Before Phase 5 starts, the operator must decide whether Phase 5 begins as further non-runtime planning or as a narrow explicitly approved test-only HumanInput to IntentEnvelope bridge implementation, plus the human UX flow, approval semantics, trust/autonomy handling, safety boundary, and code scope.
+
+Phase 5.0 Phase 5 Scope Charter / HumanInput IntentEnvelope Boundary Decision Record is in progress. It opens Phase 5 as non-runtime planning only and records the approved HumanInput to IntentEnvelope boundary scope.
 
 ## Completed Phase 3 Status
 

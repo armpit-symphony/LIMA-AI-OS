@@ -1,0 +1,91 @@
+{
+  "phase": "5.0",
+  "status": "non_runtime_phase_5_scope_charter_humaninput_intentenvelope_boundary_decision_record",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "phase_document": "docs/PHASE_5_0_PHASE_5_SCOPE_CHARTER_HUMANINPUT_INTENTENVELOPE_BOUNDARY_DECISION_RECORD.md",
+  "source_phase": "4.20",
+  "source_tag": "phase-4.20-phase-5-gate-implementation-readiness-closeout",
+  "source_merge_commit": "fc7735c80b3016ee675150a9f1c024f38f2cb34a",
+  "latest_main_after_source_state_sync": "f760aa27e4615080e90a0c7b4b06eb3fc6a3c2eb",
+  "charter_id": "phase_5_scope_charter_humaninput_intentenvelope_boundary_decision_record",
+  "phase_5_scope": {
+    "begins_as_non_runtime_planning": true,
+    "may_propose_narrow_future_test_only_bridge_harness_lane": true,
+    "implementation_approved": false,
+    "live_runtime_approved": false,
+    "test_only_bridge_code_approved": false
+  },
+  "human_ux_flow": {
+    "humaninput_is_operator_originated_request_envelope": true,
+    "humaninput_is_not_execution_command": true,
+    "may_normalize_to_intentenvelope_candidate_for_tests_or_spec_only": true,
+    "must_preserve_source": true,
+    "must_preserve_operator_intent": true,
+    "must_preserve_requested_action": true,
+    "must_preserve_risk_tier": true,
+    "must_preserve_required_approval_state": true,
+    "must_preserve_not_executable_yet_status": true
+  },
+  "approval_semantics": {
+    "may_define_approval_required_denied_proposed_ready_for_review_states": true,
+    "may_not_enforce_approvals_against_live_actions": true,
+    "no_automatic_escalation_from_human_input_to_execution": true,
+    "no_default_trust_bypass_for_operator_input": true
+  },
+  "trust_and_autonomy": {
+    "operator_intent_is_high_priority_context": true,
+    "operator_intent_is_not_automatic_permission": true,
+    "kernel_must_classify_gate_and_require_decision_boundaries": true,
+    "trust_refs_remain_passive": true,
+    "autonomy_refs_remain_passive": true
+  },
+  "safety_boundary": {
+    "artifacts_remain_non_executable": true,
+    "no_shell_execution": true,
+    "no_browser_execution": true,
+    "no_robotics_behavior": true,
+    "no_file_mutation": true,
+    "no_network_action": true,
+    "no_external_side_effect": true,
+    "no_approval_enforcement": true,
+    "no_audit_persistence": true
+  },
+  "ready_for": [
+    "phase_5_1_humaninput_to_intentenvelope_contract_proposal",
+    "further_non_runtime_review"
+  ],
+  "not_ready_for": [
+    "humaninput_to_intentenvelope_implementation",
+    "test_only_bridge_code",
+    "runtime_wiring",
+    "live_adapter_code",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_execution",
+    "browser_execution",
+    "network_action",
+    "robotics_behavior",
+    "physical_world_action",
+    "sparkbot_import_or_wiring"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "live_adapter_code_added": false,
+    "test_only_bridge_code_added": false,
+    "intentenvelope_created": false,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "audit_persistence_added": false,
+    "external_side_effect_added": false,
+    "physical_world_action_added": false
+  }
+}
