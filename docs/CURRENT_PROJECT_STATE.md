@@ -74,21 +74,21 @@ Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and t
 
 Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.2 proposal as ready only for an explicit operator implementation-scope decision and stops at the implementation gate.
 
-Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is the current approved narrow implementation scope. It adds deterministic test-only helper code under `tests/support/` and does not modify files under `lima/`.
+Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is complete, merged to `main`, and tagged. It adds deterministic test-only helper code under `tests/support/` and does not modify files under `lima/`.
 
 Latest completed phase merge:
 
-`c3818f22094c5928c5b0d2ae7ab4c47a1d7ff8d5`
+`390692f80b4a0d49606394448b2dd1f4aba5af0a`
 
 Latest tag:
 
-`phase-5.3-test-only-bridge-harness-readiness-review`
+`phase-5.4-test-only-humaninput-to-intentenvelope-bridge-harness-implementation`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 5.4, then stop. Do not proceed to Phase 5.5 until the operator explicitly approves or declines the next narrow review or implementation scope.
+Stop at the Phase 5.5 gate. Do not proceed to Phase 5.5 until the operator explicitly approves or declines the next narrow review or implementation scope.
 
 Recommended next branch:
 
@@ -96,7 +96,7 @@ not selected
 
 Latest completed merge:
 
-`c3818f22094c5928c5b0d2ae7ab4c47a1d7ff8d5`
+`390692f80b4a0d49606394448b2dd1f4aba5af0a`
 
 Recommended PR target:
 
@@ -106,7 +106,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.4 - Test-only HumanInput to IntentEnvelope Bridge Harness Implementation.
+Phase 5.5 - explicit operator scope decision required before any next phase.
 
 ## Active Phase 4 Status
 
@@ -174,7 +174,7 @@ Phase 5.2 Test-only Bridge Harness Proposal is complete, merged to `main`, and t
 
 Phase 5.3 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.2 proposal and stops at an implementation gate.
 
-Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is approved as a narrow test-only scope. It adds a test-only helper under `tests/support/` that converts synthetic HumanInput-shaped dictionaries into non-executable IntentEnvelope-candidate-shaped test dictionaries only.
+Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation is complete, merged to `main`, and tagged. It adds a test-only helper under `tests/support/` that converts synthetic HumanInput-shaped dictionaries into non-executable IntentEnvelope-candidate-shaped test dictionaries only.
 
 Phase 5.5 is not approved. Before Phase 5.5 starts, the operator must explicitly approve or decline the next narrow scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
 
