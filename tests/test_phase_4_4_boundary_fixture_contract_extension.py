@@ -54,6 +54,20 @@ REQUIRED_FALSE_FLAGS = {
     "can_wire_sparkbot",
 }
 
+FORBIDDEN_AUTHORITY_KEYS = {
+    "approval_id",
+    "authorization_id",
+    "decision_id",
+    "execution_id",
+    "tool_call_id",
+    "tool_invocation_id",
+    "runtime_session_id",
+    "production_session_id",
+    "live_route_id",
+    "integration_id",
+    "sparkbot_route_id",
+}
+
 REQUIRED_BLOCKED_CAPABILITIES = {
     "natural_language_parsing_into_action",
     "model_calls",
@@ -141,6 +155,18 @@ def _all_strings(value: Any) -> list[str]:
     return strings
 
 
+def _all_mapping_keys(value: Any) -> list[str]:
+    keys: list[str] = []
+    if isinstance(value, dict):
+        keys.extend(str(key) for key in value)
+        for item in value.values():
+            keys.extend(_all_mapping_keys(item))
+    elif isinstance(value, list):
+        for item in value:
+            keys.extend(_all_mapping_keys(item))
+    return keys
+
+
 def test_phase_four_four_fixture_is_contract_extension_only() -> None:
     fixture = _load_fixture()
     assert fixture["phase"] == "4.4"
@@ -169,6 +195,15 @@ def test_contract_shape_requires_expected_record_fields() -> None:
     assert REQUIRED_RECORD_FIELDS <= set(shape["required_record_fields"])
     assert shape["input_kinds"] == ["text", "voice_transcript"]
     assert shape["voice_required_fields"] == ["voice"]
+
+
+def test_hardening_rules_forbid_authority_and_unknown_capabilities() -> None:
+    rules = _load_fixture()["hardening_rules"]
+    assert rules["all_can_flags_must_be_false"] is True
+    assert rules["authority_ids_forbidden"] is True
+    assert rules["synthetic_refs_only"] is True
+    assert rules["unknown_affirmative_capabilities_forbidden"] is True
+    assert rules["live_integration_identifiers_forbidden"] is True
 
 
 def test_records_include_synthetic_text_and_voice_shapes() -> None:
@@ -260,9 +295,16 @@ def test_capability_flags_prove_records_are_inert() -> None:
     for record in _records():
         flags = record["capability_flags"]
         assert REQUIRED_FALSE_FLAGS <= set(flags)
-        for flag_name in REQUIRED_FALSE_FLAGS:
-            assert flags[flag_name] is False, flag_name
+        for flag_name, flag_value in flags.items():
+            assert flag_name.startswith("can_"), flag_name
+            assert flag_value is False, flag_name
         assert REQUIRED_BLOCKED_CAPABILITIES <= set(record["blocked_capabilities"])
+
+
+def test_records_do_not_carry_authority_or_live_integration_identifiers() -> None:
+    for record in _records():
+        keys = set(_all_mapping_keys(record))
+        assert keys.isdisjoint(FORBIDDEN_AUTHORITY_KEYS)
 
 
 def test_phase_four_four_no_go_blocks_all_hard_boundaries() -> None:

@@ -99,6 +99,8 @@ Every Phase 4.4 fixture must explicitly state that it cannot:
 - import Sparkbot
 - wire Sparkbot
 
+Every `can_*` capability flag in a Phase 4.4 fixture must be `false`. Unknown affirmative capability flags are not allowed.
+
 ## Handoff Rules
 
 HumanInput intake is before IntentEnvelope and before GuardianDecision.
@@ -111,6 +113,8 @@ The only permitted handoff semantics are:
 - future privacy/redaction policy must govern raw content access
 
 The fixture cannot imply authorization, approval, execution, trust lookup, or production integration.
+
+Fixture records must not include real or fake authority identifiers such as approval IDs, decision IDs, execution IDs, tool-call IDs, live route IDs, production session IDs, or integration IDs. References are allowed only as synthetic, non-authorizing `*_ref` values.
 
 ## Phase 4.4 GO
 
