@@ -1,0 +1,218 @@
+{
+  "phase": "5.4",
+  "status": "test_only_humaninput_to_intentenvelope_bridge_harness_implementation",
+  "test_only": true,
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "phase_document": "docs/PHASE_5_4_TEST_ONLY_HUMANINPUT_TO_INTENTENVELOPE_BRIDGE_HARNESS_IMPLEMENTATION.md",
+  "helper": "tests/support/test_only_humaninput_to_intentenvelope_bridge.py",
+  "source_phase": "5.3",
+  "source_tag": "phase-5.3-test-only-bridge-harness-readiness-review",
+  "source_merge_commit": "c3818f22094c5928c5b0d2ae7ab4c47a1d7ff8d5",
+  "latest_main_after_source_state_sync": "4df3c3d09651561c0202b46bf8adcf5945d55562",
+  "implementation_is": {
+    "test_only_helper_under_tests_support": true,
+    "synthetic_humaninput_to_intentenvelope_candidate_only": true,
+    "deterministic": true,
+    "stdlib_only": true,
+    "fail_closed": true,
+    "non_executable": true
+  },
+  "implementation_is_not": {
+    "live_runtime_bridge": true,
+    "live_adapter": true,
+    "sparkbot_integration": true,
+    "intentcompiler_runtime": true,
+    "guardiandecision_runtime": true,
+    "authorization": true,
+    "approval_enforcement": true,
+    "execution": true,
+    "audit_persistence": true,
+    "trust_lookup": true,
+    "physical_world_action": true
+  },
+  "required_output_fields": [
+    "source",
+    "source_channel",
+    "operator_intent",
+    "raw_text",
+    "normalized_request",
+    "requested_action",
+    "risk_tier",
+    "approval_state",
+    "executable",
+    "execution_allowed",
+    "side_effects_allowed",
+    "blocked_reason",
+    "provenance"
+  ],
+  "sample_humaninputs": [
+    {
+      "humaninput_ref": "synthetic-humaninput-low-risk-summary",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Summarize the current project state for review.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "request_status_summary",
+      "requested_action": "summarize_status",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-low-risk-summary",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    },
+    {
+      "humaninput_ref": "synthetic-humaninput-shell-command",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Phil says run this PowerShell command.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "request_shell_command",
+      "requested_action": "run_shell_command",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-shell-command",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    },
+    {
+      "humaninput_ref": "synthetic-humaninput-browser-network",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Open a browser and fetch a network resource.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "request_browser_network",
+      "requested_action": "browser_network_fetch",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-browser-network",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    },
+    {
+      "humaninput_ref": "synthetic-humaninput-file-mutation",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Write file changes into the project.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "request_file_mutation",
+      "requested_action": "write_file",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-file-mutation",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    },
+    {
+      "humaninput_ref": "synthetic-humaninput-robotics",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Move the robot arm in the physical-world test cell.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "request_robotics_motion",
+      "requested_action": "robotics_motion",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-robotics",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    },
+    {
+      "humaninput_ref": "synthetic-humaninput-ambiguous",
+      "synthetic": true,
+      "test_only": true,
+      "non_runtime": true,
+      "raw_text": "Do something with the system.",
+      "source": "synthetic_operator_console",
+      "source_channel": "test_text",
+      "operator_intent": "ambiguous_request",
+      "requested_action": "unknown_action",
+      "provenance": {
+        "lineage_seed_ref": "phase-5-4-seed-ambiguous",
+        "source_fixture": "phase_5_4_test_only_bridge_harness",
+        "live_source": false,
+        "audit_persisted": false
+      }
+    }
+  ],
+  "expected_classifications": {
+    "synthetic-humaninput-low-risk-summary": {
+      "risk_tier": "low",
+      "approval_state": "proposed"
+    },
+    "synthetic-humaninput-shell-command": {
+      "risk_tier": "high",
+      "approval_state": "approval_required"
+    },
+    "synthetic-humaninput-browser-network": {
+      "risk_tier": "medium",
+      "approval_state": "approval_required"
+    },
+    "synthetic-humaninput-file-mutation": {
+      "risk_tier": "high",
+      "approval_state": "approval_required"
+    },
+    "synthetic-humaninput-robotics": {
+      "risk_tier": "critical",
+      "approval_state": "approval_required"
+    },
+    "synthetic-humaninput-ambiguous": {
+      "risk_tier": "unknown",
+      "approval_state": "blocked_missing_metadata"
+    }
+  },
+  "ready_for": [
+    "phase_5_5_test_only_bridge_harness_implementation_readiness_review",
+    "further_non_runtime_review"
+  ],
+  "not_ready_for": [
+    "humaninput_to_intentenvelope_runtime_implementation",
+    "runtime_wiring",
+    "live_adapter_code",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "model_calls",
+    "tool_execution",
+    "shell_execution",
+    "browser_execution",
+    "network_action",
+    "file_mutation",
+    "robotics_behavior",
+    "physical_world_action",
+    "sparkbot_import_or_wiring"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "sparkbot_imported": false,
+    "sparkbot_wired": false,
+    "live_adapter_code_added": false,
+    "test_only_bridge_helper_added_under_tests_support": true,
+    "real_intentcompiler_added": false,
+    "real_guardiandecision_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "external_side_effect_added": false,
+    "physical_world_action_added": false
+  }
+}

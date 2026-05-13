@@ -2027,6 +2027,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - any Phase 5.4 implementation scope requires explicit operator approval
 
+## ADR-0118: Test-only Bridge Harness Implementation Stays Under Tests
+
+Status: Accepted
+
+Decision:
+
+Phase 5.4 may implement a deterministic HumanInput to IntentEnvelope bridge helper only under `tests/support/`. The helper may convert synthetic HumanInput-shaped dictionaries into non-executable IntentEnvelope-candidate-shaped test dictionaries.
+
+Rationale:
+
+The operator approved a narrow test-only implementation scope after Phase 5.3. Keeping the helper under `tests/support/` lets LIMA validate boundary shape, conservative risk classification, provenance preservation, and fail-closed behavior without creating a runtime bridge.
+
+Consequences:
+
+- Phase 5.4 may add test-only helper code under `tests/support/`
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- output candidates are non-executable test dictionaries only
+- operator/admin/Phil/trusted wording does not bypass approval
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.5 or later requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

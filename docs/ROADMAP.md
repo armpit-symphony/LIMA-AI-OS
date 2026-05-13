@@ -2813,7 +2813,48 @@ Implementation gate status:
 
 - Phase 5.3 complete
 - tagged as `phase-5.3-test-only-bridge-harness-readiness-review`
-- Phase 5.4 requires explicit operator approval before any implementation
+- Phase 5.4 explicit operator approval received for test-only helper implementation only
+
+## Phase 5.4 - Test-only HumanInput to IntentEnvelope Bridge Harness Implementation
+
+Goal:
+
+Implement a deterministic test-only HumanInput to IntentEnvelope bridge helper under `tests/support/`.
+
+Deliverables:
+
+- `docs/PHASE_5_4_TEST_ONLY_HUMANINPUT_TO_INTENTENVELOPE_BRIDGE_HARNESS_IMPLEMENTATION.md`
+- `tests/fixtures/runtime_extraction/phase_5_4_test_only_humaninput_to_intentenvelope_bridge_harness_implementation.json`
+- `tests/test_phase_5_4_test_only_humaninput_to_intentenvelope_bridge_harness_implementation.py`
+- `tests/support/test_only_humaninput_to_intentenvelope_bridge.py`
+
+Acceptance criteria:
+
+- helper code lives under `tests/support/` only
+- accepts only synthetic, test-only, non-runtime HumanInput-shaped dictionaries
+- returns non-executable IntentEnvelope-candidate-shaped test dictionaries only
+- preserves source, source channel, operator intent, requested action, raw text, risk tier, approval state, blocked reason, and provenance
+- operator/admin/Phil/trusted wording does not bypass approval
+- risky shell, browser, network, file mutation, robotics, and physical-world requests remain non-executable and approval-required
+- missing or empty input fails closed
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 5.5 - explicit operator decision for readiness review or next narrow test-only scope
+
+Status:
+
+- complete
+- tagged as `phase-5.4-test-only-humaninput-to-intentenvelope-bridge-harness-implementation`
 
 Reserved from Phase 3.4:
 

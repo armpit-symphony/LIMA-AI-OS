@@ -3064,6 +3064,36 @@ Implementation gate status:
 - tagged as `phase-5.3-test-only-bridge-harness-readiness-review`
 - STOP until the operator explicitly approves any Phase 5.4 test-only bridge harness implementation scope
 
+## Phase 5.4 Gate: Test-only HumanInput to IntentEnvelope Bridge Harness Implementation
+
+Phase 5.4 may implement a deterministic helper only under `tests/support/`.
+
+GO:
+
+- synthetic HumanInput-shaped test input
+- non-executable IntentEnvelope-candidate-shaped test output
+- conservative risk classification
+- approval-required states for risky requests
+- fail-closed behavior for missing, empty, runtime, production, or approved markers
+- static docs, fixtures, and tests
+
+NO-GO:
+
+- files under `lima/`
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+STOP until the operator explicitly approves any Phase 5.5 scope.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

@@ -280,6 +280,8 @@ Phase 5.2 proposes a future test-only HumanInput to IntentEnvelope bridge harnes
 
 Phase 5.3 reviews the test-only bridge harness proposal as docs/tests/fixtures only and stops at an implementation gate. It finds the proposal ready only for an explicit operator implementation-scope decision, while keeping bridge code, runtime wiring, live adapter code, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, Sparkbot integration, and physical-world action blocked.
 
+Phase 5.4 adds a deterministic test-only HumanInput to IntentEnvelope bridge helper under `tests/support/`. It converts synthetic HumanInput-shaped dictionaries into non-executable IntentEnvelope-candidate-shaped test dictionaries only, while keeping `lima/` runtime code, live adapter behavior, Sparkbot wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
