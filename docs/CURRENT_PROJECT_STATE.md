@@ -44,7 +44,7 @@ Phase 4.10 Non-production Test-only HumanInput Adapter Harness Proposal is compl
 
 Phase 4.11 Test-only HumanInput Adapter Harness Proposal Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 4.10 proposal as docs/tests/fixtures only, but does not implement harness code.
 
-Phase 4.12 Test-only HumanInput Adapter Harness Safety Gate Docs is approved next as docs/tests/fixtures only.
+Phase 4.12 Test-only HumanInput Adapter Harness Safety Gate Docs is in progress on branch `phase-4-12-test-only-humaninput-adapter-harness-safety-gate-docs`. It may define safety gate docs for a future test-only harness, but must not implement harness code.
 
 Latest completed phase merge:
 
@@ -92,7 +92,7 @@ Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs.
 - Phase 4.9 - HumanInput Adapter Implementation Readiness Review: complete/tagged.
 - Phase 4.10 - Non-production Test-only HumanInput Adapter Harness Proposal: complete/tagged.
 - Phase 4.11 - Test-only HumanInput Adapter Harness Proposal Readiness Review: complete/tagged.
-- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: approved next.
+- Phase 4.12 - Test-only HumanInput Adapter Harness Safety Gate Docs: in progress.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -107,6 +107,8 @@ Phase 4.9 was a readiness review only. Readiness to discuss a future test-only a
 Phase 4.10 was proposal metadata only. It did not add harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 Phase 4.11 was readiness-review metadata only. It recommended Phase 4.12 safety gate docs, not harness implementation.
+
+Phase 4.12 is safety gate documentation only. It must not add harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
 ## Completed Phase 3 Status
 
