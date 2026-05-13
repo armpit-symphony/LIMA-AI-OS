@@ -244,6 +244,8 @@ Phase 4.5 reviews the HumanInput intake boundary as conditionally ready only for
 
 Phase 4.6 adds a non-production HumanInput adapter proposal as docs/tests/fixtures only. It describes how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape, but it is not an adapter, not executable, not Sparkbot integration, not authorization, not approval, not execution, not audit persistence, and not a trust lookup.
 
+Phase 4.7 reviews the Phase 4.6 proposal as ready only for future HumanInput Adapter Safety Gate Docs. It keeps live adapter code, Sparkbot wiring, runtime behavior, model/tool/terminal/robotics behavior, live trust lookup, real IntentCompiler, real GuardianDecision, approval/enforcement/execution/audit persistence, product shells, and physical-world action blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

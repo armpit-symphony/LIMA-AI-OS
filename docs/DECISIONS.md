@@ -1573,6 +1573,30 @@ Consequences:
 - real IntentCompiler and real GuardianDecision remain blocked
 - any next narrow non-production phase requires explicit operator approval
 
+## ADR-0099: HumanInput Adapter Proposal Readiness Review Allows Safety Gate Docs Only
+
+Status: Accepted
+
+Decision:
+
+Phase 4.7 may review the Phase 4.6 HumanInput adapter proposal as docs/tests/fixtures only and may recommend HumanInput Adapter Safety Gate Docs as the next non-runtime step. The readiness review is not a HumanInput adapter and does not approve live adapter code.
+
+Rationale:
+
+Phase 4.6 created a proposal shape, but a safety gate should exist before any future adapter implementation can be discussed. The readiness review confirms that source references, passive trust/autonomy metadata, transcript confidence, privacy fields, lineage seeds, and IntentEnvelope/GuardianDecision handoffs remain descriptive and non-executable.
+
+Consequences:
+
+- Phase 4.7 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- no live auth/session/trust lookup is added
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 4.8 may proceed only as HumanInput Adapter Safety Gate Docs
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

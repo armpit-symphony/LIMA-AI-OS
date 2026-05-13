@@ -76,6 +76,7 @@ Current expected sequence:
 - Phase 4.4 - Boundary Fixture Contract Extension: complete/tagged/hardened.
 - Phase 4.5 - Boundary Readiness Review: complete/tagged.
 - Phase 4.6 - Non-production HumanInput Adapter Proposal: complete/tagged.
+- Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review: in progress.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -92,6 +93,8 @@ The first safe Phase 4 sequence is:
 - Phase 4.4 - Boundary Fixture Contract Extension, if approved.
 - Phase 4.5 - Boundary Readiness Review.
 - Phase 4.6 - Non-production HumanInput Adapter Proposal, explicitly approved as docs/tests/fixtures only.
+- Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review.
+- Phase 4.8 - HumanInput Adapter Safety Gate Docs, if Phase 4.7 lands cleanly.
 - Explicitly approved narrow non-production extraction or adapter work only after readiness gates.
 
 Phase 4 must not move behavior until a readiness review approves the specific boundary and scope.
@@ -107,6 +110,8 @@ Phase 4.4 adds synthetic HumanInput intake fixture/contract metadata for text an
 Phase 4.5 reviews the HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. It does not approve runtime extraction, live Sparkbot integration, live adapter code, model/tool/terminal/robotics behavior, approval/enforcement/execution/audit persistence, product shells, or physical-world action.
 
 Phase 4.6 is that narrow proposal only. It describes how a future shell intake adapter could convert selected shell input context into the Phase 4.4 HumanInput fixture/contract shape, but it is not an adapter, not executable, not runtime wiring, not Sparkbot integration, not authorization, not approval, not execution, not audit persistence, and not a trust lookup.
+
+Phase 4.7 reviews the proposal as ready only for future HumanInput Adapter Safety Gate Docs. It does not approve live adapter code, Sparkbot wiring, runtime behavior, real IntentCompiler, real GuardianDecision, approval, enforcement, execution, audit persistence, product shells, or physical-world action.
 
 ## Standing Phase 3 Boundaries
 
