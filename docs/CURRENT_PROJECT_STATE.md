@@ -78,6 +78,8 @@ Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation i
 
 Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 5.4 helper without changing helper behavior, adding runtime behavior, modifying `lima/`, or approving live implementation.
 
+Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is the current approved docs/tests/fixtures-only safety gate scope. It defines next-scope options and keeps live/runtime HumanInput to IntentEnvelope implementation blocked.
+
 Latest completed phase merge:
 
 `176ffa0a68e8ef8efb1d9302046713eec8052f0b`
@@ -90,7 +92,7 @@ Latest tag:
 
 Current operator step:
 
-Stop at the Phase 5.6 gate. Do not proceed to Phase 5.6 until the operator explicitly approves or declines the next narrow review or implementation scope.
+Complete Phase 5.6, then stop. Do not proceed to Phase 5.7 until the operator explicitly approves or declines the next narrow review or implementation scope.
 
 Recommended next branch:
 
@@ -108,7 +110,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 5.6 - explicit operator scope decision required before any next phase.
+Phase 5.6 - HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record.
 
 ## Active Phase 4 Status
 
@@ -180,7 +182,9 @@ Phase 5.4 Test-only HumanInput to IntentEnvelope Bridge Harness Implementation i
 
 Phase 5.5 Test-only Bridge Harness Readiness Review is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
-Phase 5.6 is not approved. Before Phase 5.6 starts, the operator must explicitly approve or decline the next narrow scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
+Phase 5.6 HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record is approved as a docs/tests/fixtures-only scope. It must not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 5.7 is not approved. Before Phase 5.7 starts, the operator must explicitly choose and approve the next scope. Live/runtime HumanInput to IntentEnvelope implementation remains blocked.
 
 ## Completed Phase 3 Status
 

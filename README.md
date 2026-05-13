@@ -284,6 +284,8 @@ Phase 5.4 adds a deterministic test-only HumanInput to IntentEnvelope bridge hel
 
 Phase 5.5 reviews the Phase 5.4 helper as docs/tests/fixtures only. It confirms the helper remains test-only, must not be reused as runtime classifier logic, and keeps Phase 5.6, live runtime implementation, helper expansion, `lima/` changes, Sparkbot wiring, real IntentCompiler behavior, real GuardianDecision behavior, approval enforcement, execution, audit persistence, and physical-world action gated.
 
+Phase 5.6 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record. It requires explicit Phil approval before any future live/runtime bridge and requires runtime design before implementation, while keeping the Phase 5.4 helper test-only and keeping Phase 5.7 gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

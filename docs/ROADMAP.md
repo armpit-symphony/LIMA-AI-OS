@@ -2894,6 +2894,48 @@ Status:
 - complete
 - tagged as `phase-5.5-test-only-bridge-harness-readiness-review`
 
+## Phase 5.6 - HumanInput Runtime Bridge Safety Gate / Next-Scope Decision Record
+
+Goal:
+
+Define what, if anything, may follow the Phase 5.4 test-only helper and Phase 5.5 readiness review before any future live/runtime HumanInput to IntentEnvelope work.
+
+Deliverables:
+
+- `docs/PHASE_5_6_HUMANINPUT_RUNTIME_BRIDGE_SAFETY_GATE_NEXT_SCOPE_DECISION_RECORD.md`
+- `tests/fixtures/runtime_extraction/phase_5_6_humaninput_runtime_bridge_safety_gate_next_scope_decision_record.json`
+- `tests/test_phase_5_6_humaninput_runtime_bridge_safety_gate_next_scope_decision_record.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- safety gate and next-scope decision record only
+- Phase 5.4 helper remains test-only
+- helper classifier is not approved for runtime reuse
+- live/runtime HumanInput to IntentEnvelope implementation remains blocked
+- any future runtime bridge requires explicit Phil approval
+- any future runtime bridge must start with runtime design before implementation
+- next safe lane, if approved later, is planning/design only
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 5.7 - explicit operator scope decision required
+
+Status:
+
+- complete
+- tagged as `phase-5.6-humaninput-runtime-bridge-safety-gate-next-scope-decision-record`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
