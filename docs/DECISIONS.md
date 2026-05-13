@@ -1622,6 +1622,31 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - any next narrow non-production phase requires explicit operator approval
 
+## ADR-0101: HumanInput Adapter Implementation Readiness Is Test-only Harness Proposal Readiness Only
+
+Status: Accepted
+
+Decision:
+
+Phase 4.9 may review whether the HumanInput adapter boundary is ready for a future explicitly approved test-only adapter harness proposal. It does not approve adapter implementation, live adapter code, test-only harness code, runtime wiring, Sparkbot integration, or behavior movement.
+
+Rationale:
+
+Phase 4.4 through Phase 4.8 created the fixture contract, readiness reviews, proposal, and safety gate needed to discuss a narrow test-only harness proposal. That readiness is not the same as runtime implementation readiness. The project still needs explicit approval before any harness code or adapter code exists.
+
+Consequences:
+
+- Phase 4.9 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no live adapter code is added
+- no test-only adapter harness code is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- no live auth/session/trust lookup is added
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- any next narrow non-production phase requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
