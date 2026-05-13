@@ -2542,6 +2542,47 @@ After merge:
 
 - STOP for explicit operator approval before any next narrow non-production phase
 
+## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
+
+Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
+
+GO only for:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+Required proof:
+
+- fixture is valid JSON
+- status is non-runtime readiness review
+- review is docs/tests/fixtures only
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.5 readiness review remains non-runtime
+- Phase 4.6 adapter proposal remains non-runtime
+- ready-for scope is limited to adapter safety gate docs or further non-runtime review
+- tests pass
+
+After merge:
+
+- GO only for Phase 4.8 HumanInput Adapter Safety Gate Docs if Phase 4.7 recommends it
+
 ## Phase 2.21: Guardian Request Test Design Review
 
 No IntentEnvelope-to-Guardian-request fixtures until Phase 2.21 design review is merged.

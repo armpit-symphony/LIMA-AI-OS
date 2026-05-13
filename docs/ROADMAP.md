@@ -2139,6 +2139,45 @@ Status:
 - complete
 - tagged as `phase-4.6-nonproduction-humaninput-adapter-proposal`
 
+## Phase 4.7 - Non-production HumanInput Adapter Proposal Readiness Review
+
+Goal:
+
+Review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
+
+Deliverables:
+
+- `docs/PHASE_4_7_NONPRODUCTION_HUMANINPUT_ADAPTER_PROPOSAL_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_4_7_humaninput_adapter_proposal_readiness_review.json`
+- `tests/test_phase_4_7_humaninput_adapter_proposal_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- readiness review is metadata only
+- readiness review is not a HumanInput adapter
+- Phase 4.4 HumanInput fixture contract remains synthetic, inert, and non-runtime
+- Phase 4.5 readiness review remains non-runtime
+- Phase 4.6 adapter proposal remains non-runtime
+- ready-for scope is limited to future adapter safety gate docs or further non-runtime review
+- no files under `lima/` are modified
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no model calls
+- no tool execution
+- no terminal or PTY behavior
+- no robotics or physical-world behavior
+- no live auth/session/trust lookup
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- tests pass
+
+Next likely phase:
+
+- Phase 4.8 - HumanInput Adapter Safety Gate Docs
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
