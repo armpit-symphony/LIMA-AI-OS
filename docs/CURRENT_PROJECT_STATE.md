@@ -54,29 +54,31 @@ Phase 4.14 Test-only HumanInput Adapter Harness Implementation is complete, merg
 
 Phase 4.15 Test-only HumanInput Adapter Harness Implementation Readiness Review is complete, merged to `main`, and tagged. It is docs/tests/fixtures only and did not add harness behavior.
 
-Phase 4.16 HumanInput Boundary Lane Closeout Review is in progress on branch `phase-4-16-humaninput-boundary-lane-closeout-review`. It is docs/tests/fixtures only and must not add harness behavior or runtime behavior.
+Phase 4.16 HumanInput Boundary Lane Closeout Review is complete, merged to `main`, and tagged. It closes the HumanInput boundary lane as ready to stop and proposes the next explicitly approved lane should be HumanInput to IntentEnvelope boundary planning.
+
+The approved Phase 4.14 through Phase 4.16 queue is exhausted.
 
 Latest completed phase merge:
 
-`5458123c1dca2a9cf0ef2c59695c48d607497d47`
+`e69d6813513dad7e709358334d74a2b590e254af`
 
 Latest tag:
 
-`phase-4.15-test-only-humaninput-adapter-harness-implementation-readiness-review`
+`phase-4.16-humaninput-boundary-lane-closeout-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue through the approved Phase 4.14 through Phase 4.16 queue unless a real gate is hit.
+Stop for explicit operator approval before starting any next lane.
 
 Recommended next branch:
 
-`phase-4-16-humaninput-boundary-lane-closeout-review`
+TBD after explicit operator approval.
 
 Latest completed merge:
 
-`5458123c1dca2a9cf0ef2c59695c48d607497d47`
+`e69d6813513dad7e709358334d74a2b590e254af`
 
 Recommended PR target:
 
@@ -86,7 +88,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 4.16 - HumanInput Boundary Lane Closeout Review.
+Next explicitly approved phase.
 
 ## Active Phase 4 Status
 
@@ -106,7 +108,7 @@ Phase 4.16 - HumanInput Boundary Lane Closeout Review.
 - Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review: complete/tagged.
 - Phase 4.14 - Test-only HumanInput Adapter Harness Implementation: complete/tagged.
 - Phase 4.15 - Test-only HumanInput Adapter Harness Implementation Readiness Review: complete/tagged.
-- Phase 4.16 - HumanInput Boundary Lane Closeout Review: in progress.
+- Phase 4.16 - HumanInput Boundary Lane Closeout Review: complete/tagged.
 
 Phase 4.5 reviews the non-executing HumanInput intake boundary as conditionally ready only for a future explicitly approved narrow non-production proposal. Runtime extraction implementation remains blocked.
 
@@ -130,7 +132,7 @@ Phase 4.14 was the approved narrow implementation of a deterministic test-only h
 
 Phase 4.15 was the approved docs/tests/fixtures-only readiness review of Phase 4.14. It did not add new harness behavior.
 
-Phase 4.16 is the approved docs/tests/fixtures-only closeout review for the HumanInput boundary lane. It must not add new harness behavior or runtime behavior.
+Phase 4.16 was the approved docs/tests/fixtures-only closeout review for the HumanInput boundary lane. It did not add new harness behavior or runtime behavior. It recommends the next explicitly approved lane be HumanInput to IntentEnvelope boundary planning.
 
 ## Completed Phase 3 Status
 
