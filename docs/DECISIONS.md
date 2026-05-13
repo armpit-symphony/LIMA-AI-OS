@@ -1715,6 +1715,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.13 may summarize HumanInput boundary readiness as a final non-runtime review
 
+## ADR-0105: Phase 4 HumanInput Boundary Readiness Is Not Runtime Readiness
+
+Status: Accepted
+
+Decision:
+
+Phase 4.13 may review the full HumanInput boundary lane as docs/tests/fixtures only. It may conclude readiness only for a future explicitly approved test-only HumanInput adapter harness implementation phase or further non-runtime review.
+
+Rationale:
+
+The Phase 4.4 through Phase 4.12 lane now has synthetic HumanInput fixture metadata, adapter proposal docs, adapter safety gate docs, test-only harness proposal docs, and test-only harness safety gate docs. A final readiness review can summarize those artifacts without implementing any harness, adapter, or runtime behavior.
+
+Consequences:
+
+- Phase 4.13 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no harness implementation is added
+- no live adapter implementation is added
+- no Sparkbot code is copied, imported, or wired
+- no runtime behavior is added
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- physical-world action remains blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
