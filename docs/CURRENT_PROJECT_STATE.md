@@ -113,6 +113,8 @@ Phase 4.12 was safety gate documentation only. It did not add harness code, adap
 
 Phase 4.13 is the final approved Phase 4 HumanInput boundary readiness review in the current queue. It may summarize known gaps and readiness for a future explicitly approved test-only harness implementation phase, but must not implement harness code, adapter code, files under `lima/`, Sparkbot wiring, runtime behavior, live lookup, approval, enforcement, execution, audit persistence, or physical-world action.
 
+Phase 4.13 is in progress on branch `phase-4-13-phase-4-humaninput-boundary-readiness-review`.
+
 ## Completed Phase 3 Status
 
 - Phase 3.3 - Non-production Kernel Pipeline Relationship Metadata: complete/tagged.

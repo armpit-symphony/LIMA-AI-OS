@@ -2635,6 +2635,37 @@ After merge:
 
 - GO only for Phase 4.13 Phase 4 HumanInput Boundary Readiness Review
 
+## Phase 4.13 Gate: Phase 4 HumanInput Boundary Readiness Review
+
+Phase 4.13 may review whether the full HumanInput boundary lane is ready for a future explicitly approved test-only harness implementation phase or further non-runtime review.
+
+GO only for:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- harness implementation
+- live adapter implementation
+- Sparkbot imports or wiring
+- runtime behavior
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- STOP for the next explicitly approved phase
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

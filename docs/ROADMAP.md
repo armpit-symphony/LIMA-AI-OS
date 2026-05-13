@@ -2378,6 +2378,35 @@ Status:
 - complete
 - tagged as `phase-4.12-test-only-humaninput-adapter-harness-safety-gate-docs`
 
+## Phase 4.13 - Phase 4 HumanInput Boundary Readiness Review
+
+Goal:
+
+Review the full HumanInput boundary lane and decide whether it is ready for a future explicitly approved test-only HumanInput adapter harness implementation phase or needs more non-runtime review.
+
+Deliverables:
+
+- `docs/PHASE_4_13_PHASE_4_HUMANINPUT_BOUNDARY_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_4_13_phase_4_humaninput_boundary_readiness_review.json`
+- `tests/test_phase_4_13_phase_4_humaninput_boundary_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- readiness review metadata only
+- no harness implementation
+- no live adapter implementation
+- no files under `lima/`
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- no live auth/session/trust lookup
+- ready-for list is limited to a future explicitly approved test-only harness implementation phase or further non-runtime review
+- tests pass
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
