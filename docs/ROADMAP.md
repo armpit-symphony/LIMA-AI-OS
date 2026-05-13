@@ -2624,6 +2624,43 @@ Next likely phase:
 
 - Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout
 
+Status:
+
+- complete
+- tagged as `phase-4.19-humaninput-to-intentenvelope-boundary-readiness-review`
+
+## Phase 4.20 - Phase 5 Gate / Implementation Readiness Closeout
+
+Goal:
+
+Close the HumanInput to IntentEnvelope non-runtime planning lane at a clear Phase 5 gate and identify the operator decisions required before any Phase 5 runtime, test-only bridge, or implementation work.
+
+Deliverables:
+
+- `docs/PHASE_4_20_PHASE_5_GATE_IMPLEMENTATION_READINESS_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_4_20_phase_5_gate_implementation_readiness_closeout.json`
+- `tests/test_phase_4_20_phase_5_gate_implementation_readiness_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 5 gate / implementation readiness closeout only
+- no bridge code
+- no test-only bridge code
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no runtime behavior
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no model, tool, terminal, robot, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- explicit operator decision for Phase 5 scope
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

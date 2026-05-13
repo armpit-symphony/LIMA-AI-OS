@@ -1883,6 +1883,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 4.20 may close the Phase 4 lane at a Phase 5 gate
 
+## ADR-0112: Phase 4.20 Must Stop At Phase 5 Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 4.20 may close the HumanInput to IntentEnvelope non-runtime planning lane at a Phase 5 gate as docs/tests/fixtures only. It must identify operator decisions needed before Phase 5 and must not approve runtime behavior, test-only bridge code, real IntentCompiler behavior, real GuardianDecision behavior, or production integration.
+
+Rationale:
+
+The HumanInput lane and the HumanInput to IntentEnvelope planning lane now have enough static contracts and reviews to expose the next real decision point. Moving past that point requires product and safety decisions about human flow, approval semantics, trust behavior, and whether Phase 5 starts as planning or implementation.
+
+Consequences:
+
+- Phase 4.20 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no bridge code or test-only bridge code is added
+- no runtime behavior is added
+- no live adapter code is added
+- no Sparkbot code is copied, imported, or wired
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5 requires explicit operator approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

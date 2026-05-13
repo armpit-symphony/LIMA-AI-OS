@@ -2859,6 +2859,39 @@ After merge:
 
 - GO only for Phase 4.20 Phase 5 Gate / Implementation Readiness Closeout
 
+## Phase 4.20 Gate: Phase 5 Gate / Implementation Readiness Closeout
+
+Phase 4.20 may close the HumanInput to IntentEnvelope non-runtime planning lane at a Phase 5 gate.
+
+GO only for:
+
+- Phase 5 gate / implementation readiness closeout documentation
+- static closeout fixture metadata
+- static closeout tests
+- project tracking updates
+
+NO-GO for:
+
+- files under `lima/`
+- bridge code
+- test-only bridge code
+- live adapter code
+- Sparkbot imports or wiring
+- production runtime behavior
+- natural-language inference
+- model calls
+- tool execution
+- terminal or PTY behavior
+- robotics or physical-world behavior
+- live auth/session/trust lookup
+- real IntentCompiler
+- real GuardianDecision
+- approval, enforcement, execution, or audit persistence
+
+After merge:
+
+- STOP at Phase 5 gate until the operator explicitly approves the next Phase 5 scope
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
