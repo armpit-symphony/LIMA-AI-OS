@@ -1,0 +1,90 @@
+{
+  "phase": "6.0",
+  "status": "post_phase_5_roadmap_reorientation",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "roadmap_planning_only": true,
+  "phase_document": "docs/PHASE_6_0_POST_PHASE_5_ROADMAP_REORIENTATION.md",
+  "source_phase": "5.11",
+  "source_tag": "phase-5.11-phase-5-humaninput-bridge-design-lane-audit-archive-closeout",
+  "source_merge_commit": "3f12b0985482c16a1341c2b211ff779827a5c3eb",
+  "latest_main_after_source_state_sync": "b1b3c1ca62077840406fa76bfb371ac34ce434df",
+  "phase_5_closeout_status": {
+    "phase_5_0_to_5_11_complete": true,
+    "humaninput_bridge_design_lane_archived": true,
+    "runtime_bridge_implementation_approved": false,
+    "phase_5_helper_runtime_reuse_approved": false
+  },
+  "selected_next_architectural_lane": {
+    "lane": "kernel_lifecycle_planning",
+    "reason": "runtime_bridge_work_needs_kernel_lifecycle_boundaries_first",
+    "implementation_approved": false
+  },
+  "future_lanes_to_separate": [
+    "kernel_lifecycle_planning",
+    "intentenvelope_lifecycle",
+    "guardiandecision_lifecycle",
+    "approval_boundary_model",
+    "audit_spine_memory_relationship",
+    "sparkbot_integration_boundary",
+    "robo_os_physical_world_boundary",
+    "runtime_bridge_prerequisites"
+  ],
+  "runtime_bridge_prerequisites": [
+    "kernel_lifecycle_boundaries",
+    "intentenvelope_lifecycle_boundaries",
+    "guardiandecision_lifecycle_boundaries",
+    "approval_state_boundaries",
+    "audit_spine_memory_relationship_boundaries",
+    "sparkbot_integration_boundary",
+    "physical_world_boundary",
+    "explicit_operator_runtime_approval"
+  ],
+  "ready_for": [
+    "phase_6_1_docs_tests_fixtures_only_kernel_lifecycle_planning"
+  ],
+  "not_ready_for": [
+    "runtime_bridge_implementation",
+    "runtime_wiring",
+    "live_adapter_code",
+    "phase_5_4_helper_runtime_reuse",
+    "sparkbot_import_or_wiring",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "robotics_behavior",
+    "physical_world_action"
+  ],
+  "blocked_scope": {
+    "runtime_behavior": true,
+    "files_under_lima": true,
+    "tests_support_changes": true,
+    "helper_behavior_changes": true,
+    "sparkbot_wiring": true,
+    "live_adapter_code": true,
+    "intentcompiler_runtime_changes": true,
+    "guardiandecision_runtime_changes": true,
+    "approval_enforcement": true,
+    "execution": true,
+    "audit_persistence": true,
+    "shell_browser_network_file_robotics_physical_side_effects": true
+  },
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "blocked_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
