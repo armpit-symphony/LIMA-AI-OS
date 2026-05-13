@@ -3297,6 +3297,38 @@ After merge:
 
 STOP until the operator explicitly approves the next scope.
 
+## Phase 5.11 Gate: Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout
+
+Phase 5.11 may archive the Phase 5 HumanInput bridge design lane as docs/tests/fixtures only.
+
+GO:
+
+- Phase 5.0 through Phase 5.10 completion summary
+- added / not-added summary
+- Phase 5.4 helper remains test-only statement
+- Phase 5.7 through Phase 5.10 archived as design/specification only
+- future runtime work requires explicit Phil approval
+- recommended next options
+
+NO-GO:
+
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live runtime bridge
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler behavior
+- real GuardianDecision behavior
+- approval enforcement
+- execution
+- audit persistence
+- model, tool, shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+STOP until the operator explicitly approves the next scope.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

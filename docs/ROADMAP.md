@@ -3120,6 +3120,46 @@ Status:
 - complete
 - tagged as `phase-5.10-runtime-bridge-implementation-gate-closeout-review`
 
+## Phase 5.11 - Phase 5 HumanInput Bridge Design Lane Audit Archive / Closeout
+
+Goal:
+
+Archive the completed Phase 5 HumanInput to IntentEnvelope design lane and produce a clean decision point before any future runtime work.
+
+Deliverables:
+
+- `docs/PHASE_5_11_PHASE_5_HUMANINPUT_BRIDGE_DESIGN_LANE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_5_11_phase_5_humaninput_bridge_design_lane_audit_archive_closeout.json`
+- `tests/test_phase_5_11_phase_5_humaninput_bridge_design_lane_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 5.0 through Phase 5.10 listed as complete
+- Phase 5.7 through Phase 5.10 archived as design/specification only
+- Phase 5 live implementation remains gated
+- Phase 5.4 helper remains test-only
+- helper classifier is not approved for runtime reuse
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-5.11-phase-5-humaninput-bridge-design-lane-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

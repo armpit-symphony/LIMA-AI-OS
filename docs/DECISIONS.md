@@ -2193,6 +2193,30 @@ Consequences:
 - future runtime implementation must define production boundaries, Guardian handoff, provenance validation, replay/staleness handling, malformed-input rejection, approval semantics, audit design, and semantic tests
 - approval, enforcement, execution, and audit persistence remain blocked
 
+## ADR-0125: Phase 5 HumanInput Bridge Design Lane Archived
+
+Status: Accepted
+
+Decision:
+
+Phase 5.11 archives Phase 5.0 through Phase 5.10 as the completed HumanInput to IntentEnvelope design lane. Phase 5.7 through Phase 5.10 are archived as planning/specification only, and future runtime work requires new explicit Phil approval.
+
+Rationale:
+
+The design lane has reached a clean decision point. Archiving the lane prevents design metadata, fixtures, static tests, or the Phase 5.4 test-only helper from being mistaken for runtime approval.
+
+Consequences:
+
+- Phase 5.11 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- the Phase 5.4 helper remains test-only
+- helper classifier runtime reuse remains unapproved
+- approval, enforcement, execution, and audit persistence remain blocked
+- the next step requires explicit operator scope selection
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

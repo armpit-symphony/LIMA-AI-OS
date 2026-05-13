@@ -294,6 +294,8 @@ Phase 5.9 adds a docs/tests/fixtures-only HumanInput Runtime Bridge Boundary Val
 
 Phase 5.10 closes the HumanInput runtime bridge design lane with a docs/tests/fixtures-only implementation gate / closeout review. It records what was designed, what remains unimplemented, what runtime implementation would require, and that live/runtime implementation still requires explicit Phil approval.
 
+Phase 5.11 archives the completed Phase 5 HumanInput bridge design lane as docs/tests/fixtures-only planning/specification work. It confirms Phase 5.0 through Phase 5.10 are complete, the Phase 5.4 helper remains test-only, no live/runtime bridge exists, and future runtime work requires new explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
