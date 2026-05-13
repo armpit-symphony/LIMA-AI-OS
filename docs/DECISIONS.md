@@ -2100,6 +2100,30 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 5.7 or later requires explicit operator approval
 
+## ADR-0121: Runtime Bridge Design Proposal Remains Non-runtime
+
+Status: Accepted
+
+Decision:
+
+Phase 5.7 documents the proposed shape of a future HumanInput to IntentEnvelope runtime bridge while keeping all implementation blocked. It defines allowed inputs, rejected inputs, provenance requirements, non-executable candidate requirements, approval-required semantics, risk-tier semantics, trust/autonomy rules, and blocked behavior.
+
+Rationale:
+
+The project needs a runtime bridge design before any implementation can be evaluated, but design language must not become implicit approval to wire runtime behavior.
+
+Consequences:
+
+- Phase 5.7 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime HumanInput to IntentEnvelope behavior remains blocked
+- operator/admin/Phil/trusted wording cannot bypass approval
+- real IntentCompiler and real GuardianDecision remain blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 5.8 may continue only as docs/tests/fixtures-only threat modeling
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
