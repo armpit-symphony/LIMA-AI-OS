@@ -122,27 +122,29 @@ Phase 8.2 Runtime Acceptance Test Design is complete, merged to `main`, and tagg
 
 Phase 8.3 Rollback / Audit Proof Plan is complete, merged to `main`, and tagged. It defines future revertibility, forbidden-path review, audit-proof evidence, success criteria, and failure criteria before any runtime implementation can be approved.
 
+Phase 8.4 Runtime Implementation Approval Gate / Closeout is complete, merged to `main`, and tagged. It closes the no-code Phase 8 design lane and requires explicit operator approval before any Phase 9 runtime implementation or `lima/` change.
+
 Latest completed phase merge:
 
-`cbc0c5008ecbb3595d7e632209ce57be5619fa3c`
+`f91a238a16f8fef3dc9ccd7b43ba129521b7aab4`
 
 Latest tag:
 
-`phase-8.3-rollback-audit-proof-plan`
+`phase-8.4-runtime-implementation-approval-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.3.
+Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.4.
 
 Recommended next branch:
 
-phase-8-4-runtime-implementation-approval-gate-closeout
+not selected
 
 Latest completed merge:
 
-`cbc0c5008ecbb3595d7e632209ce57be5619fa3c`
+`f91a238a16f8fef3dc9ccd7b43ba129521b7aab4`
 
 Recommended PR target:
 
@@ -152,7 +154,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 8.4 - Runtime Implementation Approval Gate / Closeout.
+Explicit operator runtime implementation decision.
 
 ## Active Phase 4 Status
 
