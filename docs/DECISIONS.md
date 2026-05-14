@@ -2530,6 +2530,28 @@ Consequences:
 - any need to touch a forbidden surface stops the work for Phil approval
 - Phase 8.2 may continue only as docs/tests/fixtures-only acceptance test design
 
+## ADR-0140: Runtime Acceptance Tests Must Be Designed Before Code
+
+Status: Accepted
+
+Decision:
+
+Phase 8.2 defines future runtime acceptance test obligations before any runtime implementation can be approved. These obligations include import-boundary tests, typed-input tests, malformed-input rejection, non-executable output, authority-free output, approval-bypass rejection, GuardianDecision and IntentEnvelope non-creation, Sparkbot coupling rejection, and side-effect rejection.
+
+Rationale:
+
+The first runtime slice must be test-constrained before any code is written, otherwise a small coordinator could accidentally become a compiler, bridge, adapter, approval engine, or execution path.
+
+Consequences:
+
+- Phase 8.2 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- future positive tests are limited to non-executable candidate metadata
+- runtime implementation remains blocked
+- Phase 8.3 may continue only as docs/tests/fixtures-only rollback / audit proof planning
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

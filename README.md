@@ -324,6 +324,8 @@ Phase 8.0 opens a no-code Implementation Design Review lane. It converts the Pha
 
 Phase 8.1 adds a docs/tests/fixtures-only Exact Runtime File-Touch Map. It identifies future-eligible contract files and proposed new kernel files for a later explicitly approved first runtime slice, while keeping every `lima/` and `tests/support/` file untouched.
 
+Phase 8.2 adds docs/tests/fixtures-only Runtime Acceptance Test Design. It defines future required test families, negative cases, limited positive cases, and validation expectations before any runtime slice can be approved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

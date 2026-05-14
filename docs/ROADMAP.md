@@ -3741,6 +3741,46 @@ Status:
 - complete
 - tagged as `phase-8.1-exact-runtime-file-touch-map`
 
+## Phase 8.2 - Runtime Acceptance Test Design
+
+Goal:
+
+Define the acceptance tests that must exist before any future first runtime slice implementation can be approved.
+
+Deliverables:
+
+- `docs/PHASE_8_2_RUNTIME_ACCEPTANCE_TEST_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_8_2_runtime_acceptance_test_design.json`
+- `tests/test_phase_8_2_runtime_acceptance_test_design.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- future required test families listed
+- required negative cases listed
+- limited positive cases constrained to non-executable candidate metadata
+- validation commands listed
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 8.3 - Rollback / Audit Proof Plan
+
+Status:
+
+- complete
+- tagged as `phase-8.2-runtime-acceptance-test-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
