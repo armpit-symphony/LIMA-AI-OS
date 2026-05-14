@@ -3958,6 +3958,37 @@ After merge:
 
 Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this archive.
 
+## Phase 9.0 Gate: Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Phase 9.0 may confirm the Phase 8.1 file-touch map as docs/tests/fixtures only.
+
+GO:
+
+- list exact eligible existing runtime files
+- list exact eligible new runtime files
+- confirm the file-touch map is explicit
+- confirm Phase 9.1 acceptance test scaffolding is the next step
+- add static fixtures and tests
+
+NO-GO:
+
+- files under `lima/`
+- `tests/support/` changes
+- runtime behavior
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 9.1 acceptance test scaffolding under the approved narrow Phase 9 lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

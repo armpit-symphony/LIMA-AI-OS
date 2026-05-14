@@ -332,6 +332,8 @@ Phase 8.4 closes the no-code Phase 8 implementation design review lane at a runt
 
 Phase 8.5 archives Phase 8 as no-code implementation design review work. It confirms Phase 8.0 through Phase 8.4 added docs, fixtures, static tests, and roadmap/state updates only, preserves the exact Phase 9 approval question, and keeps runtime code gated pending explicit Phil approval.
 
+Phase 9.0 confirms the Phase 8.1 eligible runtime file-touch map before runtime implementation work begins. It is docs/tests/fixtures only and allows the lane to continue to Phase 9.1 acceptance test scaffolding without modifying `lima/`.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

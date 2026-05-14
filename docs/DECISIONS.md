@@ -2618,6 +2618,27 @@ Consequences:
 - Phase 9 runtime implementation remains blocked
 - future runtime code requires explicit Phil approval of the preserved narrow question
 
+## ADR-0144: Phase 9 Starts With Eligible File Confirmation
+
+Status: Accepted
+
+Decision:
+
+Phase 9.0 confirms the Phase 8.1 file-touch map before any runtime implementation work. The map is explicit enough to proceed to Phase 9.1 acceptance test scaffolding.
+
+Rationale:
+
+The first runtime slice must not begin by guessing file scope. Confirming the exact eligible files protects the lane from drifting into adapters, `tests/support/`, Sparkbot wiring, IntentCompiler behavior, GuardianDecision behavior, approval enforcement, execution, or side effects.
+
+Consequences:
+
+- Phase 9.0 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no `tests/support/` files are modified
+- Phase 9.1 may continue only as acceptance test scaffolding
+- Phase 9.2 must touch only the Phase 8.1 eligible runtime files
+- any need for a forbidden file surface stops the lane for Phil approval
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

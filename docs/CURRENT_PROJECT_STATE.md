@@ -126,27 +126,29 @@ Phase 8.4 Runtime Implementation Approval Gate / Closeout is complete, merged to
 
 Phase 8.5 Phase 8 No-Code Implementation Design Review Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 8.0 through Phase 8.4 as no-code design review work and preserves the exact Phase 9 approval question while keeping runtime implementation blocked.
 
+Phase 9.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complete, merged to `main`, and tagged. It confirms the Phase 8.1 eligible runtime file-touch map is explicit enough for Phase 9.1 acceptance test scaffolding, while adding no runtime behavior and modifying no `lima/` files.
+
 Latest completed phase merge:
 
-`1561c71428e80294d4c02c57d290344f9ae3caf6`
+`8dd81595ab9ffd503a36556551110fec6605066c`
 
 Latest tag:
 
-`phase-8.5-phase-8-no-code-implementation-design-review-audit-archive-closeout`
+`phase-9.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.5.
+Continue only to Phase 9.1 Runtime Slice Acceptance Test Scaffolding under the approved narrow Phase 9 lane.
 
 Recommended next branch:
 
-not selected
+`phase-9-1-runtime-slice-acceptance-test-scaffolding`
 
 Latest completed merge:
 
-`1561c71428e80294d4c02c57d290344f9ae3caf6`
+`8dd81595ab9ffd503a36556551110fec6605066c`
 
 Recommended PR target:
 

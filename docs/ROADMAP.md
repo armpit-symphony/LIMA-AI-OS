@@ -3905,6 +3905,44 @@ Status:
 - complete
 - tagged as `phase-8.5-phase-8-no-code-implementation-design-review-audit-archive-closeout`
 
+## Phase 9.0 - Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Goal:
+
+Confirm the Phase 8.1 eligible runtime file-touch map before any Phase 9 runtime implementation work proceeds.
+
+Deliverables:
+
+- `docs/PHASE_9_0_RUNTIME_SLICE_PREFLIGHT_AUDIT_ELIGIBLE_FILE_CONFIRMATION.md`
+- `tests/fixtures/runtime_extraction/phase_9_0_runtime_slice_preflight_audit_eligible_file_confirmation.json`
+- `tests/test_phase_9_0_runtime_slice_preflight_audit_eligible_file_confirmation.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- exact eligible existing runtime files listed
+- exact eligible new runtime files listed
+- no files under `lima/`
+- no `tests/support/` changes
+- no runtime behavior
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- Phase 9.1 acceptance test scaffolding identified as the next step
+- tests pass
+
+Next likely phase:
+
+- Phase 9.1 - Runtime Slice Acceptance Test Scaffolding
+
+Status:
+
+- complete
+- tagged as `phase-9.0-runtime-slice-preflight-audit-eligible-file-confirmation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
