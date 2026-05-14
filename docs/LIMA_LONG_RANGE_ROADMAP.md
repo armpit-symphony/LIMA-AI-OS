@@ -109,7 +109,8 @@ Current expected sequence:
 - Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout: complete/tagged.
 - Phase 6.5 - Phase 6 Roadmap Planning Lane Audit Archive / Closeout: complete/tagged.
 - Phase 7.0 - Kernel Runtime Implementation Charter: complete/tagged.
-- Phase 7.1 - First Runtime Slice Eligibility Map: approved docs/tests/fixtures-only lane.
+- Phase 7.1 - First Runtime Slice Eligibility Map: complete/tagged.
+- Phase 7.2 - Kernel Runtime Safety Preconditions: approved docs/tests/fixtures-only lane.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -221,7 +222,9 @@ Phase 6.5 is complete and tagged as docs/tests/fixtures-only Phase 6 Roadmap Pla
 
 Phase 7.0 is complete and tagged as a docs/tests/fixtures-only no-code Kernel Runtime Implementation Charter. It defines a possible future non-executing kernel intake-to-candidate coordinator but does not approve runtime implementation or modify `lima/`.
 
-Phase 7.1 may continue as docs/tests/fixtures-only first runtime slice eligibility mapping. Runtime behavior, `lima/` changes, helper behavior changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world behavior remain blocked.
+Phase 7.1 is complete and tagged as a docs/tests/fixtures-only First Runtime Slice Eligibility Map. It names future-eligible contract files and forbidden execution surfaces without modifying `lima/` or approving runtime implementation.
+
+Phase 7.2 may continue as docs/tests/fixtures-only Kernel Runtime Safety Preconditions. Runtime behavior, `lima/` changes, helper behavior changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world behavior remain blocked.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
