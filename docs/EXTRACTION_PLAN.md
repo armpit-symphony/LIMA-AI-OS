@@ -3497,7 +3497,41 @@ NO-GO:
 
 After merge:
 
-Stop for explicit operator next-scope selection. No Phase 6.5, Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world phase is approved by this closeout.
+Stop for explicit operator next-scope selection unless a narrow docs/tests/fixtures-only audit archive closeout is explicitly approved. No Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world phase is approved by this closeout.
+
+## Phase 6.5 Gate: Phase 6 Roadmap Planning Lane Audit Archive / Closeout
+
+Phase 6.5 may archive Phase 6 as a completed planning lane as docs/tests/fixtures only.
+
+GO:
+
+- summarize Phase 6.0 through Phase 6.4 as complete
+- list docs, fixtures, static tests, and roadmap/state updates as added
+- list runtime behavior, `lima/` changes, `tests/support/` changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world action as not added
+- confirm Phase 5 runtime bridge remains gated
+- archive Phase 6 as roadmap/planning only
+- document next options that require explicit Phil approval
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- authorization
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator next-scope selection. No Phase 7, Sparkbot integration planning, Robo-OS planning, product-roadmap planning, runtime implementation, approval/enforcement/execution/audit, memory IO, or physical-world phase is approved by this archive.
 
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 

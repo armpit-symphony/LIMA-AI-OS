@@ -2332,6 +2332,29 @@ Consequences:
 - approval, enforcement, execution, audit persistence, memory IO, and spine ledger writes remain blocked
 - the next step requires explicit operator scope selection
 
+## ADR-0131: Phase 6 Is Archived As Planning Only
+
+Status: Accepted
+
+Decision:
+
+Phase 6.5 archives Phase 6.0 through Phase 6.4 as completed roadmap/planning work. The lane added docs, fixtures, static tests, and roadmap/state updates only. It did not add runtime behavior, `lima/` changes, `tests/support/` changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, or physical-world behavior.
+
+Rationale:
+
+Archiving the lane creates a clean decision point before any future Phase 7, Sparkbot integration boundary planning, Robo-OS / physical-world boundary planning, or product roadmap lane.
+
+Consequences:
+
+- Phase 6.5 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- Phase 6 is archived as planning only
+- future runtime work requires new explicit Phil approval
+- the next step requires explicit operator scope selection
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
