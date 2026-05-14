@@ -2463,6 +2463,29 @@ Consequences:
 - future runtime work requires explicit Phil approval
 - the next step requires explicit operator implementation decision
 
+## ADR-0137: Phase 7 Is Archived As No-Code Charter Only
+
+Status: Accepted
+
+Decision:
+
+Phase 7.5 archives Phase 7.0 through Phase 7.4 as a completed no-code kernel runtime implementation charter lane. The archive records that Phase 7 added docs, fixtures, static tests, and roadmap/state updates only.
+
+Rationale:
+
+Phase 7 has enough no-code charter, eligibility, safety-precondition, test-plan, and decision-gate material to preserve the lane before any Phase 8 design review or runtime slice decision.
+
+Consequences:
+
+- Phase 7.5 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- no runtime implementation is approved
+- Phase 5 runtime bridge remains gated
+- future runtime code requires explicit Phil approval
+- the next step requires explicit operator next-scope decision
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
