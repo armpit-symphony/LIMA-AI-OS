@@ -112,7 +112,7 @@ Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and ta
 
 Latest completed phase merge:
 
-`221e7fdd933f3b598a276a51aaac94adc6cb932a`
+`74a75db74c9a86208ea9262cd5b75a298948dd40`
 
 Latest tag:
 
@@ -130,7 +130,7 @@ not selected
 
 Latest completed merge:
 
-`221e7fdd933f3b598a276a51aaac94adc6cb932a`
+`74a75db74c9a86208ea9262cd5b75a298948dd40`
 
 Recommended PR target:
 
