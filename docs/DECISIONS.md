@@ -2486,6 +2486,28 @@ Consequences:
 - future runtime code requires explicit Phil approval
 - the next step requires explicit operator next-scope decision
 
+## ADR-0138: Phase 8 Starts As No-Code Implementation Design Review
+
+Status: Accepted
+
+Decision:
+
+Phase 8.0 opens Phase 8 as a no-code implementation design review lane. The lane may convert the Phase 7 charter into a future implementation design package, but it may not implement runtime behavior or modify runtime files.
+
+Rationale:
+
+The repo needs an exact design package before any narrow runtime slice can be responsibly approved.
+
+Consequences:
+
+- Phase 8.0 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- the narrowest future runtime slice remains non-executing candidate metadata only
+- Phase 8.1 may continue only as docs/tests/fixtures-only exact file-touch mapping
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

@@ -3749,6 +3749,39 @@ After merge:
 
 Stop for explicit operator next-scope selection. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this archive.
 
+## Phase 8.0 Gate: Implementation Design Review Charter
+
+Phase 8.0 may open a no-code implementation design review lane as docs/tests/fixtures only.
+
+GO:
+
+- review Phase 7.0 through Phase 7.5 as source context
+- define the design review mission
+- identify the narrowest future runtime slice
+- list required design package artifacts
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 8.1 docs/tests/fixtures-only exact runtime file-touch mapping under the approved Phase 8 no-code design review lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
