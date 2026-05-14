@@ -312,6 +312,8 @@ Phase 7.0 opens a no-code Kernel Runtime Implementation Charter lane. It defines
 
 Phase 7.1 adds a docs/tests/fixtures-only First Runtime Slice Eligibility Map. It names future-eligible contract files and forbidden execution surfaces for a later explicitly approved slice, while keeping all `lima/` and `tests/support/` files untouched.
 
+Phase 7.2 adds docs/tests/fixtures-only Kernel Runtime Safety Preconditions. It defines required tests, rollback expectations, audit proof, input/output shape constraints, and safety gates that must be satisfied before any future runtime code can be approved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -1,0 +1,83 @@
+{
+  "phase": "7.2",
+  "status": "kernel_runtime_safety_preconditions",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "safety_preconditions_only": true,
+  "phase_document": "docs/PHASE_7_2_KERNEL_RUNTIME_SAFETY_PRECONDITIONS.md",
+  "source_phase": "7.1",
+  "source_tag": "phase-7.1-first-runtime-slice-eligibility-map",
+  "source_merge_commit": "7f1545c0afccb3b2941faf2c2990f3dfc10261f6",
+  "latest_main_after_source_state_sync": "9c31e65",
+  "test_preconditions": [
+    "targeted_tests_for_every_future_runtime_file",
+    "negative_tests_for_missing_typed_input",
+    "negative_tests_for_raw_natural_language_parsing_attempts",
+    "negative_tests_for_execution_approval_audit_and_side_effects",
+    "import_boundary_tests_for_no_sparkbot_coupling",
+    "full_suite_passing_before_merge"
+  ],
+  "rollback_preconditions": {
+    "future_runtime_slice_independently_revertible": true,
+    "irreversible_migration_allowed": false,
+    "persistent_schema_change_allowed": false,
+    "external_side_effect_allowed": false,
+    "docs_tests_fixtures_state_recoverable": true
+  },
+  "audit_proof_preconditions": {
+    "candidate_output_requires_provenance_metadata": true,
+    "candidate_output_requires_non_executable_markers": true,
+    "candidate_output_identifies_future_guardian_review_boundary": true,
+    "audit_proof_test_evidence_only_until_persistence_approved": true
+  },
+  "input_output_shape_preconditions": {
+    "input_typed_explicit_metadata_only": true,
+    "input_fails_closed_if_required_fields_missing": true,
+    "output_non_executable_candidate_metadata_only": true,
+    "output_includes_approval_permission": false,
+    "output_includes_execution_permission": false,
+    "output_includes_driver_handoff": false,
+    "output_includes_persistence_authority": false
+  },
+  "safety_gate_preconditions": {
+    "phase_5_runtime_bridge_gate_active": true,
+    "phase_7_1_file_map_honored": true,
+    "guardiandecision_future_authority": true,
+    "approval_enforcement_blocked": true,
+    "execution_blocked": true,
+    "sparkbot_wiring_blocked": true,
+    "physical_world_behavior_blocked": true
+  },
+  "ready_for": [
+    "phase_7_3_docs_tests_fixtures_only_runtime_implementation_test_plan"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_import_or_wiring",
+    "live_adapter_code",
+    "runtime_humaninput_to_intentenvelope_bridge",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
