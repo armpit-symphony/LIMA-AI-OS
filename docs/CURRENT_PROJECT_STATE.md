@@ -114,27 +114,29 @@ Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to
 
 Phase 7.5 Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 7.0 through Phase 7.4 as no-code charter/planning work and requires explicit operator next-scope decision before any Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior.
 
+Phase 8.0 Implementation Design Review Charter is complete, merged to `main`, and tagged. It opens Phase 8 as no-code implementation design review and identifies the narrowest future runtime slice without approving runtime implementation or modifying `lima/`.
+
 Latest completed phase merge:
 
-`dd369913cbbb802724fd68a25d9b175ebb19c36b`
+`b8f15f07b4e64f6c2ad6b76231516ee63cc4b749`
 
 Latest tag:
 
-`phase-7.5-phase-7-no-code-kernel-runtime-charter-audit-archive-closeout`
+`phase-8.0-implementation-design-review-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator next-scope decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 7.5.
+Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.0.
 
 Recommended next branch:
 
-not selected
+phase-8-1-exact-runtime-file-touch-map
 
 Latest completed merge:
 
-`dd369913cbbb802724fd68a25d9b175ebb19c36b`
+`b8f15f07b4e64f6c2ad6b76231516ee63cc4b749`
 
 Recommended PR target:
 
@@ -144,7 +146,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit operator implementation decision.
+Phase 8.1 - Exact Runtime File-Touch Map.
 
 ## Active Phase 4 Status
 
