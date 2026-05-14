@@ -3328,6 +3328,47 @@ Status:
 - complete
 - tagged as `phase-6.3-approval-audit-memory-boundary-planning`
 
+## Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout
+
+Goal:
+
+Close the current Phase 6 broader LIMA OS roadmap planning lane and produce a clean next-scope decision gate.
+
+Deliverables:
+
+- `docs/PHASE_6_4_PHASE_6_ROADMAP_GATE_NEXT_LANE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_6_4_phase_6_roadmap_gate_next_lane_closeout.json`
+- `tests/test_phase_6_4_phase_6_roadmap_gate_next_lane_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 6.0 through Phase 6.3 listed as complete
+- planned kernel, HumanInput, IntentEnvelope, GuardianDecision, approval, audit/spine, memory, Sparkbot, and Robo-OS boundaries summarized
+- runtime bridge remains unimplemented
+- live adapter remains unimplemented
+- real IntentCompiler remains unimplemented
+- real GuardianDecision remains unimplemented
+- approval enforcement, execution, audit persistence, memory IO, and spine ledger writes remain blocked
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no physical-world side effects
+- next-scope options documented
+- no Phase 6.5 or Phase 7 work approved
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-6.4-phase-6-roadmap-gate-next-lane-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -1,0 +1,83 @@
+{
+  "phase": "6.4",
+  "status": "phase_6_roadmap_gate_next_lane_closeout",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "roadmap_gate_closeout_only": true,
+  "phase_document": "docs/PHASE_6_4_PHASE_6_ROADMAP_GATE_NEXT_LANE_CLOSEOUT.md",
+  "source_phase": "6.3",
+  "source_tag": "phase-6.3-approval-audit-memory-boundary-planning",
+  "source_merge_commit": "0e2f531fbdbb323160b30b3d0f25c8f9e804f991",
+  "latest_main_after_source_state_sync": "05c5296e7b85d3e312df85bf8fc7f87edd7f387d",
+  "completed_phase_6_scope": [
+    "phase_6_0_post_phase_5_roadmap_reorientation",
+    "phase_6_1_lima_kernel_lifecycle_planning",
+    "phase_6_2_intentenvelope_guardiandecision_lifecycle_boundary_map",
+    "phase_6_3_approval_audit_memory_boundary_planning"
+  ],
+  "planned_boundaries": {
+    "lima_runtime_kernel_under_shells_and_drivers": true,
+    "humaninput_intent_context_not_execution_permission": true,
+    "intentenvelope_candidates_non_executable": true,
+    "intentenvelope_candidates_cannot_authorize_themselves": true,
+    "guardiandecision_future_authority_not_implemented": true,
+    "approval_state_descriptive_only": true,
+    "audit_spine_memory_lineage_planning_only": true,
+    "sparkbot_reference_shell_not_kernel": true,
+    "robo_os_physical_world_surfaces_remain_gated": true
+  },
+  "unimplemented": [
+    "runtime_humaninput_to_intentenvelope_bridge",
+    "live_adapter_behavior",
+    "runtime_intentcompiler_behavior",
+    "runtime_guardiandecision_behavior",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "spine_ledger_writes",
+    "memory_io",
+    "sparkbot_integration",
+    "robo_os_physical_world_behavior"
+  ],
+  "next_scope_options": [
+    "stop_phase_6_and_audit_archive_planning_lane",
+    "docs_tests_fixtures_only_sparkbot_integration_boundary_planning",
+    "docs_tests_fixtures_only_robo_os_physical_world_boundary_planning",
+    "docs_tests_fixtures_only_kernel_runtime_implementation_charter_no_code",
+    "broader_sparkpit_labs_product_roadmap_planning"
+  ],
+  "requires_explicit_phil_approval_before_next_phase": true,
+  "no_phase_6_5_or_phase_7_approved": true,
+  "not_ready_for": [
+    "runtime_behavior",
+    "runtime_bridge_implementation",
+    "live_adapter_code",
+    "helper_behavior_changes",
+    "sparkbot_import_or_wiring",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "memory_io",
+    "spine_ledger_write",
+    "physical_world_action"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "memory_io_added": false,
+    "spine_ledger_write_added": false,
+    "physical_world_action_added": false
+  }
+}

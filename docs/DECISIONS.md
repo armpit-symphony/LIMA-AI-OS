@@ -2308,6 +2308,30 @@ Consequences:
 - execution and physical-world action remain blocked
 - Phase 6.4 may continue only as docs/tests/fixtures-only roadmap gate / next-lane closeout
 
+## ADR-0130: Phase 6 Planning Lane Closes At A Roadmap Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 6.4 closes the broader LIMA OS roadmap planning lane as docs/tests/fixtures-only work. It records Phase 6.0 through Phase 6.3 as complete planning, summarizes what remains unimplemented, and requires explicit Phil next-scope selection before any Phase 6.5, Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world work.
+
+Rationale:
+
+The lane has clarified enough kernel, candidate, GuardianDecision, approval, audit/spine, memory, shell, and physical-world boundaries to stop cleanly without drifting into implementation.
+
+Consequences:
+
+- Phase 6.4 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime bridge implementation remains blocked
+- Sparkbot wiring remains blocked
+- Robo-OS and physical-world behavior remain blocked
+- approval, enforcement, execution, audit persistence, memory IO, and spine ledger writes remain blocked
+- the next step requires explicit operator scope selection
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

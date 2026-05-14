@@ -3464,6 +3464,41 @@ After merge:
 
 Continue only to Phase 6.4 docs/tests/fixtures-only roadmap gate / next-lane closeout under the approved Phase 6 planning lane.
 
+## Phase 6.4 Gate: Phase 6 Roadmap Gate / Next-Lane Closeout
+
+Phase 6.4 may close the current Phase 6 planning lane as docs/tests/fixtures only.
+
+GO:
+
+- summarize Phase 6.0 through Phase 6.3
+- document planned kernel, candidate, GuardianDecision, approval, audit/spine, memory, Sparkbot, and Robo-OS boundaries
+- document unimplemented runtime surfaces
+- document next-scope options
+- require explicit operator selection before any next phase
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- authorization
+- execution
+- audit persistence
+- memory reads or writes
+- spine ledger writes
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator next-scope selection. No Phase 6.5, Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world phase is approved by this closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
