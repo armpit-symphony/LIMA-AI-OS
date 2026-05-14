@@ -3653,12 +3653,51 @@ Acceptance criteria:
 
 Next likely phase:
 
-- explicit operator next-scope decision
+- Phase 8.0 - Implementation Design Review Charter
 
 Status:
 
 - complete
 - tagged as `phase-7.5-phase-7-no-code-kernel-runtime-charter-audit-archive-closeout`
+
+## Phase 8.0 - Implementation Design Review Charter
+
+Goal:
+
+Open Phase 8 as a no-code implementation design review lane and convert the Phase 7 charter into a precise future implementation design package without modifying runtime code.
+
+Deliverables:
+
+- `docs/PHASE_8_0_IMPLEMENTATION_DESIGN_REVIEW_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_8_0_implementation_design_review_charter.json`
+- `tests/test_phase_8_0_implementation_design_review_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 7.0 through Phase 7.5 reviewed as source context
+- narrowest future runtime slice named
+- future design package requirements listed
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 8.1 - Exact Runtime File-Touch Map
+
+Status:
+
+- complete
+- tagged as `phase-8.0-implementation-design-review-charter`
 
 Reserved from Phase 3.4:
 

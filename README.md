@@ -320,6 +320,8 @@ Phase 7.4 closes the no-code Phase 7 charter lane at an implementation decision 
 
 Phase 7.5 archives Phase 7 as a no-code kernel runtime charter lane. It confirms Phase 7.0 through Phase 7.4 added docs, fixtures, static tests, and roadmap/state updates only, while keeping Phase 5 runtime bridge work and all future runtime code gated pending explicit Phil approval.
 
+Phase 8.0 opens a no-code Implementation Design Review lane. It converts the Phase 7 charter into a design package for a future non-executing kernel intake-to-candidate coordinator, but does not approve runtime implementation or modify `lima/`, `tests/support/`, Sparkbot wiring, execution, approval enforcement, audit persistence, or physical-world behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
