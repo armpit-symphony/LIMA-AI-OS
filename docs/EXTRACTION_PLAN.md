@@ -3428,6 +3428,42 @@ After merge:
 
 Continue only to Phase 6.3 docs/tests/fixtures-only approval, audit, and memory boundary planning under the approved Phase 6 planning lane.
 
+## Phase 6.3 Gate: Approval / Audit / Memory Boundary Planning
+
+Phase 6.3 may plan approval, audit/spine, and memory boundaries as docs/tests/fixtures only.
+
+GO:
+
+- document descriptive approval states
+- document audit and spine lineage planning requirements
+- document memory reference constraints
+- keep GuardianDecision as future authority
+- keep IntentEnvelope candidates non-executable
+- keep HumanInput as intent context only
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- authorization
+- execution
+- audit persistence
+- memory reads or writes
+- spine ledger writes
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 6.4 docs/tests/fixtures-only roadmap gate / next-lane closeout under the approved Phase 6 planning lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

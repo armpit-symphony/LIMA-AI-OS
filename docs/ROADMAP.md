@@ -3283,6 +3283,51 @@ Status:
 - complete
 - tagged as `phase-6.2-intentenvelope-guardiandecision-lifecycle-boundary-map`
 
+## Phase 6.3 - Approval / Audit / Memory Boundary Planning
+
+Goal:
+
+Plan approval, audit/spine, and memory boundaries before any future runtime bridge implementation.
+
+Deliverables:
+
+- `docs/PHASE_6_3_APPROVAL_AUDIT_MEMORY_BOUNDARY_PLANNING.md`
+- `tests/fixtures/runtime_extraction/phase_6_3_approval_audit_memory_boundary_planning.json`
+- `tests/test_phase_6_3_approval_audit_memory_boundary_planning.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- approval states remain descriptive metadata only
+- approval references do not enforce, authorize, or open breakglass
+- audit/spine references remain lineage planning only
+- audit persistence and ledger writes remain blocked
+- memory references remain reference-only
+- memory reads, writes, embedding updates, and summary storage remain blocked
+- HumanInput remains intent context
+- IntentEnvelope candidates remain non-executable
+- GuardianDecision remains future authority
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no memory IO or spine ledger write
+- no physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout
+
+Status:
+
+- complete
+- tagged as `phase-6.3-approval-audit-memory-boundary-planning`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

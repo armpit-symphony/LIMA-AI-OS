@@ -2283,6 +2283,31 @@ Consequences:
 - approval, enforcement, execution, and audit persistence remain blocked
 - Phase 6.3 may continue only as docs/tests/fixtures-only approval, audit, and memory boundary planning
 
+## ADR-0129: Approval, Audit, And Memory References Are Planning Boundaries
+
+Status: Accepted
+
+Decision:
+
+Phase 6.3 plans approval, audit/spine, and memory boundaries as metadata only. Approval states remain descriptive, audit/spine fields remain lineage planning, and memory fields remain reference-only. None of these references enforce approval, authorize execution, persist audit, append a ledger, read memory, or write memory.
+
+Rationale:
+
+Future runtime bridge work needs approval, evidence, retention, redaction, audit, and memory boundaries before any live behavior can be considered. Planning those boundaries now prevents future candidate metadata from being mistaken for authority or persistence.
+
+Consequences:
+
+- Phase 6.3 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- approval enforcement remains blocked
+- audit persistence remains blocked
+- memory IO remains blocked
+- spine ledger writes remain blocked
+- execution and physical-world action remain blocked
+- Phase 6.4 may continue only as docs/tests/fixtures-only roadmap gate / next-lane closeout
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

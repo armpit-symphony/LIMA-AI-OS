@@ -105,7 +105,8 @@ Current expected sequence:
 - Phase 6.0 - Post-Phase-5 Roadmap Reorientation: complete/tagged.
 - Phase 6.1 - LIMA Kernel Lifecycle Planning: complete/tagged.
 - Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map: complete/tagged.
-- Phase 6.3 - Approval / Audit / Memory Boundary Planning: approved docs/tests/fixtures-only lane.
+- Phase 6.3 - Approval / Audit / Memory Boundary Planning: complete/tagged.
+- Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout: approved docs/tests/fixtures-only lane.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -209,7 +210,9 @@ Phase 6.1 is complete and tagged as docs/tests/fixtures-only LIMA Kernel Lifecyc
 
 Phase 6.2 is complete and tagged as docs/tests/fixtures-only IntentEnvelope and GuardianDecision Lifecycle Boundary Mapping. It keeps IntentEnvelope candidates non-executable and separates descriptive candidate metadata from future GuardianDecision authority without implementing runtime behavior.
 
-Phase 6.3 may continue as docs/tests/fixtures-only Approval / Audit / Memory Boundary Planning. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, or physical-world behavior remain blocked.
+Phase 6.3 is complete and tagged as docs/tests/fixtures-only Approval / Audit / Memory Boundary Planning. It keeps approval states descriptive, audit/spine metadata as lineage planning, and memory references reference-only without adding enforcement, persistence, memory IO, or runtime behavior.
+
+Phase 6.4 may continue as docs/tests/fixtures-only roadmap gate / next-lane closeout. Helper expansion, live runtime bridge, adapter work, IntentCompiler behavior, GuardianDecision behavior, approval/enforcement/execution, audit persistence, memory IO, or physical-world behavior remain blocked.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

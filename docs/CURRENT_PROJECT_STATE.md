@@ -96,19 +96,21 @@ Phase 6.1 LIMA Kernel Lifecycle Planning is complete, merged to `main`, and tagg
 
 Phase 6.2 IntentEnvelope and GuardianDecision Lifecycle Boundary Map is complete, merged to `main`, and tagged. It maps the non-executable IntentEnvelope candidate lifecycle and future GuardianDecision authority boundary without implementation.
 
+Phase 6.3 Approval / Audit / Memory Boundary Planning is complete, merged to `main`, and tagged. It maps descriptive approval, audit/spine lineage, and memory reference boundaries without implementation.
+
 Latest completed phase merge:
 
 `bb001217d458eaae5fb5c6067cf5884110d25a70`
 
 Latest tag:
 
-`phase-6.2-intentenvelope-guardiandecision-lifecycle-boundary-map`
+`phase-6.3-approval-audit-memory-boundary-planning`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue to Phase 6.3 only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
+Continue to Phase 6.4 only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -126,7 +128,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 6.3 - Approval / Audit / Memory Boundary Planning.
+Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout.
 
 ## Active Phase 4 Status
 
@@ -219,6 +221,8 @@ Phase 6.0 Post-Phase-5 Roadmap Reorientation is complete, merged to `main`, and 
 Phase 6.1 LIMA Kernel Lifecycle Planning is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 6.2 IntentEnvelope and GuardianDecision Lifecycle Boundary Map is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 6.3 Approval / Audit / Memory Boundary Planning is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, read or write memory, append a spine ledger, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
