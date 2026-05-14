@@ -116,7 +116,7 @@ Phase 7.5 Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout is com
 
 Latest completed phase merge:
 
-`pending-phase-7.5-merge-commit`
+`dd369913cbbb802724fd68a25d9b175ebb19c36b`
 
 Latest tag:
 
@@ -134,7 +134,7 @@ not selected
 
 Latest completed merge:
 
-`pending-phase-7.5-merge-commit`
+`dd369913cbbb802724fd68a25d9b175ebb19c36b`
 
 Recommended PR target:
 
