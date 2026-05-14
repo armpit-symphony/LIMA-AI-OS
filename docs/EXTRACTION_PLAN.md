@@ -3533,6 +3533,41 @@ After merge:
 
 Stop for explicit operator next-scope selection. No Phase 7, Sparkbot integration planning, Robo-OS planning, product-roadmap planning, runtime implementation, approval/enforcement/execution/audit, memory IO, or physical-world phase is approved by this archive.
 
+## Phase 7.0 Gate: Kernel Runtime Implementation Charter
+
+Phase 7.0 may open a no-code kernel runtime implementation charter lane as docs/tests/fixtures only.
+
+GO:
+
+- define the smallest future runtime implementation slice that could be considered later
+- keep the future slice non-executing and candidate-metadata-only
+- require typed explicit input
+- list preconditions before runtime code
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- model calls
+- network calls
+- file mutation
+- shell, browser, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 7.1 docs/tests/fixtures-only first runtime slice eligibility mapping under the approved Phase 7 no-code charter lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

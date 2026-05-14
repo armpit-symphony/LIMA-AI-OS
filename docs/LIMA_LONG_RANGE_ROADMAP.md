@@ -108,7 +108,8 @@ Current expected sequence:
 - Phase 6.3 - Approval / Audit / Memory Boundary Planning: complete/tagged.
 - Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout: complete/tagged.
 - Phase 6.5 - Phase 6 Roadmap Planning Lane Audit Archive / Closeout: complete/tagged.
-- Next phase: explicit operator next-scope decision required.
+- Phase 7.0 - Kernel Runtime Implementation Charter: complete/tagged.
+- Phase 7.1 - First Runtime Slice Eligibility Map: approved docs/tests/fixtures-only lane.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -217,6 +218,10 @@ Phase 6.3 is complete and tagged as docs/tests/fixtures-only Approval / Audit / 
 Phase 6.4 is complete and tagged as docs/tests/fixtures-only roadmap gate / next-lane closeout. It closes the current Phase 6 planning lane and requires explicit operator next-scope selection before any Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world work.
 
 Phase 6.5 is complete and tagged as docs/tests/fixtures-only Phase 6 Roadmap Planning Lane Audit Archive / Closeout. It archives Phase 6.0 through Phase 6.4 as roadmap/planning only and confirms Phase 5 runtime bridge work remains gated. Future runtime work requires new explicit Phil approval.
+
+Phase 7.0 is complete and tagged as a docs/tests/fixtures-only no-code Kernel Runtime Implementation Charter. It defines a possible future non-executing kernel intake-to-candidate coordinator but does not approve runtime implementation or modify `lima/`.
+
+Phase 7.1 may continue as docs/tests/fixtures-only first runtime slice eligibility mapping. Runtime behavior, `lima/` changes, helper behavior changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world behavior remain blocked.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

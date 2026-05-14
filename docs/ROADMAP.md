@@ -3410,6 +3410,48 @@ Status:
 - complete
 - tagged as `phase-6.5-phase-6-roadmap-planning-lane-audit-archive-closeout`
 
+## Phase 7.0 - Kernel Runtime Implementation Charter
+
+Goal:
+
+Open Phase 7 as a no-code kernel runtime implementation charter lane and define the smallest future runtime implementation slice that could be considered later.
+
+Deliverables:
+
+- `docs/PHASE_7_0_KERNEL_RUNTIME_IMPLEMENTATION_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_7_0_kernel_runtime_implementation_charter.json`
+- `tests/test_phase_7_0_kernel_runtime_implementation_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no-code charter only
+- smallest future runtime slice described but not approved for implementation
+- future slice accepts only typed explicit inputs
+- future slice produces non-executable candidate metadata only
+- future slice does not parse raw natural language
+- future slice does not execute, enforce approval, persist audit, call models, call network services, mutate files, wire Sparkbot, or touch physical-world drivers
+- preconditions before runtime code are listed
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 7.1 - First Runtime Slice Eligibility Map
+
+Status:
+
+- complete
+- tagged as `phase-7.0-kernel-runtime-implementation-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -308,6 +308,8 @@ Phase 6.4 closes the current broader LIMA OS roadmap planning lane with a docs/t
 
 Phase 6.5 archives Phase 6 as completed roadmap/planning work. It confirms Phase 6.0 through Phase 6.4 added docs, fixtures, static tests, and roadmap/state updates only, while keeping Phase 5 runtime bridge work and all future runtime lanes gated pending explicit Phil approval.
 
+Phase 7.0 opens a no-code Kernel Runtime Implementation Charter lane. It defines the smallest future runtime slice that could be considered later, but it does not approve runtime implementation or modify `lima/`, `tests/support/`, Sparkbot wiring, execution, approval enforcement, audit persistence, or physical-world behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
