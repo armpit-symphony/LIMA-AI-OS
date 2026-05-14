@@ -334,6 +334,8 @@ Phase 8.5 archives Phase 8 as no-code implementation design review work. It conf
 
 Phase 9.0 confirms the Phase 8.1 eligible runtime file-touch map before runtime implementation work begins. It is docs/tests/fixtures only and allows the lane to continue to Phase 9.1 acceptance test scaffolding without modifying `lima/`.
 
+Phase 9.1 scaffolds the acceptance-test obligations for the first Phase 9 runtime slice. It remains docs/tests/fixtures only and does not modify `lima/`; the next approved step is the narrow non-executing kernel intake-to-candidate coordinator implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

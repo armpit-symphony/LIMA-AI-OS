@@ -2639,6 +2639,27 @@ Consequences:
 - Phase 9.2 must touch only the Phase 8.1 eligible runtime files
 - any need for a forbidden file surface stops the lane for Phil approval
 
+## ADR-0145: Phase 9 Runtime Tests Precede Runtime Code
+
+Status: Accepted
+
+Decision:
+
+Phase 9.1 records the Phase 9.2 acceptance obligations before the first runtime slice is implemented. The obligations are machine-checkable and limited to non-executing candidate metadata behavior.
+
+Rationale:
+
+The first runtime slice must be constrained by tests before code is added. Acceptance scaffolding prevents the coordinator from expanding into a HumanInput bridge, IntentCompiler, GuardianDecision, approval engine, execution path, audit persistence path, live adapter, or Sparkbot integration.
+
+Consequences:
+
+- Phase 9.1 is docs/tests/fixtures only
+- no files under `lima/` are modified
+- no `tests/support/` files are modified
+- Phase 9.2 may implement only the narrow non-executing coordinator
+- candidate outputs must be non-executable, not approved, and side-effect-free
+- approval, execution, persistence, driver handoff, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

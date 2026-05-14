@@ -3989,6 +3989,37 @@ After merge:
 
 Continue only to Phase 9.1 acceptance test scaffolding under the approved narrow Phase 9 lane.
 
+## Phase 9.1 Gate: Runtime Slice Acceptance Test Scaffolding
+
+Phase 9.1 may scaffold the Phase 9.2 acceptance obligations as docs/tests/fixtures only.
+
+GO:
+
+- list required Phase 9.2 acceptance cases
+- list forbidden runtime interpretations
+- preserve the Phase 8.1 eligible file-touch scope
+- prove the scaffold itself adds no runtime behavior
+- add static fixtures and tests
+
+NO-GO:
+
+- files under `lima/`
+- `tests/support/` changes
+- runtime behavior
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 9.2 non-executing kernel intake-to-candidate coordinator implementation inside the Phase 8.1 eligible file list.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

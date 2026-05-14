@@ -128,27 +128,29 @@ Phase 8.5 Phase 8 No-Code Implementation Design Review Audit Archive / Closeout 
 
 Phase 9.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complete, merged to `main`, and tagged. It confirms the Phase 8.1 eligible runtime file-touch map is explicit enough for Phase 9.1 acceptance test scaffolding, while adding no runtime behavior and modifying no `lima/` files.
 
+Phase 9.1 Runtime Slice Acceptance Test Scaffolding is complete, merged to `main`, and tagged. It translates the Phase 8.2 acceptance-test design into concrete static scaffolding for Phase 9.2, while adding no runtime behavior and modifying no `lima/` files.
+
 Latest completed phase merge:
 
-`8dd81595ab9ffd503a36556551110fec6605066c`
+`4ce6c5842552adf99270813e3a74657301647855`
 
 Latest tag:
 
-`phase-9.0-runtime-slice-preflight-audit-eligible-file-confirmation`
+`phase-9.1-runtime-slice-acceptance-test-scaffolding`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only to Phase 9.1 Runtime Slice Acceptance Test Scaffolding under the approved narrow Phase 9 lane.
+Continue only to Phase 9.2 Non-executing Kernel Intake-to-Candidate Coordinator Implementation under the approved narrow Phase 9 lane.
 
 Recommended next branch:
 
-`phase-9-1-runtime-slice-acceptance-test-scaffolding`
+`phase-9-2-non-executing-kernel-intake-to-candidate-coordinator-implementation`
 
 Latest completed merge:
 
-`8dd81595ab9ffd503a36556551110fec6605066c`
+`4ce6c5842552adf99270813e3a74657301647855`
 
 Recommended PR target:
 

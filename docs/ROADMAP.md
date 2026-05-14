@@ -3943,6 +3943,44 @@ Status:
 - complete
 - tagged as `phase-9.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
+## Phase 9.1 - Runtime Slice Acceptance Test Scaffolding
+
+Goal:
+
+Convert the Phase 8.2 acceptance-test design into concrete Phase 9 scaffolding before the first runtime slice implementation.
+
+Deliverables:
+
+- `docs/PHASE_9_1_RUNTIME_SLICE_ACCEPTANCE_TEST_SCAFFOLDING.md`
+- `tests/fixtures/runtime_extraction/phase_9_1_runtime_slice_acceptance_test_scaffolding.json`
+- `tests/test_phase_9_1_runtime_slice_acceptance_test_scaffolding.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 9.2 acceptance cases listed
+- forbidden runtime interpretations listed
+- Phase 9.2 touch scope limited to Phase 8.1 eligible files
+- no files under `lima/`
+- no `tests/support/` changes
+- no runtime behavior
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 9.2 - Non-executing Kernel Intake-to-Candidate Coordinator Implementation
+
+Status:
+
+- complete
+- tagged as `phase-9.1-runtime-slice-acceptance-test-scaffolding`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
