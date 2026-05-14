@@ -2508,6 +2508,28 @@ Consequences:
 - the narrowest future runtime slice remains non-executing candidate metadata only
 - Phase 8.1 may continue only as docs/tests/fixtures-only exact file-touch mapping
 
+## ADR-0139: Runtime File-Touch Eligibility Is Exact And Future-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 8.1 defines the exact future file-touch map for a possible first runtime slice. Eligible files are future-only and may not be modified unless Phil explicitly approves runtime implementation later.
+
+Rationale:
+
+An exact file-touch map prevents a future narrow runtime slice from drifting into adapters, IO, persistence, services, shells, spine, Sparkbot wiring, or `tests/support/`.
+
+Consequences:
+
+- Phase 8.1 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- future implementation must stay inside the named eligible file set
+- any need to touch a forbidden surface stops the work for Phil approval
+- Phase 8.2 may continue only as docs/tests/fixtures-only acceptance test design
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
