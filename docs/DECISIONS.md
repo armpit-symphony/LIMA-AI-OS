@@ -2596,6 +2596,28 @@ Consequences:
 - Phase 9 is not approved by this closeout
 - future runtime implementation requires explicit Phil approval of the narrow non-executing coordinator scope
 
+## ADR-0143: Phase 8 Is Archived As No-Code Design Review Only
+
+Status: Accepted
+
+Decision:
+
+Phase 8.5 archives Phase 8.0 through Phase 8.4 as a completed no-code implementation design review lane. The archive preserves the exact Phase 9 approval question and records that no runtime implementation was approved.
+
+Rationale:
+
+Phase 8 produced the design charter, file-touch map, acceptance-test design, rollback/audit proof plan, and approval gate. Archiving the lane prevents the next phase from inheriting approval by implication.
+
+Consequences:
+
+- Phase 8.5 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- Phase 9 runtime implementation remains blocked
+- future runtime code requires explicit Phil approval of the preserved narrow question
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

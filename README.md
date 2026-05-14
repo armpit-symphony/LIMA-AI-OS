@@ -330,6 +330,8 @@ Phase 8.3 adds docs/tests/fixtures-only Rollback / Audit Proof Plan. It defines 
 
 Phase 8.4 closes the no-code Phase 8 implementation design review lane at a runtime implementation approval gate. It defines the exact future approval question for a narrow Phase 9 non-executing kernel intake-to-candidate coordinator and keeps runtime implementation blocked until Phil explicitly approves that scope.
 
+Phase 8.5 archives Phase 8 as no-code implementation design review work. It confirms Phase 8.0 through Phase 8.4 added docs, fixtures, static tests, and roadmap/state updates only, preserves the exact Phase 9 approval question, and keeps runtime code gated pending explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

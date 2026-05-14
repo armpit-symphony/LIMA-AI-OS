@@ -3918,6 +3918,46 @@ After merge:
 
 Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this closeout.
 
+After merge:
+
+Continue only to Phase 8.5 docs/tests/fixtures-only no-code implementation design review audit/archive closeout if explicitly approved by the operator.
+
+## Phase 8.5 Gate: Phase 8 No-Code Implementation Design Review Audit Archive / Closeout
+
+Phase 8.5 may archive Phase 8 as a completed no-code implementation design review lane as docs/tests/fixtures only.
+
+GO:
+
+- list Phase 8.0 through Phase 8.4 as complete
+- summarize what was added
+- summarize what was not added
+- archive Phase 8 as no-code design review only
+- keep Phase 5 runtime bridge gated
+- state future runtime code requires explicit Phil approval
+- preserve the exact Phase 9 approval question
+- document recommended next options
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this archive.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
