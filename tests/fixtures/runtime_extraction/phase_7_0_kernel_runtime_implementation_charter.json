@@ -1,0 +1,77 @@
+{
+  "phase": "7.0",
+  "status": "kernel_runtime_implementation_charter",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "no_code_charter_only": true,
+  "phase_document": "docs/PHASE_7_0_KERNEL_RUNTIME_IMPLEMENTATION_CHARTER.md",
+  "source_phase": "6.5",
+  "source_tag": "phase-6.5-phase-6-roadmap-planning-lane-audit-archive-closeout",
+  "source_merge_commit": "f257b8dda0254da97aa3a2d84f64d018ab75d0b8",
+  "latest_main_after_source_state_sync": "927ba97233aa179941d389f976109beb6f4f9b0d",
+  "future_smallest_runtime_slice": {
+    "name": "non_executing_kernel_intake_to_candidate_coordinator",
+    "approved_for_implementation_now": false,
+    "accepts_only_typed_explicit_inputs": true,
+    "produces_non_executable_candidate_metadata": true,
+    "parses_raw_natural_language": false,
+    "executes_tools": false,
+    "enforces_approval": false,
+    "persists_audit": false,
+    "calls_models": false,
+    "calls_network_services": false,
+    "mutates_files": false,
+    "wires_sparkbot": false,
+    "touches_physical_world_drivers": false
+  },
+  "future_runtime_slice_constraints": {
+    "candidate_metadata_cannot_authorize_itself": true,
+    "guardiandecision_future_authority_boundary": true,
+    "approval_state_descriptive_until_later_approved_enforcement_phase": true,
+    "audit_spine_memory_designed_before_persistence": true,
+    "sparkbot_reference_spec_until_future_integration_approval": true,
+    "robo_os_physical_world_behavior_blocked": true
+  },
+  "preconditions_before_runtime_code": [
+    "eligible_and_forbidden_files_mapped",
+    "tests_specified_before_implementation",
+    "rollback_expectations_defined",
+    "audit_proof_requirements_defined",
+    "allowed_input_output_shapes_defined",
+    "safety_gates_explicit",
+    "approval_boundaries_explicit",
+    "explicit_phil_runtime_scope_approval"
+  ],
+  "ready_for": [
+    "phase_7_1_docs_tests_fixtures_only_first_runtime_slice_eligibility_map"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_import_or_wiring",
+    "live_adapter_code",
+    "runtime_humaninput_to_intentenvelope_bridge",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}

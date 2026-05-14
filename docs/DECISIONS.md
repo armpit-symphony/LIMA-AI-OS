@@ -2355,6 +2355,28 @@ Consequences:
 - future runtime work requires new explicit Phil approval
 - the next step requires explicit operator scope selection
 
+## ADR-0132: Phase 7 Starts As A No-Code Runtime Charter
+
+Status: Accepted
+
+Decision:
+
+Phase 7.0 opens Phase 7 as a no-code kernel runtime implementation charter lane. The smallest future runtime slice that may be considered later is a non-executing kernel intake-to-candidate coordinator that accepts only typed explicit inputs and produces non-executable candidate metadata for Guardian review. Phase 7.0 does not approve implementation.
+
+Rationale:
+
+The repo needs a precise runtime charter before any `lima/` code can be touched. A no-code charter prevents planning language from turning into accidental runtime behavior.
+
+Consequences:
+
+- Phase 7.0 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- future runtime implementation still requires explicit Phil approval
+- Phase 7.1 may continue only as docs/tests/fixtures-only first runtime slice eligibility mapping
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

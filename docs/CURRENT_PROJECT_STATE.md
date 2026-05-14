@@ -102,19 +102,21 @@ Phase 6.4 Phase 6 Roadmap Gate / Next-Lane Closeout is complete, merged to `main
 
 Phase 6.5 Phase 6 Roadmap Planning Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 6.0 through Phase 6.4 as roadmap/planning only and confirms Phase 5 runtime bridge work remains gated.
 
+Phase 7.0 Kernel Runtime Implementation Charter is complete, merged to `main`, and tagged. It opens Phase 7 as a no-code runtime charter lane and defines the smallest future runtime slice without approving implementation.
+
 Latest completed phase merge:
 
 `f257b8dda0254da97aa3a2d84f64d018ab75d0b8`
 
 Latest tag:
 
-`phase-6.5-phase-6-roadmap-planning-lane-audit-archive-closeout`
+`phase-7.0-kernel-runtime-implementation-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator next-scope selection. No Phase 7, runtime bridge implementation, Sparkbot integration planning, Robo-OS planning, product-roadmap planning, approval/enforcement/execution/audit persistence, memory IO, or physical-world work is approved by Phase 6.5.
+Continue to Phase 7.1 only within the approved docs/tests/fixtures-only no-code Phase 7 charter lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -132,7 +134,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit operator next-scope decision.
+Phase 7.1 - First Runtime Slice Eligibility Map.
 
 ## Active Phase 4 Status
 
@@ -231,6 +233,8 @@ Phase 6.3 Approval / Audit / Memory Boundary Planning is complete, merged to `ma
 Phase 6.4 Phase 6 Roadmap Gate / Next-Lane Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, read or write memory, append a spine ledger, or perform physical-world action.
 
 Phase 6.5 Phase 6 Roadmap Planning Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 7.0 Kernel Runtime Implementation Charter is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
