@@ -108,7 +108,7 @@ Phase 7.1 First Runtime Slice Eligibility Map is complete, merged to `main`, and
 
 Latest completed phase merge:
 
-`999cc09034eef9eb335f38678af4daba3656dd09`
+`7f1545c0afccb3b2941faf2c2990f3dfc10261f6`
 
 Latest tag:
 
@@ -126,7 +126,7 @@ not selected
 
 Latest completed merge:
 
-`999cc09034eef9eb335f38678af4daba3656dd09`
+`7f1545c0afccb3b2941faf2c2990f3dfc10261f6`
 
 Recommended PR target:
 
