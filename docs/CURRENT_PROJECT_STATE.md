@@ -110,7 +110,7 @@ Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and
 
 Latest completed phase merge:
 
-`7f1545c0afccb3b2941faf2c2990f3dfc10261f6`
+`221e7fdd933f3b598a276a51aaac94adc6cb932a`
 
 Latest tag:
 
@@ -128,7 +128,7 @@ not selected
 
 Latest completed merge:
 
-`7f1545c0afccb3b2941faf2c2990f3dfc10261f6`
+`221e7fdd933f3b598a276a51aaac94adc6cb932a`
 
 Recommended PR target:
 
