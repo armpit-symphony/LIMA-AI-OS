@@ -2420,6 +2420,27 @@ Consequences:
 - approval enforcement, execution, audit persistence, and physical-world behavior remain blocked
 - Phase 7.3 may continue only as docs/tests/fixtures-only runtime implementation test planning
 
+## ADR-0135: Runtime Implementation Requires A Test Plan First
+
+Status: Accepted
+
+Decision:
+
+Phase 7.3 defines the future runtime implementation test plan before any runtime implementation can be approved. The plan requires import-boundary, typed-input, fail-closed, natural-language rejection, non-executable output, approval-bypass rejection, GuardianDecision non-creation, Sparkbot coupling rejection, side-effect rejection, and rollback review tests.
+
+Rationale:
+
+The first runtime slice must have its proof obligations defined before implementation. Tests come before code.
+
+Consequences:
+
+- Phase 7.3 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- runtime implementation remains blocked
+- Phase 7.4 may continue only as docs/tests/fixtures-only implementation decision gate / closeout
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

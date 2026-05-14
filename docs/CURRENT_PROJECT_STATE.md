@@ -108,19 +108,21 @@ Phase 7.1 First Runtime Slice Eligibility Map is complete, merged to `main`, and
 
 Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and tagged. It defines required tests, rollback expectations, audit proof, input/output constraints, and safety gates before any future runtime code can be approved.
 
+Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and tagged. It defines future test families, required negative tests, limited positive tests, and validation commands without implementing runtime behavior.
+
 Latest completed phase merge:
 
 `221e7fdd933f3b598a276a51aaac94adc6cb932a`
 
 Latest tag:
 
-`phase-7.2-kernel-runtime-safety-preconditions`
+`phase-7.3-runtime-implementation-test-plan`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue to Phase 7.3 only within the approved docs/tests/fixtures-only no-code Phase 7 charter lane if validation and self-audit remain clean.
+Continue to Phase 7.4 only within the approved docs/tests/fixtures-only no-code Phase 7 charter lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -138,7 +140,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 7.3 - Runtime Implementation Test Plan.
+Phase 7.4 - Phase 7 Implementation Decision Gate / Closeout.
 
 ## Active Phase 4 Status
 
@@ -243,6 +245,8 @@ Phase 7.0 Kernel Runtime Implementation Charter is complete, merged to `main`, a
 Phase 7.1 First Runtime Slice Eligibility Map is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 

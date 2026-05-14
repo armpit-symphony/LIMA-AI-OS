@@ -3539,6 +3539,49 @@ Status:
 - complete
 - tagged as `phase-7.2-kernel-runtime-safety-preconditions`
 
+## Phase 7.3 - Runtime Implementation Test Plan
+
+Goal:
+
+Define the test plan required before any future kernel runtime implementation can be approved.
+
+Deliverables:
+
+- `docs/PHASE_7_3_RUNTIME_IMPLEMENTATION_TEST_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_7_3_runtime_implementation_test_plan.json`
+- `tests/test_phase_7_3_runtime_implementation_test_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- future test families listed
+- required negative tests listed
+- positive tests limited to non-executable metadata behavior
+- validation commands listed
+- Sparkbot coupling rejection included
+- GuardianDecision non-creation included
+- approval bypass rejection included
+- side-effect rejection included
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 7.4 - Phase 7 Implementation Decision Gate / Closeout
+
+Status:
+
+- complete
+- tagged as `phase-7.3-runtime-implementation-test-plan`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
