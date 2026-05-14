@@ -2441,6 +2441,28 @@ Consequences:
 - runtime implementation remains blocked
 - Phase 7.4 may continue only as docs/tests/fixtures-only implementation decision gate / closeout
 
+## ADR-0136: Phase 7 Stops At An Implementation Decision Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 7.4 closes the no-code kernel runtime implementation charter lane at an implementation decision gate. Phase 7 defined a possible future non-executing kernel intake-to-candidate coordinator, file eligibility, safety preconditions, and test-plan obligations, but did not approve runtime implementation.
+
+Rationale:
+
+The repo has enough no-code planning to ask for a deliberate implementation decision without drifting into `lima/` changes.
+
+Consequences:
+
+- Phase 7.4 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- future runtime work requires explicit Phil approval
+- the next step requires explicit operator implementation decision
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

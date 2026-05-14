@@ -316,6 +316,8 @@ Phase 7.2 adds docs/tests/fixtures-only Kernel Runtime Safety Preconditions. It 
 
 Phase 7.3 adds a docs/tests/fixtures-only Runtime Implementation Test Plan. It defines future test families, required negative cases, limited positive cases, and validation commands without implementing runtime behavior.
 
+Phase 7.4 closes the no-code Phase 7 charter lane at an implementation decision gate. It keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world behavior blocked until Phil explicitly chooses the next step.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
