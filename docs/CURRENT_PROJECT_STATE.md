@@ -116,27 +116,29 @@ Phase 7.5 Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout is com
 
 Phase 8.0 Implementation Design Review Charter is complete, merged to `main`, and tagged. It opens Phase 8 as no-code implementation design review and identifies the narrowest future runtime slice without approving runtime implementation or modifying `lima/`.
 
+Phase 8.1 Exact Runtime File-Touch Map is complete, merged to `main`, and tagged. It maps future-eligible existing contract files, proposed new kernel files, and forbidden runtime surfaces without modifying `lima/` or approving runtime implementation.
+
 Latest completed phase merge:
 
-`b8f15f07b4e64f6c2ad6b76231516ee63cc4b749`
+`728eb8baf35ea80dacbe29dbe1d869f59c4aab12`
 
 Latest tag:
 
-`phase-8.0-implementation-design-review-charter`
+`phase-8.1-exact-runtime-file-touch-map`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.0.
+Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.1.
 
 Recommended next branch:
 
-phase-8-1-exact-runtime-file-touch-map
+phase-8-2-runtime-acceptance-test-design
 
 Latest completed merge:
 
-`b8f15f07b4e64f6c2ad6b76231516ee63cc4b749`
+`728eb8baf35ea80dacbe29dbe1d869f59c4aab12`
 
 Recommended PR target:
 
@@ -146,7 +148,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 8.1 - Exact Runtime File-Touch Map.
+Phase 8.2 - Runtime Acceptance Test Design.
 
 ## Active Phase 4 Status
 
