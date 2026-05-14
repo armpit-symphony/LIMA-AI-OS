@@ -3981,6 +3981,49 @@ Status:
 - complete
 - tagged as `phase-9.1-runtime-slice-acceptance-test-scaffolding`
 
+## Phase 9.2 - Non-executing Kernel Intake-to-Candidate Coordinator Implementation
+
+Goal:
+
+Implement the first narrow runtime slice as a pure in-process coordinator that produces non-executable candidate metadata from already-normalized synthetic intake metadata.
+
+Deliverables:
+
+- `lima/kernel/__init__.py`
+- `lima/kernel/intake_candidate.py`
+- `docs/PHASE_9_2_NON_EXECUTING_KERNEL_INTAKE_TO_CANDIDATE_COORDINATOR_IMPLEMENTATION.md`
+- `tests/fixtures/runtime_extraction/phase_9_2_non_executing_kernel_intake_to_candidate_coordinator_implementation.json`
+- `tests/test_phase_9_2_non_executing_kernel_intake_to_candidate_coordinator_implementation.py`
+
+Acceptance criteria:
+
+- only Phase 8.1 eligible runtime files touched
+- coordinator is pure and in-process
+- accepts only synthetic already-normalized intake metadata
+- candidate output is non-executable
+- `execution_allowed` is false
+- `side_effects_allowed` is false
+- `approval_state` is never approved
+- provenance is preserved
+- stale, replayed, malformed, raw, or unknown intake fails closed
+- no `tests/support/` changes
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 9.3 - Runtime Slice Readiness Review
+
+Status:
+
+- complete
+- tagged as `phase-9.2-non-executing-kernel-intake-to-candidate-coordinator-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

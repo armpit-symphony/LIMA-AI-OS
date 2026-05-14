@@ -4020,6 +4020,39 @@ After merge:
 
 Continue only to Phase 9.2 non-executing kernel intake-to-candidate coordinator implementation inside the Phase 8.1 eligible file list.
 
+## Phase 9.2 Gate: Non-executing Kernel Intake-to-Candidate Coordinator Implementation
+
+Phase 9.2 may implement the approved narrow runtime slice inside the Phase 8.1 eligible file list.
+
+GO:
+
+- add `lima/kernel/__init__.py`
+- add `lima/kernel/intake_candidate.py`
+- accept only synthetic already-normalized intake metadata
+- return non-executable candidate metadata
+- preserve provenance
+- fail closed for malformed, stale, replayed, raw, or unknown intake
+- prove no side effects or forbidden imports
+- add targeted tests, docs, and fixture
+
+NO-GO:
+
+- files outside the Phase 8.1 eligible runtime file list
+- `tests/support/` changes
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 9.3 runtime slice readiness review.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

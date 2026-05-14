@@ -2660,6 +2660,27 @@ Consequences:
 - candidate outputs must be non-executable, not approved, and side-effect-free
 - approval, execution, persistence, driver handoff, and physical-world behavior remain blocked
 
+## ADR-0146: The First Runtime Slice Is Candidate Metadata Only
+
+Status: Accepted
+
+Decision:
+
+Phase 9.2 implements a pure non-executing kernel intake-to-candidate coordinator under `lima/kernel/`. It accepts only synthetic already-normalized intake metadata and returns authority-free candidate metadata.
+
+Rationale:
+
+The smallest safe runtime step is not a bridge, compiler, Guardian decision, approval engine, or execution path. A candidate-metadata coordinator lets the kernel start forming safe internal metadata while keeping every consequential boundary behind future Guardian review.
+
+Consequences:
+
+- only `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py` are added as runtime files
+- no existing contract file changes are required
+- no HumanInput runtime bridge is added
+- no real IntentEnvelope or GuardianDecision behavior is added
+- approval enforcement, execution, audit persistence, Sparkbot wiring, live adapters, and side effects remain blocked
+- Phase 9.3 must review the slice before any further implementation
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

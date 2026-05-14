@@ -130,27 +130,29 @@ Phase 9.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complete
 
 Phase 9.1 Runtime Slice Acceptance Test Scaffolding is complete, merged to `main`, and tagged. It translates the Phase 8.2 acceptance-test design into concrete static scaffolding for Phase 9.2, while adding no runtime behavior and modifying no `lima/` files.
 
+Phase 9.2 Non-executing Kernel Intake-to-Candidate Coordinator Implementation is complete, merged to `main`, and tagged. It adds the first narrow runtime slice under `lima/kernel/`: a pure in-process coordinator that accepts only already-normalized synthetic intake metadata and returns non-executable candidate metadata. It does not implement HumanInput runtime bridge behavior, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, audit persistence, Sparkbot wiring, live adapters, or side effects.
+
 Latest completed phase merge:
 
-`4ce6c5842552adf99270813e3a74657301647855`
+`2acb7cbfba43e8b0fbd1b41eefcf6bf437002b54`
 
 Latest tag:
 
-`phase-9.1-runtime-slice-acceptance-test-scaffolding`
+`phase-9.2-non-executing-kernel-intake-to-candidate-coordinator-implementation`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only to Phase 9.2 Non-executing Kernel Intake-to-Candidate Coordinator Implementation under the approved narrow Phase 9 lane.
+Continue only to Phase 9.3 Runtime Slice Readiness Review under the approved narrow Phase 9 lane.
 
 Recommended next branch:
 
-`phase-9-2-non-executing-kernel-intake-to-candidate-coordinator-implementation`
+`phase-9-3-runtime-slice-readiness-review`
 
 Latest completed merge:
 
-`4ce6c5842552adf99270813e3a74657301647855`
+`2acb7cbfba43e8b0fbd1b41eefcf6bf437002b54`
 
 Recommended PR target:
 

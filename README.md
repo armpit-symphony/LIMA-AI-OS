@@ -336,6 +336,8 @@ Phase 9.0 confirms the Phase 8.1 eligible runtime file-touch map before runtime 
 
 Phase 9.1 scaffolds the acceptance-test obligations for the first Phase 9 runtime slice. It remains docs/tests/fixtures only and does not modify `lima/`; the next approved step is the narrow non-executing kernel intake-to-candidate coordinator implementation.
 
+Phase 9.2 adds that narrow coordinator under `lima/kernel/`. It is pure, in-process, non-executing, accepts only synthetic already-normalized intake metadata, and returns candidate metadata with execution, side effects, approval authority, IntentEnvelope creation, and GuardianDecision creation all disabled.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
