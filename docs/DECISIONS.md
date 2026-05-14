@@ -2552,6 +2552,28 @@ Consequences:
 - runtime implementation remains blocked
 - Phase 8.3 may continue only as docs/tests/fixtures-only rollback / audit proof planning
 
+## ADR-0141: Runtime Rollback And Audit Proof Must Be Planned Before Code
+
+Status: Accepted
+
+Decision:
+
+Phase 8.3 defines rollback and audit proof requirements before any future runtime implementation can be approved. Audit proof remains test evidence only until audit persistence is separately approved.
+
+Rationale:
+
+The first runtime slice must be independently revertible and prove non-executable candidate behavior without creating persistence or authority.
+
+Consequences:
+
+- Phase 8.3 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- future runtime code must be independently revertible
+- future audit proof cannot imply audit persistence
+- Phase 8.4 may continue only as docs/tests/fixtures-only runtime implementation approval gate / closeout
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
