@@ -304,7 +304,9 @@ Phase 6.2 adds docs/tests/fixtures-only IntentEnvelope and GuardianDecision Life
 
 Phase 6.3 adds docs/tests/fixtures-only Approval / Audit / Memory Boundary Planning. It keeps approval states descriptive, audit/spine metadata as lineage planning, and memory references reference-only without adding enforcement, persistence, memory IO, or runtime behavior.
 
-Phase 6.4 closes the current broader LIMA OS roadmap planning lane with a docs/tests/fixtures-only roadmap gate. It lists next-scope options and keeps Phase 6.5, Phase 7, runtime bridge implementation, `lima/` changes, helper behavior changes, Sparkbot wiring, execution, approval enforcement, audit persistence, memory IO, and physical-world action blocked until Phil explicitly selects a new scope.
+Phase 6.4 closes the current broader LIMA OS roadmap planning lane with a docs/tests/fixtures-only roadmap gate. It lists next-scope options and keeps Phase 7, runtime bridge implementation, `lima/` changes, helper behavior changes, Sparkbot wiring, execution, approval enforcement, audit persistence, memory IO, and physical-world action blocked until Phil explicitly selects a new scope.
+
+Phase 6.5 archives Phase 6 as completed roadmap/planning work. It confirms Phase 6.0 through Phase 6.4 added docs, fixtures, static tests, and roadmap/state updates only, while keeping Phase 5 runtime bridge work and all future runtime lanes gated pending explicit Phil approval.
 
 ## Runtime Shape
 

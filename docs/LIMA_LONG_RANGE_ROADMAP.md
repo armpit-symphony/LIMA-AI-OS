@@ -107,6 +107,7 @@ Current expected sequence:
 - Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map: complete/tagged.
 - Phase 6.3 - Approval / Audit / Memory Boundary Planning: complete/tagged.
 - Phase 6.4 - Phase 6 Roadmap Gate / Next-Lane Closeout: complete/tagged.
+- Phase 6.5 - Phase 6 Roadmap Planning Lane Audit Archive / Closeout: complete/tagged.
 - Next phase: explicit operator next-scope decision required.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
@@ -213,7 +214,9 @@ Phase 6.2 is complete and tagged as docs/tests/fixtures-only IntentEnvelope and 
 
 Phase 6.3 is complete and tagged as docs/tests/fixtures-only Approval / Audit / Memory Boundary Planning. It keeps approval states descriptive, audit/spine metadata as lineage planning, and memory references reference-only without adding enforcement, persistence, memory IO, or runtime behavior.
 
-Phase 6.4 is complete and tagged as docs/tests/fixtures-only roadmap gate / next-lane closeout. It closes the current Phase 6 planning lane and requires explicit operator next-scope selection before any Phase 6.5, Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world work.
+Phase 6.4 is complete and tagged as docs/tests/fixtures-only roadmap gate / next-lane closeout. It closes the current Phase 6 planning lane and requires explicit operator next-scope selection before any Phase 7, runtime bridge, Sparkbot integration, Robo-OS integration, approval/enforcement/execution/audit, memory IO, or physical-world work.
+
+Phase 6.5 is complete and tagged as docs/tests/fixtures-only Phase 6 Roadmap Planning Lane Audit Archive / Closeout. It archives Phase 6.0 through Phase 6.4 as roadmap/planning only and confirms Phase 5 runtime bridge work remains gated. Future runtime work requires new explicit Phil approval.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

@@ -3369,6 +3369,47 @@ Status:
 - complete
 - tagged as `phase-6.4-phase-6-roadmap-gate-next-lane-closeout`
 
+## Phase 6.5 - Phase 6 Roadmap Planning Lane Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 6 as a completed roadmap/planning lane and create a clean decision point before any future runtime, Sparkbot, Robo-OS, or product-roadmap lane.
+
+Deliverables:
+
+- `docs/PHASE_6_5_PHASE_6_ROADMAP_PLANNING_LANE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_6_5_phase_6_roadmap_planning_lane_audit_archive_closeout.json`
+- `tests/test_phase_6_5_phase_6_roadmap_planning_lane_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 6.0 through Phase 6.4 listed as complete
+- Phase 6 archived as roadmap/planning only
+- Phase 5 runtime bridge remains gated
+- docs, fixtures, static tests, and roadmap/state updates listed as the only added artifact categories
+- no runtime behavior
+- no `lima/` runtime changes
+- no `tests/support/` changes
+- no helper behavior changes
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- next options documented and require explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-6.5-phase-6-roadmap-planning-lane-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
