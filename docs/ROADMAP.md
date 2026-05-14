@@ -3241,6 +3241,48 @@ Status:
 - complete
 - tagged as `phase-6.1-lima-kernel-lifecycle-planning`
 
+## Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map
+
+Goal:
+
+Map the lifecycle boundary between non-executable IntentEnvelope candidate metadata and future GuardianDecision authority before any runtime implementation.
+
+Deliverables:
+
+- `docs/PHASE_6_2_INTENTENVELOPE_GUARDIANDECISION_LIFECYCLE_BOUNDARY_MAP.md`
+- `tests/fixtures/runtime_extraction/phase_6_2_intentenvelope_guardiandecision_lifecycle_boundary_map.json`
+- `tests/test_phase_6_2_intentenvelope_guardiandecision_lifecycle_boundary_map.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- IntentEnvelope candidates remain non-executable
+- IntentEnvelope candidates are not commands, approvals, authorization, execution, or audit persistence
+- GuardianDecision remains future authority and is not implemented
+- approval state metadata remains descriptive only
+- audit/spine/memory references remain lineage planning only
+- driver/tool handoff remains blocked
+- operator/admin/Phil/trusted wording does not bypass approval
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 6.3 - Approval / Audit / Memory Boundary Planning
+
+Status:
+
+- complete
+- tagged as `phase-6.2-intentenvelope-guardiandecision-lifecycle-boundary-map`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

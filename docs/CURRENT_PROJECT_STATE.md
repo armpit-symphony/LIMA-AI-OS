@@ -94,19 +94,21 @@ Phase 6.0 Post-Phase-5 Roadmap Reorientation is complete, merged to `main`, and 
 
 Phase 6.1 LIMA Kernel Lifecycle Planning is complete, merged to `main`, and tagged. It maps the kernel lifecycle without implementation.
 
+Phase 6.2 IntentEnvelope and GuardianDecision Lifecycle Boundary Map is complete, merged to `main`, and tagged. It maps the non-executable IntentEnvelope candidate lifecycle and future GuardianDecision authority boundary without implementation.
+
 Latest completed phase merge:
 
 `83d847b2cbe819bf49d313412366b92b2db74040`
 
 Latest tag:
 
-`phase-6.1-lima-kernel-lifecycle-planning`
+`phase-6.2-intentenvelope-guardiandecision-lifecycle-boundary-map`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue to Phase 6.2 only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
+Continue to Phase 6.3 only within the approved docs/tests/fixtures-only Phase 6 planning lane if validation and self-audit remain clean.
 
 Recommended next branch:
 
@@ -124,7 +126,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 6.2 - IntentEnvelope and GuardianDecision Lifecycle Boundary Map.
+Phase 6.3 - Approval / Audit / Memory Boundary Planning.
 
 ## Active Phase 4 Status
 
@@ -215,6 +217,8 @@ No next phase is approved. Future runtime work requires new explicit Phil approv
 Phase 6.0 Post-Phase-5 Roadmap Reorientation is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 6.1 LIMA Kernel Lifecycle Planning is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 6.2 IntentEnvelope and GuardianDecision Lifecycle Boundary Map is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 

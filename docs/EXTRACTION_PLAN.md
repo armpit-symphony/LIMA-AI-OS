@@ -3394,6 +3394,40 @@ After merge:
 
 Continue only to Phase 6.2 docs/tests/fixtures-only lifecycle boundary map work under the approved Phase 6 planning lane.
 
+## Phase 6.2 Gate: IntentEnvelope and GuardianDecision Lifecycle Boundary Map
+
+Phase 6.2 may map IntentEnvelope candidate and GuardianDecision lifecycle boundaries as docs/tests/fixtures only.
+
+GO:
+
+- document IntentEnvelope candidate lifecycle metadata
+- document GuardianDecision future authority lifecycle metadata
+- keep HumanInput as intent context only
+- keep IntentEnvelope candidates non-executable
+- keep approval state descriptive only
+- keep audit/spine/memory references as lineage planning only
+- keep driver/tool handoff blocked
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 6.3 docs/tests/fixtures-only approval, audit, and memory boundary planning under the approved Phase 6 planning lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

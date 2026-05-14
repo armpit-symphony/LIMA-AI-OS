@@ -300,6 +300,8 @@ Phase 6.0 starts broader LIMA OS roadmap planning as docs/tests/fixtures only. I
 
 Phase 6.1 adds docs/tests/fixtures-only LIMA Kernel Lifecycle Planning. It maps shell intake, boundary normalization, IntentEnvelope candidate formation, Guardian review, GuardianDecision record, spine/audit/memory handoff, and blocked driver handoff without implementing runtime behavior.
 
+Phase 6.2 adds docs/tests/fixtures-only IntentEnvelope and GuardianDecision Lifecycle Boundary Mapping. It keeps IntentEnvelope candidates non-executable and separates descriptive candidate metadata from future GuardianDecision authority without implementing runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
