@@ -128,7 +128,7 @@ Phase 8.5 Phase 8 No-Code Implementation Design Review Audit Archive / Closeout 
 
 Latest completed phase merge:
 
-`pending-phase-8.5-merge-commit`
+`1561c71428e80294d4c02c57d290344f9ae3caf6`
 
 Latest tag:
 
@@ -146,7 +146,7 @@ not selected
 
 Latest completed merge:
 
-`pending-phase-8.5-merge-commit`
+`1561c71428e80294d4c02c57d290344f9ae3caf6`
 
 Recommended PR target:
 
