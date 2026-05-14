@@ -106,7 +106,7 @@ Phase 7.0 Kernel Runtime Implementation Charter is complete, merged to `main`, a
 
 Latest completed phase merge:
 
-`f257b8dda0254da97aa3a2d84f64d018ab75d0b8`
+`999cc09034eef9eb335f38678af4daba3656dd09`
 
 Latest tag:
 
@@ -124,7 +124,7 @@ not selected
 
 Latest completed merge:
 
-`f257b8dda0254da97aa3a2d84f64d018ab75d0b8`
+`999cc09034eef9eb335f38678af4daba3656dd09`
 
 Recommended PR target:
 
