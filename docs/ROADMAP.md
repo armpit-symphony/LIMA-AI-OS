@@ -3613,12 +3613,52 @@ Acceptance criteria:
 
 Next likely phase:
 
-- explicit operator implementation decision
+- Phase 7.5 - Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout
 
 Status:
 
 - complete
 - tagged as `phase-7.4-phase-7-implementation-decision-gate-closeout`
+
+## Phase 7.5 - Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 7 as a completed no-code kernel runtime implementation charter lane and create a clean decision point before any Phase 8 implementation design review or future runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_7_5_PHASE_7_NO_CODE_KERNEL_RUNTIME_CHARTER_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_7_5_phase_7_no_code_kernel_runtime_charter_audit_archive_closeout.json`
+- `tests/test_phase_7_5_phase_7_no_code_kernel_runtime_charter_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 7.0 through Phase 7.4 listed as complete
+- Phase 7 archived as no-code charter/planning only
+- no runtime implementation approved
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- next options documented and require explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-7.5-phase-7-no-code-kernel-runtime-charter-audit-archive-closeout`
 
 Reserved from Phase 3.4:
 

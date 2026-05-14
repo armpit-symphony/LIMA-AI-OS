@@ -113,6 +113,7 @@ Current expected sequence:
 - Phase 7.2 - Kernel Runtime Safety Preconditions: complete/tagged.
 - Phase 7.3 - Runtime Implementation Test Plan: complete/tagged.
 - Phase 7.4 - Phase 7 Implementation Decision Gate / Closeout: complete/tagged.
+- Phase 7.5 - Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout: complete/tagged.
 - Next phase: explicit operator implementation decision required.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
@@ -232,6 +233,8 @@ Phase 7.2 is complete and tagged as docs/tests/fixtures-only Kernel Runtime Safe
 Phase 7.3 is complete and tagged as docs/tests/fixtures-only Runtime Implementation Test Plan. It defines future test families, required negative cases, limited positive cases, and validation commands without implementing runtime behavior.
 
 Phase 7.4 is complete and tagged as docs/tests/fixtures-only Phase 7 Implementation Decision Gate / Closeout. It closes the no-code charter lane and requires explicit operator decision before any Phase 8, runtime implementation, `lima/` changes, helper behavior changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, or physical-world behavior.
+
+Phase 7.5 is complete and tagged as docs/tests/fixtures-only Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout. It archives Phase 7.0 through Phase 7.4 as no-code charter/planning work, confirms no runtime implementation was approved, and keeps Phase 5 runtime bridge work gated pending explicit operator next-scope approval.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

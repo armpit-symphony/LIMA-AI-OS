@@ -318,6 +318,8 @@ Phase 7.3 adds a docs/tests/fixtures-only Runtime Implementation Test Plan. It d
 
 Phase 7.4 closes the no-code Phase 7 charter lane at an implementation decision gate. It keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, live adapters, execution, approval enforcement, audit persistence, and physical-world behavior blocked until Phil explicitly chooses the next step.
 
+Phase 7.5 archives Phase 7 as a no-code kernel runtime charter lane. It confirms Phase 7.0 through Phase 7.4 added docs, fixtures, static tests, and roadmap/state updates only, while keeping Phase 5 runtime bridge work and all future runtime code gated pending explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

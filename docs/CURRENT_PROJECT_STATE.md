@@ -112,19 +112,21 @@ Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and ta
 
 Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to `main`, and tagged. It closes the no-code Phase 7 charter lane and requires explicit operator decision before any runtime code.
 
+Phase 7.5 Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 7.0 through Phase 7.4 as no-code charter/planning work and requires explicit operator next-scope decision before any Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior.
+
 Latest completed phase merge:
 
-`a5993bde187170c94297c2379334c656ce9425a9`
+`pending-phase-7.5-merge-commit`
 
 Latest tag:
 
-`phase-7.4-phase-7-implementation-decision-gate-closeout`
+`phase-7.5-phase-7-no-code-kernel-runtime-charter-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator implementation decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 7.4.
+Stop for explicit operator next-scope decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 7.5.
 
 Recommended next branch:
 
@@ -132,7 +134,7 @@ not selected
 
 Latest completed merge:
 
-`a5993bde187170c94297c2379334c656ce9425a9`
+`pending-phase-7.5-merge-commit`
 
 Recommended PR target:
 
@@ -251,6 +253,8 @@ Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and
 Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 7.5 Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 

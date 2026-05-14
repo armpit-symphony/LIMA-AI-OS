@@ -3710,6 +3710,45 @@ After merge:
 
 Stop for explicit operator implementation decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this closeout.
 
+After merge:
+
+Continue only to Phase 7.5 docs/tests/fixtures-only no-code charter audit/archive closeout if explicitly approved by the operator.
+
+## Phase 7.5 Gate: Phase 7 No-Code Kernel Runtime Charter Audit Archive / Closeout
+
+Phase 7.5 may archive Phase 7 as a completed no-code charter lane as docs/tests/fixtures only.
+
+GO:
+
+- list Phase 7.0 through Phase 7.4 as complete
+- summarize what was added
+- summarize what was not added
+- archive Phase 7 as no-code charter/planning only
+- keep Phase 5 runtime bridge gated
+- state future runtime code requires explicit Phil approval
+- document recommended next options
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator next-scope selection. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this archive.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
