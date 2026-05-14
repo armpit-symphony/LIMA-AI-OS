@@ -302,6 +302,8 @@ Phase 6.1 adds docs/tests/fixtures-only LIMA Kernel Lifecycle Planning. It maps 
 
 Phase 6.2 adds docs/tests/fixtures-only IntentEnvelope and GuardianDecision Lifecycle Boundary Mapping. It keeps IntentEnvelope candidates non-executable and separates descriptive candidate metadata from future GuardianDecision authority without implementing runtime behavior.
 
+Phase 6.3 adds docs/tests/fixtures-only Approval / Audit / Memory Boundary Planning. It keeps approval states descriptive, audit/spine metadata as lineage planning, and memory references reference-only without adding enforcement, persistence, memory IO, or runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
