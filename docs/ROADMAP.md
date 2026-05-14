@@ -3496,6 +3496,49 @@ Status:
 - complete
 - tagged as `phase-7.1-first-runtime-slice-eligibility-map`
 
+## Phase 7.2 - Kernel Runtime Safety Preconditions
+
+Goal:
+
+Define the safety preconditions that must be satisfied before any future kernel runtime implementation can be approved.
+
+Deliverables:
+
+- `docs/PHASE_7_2_KERNEL_RUNTIME_SAFETY_PRECONDITIONS.md`
+- `tests/fixtures/runtime_extraction/phase_7_2_kernel_runtime_safety_preconditions.json`
+- `tests/test_phase_7_2_kernel_runtime_safety_preconditions.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- required test preconditions listed
+- rollback expectations listed
+- audit proof requirements listed
+- input/output shape constraints listed
+- safety gate preconditions listed
+- Phase 5 runtime bridge gate remains active
+- future candidate outputs remain non-executable
+- future output must not include approval, execution, driver handoff, or persistence authority
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 7.3 - Runtime Implementation Test Plan
+
+Status:
+
+- complete
+- tagged as `phase-7.2-kernel-runtime-safety-preconditions`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

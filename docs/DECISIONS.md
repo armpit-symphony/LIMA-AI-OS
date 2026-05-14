@@ -2398,6 +2398,28 @@ Consequences:
 - eligibility does not approve runtime implementation
 - Phase 7.2 may continue only as docs/tests/fixtures-only kernel runtime safety preconditions
 
+## ADR-0134: Runtime Preconditions Must Exist Before Runtime Code
+
+Status: Accepted
+
+Decision:
+
+Phase 7.2 defines required tests, rollback expectations, audit proof requirements, input/output shape constraints, and safety gates before any future runtime implementation can be approved. These preconditions remain planning metadata only and do not approve code.
+
+Rationale:
+
+The first runtime slice must be reversible, tested, non-executing, and bounded before any `lima/` file is changed.
+
+Consequences:
+
+- Phase 7.2 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- future candidate output must remain non-executable
+- approval enforcement, execution, audit persistence, and physical-world behavior remain blocked
+- Phase 7.3 may continue only as docs/tests/fixtures-only runtime implementation test planning
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
