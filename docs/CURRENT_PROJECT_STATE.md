@@ -118,27 +118,29 @@ Phase 8.0 Implementation Design Review Charter is complete, merged to `main`, an
 
 Phase 8.1 Exact Runtime File-Touch Map is complete, merged to `main`, and tagged. It maps future-eligible existing contract files, proposed new kernel files, and forbidden runtime surfaces without modifying `lima/` or approving runtime implementation.
 
+Phase 8.2 Runtime Acceptance Test Design is complete, merged to `main`, and tagged. It defines future required test families, negative cases, limited positive cases, and validation expectations before any runtime implementation can be approved.
+
 Latest completed phase merge:
 
-`728eb8baf35ea80dacbe29dbe1d869f59c4aab12`
+`2504c168b4dc19e45e3eace734a85bc3b44201eb`
 
 Latest tag:
 
-`phase-8.1-exact-runtime-file-touch-map`
+`phase-8.2-runtime-acceptance-test-design`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.1.
+Continue only through the approved Phase 8 docs/tests/fixtures-only implementation design review lane. No runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.2.
 
 Recommended next branch:
 
-phase-8-2-runtime-acceptance-test-design
+phase-8-3-rollback-audit-proof-plan
 
 Latest completed merge:
 
-`728eb8baf35ea80dacbe29dbe1d869f59c4aab12`
+`2504c168b4dc19e45e3eace734a85bc3b44201eb`
 
 Recommended PR target:
 
@@ -148,7 +150,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 8.2 - Runtime Acceptance Test Design.
+Phase 8.3 - Rollback / Audit Proof Plan.
 
 ## Active Phase 4 Status
 
