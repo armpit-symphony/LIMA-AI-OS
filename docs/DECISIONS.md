@@ -2259,6 +2259,30 @@ Consequences:
 - live/runtime behavior remains blocked
 - Phase 6.2 may continue only as docs/tests/fixtures-only IntentEnvelope and GuardianDecision lifecycle boundary mapping
 
+## ADR-0128: IntentEnvelope Candidates Are Not Guardian Decisions
+
+Status: Accepted
+
+Decision:
+
+Phase 6.2 maps IntentEnvelope candidate and GuardianDecision lifecycle boundaries as planning metadata only. IntentEnvelope candidates may carry provenance, risk, confidence, approval-state, and review-readiness metadata, but they are not commands, authorization, approval, execution, audit persistence, or driver readiness. GuardianDecision remains the future authority boundary and is not implemented in this phase.
+
+Rationale:
+
+The kernel needs a clear boundary between intent candidate metadata and approval authority before any future runtime bridge or compiler path can be considered.
+
+Consequences:
+
+- Phase 6.2 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- live/runtime behavior remains blocked
+- real IntentCompiler behavior remains blocked
+- real GuardianDecision behavior remains blocked
+- approval, enforcement, execution, and audit persistence remain blocked
+- Phase 6.3 may continue only as docs/tests/fixtures-only approval, audit, and memory boundary planning
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

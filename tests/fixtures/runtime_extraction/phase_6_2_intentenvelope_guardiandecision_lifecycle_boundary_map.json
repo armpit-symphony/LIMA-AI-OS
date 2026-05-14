@@ -1,0 +1,72 @@
+{
+  "phase": "6.2",
+  "status": "intentenvelope_guardiandecision_lifecycle_boundary_map",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "lifecycle_boundary_map_only": true,
+  "phase_document": "docs/PHASE_6_2_INTENTENVELOPE_GUARDIANDECISION_LIFECYCLE_BOUNDARY_MAP.md",
+  "source_phase": "6.1",
+  "source_tag": "phase-6.1-lima-kernel-lifecycle-planning",
+  "source_merge_commit": "83d847b2cbe819bf49d313412366b92b2db74040",
+  "latest_main_after_source_state_sync": "f41462b7d2d685adccddaa7baebe29383b86b74d",
+  "intentenvelope_candidate_lifecycle": [
+    "humaninput_context_referenced",
+    "candidate_metadata_drafted",
+    "provenance_lineage_attached",
+    "risk_confidence_metadata_proposed",
+    "approval_state_described",
+    "guardian_review_readiness_recorded",
+    "compile_dispatch_execution_persistence_blocked"
+  ],
+  "guardiandecision_lifecycle": [
+    "review_request_metadata_prepared",
+    "policy_risk_trust_context_referenced",
+    "decision_states_described",
+    "approval_semantics_reserved_for_future_authority",
+    "enforcement_execution_driver_handoff_audit_persistence_blocked"
+  ],
+  "boundary_rules": {
+    "humaninput_is_intent_context_not_execution_permission": true,
+    "intentenvelope_candidate_not_command": true,
+    "intentenvelope_candidate_not_authorization": true,
+    "intentenvelope_candidate_not_approval": true,
+    "intentenvelope_candidate_not_execution": true,
+    "intentenvelope_candidate_not_audit_persistence": true,
+    "guardiandecision_future_authority_not_implemented": true,
+    "approval_state_metadata_descriptive_only": true,
+    "audit_spine_memory_refs_lineage_planning_only": true,
+    "driver_tool_handoff_blocked_until_future_guardian_decision": true,
+    "operator_admin_phil_trusted_wording_never_bypasses_approval": true
+  },
+  "ready_for": [
+    "phase_6_3_docs_tests_fixtures_only_approval_audit_memory_boundary_planning"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "runtime_bridge_implementation",
+    "live_adapter_code",
+    "sparkbot_import_or_wiring",
+    "real_intentcompiler",
+    "real_guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "driver_tool_handoff",
+    "physical_world_action"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
