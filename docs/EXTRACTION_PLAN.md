@@ -4083,6 +4083,38 @@ After merge:
 
 Continue only to Phase 9.4 runtime slice audit/archive closeout.
 
+## Phase 9.4 Gate: Phase 9 Runtime Slice Audit Archive / Closeout
+
+Phase 9.4 may archive the Phase 9 runtime slice lane as docs/tests/fixtures only.
+
+GO:
+
+- list Phase 9.0 through Phase 9.3 as complete
+- archive the Phase 9 runtime slice as non-executing candidate metadata only
+- list the exact Phase 8.1 eligible runtime files touched
+- document what was not added
+- document next options requiring explicit Phil approval
+- add static fixture and tests
+
+NO-GO:
+
+- runtime code changes
+- files under `lima/`
+- `tests/support/` changes
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator next-scope decision. No Phase 10 or runtime expansion is approved by this closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

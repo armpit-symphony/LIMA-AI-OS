@@ -134,27 +134,29 @@ Phase 9.2 Non-executing Kernel Intake-to-Candidate Coordinator Implementation is
 
 Phase 9.3 Runtime Slice Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 9.2 coordinator as ready only for Phase 9.4 audit/archive closeout or further non-runtime review, not for runtime expansion.
 
+Phase 9.4 Phase 9 Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 9.0 through Phase 9.3, preserves the narrow Phase 9 runtime slice as non-executing candidate metadata only, and stops before Phase 10 or any runtime expansion.
+
 Latest completed phase merge:
 
-`ec7fcb32b67f4f3303fe598713eca1a57fa248ac`
+`c9b3ebfc468e9c969aaa1db7cee280a8e046498a`
 
 Latest tag:
 
-`phase-9.3-runtime-slice-readiness-review`
+`phase-9.4-phase-9-runtime-slice-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only to Phase 9.4 Runtime Slice Audit Archive / Closeout under the approved narrow Phase 9 lane.
+Stop for explicit operator next-scope decision. No Phase 10, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 9.4.
 
 Recommended next branch:
 
-`phase-9-4-phase-9-runtime-slice-audit-archive-closeout`
+not selected
 
 Latest completed merge:
 
-`ec7fcb32b67f4f3303fe598713eca1a57fa248ac`
+`c9b3ebfc468e9c969aaa1db7cee280a8e046498a`
 
 Recommended PR target:
 

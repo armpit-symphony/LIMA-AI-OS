@@ -4063,6 +4063,45 @@ Status:
 - complete
 - tagged as `phase-9.3-runtime-slice-readiness-review`
 
+## Phase 9.4 - Phase 9 Runtime Slice Audit Archive / Closeout
+
+Goal:
+
+Archive the Phase 9 first runtime slice lane and stop at a clean next-scope decision gate.
+
+Deliverables:
+
+- `docs/PHASE_9_4_PHASE_9_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_9_4_phase_9_runtime_slice_audit_archive_closeout.json`
+- `tests/test_phase_9_4_phase_9_runtime_slice_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime code changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 9.0 through Phase 9.3 listed as complete
+- Phase 9 runtime slice archived as pure in-process non-executing candidate metadata coordinator
+- only Phase 8.1 eligible runtime files touched in Phase 9
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- next options require explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-9.4-phase-9-runtime-slice-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

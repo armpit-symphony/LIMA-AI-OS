@@ -340,6 +340,8 @@ Phase 9.2 adds that narrow coordinator under `lima/kernel/`. It is pure, in-proc
 
 Phase 9.3 reviews the coordinator as ready only for Phase 9.4 audit/archive closeout or further non-runtime review. It does not approve runtime expansion.
 
+Phase 9.4 archives Phase 9 as the first narrow runtime slice lane. The only runtime files added in Phase 9 are `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py`; the slice remains non-executing candidate metadata only and Phase 10 requires explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

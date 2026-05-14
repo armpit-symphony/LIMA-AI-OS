@@ -2702,6 +2702,27 @@ Consequences:
 - Phase 9.4 may archive the lane
 - Phase 10, runtime expansion, HumanInput bridge behavior, Sparkbot wiring, approval enforcement, execution, audit persistence, and physical-world behavior remain unapproved
 
+## ADR-0148: Phase 9 Archives The First Runtime Slice At A New Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 9.4 archives Phase 9.0 through Phase 9.3 as the first narrow runtime slice lane. The only runtime files added are `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py`.
+
+Rationale:
+
+The approved Phase 9 scope was to implement one non-executing intake-to-candidate coordinator and stop. Archiving the lane prevents the new runtime foothold from expanding into bridge behavior, execution, approval enforcement, audit persistence, Sparkbot coupling, or physical-world action without a new explicit decision.
+
+Consequences:
+
+- Phase 9 is complete
+- Phase 9.4 is docs/tests/fixtures only
+- the Phase 9 runtime slice remains non-executing and authority-free
+- Phase 10 requires explicit Phil approval
+- HumanInput runtime bridge behavior remains gated
+- Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
