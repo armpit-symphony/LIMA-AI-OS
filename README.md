@@ -314,6 +314,8 @@ Phase 7.1 adds a docs/tests/fixtures-only First Runtime Slice Eligibility Map. I
 
 Phase 7.2 adds docs/tests/fixtures-only Kernel Runtime Safety Preconditions. It defines required tests, rollback expectations, audit proof, input/output shape constraints, and safety gates that must be satisfied before any future runtime code can be approved.
 
+Phase 7.3 adds a docs/tests/fixtures-only Runtime Implementation Test Plan. It defines future test families, required negative cases, limited positive cases, and validation commands without implementing runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

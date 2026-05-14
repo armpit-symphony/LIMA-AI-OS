@@ -3639,6 +3639,41 @@ After merge:
 
 Continue only to Phase 7.3 docs/tests/fixtures-only runtime implementation test planning under the approved Phase 7 no-code charter lane.
 
+## Phase 7.3 Gate: Runtime Implementation Test Plan
+
+Phase 7.3 may define a future runtime implementation test plan as docs/tests/fixtures only.
+
+GO:
+
+- define future test families
+- define required negative tests
+- define limited positive tests
+- define validation commands
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- model calls
+- network calls
+- file mutation
+- shell, browser, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 7.4 docs/tests/fixtures-only implementation decision gate / closeout under the approved Phase 7 no-code charter lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

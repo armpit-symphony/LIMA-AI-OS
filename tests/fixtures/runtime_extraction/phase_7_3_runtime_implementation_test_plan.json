@@ -1,0 +1,87 @@
+{
+  "phase": "7.3",
+  "status": "runtime_implementation_test_plan",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "test_plan_only": true,
+  "phase_document": "docs/PHASE_7_3_RUNTIME_IMPLEMENTATION_TEST_PLAN.md",
+  "source_phase": "7.2",
+  "source_tag": "phase-7.2-kernel-runtime-safety-preconditions",
+  "source_merge_commit": "221e7fdd933f3b598a276a51aaac94adc6cb932a",
+  "latest_main_after_source_state_sync": "c4059e4",
+  "future_test_families": [
+    "import_boundary_tests",
+    "typed_input_validation_tests",
+    "fail_closed_missing_field_tests",
+    "raw_natural_language_rejection_tests",
+    "non_executable_candidate_output_tests",
+    "approval_bypass_rejection_tests",
+    "guardiandecision_non_creation_tests",
+    "sparkbot_coupling_rejection_tests",
+    "side_effect_rejection_tests",
+    "rollback_and_revertability_review_tests"
+  ],
+  "required_negative_tests": [
+    "missing_typed_input",
+    "empty_input",
+    "raw_chat_text_without_explicit_typed_metadata",
+    "operator_admin_phil_trusted_approval_bypass_wording",
+    "shell_command_requests",
+    "browser_or_network_requests",
+    "file_mutation_requests",
+    "model_call_requests",
+    "sparkbot_import_or_runtime_coupling",
+    "real_guardiandecision_creation",
+    "approval_enforcement",
+    "audit_persistence",
+    "robotics_or_physical_world_requests"
+  ],
+  "required_positive_tests_only": [
+    "typed_explicit_metadata_is_accepted",
+    "provenance_is_preserved",
+    "candidate_metadata_remains_non_executable",
+    "guardian_review_boundary_refs_present",
+    "approval_state_remains_descriptive",
+    "execution_and_side_effects_remain_disallowed"
+  ],
+  "future_validation_commands": [
+    "targeted_tests_for_changed_files",
+    "all_phase_7_gate_tests",
+    "python -m pytest -q",
+    "python -m compileall lima",
+    "git diff --check",
+    "forbidden_path_review"
+  ],
+  "ready_for": [
+    "phase_7_4_docs_tests_fixtures_only_implementation_decision_gate_closeout"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_import_or_wiring",
+    "live_adapter_code",
+    "runtime_humaninput_to_intentenvelope_bridge",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
