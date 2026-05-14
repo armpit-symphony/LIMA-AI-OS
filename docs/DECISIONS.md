@@ -2681,6 +2681,27 @@ Consequences:
 - approval enforcement, execution, audit persistence, Sparkbot wiring, live adapters, and side effects remain blocked
 - Phase 9.3 must review the slice before any further implementation
 
+## ADR-0147: Phase 9 Runtime Slice Is Ready Only For Closeout
+
+Status: Accepted
+
+Decision:
+
+Phase 9.3 reviews the Phase 9.2 coordinator as constrained enough for Phase 9.4 audit/archive closeout, but not for runtime expansion.
+
+Rationale:
+
+The first runtime slice met the narrow non-executing candidate-metadata boundary. The safe next step is to archive the lane and stop at a new decision gate rather than continue implementing adjacent runtime behavior by momentum.
+
+Consequences:
+
+- Phase 9.3 is docs/tests/fixtures only
+- no runtime code is changed
+- no files under `lima/` are modified by Phase 9.3
+- the Phase 9.2 coordinator remains non-executing
+- Phase 9.4 may archive the lane
+- Phase 10, runtime expansion, HumanInput bridge behavior, Sparkbot wiring, approval enforcement, execution, audit persistence, and physical-world behavior remain unapproved
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

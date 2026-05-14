@@ -4053,6 +4053,36 @@ After merge:
 
 Continue only to Phase 9.3 runtime slice readiness review.
 
+## Phase 9.3 Gate: Runtime Slice Readiness Review
+
+Phase 9.3 may review the Phase 9.2 runtime slice as docs/tests/fixtures only.
+
+GO:
+
+- review Phase 9.2 coordinator constraints
+- verify non-executing candidate behavior remains intact
+- document readiness only for Phase 9.4 closeout
+- add static fixture and tests
+
+NO-GO:
+
+- runtime code changes
+- files under `lima/`
+- `tests/support/` changes
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 9.4 runtime slice audit/archive closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

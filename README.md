@@ -338,6 +338,8 @@ Phase 9.1 scaffolds the acceptance-test obligations for the first Phase 9 runtim
 
 Phase 9.2 adds that narrow coordinator under `lima/kernel/`. It is pure, in-process, non-executing, accepts only synthetic already-normalized intake metadata, and returns candidate metadata with execution, side effects, approval authority, IntentEnvelope creation, and GuardianDecision creation all disabled.
 
+Phase 9.3 reviews the coordinator as ready only for Phase 9.4 audit/archive closeout or further non-runtime review. It does not approve runtime expansion.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
