@@ -45,14 +45,14 @@ def test_eligible_existing_files_are_exact_and_future_only() -> None:
     ]
 
 
-def test_eligible_new_files_are_exact_and_not_created_now() -> None:
+def test_eligible_new_files_are_exact_and_marked_future_only() -> None:
     files = _load_json(PHASE_FIXTURE_PATH)["eligible_new_files_future_only"]
     assert files == [
         "lima/kernel/__init__.py",
         "lima/kernel/intake_candidate.py",
     ]
-    for file_name in files:
-        assert not (REPO_ROOT / file_name).exists()
+    phase_doc = PHASE_DOC_PATH.read_text(encoding="utf-8")
+    assert "These files do not exist in Phase 8.1 and must not be created by this phase" in phase_doc
 
 
 def test_forbidden_file_surfaces_include_runtime_execution_areas_and_tests_support() -> None:

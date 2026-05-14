@@ -1,0 +1,62 @@
+{
+  "phase": "9.2",
+  "status": "non_executing_kernel_intake_to_candidate_coordinator_implementation",
+  "runtime_slice": true,
+  "non_executing": true,
+  "phase_document": "docs/PHASE_9_2_NON_EXECUTING_KERNEL_INTAKE_TO_CANDIDATE_COORDINATOR_IMPLEMENTATION.md",
+  "source_phase": "9.1",
+  "source_tag": "phase-9.1-runtime-slice-acceptance-test-scaffolding",
+  "eligible_runtime_files_touched": [
+    "lima/kernel/__init__.py",
+    "lima/kernel/intake_candidate.py"
+  ],
+  "eligible_runtime_files_not_touched": [
+    "lima/contracts/boundary.py",
+    "lima/contracts/intent.py",
+    "lima/contracts/guardian.py",
+    "lima/contracts/events.py",
+    "lima/contracts/privacy.py",
+    "lima/__init__.py"
+  ],
+  "candidate_output_required_flags": {
+    "executable": false,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approved": false,
+    "needs_guardian_review": true,
+    "intent_envelope_created": false,
+    "guardian_decision_created": false,
+    "phase_5_humaninput_runtime_bridge_gated": true
+  },
+  "accepted_input_markers": [
+    "synthetic",
+    "test_only",
+    "already_normalized_intake_metadata"
+  ],
+  "blocked_input_cases": [
+    "missing_synthetic_marker",
+    "missing_test_only_marker",
+    "raw_humaninput_like_payload",
+    "empty_or_missing_input",
+    "malformed_provenance",
+    "unknown_action_category",
+    "stale_intake",
+    "replayed_intake"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": true,
+    "runtime_behavior_remains_non_executing": true,
+    "files_outside_phase_8_1_eligible_runtime_list_modified": false,
+    "tests_support_modified": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "humaninput_runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects_added": false,
+    "physical_world_action_added": false
+  }
+}
