@@ -328,6 +328,8 @@ Phase 8.2 adds docs/tests/fixtures-only Runtime Acceptance Test Design. It defin
 
 Phase 8.3 adds docs/tests/fixtures-only Rollback / Audit Proof Plan. It defines future revertibility, forbidden-path review, audit-proof evidence, success criteria, and failure criteria before any runtime code can be approved.
 
+Phase 8.4 closes the no-code Phase 8 implementation design review lane at a runtime implementation approval gate. It defines the exact future approval question for a narrow Phase 9 non-executing kernel intake-to-candidate coordinator and keeps runtime implementation blocked until Phil explicitly approves that scope.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

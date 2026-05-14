@@ -118,7 +118,8 @@ Current expected sequence:
 - Phase 8.1 - Exact Runtime File-Touch Map: complete/tagged.
 - Phase 8.2 - Runtime Acceptance Test Design: complete/tagged.
 - Phase 8.3 - Rollback / Audit Proof Plan: complete/tagged.
-- Next phase: Phase 8.4 Runtime Implementation Approval Gate / Closeout.
+- Phase 8.4 - Runtime Implementation Approval Gate / Closeout: complete/tagged.
+- Next phase: explicit operator runtime implementation decision required.
 
 The exact numbering may change if a readiness review finds gaps. Do not skip safety gate docs or readiness reviews.
 
@@ -247,6 +248,8 @@ Phase 8.1 is complete and tagged as docs/tests/fixtures-only Exact Runtime File-
 Phase 8.2 is complete and tagged as docs/tests/fixtures-only Runtime Acceptance Test Design. It defines future required test families, negative cases, limited positive cases, and validation expectations before any runtime implementation can be approved.
 
 Phase 8.3 is complete and tagged as docs/tests/fixtures-only Rollback / Audit Proof Plan. It defines revertibility, forbidden-path review, audit-proof evidence, success criteria, and failure criteria before any runtime code can be approved.
+
+Phase 8.4 is complete and tagged as docs/tests/fixtures-only Runtime Implementation Approval Gate / Closeout. It closes the no-code design lane and asks whether Phil approves a narrow Phase 9 non-executing kernel intake-to-candidate coordinator implementation limited to the Phase 8.1 eligible files and Phase 8.2/8.3 proof obligations.
 
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 

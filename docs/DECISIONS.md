@@ -2574,6 +2574,28 @@ Consequences:
 - future audit proof cannot imply audit persistence
 - Phase 8.4 may continue only as docs/tests/fixtures-only runtime implementation approval gate / closeout
 
+## ADR-0142: Phase 8 Stops At Runtime Implementation Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 8.4 closes the no-code implementation design review lane at an explicit runtime implementation approval gate. Runtime code remains blocked unless Phil later approves the exact narrow Phase 9 implementation question.
+
+Rationale:
+
+Phase 8 has defined the design package, file-touch map, acceptance tests, rollback expectations, audit proof requirements, success criteria, and failure criteria needed for a deliberate runtime implementation decision.
+
+Consequences:
+
+- Phase 8.4 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- Phase 5 runtime bridge remains gated
+- Phase 9 is not approved by this closeout
+- future runtime implementation requires explicit Phil approval of the narrow non-executing coordinator scope
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
