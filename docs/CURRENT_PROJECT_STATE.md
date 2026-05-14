@@ -114,7 +114,7 @@ Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to
 
 Latest completed phase merge:
 
-`74a75db74c9a86208ea9262cd5b75a298948dd40`
+`a5993bde187170c94297c2379334c656ce9425a9`
 
 Latest tag:
 
@@ -132,7 +132,7 @@ not selected
 
 Latest completed merge:
 
-`74a75db74c9a86208ea9262cd5b75a298948dd40`
+`a5993bde187170c94297c2379334c656ce9425a9`
 
 Recommended PR target:
 
