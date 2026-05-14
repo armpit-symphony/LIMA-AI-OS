@@ -326,6 +326,8 @@ Phase 8.1 adds a docs/tests/fixtures-only Exact Runtime File-Touch Map. It ident
 
 Phase 8.2 adds docs/tests/fixtures-only Runtime Acceptance Test Design. It defines future required test families, negative cases, limited positive cases, and validation expectations before any runtime slice can be approved.
 
+Phase 8.3 adds docs/tests/fixtures-only Rollback / Audit Proof Plan. It defines future revertibility, forbidden-path review, audit-proof evidence, success criteria, and failure criteria before any runtime code can be approved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

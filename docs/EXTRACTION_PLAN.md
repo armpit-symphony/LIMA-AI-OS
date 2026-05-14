@@ -3849,6 +3849,40 @@ After merge:
 
 Continue only to Phase 8.3 docs/tests/fixtures-only rollback / audit proof planning under the approved Phase 8 no-code design review lane.
 
+## Phase 8.3 Gate: Rollback / Audit Proof Plan
+
+Phase 8.3 may define rollback and audit proof requirements as docs/tests/fixtures only.
+
+GO:
+
+- list rollback requirements
+- list audit proof requirements
+- list future success criteria
+- list future failure criteria
+- keep audit proof as test evidence only
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 8.4 docs/tests/fixtures-only runtime implementation approval gate / closeout under the approved Phase 8 no-code design review lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

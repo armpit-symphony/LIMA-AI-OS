@@ -3781,6 +3781,47 @@ Status:
 - complete
 - tagged as `phase-8.2-runtime-acceptance-test-design`
 
+## Phase 8.3 - Rollback / Audit Proof Plan
+
+Goal:
+
+Define rollback and audit proof requirements that must be satisfied before any future first runtime slice implementation can be approved.
+
+Deliverables:
+
+- `docs/PHASE_8_3_ROLLBACK_AUDIT_PROOF_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_8_3_rollback_audit_proof_plan.json`
+- `tests/test_phase_8_3_rollback_audit_proof_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- future rollback requirements listed
+- future audit proof requirements listed
+- future success criteria listed
+- future failure criteria listed
+- audit proof remains test evidence only
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 8.4 - Runtime Implementation Approval Gate / Closeout
+
+Status:
+
+- complete
+- tagged as `phase-8.3-rollback-audit-proof-plan`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
