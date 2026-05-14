@@ -124,19 +124,21 @@ Phase 8.3 Rollback / Audit Proof Plan is complete, merged to `main`, and tagged.
 
 Phase 8.4 Runtime Implementation Approval Gate / Closeout is complete, merged to `main`, and tagged. It closes the no-code Phase 8 design lane and requires explicit operator approval before any Phase 9 runtime implementation or `lima/` change.
 
+Phase 8.5 Phase 8 No-Code Implementation Design Review Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 8.0 through Phase 8.4 as no-code design review work and preserves the exact Phase 9 approval question while keeping runtime implementation blocked.
+
 Latest completed phase merge:
 
-`f91a238a16f8fef3dc9ccd7b43ba129521b7aab4`
+`pending-phase-8.5-merge-commit`
 
 Latest tag:
 
-`phase-8.4-runtime-implementation-approval-gate-closeout`
+`phase-8.5-phase-8-no-code-implementation-design-review-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.4.
+Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 8.5.
 
 Recommended next branch:
 
@@ -144,7 +146,7 @@ not selected
 
 Latest completed merge:
 
-`f91a238a16f8fef3dc9ccd7b43ba129521b7aab4`
+`pending-phase-8.5-merge-commit`
 
 Recommended PR target:
 

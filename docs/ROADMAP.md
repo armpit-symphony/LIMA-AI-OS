@@ -3857,12 +3857,53 @@ Acceptance criteria:
 
 Next likely phase:
 
-- explicit operator runtime implementation decision
+- Phase 8.5 - Phase 8 No-Code Implementation Design Review Audit Archive / Closeout
 
 Status:
 
 - complete
 - tagged as `phase-8.4-runtime-implementation-approval-gate-closeout`
+
+## Phase 8.5 - Phase 8 No-Code Implementation Design Review Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 8 as a completed no-code implementation design review lane and create a clean decision point before any Phase 9 runtime implementation slice.
+
+Deliverables:
+
+- `docs/PHASE_8_5_PHASE_8_NO_CODE_IMPLEMENTATION_DESIGN_REVIEW_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_8_5_phase_8_no_code_implementation_design_review_audit_archive_closeout.json`
+- `tests/test_phase_8_5_phase_8_no_code_implementation_design_review_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 8.0 through Phase 8.4 listed as complete
+- Phase 8 archived as no-code design review only
+- no runtime implementation approved
+- Phase 5 runtime bridge remains gated
+- exact Phase 9 approval question preserved
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- next options documented and require explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- explicit operator runtime implementation decision
+
+Status:
+
+- complete
+- tagged as `phase-8.5-phase-8-no-code-implementation-design-review-audit-archive-closeout`
 
 Reserved from Phase 3.4:
 
