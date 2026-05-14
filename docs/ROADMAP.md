@@ -3582,6 +3582,44 @@ Status:
 - complete
 - tagged as `phase-7.3-runtime-implementation-test-plan`
 
+## Phase 7.4 - Phase 7 Implementation Decision Gate / Closeout
+
+Goal:
+
+Close the no-code Phase 7 kernel runtime implementation charter lane at a clean implementation decision gate.
+
+Deliverables:
+
+- `docs/PHASE_7_4_PHASE_7_IMPLEMENTATION_DECISION_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_7_4_phase_7_implementation_decision_gate_closeout.json`
+- `tests/test_phase_7_4_phase_7_implementation_decision_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 7.0 through Phase 7.3 listed as complete
+- Phase 7 decisions summarized
+- runtime behavior remains unimplemented
+- `lima/` changes remain unimplemented
+- `tests/support/` changes remain unimplemented
+- Sparkbot wiring remains unimplemented
+- live adapters remain unimplemented
+- IntentCompiler and GuardianDecision runtime behavior remain unimplemented
+- approval enforcement, execution, and audit persistence remain blocked
+- shell, browser, network, file mutation, robot, and physical-world side effects remain blocked
+- decision options documented
+- explicit Phil approval required before runtime code
+- tests pass
+
+Next likely phase:
+
+- explicit operator implementation decision
+
+Status:
+
+- complete
+- tagged as `phase-7.4-phase-7-implementation-decision-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

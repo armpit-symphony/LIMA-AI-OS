@@ -3674,6 +3674,42 @@ After merge:
 
 Continue only to Phase 7.4 docs/tests/fixtures-only implementation decision gate / closeout under the approved Phase 7 no-code charter lane.
 
+## Phase 7.4 Gate: Phase 7 Implementation Decision Gate / Closeout
+
+Phase 7.4 may close the no-code Phase 7 charter lane as docs/tests/fixtures only.
+
+GO:
+
+- summarize Phase 7.0 through Phase 7.3
+- summarize Phase 7 decisions
+- list what remains unimplemented
+- document next decision options
+- require explicit Phil approval before runtime code
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- model calls
+- network calls
+- file mutation
+- shell, browser, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator implementation decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

@@ -110,19 +110,21 @@ Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and
 
 Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and tagged. It defines future test families, required negative tests, limited positive tests, and validation commands without implementing runtime behavior.
 
+Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to `main`, and tagged. It closes the no-code Phase 7 charter lane and requires explicit operator decision before any runtime code.
+
 Latest completed phase merge:
 
 `74a75db74c9a86208ea9262cd5b75a298948dd40`
 
 Latest tag:
 
-`phase-7.3-runtime-implementation-test-plan`
+`phase-7.4-phase-7-implementation-decision-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue to Phase 7.4 only within the approved docs/tests/fixtures-only no-code Phase 7 charter lane if validation and self-audit remain clean.
+Stop for explicit operator implementation decision. No Phase 8, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 7.4.
 
 Recommended next branch:
 
@@ -140,7 +142,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 7.4 - Phase 7 Implementation Decision Gate / Closeout.
+Explicit operator implementation decision.
 
 ## Active Phase 4 Status
 
@@ -247,6 +249,8 @@ Phase 7.1 First Runtime Slice Eligibility Map is complete, merged to `main`, and
 Phase 7.2 Kernel Runtime Safety Preconditions is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 Phase 7.3 Runtime Implementation Test Plan is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
+
+Phase 7.4 Phase 7 Implementation Decision Gate / Closeout is complete, merged to `main`, and tagged. It did not change helper behavior, modify `tests/support/`, modify `lima/`, add a live bridge, add a live adapter, wire Sparkbot, implement real IntentCompiler behavior, implement real GuardianDecision behavior, enforce approval, execute, persist audit, or perform physical-world action.
 
 ## Completed Phase 3 Status
 
