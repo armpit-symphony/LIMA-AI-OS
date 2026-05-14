@@ -1,0 +1,52 @@
+{
+  "phase": "9.0",
+  "status": "runtime_slice_preflight_audit_eligible_file_confirmation",
+  "docs_tests_fixtures_only": true,
+  "runtime_behavior_added": false,
+  "phase_document": "docs/PHASE_9_0_RUNTIME_SLICE_PREFLIGHT_AUDIT_ELIGIBLE_FILE_CONFIRMATION.md",
+  "source_phase": "8.5",
+  "source_tag": "phase-8.5-phase-8-no-code-implementation-design-review-audit-archive-closeout",
+  "phase_8_1_file_touch_map_is_explicit": true,
+  "eligible_existing_runtime_files": [
+    "lima/contracts/boundary.py",
+    "lima/contracts/intent.py",
+    "lima/contracts/guardian.py",
+    "lima/contracts/events.py",
+    "lima/contracts/privacy.py",
+    "lima/__init__.py"
+  ],
+  "eligible_new_runtime_files": [
+    "lima/kernel/__init__.py",
+    "lima/kernel/intake_candidate.py"
+  ],
+  "phase_9_0_decision": "continue_to_phase_9_1_acceptance_test_scaffolding",
+  "phase_9_2_runtime_implementation_precondition": "phase_9_1_acceptance_tests_must_exist_first",
+  "forbidden_scope": [
+    "tests/support/**",
+    "sparkbot_import_or_wiring",
+    "live_adapter",
+    "humaninput_runtime_bridge",
+    "unauthorized_intentcompiler_runtime_change",
+    "unauthorized_guardiandecision_runtime_change",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects",
+    "external_service_calls",
+    "background_worker_daemon_queue_database_write_or_hidden_side_effect"
+  ],
+  "boundary_results": {
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_added": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "humaninput_runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
