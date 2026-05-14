@@ -3452,6 +3452,50 @@ Status:
 - complete
 - tagged as `phase-7.0-kernel-runtime-implementation-charter`
 
+## Phase 7.1 - First Runtime Slice Eligibility Map
+
+Goal:
+
+Map exactly which files could be eligible for a later explicitly approved first runtime slice and which files remain forbidden.
+
+Deliverables:
+
+- `docs/PHASE_7_1_FIRST_RUNTIME_SLICE_ELIGIBILITY_MAP.md`
+- `tests/fixtures/runtime_extraction/phase_7_1_first_runtime_slice_eligibility_map.json`
+- `tests/test_phase_7_1_first_runtime_slice_eligibility_map.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- future eligible existing files listed exactly
+- future eligible new files listed only as explicitly approved future candidates
+- forbidden runtime surfaces listed
+- `tests/support/**` remains forbidden
+- eligibility is not approval to modify files now
+- future code must remain non-executing and candidate-metadata-only
+- future code must not parse raw natural language
+- future code must not create real GuardianDecision
+- future code must not approve, enforce, execute, persist audit, or hand off to drivers
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 7.2 - Kernel Runtime Safety Preconditions
+
+Status:
+
+- complete
+- tagged as `phase-7.1-first-runtime-slice-eligibility-map`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

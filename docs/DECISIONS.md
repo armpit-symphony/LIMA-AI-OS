@@ -2377,6 +2377,27 @@ Consequences:
 - future runtime implementation still requires explicit Phil approval
 - Phase 7.1 may continue only as docs/tests/fixtures-only first runtime slice eligibility mapping
 
+## ADR-0133: Runtime File Eligibility Is Not Modification Approval
+
+Status: Accepted
+
+Decision:
+
+Phase 7.1 maps future eligible files for the first possible runtime slice, but eligibility is not approval to modify files now. Future eligible files are limited to selected contract files and optional new kernel files if explicitly approved. Execution surfaces, adapters, IO, persistence, services, shells, spine, Guardian implementation paths, and `tests/support/**` remain forbidden for the first slice.
+
+Rationale:
+
+The repo needs a concrete file boundary before any runtime implementation decision. Naming eligible and forbidden files reduces ambiguity without touching runtime code.
+
+Consequences:
+
+- Phase 7.1 is docs/tests/fixtures only
+- no helper behavior is changed
+- no `tests/support/` files are modified
+- no files under `lima/` are modified
+- eligibility does not approve runtime implementation
+- Phase 7.2 may continue only as docs/tests/fixtures-only kernel runtime safety preconditions
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

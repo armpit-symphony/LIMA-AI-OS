@@ -1,0 +1,77 @@
+{
+  "phase": "7.1",
+  "status": "first_runtime_slice_eligibility_map",
+  "non_runtime": true,
+  "docs_tests_fixtures_only": true,
+  "eligibility_map_only": true,
+  "phase_document": "docs/PHASE_7_1_FIRST_RUNTIME_SLICE_ELIGIBILITY_MAP.md",
+  "source_phase": "7.0",
+  "source_tag": "phase-7.0-kernel-runtime-implementation-charter",
+  "source_merge_commit": "999cc09034eef9eb335f38678af4daba3656dd09",
+  "latest_main_after_source_state_sync": "b1d420b",
+  "future_eligible_existing_files": [
+    "lima/contracts/boundary.py",
+    "lima/contracts/intent.py",
+    "lima/contracts/guardian.py",
+    "lima/contracts/events.py",
+    "lima/contracts/privacy.py",
+    "lima/__init__.py"
+  ],
+  "future_eligible_new_files_if_explicitly_approved": [
+    "lima/kernel/__init__.py",
+    "lima/kernel/intake_candidate.py"
+  ],
+  "forbidden_for_first_slice": [
+    "lima/adapters/**",
+    "lima/guardian/**",
+    "lima/harness/**",
+    "lima/io/**",
+    "lima/packs/**",
+    "lima/persistence/**",
+    "lima/services/**",
+    "lima/shells/**",
+    "lima/spine/**",
+    "tests/support/**"
+  ],
+  "eligibility_rules": {
+    "eligible_files_are_future_candidates_only": true,
+    "future_code_non_executing_candidate_metadata_only": true,
+    "future_code_fails_closed_on_missing_typed_input": true,
+    "future_code_must_not_parse_raw_natural_language": true,
+    "future_code_must_not_create_real_guardiandecision": true,
+    "future_code_must_not_approve_enforce_execute_persist_audit_or_handoff_to_drivers": true,
+    "future_code_requires_targeted_tests_before_approval": true
+  },
+  "ready_for": [
+    "phase_7_2_docs_tests_fixtures_only_kernel_runtime_safety_preconditions"
+  ],
+  "not_ready_for": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_import_or_wiring",
+    "live_adapter_code",
+    "runtime_humaninput_to_intentenvelope_bridge",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "files_under_lima_modified": false,
+    "tests_support_modified": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "runtime_bridge_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}

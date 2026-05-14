@@ -3568,6 +3568,41 @@ After merge:
 
 Continue only to Phase 7.1 docs/tests/fixtures-only first runtime slice eligibility mapping under the approved Phase 7 no-code charter lane.
 
+## Phase 7.1 Gate: First Runtime Slice Eligibility Map
+
+Phase 7.1 may map future eligible and forbidden runtime files as docs/tests/fixtures only.
+
+GO:
+
+- list future eligible existing files
+- list future eligible new files only if a later charter approves them
+- list forbidden runtime surfaces
+- keep `tests/support/**` forbidden
+- state that eligibility is not current approval
+- add static fixtures and tests
+
+NO-GO:
+
+- runtime behavior
+- helper behavior changes
+- `tests/support/` changes
+- files under `lima/`
+- live adapter code
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- model calls
+- network calls
+- file mutation
+- shell, browser, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 7.2 docs/tests/fixtures-only kernel runtime safety preconditions under the approved Phase 7 no-code charter lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

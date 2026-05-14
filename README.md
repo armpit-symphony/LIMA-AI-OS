@@ -310,6 +310,8 @@ Phase 6.5 archives Phase 6 as completed roadmap/planning work. It confirms Phase
 
 Phase 7.0 opens a no-code Kernel Runtime Implementation Charter lane. It defines the smallest future runtime slice that could be considered later, but it does not approve runtime implementation or modify `lima/`, `tests/support/`, Sparkbot wiring, execution, approval enforcement, audit persistence, or physical-world behavior.
 
+Phase 7.1 adds a docs/tests/fixtures-only First Runtime Slice Eligibility Map. It names future-eligible contract files and forbidden execution surfaces for a later explicitly approved slice, while keeping all `lima/` and `tests/support/` files untouched.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
