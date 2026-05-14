@@ -3699,6 +3699,48 @@ Status:
 - complete
 - tagged as `phase-8.0-implementation-design-review-charter`
 
+## Phase 8.1 - Exact Runtime File-Touch Map
+
+Goal:
+
+Map the exact future file-touch surface for the narrowest possible runtime slice without modifying any runtime files.
+
+Deliverables:
+
+- `docs/PHASE_8_1_EXACT_RUNTIME_FILE_TOUCH_MAP.md`
+- `tests/fixtures/runtime_extraction/phase_8_1_exact_runtime_file_touch_map.json`
+- `tests/test_phase_8_1_exact_runtime_file_touch_map.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- exact future eligible existing files listed
+- exact future eligible new files listed
+- forbidden runtime surfaces listed
+- eligibility is not approval to modify files now
+- future touch rules require targeted tests
+- future candidate outputs remain non-executable and authority-free
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 8.2 - Runtime Acceptance Test Design
+
+Status:
+
+- complete
+- tagged as `phase-8.1-exact-runtime-file-touch-map`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

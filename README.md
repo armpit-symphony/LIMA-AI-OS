@@ -322,6 +322,8 @@ Phase 7.5 archives Phase 7 as a no-code kernel runtime charter lane. It confirms
 
 Phase 8.0 opens a no-code Implementation Design Review lane. It converts the Phase 7 charter into a design package for a future non-executing kernel intake-to-candidate coordinator, but does not approve runtime implementation or modify `lima/`, `tests/support/`, Sparkbot wiring, execution, approval enforcement, audit persistence, or physical-world behavior.
 
+Phase 8.1 adds a docs/tests/fixtures-only Exact Runtime File-Touch Map. It identifies future-eligible contract files and proposed new kernel files for a later explicitly approved first runtime slice, while keeping every `lima/` and `tests/support/` file untouched.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

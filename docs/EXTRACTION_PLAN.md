@@ -3782,6 +3782,40 @@ After merge:
 
 Continue only to Phase 8.1 docs/tests/fixtures-only exact runtime file-touch mapping under the approved Phase 8 no-code design review lane.
 
+## Phase 8.1 Gate: Exact Runtime File-Touch Map
+
+Phase 8.1 may map exact future runtime file touches as docs/tests/fixtures only.
+
+GO:
+
+- list future eligible existing files
+- list future eligible new files
+- list forbidden file surfaces
+- state that eligibility is not current approval
+- define future touch rules
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 8.2 docs/tests/fixtures-only runtime acceptance test design under the approved Phase 8 no-code design review lane.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
