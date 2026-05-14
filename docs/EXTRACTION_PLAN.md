@@ -3883,6 +3883,41 @@ After merge:
 
 Continue only to Phase 8.4 docs/tests/fixtures-only runtime implementation approval gate / closeout under the approved Phase 8 no-code design review lane.
 
+## Phase 8.4 Gate: Runtime Implementation Approval Gate / Closeout
+
+Phase 8.4 may close the no-code Phase 8 design review lane as docs/tests/fixtures only.
+
+GO:
+
+- list Phase 8.0 through Phase 8.3 as complete
+- summarize the designed future runtime slice
+- list the future eligible file scope
+- list runtime implementation preconditions
+- list still-out-of-scope surfaces
+- define the exact future runtime implementation approval question for Phil
+- keep Phase 5 runtime bridge gated
+- add static fixtures and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- runtime implementation
+- live adapter code
+- runtime HumanInput to IntentEnvelope bridge
+- Sparkbot imports or wiring
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator runtime implementation decision. No Phase 9, runtime implementation, `lima/` change, `tests/support/` change, Sparkbot integration, live adapter, approval enforcement, execution, audit persistence, or physical-world behavior is approved by this closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.

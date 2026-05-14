@@ -3822,6 +3822,48 @@ Status:
 - complete
 - tagged as `phase-8.3-rollback-audit-proof-plan`
 
+## Phase 8.4 - Runtime Implementation Approval Gate / Closeout
+
+Goal:
+
+Close the no-code Phase 8 implementation design review lane at a clean runtime implementation approval gate.
+
+Deliverables:
+
+- `docs/PHASE_8_4_RUNTIME_IMPLEMENTATION_APPROVAL_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_8_4_runtime_implementation_approval_gate_closeout.json`
+- `tests/test_phase_8_4_runtime_implementation_approval_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 8.0 through Phase 8.3 listed as complete
+- designed future runtime slice summarized
+- future eligible file scope listed
+- runtime implementation preconditions listed
+- still-out-of-scope surfaces listed
+- exact future runtime implementation approval question documented
+- Phase 5 runtime bridge remains gated
+- no helper behavior changes
+- no `tests/support/` changes
+- no files under `lima/`
+- no live adapter code
+- no Sparkbot import or wiring
+- no real IntentCompiler
+- no real GuardianDecision
+- no approval, enforcement, execution, or audit persistence
+- no shell, browser, network, file mutation, robot, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- explicit operator runtime implementation decision
+
+Status:
+
+- complete
+- tagged as `phase-8.4-runtime-implementation-approval-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
