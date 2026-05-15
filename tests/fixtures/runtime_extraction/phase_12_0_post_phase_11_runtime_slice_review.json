@@ -1,0 +1,59 @@
+{
+  "phase": "12.0",
+  "status": "post_phase_11_runtime_slice_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_12_0_POST_PHASE_11_RUNTIME_SLICE_REVIEW.md",
+  "reviewed_phase": "11",
+  "phase_11_runtime_files_touched": [
+    "lima/kernel/candidate_status.py",
+    "lima/kernel/__init__.py"
+  ],
+  "phase_11_eligible_runtime_files_not_touched": [
+    "lima/kernel/intake_candidate.py"
+  ],
+  "phase_11_runtime_slice": [
+    "candidate_status_normalization",
+    "candidate_validation",
+    "safe_kernel_exports",
+    "runtime_tests",
+    "archive_closeout"
+  ],
+  "preserved_boundaries": {
+    "runtime_remains_non_executing": true,
+    "execution_allowed_always_false": true,
+    "side_effects_allowed_always_false": true,
+    "approval_state_never_approved": true,
+    "malformed_candidate_safe": true,
+    "unknown_status_safe": true,
+    "provenance_preserved": true,
+    "operator_admin_phil_trusted_bypass": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "phase_12_options_to_review": [
+    "pause_and_preserve_current_runtime_state",
+    "future_narrow_non_executing_runtime_slice_design",
+    "sparkbot_integration_boundary_design",
+    "robo_os_physical_world_boundary_design",
+    "threat_model_security_test_strengthening"
+  ],
+  "next_phase": "phase_12_1_next_direction_options_runtime_sparkbot_robo_os_pause",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
