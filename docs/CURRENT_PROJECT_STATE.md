@@ -140,27 +140,29 @@ Phase 9.5 First Runtime Slice Audit Archive / Closeout is complete, merged to `m
 
 Phase 10.0 Post-Phase-9 Runtime Slice Review is complete, merged to `main`, and tagged. It opens Phase 10 as a no-code design lane, reviews what Phase 9 proved and did not prove, does not modify `lima/` or `tests/support/`, and keeps Phase 11 runtime implementation unapproved.
 
+Phase 10.1 Next Runtime Slice Design Options is complete, merged to `main`, and tagged. It evaluates candidate validation, status normalization, lifecycle metadata, intake error taxonomy, provenance hardening, and stopping with no further runtime work, then recommends candidate validation plus status normalization as a future Phase 11 approval candidate only.
+
 Latest completed phase merge:
 
-`e606c93b280ccb65d0e882c9488b0b7c613e2dc1`
+`00411e925e7d2209af466b5911568c90e7fcf8c2`
 
 Latest tag:
 
-`phase-10.0-post-phase-9-runtime-slice-review`
+`phase-10.1-next-runtime-slice-design-options`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 10 no-code design lane with Phase 10.1 Next Runtime Slice Design Options. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.0.
+Continue the approved Phase 10 no-code design lane with Phase 10.2 Exact File-Touch Map for Next Runtime Slice. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.1.
 
 Recommended next branch:
 
-phase-10-1-next-runtime-slice-design-options
+phase-10-2-exact-file-touch-map-for-next-runtime-slice
 
 Latest completed merge:
 
-`e606c93b280ccb65d0e882c9488b0b7c613e2dc1`
+`00411e925e7d2209af466b5911568c90e7fcf8c2`
 
 Recommended PR target:
 
@@ -170,7 +172,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 10.1 - Next Runtime Slice Design Options.
+Phase 10.2 - Exact File-Touch Map for Next Runtime Slice.
 
 ## Active Phase 4 Status
 

@@ -4183,6 +4183,48 @@ Status:
 - complete
 - tagged as `phase-10.0-post-phase-9-runtime-slice-review`
 
+## Phase 10.1 - Next Runtime Slice Design Options
+
+Goal:
+
+Evaluate the safest possible next runtime slice after Phase 9 without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_10_1_NEXT_RUNTIME_SLICE_DESIGN_OPTIONS.md`
+- `tests/fixtures/runtime_extraction/phase_10_1_next_runtime_slice_design_options.json`
+- `tests/test_phase_10_1_next_runtime_slice_design_options.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- candidate validation evaluated
+- candidate status normalization evaluated
+- candidate lifecycle metadata evaluated
+- intake error taxonomy evaluated
+- provenance hardening evaluated
+- no further runtime work evaluated
+- recommended future slice remains non-executing and requires Phase 11 approval
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 10.2 - Exact File-Touch Map for Next Runtime Slice
+
+Status:
+
+- complete
+- tagged as `phase-10.1-next-runtime-slice-design-options`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

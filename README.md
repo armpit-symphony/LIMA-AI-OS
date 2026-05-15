@@ -346,6 +346,8 @@ Phase 9.5 archives the completed first runtime slice after a dedicated Phase 9.0
 
 Phase 10.0 opens the no-code next-runtime-slice design lane with a post-Phase-9 review. It records what the first runtime slice proved, what it did not prove, and keeps Phase 11 runtime implementation unapproved.
 
+Phase 10.1 evaluates candidate validation, status normalization, lifecycle metadata, intake error taxonomy, provenance hardening, and stopping with no further runtime work. It recommends a future candidate validation plus status normalization slice for Phase 11 consideration only, with implementation still unapproved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

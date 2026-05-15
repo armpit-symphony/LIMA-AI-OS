@@ -2767,6 +2767,27 @@ Consequences:
 - Phase 11 runtime implementation remains unapproved
 - Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0151: Candidate Validation And Status Normalization Are The Preferred Future Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 10.1 recommends candidate validation plus candidate status normalization as the safest future Phase 11 approval candidate. The recommendation does not approve implementation.
+
+Rationale:
+
+Validation and status normalization strengthen the Phase 9 non-executing candidate metadata without crossing into HumanInput runtime bridge behavior, IntentCompiler behavior, GuardianDecision behavior, approval enforcement, execution, dispatch, audit persistence, or external side effects.
+
+Consequences:
+
+- Phase 10.1 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.1
+- no `tests/support/` files are changed
+- Phase 10.2 may map exact future file-touch scope
+- Phase 11 runtime implementation remains unapproved
+- Phase 5 runtime bridge remains gated
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted
