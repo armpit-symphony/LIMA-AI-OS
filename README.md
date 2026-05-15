@@ -366,6 +366,8 @@ Phase 11.3 implements candidate validation in the same approved kernel-local sco
 
 Phase 11.4 reviews the Phase 11 runtime slice after status normalization and validation. It is docs/tests/fixtures only, confirms no new runtime behavior, and keeps Phase 11.5 as archive-only before any Phase 12 decision.
 
+Phase 11.5 archives Phase 11 as a completed narrow runtime slice. It confirms only `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py` were touched as runtime files, preserves the non-executing guarantees, and gates Phase 12 pending explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

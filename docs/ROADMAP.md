@@ -4584,6 +4584,49 @@ Status:
 - complete
 - tagged as `phase-11.4-runtime-slice-readiness-review`
 
+## Phase 11.5 - Phase 11 Runtime Slice Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 11 as a completed narrow runtime slice and stop before any Phase 12 runtime expansion.
+
+Deliverables:
+
+- `docs/PHASE_11_5_PHASE_11_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_11_5_phase_11_runtime_slice_audit_archive_closeout.json`
+- `tests/test_phase_11_5_phase_11_runtime_slice_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no new `lima/` changes
+- no `tests/support/` changes
+- Phase 11.0 through Phase 11.4 listed as complete
+- approved runtime files touched listed as `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py`
+- `lima/kernel/intake_candidate.py` remains eligible but untouched by Phase 11
+- runtime remains non-executing
+- execution_allowed remains false
+- side_effects_allowed remains false
+- approval_state never becomes approved
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- Phase 12 requires explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- Phase 12 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-11.5-phase-11-runtime-slice-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

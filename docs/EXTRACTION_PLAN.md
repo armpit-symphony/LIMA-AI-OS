@@ -4446,6 +4446,36 @@ After merge:
 
 Continue only to Phase 11.5 Phase 11 runtime slice audit archive / closeout.
 
+## Phase 11.5 Gate: Phase 11 Runtime Slice Audit Archive / Closeout
+
+Phase 11.5 may archive the completed Phase 11 narrow runtime slice and stop before Phase 12.
+
+GO:
+
+- list Phase 11.0 through Phase 11.4 as complete
+- list only `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py` as approved runtime files touched by Phase 11
+- document that `lima/kernel/intake_candidate.py` remained eligible but untouched by Phase 11
+- document what Phase 11 added and did not add
+- preserve non-executing candidate safety guarantees
+- prove Phase 12 remains gated
+- add static fixture and tests
+
+NO-GO:
+
+- new `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- HumanInput runtime bridge
+- Sparkbot import or wiring
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Stop for explicit Phil decision. No Phase 12 runtime expansion is approved by this archive.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

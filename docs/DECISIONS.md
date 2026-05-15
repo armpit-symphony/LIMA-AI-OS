@@ -2959,6 +2959,30 @@ Consequences:
 - Phase 12 and any runtime expansion remain gated
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0161: Phase 11 Is Archived As A Narrow Non-Executing Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 11.5 archives Phase 11.0 through Phase 11.4 as a completed narrow runtime slice and stops before Phase 12.
+
+Rationale:
+
+Phase 11 implemented the approved candidate status normalization and candidate validation slice without expanding into HumanInput runtime bridge behavior, live adapters, Sparkbot integration, execution, dispatch, approval enforcement, or persistence. Archiving the lane makes the completed runtime scope auditable and prevents accidental Phase 12 expansion.
+
+Consequences:
+
+- Phase 11.5 is docs/tests/fixtures only
+- no new `lima/` files are changed by Phase 11.5
+- no `tests/support/` files are changed
+- Phase 11 runtime files touched are `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py`
+- `lima/kernel/intake_candidate.py` remained eligible but was not touched by Phase 11
+- runtime behavior remains non-executing and side-effect-free
+- Phase 5 runtime bridge remains gated
+- Phase 12 requires explicit Phil approval
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
