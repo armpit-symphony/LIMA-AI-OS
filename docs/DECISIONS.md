@@ -3652,6 +3652,26 @@ Consequences:
 - no runtime behavior is changed
 - Phase 18.2 may add synthetic acceptance boundary regression fixtures
 
+## ADR-0195: Acceptance Boundary Regression Fixtures Must Stay Synthetic And Inert
+
+Status: Accepted
+
+Decision:
+
+Phase 18.2 adds synthetic acceptance-boundary regression fixtures and fixture tests only.
+
+Rationale:
+
+Boundary examples for approval-bypass wording, shell/browser/network/file/robotics attempts, Sparkbot integration attempts, HumanInput bridge attempts, stale/replayed candidates, malformed candidates, and unknown statuses are useful regression anchors only if they remain inert and cannot become live instructions.
+
+Consequences:
+
+- Phase 18.2 is tests/docs/fixtures only
+- fixtures remain synthetic, inert, and side-effect-free
+- no credentials, private hostnames, live targets, real file paths, robot instructions, approval tokens, or audit records are added
+- no `lima/` or `tests/support/` files are changed
+- Phase 18.3 may add forbidden integration regression tests
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

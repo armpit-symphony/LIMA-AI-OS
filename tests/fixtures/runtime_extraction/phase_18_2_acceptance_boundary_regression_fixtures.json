@@ -1,0 +1,53 @@
+{
+  "phase": "18.2",
+  "status": "acceptance_boundary_regression_fixtures",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_18_2_ACCEPTANCE_BOUNDARY_REGRESSION_FIXTURES.md",
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_18_2_acceptance_boundary_regression_cases.json",
+  "fixture_rules": {
+    "synthetic": true,
+    "inert": true,
+    "non_runtime": true,
+    "side_effect_free": true,
+    "not_authorization": true,
+    "no_credentials": true,
+    "no_private_hostnames": true,
+    "no_deploy_configs": true,
+    "no_live_shell_commands": true,
+    "no_live_network_targets": true,
+    "no_real_file_paths": true,
+    "no_robot_or_device_actuation_instructions": true,
+    "no_approval_tokens": true,
+    "no_audit_records": true,
+    "no_external_service_targets": true
+  },
+  "expected_case_ids": [
+    "approval_bypass_wording_regression",
+    "shell_attempt_regression",
+    "browser_network_attempt_regression",
+    "file_mutation_attempt_regression",
+    "robotics_physical_world_attempt_regression",
+    "sparkbot_integration_attempt_regression",
+    "humaninput_runtime_bridge_attempt_regression",
+    "stale_candidate_regression",
+    "replayed_candidate_regression",
+    "malformed_candidate_regression",
+    "unknown_status_regression"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
