@@ -5570,6 +5570,33 @@ Status:
 - complete
 - tagged as `phase-17.4-phase-17-acceptance-gate-audit-archive-closeout`
 
+## Phase 18.0 - Regression Hardening Charter
+
+Goal:
+
+Open Phase 18 as a test-only regression hardening lane.
+
+Deliverables:
+
+- `docs/PHASE_18_0_REGRESSION_HARDENING_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_18_0_regression_hardening_charter.json`
+- `tests/test_phase_18_0_regression_hardening_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18 work is limited to regression tests and synthetic fixtures
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-18.0-regression-hardening-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
