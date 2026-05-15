@@ -1,0 +1,51 @@
+{
+  "phase": "12.4",
+  "status": "phase_12_decision_gate_closeout",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_12_4_PHASE_12_DECISION_GATE_CLOSEOUT.md",
+  "completed_phase_12_scope": [
+    "phase_12_0_post_phase_11_runtime_slice_review",
+    "phase_12_1_next_direction_options_runtime_sparkbot_robo_os_pause",
+    "phase_12_2_threat_model_and_safety_gap_review",
+    "phase_12_3_next_lane_recommendation_matrix"
+  ],
+  "phase_12_result": "planning_only_decision_gate",
+  "recommended_next_lane": "docs_tests_fixtures_only_threat_model_derived_test_planning",
+  "phase_13_requires_explicit_phil_approval": true,
+  "still_blocked": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_action"
+  ],
+  "next_approval_question": "Do you approve Phase 13 as a docs/tests/fixtures-only threat-model-derived test planning lane that converts the Phase 12.2 threats into static, contract, fixture, and future acceptance-test requirements, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
