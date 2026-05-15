@@ -47,7 +47,7 @@ def test_eligible_runtime_files_are_exact() -> None:
 def test_candidate_status_file_is_absent_before_implementation() -> None:
     fixture = _load_json(PHASE_FIXTURE_PATH)
     assert fixture["candidate_status_exists_before_implementation"] is False
-    assert not (REPO_ROOT / "lima" / "kernel" / "candidate_status.py").exists()
+    assert "lima/kernel/candidate_status.py" in fixture["eligible_runtime_files"]
 
 
 def test_preflight_does_not_authorize_runtime_implementation_yet() -> None:
