@@ -218,7 +218,7 @@ Phase 17.0 Phase 16 Acceptance Test Audit Charter is complete, merged to `main`,
 
 Latest completed phase merge:
 
-`PENDING_PHASE_17_0_MERGE`
+`027c918b26b96721fc59f175fdebd0e1ea38787d`
 
 Latest tag:
 
@@ -236,7 +236,7 @@ phase-17-1-acceptance-test-coverage-review
 
 Latest completed merge:
 
-`PENDING_PHASE_17_0_MERGE`
+`027c918b26b96721fc59f175fdebd0e1ea38787d`
 
 Recommended PR target:
 
