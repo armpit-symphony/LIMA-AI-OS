@@ -222,27 +222,29 @@ Phase 17.2 Remaining Safety Gap Review is complete, merged to `main`, and tagged
 
 Phase 17.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It compares Phase 18 options and recommends a test-only regression hardening lane as the safest active next step, while keeping runtime expansion and integration work unapproved.
 
+Phase 17.4 Phase 17 Acceptance-Gate Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 17 as completed docs/tests/fixtures-only acceptance-gate audit/archive work, preserves the Phase 18 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`419767f0f7ce4348e63c1685def06702fee7b95c`
+`PENDING_PHASE_17_4_MERGE`
 
 Latest tag:
 
-`phase-17.3-next-lane-decision-matrix`
+`phase-17.4-phase-17-acceptance-gate-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 17 docs/tests/fixtures-only acceptance-gate audit/archive lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Stop before Phase 18. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-17-4-phase-17-acceptance-gate-audit-archive-closeout
+none - Phase 18 requires explicit Phil approval
 
 Latest completed merge:
 
-`419767f0f7ce4348e63c1685def06702fee7b95c`
+`PENDING_PHASE_17_4_MERGE`
 
 Recommended PR target:
 
@@ -252,7 +254,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 17.4 - Phase 17 Acceptance-Gate Audit Archive / Closeout.
+Phase 18 - gated pending explicit Phil approval.
+
+Phase 18 approval question:
+
+Do you approve Phase 18 as a test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries, limited to tests/docs/fixtures only, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 17 approval question:
 

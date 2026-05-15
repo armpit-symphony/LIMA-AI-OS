@@ -428,6 +428,8 @@ Phase 17.2 reviews remaining safety gaps before any next lane, including narrow 
 
 Phase 17.3 compares Phase 18 options and recommends test-only regression hardening as the safest active next lane before runtime expansion.
 
+Phase 17.4 archives Phase 17 as a completed acceptance-gate audit/archive lane and preserves the Phase 18 approval question for a test-only regression hardening lane.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

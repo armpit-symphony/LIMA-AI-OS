@@ -3590,6 +3590,27 @@ Consequences:
 - Phase 18 remains unapproved
 - Phase 17.4 may close the lane and preserve the approval question
 
+## ADR-0192: Phase 17 Closes At A Phase 18 Test-Only Regression Hardening Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 17.4 archives Phase 17 as completed docs/tests/fixtures-only acceptance-gate audit/archive work and preserves a Phase 18 approval question for test-only regression hardening.
+
+Rationale:
+
+The Phase 17 audit confirms Phase 16 tests remain test-only and strengthen the gate, but runtime expansion still requires further confidence or an explicit separate approval. Test-only regression hardening is the safest active next lane.
+
+Consequences:
+
+- Phase 17.4 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 18 remains unapproved
+- runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

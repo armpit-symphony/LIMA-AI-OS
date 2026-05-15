@@ -272,6 +272,8 @@ Phase 16 is complete and tagged as a test-only acceptance-gate implementation la
 
 Phase 17 is open as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase. It may review and archive Phase 16 acceptance tests, evaluate remaining safety gaps, and recommend a Phase 18 direction without changing runtime behavior or approving runtime expansion.
 
+Phase 17 is complete and tagged as a docs/tests/fixtures-only acceptance-gate audit/archive lane. It archived Phase 16 acceptance tests as complete and test-only, recorded remaining safety gaps, recommended Phase 18 as test-only regression hardening, and did not change `lima/`, `tests/support/`, runtime behavior, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries
