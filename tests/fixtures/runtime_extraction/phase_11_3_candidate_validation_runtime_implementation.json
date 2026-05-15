@@ -1,0 +1,48 @@
+{
+  "phase": "11.3",
+  "status": "candidate_validation_runtime_implementation",
+  "docs_tests_fixtures_only": false,
+  "runtime_code_modified": true,
+  "phase_document": "docs/PHASE_11_3_CANDIDATE_VALIDATION_RUNTIME_IMPLEMENTATION.md",
+  "source_phase": "11.2",
+  "runtime_files_touched": [
+    "lima/kernel/candidate_status.py",
+    "lima/kernel/__init__.py"
+  ],
+  "eligible_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/__init__.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "runtime_behavior_added": [
+    "candidate_validation"
+  ],
+  "validation_rejects": [
+    "missing_required_fields",
+    "missing_or_invalid_provenance",
+    "executable_true",
+    "execution_allowed_true",
+    "side_effects_allowed_true",
+    "approval_state_approved",
+    "approved_true",
+    "stale_candidate",
+    "replayed_candidate"
+  ],
+  "next_phase": "phase_11_4_runtime_slice_readiness_review",
+  "boundary_results": {
+    "files_outside_phase_10_2_runtime_list_changed": false,
+    "tests_support_modified": false,
+    "runtime_behavior_remains_non_executing": true,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
