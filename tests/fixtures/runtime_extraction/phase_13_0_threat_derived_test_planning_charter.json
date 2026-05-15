@@ -1,0 +1,45 @@
+{
+  "phase": "13.0",
+  "status": "threat_derived_test_planning_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_13_0_THREAT_DERIVED_TEST_PLANNING_CHARTER.md",
+  "source_phase": "12.2",
+  "source_threats": [
+    "candidate_status_mistaken_for_approval",
+    "candidate_validation_mistaken_for_guardian_decision",
+    "humaninput_runtime_bridge_pressure",
+    "sparkbot_boundary_planning_drifting_into_wiring",
+    "robo_os_planning_drifting_into_driver_behavior",
+    "operator_admin_phil_trusted_bypass",
+    "shell_browser_network_file_robotics_escalation",
+    "audit_persistence_implied_before_approval",
+    "static_tests_mistaken_for_complete_runtime_security_proof"
+  ],
+  "planning_outputs": [
+    "static_forbidden_pattern_test_requirements",
+    "runtime_contract_test_requirements",
+    "threat_fixture_matrix",
+    "future_acceptance_gate_closeout"
+  ],
+  "next_phase": "phase_13_1_static_forbidden_pattern_test_requirements",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
