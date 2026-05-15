@@ -434,6 +434,8 @@ Phase 18.0 opens the approved test-only regression hardening lane for existing n
 
 Phase 18.1 adds candidate API regression tests against existing non-executing APIs, proving candidates remain non-executable, authority-free, provenance-preserving, and safe for malformed, unknown, stale/replayed, dangerous wording, and raw HumanInput-like inputs.
 
+Phase 18.2 adds synthetic acceptance-boundary regression fixtures for approval-bypass wording, shell/browser/network/file/robotics attempts, Sparkbot integration attempts, HumanInput runtime bridge attempts, stale/replayed candidates, malformed candidates, and unknown statuses.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

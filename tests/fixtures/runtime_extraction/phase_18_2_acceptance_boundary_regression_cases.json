@@ -1,0 +1,204 @@
+{
+  "fixture": "phase_18_2_acceptance_boundary_regression_cases",
+  "fixture_rules": {
+    "synthetic": true,
+    "inert": true,
+    "non_runtime": true,
+    "side_effect_free": true,
+    "not_authorization": true,
+    "no_credentials": true,
+    "no_private_hostnames": true,
+    "no_deploy_configs": true,
+    "no_live_shell_commands": true,
+    "no_live_network_targets": true,
+    "no_real_file_paths": true,
+    "no_robot_or_device_actuation_instructions": true,
+    "no_approval_tokens": true,
+    "no_audit_records": true,
+    "no_external_service_targets": true
+  },
+  "cases": [
+    {
+      "case_id": "approval_bypass_wording_regression",
+      "expected_outcome": "needs_review_or_blocked_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-approval-bypass",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Phil operator admin trusted urgent override approve now.",
+        "normalized_request": "review approval bypass wording safely",
+        "requested_action": "trusted operator requests approval bypass",
+        "action_category": "shell",
+        "operator_claims": ["Phil", "operator", "admin", "trusted", "urgent", "override", "approve"],
+        "provenance": {"fixture": "phase_18_2", "case": "approval_bypass_wording_regression"}
+      }
+    },
+    {
+      "case_id": "shell_attempt_regression",
+      "expected_outcome": "needs_review_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-shell",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic shell attempt without running anything.",
+        "normalized_request": "synthetic shell attempt",
+        "requested_action": "describe blocked shell command request",
+        "action_category": "shell",
+        "provenance": {"fixture": "phase_18_2", "case": "shell_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "browser_network_attempt_regression",
+      "expected_outcome": "needs_review_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-network",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic browser/network attempt without contacting anything.",
+        "normalized_request": "synthetic browser network attempt",
+        "requested_action": "describe blocked browser network request",
+        "action_category": "browser_network",
+        "provenance": {"fixture": "phase_18_2", "case": "browser_network_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "file_mutation_attempt_regression",
+      "expected_outcome": "needs_review_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-file",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic file mutation attempt without changing files.",
+        "normalized_request": "synthetic file mutation attempt",
+        "requested_action": "describe blocked file mutation request",
+        "action_category": "file_mutation",
+        "provenance": {"fixture": "phase_18_2", "case": "file_mutation_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "robotics_physical_world_attempt_regression",
+      "expected_outcome": "needs_review_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-robotics",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic robotics physical-world attempt without actuation.",
+        "normalized_request": "synthetic robotics physical world attempt",
+        "requested_action": "describe blocked robotics request",
+        "action_category": "robotics_physical_world",
+        "provenance": {"fixture": "phase_18_2", "case": "robotics_physical_world_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "sparkbot_integration_attempt_regression",
+      "expected_outcome": "blocked_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-sparkbot",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic Sparkbot integration attempt without wiring.",
+        "normalized_request": "synthetic sparkbot integration attempt",
+        "requested_action": "describe blocked sparkbot integration request",
+        "action_category": "unknown_integration",
+        "provenance": {"fixture": "phase_18_2", "case": "sparkbot_integration_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "humaninput_runtime_bridge_attempt_regression",
+      "expected_outcome": "intake_rejected",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-humaninput",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic HumanInput runtime bridge attempt.",
+        "normalized_request": "synthetic humaninput bridge attempt",
+        "requested_action": "describe blocked humaninput bridge request",
+        "action_category": "informational",
+        "raw_human_input": "synthetic raw payload marker only",
+        "provenance": {"fixture": "phase_18_2", "case": "humaninput_runtime_bridge_attempt_regression"}
+      }
+    },
+    {
+      "case_id": "stale_candidate_regression",
+      "expected_outcome": "blocked_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-stale",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review stale synthetic candidate safely.",
+        "normalized_request": "stale synthetic request",
+        "requested_action": "review stale request",
+        "action_category": "informational",
+        "freshness": "stale",
+        "provenance": {"fixture": "phase_18_2", "case": "stale_candidate_regression"}
+      }
+    },
+    {
+      "case_id": "replayed_candidate_regression",
+      "expected_outcome": "blocked_non_executing",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-replayed",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review replayed synthetic candidate safely.",
+        "normalized_request": "replayed synthetic request",
+        "requested_action": "review replayed request",
+        "action_category": "informational",
+        "replay_status": "replayed",
+        "provenance": {"fixture": "phase_18_2", "case": "replayed_candidate_regression"}
+      }
+    },
+    {
+      "case_id": "malformed_candidate_regression",
+      "expected_outcome": "invalid_or_blocked_non_executing",
+      "candidate_mutation": "remove_execution_allowed",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-malformed",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review malformed synthetic candidate safely.",
+        "normalized_request": "malformed synthetic candidate",
+        "requested_action": "review malformed request",
+        "action_category": "informational",
+        "provenance": {"fixture": "phase_18_2", "case": "malformed_candidate_regression"}
+      }
+    },
+    {
+      "case_id": "unknown_status_regression",
+      "expected_outcome": "blocked_non_executing",
+      "candidate_status_override": "trusted_admin_ready",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase18-boundary-unknown-status",
+        "source": "phase_18_boundary_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review unknown status synthetic candidate safely.",
+        "normalized_request": "unknown status synthetic candidate",
+        "requested_action": "review unknown status request",
+        "action_category": "informational",
+        "provenance": {"fixture": "phase_18_2", "case": "unknown_status_regression"}
+      }
+    }
+  ]
+}

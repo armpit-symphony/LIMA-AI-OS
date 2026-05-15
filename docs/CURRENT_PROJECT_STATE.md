@@ -228,13 +228,15 @@ Phase 18.0 Regression Hardening Charter is complete, merged to `main`, and tagge
 
 Phase 18.1 Candidate API Regression Tests is complete, merged to `main`, and tagged. It adds test-only regression coverage for existing non-executing candidate APIs, including non-executable invariants, authority-bearing field invalidation, unknown status blocking, provenance preservation, stale/replayed handling, dangerous wording no-bypass behavior, and raw HumanInput-like payload rejection.
 
+Phase 18.2 Acceptance Boundary Regression Fixtures is complete, merged to `main`, and tagged. It adds synthetic inert acceptance-boundary regression fixtures and fixture tests for approval-bypass wording, shell/browser/network/file/robotics attempts, Sparkbot integration attempts, HumanInput runtime bridge attempts, stale/replayed candidates, malformed candidates, and unknown statuses.
+
 Latest completed phase merge:
 
-`a9b9d8c51b45e5196ade2170f07a04cd59100104`
+`PENDING_PHASE_18_2_MERGE`
 
 Latest tag:
 
-`phase-18.1-candidate-api-regression-tests`
+`phase-18.2-acceptance-boundary-regression-fixtures`
 
 ## Current Next Step
 
@@ -244,11 +246,11 @@ Continue only inside the approved Phase 18 test-only regression hardening lane. 
 
 Recommended next branch:
 
-phase-18-2-acceptance-boundary-regression-fixtures
+phase-18-3-forbidden-integration-regression-tests
 
 Latest completed merge:
 
-`a9b9d8c51b45e5196ade2170f07a04cd59100104`
+`PENDING_PHASE_18_2_MERGE`
 
 Recommended PR target:
 
@@ -258,7 +260,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 18.2 - Acceptance Boundary Regression Fixtures.
+Phase 18.3 - Forbidden Integration Regression Tests.
 
 Phase 18 approval question:
 

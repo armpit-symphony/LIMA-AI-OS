@@ -5306,6 +5306,31 @@ Blocked:
 
 Continue only to Phase 18.2 acceptance boundary regression fixtures.
 
+## Phase 18.2 Gate: Acceptance Boundary Regression Fixtures
+
+Phase 18.2 may add synthetic acceptance-boundary regression fixtures and fixture tests.
+
+Allowed:
+
+- synthetic inert fixture cases under `tests/fixtures/runtime_extraction/`
+- fixture tests under `tests/`
+- phase documentation
+- existing non-executing API exercise from tests only
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 18.3 forbidden integration regression tests.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

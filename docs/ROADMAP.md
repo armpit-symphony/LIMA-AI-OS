@@ -5625,6 +5625,34 @@ Status:
 - complete
 - tagged as `phase-18.1-candidate-api-regression-tests`
 
+## Phase 18.2 - Acceptance Boundary Regression Fixtures
+
+Goal:
+
+Add synthetic acceptance-boundary regression fixtures and fixture tests.
+
+Deliverables:
+
+- `docs/PHASE_18_2_ACCEPTANCE_BOUNDARY_REGRESSION_FIXTURES.md`
+- `tests/fixtures/runtime_extraction/phase_18_2_acceptance_boundary_regression_fixtures.json`
+- `tests/fixtures/runtime_extraction/phase_18_2_acceptance_boundary_regression_cases.json`
+- `tests/test_phase_18_2_acceptance_boundary_regression_fixtures.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- synthetic inert fixture cases only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- boundary fixture cases remain non-executing or rejected
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-18.2-acceptance-boundary-regression-fixtures`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
