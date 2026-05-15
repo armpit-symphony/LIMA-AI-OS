@@ -1,0 +1,77 @@
+{
+  "phase": "10.1",
+  "status": "next_runtime_slice_design_options",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_10_1_NEXT_RUNTIME_SLICE_DESIGN_OPTIONS.md",
+  "source_phase": "10.0",
+  "evaluated_options": [
+    {
+      "id": "candidate_validation",
+      "status": "preferred_with_status_normalization",
+      "runtime_implementation_approved": false
+    },
+    {
+      "id": "candidate_status_normalization",
+      "status": "preferred_with_candidate_validation",
+      "runtime_implementation_approved": false
+    },
+    {
+      "id": "candidate_lifecycle_metadata",
+      "status": "defer_as_broader_than_next_safe_slice",
+      "runtime_implementation_approved": false
+    },
+    {
+      "id": "intake_error_taxonomy",
+      "status": "supporting_metadata_for_validation",
+      "runtime_implementation_approved": false
+    },
+    {
+      "id": "provenance_hardening",
+      "status": "validation_requirement_not_standalone_slice",
+      "runtime_implementation_approved": false
+    },
+    {
+      "id": "no_further_runtime_work_yet",
+      "status": "always_safe",
+      "runtime_implementation_approved": false
+    }
+  ],
+  "recommended_future_slice": {
+    "id": "candidate_validation_and_status_normalization",
+    "phase_11_approval_required": true,
+    "runtime_implementation_approved_now": false,
+    "must_remain_non_executing": true,
+    "must_preserve_phase_5_runtime_bridge_gate": true,
+    "must_keep_execution_allowed_false": true,
+    "must_keep_side_effects_allowed_false": true,
+    "must_keep_approval_state_never_approved": true
+  },
+  "forbidden_behavior": [
+    "humaninput_runtime_bridge",
+    "sparkbot_wiring",
+    "live_adapter",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_behavior"
+  ],
+  "next_phase": "phase_10_2_exact_file_touch_map_for_next_runtime_slice",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
