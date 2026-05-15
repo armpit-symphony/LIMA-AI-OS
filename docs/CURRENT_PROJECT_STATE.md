@@ -220,7 +220,7 @@ Phase 17.1 Acceptance Test Coverage Review is complete, merged to `main`, and ta
 
 Latest completed phase merge:
 
-`PENDING_PHASE_17_1_MERGE`
+`18985ce77f41faaf07297b9b433464ad450f5d59`
 
 Latest tag:
 
@@ -238,7 +238,7 @@ phase-17-2-remaining-safety-gap-review
 
 Latest completed merge:
 
-`PENDING_PHASE_17_1_MERGE`
+`18985ce77f41faaf07297b9b433464ad450f5d59`
 
 Recommended PR target:
 
