@@ -4,6 +4,7 @@ from .candidate_status import (
     ALLOWED_CANDIDATE_STATUSES,
     CandidateStatusError,
     normalize_candidate_status,
+    validate_candidate,
 )
 from .intake_candidate import IntakeCandidateError, build_intake_candidate
 
@@ -13,4 +14,5 @@ __all__ = [
     "IntakeCandidateError",
     "build_intake_candidate",
     "normalize_candidate_status",
+    "validate_candidate",
 ]

@@ -16,6 +16,23 @@ ALLOWED_CANDIDATE_STATUSES: Final[frozenset[str]] = frozenset(
 BLOCKED_STATUS: Final[str] = "blocked"
 NEEDS_REVIEW_STATUS: Final[str] = "needs_review"
 PROPOSED_STATUS: Final[str] = "proposed"
+REQUIRED_CANDIDATE_FIELDS: Final[tuple[str, ...]] = (
+    "candidate_id",
+    "intake_id",
+    "source",
+    "source_channel",
+    "operator_intent",
+    "normalized_request",
+    "requested_action",
+    "action_category",
+    "risk_tier",
+    "approval_state",
+    "blocked_reason",
+    "provenance",
+    "executable",
+    "execution_allowed",
+    "side_effects_allowed",
+)
 
 
 class CandidateStatusError(ValueError):
@@ -45,6 +62,30 @@ def normalize_candidate_status(candidate: Mapping[str, Any]) -> dict[str, Any]:
     if status == BLOCKED_STATUS:
         normalized["blocked_reason"] = reason or "candidate_not_execution_ready"
 
+    return normalized
+
+
+def validate_candidate(candidate: Mapping[str, Any]) -> dict[str, Any]:
+    """Return a fail-closed validation result for candidate metadata."""
+
+    if not isinstance(candidate, Mapping):
+        raise CandidateStatusError("candidate must be a mapping")
+
+    errors = _candidate_validation_errors(candidate)
+    normalized = normalize_candidate_status(candidate)
+
+    if errors:
+        normalized["candidate_status"] = BLOCKED_STATUS
+        normalized["approval_state"] = BLOCKED_STATUS
+        normalized["blocked_reason"] = ";".join(errors)
+
+    normalized["validation_state"] = "invalid" if errors else "valid"
+    normalized["validation_errors"] = tuple(errors)
+    normalized["executable"] = False
+    normalized["execution_allowed"] = False
+    normalized["side_effects_allowed"] = False
+    normalized["approved"] = False
+    normalized["phase_5_humaninput_runtime_bridge_gated"] = True
     return normalized
 
 
@@ -92,3 +133,34 @@ def _safe_approval_state(candidate: Mapping[str, Any], status: str) -> str:
     if status == NEEDS_REVIEW_STATUS:
         return "approval_required"
     return BLOCKED_STATUS
+
+
+def _candidate_validation_errors(candidate: Mapping[str, Any]) -> list[str]:
+    errors: list[str] = []
+    missing = [field_name for field_name in REQUIRED_CANDIDATE_FIELDS if field_name not in candidate]
+    if missing:
+        errors.append(f"missing_required_candidate_fields:{','.join(missing)}")
+
+    provenance = candidate.get("provenance")
+    if not isinstance(provenance, Mapping) or not provenance:
+        errors.append("provenance_missing_or_invalid")
+
+    if candidate.get("executable") is not False:
+        errors.append("executable_must_be_false")
+    if candidate.get("execution_allowed") is not False:
+        errors.append("execution_allowed_must_be_false")
+    if candidate.get("side_effects_allowed") is not False:
+        errors.append("side_effects_allowed_must_be_false")
+    if str(candidate.get("approval_state", "")).strip().lower() == "approved":
+        errors.append("approval_state_must_not_be_approved")
+    if candidate.get("approved") is True:
+        errors.append("approved_flag_must_be_false")
+
+    freshness = str(candidate.get("freshness", "fresh")).strip().lower()
+    replay_status = str(candidate.get("replay_status", "not_replayed")).strip().lower()
+    if freshness != "fresh":
+        errors.append("candidate_must_not_be_stale")
+    if replay_status != "not_replayed":
+        errors.append("candidate_must_not_be_replayed")
+
+    return errors
