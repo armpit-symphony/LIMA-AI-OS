@@ -1,0 +1,51 @@
+{
+  "phase": "18.0",
+  "status": "regression_hardening_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_18_0_REGRESSION_HARDENING_CHARTER.md",
+  "lane_scope": [
+    "existing_non_executing_candidate_apis",
+    "acceptance_gate_boundaries",
+    "phase_5_humaninput_runtime_bridge_gating",
+    "absence_of_sparkbot_wiring_and_live_adapters",
+    "absence_of_approval_execution_dispatch_audit_persistence_and_physical_world_behavior"
+  ],
+  "planned_phase_18_work": [
+    "phase_18_1_candidate_api_regression_tests",
+    "phase_18_2_acceptance_boundary_regression_fixtures",
+    "phase_18_3_forbidden_integration_regression_tests",
+    "phase_18_4_regression_hardening_readiness_review",
+    "phase_18_5_phase_18_archive_closeout"
+  ],
+  "not_approved": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_integration",
+    "humaninput_runtime_bridge",
+    "live_adapters",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_behavior"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

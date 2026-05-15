@@ -3611,6 +3611,27 @@ Consequences:
 - Phase 18 remains unapproved
 - runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0193: Phase 18 Opens As Test-Only Regression Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 18.0 opens Phase 18 as a test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries.
+
+Rationale:
+
+Phase 17 recommended regression hardening as the safest active next lane because it improves confidence without changing runtime behavior, expanding runtime scope, or introducing integration behavior.
+
+Consequences:
+
+- Phase 18.0 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 18.1 may add candidate API regression tests
+- Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

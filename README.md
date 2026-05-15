@@ -430,6 +430,8 @@ Phase 17.3 compares Phase 18 options and recommends test-only regression hardeni
 
 Phase 17.4 archives Phase 17 as a completed acceptance-gate audit/archive lane and preserves the Phase 18 approval question for a test-only regression hardening lane.
 
+Phase 18.0 opens the approved test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries. It keeps runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
