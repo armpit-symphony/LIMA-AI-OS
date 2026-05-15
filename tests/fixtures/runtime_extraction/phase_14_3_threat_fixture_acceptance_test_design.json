@@ -1,0 +1,91 @@
+{
+  "phase": "14.3",
+  "status": "threat_fixture_acceptance_test_design",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_14_3_THREAT_FIXTURE_ACCEPTANCE_TEST_DESIGN.md",
+  "future_fixture_acceptance_tests": [
+    {
+      "name": "test_malformed_candidate_fixture_is_safe",
+      "fixture_family": "malformed_candidate",
+      "expected_assertion": "rejected_or_invalid_without_execution"
+    },
+    {
+      "name": "test_unknown_status_fixture_is_safe",
+      "fixture_family": "unknown_status",
+      "expected_assertion": "blocked_invalid_or_needs_review"
+    },
+    {
+      "name": "test_stale_candidate_fixture_is_blocked_or_invalid",
+      "fixture_family": "stale_candidate",
+      "expected_assertion": "not_executable_and_not_approved"
+    },
+    {
+      "name": "test_replayed_candidate_fixture_is_blocked_or_invalid",
+      "fixture_family": "replayed_candidate",
+      "expected_assertion": "not_executable_and_not_approved"
+    },
+    {
+      "name": "test_approval_bypass_wording_fixture_does_not_authorize",
+      "fixture_family": "approval_bypass_wording",
+      "expected_assertion": "operator_admin_phil_trusted_wording_grants_no_approval"
+    },
+    {
+      "name": "test_shell_command_attempt_fixture_is_non_executing",
+      "fixture_family": "shell_command_attempt",
+      "expected_assertion": "non_executing_and_side_effect_free"
+    },
+    {
+      "name": "test_browser_or_network_attempt_fixture_is_non_executing",
+      "fixture_family": "browser_or_network_attempt",
+      "expected_assertion": "non_executing_and_side_effect_free"
+    },
+    {
+      "name": "test_file_mutation_attempt_fixture_is_non_mutating",
+      "fixture_family": "file_mutation_attempt",
+      "expected_assertion": "non_mutating_and_side_effect_free"
+    },
+    {
+      "name": "test_robotics_or_physical_world_attempt_fixture_is_blocked",
+      "fixture_family": "robotics_or_physical_world_attempt",
+      "expected_assertion": "blocked_or_needs_review"
+    },
+    {
+      "name": "test_sparkbot_integration_attempt_fixture_is_reference_only",
+      "fixture_family": "sparkbot_integration_attempt",
+      "expected_assertion": "reference_only_and_not_wired"
+    },
+    {
+      "name": "test_humaninput_bridge_attempt_fixture_is_gated",
+      "fixture_family": "humaninput_bridge_attempt",
+      "expected_assertion": "absent_blocked_or_explicitly_gated"
+    }
+  ],
+  "fixture_rules": {
+    "synthetic": true,
+    "inert": true,
+    "non_runtime": true,
+    "no_live_shell_commands_for_execution": true,
+    "no_live_network_targets": true,
+    "no_private_operational_data": true,
+    "no_credentials": true,
+    "no_robot_instructions": true,
+    "no_approval_dispatch_or_persistence_implication": true
+  },
+  "next_phase": "phase_14_4_future_runtime_acceptance_gate_closeout",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "fixture_execution_code_added": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
