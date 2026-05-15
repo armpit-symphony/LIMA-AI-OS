@@ -1,0 +1,53 @@
+{
+  "phase": "16.0",
+  "status": "test_only_acceptance_implementation_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_16_0_TEST_ONLY_ACCEPTANCE_IMPLEMENTATION_CHARTER.md",
+  "phase_15_inputs": [
+    "phase_15_1_future_static_test_implementation_plan",
+    "phase_15_2_future_runtime_contract_test_implementation_plan",
+    "phase_15_3_future_threat_fixture_test_implementation_plan",
+    "phase_15_4_test_only_implementation_readiness_gate_closeout"
+  ],
+  "approved_phase_16_implementation_groups": [
+    "static_forbidden_pattern_acceptance_tests",
+    "runtime_contract_acceptance_tests",
+    "synthetic_threat_fixture_acceptance_tests",
+    "test_only_implementation_readiness_review",
+    "phase_16_archive_closeout"
+  ],
+  "allowed_test_behaviors": {
+    "inspect_existing_runtime_source_text": true,
+    "exercise_existing_non_executing_candidate_apis": true,
+    "use_synthetic_phase_16_fixtures": true
+  },
+  "blocked_test_behaviors": {
+    "runtime_file_mutation": true,
+    "tests_support_changes": true,
+    "reusable_scanner_helper_added": true,
+    "external_service_calls": true,
+    "command_execution": true,
+    "dispatch": true,
+    "audit_persistence": true,
+    "live_integration_path_creation": true
+  },
+  "next_phase": "phase_16_1_static_forbidden_pattern_acceptance_tests",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
