@@ -142,27 +142,29 @@ Phase 10.0 Post-Phase-9 Runtime Slice Review is complete, merged to `main`, and 
 
 Phase 10.1 Next Runtime Slice Design Options is complete, merged to `main`, and tagged. It evaluates candidate validation, status normalization, lifecycle metadata, intake error taxonomy, provenance hardening, and stopping with no further runtime work, then recommends candidate validation plus status normalization as a future Phase 11 approval candidate only.
 
+Phase 10.2 Exact File-Touch Map for Next Runtime Slice is complete, merged to `main`, and tagged. It maps only `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and a possible future `lima/kernel/candidate_status.py` as future-eligible for a Phase 11 candidate validation/status normalization slice, while keeping implementation unapproved.
+
 Latest completed phase merge:
 
-`00411e925e7d2209af466b5911568c90e7fcf8c2`
+`1977bc4b8120bc5759bf943b25cff73efec2315f`
 
 Latest tag:
 
-`phase-10.1-next-runtime-slice-design-options`
+`phase-10.2-exact-file-touch-map-for-next-runtime-slice`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 10 no-code design lane with Phase 10.2 Exact File-Touch Map for Next Runtime Slice. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.1.
+Continue the approved Phase 10 no-code design lane with Phase 10.3 Acceptance Test and Rollback Plan. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.2.
 
 Recommended next branch:
 
-phase-10-2-exact-file-touch-map-for-next-runtime-slice
+phase-10-3-acceptance-test-and-rollback-plan
 
 Latest completed merge:
 
-`00411e925e7d2209af466b5911568c90e7fcf8c2`
+`1977bc4b8120bc5759bf943b25cff73efec2315f`
 
 Recommended PR target:
 
@@ -172,7 +174,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 10.2 - Exact File-Touch Map for Next Runtime Slice.
+Phase 10.3 - Acceptance Test and Rollback Plan.
 
 ## Active Phase 4 Status
 

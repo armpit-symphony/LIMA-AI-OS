@@ -4178,6 +4178,35 @@ After merge:
 
 Continue only to Phase 10.2 exact file-touch mapping. No Phase 11 runtime implementation or runtime expansion is approved by this design-options review.
 
+## Phase 10.2 Gate: Exact File-Touch Map for Next Runtime Slice
+
+Phase 10.2 may map the exact future file-touch surface for a possible Phase 11 candidate validation and status normalization slice.
+
+GO:
+
+- list future-eligible runtime files exactly
+- define per-file future limits
+- list forbidden runtime surfaces
+- preserve Phase 5 runtime bridge gate
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 10.3 acceptance-test and rollback planning. No Phase 11 runtime implementation or runtime expansion is approved by this file-touch map.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

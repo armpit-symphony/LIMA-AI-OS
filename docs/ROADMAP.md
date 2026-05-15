@@ -4225,6 +4225,46 @@ Status:
 - complete
 - tagged as `phase-10.1-next-runtime-slice-design-options`
 
+## Phase 10.2 - Exact File-Touch Map for Next Runtime Slice
+
+Goal:
+
+Map the exact future runtime file-touch surface for a possible Phase 11 candidate validation and status normalization slice without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_10_2_EXACT_FILE_TOUCH_MAP_FOR_NEXT_RUNTIME_SLICE.md`
+- `tests/fixtures/runtime_extraction/phase_10_2_exact_file_touch_map_for_next_runtime_slice.json`
+- `tests/test_phase_10_2_exact_file_touch_map_for_next_runtime_slice.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- future-eligible files listed exactly
+- forbidden runtime surfaces listed
+- `lima/kernel/intake_candidate.py` limited to pure validation/status metadata touch only
+- `lima/kernel/__init__.py` limited to safe side-effect-free exports only
+- possible `lima/kernel/candidate_status.py` listed as future file only
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 10.3 - Acceptance Test and Rollback Plan
+
+Status:
+
+- complete
+- tagged as `phase-10.2-exact-file-touch-map-for-next-runtime-slice`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -2788,6 +2788,27 @@ Consequences:
 - Phase 11 runtime implementation remains unapproved
 - Phase 5 runtime bridge remains gated
 
+## ADR-0152: Phase 11 Candidate File Scope Must Stay Kernel-Local
+
+Status: Accepted
+
+Decision:
+
+Phase 10.2 maps a possible Phase 11 candidate validation and status normalization slice to `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and a possible new `lima/kernel/candidate_status.py` only.
+
+Rationale:
+
+The next runtime slice should strengthen candidate metadata without touching adapters, contracts, Guardian, Harness, IO, persistence, services, shells, spine, Sparkbot, or `tests/support/`.
+
+Consequences:
+
+- Phase 10.2 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.2
+- no `tests/support/` files are changed
+- any future Phase 11 implementation must stay inside the mapped file scope unless Phil separately approves expansion
+- Phase 5 runtime bridge remains gated
+- approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

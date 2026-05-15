@@ -348,6 +348,8 @@ Phase 10.0 opens the no-code next-runtime-slice design lane with a post-Phase-9 
 
 Phase 10.1 evaluates candidate validation, status normalization, lifecycle metadata, intake error taxonomy, provenance hardening, and stopping with no further runtime work. It recommends a future candidate validation plus status normalization slice for Phase 11 consideration only, with implementation still unapproved.
 
+Phase 10.2 maps the exact future file-touch surface for that possible Phase 11 slice. It names only `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and a possible new `lima/kernel/candidate_status.py` as future-eligible, while keeping all runtime implementation unapproved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
