@@ -364,6 +364,8 @@ Phase 11.2 implements candidate status normalization under `lima/kernel/candidat
 
 Phase 11.3 implements candidate validation in the same approved kernel-local scope. It fail-closes malformed or authority-bearing candidate metadata while preserving non-executing guarantees and the Phase 5 runtime bridge gate.
 
+Phase 11.4 reviews the Phase 11 runtime slice after status normalization and validation. It is docs/tests/fixtures only, confirms no new runtime behavior, and keeps Phase 11.5 as archive-only before any Phase 12 decision.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -2937,6 +2937,28 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0160: Phase 11 Runtime Slice Is Ready Only For Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 11.4 reviews the Phase 11 candidate status normalization and validation runtime slice as ready only for Phase 11.5 audit/archive closeout, not for runtime expansion.
+
+Rationale:
+
+The runtime slice has added the approved kernel-local status normalization and validation behavior. A readiness review keeps the implementation from being mistaken for HumanInput runtime bridge approval, Sparkbot integration, live adapter work, execution, dispatch, approval enforcement, or audit persistence.
+
+Consequences:
+
+- Phase 11.4 is docs/tests/fixtures only
+- no new `lima/` files are changed by Phase 11.4
+- no `tests/support/` files are changed
+- reviewed runtime files remain `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py`
+- Phase 11.5 may archive the slice
+- Phase 12 and any runtime expansion remain gated
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

@@ -4544,6 +4544,46 @@ Status:
 - complete
 - tagged as `phase-11.3-candidate-validation-runtime-implementation`
 
+## Phase 11.4 - Runtime Slice Readiness Review
+
+Goal:
+
+Review the Phase 11.2 and Phase 11.3 runtime slice before archival closeout.
+
+Deliverables:
+
+- `docs/PHASE_11_4_RUNTIME_SLICE_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_11_4_runtime_slice_readiness_review.json`
+- `tests/test_phase_11_4_runtime_slice_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no new `lima/` changes
+- no `tests/support/` changes
+- reviewed runtime files remain limited to `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py`
+- candidate status normalization and validation remain non-executing
+- execution_allowed remains false
+- side_effects_allowed remains false
+- approval_state never becomes approved
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 11.5 - Phase 11 Runtime Slice Audit Archive / Closeout
+
+Status:
+
+- complete
+- tagged as `phase-11.4-runtime-slice-readiness-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

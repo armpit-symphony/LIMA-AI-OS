@@ -4417,6 +4417,35 @@ After merge:
 
 Continue only to Phase 11.4 runtime slice readiness review.
 
+## Phase 11.4 Gate: Runtime Slice Readiness Review
+
+Phase 11.4 may review the Phase 11.2 and Phase 11.3 runtime slice before archive closeout.
+
+GO:
+
+- review candidate status normalization and candidate validation boundaries
+- confirm the runtime files touched remain inside the Phase 10.2 file map
+- confirm execution_allowed and side_effects_allowed remain false
+- confirm approval_state never becomes approved
+- confirm Phase 5 runtime bridge remains gated
+- add readiness review docs, fixture, and static/behavioral tests
+
+NO-GO:
+
+- new `lima/` changes
+- `tests/support/` changes
+- runtime expansion
+- HumanInput runtime bridge
+- Sparkbot import or wiring
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 11.5 Phase 11 runtime slice audit archive / closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
