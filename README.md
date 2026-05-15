@@ -408,6 +408,18 @@ Phase 15.3 proposes the future threat fixture acceptance-test implementation pac
 
 Phase 15.4 closes Phase 15 at a Phase 16 decision gate. It marks the proposed package ready only for a later explicitly approved test-only implementation lane and keeps runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
 
+Phase 16.0 opens the approved test-only acceptance-gate implementation lane while keeping runtime, `lima/`, and `tests/support` changes blocked.
+
+Phase 16.1 adds static forbidden-pattern acceptance tests against the existing non-executing kernel candidate files.
+
+Phase 16.2 adds runtime contract acceptance tests against existing non-executing candidate APIs, proving execution and side-effect flags remain false, approval never becomes approved, provenance is preserved, and unsafe inputs fail closed.
+
+Phase 16.3 adds synthetic threat fixture acceptance tests for malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge attempts.
+
+Phase 16.4 reviews the test-only acceptance implementation as ready for archive/closeout.
+
+Phase 16.5 archives Phase 16 as a completed test-only acceptance-gate lane and stops before Phase 17 or any runtime expansion.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

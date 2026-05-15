@@ -5254,6 +5254,177 @@ Status:
 - complete
 - tagged as `phase-15.4-test-only-implementation-readiness-gate-closeout`
 
+## Phase 16.0 - Test-Only Acceptance Implementation Charter
+
+Goal:
+
+Open Phase 16 as an explicitly approved test-only acceptance-gate implementation lane.
+
+Deliverables:
+
+- `docs/PHASE_16_0_TEST_ONLY_ACCEPTANCE_IMPLEMENTATION_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_16_0_test_only_acceptance_implementation_charter.json`
+- `tests/test_phase_16_0_test_only_acceptance_implementation_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- acceptance implementation scope is limited to future Phase 16 tests and synthetic fixtures
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-16.0-test-only-acceptance-implementation-charter`
+
+## Phase 16.1 - Static Forbidden-Pattern Acceptance Tests
+
+Goal:
+
+Implement static forbidden-pattern acceptance tests against explicit existing non-executing kernel candidate files.
+
+Deliverables:
+
+- `docs/PHASE_16_1_STATIC_FORBIDDEN_PATTERN_ACCEPTANCE_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_16_1_static_forbidden_pattern_acceptance_tests.json`
+- `tests/test_phase_16_1_static_forbidden_pattern_acceptance_tests.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no scanner helper implementation outside the phase test
+- forbidden Sparkbot, HumanInput bridge, live adapter, execution, approval, dispatch, persistence, shell, browser, network, file mutation, robotics, and physical-world patterns are checked
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-16.1-static-forbidden-pattern-acceptance-tests`
+
+## Phase 16.2 - Runtime Contract Acceptance Tests
+
+Goal:
+
+Implement test-only contract acceptance coverage against existing non-executing candidate APIs.
+
+Deliverables:
+
+- `docs/PHASE_16_2_RUNTIME_CONTRACT_ACCEPTANCE_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_16_2_runtime_contract_acceptance_tests.json`
+- `tests/test_phase_16_2_runtime_contract_acceptance_tests.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- no runtime code changes
+- no `lima/` changes
+- no `tests/support/` changes
+- execution and side-effect flags remain false
+- approval state never becomes approved
+- provenance is preserved
+- malformed, unknown, stale, replayed, and approval-bypass inputs fail closed
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-16.2-runtime-contract-acceptance-tests`
+
+## Phase 16.3 - Threat Fixture Acceptance Tests
+
+Goal:
+
+Implement synthetic threat fixture acceptance tests for risky candidate categories without live commands, live targets, credentials, private infrastructure, robot instructions, approval tokens, or runtime behavior.
+
+Deliverables:
+
+- `docs/PHASE_16_3_THREAT_FIXTURE_ACCEPTANCE_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_16_3_threat_fixture_acceptance_cases.json`
+- `tests/fixtures/runtime_extraction/phase_16_3_threat_fixture_acceptance_tests.json`
+- `tests/test_phase_16_3_threat_fixture_acceptance_tests.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- synthetic inert fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge attempts are covered
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-16.3-threat-fixture-acceptance-tests`
+
+## Phase 16.4 - Test-Only Acceptance Implementation Readiness Review
+
+Goal:
+
+Review the Phase 16.1 through Phase 16.3 test-only acceptance implementation before archive/closeout.
+
+Deliverables:
+
+- `docs/PHASE_16_4_TEST_ONLY_ACCEPTANCE_IMPLEMENTATION_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_16_4_test_only_acceptance_implementation_readiness_review.json`
+- `tests/test_phase_16_4_test_only_acceptance_implementation_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- static, contract, and fixture acceptance coverage reviewed as test-only
+- Phase 16 ready for archive/closeout
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-16.4-test-only-acceptance-implementation-readiness-review`
+
+## Phase 16.5 - Phase 16 Test-Only Acceptance Archive / Closeout
+
+Goal:
+
+Archive Phase 16 as a completed test-only acceptance-gate implementation lane and preserve the Phase 17 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_16_5_PHASE_16_TEST_ONLY_ACCEPTANCE_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_16_5_phase_16_test_only_acceptance_archive_closeout.json`
+- `tests/test_phase_16_5_phase_16_test_only_acceptance_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no new `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- no helper behavior changes
+- Phase 16.0 through Phase 16.4 listed as complete
+- Phase 5 runtime bridge remains gated
+- Phase 17 requires explicit Phil approval
+- runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+- tests pass
+
+Next likely phase:
+
+- Phase 17 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-16.5-phase-16-test-only-acceptance-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -3385,6 +3385,127 @@ Consequences:
 - Phase 16 requires explicit Phil approval
 - runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0182: Phase 16 Opens As Test-Only Acceptance Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 16 opens as an explicitly approved test-only acceptance-gate implementation lane.
+
+Rationale:
+
+Phase 15 proposed the future static, contract, and threat fixture acceptance-test package. Phase 16 may implement that package only under `tests/`, fixtures, and docs while preserving runtime and integration boundaries.
+
+Consequences:
+
+- Phase 16.0 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 16.1 may implement static forbidden-pattern acceptance tests
+
+## ADR-0183: Static Forbidden-Pattern Acceptance Tests Are Test-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 16.1 implements static forbidden-pattern acceptance tests only against explicit existing non-executing kernel candidate files.
+
+Rationale:
+
+Forbidden import, call, side-effect, boundary-name, and authority-claim checks should be executable tests, but they must not create scanner helpers, runtime hooks, or production enforcement.
+
+Consequences:
+
+- static checks live under `tests/`
+- no scanner helper is added under `tests/support/`
+- no runtime enforcement is added
+- no `lima/` files are changed
+- Phase 16.2 may implement runtime contract acceptance tests against existing APIs
+
+## ADR-0184: Runtime Contract Acceptance Tests May Exercise Existing Non-Executing APIs Only
+
+Status: Accepted
+
+Decision:
+
+Phase 16.2 implements runtime contract acceptance tests against existing non-executing candidate APIs without modifying those APIs.
+
+Rationale:
+
+The acceptance gate should prove existing candidate invariants remain intact: execution and side-effect flags stay false, approval never becomes approved, provenance is preserved, and malformed, unknown, stale/replayed, and approval-bypass cases fail closed.
+
+Consequences:
+
+- tests may import existing candidate APIs
+- no runtime code is changed
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 16.3 may add synthetic threat fixture acceptance tests
+
+## ADR-0185: Threat Fixture Acceptance Tests Use Synthetic Inert Fixtures Only
+
+Status: Accepted
+
+Decision:
+
+Phase 16.3 implements threat fixture acceptance tests using synthetic, inert, non-runtime fixtures only.
+
+Rationale:
+
+Threat fixture coverage is useful only if it cannot become live instruction material. Fixtures must avoid credentials, private infrastructure, live targets, real file mutation targets, robot instructions, approval tokens, and audit records.
+
+Consequences:
+
+- threat fixtures live under `tests/fixtures/runtime_extraction/`
+- fixtures remain synthetic and inert
+- no live shell, browser, network, file mutation, robotics, or physical-world target is added
+- no runtime behavior is changed
+- Phase 16.4 may review readiness for archive/closeout
+
+## ADR-0186: Phase 16 Readiness Review Confirms Test-Only Acceptance Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 16.4 reviews the Phase 16.1 through Phase 16.3 acceptance implementation as test-only and ready for archive/closeout.
+
+Rationale:
+
+The acceptance implementation spans static checks, contract checks, and threat fixture checks. A readiness review records that the package remains test-only before the lane is archived.
+
+Consequences:
+
+- Phase 16.4 is docs/tests/fixtures only
+- no `lima/` or `tests/support/` files are changed
+- no runtime behavior or helper behavior is changed
+- Phase 16.5 may archive the lane
+
+## ADR-0187: Phase 16 Closes At A Phase 17 Audit Archive Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 16.5 archives Phase 16 as a completed test-only acceptance-gate implementation lane and preserves the Phase 17 approval question.
+
+Rationale:
+
+Phase 16 implemented the approved test-only acceptance package. Closing the lane prevents the tests from being mistaken for runtime expansion approval.
+
+Consequences:
+
+- Phase 16.5 is docs/tests/fixtures only
+- no new `lima/` files are changed
+- no `tests/support/` files are changed
+- runtime behavior remains unchanged
+- Phase 5 runtime bridge remains gated
+- Phase 17 requires explicit Phil approval
+- runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
