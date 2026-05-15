@@ -204,7 +204,7 @@ Phase 15.4 Test-Only Implementation Readiness Gate / Closeout is complete, merge
 
 Latest completed phase merge:
 
-`PENDING_PHASE_15_4_MERGE`
+`2f189389c78c05728aa6caeb762b613d2b657b4f`
 
 Latest tag:
 
@@ -222,7 +222,7 @@ none - Phase 16 requires explicit Phil approval
 
 Latest completed merge:
 
-`PENDING_PHASE_15_4_MERGE`
+`2f189389c78c05728aa6caeb762b613d2b657b4f`
 
 Recommended PR target:
 
