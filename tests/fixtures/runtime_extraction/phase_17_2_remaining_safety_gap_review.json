@@ -1,0 +1,48 @@
+{
+  "phase": "17.2",
+  "status": "remaining_safety_gap_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_17_2_REMAINING_SAFETY_GAP_REVIEW.md",
+  "remaining_gaps": [
+    "future_runtime_file_coverage_must_be_re_evaluated_per_slice",
+    "static_checks_are_not_runtime_policy_enforcement",
+    "contract_tests_cover_current_non_executing_candidate_apis_only",
+    "synthetic_threat_fixtures_are_not_live_integration_traffic",
+    "approval_semantics_remain_non_enforcing",
+    "audit_persistence_remains_unimplemented",
+    "sparkbot_humaninput_live_adapter_robo_os_boundaries_remain_future_lanes"
+  ],
+  "runtime_expansion_blockers": [
+    "exact_runtime_file_touch_scope_required",
+    "acceptance_tests_for_next_slice_required",
+    "rollback_and_audit_proof_required",
+    "forbidden_behavior_checks_for_expanded_scope_required",
+    "approval_semantics_decision_required",
+    "phase_5_humaninput_runtime_bridge_gating_required"
+  ],
+  "blocked_future_work": {
+    "runtime_expansion": true,
+    "sparkbot_integration": true,
+    "humaninput_runtime_bridge": true,
+    "live_adapters": true,
+    "approval_enforcement": true,
+    "audit_persistence": true,
+    "physical_world_behavior": true
+  },
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

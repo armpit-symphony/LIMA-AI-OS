@@ -5179,6 +5179,32 @@ Blocked:
 
 Continue only to Phase 17.2 remaining safety gap review.
 
+## Phase 17.2 Gate: Remaining Safety Gap Review
+
+Phase 17.2 may review remaining safety gaps before any next-lane decision.
+
+Allowed:
+
+- remaining gap review documentation
+- static remaining gap fixture metadata
+- static remaining gap tests
+- list runtime expansion blockers
+- preserve Phase 5 HumanInput runtime bridge gating
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 17.3 next-lane decision matrix.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

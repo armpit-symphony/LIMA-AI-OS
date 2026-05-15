@@ -3548,6 +3548,27 @@ Consequences:
 - limitations remain explicit
 - Phase 17.2 may review remaining safety gaps
 
+## ADR-0190: Remaining Safety Gaps Must Gate Any Runtime Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 17.2 records remaining safety gaps that must be resolved or explicitly accepted before any future runtime expansion.
+
+Rationale:
+
+Phase 16 acceptance coverage is useful but narrow. Future runtime work still requires exact file scope, acceptance tests, rollback/audit proof, forbidden behavior checks, approval semantics decisions, and continued Phase 5 HumanInput runtime bridge gating.
+
+Consequences:
+
+- Phase 17.2 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- runtime expansion remains blocked
+- Phase 17.3 may compare next-lane options
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
