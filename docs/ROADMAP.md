@@ -4345,6 +4345,47 @@ Status:
 - complete
 - tagged as `phase-10.4-phase-10-runtime-expansion-approval-gate-closeout`
 
+## Phase 10.5 - Phase 10 Next Runtime Slice Design Lane Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 10 as a completed no-code next-runtime-slice design lane before any Phase 11 runtime expansion decision.
+
+Deliverables:
+
+- `docs/PHASE_10_5_PHASE_10_NEXT_RUNTIME_SLICE_DESIGN_LANE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_10_5_phase_10_next_runtime_slice_design_lane_audit_archive_closeout.json`
+- `tests/test_phase_10_5_phase_10_next_runtime_slice_design_lane_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- no helper behavior changes
+- no `lima/kernel/candidate_status.py`
+- Phase 10.0 through Phase 10.4 listed as complete
+- Phase 10 archived as no-code design only
+- exact Phase 11 approval question preserved
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- explicit Phil decision on Phase 11 runtime implementation scope
+
+Status:
+
+- complete
+- tagged as `phase-10.5-phase-10-next-runtime-slice-design-lane-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

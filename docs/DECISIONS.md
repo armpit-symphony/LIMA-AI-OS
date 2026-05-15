@@ -2853,6 +2853,28 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
+
+Status: Accepted
+
+Decision:
+
+Phase 10.5 archives Phase 10.0 through Phase 10.4 as a completed no-code next-runtime-slice design lane. Phase 11 runtime implementation remains unapproved.
+
+Rationale:
+
+Phase 10 produced a design package, file-touch map, acceptance-test plan, rollback plan, and approval gate for a possible candidate validation/status normalization slice. Archiving the lane prevents the design package from being mistaken for runtime approval.
+
+Consequences:
+
+- Phase 10.5 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.5
+- no `tests/support/` files are changed
+- `lima/kernel/candidate_status.py` is not added
+- Phase 11 requires explicit Phil approval
+- Phase 5 runtime bridge remains gated
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

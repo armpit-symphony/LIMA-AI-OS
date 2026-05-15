@@ -354,6 +354,8 @@ Phase 10.3 defines the future acceptance tests, rollback plan, and audit proof r
 
 Phase 10.4 closes the Phase 10 no-code design lane at a runtime expansion approval gate. It preserves the exact Phase 11 approval question for a narrow candidate validation/status normalization slice and keeps Phase 11 blocked until Phil explicitly approves it.
 
+Phase 10.5 archives Phase 10 as a completed no-code next-runtime-slice design lane. It confirms no `lima/` changes, no `candidate_status.py`, no runtime behavior, and keeps Phase 11 gated pending explicit Phil approval.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

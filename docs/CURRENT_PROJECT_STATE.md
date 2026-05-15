@@ -148,19 +148,21 @@ Phase 10.3 Acceptance Test and Rollback Plan is complete, merged to `main`, and 
 
 Phase 10.4 Phase 10 Runtime Expansion Approval Gate / Closeout is complete, merged to `main`, and tagged. It closes the Phase 10 no-code design lane and preserves the exact Phase 11 approval question for Phil before any runtime expansion.
 
+Phase 10.5 Phase 10 Next Runtime Slice Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 10.0 through Phase 10.4 as no-code design only, confirms no `lima/` changes and no `lima/kernel/candidate_status.py`, and keeps Phase 11 gated pending explicit Phil approval.
+
 Latest completed phase merge:
 
-`b2780859f5dc3a9272750d17577e7efdb88edb03`
+`5b5dca5277f939ae4d7e8b0afac4ab4fd8dbbadc`
 
 Latest tag:
 
-`phase-10.4-phase-10-runtime-expansion-approval-gate-closeout`
+`phase-10.5-phase-10-next-runtime-slice-design-lane-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit Phil decision on Phase 11. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.4.
+Stop for explicit Phil decision on Phase 11. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.5.
 
 Recommended next branch:
 
@@ -168,7 +170,7 @@ not selected
 
 Latest completed merge:
 
-`b2780859f5dc3a9272750d17577e7efdb88edb03`
+`5b5dca5277f939ae4d7e8b0afac4ab4fd8dbbadc`
 
 Recommended PR target:
 

@@ -4267,6 +4267,39 @@ After merge:
 
 Stop for explicit Phil decision. No Phase 11 runtime implementation or runtime expansion is approved by this closeout.
 
+## Phase 10.5 Gate: Phase 10 Next Runtime Slice Design Lane Audit Archive / Closeout
+
+Phase 10.5 may archive Phase 10.0 through Phase 10.4 as a completed no-code design lane before any Phase 11 runtime expansion decision.
+
+GO:
+
+- list Phase 10.0 through Phase 10.4 as complete
+- document what Phase 10 added
+- document what Phase 10 did not add
+- confirm no `lima/` changes
+- confirm no `tests/support/` changes
+- confirm no `lima/kernel/candidate_status.py`
+- preserve the exact Phase 11 approval question
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- `lima/kernel/candidate_status.py`
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Stop for explicit Phil decision. No Phase 11 runtime implementation or runtime expansion is approved by this archive.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
