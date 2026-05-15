@@ -370,6 +370,8 @@ Phase 11.5 archives Phase 11 as a completed narrow runtime slice. It confirms on
 
 Phase 12.0 opens a docs/tests/fixtures-only planning lane after the Phase 11 runtime slice. It reviews the completed candidate status work and compares safe next directions without modifying runtime code.
 
+Phase 12.1 compares pause, future runtime design, Sparkbot boundary planning, Robo-OS boundary planning, and threat-model strengthening. It recommends continuing to threat-model and safety-gap review before any next lane is selected.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

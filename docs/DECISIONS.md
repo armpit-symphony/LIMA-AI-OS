@@ -3004,6 +3004,27 @@ Consequences:
 - Phase 12.1 may compare runtime, Sparkbot, Robo-OS, security, and pause options
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0163: Phase 12 Reviews Options Before Selecting A Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 12.1 compares pause, future runtime design, Sparkbot boundary planning, Robo-OS boundary planning, and threat-model strengthening without approving implementation.
+
+Rationale:
+
+Phase 11 created a real but narrow runtime slice. Before expanding runtime scope or planning integrations, the project needs a threat-model view of the options and their safety gaps.
+
+Consequences:
+
+- Phase 12.1 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no option grants implementation approval
+- Phase 12.2 may review threat models and safety gaps
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

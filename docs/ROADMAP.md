@@ -4662,6 +4662,41 @@ Status:
 - complete
 - tagged as `phase-12.0-post-phase-11-runtime-slice-review`
 
+## Phase 12.1 - Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause
+
+Goal:
+
+Compare safe next-direction options after Phase 11 without approving implementation.
+
+Deliverables:
+
+- `docs/PHASE_12_1_NEXT_DIRECTION_OPTIONS_RUNTIME_SPARKBOT_ROBO_OS_PAUSE.md`
+- `tests/fixtures/runtime_extraction/phase_12_1_next_direction_options_runtime_sparkbot_robo_os_pause.json`
+- `tests/test_phase_12_1_next_direction_options_runtime_sparkbot_robo_os_pause.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- pause, runtime design, Sparkbot boundary, Robo-OS boundary, and threat-model options reviewed
+- no implementation approval granted
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no HumanInput runtime bridge
+- no live adapter
+- no approval, enforcement, execution, dispatch, audit persistence, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 12.2 - Threat Model and Safety Gap Review
+
+Status:
+
+- complete
+- tagged as `phase-12.1-next-direction-options-runtime-sparkbot-robo-os-pause`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

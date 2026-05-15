@@ -4503,6 +4503,35 @@ After merge:
 
 Continue only to Phase 12.1 next-direction options.
 
+## Phase 12.1 Gate: Next Direction Options
+
+Phase 12.1 may compare safe next-direction options after Phase 11.
+
+GO:
+
+- compare pause and preserve
+- compare future narrow runtime slice design
+- compare Sparkbot integration boundary planning
+- compare Robo-OS / physical-world boundary planning
+- compare threat-model and security-test strengthening
+- recommend only the next planning/review phase
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 12.2 threat-model and safety-gap review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

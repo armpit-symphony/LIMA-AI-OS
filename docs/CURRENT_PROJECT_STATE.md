@@ -164,27 +164,29 @@ Phase 11.5 Phase 11 Runtime Slice Audit Archive / Closeout is complete, merged t
 
 Phase 12.0 Post-Phase-11 Runtime Slice Review is complete, merged to `main`, and tagged. It opens Phase 12 as a docs/tests/fixtures-only planning lane, reviews the completed Phase 11 candidate status slice, and keeps runtime expansion unapproved.
 
+Phase 12.1 Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause is complete, merged to `main`, and tagged. It compares pause, future runtime design, Sparkbot boundary planning, Robo-OS boundary planning, and threat-model strengthening, then recommends threat-model and safety-gap review before any next lane is selected.
+
 Latest completed phase merge:
 
-`af67282afc5be26d9c450ca15dbfef156001b35a`
+`66ede127107f302d2eb0d24b95964de77284b0ff`
 
 Latest tag:
 
-`phase-12.0-post-phase-11-runtime-slice-review`
+`phase-12.1-next-direction-options-runtime-sparkbot-robo-os-pause`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.1 Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.2 Threat Model and Safety Gap Review. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-12-1-next-direction-options-runtime-sparkbot-robo-os-pause
+phase-12-2-threat-model-and-safety-gap-review
 
 Latest completed merge:
 
-`af67282afc5be26d9c450ca15dbfef156001b35a`
+`66ede127107f302d2eb0d24b95964de77284b0ff`
 
 Recommended PR target:
 
@@ -194,7 +196,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 12.1 - Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause.
+Phase 12.2 - Threat Model and Safety Gap Review.
 
 Phase 12 approval question:
 
