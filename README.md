@@ -398,6 +398,16 @@ Phase 14.3 designs future fixture-based acceptance tests for malformed candidate
 
 Phase 14.4 closes Phase 14 at a Phase 15 decision gate. It preserves the future acceptance-gate requirements and recommends a docs/tests/fixtures-only Phase 15 proposal/readiness lane before any test implementation, runtime, or integration work.
 
+Phase 15.0 opens the approved acceptance-gate implementation proposal/readiness lane. It reviews Phase 14 and defines future proposal outputs without implementing acceptance tests.
+
+Phase 15.1 proposes the future static forbidden-pattern test implementation package, including file names, test names, assertions, and scanner constraints, without adding scanners or tests.
+
+Phase 15.2 proposes the future runtime contract acceptance-test implementation package for candidate invariants without adding tests or touching runtime code.
+
+Phase 15.3 proposes the future threat fixture acceptance-test implementation package and synthetic fixture names without adding those fixtures or tests.
+
+Phase 15.4 closes Phase 15 at a Phase 16 decision gate. It marks the proposed package ready only for a later explicitly approved test-only implementation lane and keeps runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

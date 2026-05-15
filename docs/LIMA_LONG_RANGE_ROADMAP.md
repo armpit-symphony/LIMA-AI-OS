@@ -266,6 +266,8 @@ Phase 13 is complete and tagged as docs/tests/fixtures-only threat-model-derived
 
 Phase 14 is complete and tagged as docs/tests/fixtures-only acceptance-gate test design. It converts Phase 13 requirements into future test names and expected assertions, but it does not implement acceptance-gate tests or approve runtime expansion. Phase 15 requires explicit operator approval.
 
+Phase 15 is complete and tagged as docs/tests/fixtures-only acceptance-gate implementation proposal/readiness work. It proposes the future test-only acceptance-gate package but does not implement the actual future tests, add future fixtures, change `lima/`, change `tests/support/`, or approve runtime expansion. Phase 16 requires explicit operator approval.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries

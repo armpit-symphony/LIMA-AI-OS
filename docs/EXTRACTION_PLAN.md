@@ -4860,6 +4860,120 @@ Blocked:
 
 Stop for explicit Phil decision. No Phase 15 work is approved by this closeout.
 
+## Phase 15.0 Gate: Acceptance-Gate Implementation Proposal Charter
+
+Phase 15.0 may open the approved docs/tests/fixtures-only acceptance-gate implementation proposal/readiness lane.
+
+Allowed:
+
+- review Phase 14.0 through Phase 14.4
+- define proposal/readiness outputs for a future test-only implementation package
+- list future test groups and fixture requirement categories
+
+Blocked:
+
+- actual future acceptance-test implementation
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 15.1 future static test implementation plan.
+
+## Phase 15.1 Gate: Future Static Test Implementation Plan
+
+Phase 15.1 may propose future static forbidden-pattern test files, names, assertions, and scanner constraints.
+
+Allowed:
+
+- docs/tests/fixtures-only proposal metadata
+- future static test file and test names
+- scanner constraints for a later explicitly approved implementation
+
+Blocked:
+
+- static test implementation
+- scanner utilities
+- runtime imports or execution
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 15.2 future runtime contract test implementation plan.
+
+## Phase 15.2 Gate: Future Runtime Contract Test Implementation Plan
+
+Phase 15.2 may propose future runtime contract acceptance-test files, names, and assertions.
+
+Allowed:
+
+- docs/tests/fixtures-only proposal metadata
+- future runtime contract test file and test names
+- future assertions for candidate invariants and fail-closed behavior
+
+Blocked:
+
+- runtime contract acceptance-test implementation
+- runtime behavior changes
+- candidate module mutation
+- `lima/` changes
+- `tests/support/` changes
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 15.3 future threat fixture test implementation plan.
+
+## Phase 15.3 Gate: Future Threat Fixture Test Implementation Plan
+
+Phase 15.3 may propose future threat fixture test files, fixture names, and fixture content requirements.
+
+Allowed:
+
+- docs/tests/fixtures-only proposal metadata
+- future threat fixture test file and test names
+- future synthetic fixture names and content requirements
+
+Blocked:
+
+- future threat fixture test implementation
+- future threat fixture creation
+- live shell commands, live network targets, credentials, private hostnames, deploy configs, real file mutation targets, robot instructions, approval tokens, or audit records
+- `lima/` changes
+- `tests/support/` changes
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 15.4 test-only implementation readiness gate / closeout.
+
+## Phase 15.4 Gate: Test-Only Implementation Readiness Gate / Closeout
+
+Phase 15.4 may close Phase 15 and preserve the Phase 16 approval question.
+
+Allowed:
+
+- list Phase 15.0 through Phase 15.3 as complete
+- state whether Phase 14 designed tests are ready for later explicitly approved test-only implementation
+- preserve future Phase 16 candidate scope
+- preserve the exact Phase 16 approval question
+
+Blocked:
+
+- actual future acceptance-test implementation
+- future acceptance fixture creation
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Stop for explicit Phil decision. No Phase 16 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
