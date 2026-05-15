@@ -5653,6 +5653,33 @@ Status:
 - complete
 - tagged as `phase-18.2-acceptance-boundary-regression-fixtures`
 
+## Phase 18.3 - Forbidden Integration Regression Tests
+
+Goal:
+
+Add test-only static regression checks for forbidden integration imports, calls, and side-effect patterns.
+
+Deliverables:
+
+- `docs/PHASE_18_3_FORBIDDEN_INTEGRATION_REGRESSION_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_18_3_forbidden_integration_regression_tests.json`
+- `tests/test_phase_18_3_forbidden_integration_regression_tests.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- candidate runtime files are scanned by tests only
+- forbidden integration imports and calls remain absent
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-18.3-forbidden-integration-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -1,0 +1,49 @@
+{
+  "phase": "18.3",
+  "status": "forbidden_integration_regression_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_18_3_FORBIDDEN_INTEGRATION_REGRESSION_TESTS.md",
+  "scanned_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "lima/kernel/__init__.py"
+  ],
+  "forbidden_boundaries_checked": [
+    "sparkbot",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "intentcompiler",
+    "guardiandecision",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation",
+    "robotics_physical_world",
+    "worker_daemon_queue_subprocess_thread_database_write"
+  ],
+  "static_checker_scope": {
+    "test_only": true,
+    "no_tests_support_helper_added": true,
+    "no_runtime_scanner_added": true,
+    "no_runtime_enforcement_added": true
+  },
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
