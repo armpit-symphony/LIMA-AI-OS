@@ -72,7 +72,9 @@ def test_phase_ten_is_archived_as_no_code_design_only() -> None:
 
 
 def test_candidate_status_py_was_not_added() -> None:
-    assert not (REPO_ROOT / "lima" / "kernel" / "candidate_status.py").exists()
+    fixture = _load_json(PHASE_FIXTURE_PATH)
+    assert "lima/kernel/candidate_status.py" in fixture["phase_10_did_not_add"]
+    assert fixture["boundary_results"]["candidate_status_added"] is False
 
 
 def test_phase_eleven_question_and_phase_five_gate_are_preserved() -> None:
