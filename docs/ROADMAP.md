@@ -5537,6 +5537,39 @@ Status:
 - complete
 - tagged as `phase-17.3-next-lane-decision-matrix`
 
+## Phase 17.4 - Phase 17 Acceptance-Gate Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 17 and preserve the Phase 18 approval question.
+
+Deliverables:
+
+- `docs/PHASE_17_4_PHASE_17_ACCEPTANCE_GATE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_17_4_phase_17_acceptance_gate_audit_archive_closeout.json`
+- `tests/test_phase_17_4_phase_17_acceptance_gate_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 17.0 through Phase 17.3 listed as complete
+- Phase 16 acceptance tests archived as test-only
+- recommended Phase 18 direction is preserved
+- Phase 18 requires explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- Phase 18 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-17.4-phase-17-acceptance-gate-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

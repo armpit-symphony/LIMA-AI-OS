@@ -5231,6 +5231,31 @@ Blocked:
 
 Continue only to Phase 17.4 archive / closeout.
 
+## Phase 17.4 Gate: Phase 17 Acceptance-Gate Audit Archive / Closeout
+
+Phase 17.4 may archive Phase 17 and preserve the Phase 18 approval question.
+
+Allowed:
+
+- list Phase 17.0 through Phase 17.3 as complete
+- archive Phase 16 acceptance tests as complete and test-only
+- preserve recommended Phase 18 direction
+- preserve exact Phase 18 approval question
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Stop for explicit Phil decision. No Phase 18 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
