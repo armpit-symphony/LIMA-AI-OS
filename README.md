@@ -368,6 +368,8 @@ Phase 11.4 reviews the Phase 11 runtime slice after status normalization and val
 
 Phase 11.5 archives Phase 11 as a completed narrow runtime slice. It confirms only `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py` were touched as runtime files, preserves the non-executing guarantees, and gates Phase 12 pending explicit Phil approval.
 
+Phase 12.0 opens a docs/tests/fixtures-only planning lane after the Phase 11 runtime slice. It reviews the completed candidate status work and compares safe next directions without modifying runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

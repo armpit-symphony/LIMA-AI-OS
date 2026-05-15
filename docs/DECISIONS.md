@@ -2983,6 +2983,27 @@ Consequences:
 - Phase 12 requires explicit Phil approval
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0162: Phase 12 Opens As Planning Only
+
+Status: Accepted
+
+Decision:
+
+Phase 12.0 opens Phase 12 as a docs/tests/fixtures-only planning lane after the completed Phase 11 runtime slice.
+
+Rationale:
+
+The Phase 11 runtime slice is complete and non-executing. The safest next move is to compare possible directions before approving any implementation, Sparkbot integration, Robo-OS boundary work, or further runtime expansion.
+
+Consequences:
+
+- Phase 12.0 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 5 runtime bridge remains gated
+- Phase 12.1 may compare runtime, Sparkbot, Robo-OS, security, and pause options
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

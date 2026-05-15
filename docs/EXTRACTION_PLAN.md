@@ -4476,6 +4476,33 @@ After merge:
 
 Stop for explicit Phil decision. No Phase 12 runtime expansion is approved by this archive.
 
+## Phase 12.0 Gate: Post-Phase-11 Runtime Slice Review
+
+Phase 12.0 may open a docs/tests/fixtures-only planning lane after Phase 11.
+
+GO:
+
+- review the Phase 11 candidate status runtime slice
+- list Phase 12 next-direction options
+- confirm Phase 5 runtime bridge remains gated
+- add planning doc, fixture, and static tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 12.1 next-direction options.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

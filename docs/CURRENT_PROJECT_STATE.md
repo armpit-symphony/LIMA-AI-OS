@@ -162,27 +162,29 @@ Phase 11.4 Runtime Slice Readiness Review is complete, merged to `main`, and tag
 
 Phase 11.5 Phase 11 Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 11 as a completed narrow, non-executing runtime slice, confirms the only Phase 11 runtime files touched were `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py`, and keeps Phase 12 gated pending explicit Phil approval.
 
+Phase 12.0 Post-Phase-11 Runtime Slice Review is complete, merged to `main`, and tagged. It opens Phase 12 as a docs/tests/fixtures-only planning lane, reviews the completed Phase 11 candidate status slice, and keeps runtime expansion unapproved.
+
 Latest completed phase merge:
 
-`56473845900e0e590fabf4bdf1ffbc1fc75b5093`
+`af67282afc5be26d9c450ca15dbfef156001b35a`
 
 Latest tag:
 
-`phase-11.5-phase-11-runtime-slice-audit-archive-closeout`
+`phase-12.0-post-phase-11-runtime-slice-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop before Phase 12. Any Phase 12 runtime expansion requires explicit Phil approval. HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.1 Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-none - Phase 12 requires explicit Phil approval
+phase-12-1-next-direction-options-runtime-sparkbot-robo-os-pause
 
 Latest completed merge:
 
-`56473845900e0e590fabf4bdf1ffbc1fc75b5093`
+`af67282afc5be26d9c450ca15dbfef156001b35a`
 
 Recommended PR target:
 
@@ -192,7 +194,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 12 - gated pending explicit Phil approval.
+Phase 12.1 - Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause.
 
 Phase 12 approval question:
 
