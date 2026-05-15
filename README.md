@@ -426,6 +426,8 @@ Phase 17.1 reviews Phase 16 acceptance-test coverage and records that the tests 
 
 Phase 17.2 reviews remaining safety gaps before any next lane, including narrow future file coverage, non-enforcing approval semantics, synthetic-only fixture limits, and continued blocking of Sparkbot, HumanInput bridge, live adapter, audit persistence, and physical-world work.
 
+Phase 17.3 compares Phase 18 options and recommends test-only regression hardening as the safest active next lane before runtime expansion.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

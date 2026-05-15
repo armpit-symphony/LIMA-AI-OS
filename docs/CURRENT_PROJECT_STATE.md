@@ -220,13 +220,15 @@ Phase 17.1 Acceptance Test Coverage Review is complete, merged to `main`, and ta
 
 Phase 17.2 Remaining Safety Gap Review is complete, merged to `main`, and tagged. It records remaining blockers before runtime expansion, including exact future file scope, next-slice acceptance tests, rollback/audit proof, approval semantics decisions, and continued Phase 5 HumanInput runtime bridge gating.
 
+Phase 17.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It compares Phase 18 options and recommends a test-only regression hardening lane as the safest active next step, while keeping runtime expansion and integration work unapproved.
+
 Latest completed phase merge:
 
-`68a11f29ff71c3031c2ab68de0336dddd8b9d322`
+`PENDING_PHASE_17_3_MERGE`
 
 Latest tag:
 
-`phase-17.2-remaining-safety-gap-review`
+`phase-17.3-next-lane-decision-matrix`
 
 ## Current Next Step
 
@@ -236,11 +238,11 @@ Continue only inside the approved Phase 17 docs/tests/fixtures-only acceptance-g
 
 Recommended next branch:
 
-phase-17-3-next-lane-decision-matrix
+phase-17-4-phase-17-acceptance-gate-audit-archive-closeout
 
 Latest completed merge:
 
-`68a11f29ff71c3031c2ab68de0336dddd8b9d322`
+`PENDING_PHASE_17_3_MERGE`
 
 Recommended PR target:
 
@@ -250,7 +252,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 17.3 - Next-Lane Decision Matrix.
+Phase 17.4 - Phase 17 Acceptance-Gate Audit Archive / Closeout.
 
 Phase 17 approval question:
 
