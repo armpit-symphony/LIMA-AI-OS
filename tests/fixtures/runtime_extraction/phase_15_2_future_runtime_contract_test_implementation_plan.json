@@ -1,0 +1,83 @@
+{
+  "phase": "15.2",
+  "status": "future_runtime_contract_test_implementation_plan",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "actual_future_runtime_contract_tests_implemented": false,
+  "phase_document": "docs/PHASE_15_2_FUTURE_RUNTIME_CONTRACT_TEST_IMPLEMENTATION_PLAN.md",
+  "proposed_future_test_files": [
+    "tests/test_acceptance_runtime_contract_invariants.py"
+  ],
+  "proposed_future_runtime_contract_tests": [
+    {
+      "name": "test_candidate_execution_allowed_is_always_false",
+      "expected_assertion": "execution_allowed_false_for_every_accepted_or_normalized_candidate"
+    },
+    {
+      "name": "test_candidate_side_effects_allowed_is_always_false",
+      "expected_assertion": "side_effects_allowed_false_for_every_accepted_or_normalized_candidate"
+    },
+    {
+      "name": "test_candidate_approval_state_is_never_approved",
+      "expected_assertion": "approval_state_never_approved"
+    },
+    {
+      "name": "test_candidate_approved_flag_is_never_true",
+      "expected_assertion": "authority_like_boolean_flags_never_true"
+    },
+    {
+      "name": "test_candidate_provenance_is_preserved",
+      "expected_assertion": "provenance_survives_validation_and_normalization"
+    },
+    {
+      "name": "test_malformed_candidate_is_invalid_or_blocked",
+      "expected_assertion": "malformed_candidate_rejected_invalid_blocked_or_needs_review"
+    },
+    {
+      "name": "test_unknown_status_is_invalid_blocked_or_needs_review",
+      "expected_assertion": "unknown_status_fails_closed"
+    },
+    {
+      "name": "test_stale_or_replayed_candidate_is_blocked_or_invalid",
+      "expected_assertion": "stale_or_replayed_metadata_cannot_become_executable_or_approved"
+    },
+    {
+      "name": "test_operator_admin_phil_trusted_wording_does_not_bypass_safety",
+      "expected_assertion": "trust_wording_never_changes_approval_or_execution_flags"
+    },
+    {
+      "name": "test_candidate_contract_creates_no_intentenvelope_or_guardiandecision",
+      "expected_assertion": "contract_checks_create_no_intentenvelope_or_guardiandecision_records"
+    }
+  ],
+  "future_test_scope": {
+    "may_exercise_existing_non_executing_runtime_candidate_status_apis_only_if_later_approved": true,
+    "runtime_behavior_not_allowed": true,
+    "candidate_module_mutation_not_allowed": true,
+    "helper_behavior_not_allowed": true,
+    "dispatch_not_allowed": true,
+    "audit_persistence_not_allowed": true,
+    "contract_test_success_is_not_authority": true
+  },
+  "readiness_decision": "ready_to_propose_later_test_only_runtime_contract_implementation",
+  "next_phase": "phase_15_3_future_threat_fixture_test_implementation_plan",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "actual_future_runtime_contract_tests_implemented": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
