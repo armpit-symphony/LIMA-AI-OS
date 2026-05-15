@@ -3672,6 +3672,26 @@ Consequences:
 - no `lima/` or `tests/support/` files are changed
 - Phase 18.3 may add forbidden integration regression tests
 
+## ADR-0196: Forbidden Integration Regression Checks Stay Test-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 18.3 adds static regression tests for forbidden integration imports, calls, and side-effect patterns in existing candidate runtime files.
+
+Rationale:
+
+The candidate runtime files should remain free of Sparkbot wiring, HumanInput bridge behavior, live adapters, execution, dispatch, persistence, approval enforcement, shell/browser/network/file mutation, robotics, and physical-world behavior. Tests can guard this without adding runtime enforcement.
+
+Consequences:
+
+- Phase 18.3 is tests/docs/fixtures only
+- no runtime scanner or enforcement is added
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 18.4 may review readiness
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

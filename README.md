@@ -436,6 +436,8 @@ Phase 18.1 adds candidate API regression tests against existing non-executing AP
 
 Phase 18.2 adds synthetic acceptance-boundary regression fixtures for approval-bypass wording, shell/browser/network/file/robotics attempts, Sparkbot integration attempts, HumanInput runtime bridge attempts, stale/replayed candidates, malformed candidates, and unknown statuses.
 
+Phase 18.3 adds forbidden integration regression tests that scan existing candidate runtime files for forbidden imports, calls, side-effect patterns, and integration wiring names without adding runtime enforcement.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -5331,6 +5331,31 @@ Blocked:
 
 Continue only to Phase 18.3 forbidden integration regression tests.
 
+## Phase 18.3 Gate: Forbidden Integration Regression Tests
+
+Phase 18.3 may add test-only static regression checks for forbidden integrations.
+
+Allowed:
+
+- static regression checks under `tests/`
+- synthetic fixture metadata
+- phase documentation
+- candidate runtime file scanning from tests only
+
+Blocked:
+
+- runtime scanner or runtime enforcement
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 18.4 regression hardening readiness review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
