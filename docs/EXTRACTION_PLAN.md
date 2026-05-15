@@ -5153,6 +5153,32 @@ Blocked:
 
 Continue only to Phase 17.1 acceptance test coverage review.
 
+## Phase 17.1 Gate: Acceptance Test Coverage Review
+
+Phase 17.1 may review the Phase 16 acceptance-test coverage.
+
+Allowed:
+
+- coverage review documentation
+- static coverage review fixture metadata
+- static coverage review tests
+- mapping Phase 16 static, contract, and threat fixture tests to covered gates
+- listing static/test-only limitations
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 17.2 remaining safety gap review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

@@ -1,0 +1,63 @@
+{
+  "phase": "17.1",
+  "status": "acceptance_test_coverage_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_17_1_ACCEPTANCE_TEST_COVERAGE_REVIEW.md",
+  "coverage_review": {
+    "static_forbidden_pattern_tests": {
+      "phase": "16.1",
+      "coverage": [
+        "forbidden_imports",
+        "forbidden_side_effect_calls",
+        "forbidden_boundary_names",
+        "authority_producing_assignments"
+      ]
+    },
+    "runtime_contract_tests": {
+      "phase": "16.2",
+      "coverage": [
+        "execution_allowed_false",
+        "side_effects_allowed_false",
+        "approval_state_never_approved",
+        "provenance_preserved",
+        "malformed_unknown_stale_replayed_safe",
+        "operator_admin_phil_trusted_no_bypass"
+      ]
+    },
+    "threat_fixture_tests": {
+      "phase": "16.3",
+      "coverage": [
+        "malformed_candidate",
+        "unknown_status",
+        "stale_replayed_candidate",
+        "approval_bypass_wording",
+        "shell_network_browser_file_robotics_attempts",
+        "sparkbot_integration_attempt",
+        "humaninput_bridge_attempt"
+      ]
+    }
+  },
+  "coverage_conclusion": {
+    "phase_16_strengthens_gate": true,
+    "runtime_expansion_approved": false,
+    "sparkbot_wiring_approved": false,
+    "humaninput_runtime_bridge_approved": false,
+    "execution_or_dispatch_approved": false,
+    "approval_enforcement_or_audit_persistence_approved": false,
+    "physical_world_behavior_approved": false
+  },
+  "static_limitations": [
+    "explicit_runtime_file_scope_only",
+    "existing_non_executing_api_scope_only",
+    "synthetic_inert_fixture_scope_only",
+    "not_live_safety_monitoring"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
