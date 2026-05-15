@@ -234,7 +234,7 @@ Phase 18.3 Forbidden Integration Regression Tests is complete, merged to `main`,
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_3_MERGE`
+`79ed7822c238ce5fc2ad411e440f687ad6f48af8`
 
 Latest tag:
 
@@ -252,7 +252,7 @@ phase-18-4-regression-hardening-readiness-review
 
 Latest completed merge:
 
-`PENDING_PHASE_18_3_MERGE`
+`79ed7822c238ce5fc2ad411e440f687ad6f48af8`
 
 Recommended PR target:
 
