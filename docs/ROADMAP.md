@@ -4306,6 +4306,45 @@ Status:
 - complete
 - tagged as `phase-10.3-acceptance-test-and-rollback-plan`
 
+## Phase 10.4 - Phase 10 Runtime Expansion Approval Gate / Closeout
+
+Goal:
+
+Close the Phase 10 no-code design lane and preserve the exact Phase 11 approval question before any runtime expansion.
+
+Deliverables:
+
+- `docs/PHASE_10_4_PHASE_10_RUNTIME_EXPANSION_APPROVAL_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_10_4_phase_10_runtime_expansion_approval_gate_closeout.json`
+- `tests/test_phase_10_4_phase_10_runtime_expansion_approval_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 10.0 through Phase 10.3 listed as complete
+- future Phase 11 eligible files listed exactly
+- exact Phase 11 approval question preserved
+- runtime candidate validation and status normalization remain unimplemented
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- explicit Phil decision on Phase 11 runtime implementation scope
+
+Status:
+
+- complete
+- tagged as `phase-10.4-phase-10-runtime-expansion-approval-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

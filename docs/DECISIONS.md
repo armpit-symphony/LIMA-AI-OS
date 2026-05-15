@@ -2831,6 +2831,28 @@ Consequences:
 - rollback must remain source-only
 - Phase 5 runtime bridge remains gated
 
+## ADR-0154: Phase 10 Stops At Runtime Expansion Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 10.4 closes the no-code Phase 10 design lane and preserves the exact Phase 11 approval question for candidate validation and status normalization. Phase 11 is not approved by this closeout.
+
+Rationale:
+
+The repo now has a post-Phase-9 review, next-slice option analysis, exact file-touch map, and acceptance/rollback plan. The next step would be runtime code, so it requires explicit Phil approval.
+
+Consequences:
+
+- Phase 10.4 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.4
+- no `tests/support/` files are changed
+- Phase 10 stops at an implementation approval gate
+- Phase 11 requires explicit Phil approval
+- Phase 5 runtime bridge remains gated
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

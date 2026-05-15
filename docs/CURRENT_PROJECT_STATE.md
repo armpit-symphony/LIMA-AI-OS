@@ -146,27 +146,29 @@ Phase 10.2 Exact File-Touch Map for Next Runtime Slice is complete, merged to `m
 
 Phase 10.3 Acceptance Test and Rollback Plan is complete, merged to `main`, and tagged. It defines required future acceptance tests, rollback steps, and audit proof for the possible Phase 11 candidate validation/status normalization slice, while keeping implementation unapproved.
 
+Phase 10.4 Phase 10 Runtime Expansion Approval Gate / Closeout is complete, merged to `main`, and tagged. It closes the Phase 10 no-code design lane and preserves the exact Phase 11 approval question for Phil before any runtime expansion.
+
 Latest completed phase merge:
 
-`58f08e13ac290dbfaebf6ac8f7e84055fcf68bb4`
+`b2780859f5dc3a9272750d17577e7efdb88edb03`
 
 Latest tag:
 
-`phase-10.3-acceptance-test-and-rollback-plan`
+`phase-10.4-phase-10-runtime-expansion-approval-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 10 no-code design lane with Phase 10.4 Runtime Expansion Approval Gate / Closeout. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.3.
+Stop for explicit Phil decision on Phase 11. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.4.
 
 Recommended next branch:
 
-phase-10-4-phase-10-runtime-expansion-approval-gate-closeout
+not selected
 
 Latest completed merge:
 
-`58f08e13ac290dbfaebf6ac8f7e84055fcf68bb4`
+`b2780859f5dc3a9272750d17577e7efdb88edb03`
 
 Recommended PR target:
 
@@ -176,7 +178,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 10.4 - Phase 10 Runtime Expansion Approval Gate / Closeout.
+Explicit Phil decision on Phase 11 runtime implementation scope.
+
+Exact Phase 11 approval question:
+
+Do you approve a narrow Phase 11 runtime implementation slice limited to candidate validation and candidate status normalization for existing non-executing intake candidates, touching only `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py` if a safe public export is required, and a possible new `lima/kernel/candidate_status.py`, requiring the Phase 10.3 acceptance tests and rollback/audit proof, and still forbidding HumanInput runtime bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 ## Active Phase 4 Status
 

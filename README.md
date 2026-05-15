@@ -352,6 +352,8 @@ Phase 10.2 maps the exact future file-touch surface for that possible Phase 11 s
 
 Phase 10.3 defines the future acceptance tests, rollback plan, and audit proof required before that possible Phase 11 slice can be implemented. It remains docs/tests/fixtures only and keeps runtime expansion unapproved.
 
+Phase 10.4 closes the Phase 10 no-code design lane at a runtime expansion approval gate. It preserves the exact Phase 11 approval question for a narrow candidate validation/status normalization slice and keeps Phase 11 blocked until Phil explicitly approves it.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

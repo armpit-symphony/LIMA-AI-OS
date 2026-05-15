@@ -4237,6 +4237,36 @@ After merge:
 
 Continue only to Phase 10.4 runtime expansion approval gate / closeout. No Phase 11 runtime implementation or runtime expansion is approved by this test and rollback plan.
 
+## Phase 10.4 Gate: Runtime Expansion Approval Gate / Closeout
+
+Phase 10.4 may close the Phase 10 no-code design lane and preserve the explicit Phase 11 approval question.
+
+GO:
+
+- list completed Phase 10.0 through Phase 10.3 scope
+- list future Phase 11 eligible files exactly
+- document what remains unimplemented
+- preserve exact Phase 11 approval question
+- require explicit Phil approval before Phase 11
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Stop for explicit Phil decision. No Phase 11 runtime implementation or runtime expansion is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
