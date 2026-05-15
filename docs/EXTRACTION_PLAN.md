@@ -4747,6 +4747,119 @@ After merge:
 
 Stop for explicit Phil decision. No Phase 14 work is approved by this closeout.
 
+## Phase 14.0 Gate: Acceptance-Gate Test Design Charter
+
+Phase 14.0 may open the approved docs/tests/fixtures-only acceptance-gate test design lane.
+
+Allowed:
+
+- convert Phase 13 static, contract, and fixture requirements into Phase 14 design outputs
+- list future acceptance-gate test families
+- keep Phase 5 runtime bridge gated
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 14.1 static forbidden-pattern test design.
+
+## Phase 14.1 Gate: Static Forbidden-Pattern Test Design
+
+Phase 14.1 may design concrete future static tests for forbidden imports, calls, side-effect patterns, boundary names, and authority claims.
+
+Allowed:
+
+- docs/tests/fixtures-only static test design
+- future test names and expected assertions
+- forbidden import/call/name/claim categories
+
+Blocked:
+
+- scanner implementation
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 14.2 runtime contract test design.
+
+## Phase 14.2 Gate: Runtime Contract Test Design
+
+Phase 14.2 may design concrete future runtime contract tests for non-executing candidate invariants.
+
+Allowed:
+
+- docs/tests/fixtures-only contract test design
+- future test names for execution flags, approval state, provenance, malformed/unknown/stale/replayed safety, and operator-bypass resistance
+- Phase 5 runtime bridge gating requirements
+
+Blocked:
+
+- contract-test implementation
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- candidate status or intake candidate expansion
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 14.3 threat fixture acceptance test design.
+
+## Phase 14.3 Gate: Threat Fixture Acceptance Test Design
+
+Phase 14.3 may design concrete future fixture-based acceptance tests for Phase 13.3 threat families.
+
+Allowed:
+
+- docs/tests/fixtures-only fixture acceptance test design
+- future fixture families for malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge attempts
+- synthetic, inert, non-runtime fixture requirements
+
+Blocked:
+
+- fixture-execution implementation
+- live shell commands for execution
+- live network targets
+- private operational data or credentials
+- `lima/` changes
+- `tests/support/` changes
+- execution, dispatch, persistence, or physical-world behavior
+
+Continue only to Phase 14.4 future runtime acceptance gate / closeout.
+
+## Phase 14.4 Gate: Future Runtime Acceptance Gate / Closeout
+
+Phase 14.4 may close Phase 14 and preserve the Phase 15 approval question.
+
+Allowed:
+
+- list Phase 14.0 through Phase 14.3 as complete
+- preserve future acceptance-gate requirements
+- recommend Phase 15 as docs/tests/fixtures-only acceptance-gate implementation proposal or readiness only
+- preserve the exact Phase 15 approval question
+
+Blocked:
+
+- acceptance-gate test implementation
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Stop for explicit Phil decision. No Phase 15 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

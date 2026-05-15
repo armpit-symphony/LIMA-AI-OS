@@ -4962,6 +4962,152 @@ Status:
 - complete
 - tagged as `phase-13.4-future-acceptance-gate-closeout`
 
+## Phase 14.0 - Acceptance-Gate Test Design Charter
+
+Goal:
+
+Open Phase 14 as a docs/tests/fixtures-only acceptance-gate test design lane.
+
+Deliverables:
+
+- `docs/PHASE_14_0_ACCEPTANCE_GATE_TEST_DESIGN_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_14_0_acceptance_gate_test_design_charter.json`
+- `tests/test_phase_14_0_acceptance_gate_test_design_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 13 static, contract, and fixture requirements listed as inputs
+- future test names and expected assertions identified as outputs
+- Phase 5 runtime bridge remains gated
+- runtime implementation remains blocked
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-14.0-acceptance-gate-test-design-charter`
+
+## Phase 14.1 - Static Forbidden-Pattern Test Design
+
+Goal:
+
+Design concrete future static tests for forbidden imports, calls, side-effect patterns, boundary names, and authority claims.
+
+Deliverables:
+
+- `docs/PHASE_14_1_STATIC_FORBIDDEN_PATTERN_TEST_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_14_1_static_forbidden_pattern_test_design.json`
+- `tests/test_phase_14_1_static_forbidden_pattern_test_design.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no scanner implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- future static test names and assertions listed
+- Sparkbot, HumanInput bridge, live adapter, execution, persistence, dispatch, and physical-world patterns remain blocked
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-14.1-static-forbidden-pattern-test-design`
+
+## Phase 14.2 - Runtime Contract Test Design
+
+Goal:
+
+Design concrete future runtime contract tests for non-executing candidate invariants.
+
+Deliverables:
+
+- `docs/PHASE_14_2_RUNTIME_CONTRACT_TEST_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_14_2_runtime_contract_test_design.json`
+- `tests/test_phase_14_2_runtime_contract_test_design.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no contract-test implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- execution and side-effect flags remain false
+- approval state never becomes approved
+- provenance, malformed/unknown/stale/replayed safety, and operator-bypass resistance are covered
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-14.2-runtime-contract-test-design`
+
+## Phase 14.3 - Threat Fixture Acceptance Test Design
+
+Goal:
+
+Design concrete future fixture-based acceptance tests for the Phase 13.3 threat fixture families.
+
+Deliverables:
+
+- `docs/PHASE_14_3_THREAT_FIXTURE_ACCEPTANCE_TEST_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_14_3_threat_fixture_acceptance_test_design.json`
+- `tests/test_phase_14_3_threat_fixture_acceptance_test_design.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no fixture-execution implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge fixture test names listed
+- future fixtures remain synthetic, inert, non-runtime, and side-effect-free
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-14.3-threat-fixture-acceptance-test-design`
+
+## Phase 14.4 - Future Runtime Acceptance Gate / Closeout
+
+Goal:
+
+Close Phase 14 and preserve the Phase 15 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_14_4_FUTURE_RUNTIME_ACCEPTANCE_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_14_4_future_runtime_acceptance_gate_closeout.json`
+- `tests/test_phase_14_4_future_runtime_acceptance_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no acceptance-gate test implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 14.0 through Phase 14.3 listed as complete
+- future acceptance-gate requirements listed
+- Phase 15 requires explicit Phil approval
+- runtime implementation remains blocked
+- Sparkbot wiring remains blocked
+- HumanInput runtime bridge remains blocked
+- approval, enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+- tests pass
+
+Next likely phase:
+
+- Phase 15 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-14.4-future-runtime-acceptance-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

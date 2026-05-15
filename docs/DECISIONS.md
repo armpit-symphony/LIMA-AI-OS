@@ -3192,6 +3192,102 @@ Consequences:
 - Phase 14 requires explicit Phil approval
 - runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0172: Phase 14 Opens As Acceptance-Gate Test Design
+
+Status: Accepted
+
+Decision:
+
+Phase 14.0 opens Phase 14 as a docs/tests/fixtures-only acceptance-gate test design lane.
+
+Rationale:
+
+Phase 13 produced requirements for static checks, runtime contract checks, threat fixtures, and future acceptance gates. Phase 14 converts those requirements into concrete future test names and expected assertions before any implementation work.
+
+Consequences:
+
+- Phase 14.0 is docs/tests/fixtures only
+- no acceptance-gate tests are implemented
+- no `lima/` or `tests/support/` files are changed
+- Phase 14.1 may design static forbidden-pattern tests
+
+## ADR-0173: Static Forbidden-Pattern Tests Must Be Designed Before Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 14.1 designs future static forbidden-pattern tests for imports, calls, side-effect patterns, boundary names, and authority claims.
+
+Rationale:
+
+Forbidden scope can enter through references, imports, names, and behavior claims before it becomes executable behavior. Designing the static tests first makes the acceptance gate auditable.
+
+Consequences:
+
+- Phase 14.1 is docs/tests/fixtures only
+- no static scanner implementation is added
+- no runtime behavior is changed
+- Phase 14.2 may design runtime contract tests
+
+## ADR-0174: Runtime Contract Test Designs Must Preserve Non-Executing Candidate Invariants
+
+Status: Accepted
+
+Decision:
+
+Phase 14.2 designs future runtime contract tests for non-executing candidate invariants.
+
+Rationale:
+
+The Phase 9 and Phase 11 runtime slices remain safe only if candidates cannot become executable, approved, side-effectful, or disconnected from provenance.
+
+Consequences:
+
+- Phase 14.2 is docs/tests/fixtures only
+- no contract-test implementation is added
+- future tests must cover false execution flags, never-approved approval state, provenance, malformed/unknown/stale/replayed safety, and operator-bypass resistance
+- Phase 14.3 may design threat fixture acceptance tests
+
+## ADR-0175: Threat Fixture Acceptance Tests Must Remain Synthetic And Inert
+
+Status: Accepted
+
+Decision:
+
+Phase 14.3 designs future fixture-based acceptance tests for threat-derived risky examples, but those future fixtures must remain synthetic, inert, non-runtime, and side-effect-free.
+
+Rationale:
+
+Threat examples are useful only when they do not become live commands, network targets, credentials, robot instructions, or production integration artifacts.
+
+Consequences:
+
+- Phase 14.3 is docs/tests/fixtures only
+- no fixture-execution implementation is added
+- no live shell, browser, network, file mutation, robotics, Sparkbot, HumanInput bridge, live adapter, approval, dispatch, persistence, or physical-world behavior is introduced
+- Phase 14.4 may close the lane
+
+## ADR-0176: Phase 14 Closes At A Phase 15 Acceptance-Gate Proposal Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 14.4 closes Phase 14 and recommends Phase 15 as docs/tests/fixtures-only acceptance-gate implementation proposal or readiness work.
+
+Rationale:
+
+Phase 14 designed test names and expected assertions, but did not implement acceptance-gate tests. The next safest step is a proposal/readiness lane that decides whether those designs are ready for a later explicitly approved test-only implementation.
+
+Consequences:
+
+- Phase 14.4 is docs/tests/fixtures only
+- no acceptance-gate tests are implemented
+- no `lima/` or `tests/support/` files are changed
+- Phase 15 requires explicit Phil approval
+- runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

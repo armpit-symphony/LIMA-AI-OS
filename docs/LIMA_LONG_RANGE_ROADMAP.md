@@ -254,6 +254,18 @@ Phase 8.4 is complete and tagged as docs/tests/fixtures-only Runtime Implementat
 
 Phase 8.5 is complete and tagged as docs/tests/fixtures-only Phase 8 No-Code Implementation Design Review Audit Archive / Closeout. It archives Phase 8.0 through Phase 8.4 as no-code design review work, preserves the exact Phase 9 approval question, and keeps runtime implementation blocked pending explicit operator approval.
 
+Phase 9 is complete and archived as the first narrow runtime slice. It added only the approved non-executing kernel intake-to-candidate coordinator runtime files and kept HumanInput bridge behavior, Sparkbot wiring, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
+Phase 10 is complete and archived as no-code design for the next runtime slice. It did not modify `lima/` or approve implementation.
+
+Phase 11 is complete and archived as a narrow non-executing candidate status normalization and validation runtime slice. It kept the Phase 5 runtime bridge gated and added no execution, approval enforcement, dispatch, persistence, Sparkbot wiring, live adapter, or physical-world behavior.
+
+Phase 12 is complete and tagged as docs/tests/fixtures-only next-direction planning after Phase 11.
+
+Phase 13 is complete and tagged as docs/tests/fixtures-only threat-model-derived test planning.
+
+Phase 14 is complete and tagged as docs/tests/fixtures-only acceptance-gate test design. It converts Phase 13 requirements into future test names and expected assertions, but it does not implement acceptance-gate tests or approve runtime expansion. Phase 15 requires explicit operator approval.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries
