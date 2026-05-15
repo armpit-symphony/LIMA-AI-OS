@@ -3632,6 +3632,26 @@ Consequences:
 - Phase 18.1 may add candidate API regression tests
 - Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0194: Candidate API Regression Tests May Exercise Existing Non-Executing APIs
+
+Status: Accepted
+
+Decision:
+
+Phase 18.1 adds regression tests against existing non-executing candidate APIs without modifying runtime code.
+
+Rationale:
+
+Candidate invariants should be protected from regression before any future lane. Tests may exercise existing APIs to prove they remain non-executing, authority-free, provenance-preserving, and safe for malformed, unknown, stale/replayed, dangerous wording, and raw HumanInput-like inputs.
+
+Consequences:
+
+- Phase 18.1 is tests/docs/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 18.2 may add synthetic acceptance boundary regression fixtures
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

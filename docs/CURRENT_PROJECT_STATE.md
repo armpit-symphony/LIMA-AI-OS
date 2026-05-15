@@ -226,13 +226,15 @@ Phase 17.4 Phase 17 Acceptance-Gate Audit Archive / Closeout is complete, merged
 
 Phase 18.0 Regression Hardening Charter is complete, merged to `main`, and tagged. It opens Phase 18 as a test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries, while keeping runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 18.1 Candidate API Regression Tests is complete, merged to `main`, and tagged. It adds test-only regression coverage for existing non-executing candidate APIs, including non-executable invariants, authority-bearing field invalidation, unknown status blocking, provenance preservation, stale/replayed handling, dangerous wording no-bypass behavior, and raw HumanInput-like payload rejection.
+
 Latest completed phase merge:
 
-`0e25a6fe5424e7b47cc039e6dbde2595fbbd0029`
+`PENDING_PHASE_18_1_MERGE`
 
 Latest tag:
 
-`phase-18.0-regression-hardening-charter`
+`phase-18.1-candidate-api-regression-tests`
 
 ## Current Next Step
 
@@ -242,11 +244,11 @@ Continue only inside the approved Phase 18 test-only regression hardening lane. 
 
 Recommended next branch:
 
-phase-18-1-candidate-api-regression-tests
+phase-18-2-acceptance-boundary-regression-fixtures
 
 Latest completed merge:
 
-`0e25a6fe5424e7b47cc039e6dbde2595fbbd0029`
+`PENDING_PHASE_18_1_MERGE`
 
 Recommended PR target:
 
@@ -256,7 +258,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 18.1 - Candidate API Regression Tests.
+Phase 18.2 - Acceptance Boundary Regression Fixtures.
 
 Phase 18 approval question:
 

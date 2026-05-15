@@ -5597,6 +5597,34 @@ Status:
 - complete
 - tagged as `phase-18.0-regression-hardening-charter`
 
+## Phase 18.1 - Candidate API Regression Tests
+
+Goal:
+
+Add regression tests for existing non-executing candidate APIs.
+
+Deliverables:
+
+- `docs/PHASE_18_1_CANDIDATE_API_REGRESSION_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_18_1_candidate_api_regression_tests.json`
+- `tests/test_phase_18_1_candidate_api_regression_tests.py`
+
+Acceptance criteria:
+
+- tests/docs/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- non-executing candidate invariants are protected
+- dangerous wording does not bypass safety
+- raw HumanInput-like payloads remain rejected
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-18.1-candidate-api-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

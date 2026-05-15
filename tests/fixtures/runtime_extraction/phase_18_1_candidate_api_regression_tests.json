@@ -1,0 +1,41 @@
+{
+  "phase": "18.1",
+  "status": "candidate_api_regression_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_18_1_CANDIDATE_API_REGRESSION_TESTS.md",
+  "exercised_existing_apis": [
+    "lima.kernel.build_intake_candidate",
+    "lima.kernel.normalize_candidate_status",
+    "lima.kernel.validate_candidate"
+  ],
+  "regression_coverage": [
+    "candidate_non_executable_after_build_normalize_validate",
+    "execution_allowed_false_after_normalization_and_validation",
+    "side_effects_allowed_false_after_normalization_and_validation",
+    "approval_state_never_approved",
+    "malformed_candidate_invalid_or_blocked",
+    "unknown_status_blocked",
+    "provenance_preserved",
+    "stale_replayed_blocked_or_invalid",
+    "dangerous_wording_no_bypass",
+    "phase_5_runtime_bridge_gated"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
