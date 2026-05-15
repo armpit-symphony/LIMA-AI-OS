@@ -1,0 +1,35 @@
+{
+  "phase": "14.0",
+  "status": "acceptance_gate_test_design_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_14_0_ACCEPTANCE_GATE_TEST_DESIGN_CHARTER.md",
+  "source_requirements": [
+    "phase_13_1_static_forbidden_pattern_requirements",
+    "phase_13_2_runtime_contract_requirements",
+    "phase_13_3_threat_fixture_matrix",
+    "phase_13_4_future_acceptance_gate_requirements"
+  ],
+  "design_outputs": [
+    "static_forbidden_pattern_test_design",
+    "runtime_contract_test_design",
+    "threat_fixture_acceptance_test_design",
+    "future_runtime_acceptance_gate_closeout"
+  ],
+  "next_phase": "phase_14_1_static_forbidden_pattern_test_design",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "test_helper_added": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
