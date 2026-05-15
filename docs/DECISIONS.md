@@ -2809,6 +2809,28 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0153: Runtime Expansion Requires Acceptance Tests And Rollback Proof First
+
+Status: Accepted
+
+Decision:
+
+Phase 10.3 requires future acceptance tests, rollback steps, and audit proof before any Phase 11 candidate validation and status normalization implementation can be approved.
+
+Rationale:
+
+The next runtime slice may touch kernel files, so it needs proof that candidate validation cannot grant authority, cannot normalize to approved, cannot add side effects, and can be reverted cleanly if scope or validation fails.
+
+Consequences:
+
+- Phase 10.3 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.3
+- no `tests/support/` files are changed
+- Phase 11 remains unapproved until the approval gate is explicit
+- acceptance tests must cover false execution/side-effect flags and never-approved approval state
+- rollback must remain source-only
+- Phase 5 runtime bridge remains gated
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

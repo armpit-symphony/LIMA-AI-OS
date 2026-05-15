@@ -144,27 +144,29 @@ Phase 10.1 Next Runtime Slice Design Options is complete, merged to `main`, and 
 
 Phase 10.2 Exact File-Touch Map for Next Runtime Slice is complete, merged to `main`, and tagged. It maps only `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and a possible future `lima/kernel/candidate_status.py` as future-eligible for a Phase 11 candidate validation/status normalization slice, while keeping implementation unapproved.
 
+Phase 10.3 Acceptance Test and Rollback Plan is complete, merged to `main`, and tagged. It defines required future acceptance tests, rollback steps, and audit proof for the possible Phase 11 candidate validation/status normalization slice, while keeping implementation unapproved.
+
 Latest completed phase merge:
 
-`1977bc4b8120bc5759bf943b25cff73efec2315f`
+`58f08e13ac290dbfaebf6ac8f7e84055fcf68bb4`
 
 Latest tag:
 
-`phase-10.2-exact-file-touch-map-for-next-runtime-slice`
+`phase-10.3-acceptance-test-and-rollback-plan`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 10 no-code design lane with Phase 10.3 Acceptance Test and Rollback Plan. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.2.
+Continue the approved Phase 10 no-code design lane with Phase 10.4 Runtime Expansion Approval Gate / Closeout. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.3.
 
 Recommended next branch:
 
-phase-10-3-acceptance-test-and-rollback-plan
+phase-10-4-phase-10-runtime-expansion-approval-gate-closeout
 
 Latest completed merge:
 
-`1977bc4b8120bc5759bf943b25cff73efec2315f`
+`58f08e13ac290dbfaebf6ac8f7e84055fcf68bb4`
 
 Recommended PR target:
 
@@ -174,7 +176,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 10.3 - Acceptance Test and Rollback Plan.
+Phase 10.4 - Phase 10 Runtime Expansion Approval Gate / Closeout.
 
 ## Active Phase 4 Status
 

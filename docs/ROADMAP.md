@@ -4265,6 +4265,47 @@ Status:
 - complete
 - tagged as `phase-10.2-exact-file-touch-map-for-next-runtime-slice`
 
+## Phase 10.3 - Acceptance Test and Rollback Plan
+
+Goal:
+
+Define future acceptance-test, rollback, and audit-proof requirements for the possible Phase 11 candidate validation and status normalization slice.
+
+Deliverables:
+
+- `docs/PHASE_10_3_ACCEPTANCE_TEST_AND_ROLLBACK_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_10_3_acceptance_test_and_rollback_plan.json`
+- `tests/test_phase_10_3_acceptance_test_and_rollback_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- future acceptance tests require non-authoritative candidate safety
+- future acceptance tests reject missing or true execution/side-effect flags
+- future acceptance tests reject approved approval state
+- future statuses limited to proposed, needs_review, or blocked
+- rollback plan is source-only and validation-heavy
+- audit proof requires exact file scope and side-effect review
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 10.4 - Phase 10 Runtime Expansion Approval Gate / Closeout
+
+Status:
+
+- complete
+- tagged as `phase-10.3-acceptance-test-and-rollback-plan`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

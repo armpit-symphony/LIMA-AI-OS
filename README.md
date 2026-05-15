@@ -350,6 +350,8 @@ Phase 10.1 evaluates candidate validation, status normalization, lifecycle metad
 
 Phase 10.2 maps the exact future file-touch surface for that possible Phase 11 slice. It names only `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and a possible new `lima/kernel/candidate_status.py` as future-eligible, while keeping all runtime implementation unapproved.
 
+Phase 10.3 defines the future acceptance tests, rollback plan, and audit proof required before that possible Phase 11 slice can be implemented. It remains docs/tests/fixtures only and keeps runtime expansion unapproved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
