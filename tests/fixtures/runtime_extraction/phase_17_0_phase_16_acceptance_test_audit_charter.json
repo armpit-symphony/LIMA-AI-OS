@@ -1,0 +1,47 @@
+{
+  "phase": "17.0",
+  "status": "phase_16_acceptance_test_audit_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_17_0_PHASE_16_ACCEPTANCE_TEST_AUDIT_CHARTER.md",
+  "audit_scope": [
+    "phase_16_0_test_only_acceptance_implementation_charter",
+    "phase_16_1_static_forbidden_pattern_acceptance_tests",
+    "phase_16_2_runtime_contract_acceptance_tests",
+    "phase_16_3_threat_fixture_acceptance_tests",
+    "phase_16_4_test_only_acceptance_implementation_readiness_review",
+    "phase_16_5_phase_16_test_only_acceptance_archive_closeout"
+  ],
+  "charter_questions": [
+    "did_phase_16_remain_test_only",
+    "did_phase_16_strengthen_acceptance_gate",
+    "did_phase_16_keep_forbidden_scope_blocked",
+    "what_gaps_remain_before_runtime_expansion",
+    "which_phase_18_direction_is_safest"
+  ],
+  "phase_18_options": [
+    "no_code_design_lane_for_next_narrow_runtime_slice",
+    "test_only_regression_hardening_lane",
+    "sparkbot_integration_boundary_planning",
+    "robo_os_physical_world_boundary_planning",
+    "pause_and_preserve_current_runtime_test_state"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_18_approved": false
+  }
+}
