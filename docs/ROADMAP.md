@@ -4386,6 +4386,43 @@ Status:
 - complete
 - tagged as `phase-10.5-phase-10-next-runtime-slice-design-lane-audit-archive-closeout`
 
+## Phase 11.0 - Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Goal:
+
+Confirm the Phase 10.2 eligible runtime file list before Phase 11 runtime implementation work.
+
+Deliverables:
+
+- `docs/PHASE_11_0_RUNTIME_SLICE_PREFLIGHT_AUDIT_ELIGIBLE_FILE_CONFIRMATION.md`
+- `tests/fixtures/runtime_extraction/phase_11_0_runtime_slice_preflight_audit_eligible_file_confirmation.json`
+- `tests/test_phase_11_0_runtime_slice_preflight_audit_eligible_file_confirmation.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 10.2 eligible files listed exactly
+- `lima/kernel/candidate_status.py` remains absent before implementation
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 11.1 - Candidate Status Acceptance Test Scaffolding
+
+Status:
+
+- complete
+- tagged as `phase-11.0-runtime-slice-preflight-audit-eligible-file-confirmation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

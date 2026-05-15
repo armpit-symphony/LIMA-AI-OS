@@ -356,6 +356,8 @@ Phase 10.4 closes the Phase 10 no-code design lane at a runtime expansion approv
 
 Phase 10.5 archives Phase 10 as a completed no-code next-runtime-slice design lane. It confirms no `lima/` changes, no `candidate_status.py`, no runtime behavior, and keeps Phase 11 gated pending explicit Phil approval.
 
+Phase 11.0 opens the approved Phase 11 runtime slice lane with a docs/tests/fixtures-only preflight audit. It confirms the Phase 10.2 eligible runtime files are explicit and that `lima/kernel/candidate_status.py` is still absent before implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

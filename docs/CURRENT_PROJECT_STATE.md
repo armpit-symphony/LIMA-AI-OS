@@ -150,27 +150,29 @@ Phase 10.4 Phase 10 Runtime Expansion Approval Gate / Closeout is complete, merg
 
 Phase 10.5 Phase 10 Next Runtime Slice Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 10.0 through Phase 10.4 as no-code design only, confirms no `lima/` changes and no `lima/kernel/candidate_status.py`, and keeps Phase 11 gated pending explicit Phil approval.
 
+Phase 11.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complete, merged to `main`, and tagged. It confirms Phase 10.2 clearly lists the only Phase 11 eligible runtime files and adds no runtime behavior.
+
 Latest completed phase merge:
 
-`5b5dca5277f939ae4d7e8b0afac4ab4fd8dbbadc`
+`ebcb27fda8f55be36ebb78ad5d23e8de43bd2bce`
 
 Latest tag:
 
-`phase-10.5-phase-10-next-runtime-slice-design-lane-audit-archive-closeout`
+`phase-11.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit Phil decision on Phase 11. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.5.
+Continue the approved Phase 11 narrow runtime slice lane with Phase 11.1 Candidate Status Acceptance Test Scaffolding. No runtime implementation is added by Phase 11.0, and HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-not selected
+phase-11-1-candidate-status-acceptance-test-scaffolding
 
 Latest completed merge:
 
-`5b5dca5277f939ae4d7e8b0afac4ab4fd8dbbadc`
+`ebcb27fda8f55be36ebb78ad5d23e8de43bd2bce`
 
 Recommended PR target:
 
@@ -180,7 +182,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit Phil decision on Phase 11 runtime implementation scope.
+Phase 11.1 - Candidate Status Acceptance Test Scaffolding.
 
 Exact Phase 11 approval question:
 

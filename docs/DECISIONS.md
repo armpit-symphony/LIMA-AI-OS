@@ -2853,6 +2853,27 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0156: Phase 11 Starts With Eligible File Confirmation
+
+Status: Accepted
+
+Decision:
+
+Phase 11.0 confirms the Phase 10.2 eligible file map before implementation. The eligible runtime files are `lima/kernel/intake_candidate.py`, `lima/kernel/__init__.py`, and `lima/kernel/candidate_status.py`.
+
+Rationale:
+
+The Phase 11 runtime slice is intentionally narrow. A preflight confirmation prevents accidental expansion into adapters, contracts, Guardian, Harness, IO, persistence, services, shells, spine, Sparkbot, or `tests/support/`.
+
+Consequences:
+
+- Phase 11.0 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 11.0
+- no `tests/support/` files are changed
+- `lima/kernel/candidate_status.py` remains absent before implementation
+- Phase 11.1 may scaffold acceptance tests
+- Phase 5 runtime bridge remains gated
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

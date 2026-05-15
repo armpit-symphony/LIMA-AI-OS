@@ -4300,6 +4300,35 @@ After merge:
 
 Stop for explicit Phil decision. No Phase 11 runtime implementation or runtime expansion is approved by this archive.
 
+## Phase 11.0 Gate: Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Phase 11.0 may confirm the exact Phase 10.2 eligible runtime file list before implementation phases begin.
+
+GO:
+
+- confirm eligible runtime files are explicit
+- confirm no other runtime files are eligible
+- confirm `lima/kernel/candidate_status.py` remains absent before implementation
+- preserve Phase 5 runtime bridge gate
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 11.1 acceptance test scaffolding. Candidate status and validation runtime implementation remains reserved for Phase 11.2 and Phase 11.3.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
