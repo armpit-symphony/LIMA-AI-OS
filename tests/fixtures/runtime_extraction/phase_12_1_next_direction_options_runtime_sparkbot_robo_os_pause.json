@@ -1,0 +1,71 @@
+{
+  "phase": "12.1",
+  "status": "next_direction_options_runtime_sparkbot_robo_os_pause",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_12_1_NEXT_DIRECTION_OPTIONS_RUNTIME_SPARKBOT_ROBO_OS_PAUSE.md",
+  "options_reviewed": [
+    {
+      "id": "option_a",
+      "name": "pause_and_preserve",
+      "implementation_approved": false,
+      "risk": "lowest"
+    },
+    {
+      "id": "option_b",
+      "name": "future_narrow_runtime_slice_design",
+      "implementation_approved": false,
+      "risk": "medium"
+    },
+    {
+      "id": "option_c",
+      "name": "sparkbot_integration_boundary_planning",
+      "implementation_approved": false,
+      "risk": "high_if_treated_as_wiring"
+    },
+    {
+      "id": "option_d",
+      "name": "robo_os_physical_world_boundary_planning",
+      "implementation_approved": false,
+      "risk": "highest_if_treated_as_driver_behavior"
+    },
+    {
+      "id": "option_e",
+      "name": "threat_model_security_test_strengthening",
+      "implementation_approved": false,
+      "risk": "low"
+    }
+  ],
+  "directional_finding": "continue_to_threat_model_and_safety_gap_review",
+  "not_approved": [
+    "runtime_implementation",
+    "sparkbot_wiring",
+    "robo_os_driver_behavior",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_action"
+  ],
+  "next_phase": "phase_12_2_threat_model_and_safety_gap_review",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
