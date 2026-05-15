@@ -1,0 +1,72 @@
+{
+  "phase": "13.1",
+  "status": "static_forbidden_pattern_test_requirements",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_13_1_STATIC_FORBIDDEN_PATTERN_TEST_REQUIREMENTS.md",
+  "future_static_check_requirements": {
+    "forbidden_imports": [
+      "subprocess",
+      "socket",
+      "requests",
+      "urllib",
+      "httpx",
+      "webbrowser",
+      "threading",
+      "multiprocessing",
+      "sparkbot_modules",
+      "live_adapter_modules"
+    ],
+    "forbidden_calls": [
+      "system",
+      "popen",
+      "run",
+      "call",
+      "Popen",
+      "open",
+      "write",
+      "unlink",
+      "remove",
+      "rename",
+      "replace",
+      "dispatch",
+      "execute",
+      "approve",
+      "persist"
+    ],
+    "forbidden_boundary_names": [
+      "HumanInputBridge",
+      "IntentCompiler",
+      "GuardianDecision",
+      "Sparkbot",
+      "RoboOSDriver",
+      "ApprovalEnforcer",
+      "AuditWriter"
+    ],
+    "forbidden_behavior_claims": [
+      "approval_granted",
+      "execution_allowed",
+      "side_effects_allowed",
+      "dispatched",
+      "persisted",
+      "live_adapter_connected"
+    ]
+  },
+  "static_checks_are_sufficient_alone": false,
+  "next_phase": "phase_13_2_runtime_contract_test_requirements",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "static_test_code_added": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
