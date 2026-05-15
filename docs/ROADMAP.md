@@ -4102,6 +4102,48 @@ Status:
 - complete
 - tagged as `phase-9.4-phase-9-runtime-slice-audit-archive-closeout`
 
+## Phase 9.5 - First Runtime Slice Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 9 as a completed first narrow runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
+
+Deliverables:
+
+- `docs/PHASE_9_5_FIRST_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_9_5_first_runtime_slice_audit_archive_closeout.json`
+- `tests/test_phase_9_5_first_runtime_slice_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- Phase 9.0 through Phase 9.4 listed as complete
+- only `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py` listed as approved runtime files touched
+- no new `lima/` changes
+- no `tests/support/` changes
+- runtime remains non-executing
+- `execution_allowed` remains always false
+- `side_effects_allowed` remains always false
+- `approval_state` is never approved
+- Phase 8.1 test-update warning preserved and explained
+- no HumanInput runtime bridge
+- no Sparkbot import or wiring
+- no live adapter
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- Phase 10 requires explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- explicit operator next-scope decision
+
+Status:
+
+- complete
+- tagged as `phase-9.5-first-runtime-slice-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

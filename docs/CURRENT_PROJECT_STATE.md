@@ -136,19 +136,21 @@ Phase 9.3 Runtime Slice Readiness Review is complete, merged to `main`, and tagg
 
 Phase 9.4 Phase 9 Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 9.0 through Phase 9.3, preserves the narrow Phase 9 runtime slice as non-executing candidate metadata only, and stops before Phase 10 or any runtime expansion.
 
+Phase 9.5 First Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 9.0 through Phase 9.4 as the completed first narrow runtime slice, preserves the Phase 8.1 test-update warning, confirms only `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py` were touched as runtime files, and keeps Phase 10 gated.
+
 Latest completed phase merge:
 
-`c9b3ebfc468e9c969aaa1db7cee280a8e046498a`
+`e3e68fdc9d9bdee64cca0667fba1b19f720b8e6e`
 
 Latest tag:
 
-`phase-9.4-phase-9-runtime-slice-audit-archive-closeout`
+`phase-9.5-first-runtime-slice-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator next-scope decision. No Phase 10, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, audit persistence, or physical-world behavior is approved by Phase 9.4.
+Stop for explicit operator next-scope decision. No Phase 10, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 9.5.
 
 Recommended next branch:
 
@@ -156,7 +158,7 @@ not selected
 
 Latest completed merge:
 
-`c9b3ebfc468e9c969aaa1db7cee280a8e046498a`
+`e3e68fdc9d9bdee64cca0667fba1b19f720b8e6e`
 
 Recommended PR target:
 

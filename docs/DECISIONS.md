@@ -2723,6 +2723,28 @@ Consequences:
 - HumanInput runtime bridge behavior remains gated
 - Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0149: Phase 9 First Runtime Slice Is Archived
+
+Status: Accepted
+
+Decision:
+
+Phase 9.5 archives Phase 9.0 through Phase 9.4 as the completed first narrow runtime slice. The only runtime files touched are `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py`.
+
+Rationale:
+
+The first runtime touch after Phase 8.5 stayed inside the approved non-executing coordinator scope. A dedicated archive preserves the audit result, the acceptable Phase 8.1 test-update warning, and the Phase 10 gate.
+
+Consequences:
+
+- Phase 9.5 is docs/tests/fixtures only
+- no new `lima/` files are changed by Phase 9.5
+- no `tests/support/` files are changed
+- the Phase 9 runtime slice remains non-executing
+- Phase 5 runtime bridge remains gated
+- Phase 10 requires explicit Phil approval
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

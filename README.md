@@ -342,6 +342,8 @@ Phase 9.3 reviews the coordinator as ready only for Phase 9.4 audit/archive clos
 
 Phase 9.4 archives Phase 9 as the first narrow runtime slice lane. The only runtime files added in Phase 9 are `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py`; the slice remains non-executing candidate metadata only and Phase 10 requires explicit Phil approval.
 
+Phase 9.5 archives the completed first runtime slice after a dedicated Phase 9.0-9.4 audit. It preserves the acceptable Phase 8.1 test-update warning and keeps Phase 10 gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

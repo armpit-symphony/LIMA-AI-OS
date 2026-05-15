@@ -4115,6 +4115,40 @@ After merge:
 
 Stop for explicit operator next-scope decision. No Phase 10 or runtime expansion is approved by this closeout.
 
+## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
+
+Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
+
+GO:
+
+- list Phase 9.0 through Phase 9.4 as complete
+- list only `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py` as approved runtime files touched
+- document what Phase 9 added
+- document what Phase 9 did not add
+- preserve the Phase 8.1 test-update warning
+- prove Phase 10 remains gated
+- add static fixture and tests
+
+NO-GO:
+
+- new `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot imports or wiring
+- live adapter code
+- HumanInput runtime bridge behavior
+- real IntentCompiler
+- real GuardianDecision
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell, browser, network, file mutation, robot, or physical-world side effects
+
+After merge:
+
+Stop for explicit operator next-scope decision. No Phase 10 or runtime expansion is approved by this closeout.
+
 ## Phase 4.7 Gate: Non-production HumanInput Adapter Proposal Readiness Review
 
 Phase 4.7 may review whether the Phase 4.6 HumanInput adapter proposal is clear, safe, constrained, and explicitly non-runtime enough before future adapter safety gate documentation.
