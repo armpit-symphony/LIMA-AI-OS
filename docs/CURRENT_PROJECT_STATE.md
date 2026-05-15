@@ -226,7 +226,7 @@ Phase 17.4 Phase 17 Acceptance-Gate Audit Archive / Closeout is complete, merged
 
 Latest completed phase merge:
 
-`PENDING_PHASE_17_4_MERGE`
+`09e098b8b315a768348328686c5a68aee9884005`
 
 Latest tag:
 
@@ -244,7 +244,7 @@ none - Phase 18 requires explicit Phil approval
 
 Latest completed merge:
 
-`PENDING_PHASE_17_4_MERGE`
+`09e098b8b315a768348328686c5a68aee9884005`
 
 Recommended PR target:
 
