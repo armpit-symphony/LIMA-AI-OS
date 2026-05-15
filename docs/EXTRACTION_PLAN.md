@@ -5205,6 +5205,32 @@ Blocked:
 
 Continue only to Phase 17.3 next-lane decision matrix.
 
+## Phase 17.3 Gate: Next-Lane Decision Matrix
+
+Phase 17.3 may compare Phase 18 options and recommend the safest next lane.
+
+Allowed:
+
+- decision matrix documentation
+- static decision matrix fixture metadata
+- static decision matrix tests
+- compare no-code runtime design, test-only regression hardening, Sparkbot boundary planning, Robo-OS boundary planning, and pause options
+- preserve explicit Phase 18 approval requirement
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 17.4 archive / closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

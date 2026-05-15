@@ -1,0 +1,63 @@
+{
+  "phase": "17.3",
+  "status": "next_lane_decision_matrix",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_17_3_NEXT_LANE_DECISION_MATRIX.md",
+  "options": [
+    {
+      "option": "A",
+      "lane": "no_code_design_lane_for_next_narrow_runtime_slice",
+      "risk": "medium",
+      "recommendation": "viable_after_regression_hardening_or_if_runtime_design_planning_is_requested"
+    },
+    {
+      "option": "B",
+      "lane": "test_only_regression_hardening_lane",
+      "risk": "lowest_active_next_step",
+      "recommendation": "recommended"
+    },
+    {
+      "option": "C",
+      "lane": "sparkbot_integration_boundary_planning",
+      "risk": "medium_high",
+      "recommendation": "defer"
+    },
+    {
+      "option": "D",
+      "lane": "robo_os_physical_world_boundary_planning",
+      "risk": "high",
+      "recommendation": "defer"
+    },
+    {
+      "option": "E",
+      "lane": "pause_and_preserve_current_runtime_test_state",
+      "risk": "lowest_operational_risk",
+      "recommendation": "acceptable"
+    }
+  ],
+  "recommended_phase_18_direction": "test_only_regression_hardening_lane",
+  "phase_18_requires_explicit_phil_approval": true,
+  "not_approved_by_this_phase": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_behavior"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

@@ -3569,6 +3569,27 @@ Consequences:
 - runtime expansion remains blocked
 - Phase 17.3 may compare next-lane options
 
+## ADR-0191: Phase 18 Recommendation Prefers Test-Only Regression Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 17.3 recommends a test-only regression hardening lane as the safest active Phase 18 direction.
+
+Rationale:
+
+Regression hardening improves confidence in existing non-executing candidate APIs and acceptance-gate boundaries without expanding runtime scope. Runtime design, Sparkbot integration, and Robo-OS / physical-world planning remain possible later lanes but carry higher scope and safety risk.
+
+Consequences:
+
+- Phase 17.3 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 18 remains unapproved
+- Phase 17.4 may close the lane and preserve the approval question
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
