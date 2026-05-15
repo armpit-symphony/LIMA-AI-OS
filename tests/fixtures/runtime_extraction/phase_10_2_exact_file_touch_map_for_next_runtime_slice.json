@@ -1,0 +1,70 @@
+{
+  "phase": "10.2",
+  "status": "exact_file_touch_map_for_next_runtime_slice",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_10_2_EXACT_FILE_TOUCH_MAP_FOR_NEXT_RUNTIME_SLICE.md",
+  "source_phase": "10.1",
+  "proposed_future_slice": "candidate_validation_and_status_normalization",
+  "phase_11_runtime_implementation_approved_now": false,
+  "future_eligible_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/__init__.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "future_file_limits": {
+    "lima/kernel/intake_candidate.py": [
+      "pure_candidate_validation_hook_or_metadata_exposure_only",
+      "no_execution",
+      "no_approval",
+      "no_dispatch",
+      "no_persistence",
+      "no_external_service_calls"
+    ],
+    "lima/kernel/__init__.py": [
+      "safe_exports_only",
+      "import_must_remain_side_effect_free"
+    ],
+    "lima/kernel/candidate_status.py": [
+      "may_be_created_only_after_explicit_phase_11_approval",
+      "pure_in_process_non_executing_authority_free"
+    ]
+  },
+  "forbidden_runtime_surfaces": [
+    "lima/adapters/**",
+    "lima/contracts/**",
+    "lima/guardian/**",
+    "lima/harness/**",
+    "lima/io/**",
+    "lima/packs/**",
+    "lima/persistence/**",
+    "lima/services/**",
+    "lima/shells/**",
+    "lima/spine/**",
+    "sparkbot_files",
+    "tests/support/**"
+  ],
+  "required_future_scope_limits": {
+    "execution_allowed_false": true,
+    "side_effects_allowed_false": true,
+    "approval_state_never_approved": true,
+    "provenance_preserved": true,
+    "unsafe_candidates_blocked_or_not_ready": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "next_phase": "phase_10_3_acceptance_test_and_rollback_plan",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
