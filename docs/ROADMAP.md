@@ -5108,6 +5108,152 @@ Status:
 - complete
 - tagged as `phase-14.4-future-runtime-acceptance-gate-closeout`
 
+## Phase 15.0 - Acceptance-Gate Implementation Proposal Charter
+
+Goal:
+
+Open Phase 15 as a docs/tests/fixtures-only acceptance-gate implementation proposal/readiness lane.
+
+Deliverables:
+
+- `docs/PHASE_15_0_ACCEPTANCE_GATE_IMPLEMENTATION_PROPOSAL_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_15_0_acceptance_gate_implementation_proposal_charter.json`
+- `tests/test_phase_15_0_acceptance_gate_implementation_proposal_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no actual future acceptance-test implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 14 inputs listed
+- future proposal outputs listed
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-15.0-acceptance-gate-implementation-proposal-charter`
+
+## Phase 15.1 - Future Static Test Implementation Plan
+
+Goal:
+
+Propose the future static forbidden-pattern test implementation package without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_15_1_FUTURE_STATIC_TEST_IMPLEMENTATION_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_15_1_future_static_test_implementation_plan.json`
+- `tests/test_phase_15_1_future_static_test_implementation_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no static test implementation
+- no scanner utilities
+- future static test file and test names listed
+- no `lima/` changes
+- no `tests/support/` changes
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-15.1-future-static-test-implementation-plan`
+
+## Phase 15.2 - Future Runtime Contract Test Implementation Plan
+
+Goal:
+
+Propose the future runtime contract acceptance-test implementation package without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_15_2_FUTURE_RUNTIME_CONTRACT_TEST_IMPLEMENTATION_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_15_2_future_runtime_contract_test_implementation_plan.json`
+- `tests/test_phase_15_2_future_runtime_contract_test_implementation_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no runtime contract acceptance-test implementation
+- future runtime contract test file and test names listed
+- no `lima/` changes
+- no `tests/support/` changes
+- runtime behavior remains unchanged
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-15.2-future-runtime-contract-test-implementation-plan`
+
+## Phase 15.3 - Future Threat Fixture Test Implementation Plan
+
+Goal:
+
+Propose the future threat fixture acceptance-test implementation package without implementing it.
+
+Deliverables:
+
+- `docs/PHASE_15_3_FUTURE_THREAT_FIXTURE_TEST_IMPLEMENTATION_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_15_3_future_threat_fixture_test_implementation_plan.json`
+- `tests/test_phase_15_3_future_threat_fixture_test_implementation_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no future threat fixture test implementation
+- no future threat fixtures added
+- future threat fixture test file, fixture names, and content requirements listed
+- no `lima/` changes
+- no `tests/support/` changes
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-15.3-future-threat-fixture-test-implementation-plan`
+
+## Phase 15.4 - Test-Only Implementation Readiness Gate / Closeout
+
+Goal:
+
+Close Phase 15 and preserve the Phase 16 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_15_4_TEST_ONLY_IMPLEMENTATION_READINESS_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_15_4_test_only_implementation_readiness_gate_closeout.json`
+- `tests/test_phase_15_4_test_only_implementation_readiness_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no actual future acceptance-test implementation
+- no future acceptance fixtures added
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 15.0 through Phase 15.3 listed as complete
+- Phase 14 designed tests marked ready only for later explicitly approved test-only implementation
+- Phase 16 requires explicit Phil approval
+- runtime implementation remains blocked
+- Sparkbot wiring remains blocked
+- HumanInput runtime bridge remains blocked
+- approval, enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+- tests pass
+
+Next likely phase:
+
+- Phase 16 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-15.4-test-only-implementation-readiness-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

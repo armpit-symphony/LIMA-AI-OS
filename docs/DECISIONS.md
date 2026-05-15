@@ -3288,6 +3288,103 @@ Consequences:
 - Phase 15 requires explicit Phil approval
 - runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0177: Phase 15 Opens As Acceptance-Gate Implementation Proposal Readiness
+
+Status: Accepted
+
+Decision:
+
+Phase 15.0 opens Phase 15 as a docs/tests/fixtures-only acceptance-gate implementation proposal and readiness lane.
+
+Rationale:
+
+Phase 14 designed future test names and expected assertions. Before any actual test-only implementation, LIMA needs a proposal/readiness lane that identifies future files, fixture groups, and acceptance criteria without implementing them.
+
+Consequences:
+
+- Phase 15.0 is docs/tests/fixtures only
+- actual future acceptance tests are not implemented
+- no `lima/` or `tests/support/` files are changed
+- Phase 15.1 may propose the static forbidden-pattern implementation package
+
+## ADR-0178: Static Acceptance Gate Implementation Requires A Separate Approval
+
+Status: Accepted
+
+Decision:
+
+Phase 15.1 proposes future static forbidden-pattern test files, names, assertions, and scanner constraints without adding scanners or tests.
+
+Rationale:
+
+Static tests can accidentally become broad scanners or runtime import execution if not scoped first. The proposal must name the future file and constraints before implementation.
+
+Consequences:
+
+- Phase 15.1 is docs/tests/fixtures only
+- no scanner utility is added
+- no future acceptance tests are implemented
+- Phase 15.2 may propose runtime contract acceptance tests
+
+## ADR-0179: Runtime Contract Acceptance Tests Require Proposal Before Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 15.2 proposes future runtime contract acceptance-test files, names, and expected assertions without implementing them.
+
+Rationale:
+
+Runtime contract tests may later exercise existing non-executing candidate/status APIs, so their file scope and authority boundaries must be agreed before implementation.
+
+Consequences:
+
+- Phase 15.2 is docs/tests/fixtures only
+- no runtime contract acceptance tests are implemented
+- no runtime behavior is changed
+- Phase 15.3 may propose threat fixture acceptance tests
+
+## ADR-0180: Threat Fixture Acceptance Tests Require Synthetic Fixture Scope First
+
+Status: Accepted
+
+Decision:
+
+Phase 15.3 proposes future threat fixture test files, fixture names, and fixture content requirements without adding the future fixtures or tests.
+
+Rationale:
+
+Threat fixtures must be useful enough to catch risky categories while remaining synthetic, inert, side-effect-free, and free of credentials, private infrastructure, live targets, and robot instructions.
+
+Consequences:
+
+- Phase 15.3 is docs/tests/fixtures only
+- future threat fixtures are not added
+- future threat fixture tests are not implemented
+- Phase 15.4 may close the lane
+
+## ADR-0181: Phase 15 Closes At A Phase 16 Test-Only Implementation Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 15.4 closes Phase 15 and marks the Phase 14 designed tests ready only for a later explicitly approved test-only implementation lane.
+
+Rationale:
+
+Phase 15 produced a concrete proposal for future test files, fixture files, expected assertions, and boundaries. It should not be mistaken for implementation approval.
+
+Consequences:
+
+- Phase 15.4 is docs/tests/fixtures only
+- actual future acceptance tests are not implemented
+- future acceptance fixtures are not added
+- no `lima/` or `tests/support/` files are changed
+- Phase 16 requires explicit Phil approval
+- runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

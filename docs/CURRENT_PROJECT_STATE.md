@@ -192,27 +192,37 @@ Phase 14.3 Threat Fixture Acceptance Test Design is complete, merged to `main`, 
 
 Phase 14.4 Future Runtime Acceptance Gate / Closeout is complete, merged to `main`, and tagged. It closes Phase 14 as docs/tests/fixtures-only acceptance-gate test design and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 15.0 Acceptance-Gate Implementation Proposal Charter is complete, merged to `main`, and tagged. It opens Phase 15 as docs/tests/fixtures-only proposal/readiness work and does not implement acceptance tests.
+
+Phase 15.1 Future Static Test Implementation Plan is complete, merged to `main`, and tagged. It proposes future static forbidden-pattern test files, names, assertions, and scanner constraints without adding scanners or future acceptance tests.
+
+Phase 15.2 Future Runtime Contract Test Implementation Plan is complete, merged to `main`, and tagged. It proposes future runtime contract acceptance-test files, names, and assertions without adding future acceptance tests or changing runtime behavior.
+
+Phase 15.3 Future Threat Fixture Test Implementation Plan is complete, merged to `main`, and tagged. It proposes future threat fixture acceptance-test files, fixture names, and fixture content requirements without adding those future fixtures or tests.
+
+Phase 15.4 Test-Only Implementation Readiness Gate / Closeout is complete, merged to `main`, and tagged. It closes Phase 15 as docs/tests/fixtures-only proposal/readiness work, marks the Phase 14 designed tests ready only for a later explicitly approved test-only implementation lane, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`67abeb89ec6532f0ab428a635e711f08d0852183`
+`PENDING_PHASE_15_4_MERGE`
 
 Latest tag:
 
-`phase-14.4-future-runtime-acceptance-gate-closeout`
+`phase-15.4-test-only-implementation-readiness-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop before Phase 15. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Stop before Phase 16. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-none - Phase 15 requires explicit Phil approval
+none - Phase 16 requires explicit Phil approval
 
 Latest completed merge:
 
-`53b80f2b8d5ee71bc1213f2e873f55f0ebca5787`
+`PENDING_PHASE_15_4_MERGE`
 
 Recommended PR target:
 
@@ -222,11 +232,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 15 - gated pending explicit Phil approval.
+Phase 16 - gated pending explicit Phil approval.
 
-Phase 15 approval question:
+Phase 16 approval question:
 
-Do you approve Phase 15 as a docs/tests/fixtures-only acceptance-gate implementation proposal/readiness lane that decides whether the Phase 14 designed tests are ready for a later explicitly approved test-only implementation, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
+Do you approve Phase 16 as a test-only acceptance-gate implementation lane limited to adding the Phase 15 proposed acceptance tests and synthetic fixtures under `tests/` and `tests/fixtures/runtime_extraction/`, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 13 approval question:
 
