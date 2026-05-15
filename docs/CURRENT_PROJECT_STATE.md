@@ -230,7 +230,7 @@ Phase 18.1 Candidate API Regression Tests is complete, merged to `main`, and tag
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_1_MERGE`
+`a9b9d8c51b45e5196ade2170f07a04cd59100104`
 
 Latest tag:
 
@@ -248,7 +248,7 @@ phase-18-2-acceptance-boundary-regression-fixtures
 
 Latest completed merge:
 
-`PENDING_PHASE_18_1_MERGE`
+`a9b9d8c51b45e5196ade2170f07a04cd59100104`
 
 Recommended PR target:
 
