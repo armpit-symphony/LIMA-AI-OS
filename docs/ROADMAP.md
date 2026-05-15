@@ -5481,6 +5481,34 @@ Status:
 - complete
 - tagged as `phase-17.1-acceptance-test-coverage-review`
 
+## Phase 17.2 - Remaining Safety Gap Review
+
+Goal:
+
+Review remaining safety gaps before any future runtime expansion or integration lane.
+
+Deliverables:
+
+- `docs/PHASE_17_2_REMAINING_SAFETY_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_17_2_remaining_safety_gap_review.json`
+- `tests/test_phase_17_2_remaining_safety_gap_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- remaining gaps are listed
+- runtime expansion blockers are explicit
+- Sparkbot, HumanInput bridge, live adapter, approval enforcement, audit persistence, and physical-world work remain blocked
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-17.2-remaining-safety-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
