@@ -1,0 +1,51 @@
+{
+  "phase": "10.4",
+  "status": "phase_10_runtime_expansion_approval_gate_closeout",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_10_4_PHASE_10_RUNTIME_EXPANSION_APPROVAL_GATE_CLOSEOUT.md",
+  "completed_phase_10_scope": [
+    "phase_10_0_post_phase_9_runtime_slice_review",
+    "phase_10_1_next_runtime_slice_design_options",
+    "phase_10_2_exact_file_touch_map_for_next_runtime_slice",
+    "phase_10_3_acceptance_test_and_rollback_plan"
+  ],
+  "future_phase_11_eligible_files_if_approved": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/__init__.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "phase_11_runtime_implementation_approved_now": false,
+  "phase_11_requires_explicit_phil_approval": true,
+  "exact_phase_11_approval_question": "Do you approve a narrow Phase 11 runtime implementation slice limited to candidate validation and candidate status normalization for existing non-executing intake candidates, touching only lima/kernel/intake_candidate.py, lima/kernel/__init__.py if a safe public export is required, and a possible new lima/kernel/candidate_status.py, requiring the Phase 10.3 acceptance tests and rollback/audit proof, and still forbidding HumanInput runtime bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?",
+  "not_implemented": [
+    "runtime_candidate_validation",
+    "runtime_candidate_status_normalization",
+    "lima/kernel/candidate_status.py",
+    "humaninput_runtime_bridge",
+    "sparkbot_wiring",
+    "live_adapter",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_behavior"
+  ],
+  "recommended_next_action": "stop_for_explicit_phil_phase_11_decision",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
