@@ -228,7 +228,7 @@ Phase 18.0 Regression Hardening Charter is complete, merged to `main`, and tagge
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_0_MERGE`
+`0e25a6fe5424e7b47cc039e6dbde2595fbbd0029`
 
 Latest tag:
 
@@ -246,7 +246,7 @@ phase-18-1-candidate-api-regression-tests
 
 Latest completed merge:
 
-`PENDING_PHASE_18_0_MERGE`
+`0e25a6fe5424e7b47cc039e6dbde2595fbbd0029`
 
 Recommended PR target:
 
