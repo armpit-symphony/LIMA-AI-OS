@@ -388,6 +388,16 @@ Phase 13.3 defines future synthetic threat fixture families for malformed, unkno
 
 Phase 13.4 closes Phase 13 at a future acceptance gate. It recommends Phase 14 as docs/tests/fixtures-only acceptance-gate test design and stops before any runtime or integration work.
 
+Phase 14.0 opens the approved acceptance-gate test design lane. It converts Phase 13 requirements into concrete future test names and expected assertions without implementing tests or touching runtime code.
+
+Phase 14.1 designs future static forbidden-pattern tests for forbidden imports, calls, side-effect patterns, boundary names, and authority claims while adding no scanner implementation.
+
+Phase 14.2 designs future runtime contract tests for non-executing candidate invariants: execution and side-effect flags remain false, approval never becomes approved, provenance is preserved, and malformed/unknown/stale/replayed inputs remain safe.
+
+Phase 14.3 designs future fixture-based acceptance tests for malformed candidates, unknown statuses, stale/replayed candidates, approval-bypass wording, shell/network/browser/file/robotics attempts, Sparkbot integration attempts, and HumanInput bridge attempts.
+
+Phase 14.4 closes Phase 14 at a Phase 15 decision gate. It preserves the future acceptance-gate requirements and recommends a docs/tests/fixtures-only Phase 15 proposal/readiness lane before any test implementation, runtime, or integration work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
