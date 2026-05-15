@@ -5453,6 +5453,34 @@ Status:
 - complete
 - tagged as `phase-17.0-phase-16-acceptance-test-audit-charter`
 
+## Phase 17.1 - Acceptance Test Coverage Review
+
+Goal:
+
+Review Phase 16 acceptance-test coverage and identify static/test-only limitations.
+
+Deliverables:
+
+- `docs/PHASE_17_1_ACCEPTANCE_TEST_COVERAGE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_17_1_acceptance_test_coverage_review.json`
+- `tests/test_phase_17_1_acceptance_test_coverage_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 16 static, contract, and threat fixture test coverage is mapped
+- runtime expansion remains unapproved
+- limitations are explicit
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-17.1-acceptance-test-coverage-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

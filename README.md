@@ -422,6 +422,8 @@ Phase 16.5 archives Phase 16 as a completed test-only acceptance-gate lane and s
 
 Phase 17.0 opens the acceptance-gate audit/archive and next-lane decision phase. It audits Phase 16.0 through Phase 16.5 as test-only work and keeps runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
 
+Phase 17.1 reviews Phase 16 acceptance-test coverage and records that the tests strengthen the gate while remaining limited to static, contract, and synthetic fixture coverage.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

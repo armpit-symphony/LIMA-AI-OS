@@ -3527,6 +3527,27 @@ Consequences:
 - Phase 18 remains unapproved
 - runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0189: Phase 16 Acceptance Coverage Strengthens But Does Not Approve Runtime Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 17.1 records that Phase 16 acceptance tests strengthen the gate before future runtime expansion but remain limited to test-only static, contract, and synthetic fixture coverage.
+
+Rationale:
+
+Acceptance tests can increase confidence in existing non-executing candidate invariants without becoming runtime approval, live monitoring, Sparkbot integration, or HumanInput bridge behavior.
+
+Consequences:
+
+- Phase 17.1 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- limitations remain explicit
+- Phase 17.2 may review remaining safety gaps
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

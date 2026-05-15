@@ -216,13 +216,15 @@ Phase 16.5 Phase 16 Test-Only Acceptance Archive / Closeout is complete, merged 
 
 Phase 17.0 Phase 16 Acceptance Test Audit Charter is complete, merged to `main`, and tagged. It opens Phase 17 as docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision work, audits Phase 16.0 through Phase 16.5, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 17.1 Acceptance Test Coverage Review is complete, merged to `main`, and tagged. It maps the Phase 16 static, contract, and threat fixture acceptance tests to covered gates, records their static/test-only limitations, and confirms they do not approve runtime expansion.
+
 Latest completed phase merge:
 
-`027c918b26b96721fc59f175fdebd0e1ea38787d`
+`PENDING_PHASE_17_1_MERGE`
 
 Latest tag:
 
-`phase-17.0-phase-16-acceptance-test-audit-charter`
+`phase-17.1-acceptance-test-coverage-review`
 
 ## Current Next Step
 
@@ -232,11 +234,11 @@ Continue only inside the approved Phase 17 docs/tests/fixtures-only acceptance-g
 
 Recommended next branch:
 
-phase-17-1-acceptance-test-coverage-review
+phase-17-2-remaining-safety-gap-review
 
 Latest completed merge:
 
-`027c918b26b96721fc59f175fdebd0e1ea38787d`
+`PENDING_PHASE_17_1_MERGE`
 
 Recommended PR target:
 
@@ -246,7 +248,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 17.1 - Acceptance Test Coverage Review.
+Phase 17.2 - Remaining Safety Gap Review.
 
 Phase 17 approval question:
 
