@@ -1,0 +1,45 @@
+{
+  "phase": "16.2",
+  "status": "runtime_contract_acceptance_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_16_2_RUNTIME_CONTRACT_ACCEPTANCE_TESTS.md",
+  "acceptance_test_file": "tests/test_phase_16_2_runtime_contract_acceptance_tests.py",
+  "exercised_existing_apis": [
+    "lima.kernel.build_intake_candidate",
+    "lima.kernel.normalize_candidate_status",
+    "lima.kernel.validate_candidate"
+  ],
+  "implemented_acceptance_checks": [
+    "valid_low_risk_intake_remains_non_executing",
+    "risky_intake_requires_review_without_authority",
+    "malformed_candidate_invalid_or_blocked_safely",
+    "unknown_status_fails_closed",
+    "stale_and_replayed_candidates_blocked_or_invalid",
+    "execution_allowed_always_false",
+    "side_effects_allowed_always_false",
+    "approval_state_never_approved",
+    "provenance_preserved",
+    "operator_admin_phil_trusted_wording_does_not_bypass_safety",
+    "no_intentenvelope_or_guardiandecision_created",
+    "phase_5_runtime_bridge_remains_gated"
+  ],
+  "next_phase": "phase_16_3_threat_fixture_acceptance_tests",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
