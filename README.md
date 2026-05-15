@@ -432,6 +432,8 @@ Phase 17.4 archives Phase 17 as a completed acceptance-gate audit/archive lane a
 
 Phase 18.0 opens the approved test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries. It keeps runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
 
+Phase 18.1 adds candidate API regression tests against existing non-executing APIs, proving candidates remain non-executable, authority-free, provenance-preserving, and safe for malformed, unknown, stale/replayed, dangerous wording, and raw HumanInput-like inputs.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

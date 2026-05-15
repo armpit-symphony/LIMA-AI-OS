@@ -5281,6 +5281,31 @@ Blocked:
 
 Continue only to Phase 18.1 candidate API regression tests.
 
+## Phase 18.1 Gate: Candidate API Regression Tests
+
+Phase 18.1 may add regression tests for existing non-executing candidate APIs.
+
+Allowed:
+
+- test-only regression tests under `tests/`
+- synthetic fixture metadata
+- phase documentation
+- imports of existing candidate APIs for tests only
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 18.2 acceptance boundary regression fixtures.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
