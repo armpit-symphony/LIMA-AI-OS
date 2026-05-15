@@ -4562,6 +4562,35 @@ After merge:
 
 Continue only to Phase 12.3 next-lane recommendation matrix.
 
+## Phase 12.3 Gate: Next Lane Recommendation Matrix
+
+Phase 12.3 may produce a machine-checkable recommendation matrix for the next lane after Phase 12.
+
+GO:
+
+- compare pause and preserve
+- compare future runtime slice design
+- compare Sparkbot boundary planning
+- compare Robo-OS / physical-world boundary planning
+- compare threat-model-derived test planning
+- recommend only a docs/tests/fixtures-only next lane
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 12.4 Phase 12 decision gate / closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

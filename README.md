@@ -374,6 +374,8 @@ Phase 12.1 compares pause, future runtime design, Sparkbot boundary planning, Ro
 
 Phase 12.2 reviews threat-model and safety gaps across runtime expansion, Sparkbot boundary planning, Robo-OS physical-world planning, and pause options. It recommends a machine-checkable next-lane recommendation matrix before any implementation.
 
+Phase 12.3 records the next-lane recommendation matrix. It recommends a docs/tests/fixtures-only threat-model-derived test planning lane as the safest next step and defers runtime, Sparkbot, and Robo-OS work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

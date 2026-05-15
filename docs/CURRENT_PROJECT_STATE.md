@@ -168,27 +168,29 @@ Phase 12.1 Next Direction Options: Runtime / Sparkbot / Robo-OS / Pause is compl
 
 Phase 12.2 Threat Model and Safety Gap Review is complete, merged to `main`, and tagged. It reviews candidate-status, HumanInput bridge, Sparkbot, Robo-OS, operator-bypass, side-effect escalation, audit, and static-test risks, then recommends a next-lane recommendation matrix.
 
+Phase 12.3 Next Lane Recommendation Matrix is complete, merged to `main`, and tagged. It recommends a docs/tests/fixtures-only threat-model-derived test planning lane as the safest next step and defers runtime expansion, Sparkbot wiring, Robo-OS driver behavior, HumanInput runtime bridge behavior, live adapters, execution, dispatch, and persistence.
+
 Latest completed phase merge:
 
-`5f1b436da17a58ad098de97c5205626421072d6c`
+`20c24a80c0b4f5cb04087a7f912d6de6152175a2`
 
 Latest tag:
 
-`phase-12.2-threat-model-and-safety-gap-review`
+`phase-12.3-next-lane-recommendation-matrix`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.3 Next Lane Recommendation Matrix. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.4 Phase 12 Decision Gate / Closeout. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-12-3-next-lane-recommendation-matrix
+phase-12-4-phase-12-decision-gate-closeout
 
 Latest completed merge:
 
-`5f1b436da17a58ad098de97c5205626421072d6c`
+`20c24a80c0b4f5cb04087a7f912d6de6152175a2`
 
 Recommended PR target:
 
@@ -198,7 +200,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 12.3 - Next Lane Recommendation Matrix.
+Phase 12.4 - Phase 12 Decision Gate / Closeout.
 
 Phase 12 approval question:
 

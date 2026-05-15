@@ -4733,6 +4733,41 @@ Status:
 - complete
 - tagged as `phase-12.2-threat-model-and-safety-gap-review`
 
+## Phase 12.3 - Next Lane Recommendation Matrix
+
+Goal:
+
+Record a machine-checkable recommendation matrix for the safest next lane after Phase 12.
+
+Deliverables:
+
+- `docs/PHASE_12_3_NEXT_LANE_RECOMMENDATION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_12_3_next_lane_recommendation_matrix.json`
+- `tests/test_phase_12_3_next_lane_recommendation_matrix.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- all Phase 12 options listed
+- threat-model-derived test planning recommended as next
+- runtime expansion deferred
+- Sparkbot wiring deferred
+- Robo-OS driver behavior deferred
+- Phase 5 runtime bridge remains gated
+- no approval, enforcement, execution, dispatch, audit persistence, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 12.4 - Phase 12 Decision Gate / Closeout
+
+Status:
+
+- complete
+- tagged as `phase-12.3-next-lane-recommendation-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -3046,6 +3046,29 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0165: Threat-Model-Derived Test Planning Is The Recommended Next Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 12.3 recommends a docs/tests/fixtures-only threat-model-derived test planning lane as the safest next step after Phase 12.
+
+Rationale:
+
+The matrix shows that runtime expansion, Sparkbot boundary planning, and Robo-OS boundary planning all carry higher drift risk until the Phase 12.2 threats are converted into testable gates. A planning-only security test lane reduces risk without modifying runtime code.
+
+Consequences:
+
+- Phase 12.3 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- runtime implementation remains unapproved
+- Sparkbot wiring remains unapproved
+- Robo-OS driver behavior remains unapproved
+- Phase 12.4 may close the lane and preserve the exact next approval question
+- HumanInput bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
