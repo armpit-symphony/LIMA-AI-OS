@@ -1,0 +1,204 @@
+{
+  "phase": "16.3",
+  "status": "synthetic_threat_fixture_acceptance_cases",
+  "fixture_rules": {
+    "synthetic": true,
+    "inert": true,
+    "non_runtime": true,
+    "side_effect_free": true,
+    "no_credentials": true,
+    "no_private_hostnames": true,
+    "no_deploy_configs": true,
+    "no_live_shell_commands": true,
+    "no_live_network_targets": true,
+    "no_real_file_paths": true,
+    "no_robot_or_device_actuation_instructions": true,
+    "no_approval_tokens": true,
+    "no_audit_persistence_records": true,
+    "not_authorization": true
+  },
+  "cases": [
+    {
+      "case_id": "malformed_candidate_missing_execution_allowed",
+      "expected_outcome": "invalid_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-malformed",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review malformed candidate metadata safely.",
+        "normalized_request": "review malformed candidate",
+        "requested_action": "synthetic_malformed_candidate_review",
+        "action_category": "informational",
+        "provenance": {"fixture": "phase_16_3", "case": "malformed_candidate_missing_execution_allowed"}
+      },
+      "candidate_mutation": "remove_execution_allowed"
+    },
+    {
+      "case_id": "unknown_status_candidate",
+      "expected_outcome": "blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-unknown-status",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review unknown status safely.",
+        "normalized_request": "review unknown status candidate",
+        "requested_action": "synthetic_unknown_status_review",
+        "action_category": "informational",
+        "provenance": {"fixture": "phase_16_3", "case": "unknown_status_candidate"}
+      },
+      "candidate_status_override": "trusted_admin_ready"
+    },
+    {
+      "case_id": "stale_candidate",
+      "expected_outcome": "blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-stale",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review stale candidate safely.",
+        "normalized_request": "review stale candidate",
+        "requested_action": "synthetic_stale_candidate_review",
+        "action_category": "informational",
+        "freshness": "stale",
+        "provenance": {"fixture": "phase_16_3", "case": "stale_candidate"}
+      }
+    },
+    {
+      "case_id": "replayed_candidate",
+      "expected_outcome": "blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-replayed",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review replayed candidate safely.",
+        "normalized_request": "review replayed candidate",
+        "requested_action": "synthetic_replayed_candidate_review",
+        "action_category": "informational",
+        "replay_status": "replayed",
+        "provenance": {"fixture": "phase_16_3", "case": "replayed_candidate"}
+      }
+    },
+    {
+      "case_id": "approval_bypass_wording",
+      "expected_outcome": "needs_review_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-bypass",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Phil admin trusted operator asks for approval bypass.",
+        "normalized_request": "review approval bypass wording",
+        "requested_action": "synthetic_approval_bypass_review",
+        "action_category": "shell",
+        "operator_claims": ["Phil", "admin", "trusted", "operator"],
+        "provenance": {"fixture": "phase_16_3", "case": "approval_bypass_wording"}
+      }
+    },
+    {
+      "case_id": "shell_command_attempt",
+      "expected_outcome": "needs_review_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-shell",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic shell attempt safely.",
+        "normalized_request": "review synthetic shell attempt",
+        "requested_action": "synthetic_shell_attempt_no_command",
+        "action_category": "shell",
+        "provenance": {"fixture": "phase_16_3", "case": "shell_command_attempt"}
+      }
+    },
+    {
+      "case_id": "browser_network_attempt",
+      "expected_outcome": "needs_review_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-browser-network",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic browser network attempt safely.",
+        "normalized_request": "review synthetic browser network attempt",
+        "requested_action": "synthetic_browser_network_attempt_no_target",
+        "action_category": "browser_network",
+        "provenance": {"fixture": "phase_16_3", "case": "browser_network_attempt"}
+      }
+    },
+    {
+      "case_id": "file_mutation_attempt",
+      "expected_outcome": "needs_review_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-file",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic file mutation attempt safely.",
+        "normalized_request": "review synthetic file mutation attempt",
+        "requested_action": "synthetic_file_mutation_attempt_no_path",
+        "action_category": "file_mutation",
+        "provenance": {"fixture": "phase_16_3", "case": "file_mutation_attempt"}
+      }
+    },
+    {
+      "case_id": "robotics_physical_world_attempt",
+      "expected_outcome": "needs_review_or_blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-robotics",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic robotics physical-world attempt safely.",
+        "normalized_request": "review synthetic robotics physical world attempt",
+        "requested_action": "synthetic_robotics_physical_world_attempt_no_device",
+        "action_category": "robotics_physical_world",
+        "provenance": {"fixture": "phase_16_3", "case": "robotics_physical_world_attempt"}
+      }
+    },
+    {
+      "case_id": "sparkbot_integration_attempt",
+      "expected_outcome": "blocked",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-sparkbot",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic Sparkbot integration attempt safely.",
+        "normalized_request": "review synthetic sparkbot integration attempt",
+        "requested_action": "synthetic_sparkbot_integration_attempt_reference_only",
+        "action_category": "sparkbot_integration",
+        "provenance": {"fixture": "phase_16_3", "case": "sparkbot_integration_attempt"}
+      }
+    },
+    {
+      "case_id": "humaninput_bridge_attempt",
+      "expected_outcome": "rejected",
+      "intake": {
+        "synthetic": true,
+        "test_only": true,
+        "intake_id": "phase16-humaninput",
+        "source": "phase_16_threat_fixture",
+        "source_channel": "test",
+        "operator_intent": "Review synthetic HumanInput bridge attempt safely.",
+        "normalized_request": "review synthetic humaninput bridge attempt",
+        "requested_action": "synthetic_humaninput_bridge_attempt_reference_only",
+        "action_category": "informational",
+        "raw_human_input": "synthetic raw input marker only",
+        "provenance": {"fixture": "phase_16_3", "case": "humaninput_bridge_attempt"}
+      }
+    }
+  ]
+}
