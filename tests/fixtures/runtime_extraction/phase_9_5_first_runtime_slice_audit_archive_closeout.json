@@ -1,0 +1,71 @@
+{
+  "phase": "9.5",
+  "status": "first_runtime_slice_audit_archive_closeout",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_9_5_FIRST_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md",
+  "source_phase": "9.4",
+  "source_tag": "phase-9.4-phase-9-runtime-slice-audit-archive-closeout",
+  "audit_result_for_phase_9_0_through_9_4": "pass_with_warnings",
+  "preserved_warning": "phase_8_1_future_files_do_not_exist_test_updated_after_approved_phase_9_2_kernel_file_creation",
+  "warning_is_acceptable": true,
+  "completed_phase_9_scope": [
+    "phase_9_0_runtime_slice_preflight_audit_eligible_file_confirmation",
+    "phase_9_1_runtime_slice_acceptance_test_scaffolding",
+    "phase_9_2_non_executing_kernel_intake_to_candidate_coordinator_implementation",
+    "phase_9_3_runtime_slice_readiness_review",
+    "phase_9_4_phase_9_runtime_slice_audit_archive_closeout"
+  ],
+  "approved_runtime_files_touched": [
+    "lima/kernel/__init__.py",
+    "lima/kernel/intake_candidate.py"
+  ],
+  "phase_9_added": [
+    "first_non_executing_kernel_intake_to_candidate_coordinator",
+    "acceptance_tests",
+    "docs",
+    "fixtures",
+    "static_tests",
+    "roadmap_state_updates"
+  ],
+  "phase_9_not_added": [
+    "humaninput_runtime_bridge",
+    "sparkbot_wiring_or_imports",
+    "live_adapter",
+    "intentcompiler_behavior_change",
+    "guardiandecision_behavior_change",
+    "approval_enforcement",
+    "execution",
+    "audit_persistence",
+    "dispatch",
+    "shell_browser_network_file_mutation_robotics_physical_world_behavior",
+    "tests_support_changes"
+  ],
+  "candidate_safety_guarantees": {
+    "execution_allowed_always_false": true,
+    "side_effects_allowed_always_false": true,
+    "approval_state_never_approved": true,
+    "unknown_input_blocked": true,
+    "malformed_input_rejected_or_blocked_safely": true,
+    "stale_or_replayed_input_blocked": true,
+    "provenance_preserved": true,
+    "operator_admin_phil_trusted_wording_bypasses_safety": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "phase_10_requires_explicit_phil_approval": true,
+  "boundary_results": {
+    "new_lima_changes_in_phase_9_5": false,
+    "tests_support_modified": false,
+    "runtime_behavior_remains_non_executing": true,
+    "humaninput_runtime_bridge_added": false,
+    "sparkbot_imported_or_wired": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "audit_persistence_added": false,
+    "dispatch_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_side_effects_added": false
+  }
+}
