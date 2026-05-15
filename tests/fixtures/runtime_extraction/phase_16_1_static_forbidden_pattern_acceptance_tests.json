@@ -1,0 +1,50 @@
+{
+  "phase": "16.1",
+  "status": "static_forbidden_pattern_acceptance_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_16_1_STATIC_FORBIDDEN_PATTERN_ACCEPTANCE_TESTS.md",
+  "acceptance_test_file": "tests/test_phase_16_1_static_forbidden_pattern_acceptance_tests.py",
+  "scanned_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "lima/kernel/__init__.py"
+  ],
+  "implemented_acceptance_checks": [
+    "no_sparkbot_imports",
+    "no_live_adapter_imports",
+    "no_humaninput_runtime_bridge_imports",
+    "no_shell_browser_network_file_mutation_robotics_physical_world_calls",
+    "no_subprocess_worker_daemon_queue_thread_or_database_write_calls",
+    "no_approval_enforcement_execution_dispatch_or_audit_persistence_calls",
+    "no_authority_producing_assignments"
+  ],
+  "static_checker_scope": {
+    "stdlib_only": true,
+    "local_to_phase_test_file": true,
+    "explicit_runtime_file_set_only": true,
+    "no_production_scanner_added": true,
+    "no_runtime_import_execution": true,
+    "no_subprocess": true,
+    "no_network": true,
+    "no_filesystem_mutation": true
+  },
+  "next_phase": "phase_16_2_runtime_contract_acceptance_tests",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
