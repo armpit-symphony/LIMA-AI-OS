@@ -1,0 +1,58 @@
+{
+  "phase": "16.5",
+  "status": "phase_16_test_only_acceptance_archive_closeout",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_16_5_PHASE_16_TEST_ONLY_ACCEPTANCE_ARCHIVE_CLOSEOUT.md",
+  "completed_phase_16_scope": [
+    "phase_16_0_test_only_acceptance_implementation_charter",
+    "phase_16_1_static_forbidden_pattern_acceptance_tests",
+    "phase_16_2_runtime_contract_acceptance_tests",
+    "phase_16_3_threat_fixture_acceptance_tests",
+    "phase_16_4_test_only_acceptance_implementation_readiness_review"
+  ],
+  "phase_16_added": [
+    "docs",
+    "static_metadata_fixtures",
+    "synthetic_threat_fixture_matrix",
+    "test_only_acceptance_tests_under_tests"
+  ],
+  "phase_16_did_not_add": [
+    "lima_changes",
+    "tests_support_changes",
+    "runtime_behavior_changes",
+    "helper_behavior_changes",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "intentcompiler_runtime_behavior_changes",
+    "guardiandecision_runtime_behavior_changes",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_side_effects"
+  ],
+  "phase_17_gate": {
+    "phase_17_approved": false,
+    "recommended_direction": "docs_tests_fixtures_only_acceptance_gate_audit_archive_or_next_runtime_expansion_design_review",
+    "approval_question": "Do you approve Phase 17 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase that reviews the Phase 16 acceptance tests before any future runtime expansion, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?"
+  },
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

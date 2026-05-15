@@ -4974,6 +4974,159 @@ Blocked:
 
 Stop for explicit Phil decision. No Phase 16 work is approved by this closeout.
 
+## Phase 16.0 Gate: Test-Only Acceptance Implementation Charter
+
+Phase 16.0 may open the explicitly approved test-only acceptance-gate implementation lane.
+
+Allowed:
+
+- docs/tests/fixtures only
+- define Phase 16 as test-only acceptance implementation
+- preserve static, contract, and fixture acceptance categories
+- preserve no-runtime and no-`lima/` boundaries
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 16.1 static forbidden-pattern acceptance tests.
+
+## Phase 16.1 Gate: Static Forbidden-Pattern Acceptance Tests
+
+Phase 16.1 may implement static forbidden-pattern acceptance tests against explicit existing non-executing kernel candidate files.
+
+Allowed:
+
+- test-only static checks under `tests/`
+- synthetic fixture metadata
+- phase documentation
+- checks for forbidden imports, forbidden calls, side-effect patterns, boundary names, and authority claims
+
+Blocked:
+
+- scanner helper implementation outside the phase test
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 16.2 runtime contract acceptance tests.
+
+## Phase 16.2 Gate: Runtime Contract Acceptance Tests
+
+Phase 16.2 may implement test-only contract acceptance tests against existing non-executing candidate APIs.
+
+Allowed:
+
+- acceptance tests under `tests/`
+- synthetic fixture metadata
+- assertions that execution and side-effect flags remain false
+- assertions that approval state never becomes approved
+- assertions that provenance is preserved
+- fail-closed malformed, unknown, stale/replayed, and approval-bypass cases
+
+Blocked:
+
+- runtime code changes
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 16.3 threat fixture acceptance tests.
+
+## Phase 16.3 Gate: Threat Fixture Acceptance Tests
+
+Phase 16.3 may implement synthetic threat fixture acceptance tests.
+
+Allowed:
+
+- synthetic inert fixture cases under `tests/fixtures/runtime_extraction/`
+- acceptance tests under `tests/`
+- malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge attempt coverage
+
+Blocked:
+
+- live commands
+- live network targets
+- credentials, private hostnames, deploy configs, or private operational data
+- real file mutation targets
+- robot instructions
+- approval tokens or audit records
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 16.4 readiness review.
+
+## Phase 16.4 Gate: Test-Only Acceptance Implementation Readiness Review
+
+Phase 16.4 may review the Phase 16.1 through Phase 16.3 test-only acceptance implementation before archive/closeout.
+
+Allowed:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 16.5 archive / closeout.
+
+## Phase 16.5 Gate: Phase 16 Test-Only Acceptance Archive / Closeout
+
+Phase 16.5 may archive Phase 16 as a completed test-only acceptance-gate implementation lane.
+
+Allowed:
+
+- list Phase 16.0 through Phase 16.4 as complete
+- document what Phase 16 added
+- document what Phase 16 did not add
+- preserve the Phase 17 decision gate
+- preserve the exact Phase 17 approval question
+
+Blocked:
+
+- new `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Stop for explicit Phil decision. No Phase 17 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
