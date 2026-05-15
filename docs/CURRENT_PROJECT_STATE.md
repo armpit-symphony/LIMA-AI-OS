@@ -216,7 +216,7 @@ Phase 16.5 Phase 16 Test-Only Acceptance Archive / Closeout is complete, merged 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_16_5_MERGE`
+`56b3b5b5948656ec90304642c1574462fb22629a`
 
 Latest tag:
 
@@ -234,7 +234,7 @@ none - Phase 17 requires explicit Phil approval
 
 Latest completed merge:
 
-`PENDING_PHASE_16_5_MERGE`
+`56b3b5b5948656ec90304642c1574462fb22629a`
 
 Recommended PR target:
 
