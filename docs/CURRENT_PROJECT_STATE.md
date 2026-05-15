@@ -170,27 +170,29 @@ Phase 12.2 Threat Model and Safety Gap Review is complete, merged to `main`, and
 
 Phase 12.3 Next Lane Recommendation Matrix is complete, merged to `main`, and tagged. It recommends a docs/tests/fixtures-only threat-model-derived test planning lane as the safest next step and defers runtime expansion, Sparkbot wiring, Robo-OS driver behavior, HumanInput runtime bridge behavior, live adapters, execution, dispatch, and persistence.
 
+Phase 12.4 Phase 12 Decision Gate / Closeout is complete, merged to `main`, and tagged. It closes Phase 12 as planning-only, preserves the Phase 13 approval question for a docs/tests/fixtures-only threat-model-derived test planning lane, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`20c24a80c0b4f5cb04087a7f912d6de6152175a2`
+`87dd8b3cf14297d7cffa905dc3598fc56a491b40`
 
 Latest tag:
 
-`phase-12.3-next-lane-recommendation-matrix`
+`phase-12.4-phase-12-decision-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 12 docs/tests/fixtures-only planning lane with Phase 12.4 Phase 12 Decision Gate / Closeout. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Stop before Phase 13. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-12-4-phase-12-decision-gate-closeout
+none - Phase 13 requires explicit Phil approval
 
 Latest completed merge:
 
-`20c24a80c0b4f5cb04087a7f912d6de6152175a2`
+`87dd8b3cf14297d7cffa905dc3598fc56a491b40`
 
 Recommended PR target:
 
@@ -200,7 +202,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 12.4 - Phase 12 Decision Gate / Closeout.
+Phase 13 - gated pending explicit Phil approval.
+
+Phase 13 approval question:
+
+Do you approve Phase 13 as a docs/tests/fixtures-only threat-model-derived test planning lane that converts the Phase 12.2 threats into static, contract, fixture, and future acceptance-test requirements, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 12 approval question:
 

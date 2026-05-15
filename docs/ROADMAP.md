@@ -4768,6 +4768,42 @@ Status:
 - complete
 - tagged as `phase-12.3-next-lane-recommendation-matrix`
 
+## Phase 12.4 - Phase 12 Decision Gate / Closeout
+
+Goal:
+
+Close Phase 12 as a docs/tests/fixtures-only planning lane and stop before Phase 13.
+
+Deliverables:
+
+- `docs/PHASE_12_4_PHASE_12_DECISION_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_12_4_phase_12_decision_gate_closeout.json`
+- `tests/test_phase_12_4_phase_12_decision_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 12.0 through Phase 12.3 listed as complete
+- threat-model-derived test planning preserved as recommended next lane
+- Phase 13 requires explicit Phil approval
+- runtime implementation remains blocked
+- Sparkbot wiring remains blocked
+- HumanInput runtime bridge remains blocked
+- live adapter remains blocked
+- approval, enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+- tests pass
+
+Next likely phase:
+
+- Phase 13 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-12.4-phase-12-decision-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

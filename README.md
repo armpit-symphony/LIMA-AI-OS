@@ -376,6 +376,8 @@ Phase 12.2 reviews threat-model and safety gaps across runtime expansion, Sparkb
 
 Phase 12.3 records the next-lane recommendation matrix. It recommends a docs/tests/fixtures-only threat-model-derived test planning lane as the safest next step and defers runtime, Sparkbot, and Robo-OS work.
 
+Phase 12.4 closes Phase 12 at a decision gate. It preserves the Phase 13 approval question for a docs/tests/fixtures-only threat-model-derived test planning lane and stops before any runtime or integration work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

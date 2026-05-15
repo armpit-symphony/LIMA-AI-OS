@@ -3069,6 +3069,30 @@ Consequences:
 - Phase 12.4 may close the lane and preserve the exact next approval question
 - HumanInput bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0166: Phase 12 Closes At A Phase 13 Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 12.4 closes Phase 12 as a planning-only lane and preserves the Phase 13 approval question for a docs/tests/fixtures-only threat-model-derived test planning lane.
+
+Rationale:
+
+Phase 12 reviewed the completed Phase 11 slice, compared next directions, documented threat-model gaps, and recommended a safe next lane. Closing at an approval gate prevents planning recommendations from becoming runtime or integration work.
+
+Consequences:
+
+- Phase 12.4 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 13 requires explicit Phil approval
+- recommended Phase 13 scope is threat-model-derived test planning only
+- runtime implementation remains unapproved
+- Sparkbot wiring remains unapproved
+- Robo-OS driver behavior remains unapproved
+- HumanInput bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

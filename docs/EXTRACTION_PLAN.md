@@ -4591,6 +4591,34 @@ After merge:
 
 Continue only to Phase 12.4 Phase 12 decision gate / closeout.
 
+## Phase 12.4 Gate: Phase 12 Decision Gate / Closeout
+
+Phase 12.4 may close Phase 12 and preserve the next approval question.
+
+GO:
+
+- list Phase 12.0 through Phase 12.3 as complete
+- preserve threat-model-derived test planning as the recommended next lane
+- preserve the exact Phase 13 approval question
+- prove Phase 13 remains gated
+- add closeout docs, fixture, and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Stop for explicit Phil decision. No Phase 13 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
