@@ -4461,6 +4461,49 @@ Status:
 - complete
 - tagged as `phase-11.1-candidate-status-acceptance-test-scaffolding`
 
+## Phase 11.2 - Candidate Status Normalization Runtime Implementation
+
+Goal:
+
+Implement candidate status normalization for existing non-executing intake candidates.
+
+Deliverables:
+
+- `docs/PHASE_11_2_CANDIDATE_STATUS_NORMALIZATION_RUNTIME_IMPLEMENTATION.md`
+- `lima/kernel/candidate_status.py`
+- safe exports in `lima/kernel/__init__.py`
+- `tests/fixtures/runtime_extraction/phase_11_2_candidate_status_normalization_runtime_implementation.json`
+- `tests/test_phase_11_2_candidate_status_normalization_runtime_implementation.py`
+
+Acceptance criteria:
+
+- only Phase 10.2 eligible runtime files touched
+- no `tests/support/` changes
+- status normalization is pure and in-process
+- allowed statuses limited to proposed, needs_review, and blocked
+- `execution_allowed` remains false
+- `side_effects_allowed` remains false
+- approved state never survives normalization
+- provenance is preserved
+- unknown, stale, replayed, execution-enabled, side-effect-enabled, or approved states block safely
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 11.3 - Candidate Validation Runtime Implementation
+
+Status:
+
+- complete
+- tagged as `phase-11.2-candidate-status-normalization-runtime-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

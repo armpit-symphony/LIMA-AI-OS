@@ -154,27 +154,29 @@ Phase 11.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complet
 
 Phase 11.1 Candidate Status Acceptance Test Scaffolding is complete, merged to `main`, and tagged. It translates Phase 10.3 acceptance obligations into Phase 11.2 and Phase 11.3 test families without modifying runtime files.
 
+Phase 11.2 Candidate Status Normalization Runtime Implementation is complete, merged to `main`, and tagged. It adds pure in-process candidate status normalization under `lima/kernel/candidate_status.py` and safe exports in `lima/kernel/__init__.py`, while keeping execution, approval, dispatch, persistence, HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler behavior, GuardianDecision behavior, and physical-world behavior absent.
+
 Latest completed phase merge:
 
-`37859f6849b12a998d36413ed3afe1e3696a4586`
+`3ee4acc740c7ed4439c59db98128f0030892b1e3`
 
 Latest tag:
 
-`phase-11.1-candidate-status-acceptance-test-scaffolding`
+`phase-11.2-candidate-status-normalization-runtime-implementation`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 11 narrow runtime slice lane with Phase 11.2 Candidate Status Normalization Runtime Implementation. HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 11 narrow runtime slice lane with Phase 11.3 Candidate Validation Runtime Implementation. HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-11-2-candidate-status-normalization-runtime-implementation
+phase-11-3-candidate-validation-runtime-implementation
 
 Latest completed merge:
 
-`37859f6849b12a998d36413ed3afe1e3696a4586`
+`3ee4acc740c7ed4439c59db98128f0030892b1e3`
 
 Recommended PR target:
 
@@ -184,7 +186,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 11.2 - Candidate Status Normalization Runtime Implementation.
+Phase 11.3 - Candidate Validation Runtime Implementation.
 
 Exact Phase 11 approval question:
 

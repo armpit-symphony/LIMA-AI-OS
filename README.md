@@ -360,6 +360,8 @@ Phase 11.0 opens the approved Phase 11 runtime slice lane with a docs/tests/fixt
 
 Phase 11.1 scaffolds the candidate status and validation acceptance-test obligations for Phase 11.2 and Phase 11.3. It remains docs/tests/fixtures only and adds no runtime behavior.
 
+Phase 11.2 implements candidate status normalization under `lima/kernel/candidate_status.py` and safe exports in `lima/kernel/__init__.py`. It remains pure, in-process, non-executing, and authority-free.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

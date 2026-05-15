@@ -2895,6 +2895,27 @@ Consequences:
 - Phase 11.3 may implement candidate validation only within the Phase 10.2 file map
 - Phase 5 runtime bridge remains gated
 
+## ADR-0158: Candidate Status Normalization Is Non-Authoritative
+
+Status: Accepted
+
+Decision:
+
+Phase 11.2 implements candidate status normalization as pure, in-process, non-executing metadata normalization. It may emit only `proposed`, `needs_review`, or `blocked` and must never preserve approval.
+
+Rationale:
+
+Status normalization is useful only if it cannot become approval, execution, dispatch, persistence, or bridge behavior. It strengthens candidate metadata while preserving Guardian-gated future decision boundaries.
+
+Consequences:
+
+- Phase 11.2 touches only `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py` as runtime files
+- `lima/kernel/candidate_status.py` is now an approved runtime file created by Phase 11.2
+- obsolete pre-implementation absence tests are adjusted to inspect phase fixtures instead of current filesystem absence
+- execution and side-effect flags are forced false
+- approved state is blocked
+- Phase 5 runtime bridge remains gated
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

@@ -4358,6 +4358,36 @@ After merge:
 
 Continue only to Phase 11.2 candidate status normalization runtime implementation within the Phase 10.2 file map.
 
+## Phase 11.2 Gate: Candidate Status Normalization Runtime Implementation
+
+Phase 11.2 may implement candidate status normalization for existing non-executing intake candidates.
+
+GO:
+
+- create `lima/kernel/candidate_status.py`
+- add safe side-effect-free exports to `lima/kernel/__init__.py`
+- normalize candidate status to proposed, needs_review, or blocked only
+- force execution and side-effect flags false
+- prevent approved state from surviving normalization
+- preserve provenance
+- update obsolete pre-implementation absence tests to inspect phase fixtures
+- add runtime tests and static boundary tests
+
+NO-GO:
+
+- runtime files outside the Phase 10.2 eligible list
+- `tests/support/` changes
+- HumanInput runtime bridge
+- Sparkbot import or wiring
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 11.3 candidate validation runtime implementation within the Phase 10.2 file map.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
