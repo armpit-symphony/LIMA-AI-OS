@@ -1,0 +1,39 @@
+{
+  "phase": "13.2",
+  "status": "runtime_contract_test_requirements",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_13_2_RUNTIME_CONTRACT_TEST_REQUIREMENTS.md",
+  "future_contract_requirements": [
+    "execution_allowed_always_false",
+    "side_effects_allowed_always_false",
+    "approval_state_never_approved",
+    "approved_flag_never_true",
+    "provenance_preserved",
+    "malformed_candidate_safe",
+    "unknown_status_safe",
+    "stale_or_replayed_safe",
+    "operator_admin_phil_trusted_no_bypass",
+    "phase_5_runtime_bridge_remains_gated",
+    "no_intent_envelope_or_guardian_decision_created"
+  ],
+  "contract_test_code_added": false,
+  "next_phase": "phase_13_3_threat_fixture_matrix",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "contract_test_code_added": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
