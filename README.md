@@ -344,6 +344,8 @@ Phase 9.4 archives Phase 9 as the first narrow runtime slice lane. The only runt
 
 Phase 9.5 archives the completed first runtime slice after a dedicated Phase 9.0-9.4 audit. It preserves the acceptable Phase 8.1 test-update warning and keeps Phase 10 gated.
 
+Phase 10.0 opens the no-code next-runtime-slice design lane with a post-Phase-9 review. It records what the first runtime slice proved, what it did not prove, and keeps Phase 11 runtime implementation unapproved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -2745,6 +2745,28 @@ Consequences:
 - Phase 10 requires explicit Phil approval
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0150: Phase 10 Opens As No-Code Next-Slice Design
+
+Status: Accepted
+
+Decision:
+
+Phase 10.0 opens Phase 10 as a no-code design lane after auditing the completed Phase 9 first runtime slice. It reviews Phase 9 proof/gap boundaries and does not approve Phase 11 runtime implementation.
+
+Rationale:
+
+The first runtime slice proved that narrow non-executing candidate metadata can live under `lima/kernel/`, but it did not prove the safety of runtime expansion, HumanInput runtime bridging, approval enforcement, dispatch, audit persistence, or any external side effect.
+
+Consequences:
+
+- Phase 10.0 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 10.0
+- no `tests/support/` files are changed
+- Phase 9 runtime files remain `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py`
+- Phase 5 runtime bridge remains gated
+- Phase 11 runtime implementation remains unapproved
+- Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0072: Guardian Request Safety Gate Is the Standing Review Gate
 
 Status: Accepted

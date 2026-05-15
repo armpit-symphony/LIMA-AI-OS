@@ -138,27 +138,29 @@ Phase 9.4 Phase 9 Runtime Slice Audit Archive / Closeout is complete, merged to 
 
 Phase 9.5 First Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 9.0 through Phase 9.4 as the completed first narrow runtime slice, preserves the Phase 8.1 test-update warning, confirms only `lima/kernel/__init__.py` and `lima/kernel/intake_candidate.py` were touched as runtime files, and keeps Phase 10 gated.
 
+Phase 10.0 Post-Phase-9 Runtime Slice Review is complete, merged to `main`, and tagged. It opens Phase 10 as a no-code design lane, reviews what Phase 9 proved and did not prove, does not modify `lima/` or `tests/support/`, and keeps Phase 11 runtime implementation unapproved.
+
 Latest completed phase merge:
 
-`e3e68fdc9d9bdee64cca0667fba1b19f720b8e6e`
+`e606c93b280ccb65d0e882c9488b0b7c613e2dc1`
 
 Latest tag:
 
-`phase-9.5-first-runtime-slice-audit-archive-closeout`
+`phase-10.0-post-phase-9-runtime-slice-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit operator next-scope decision. No Phase 10, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 9.5.
+Continue the approved Phase 10 no-code design lane with Phase 10.1 Next Runtime Slice Design Options. No Phase 11 runtime implementation, runtime expansion, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved by Phase 10.0.
 
 Recommended next branch:
 
-not selected
+phase-10-1-next-runtime-slice-design-options
 
 Latest completed merge:
 
-`e3e68fdc9d9bdee64cca0667fba1b19f720b8e6e`
+`e606c93b280ccb65d0e882c9488b0b7c613e2dc1`
 
 Recommended PR target:
 
@@ -168,7 +170,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Explicit operator runtime implementation decision.
+Phase 10.1 - Next Runtime Slice Design Options.
 
 ## Active Phase 4 Status
 

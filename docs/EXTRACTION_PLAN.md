@@ -4115,6 +4115,37 @@ After merge:
 
 Stop for explicit operator next-scope decision. No Phase 10 or runtime expansion is approved by this closeout.
 
+## Phase 10.0 Gate: Post-Phase-9 Runtime Slice Review
+
+Phase 10.0 may open the approved no-code Phase 10 design lane by reviewing the completed Phase 9 runtime slice and documenting proof/gap boundaries.
+
+GO:
+
+- review Phase 9.0 through Phase 9.5
+- list exact Phase 9 runtime files touched
+- document what the Phase 9 coordinator proved
+- document what Phase 9 did not prove
+- keep Phase 10.0 docs/tests/fixtures only
+- keep Phase 11 runtime implementation unapproved
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 10.1 no-code design options. No Phase 11 runtime implementation or runtime expansion is approved by this review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
