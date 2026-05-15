@@ -232,7 +232,7 @@ Phase 18.2 Acceptance Boundary Regression Fixtures is complete, merged to `main`
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_2_MERGE`
+`c88b45ca0e6ce1ed484bfde199e6715bb738e4f7`
 
 Latest tag:
 
@@ -250,7 +250,7 @@ phase-18-3-forbidden-integration-regression-tests
 
 Latest completed merge:
 
-`PENDING_PHASE_18_2_MERGE`
+`c88b45ca0e6ce1ed484bfde199e6715bb738e4f7`
 
 Recommended PR target:
 
