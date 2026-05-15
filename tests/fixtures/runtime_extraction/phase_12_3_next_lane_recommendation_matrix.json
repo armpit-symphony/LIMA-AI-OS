@@ -1,0 +1,66 @@
+{
+  "phase": "12.3",
+  "status": "next_lane_recommendation_matrix",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_12_3_NEXT_LANE_RECOMMENDATION_MATRIX.md",
+  "recommendation_matrix": [
+    {
+      "option": "pause_and_preserve",
+      "recommendation": "safe_fallback",
+      "implementation_approved": false
+    },
+    {
+      "option": "future_runtime_slice_design",
+      "recommendation": "defer",
+      "implementation_approved": false
+    },
+    {
+      "option": "sparkbot_boundary_planning",
+      "recommendation": "defer",
+      "implementation_approved": false
+    },
+    {
+      "option": "robo_os_physical_world_planning",
+      "recommendation": "defer",
+      "implementation_approved": false
+    },
+    {
+      "option": "threat_model_derived_test_planning",
+      "recommendation": "recommended_next",
+      "implementation_approved": false
+    }
+  ],
+  "recommended_next_lane": "docs_tests_fixtures_only_threat_model_derived_test_planning",
+  "explicit_non_recommendations": [
+    "runtime_implementation",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "robo_os_driver_behavior",
+    "live_adapter",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_action"
+  ],
+  "next_phase": "phase_12_4_phase_12_decision_gate_closeout",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
