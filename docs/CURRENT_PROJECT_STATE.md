@@ -222,7 +222,7 @@ Phase 17.2 Remaining Safety Gap Review is complete, merged to `main`, and tagged
 
 Latest completed phase merge:
 
-`PENDING_PHASE_17_2_MERGE`
+`68a11f29ff71c3031c2ab68de0336dddd8b9d322`
 
 Latest tag:
 
@@ -240,7 +240,7 @@ phase-17-3-next-lane-decision-matrix
 
 Latest completed merge:
 
-`PENDING_PHASE_17_2_MERGE`
+`68a11f29ff71c3031c2ab68de0336dddd8b9d322`
 
 Recommended PR target:
 
