@@ -4697,6 +4697,42 @@ Status:
 - complete
 - tagged as `phase-12.1-next-direction-options-runtime-sparkbot-robo-os-pause`
 
+## Phase 12.2 - Threat Model and Safety Gap Review
+
+Goal:
+
+Review threats and safety gaps before selecting any next lane after Phase 11.
+
+Deliverables:
+
+- `docs/PHASE_12_2_THREAT_MODEL_AND_SAFETY_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_12_2_threat_model_and_safety_gap_review.json`
+- `tests/test_phase_12_2_threat_model_and_safety_gap_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- candidate-status approval confusion reviewed
+- HumanInput bridge pressure reviewed
+- Sparkbot wiring drift reviewed
+- Robo-OS driver/physical-world drift reviewed
+- operator/admin/Phil/trusted bypass risk reviewed
+- side-effect escalation reviewed
+- Phase 5 runtime bridge remains gated
+- no approval, enforcement, execution, dispatch, audit persistence, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 12.3 - Next Lane Recommendation Matrix
+
+Status:
+
+- complete
+- tagged as `phase-12.2-threat-model-and-safety-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

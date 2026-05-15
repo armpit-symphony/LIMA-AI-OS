@@ -4532,6 +4532,36 @@ After merge:
 
 Continue only to Phase 12.2 threat-model and safety-gap review.
 
+## Phase 12.2 Gate: Threat Model and Safety Gap Review
+
+Phase 12.2 may review threat-model and safety gaps across the Phase 12 options.
+
+GO:
+
+- review candidate status approval confusion
+- review HumanInput bridge pressure
+- review Sparkbot wiring drift
+- review Robo-OS driver and physical-world drift
+- review operator/admin/Phil/trusted bypass risk
+- review side-effect escalation and audit gaps
+- recommend only a next-lane matrix
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 12.3 next-lane recommendation matrix.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

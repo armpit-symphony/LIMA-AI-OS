@@ -3025,6 +3025,27 @@ Consequences:
 - Phase 12.2 may review threat models and safety gaps
 - HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0164: Phase 12 Requires Threat Modeling Before Lane Selection
+
+Status: Accepted
+
+Decision:
+
+Phase 12.2 reviews threat-model and safety gaps before selecting a next lane.
+
+Rationale:
+
+The next decision could steer toward runtime design, Sparkbot boundary planning, Robo-OS boundary planning, threat-model-derived tests, or pause. Each has different risks, so the project should not select one before documenting approval confusion, integration drift, physical-world escalation, and static-test limitations.
+
+Consequences:
+
+- Phase 12.2 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 12.3 may produce a recommendation matrix
+- Phase 5 runtime bridge remains gated
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
