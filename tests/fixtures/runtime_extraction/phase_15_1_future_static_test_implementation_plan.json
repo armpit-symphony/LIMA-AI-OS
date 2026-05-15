@@ -1,0 +1,69 @@
+{
+  "phase": "15.1",
+  "status": "future_static_test_implementation_plan",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "actual_future_static_tests_implemented": false,
+  "scanner_utilities_added": false,
+  "phase_document": "docs/PHASE_15_1_FUTURE_STATIC_TEST_IMPLEMENTATION_PLAN.md",
+  "proposed_future_test_files": [
+    "tests/test_acceptance_static_forbidden_patterns.py"
+  ],
+  "proposed_future_static_tests": [
+    {
+      "name": "test_runtime_files_have_no_sparkbot_imports",
+      "expected_assertion": "runtime_files_do_not_import_sparkbot_modules"
+    },
+    {
+      "name": "test_runtime_files_have_no_live_adapter_imports",
+      "expected_assertion": "runtime_files_do_not_import_live_adapter_modules"
+    },
+    {
+      "name": "test_runtime_files_have_no_humaninput_bridge_imports",
+      "expected_assertion": "runtime_files_do_not_create_or_import_humaninput_runtime_bridge_behavior"
+    },
+    {
+      "name": "test_runtime_files_have_no_execution_or_dispatch_calls",
+      "expected_assertion": "runtime_files_do_not_call_execution_dispatch_subprocess_shell_browser_network_file_mutation_robotics_or_physical_world_apis"
+    },
+    {
+      "name": "test_runtime_files_have_no_approval_or_audit_persistence_calls",
+      "expected_assertion": "runtime_files_do_not_enforce_approval_or_persist_audit"
+    },
+    {
+      "name": "test_runtime_files_have_no_authority_claims",
+      "expected_assertion": "runtime_files_do_not_claim_approval_authorization_enforcement_execution_dispatch_persistence_or_physical_world_authority"
+    }
+  ],
+  "future_scanner_constraints": {
+    "stdlib_only": true,
+    "explicit_file_set_only": true,
+    "production_scanner_not_allowed": true,
+    "runtime_import_execution_not_allowed": true,
+    "subprocess_not_allowed": true,
+    "network_not_allowed": true,
+    "filesystem_mutation_not_allowed": true
+  },
+  "readiness_decision": "ready_to_propose_later_test_only_static_implementation",
+  "next_phase": "phase_15_2_future_runtime_contract_test_implementation_plan",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "actual_future_static_tests_implemented": false,
+    "scanner_utilities_added": false,
+    "candidate_status_expanded": false,
+    "intake_candidate_expanded": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_changed": false,
+    "guardiandecision_runtime_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
