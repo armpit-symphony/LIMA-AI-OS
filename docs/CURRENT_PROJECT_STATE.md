@@ -214,27 +214,29 @@ Phase 16.4 Test-Only Acceptance Implementation Readiness Review is complete, mer
 
 Phase 16.5 Phase 16 Test-Only Acceptance Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 16 as completed test-only acceptance-gate implementation and keeps Phase 17, runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 17.0 Phase 16 Acceptance Test Audit Charter is complete, merged to `main`, and tagged. It opens Phase 17 as docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision work, audits Phase 16.0 through Phase 16.5, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`56b3b5b5948656ec90304642c1574462fb22629a`
+`PENDING_PHASE_17_0_MERGE`
 
 Latest tag:
 
-`phase-16.5-phase-16-test-only-acceptance-archive-closeout`
+`phase-17.0-phase-16-acceptance-test-audit-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop before Phase 17. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Continue only inside the approved Phase 17 docs/tests/fixtures-only acceptance-gate audit/archive lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-none - Phase 17 requires explicit Phil approval
+phase-17-1-acceptance-test-coverage-review
 
 Latest completed merge:
 
-`56b3b5b5948656ec90304642c1574462fb22629a`
+`PENDING_PHASE_17_0_MERGE`
 
 Recommended PR target:
 
@@ -244,7 +246,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 17 - gated pending explicit Phil approval.
+Phase 17.1 - Acceptance Test Coverage Review.
 
 Phase 17 approval question:
 

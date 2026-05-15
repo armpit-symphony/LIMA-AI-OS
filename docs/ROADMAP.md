@@ -5425,6 +5425,34 @@ Status:
 - complete
 - tagged as `phase-16.5-phase-16-test-only-acceptance-archive-closeout`
 
+## Phase 17.0 - Phase 16 Acceptance Test Audit Charter
+
+Goal:
+
+Open Phase 17 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase.
+
+Deliverables:
+
+- `docs/PHASE_17_0_PHASE_16_ACCEPTANCE_TEST_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_17_0_phase_16_acceptance_test_audit_charter.json`
+- `tests/test_phase_17_0_phase_16_acceptance_test_audit_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 16.0 through Phase 16.5 are in audit scope
+- Phase 18 options are listed for later evaluation
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-17.0-phase-16-acceptance-test-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
