@@ -4329,6 +4329,35 @@ After merge:
 
 Continue only to Phase 11.1 acceptance test scaffolding. Candidate status and validation runtime implementation remains reserved for Phase 11.2 and Phase 11.3.
 
+## Phase 11.1 Gate: Candidate Status Acceptance Test Scaffolding
+
+Phase 11.1 may scaffold test obligations for candidate status normalization and candidate validation.
+
+GO:
+
+- list Phase 11.2 status normalization test families
+- list Phase 11.3 validation test families
+- list shared forbidden-behavior test families
+- preserve Phase 5 runtime bridge gate
+- add static fixture and tests
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- helper behavior changes
+- Sparkbot import or wiring
+- live adapter
+- HumanInput runtime bridge
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 11.2 candidate status normalization runtime implementation within the Phase 10.2 file map.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

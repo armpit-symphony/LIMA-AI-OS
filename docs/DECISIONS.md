@@ -2874,6 +2874,27 @@ Consequences:
 - Phase 11.1 may scaffold acceptance tests
 - Phase 5 runtime bridge remains gated
 
+## ADR-0157: Candidate Status Tests Precede Runtime Status Code
+
+Status: Accepted
+
+Decision:
+
+Phase 11.1 scaffolds the acceptance-test obligations for candidate status normalization and candidate validation before runtime implementation.
+
+Rationale:
+
+Candidate status normalization must not become approval, execution, dispatch, or runtime bridge behavior. The acceptance obligations keep the next implementation phases constrained to non-executing candidate metadata.
+
+Consequences:
+
+- Phase 11.1 is docs/tests/fixtures only
+- no `lima/` files are changed by Phase 11.1
+- no `tests/support/` files are changed
+- Phase 11.2 may implement candidate status normalization only within the Phase 10.2 file map
+- Phase 11.3 may implement candidate validation only within the Phase 10.2 file map
+- Phase 5 runtime bridge remains gated
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

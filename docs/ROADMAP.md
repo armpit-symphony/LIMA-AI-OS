@@ -4423,6 +4423,44 @@ Status:
 - complete
 - tagged as `phase-11.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
+## Phase 11.1 - Candidate Status Acceptance Test Scaffolding
+
+Goal:
+
+Translate Phase 10.3 acceptance obligations into concrete test families for Phase 11.2 and Phase 11.3.
+
+Deliverables:
+
+- `docs/PHASE_11_1_CANDIDATE_STATUS_ACCEPTANCE_TEST_SCAFFOLDING.md`
+- `tests/fixtures/runtime_extraction/phase_11_1_candidate_status_acceptance_test_scaffolding.json`
+- `tests/test_phase_11_1_candidate_status_acceptance_test_scaffolding.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 11.2 status normalization tests scaffolded
+- Phase 11.3 validation tests scaffolded
+- shared forbidden-behavior tests scaffolded
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 11.2 - Candidate Status Normalization Runtime Implementation
+
+Status:
+
+- complete
+- tagged as `phase-11.1-candidate-status-acceptance-test-scaffolding`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
