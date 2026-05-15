@@ -382,6 +382,12 @@ Phase 13.0 opens the approved threat-model-derived test planning lane. It conver
 
 Phase 13.1 defines future static forbidden-pattern test requirements for imports, calls, boundary names, and behavior claims that could imply execution, approval, persistence, Sparkbot wiring, live adapters, or physical-world action.
 
+Phase 13.2 defines future runtime contract test requirements for non-executing candidate invariants: execution and side-effect flags remain false, approval never becomes approved, provenance is preserved, and malformed/unknown/stale/replayed inputs remain safe.
+
+Phase 13.3 defines future synthetic threat fixture families for malformed, unknown, stale/replayed, approval-bypass, shell/network/browser/file/robotics, Sparkbot, and HumanInput bridge attempts.
+
+Phase 13.4 closes Phase 13 at a future acceptance gate. It recommends Phase 14 as docs/tests/fixtures-only acceptance-gate test design and stops before any runtime or integration work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

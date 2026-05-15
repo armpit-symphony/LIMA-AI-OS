@@ -3135,6 +3135,63 @@ Consequences:
 - Phase 13.2 may define runtime contract test requirements
 - runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0169: Future Contract Tests Must Preserve Candidate Invariants
+
+Status: Accepted
+
+Decision:
+
+Phase 13.2 defines future runtime contract test requirements for non-executing candidate invariants.
+
+Rationale:
+
+Future runtime slices need contract checks proving that candidate metadata cannot become approval, execution, dispatch, persistence, or bridge behavior.
+
+Consequences:
+
+- Phase 13.2 is docs/tests/fixtures only
+- no contract-test implementation is added
+- no `lima/` or `tests/support/` files are changed
+- Phase 13.3 may define threat fixture requirements
+
+## ADR-0170: Future Threat Fixtures Must Stay Synthetic And Inert
+
+Status: Accepted
+
+Decision:
+
+Phase 13.3 defines future synthetic threat fixture families for malformed, unknown, stale/replayed, approval-bypass, side-effect, Sparkbot, and HumanInput bridge attempts.
+
+Rationale:
+
+Fixture planning must cover realistic threat categories without creating production integration, execution, authorization, or physical-world behavior.
+
+Consequences:
+
+- Phase 13.3 is docs/tests/fixtures only
+- no production runtime fixtures are added
+- no `lima/` or `tests/support/` files are changed
+- Phase 13.4 may close the lane
+
+## ADR-0171: Phase 13 Closes At A Phase 14 Acceptance-Gate Test Design Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 13.4 closes Phase 13 and recommends Phase 14 as docs/tests/fixtures-only acceptance-gate test design.
+
+Rationale:
+
+Phase 13 produced requirements but not executable test infrastructure. The next safest step is designing concrete future test names and assertions before implementation.
+
+Consequences:
+
+- Phase 13.4 is docs/tests/fixtures only
+- no `lima/` or `tests/support/` files are changed
+- Phase 14 requires explicit Phil approval
+- runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

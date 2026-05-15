@@ -176,27 +176,33 @@ Phase 13.0 Threat-Derived Test Planning Charter is complete, merged to `main`, a
 
 Phase 13.1 Static Forbidden-Pattern Test Requirements is complete, merged to `main`, and tagged. It defines future static requirements for forbidden imports, calls, boundary names, and behavior claims, while adding no scanner implementation and no runtime changes.
 
+Phase 13.2 Runtime Contract Test Requirements is complete, merged to `main`, and tagged. It defines future contract-test requirements for non-executing candidate invariants, provenance preservation, malformed/unknown/stale/replayed safety, operator-bypass resistance, and Phase 5 runtime bridge gating.
+
+Phase 13.3 Threat Fixture Matrix is complete, merged to `main`, and tagged. It defines future synthetic fixture families for malformed candidates, unknown statuses, stale/replayed candidates, approval-bypass wording, shell/network/browser/file/robotics attempts, Sparkbot integration attempts, and HumanInput bridge attempts.
+
+Phase 13.4 Future Acceptance Gate / Closeout is complete, merged to `main`, and tagged. It closes Phase 13 as docs/tests/fixtures-only planning, preserves the future acceptance gate requirements, recommends Phase 14 as docs/tests/fixtures-only acceptance-gate test design, and keeps runtime implementation and integration work blocked.
+
 Latest completed phase merge:
 
-`d14889df124cfe6d10c6a29b069adeaf3b2e7f99`
+`53b80f2b8d5ee71bc1213f2e873f55f0ebca5787`
 
 Latest tag:
 
-`phase-13.1-static-forbidden-pattern-test-requirements`
+`phase-13.4-future-acceptance-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 13 docs/tests/fixtures-only planning lane with Phase 13.2 Runtime Contract Test Requirements. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Stop before Phase 14. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-13-2-runtime-contract-test-requirements
+none - Phase 14 requires explicit Phil approval
 
 Latest completed merge:
 
-`d14889df124cfe6d10c6a29b069adeaf3b2e7f99`
+`53b80f2b8d5ee71bc1213f2e873f55f0ebca5787`
 
 Recommended PR target:
 
@@ -206,7 +212,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 13.2 - Runtime Contract Test Requirements.
+Phase 14 - gated pending explicit Phil approval.
+
+Phase 14 approval question:
+
+Do you approve Phase 14 as a docs/tests/fixtures-only acceptance-gate test design lane that converts Phase 13 static, contract, and fixture requirements into concrete future test names and expected assertions, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 13 approval question:
 

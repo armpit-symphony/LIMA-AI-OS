@@ -4675,6 +4675,78 @@ After merge:
 
 Continue only to Phase 13.2 runtime contract test requirements.
 
+## Phase 13.2 Gate: Runtime Contract Test Requirements
+
+Phase 13.2 may define future runtime contract test requirements.
+
+GO:
+
+- list non-executing candidate invariants
+- list malformed/unknown/stale/replayed safety requirements
+- list operator/admin/Phil/trusted bypass resistance requirements
+- preserve Phase 5 runtime bridge gate
+
+NO-GO:
+
+- contract-test implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- approval, enforcement, execution, dispatch, or audit persistence
+
+After merge:
+
+Continue only to Phase 13.3 threat fixture matrix.
+
+## Phase 13.3 Gate: Threat Fixture Matrix
+
+Phase 13.3 may define future synthetic threat fixture families.
+
+GO:
+
+- list malformed, unknown, stale/replayed, approval-bypass, side-effect, Sparkbot, and HumanInput bridge fixture families
+- require fixtures to remain synthetic, inert, non-executing, and test-only
+
+NO-GO:
+
+- production runtime fixtures
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- physical-world behavior
+
+After merge:
+
+Continue only to Phase 13.4 future acceptance gate / closeout.
+
+## Phase 13.4 Gate: Future Acceptance Gate / Closeout
+
+Phase 13.4 may close Phase 13 and preserve the Phase 14 approval question.
+
+GO:
+
+- list Phase 13.0 through Phase 13.3 as complete
+- preserve future acceptance gate requirements
+- recommend Phase 14 as acceptance-gate test design only
+- preserve the exact Phase 14 approval question
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Stop for explicit Phil decision. No Phase 14 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
