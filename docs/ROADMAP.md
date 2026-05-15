@@ -4804,6 +4804,41 @@ Status:
 - complete
 - tagged as `phase-12.4-phase-12-decision-gate-closeout`
 
+## Phase 13.0 - Threat-Derived Test Planning Charter
+
+Goal:
+
+Open Phase 13 as a docs/tests/fixtures-only threat-model-derived test planning lane.
+
+Deliverables:
+
+- `docs/PHASE_13_0_THREAT_DERIVED_TEST_PLANNING_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_13_0_threat_derived_test_planning_charter.json`
+- `tests/test_phase_13_0_threat_derived_test_planning_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 12.2 threats listed as source threats
+- static, contract, fixture, and future acceptance planning outputs listed
+- Phase 5 runtime bridge remains gated
+- runtime implementation remains blocked
+- Sparkbot wiring remains blocked
+- HumanInput runtime bridge remains blocked
+- approval, enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+- tests pass
+
+Next likely phase:
+
+- Phase 13.1 - Static Forbidden-Pattern Test Requirements
+
+Status:
+
+- complete
+- tagged as `phase-13.0-threat-derived-test-planning-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

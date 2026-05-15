@@ -172,27 +172,29 @@ Phase 12.3 Next Lane Recommendation Matrix is complete, merged to `main`, and ta
 
 Phase 12.4 Phase 12 Decision Gate / Closeout is complete, merged to `main`, and tagged. It closes Phase 12 as planning-only, preserves the Phase 13 approval question for a docs/tests/fixtures-only threat-model-derived test planning lane, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, persistence, and physical-world behavior blocked.
 
+Phase 13.0 Threat-Derived Test Planning Charter is complete, merged to `main`, and tagged. It opens Phase 13 as a docs/tests/fixtures-only lane to convert Phase 12.2 threats into static, contract, fixture, and future acceptance-test requirements without runtime changes.
+
 Latest completed phase merge:
 
-`87dd8b3cf14297d7cffa905dc3598fc56a491b40`
+`b75006a37b6dcaefcd9220d90adb0effa6dc159e`
 
 Latest tag:
 
-`phase-12.4-phase-12-decision-gate-closeout`
+`phase-13.0-threat-derived-test-planning-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop before Phase 13. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Continue the approved Phase 13 docs/tests/fixtures-only planning lane with Phase 13.1 Static Forbidden-Pattern Test Requirements. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-none - Phase 13 requires explicit Phil approval
+phase-13-1-static-forbidden-pattern-test-requirements
 
 Latest completed merge:
 
-`87dd8b3cf14297d7cffa905dc3598fc56a491b40`
+`b75006a37b6dcaefcd9220d90adb0effa6dc159e`
 
 Recommended PR target:
 
@@ -202,7 +204,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 13 - gated pending explicit Phil approval.
+Phase 13.1 - Static Forbidden-Pattern Test Requirements.
 
 Phase 13 approval question:
 

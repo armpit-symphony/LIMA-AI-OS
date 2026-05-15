@@ -378,6 +378,8 @@ Phase 12.3 records the next-lane recommendation matrix. It recommends a docs/tes
 
 Phase 12.4 closes Phase 12 at a decision gate. It preserves the Phase 13 approval question for a docs/tests/fixtures-only threat-model-derived test planning lane and stops before any runtime or integration work.
 
+Phase 13.0 opens the approved threat-model-derived test planning lane. It converts Phase 12.2 threats into planned static checks, contract checks, fixture requirements, and future acceptance gates without runtime changes.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

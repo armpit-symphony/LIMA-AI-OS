@@ -3093,6 +3093,27 @@ Consequences:
 - Robo-OS driver behavior remains unapproved
 - HumanInput bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0167: Phase 13 Opens As Threat-Derived Test Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 13.0 opens Phase 13 as a docs/tests/fixtures-only lane that converts Phase 12.2 threats into static, contract, fixture, and future acceptance-test planning requirements.
+
+Rationale:
+
+Phase 12 recommended threat-model-derived test planning before runtime expansion, Sparkbot boundary work, or Robo-OS boundary work. Opening with a charter keeps the lane bounded and auditable.
+
+Consequences:
+
+- Phase 13.0 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 13.1 may define static forbidden-pattern test requirements
+- Phase 5 runtime bridge remains gated
+- runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

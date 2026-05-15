@@ -4619,6 +4619,34 @@ After merge:
 
 Stop for explicit Phil decision. No Phase 13 work is approved by this closeout.
 
+## Phase 13.0 Gate: Threat-Derived Test Planning Charter
+
+Phase 13.0 may open the approved docs/tests/fixtures-only threat-derived test planning lane.
+
+GO:
+
+- convert Phase 12.2 threats into Phase 13 planning outputs
+- list static forbidden-pattern test requirements as a future phase
+- list runtime contract test requirements as a future phase
+- list threat fixture matrix as a future phase
+- preserve future acceptance gate closeout
+
+NO-GO:
+
+- `lima/` changes
+- `tests/support/` changes
+- runtime behavior changes
+- Sparkbot import or wiring
+- HumanInput runtime bridge
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 13.1 static forbidden-pattern test requirements.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
