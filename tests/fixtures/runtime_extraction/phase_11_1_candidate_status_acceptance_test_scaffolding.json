@@ -1,0 +1,56 @@
+{
+  "phase": "11.1",
+  "status": "candidate_status_acceptance_test_scaffolding",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_11_1_CANDIDATE_STATUS_ACCEPTANCE_TEST_SCAFFOLDING.md",
+  "source_phase": "11.0",
+  "phase_11_2_required_test_families": [
+    "valid_phase_9_style_candidates_normalize_to_safe_status",
+    "allowed_statuses_limited_to_proposed_needs_review_blocked",
+    "unknown_status_normalizes_to_blocked_or_needs_review",
+    "approved_status_never_survives_normalization",
+    "execution_allowed_remains_false",
+    "side_effects_allowed_remains_false",
+    "provenance_preserved"
+  ],
+  "phase_11_3_required_test_families": [
+    "malformed_candidates_rejected_or_marked_invalid_safely",
+    "missing_execution_allowed_fails_closed",
+    "missing_side_effects_allowed_fails_closed",
+    "execution_allowed_true_fails_closed",
+    "side_effects_allowed_true_fails_closed",
+    "approval_state_approved_fails_closed",
+    "stale_or_replayed_candidates_remain_blocked_or_invalid",
+    "validation_cannot_approve_execute_persist_or_dispatch"
+  ],
+  "shared_required_test_families": [
+    "no_sparkbot_import_or_wiring",
+    "no_humaninput_runtime_bridge",
+    "no_live_adapter",
+    "no_intentcompiler_runtime_behavior_changes",
+    "no_guardiandecision_runtime_behavior_changes",
+    "no_shell_browser_network_file_mutation_robotics_physical_world_behavior",
+    "only_phase_10_2_eligible_runtime_files_touched",
+    "phase_5_runtime_bridge_remains_gated"
+  ],
+  "next_phase": "phase_11_2_candidate_status_normalization_runtime_implementation",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "candidate_status_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false
+  }
+}
