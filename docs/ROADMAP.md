@@ -4839,6 +4839,39 @@ Status:
 - complete
 - tagged as `phase-13.0-threat-derived-test-planning-charter`
 
+## Phase 13.1 - Static Forbidden-Pattern Test Requirements
+
+Goal:
+
+Define future static forbidden-pattern test requirements before any future runtime expansion.
+
+Deliverables:
+
+- `docs/PHASE_13_1_STATIC_FORBIDDEN_PATTERN_TEST_REQUIREMENTS.md`
+- `tests/fixtures/runtime_extraction/phase_13_1_static_forbidden_pattern_test_requirements.json`
+- `tests/test_phase_13_1_static_forbidden_pattern_test_requirements.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no static scanner implementation
+- no `lima/` changes
+- no `tests/support/` changes
+- forbidden imports, calls, boundary names, and behavior claims listed
+- static checks are not claimed sufficient alone
+- Phase 5 runtime bridge remains gated
+- no approval, enforcement, execution, dispatch, audit persistence, or physical-world behavior
+- tests pass
+
+Next likely phase:
+
+- Phase 13.2 - Runtime Contract Test Requirements
+
+Status:
+
+- complete
+- tagged as `phase-13.1-static-forbidden-pattern-test-requirements`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

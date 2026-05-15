@@ -3114,6 +3114,27 @@ Consequences:
 - Phase 5 runtime bridge remains gated
 - runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0168: Future Static Tests Must Block Forbidden Runtime Patterns
+
+Status: Accepted
+
+Decision:
+
+Phase 13.1 defines future static test requirements for forbidden imports, calls, boundary names, and behavior claims before any future runtime expansion.
+
+Rationale:
+
+Static checks are a cheap early warning layer for accidental shell, network, filesystem, Sparkbot, live adapter, approval, execution, dispatch, persistence, and physical-world drift. They are not sufficient alone, so the lane continues to contract and fixture requirements.
+
+Consequences:
+
+- Phase 13.1 is docs/tests/fixtures only
+- no static scanner implementation is added
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- Phase 13.2 may define runtime contract test requirements
+- runtime implementation, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

@@ -380,6 +380,8 @@ Phase 12.4 closes Phase 12 at a decision gate. It preserves the Phase 13 approva
 
 Phase 13.0 opens the approved threat-model-derived test planning lane. It converts Phase 12.2 threats into planned static checks, contract checks, fixture requirements, and future acceptance gates without runtime changes.
 
+Phase 13.1 defines future static forbidden-pattern test requirements for imports, calls, boundary names, and behavior claims that could imply execution, approval, persistence, Sparkbot wiring, live adapters, or physical-world action.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

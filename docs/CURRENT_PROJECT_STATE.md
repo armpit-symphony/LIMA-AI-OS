@@ -174,27 +174,29 @@ Phase 12.4 Phase 12 Decision Gate / Closeout is complete, merged to `main`, and 
 
 Phase 13.0 Threat-Derived Test Planning Charter is complete, merged to `main`, and tagged. It opens Phase 13 as a docs/tests/fixtures-only lane to convert Phase 12.2 threats into static, contract, fixture, and future acceptance-test requirements without runtime changes.
 
+Phase 13.1 Static Forbidden-Pattern Test Requirements is complete, merged to `main`, and tagged. It defines future static requirements for forbidden imports, calls, boundary names, and behavior claims, while adding no scanner implementation and no runtime changes.
+
 Latest completed phase merge:
 
-`b75006a37b6dcaefcd9220d90adb0effa6dc159e`
+`d14889df124cfe6d10c6a29b069adeaf3b2e7f99`
 
 Latest tag:
 
-`phase-13.0-threat-derived-test-planning-charter`
+`phase-13.1-static-forbidden-pattern-test-requirements`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 13 docs/tests/fixtures-only planning lane with Phase 13.1 Static Forbidden-Pattern Test Requirements. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 13 docs/tests/fixtures-only planning lane with Phase 13.2 Runtime Contract Test Requirements. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-13-1-static-forbidden-pattern-test-requirements
+phase-13-2-runtime-contract-test-requirements
 
 Latest completed merge:
 
-`b75006a37b6dcaefcd9220d90adb0effa6dc159e`
+`d14889df124cfe6d10c6a29b069adeaf3b2e7f99`
 
 Recommended PR target:
 
@@ -204,7 +206,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 13.1 - Static Forbidden-Pattern Test Requirements.
+Phase 13.2 - Runtime Contract Test Requirements.
 
 Phase 13 approval question:
 
