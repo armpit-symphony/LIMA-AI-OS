@@ -1,0 +1,50 @@
+{
+  "phase": "14.2",
+  "status": "runtime_contract_test_design",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_14_2_RUNTIME_CONTRACT_TEST_DESIGN.md",
+  "future_test_designs": [
+    {
+      "name": "test_candidate_contract_keeps_execution_flags_false",
+      "expected_assertion": "execution_allowed_and_side_effects_allowed_false"
+    },
+    {
+      "name": "test_candidate_contract_never_approves",
+      "expected_assertion": "approval_state_never_approved_and_approved_flag_false"
+    },
+    {
+      "name": "test_candidate_contract_preserves_provenance",
+      "expected_assertion": "source_provenance_survives_normalization_and_validation"
+    },
+    {
+      "name": "test_candidate_contract_blocks_malformed_unknown_stale_replayed",
+      "expected_assertion": "malformed_unknown_stale_replayed_blocked_invalid_or_needs_review"
+    },
+    {
+      "name": "test_candidate_contract_blocks_operator_bypass_language",
+      "expected_assertion": "operator_admin_phil_trusted_wording_grants_no_approval"
+    },
+    {
+      "name": "test_candidate_contract_creates_no_bridge_or_decision_records",
+      "expected_assertion": "no_intentenvelope_guardiandecision_or_humaninput_bridge_record_created"
+    }
+  ],
+  "contract_test_implementation_added": false,
+  "next_phase": "phase_14_3_threat_fixture_acceptance_test_design",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "contract_test_code_added": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
