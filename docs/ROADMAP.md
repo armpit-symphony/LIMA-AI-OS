@@ -4504,6 +4504,46 @@ Status:
 - complete
 - tagged as `phase-11.2-candidate-status-normalization-runtime-implementation`
 
+## Phase 11.3 - Candidate Validation Runtime Implementation
+
+Goal:
+
+Implement fail-closed candidate validation for existing non-executing intake candidates.
+
+Deliverables:
+
+- `docs/PHASE_11_3_CANDIDATE_VALIDATION_RUNTIME_IMPLEMENTATION.md`
+- validation behavior in `lima/kernel/candidate_status.py`
+- safe export in `lima/kernel/__init__.py`
+- `tests/fixtures/runtime_extraction/phase_11_3_candidate_validation_runtime_implementation.json`
+- `tests/test_phase_11_3_candidate_validation_runtime_implementation.py`
+
+Acceptance criteria:
+
+- only Phase 10.2 eligible runtime files touched
+- no `tests/support/` changes
+- malformed candidates fail closed
+- missing safety fields fail closed
+- executable, execution_allowed, side_effects_allowed, approved, stale, and replayed states fail closed
+- validation cannot approve, execute, persist, or dispatch
+- Phase 5 runtime bridge remains gated
+- no Sparkbot import or wiring
+- no live adapter
+- no HumanInput runtime bridge
+- no IntentCompiler or GuardianDecision runtime behavior
+- no approval, enforcement, execution, dispatch, or audit persistence
+- no shell, browser, network, file mutation, robotics, or physical-world side effects
+- tests pass
+
+Next likely phase:
+
+- Phase 11.4 - Runtime Slice Readiness Review
+
+Status:
+
+- complete
+- tagged as `phase-11.3-candidate-validation-runtime-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -2916,6 +2916,27 @@ Consequences:
 - approved state is blocked
 - Phase 5 runtime bridge remains gated
 
+## ADR-0159: Candidate Validation Fails Closed
+
+Status: Accepted
+
+Decision:
+
+Phase 11.3 implements candidate validation as fail-closed metadata validation for existing non-executing intake candidates. It cannot approve, execute, dispatch, persist, or bridge HumanInput runtime behavior.
+
+Rationale:
+
+Validation is the narrow companion to status normalization. It catches malformed or authority-bearing candidate metadata before any future review boundary while preserving the Phase 9 non-executing guarantees.
+
+Consequences:
+
+- Phase 11.3 touches only `lima/kernel/candidate_status.py` and `lima/kernel/__init__.py` as runtime files
+- validation returns non-executing candidate dictionaries
+- malformed or unsafe candidates become invalid and blocked
+- approval state never becomes approved
+- Phase 5 runtime bridge remains gated
+- approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

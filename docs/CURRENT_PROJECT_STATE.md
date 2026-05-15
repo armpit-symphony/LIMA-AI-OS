@@ -156,27 +156,29 @@ Phase 11.1 Candidate Status Acceptance Test Scaffolding is complete, merged to `
 
 Phase 11.2 Candidate Status Normalization Runtime Implementation is complete, merged to `main`, and tagged. It adds pure in-process candidate status normalization under `lima/kernel/candidate_status.py` and safe exports in `lima/kernel/__init__.py`, while keeping execution, approval, dispatch, persistence, HumanInput bridge behavior, Sparkbot wiring, live adapters, IntentCompiler behavior, GuardianDecision behavior, and physical-world behavior absent.
 
+Phase 11.3 Candidate Validation Runtime Implementation is complete, merged to `main`, and tagged. It adds fail-closed candidate validation in `lima/kernel/candidate_status.py` with safe exports in `lima/kernel/__init__.py`, while preserving non-executing behavior and all Phase 11 forbidden boundaries.
+
 Latest completed phase merge:
 
-`3ee4acc740c7ed4439c59db98128f0030892b1e3`
+`52904bf881e56a0321aeaf5b190def597c855a9e`
 
 Latest tag:
 
-`phase-11.2-candidate-status-normalization-runtime-implementation`
+`phase-11.3-candidate-validation-runtime-implementation`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue the approved Phase 11 narrow runtime slice lane with Phase 11.3 Candidate Validation Runtime Implementation. HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue the approved Phase 11 narrow runtime slice lane with Phase 11.4 Runtime Slice Readiness Review. HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-11-3-candidate-validation-runtime-implementation
+phase-11-4-runtime-slice-readiness-review
 
 Latest completed merge:
 
-`3ee4acc740c7ed4439c59db98128f0030892b1e3`
+`52904bf881e56a0321aeaf5b190def597c855a9e`
 
 Recommended PR target:
 
@@ -186,7 +188,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 11.3 - Candidate Validation Runtime Implementation.
+Phase 11.4 - Runtime Slice Readiness Review.
 
 Exact Phase 11 approval question:
 

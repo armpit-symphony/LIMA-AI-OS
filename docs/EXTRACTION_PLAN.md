@@ -4388,6 +4388,35 @@ After merge:
 
 Continue only to Phase 11.3 candidate validation runtime implementation within the Phase 10.2 file map.
 
+## Phase 11.3 Gate: Candidate Validation Runtime Implementation
+
+Phase 11.3 may implement fail-closed candidate validation for existing non-executing intake candidates.
+
+GO:
+
+- add validation behavior to `lima/kernel/candidate_status.py`
+- add safe side-effect-free export to `lima/kernel/__init__.py`
+- reject malformed candidates safely
+- fail closed on missing safety fields
+- fail closed on executable, execution_allowed, side_effects_allowed, approved, stale, or replayed candidates
+- preserve Phase 5 runtime bridge gate
+- add runtime tests and static boundary tests
+
+NO-GO:
+
+- runtime files outside the Phase 10.2 eligible list
+- `tests/support/` changes
+- HumanInput runtime bridge
+- Sparkbot import or wiring
+- live adapter
+- IntentCompiler or GuardianDecision runtime behavior
+- approval, enforcement, execution, dispatch, or audit persistence
+- shell, browser, network, file mutation, robotics, or physical-world side effects
+
+After merge:
+
+Continue only to Phase 11.4 runtime slice readiness review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

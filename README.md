@@ -362,6 +362,8 @@ Phase 11.1 scaffolds the candidate status and validation acceptance-test obligat
 
 Phase 11.2 implements candidate status normalization under `lima/kernel/candidate_status.py` and safe exports in `lima/kernel/__init__.py`. It remains pure, in-process, non-executing, and authority-free.
 
+Phase 11.3 implements candidate validation in the same approved kernel-local scope. It fail-closes malformed or authority-bearing candidate metadata while preserving non-executing guarantees and the Phase 5 runtime bridge gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
