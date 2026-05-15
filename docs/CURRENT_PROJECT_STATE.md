@@ -224,7 +224,7 @@ Phase 17.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_17_3_MERGE`
+`419767f0f7ce4348e63c1685def06702fee7b95c`
 
 Latest tag:
 
@@ -242,7 +242,7 @@ phase-17-4-phase-17-acceptance-gate-audit-archive-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_17_3_MERGE`
+`419767f0f7ce4348e63c1685def06702fee7b95c`
 
 Recommended PR target:
 
