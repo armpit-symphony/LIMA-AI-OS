@@ -272,27 +272,29 @@ Phase 21.5 Phase 21 Runtime Slice Audit Archive / Closeout is complete on branch
 
 Phase 22.0 Post-Phase-21 Runtime Slice Audit Charter is complete on branch `phase-22-0-post-phase-21-runtime-slice-audit-charter` pending merge. It opens the docs/tests/fixtures-only no-code decision lane and records the Phase 21 audit baseline.
 
+Phase 22.1 Candidate Provenance Coverage Review is complete on branch `phase-22-1-candidate-provenance-coverage-review` pending merge. It reviews existing provenance coverage and identifies remaining test-only hardening opportunities without runtime changes.
+
 Latest completed phase merge:
 
-`83407463cd1da4809361aa01c6788ba7822ebfe3`
+`PENDING_PHASE_22_1_MERGE`
 
 Latest tag:
 
-`phase-22.0-post-phase-21-runtime-slice-audit-charter`
+`phase-22.1-candidate-provenance-coverage-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.2 should review remaining safety gaps without implementation. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-22-1-candidate-provenance-coverage-review
+phase-22-2-remaining-safety-gap-review
 
 Latest completed merge:
 
-`83407463cd1da4809361aa01c6788ba7822ebfe3`
+`PENDING_PHASE_22_1_MERGE`
 
 Recommended PR target:
 
@@ -302,7 +304,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 22.1 - Candidate Provenance Coverage Review.
+Phase 22.2 - Remaining Safety Gap Review.
 
 Phase 21 approval question:
 

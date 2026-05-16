@@ -6240,6 +6240,30 @@ Status:
 - complete
 - tagged as `phase-22.0-post-phase-21-runtime-slice-audit-charter`
 
+## Phase 22.1 - Candidate Provenance Coverage Review
+
+Goal:
+
+Review existing provenance hardening coverage and identify test-only gaps.
+
+Deliverables:
+
+- `docs/PHASE_22_1_CANDIDATE_PROVENANCE_COVERAGE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_22_1_candidate_provenance_coverage_review.json`
+- `tests/test_phase_22_1_candidate_provenance_coverage_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- covered provenance areas are listed
+- remaining test-only coverage limits are documented
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-22.1-candidate-provenance-coverage-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

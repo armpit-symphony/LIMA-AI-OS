@@ -5900,6 +5900,34 @@ Phase 21 audit passes with the approved narrow-runtime-slice scope. Phase 22 may
 
 Continue only to Phase 22.1 candidate provenance coverage review.
 
+## Phase 22.1 Gate: Candidate Provenance Coverage Review
+
+Phase 22.1 reviews existing provenance coverage and identifies test-only gaps.
+
+Allowed:
+
+- coverage review documentation
+- static coverage fixture metadata
+- static coverage tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Coverage is strong for existing candidate APIs, with remaining gaps best suited to test-only hardening rather than runtime expansion.
+
+Continue only to Phase 22.2 remaining safety gap review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
