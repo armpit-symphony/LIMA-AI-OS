@@ -1,0 +1,37 @@
+{
+  "phase": "27.4",
+  "status": "phase_27_preservation_archive_closeout",
+  "runtime_code_modified": false,
+  "phase_26_audit_result": "PASS",
+  "archived_phases": [
+    "27.0",
+    "27.1",
+    "27.2",
+    "27.3"
+  ],
+  "archive_results": {
+    "phase_27_remained_docs_tests_fixtures_only": true,
+    "runtime_files_changed": false,
+    "tests_support_changed": false,
+    "runtime_behavior_changed": false,
+    "small_runtime_slice_remains_non_executing": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "recommended_phase_28_direction": "docs_tests_fixtures_only_preservation_status_review",
+  "phase_28_approval_question": "Do you approve Phase 28 as a docs/tests/fixtures-only preservation status review to continue pausing and preserving the current runtime/test state, limited to docs/PHASE_28_*.md, tests/fixtures/runtime_extraction/phase_28_*.json, tests/test_phase_28_*.py, and required roadmap/state metadata, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_28_requires_explicit_approval": true
+  }
+}

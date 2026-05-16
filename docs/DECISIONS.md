@@ -4603,6 +4603,26 @@ Consequences:
 - Phase 28 remains gated and requires explicit approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0247: Phase 27 Is Archived At A Phase 28 Preservation Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 27.4 archives Phase 27 as a completed docs/tests/fixtures-only preservation and roadmap decision lane.
+
+Context:
+
+Phase 27 audited Phase 26, preserved the known-good runtime/test state, reviewed gated runtime boundaries, and selected continued preservation as the safest Phase 28 direction.
+
+Consequences:
+
+- Phase 27.4 changes no runtime files.
+- Phase 27.4 changes no `tests/support/` files.
+- Runtime behavior remains unchanged.
+- Phase 28 requires explicit approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted

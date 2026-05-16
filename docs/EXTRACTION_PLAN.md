@@ -6717,6 +6717,33 @@ Forbidden:
 
 Continue only to Phase 27.4 preservation archive/closeout.
 
+## Phase 27.4 Gate: Phase 27 Preservation Archive / Closeout
+
+Phase 27.4 archives Phase 27 and preserves Phase 28 as a gated docs/tests/fixtures-only preservation status review.
+
+Allowed:
+
+- Phase 27.4 tests
+- Phase 27.4 fixture metadata
+- Phase 27.4 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 27.4. Phase 28 requires explicit approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
