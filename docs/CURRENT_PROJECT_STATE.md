@@ -276,7 +276,7 @@ Phase 22.1 Candidate Provenance Coverage Review is complete on branch `phase-22-
 
 Latest completed phase merge:
 
-`PENDING_PHASE_22_1_MERGE`
+`5dd57da2a88e81e3c8ccddf55d6844d130b6c2d3`
 
 Latest tag:
 
@@ -294,7 +294,7 @@ phase-22-2-remaining-safety-gap-review
 
 Latest completed merge:
 
-`PENDING_PHASE_22_1_MERGE`
+`5dd57da2a88e81e3c8ccddf55d6844d130b6c2d3`
 
 Recommended PR target:
 
