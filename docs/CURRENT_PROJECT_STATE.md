@@ -244,7 +244,7 @@ Phase 19.2 Remaining Regression Gap Review is complete, merged to `main`, and ta
 
 Latest completed phase merge:
 
-`PENDING_PHASE_19_2_MERGE`
+`1266c11d48d72f35c54f17943e4c7a34acd408d3`
 
 Latest tag:
 
@@ -262,7 +262,7 @@ phase-19-3-next-lane-decision-matrix
 
 Latest completed merge:
 
-`PENDING_PHASE_19_2_MERGE`
+`1266c11d48d72f35c54f17943e4c7a34acd408d3`
 
 Recommended PR target:
 
