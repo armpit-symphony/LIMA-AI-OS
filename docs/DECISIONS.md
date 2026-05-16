@@ -3754,6 +3754,25 @@ Consequences:
 - Phase 20 remains unapproved
 - runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0200: Phase 19 Regression Coverage Is Meaningful But Test-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 19.1 treats the Phase 18 regression hardening coverage as meaningful protection for existing non-executing candidate APIs and acceptance-gate boundaries, while preserving that it is test-only.
+
+Rationale:
+
+Phase 18 covered candidate invariants, malformed and unknown candidates, stale/replayed signals, dangerous wording, risky integration attempts, Sparkbot absence, HumanInput bridge absence, live adapter absence, and forbidden side-effect patterns. That coverage is useful before a next-lane decision, but it is not runtime enforcement.
+
+Consequences:
+
+- Phase 18 coverage can inform Phase 19 remaining-gap review.
+- Runtime implementation remains blocked.
+- Phase 20 remains unapproved.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
