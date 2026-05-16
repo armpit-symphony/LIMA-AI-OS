@@ -278,7 +278,7 @@ Phase 22.2 Remaining Safety Gap Review is complete on branch `phase-22-2-remaini
 
 Latest completed phase merge:
 
-`PENDING_PHASE_22_2_MERGE`
+`8d932e2485d47eb50238ad0d64bf8fb5cbbbf741`
 
 Latest tag:
 
@@ -296,7 +296,7 @@ phase-22-3-next-lane-decision-matrix
 
 Latest completed merge:
 
-`PENDING_PHASE_22_2_MERGE`
+`8d932e2485d47eb50238ad0d64bf8fb5cbbbf741`
 
 Recommended PR target:
 
