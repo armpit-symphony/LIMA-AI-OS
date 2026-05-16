@@ -590,6 +590,8 @@ Phase 32.3 defines the Phase 33 eligibility and test plan matrix, preserving an 
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review and stops at the Phase 33 test-only hardening approval gate.
 
+Phase 33.0 opens the approved test-only hardening lane for the existing read-only `runtime_state` inspection slice and records the Phase 32 audit result.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

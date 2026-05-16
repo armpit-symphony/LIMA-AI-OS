@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0273: Phase 33 Opens As Test-Only Runtime State Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 33.0 opens the approved test-only hardening lane for the existing read-only `runtime_state` inspection slice after a passing Phase 32 audit.
+
+Context:
+
+Phase 32 recommended nested suspicious metadata fixture and regression hardening without runtime implementation.
+
+Consequences:
+
+- Phase 33 may add docs, fixtures, and tests only.
+- Phase 33 may not change `lima/` or `tests/support/`.
+- Phase 33 may not add runtime behavior, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## ADR-0272: Phase 32 Archives At A Test-Only Phase 33 Hardening Gate
 
 Status: Accepted
