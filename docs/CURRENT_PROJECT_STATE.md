@@ -310,7 +310,7 @@ Phase 25.2 Cross-API Non-Execution Invariant Tests is complete, merged to `main`
 
 Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests for provenance and status invariants without runtime changes.
 
-Phase 25.4 Cross-API Boundary Readiness Review is complete on branch `phase-25-4-cross-api-boundary-readiness-review` pending merge. It reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout without runtime changes.
+Phase 25.4 Cross-API Boundary Readiness Review is complete, merged to `main`, and tagged. It reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout without runtime changes.
 
 Latest completed phase merge:
 
