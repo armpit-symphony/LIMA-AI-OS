@@ -278,27 +278,29 @@ Phase 22.2 Remaining Safety Gap Review is complete on branch `phase-22-2-remaini
 
 Phase 22.3 Next-Lane Decision Matrix is complete on branch `phase-22-3-next-lane-decision-matrix` pending merge. It recommends Phase 23 as test-only hardening for provenance and candidate invariants.
 
+Phase 22.4 Phase 22 Decision Gate / Closeout is complete on branch `phase-22-4-phase-22-decision-gate-closeout` pending merge. It closes Phase 22, preserves the exact Phase 23 approval question, and keeps Phase 23 gated.
+
 Latest completed phase merge:
 
-`b4a7fa9642c242c4b396c2209846e2705ba6bc38`
+`PENDING_PHASE_22_4_MERGE`
 
 Latest tag:
 
-`phase-22.3-next-lane-decision-matrix`
+`phase-22.4-phase-22-decision-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.4 should close the lane and preserve the Phase 23 approval question. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Phase 22 is closed. Stop before Phase 23. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked unless explicitly approved later.
 
 Recommended next branch:
 
-phase-22-4-phase-22-decision-gate-closeout
+none_until_phase_23_is_explicitly_approved
 
 Latest completed merge:
 
-`b4a7fa9642c242c4b396c2209846e2705ba6bc38`
+`PENDING_PHASE_22_4_MERGE`
 
 Recommended PR target:
 
@@ -308,7 +310,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 22.4 - Phase 22 Decision Gate / Closeout.
+Stop at the Phase 23 gate.
 
 Phase 21 approval question:
 

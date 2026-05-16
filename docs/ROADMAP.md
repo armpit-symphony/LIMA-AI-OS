@@ -6312,6 +6312,30 @@ Status:
 - complete
 - tagged as `phase-22.3-next-lane-decision-matrix`
 
+## Phase 22.4 - Phase 22 Decision Gate / Closeout
+
+Goal:
+
+Close the Phase 22 decision lane and preserve the Phase 23 approval question.
+
+Deliverables:
+
+- `docs/PHASE_22_4_PHASE_22_DECISION_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_22_4_phase_22_decision_gate_closeout.json`
+- `tests/test_phase_22_4_phase_22_decision_gate_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- Phase 22.0 through Phase 22.3 are listed as complete
+- Phase 23 direction is test-only hardening for provenance and candidate invariants
+- Phase 23 requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-22.4-phase-22-decision-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
