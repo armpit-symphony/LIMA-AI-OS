@@ -512,6 +512,8 @@ Phase 25.0 opens the approved test-only hardening lane for a cross-API candidate
 
 Phase 25.1 adds synthetic matrix fixtures for existing candidate API invariant checks. It changes no runtime code.
 
+Phase 25.2 adds deterministic cross-API non-execution invariant tests for existing candidate-facing APIs. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

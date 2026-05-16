@@ -1,0 +1,34 @@
+{
+  "phase": "25.2",
+  "status": "cross_api_non_execution_invariant_tests",
+  "runtime_code_modified": false,
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_25_1_candidate_api_matrix_cases.json",
+  "apis_under_test": [
+    "build_intake_candidate",
+    "normalize_candidate_status",
+    "validate_candidate"
+  ],
+  "invariants_asserted": [
+    "candidate_construction_non_executing",
+    "candidate_status_normalization_non_executing",
+    "candidate_validation_non_executing",
+    "execution_allowed_false",
+    "side_effects_allowed_false",
+    "approval_state_never_approved",
+    "phase_5_runtime_bridge_gated"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
