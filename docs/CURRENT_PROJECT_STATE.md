@@ -280,27 +280,29 @@ Phase 22.3 Next-Lane Decision Matrix is complete on branch `phase-22-3-next-lane
 
 Phase 22.4 Phase 22 Decision Gate / Closeout is complete on branch `phase-22-4-phase-22-decision-gate-closeout` pending merge. It closes Phase 22, preserves the exact Phase 23 approval question, and keeps Phase 23 gated.
 
+Phase 23.0 Provenance Invariant Test Hardening Charter is complete on branch `phase-23-0-provenance-invariant-test-hardening-charter` pending merge. It opens the approved test-only hardening lane for provenance and candidate invariants without runtime changes.
+
 Latest completed phase merge:
 
-`aa80817690a6a32559b2c7880b46d1192449eca1`
+`PENDING_PHASE_23_0_MERGE`
 
 Latest tag:
 
-`phase-22.4-phase-22-decision-gate-closeout`
+`phase-23.0-provenance-invariant-test-hardening-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Phase 22 is closed. Stop before Phase 23. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked unless explicitly approved later.
+Continue inside the approved Phase 23 test-only hardening lane. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-none_until_phase_23_is_explicitly_approved
+phase-23-1-candidate-provenance-regression-tests
 
 Latest completed merge:
 
-`aa80817690a6a32559b2c7880b46d1192449eca1`
+`PENDING_PHASE_23_0_MERGE`
 
 Recommended PR target:
 
@@ -310,7 +312,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Stop at the Phase 23 gate.
+Phase 23.1 - Candidate Provenance Regression Tests.
 
 Phase 21 approval question:
 

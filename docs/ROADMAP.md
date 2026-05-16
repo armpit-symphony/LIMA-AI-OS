@@ -6336,6 +6336,31 @@ Status:
 - complete
 - tagged as `phase-22.4-phase-22-decision-gate-closeout`
 
+## Phase 23.0 - Provenance Invariant Test Hardening Charter
+
+Goal:
+
+Open the test-only hardening lane for provenance and candidate invariants.
+
+Deliverables:
+
+- `docs/PHASE_23_0_PROVENANCE_INVARIANT_TEST_HARDENING_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_23_0_provenance_invariant_test_hardening_charter.json`
+- `tests/test_phase_23_0_provenance_invariant_test_hardening_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- hardening goals are documented
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-23.0-provenance-invariant-test-hardening-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -4149,6 +4149,24 @@ Consequences:
 - Phase 23 must not begin without explicit Phil approval.
 - The Phase 23 approval question must preserve the no-runtime, no-`lima/`, no-`tests/support/`, no-Sparkbot, no-HumanInput-bridge, no-execution, no-dispatch, no-audit-persistence, and no-physical-world boundaries.
 
+## ADR-0221: Phase 23 Opens As Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 23.0 opens the approved test-only hardening lane for provenance and candidate invariants.
+
+Rationale:
+
+Phase 22 selected test-only hardening as the safest next step after Phase 21 provenance hardening.
+
+Consequences:
+
+- Phase 23.0 changes no runtime files.
+- `lima/` and `tests/support/` remain unchanged.
+- Phase 23.1 may add candidate provenance regression tests only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

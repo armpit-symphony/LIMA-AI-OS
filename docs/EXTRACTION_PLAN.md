@@ -6012,6 +6012,34 @@ Phase 22 is complete. Phase 23 should be test-only hardening for provenance and 
 
 Stop before Phase 23.
 
+## Phase 23.0 Gate: Provenance Invariant Test Hardening Charter
+
+Phase 23.0 opens the approved test-only hardening lane.
+
+Allowed:
+
+- Phase 23 tests
+- synthetic Phase 23 fixtures
+- Phase 23 documentation
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 23 is constrained to deterministic offline tests and fixtures around existing candidate provenance and invariant behavior.
+
+Continue only to Phase 23.1 candidate provenance regression tests.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
