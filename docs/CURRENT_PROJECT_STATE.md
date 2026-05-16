@@ -352,6 +352,8 @@ Phase 29.2 Runtime Slice Safety Boundary Design is complete, merged to `main`, a
 
 Phase 29.3 Future Implementation Eligibility Matrix is complete, merged to `main`, and tagged. It defines the future eligibility criteria, acceptance-test expectations, rollback/audit proof, and Phase 30 approval question for read-only runtime state inspection without runtime changes.
 
+Phase 29.4 Phase 29 No-Code Design Review Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 29 as no-code design review only and keeps Phase 30 blocked pending explicit Phil approval.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

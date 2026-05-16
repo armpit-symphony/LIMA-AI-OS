@@ -6989,6 +6989,35 @@ Forbidden:
 
 Continue only to Phase 29.4 Phase 29 no-code design review archive / closeout.
 
+## Phase 29.4 Gate: Phase 29 No-Code Design Review Archive / Closeout
+
+Phase 29.4 archives Phase 29 as a completed docs/tests/fixtures-only no-code design review and preserves Phase 30 as a gated runtime implementation decision.
+
+Allowed:
+
+- Phase 29.4 tests
+- Phase 29.4 fixture metadata
+- Phase 29.4 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 29.4. Phase 30 requires explicit Phil approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

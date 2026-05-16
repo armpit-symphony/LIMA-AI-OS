@@ -4757,6 +4757,26 @@ Consequences:
 - Phase 30 is not approved until Phil explicitly approves the preserved question.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0257: Phase 29 Archives At A Phase 30 Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 29.4 archives Phase 29 as a completed docs/tests/fixtures-only no-code design review and preserves Phase 30 as a blocked runtime implementation gate requiring explicit Phil approval.
+
+Context:
+
+Phase 29 audited Phase 28, selected read-only runtime state inspection as the safest future slice, defined the slice boundary, and recorded exact future implementation eligibility criteria without modifying runtime files.
+
+Consequences:
+
+- Phase 29.4 changes no runtime files.
+- Phase 29.4 changes no `tests/support/` files.
+- Phase 30 runtime implementation is not approved.
+- The recommended future runtime slice is read-only runtime state inspection.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted

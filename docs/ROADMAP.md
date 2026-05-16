@@ -7241,6 +7241,31 @@ Status:
 - complete
 - tagged as `phase-29.3-future-implementation-eligibility-matrix`
 
+## Phase 29.4 - Phase 29 No-Code Design Review Archive / Closeout
+
+Goal:
+
+Archive Phase 29 as a completed docs/tests/fixtures-only no-code design review and preserve the Phase 30 approval gate.
+
+Deliverables:
+
+- `docs/PHASE_29_4_PHASE_29_NO_CODE_DESIGN_REVIEW_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_29_4_phase_29_no_code_design_review_archive_closeout.json`
+- `tests/test_phase_29_4_phase_29_no_code_design_review_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 29.0 through Phase 29.3 are archived
+- Phase 30 requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-29.4-phase-29-no-code-design-review-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
