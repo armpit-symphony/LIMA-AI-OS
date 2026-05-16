@@ -6864,6 +6864,31 @@ Status:
 - complete
 - tagged as `phase-26.3-next-lane-decision-matrix`
 
+## Phase 26.4 - Phase 26 Cross-API Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 26 and preserve the Phase 27 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_26_4_PHASE_26_CROSS_API_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_26_4_phase_26_cross_api_audit_archive_closeout.json`
+- `tests/test_phase_26_4_phase_26_cross_api_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 26.0 through Phase 26.3 are archived
+- Phase 27 requires explicit approval
+
+Status:
+
+- complete
+- tagged as `phase-26.4-phase-26-cross-api-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

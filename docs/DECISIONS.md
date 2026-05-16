@@ -4545,6 +4545,26 @@ Consequences:
 - Phase 27 remains gated and requires explicit approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0242: Phase 26 Is Archived At A Phase 27 Preservation Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 26.4 archives Phase 26 as a completed docs/tests/fixtures-only audit/archive and next-lane decision lane.
+
+Context:
+
+Phase 26 audited Phase 25, confirmed cross-API invariant coverage, recorded remaining gaps, and selected preservation as the safest next direction without changing runtime code.
+
+Consequences:
+
+- Phase 26.4 changes no runtime files.
+- Phase 26.4 changes no `tests/support/` files.
+- Runtime behavior remains unchanged.
+- Phase 27 requires explicit approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

@@ -322,6 +322,8 @@ Phase 26.2 Remaining Cross-API Gap Review is complete, merged to `main`, and tag
 
 Phase 26.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 27 as a docs/tests/fixtures-only preservation and roadmap decision lane without runtime changes.
 
+Phase 26.4 Phase 26 Cross-API Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 26 and preserves Phase 27 as a gated docs/tests/fixtures-only preservation and roadmap decision lane.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -334,7 +336,7 @@ Latest tag:
 
 Current operator step:
 
-Stop after Phase 25.5. Phase 26 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Stop after Phase 26.4. Phase 27 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -352,7 +354,9 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 26 - docs/tests/fixtures-only audit/archive and next-lane decision, if explicitly approved.
+Phase 26 - complete/tagged.
+
+Phase 27 - docs/tests/fixtures-only preservation and roadmap decision, if explicitly approved.
 
 Phase 21 approval question:
 

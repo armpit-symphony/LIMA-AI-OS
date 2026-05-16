@@ -6582,6 +6582,33 @@ Forbidden:
 
 Continue only to Phase 26.4 archive/closeout.
 
+## Phase 26.4 Gate: Phase 26 Cross-API Audit Archive / Closeout
+
+Phase 26.4 archives Phase 26 and preserves Phase 27 as a gated docs/tests/fixtures-only preservation and roadmap decision lane.
+
+Allowed:
+
+- Phase 26.4 tests
+- Phase 26.4 fixture metadata
+- Phase 26.4 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 26.4. Phase 27 requires explicit approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
