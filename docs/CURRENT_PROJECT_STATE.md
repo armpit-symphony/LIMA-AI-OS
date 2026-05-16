@@ -250,7 +250,7 @@ Phase 20.0 Post-Regression Runtime Slice Design Charter is complete, merged to `
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_0_MERGE`
+`24c95dfca66d2e0bc93d95ebe67960ce51553439`
 
 Latest tag:
 
@@ -268,7 +268,7 @@ phase-20-1-next-runtime-slice-options-review
 
 Latest completed merge:
 
-`PENDING_PHASE_20_0_MERGE`
+`24c95dfca66d2e0bc93d95ebe67960ce51553439`
 
 Recommended PR target:
 
