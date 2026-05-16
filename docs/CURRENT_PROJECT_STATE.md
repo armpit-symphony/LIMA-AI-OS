@@ -266,7 +266,7 @@ Phase 21.2 Candidate Provenance Hardening Runtime Implementation is complete on 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_2_MERGE`
+`e16c7817e2b0e9ea5f2d2410c9ab9d726526803a`
 
 Latest tag:
 
@@ -284,7 +284,7 @@ phase-21-3-candidate-provenance-regression-review
 
 Latest completed merge:
 
-`PENDING_PHASE_21_2_MERGE`
+`e16c7817e2b0e9ea5f2d2410c9ab9d726526803a`
 
 Recommended PR target:
 
