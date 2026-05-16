@@ -6339,6 +6339,33 @@ Blocked:
 
 Continue only to Phase 25.1 candidate API matrix fixtures.
 
+## Phase 25.1 Gate: Candidate API Matrix Fixtures
+
+Phase 25.1 adds synthetic fixtures for cross-API candidate invariant tests.
+
+Allowed:
+
+- Phase 25.1 tests
+- Phase 25.1 synthetic fixtures
+- Phase 25.1 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 25.2 cross-API non-execution invariant tests.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

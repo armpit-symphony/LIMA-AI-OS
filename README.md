@@ -510,6 +510,8 @@ Phase 24.4 archives Phase 24 as a completed docs/tests/fixtures-only audit lane 
 
 Phase 25.0 opens the approved test-only hardening lane for a cross-API candidate invariant matrix. It changes no runtime code.
 
+Phase 25.1 adds synthetic matrix fixtures for existing candidate API invariant checks. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
