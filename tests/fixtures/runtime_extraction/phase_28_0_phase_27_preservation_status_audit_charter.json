@@ -1,0 +1,37 @@
+{
+  "phase": "28.0",
+  "status": "phase_27_preservation_status_audit_charter",
+  "runtime_code_modified": false,
+  "phase_27_audit_result": "PASS",
+  "audited_phases": [
+    "27.0",
+    "27.1",
+    "27.2",
+    "27.3",
+    "27.4"
+  ],
+  "anti_loop_constraint": {
+    "endless_preservation_loop_allowed": false,
+    "phase_29_must_make_sharper_decision": true,
+    "continued_pause_requires_specific_documented_risk": true
+  },
+  "allowed_phase_29_decision_types": [
+    "no_code_design_review_for_next_narrow_runtime_slice",
+    "additional_test_only_hardening_if_concrete_gap_exists",
+    "continued_pause_if_specific_risk_is_documented"
+  ],
+  "phase_28_lane": [
+    "28.0_preservation_status_audit_charter",
+    "28.1_stable_runtime_test_state_review",
+    "28.2_preservation_pause_justification_review",
+    "28.3_phase_29_decision_readiness_matrix",
+    "28.4_preservation_status_archive_closeout"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "next_phase": "28.1"
+}

@@ -7015,6 +7015,31 @@ Status:
 - complete
 - tagged as `phase-27.4-phase-27-preservation-archive-closeout`
 
+## Phase 28.0 - Phase 27 Preservation Status Audit Charter
+
+Goal:
+
+Open the approved docs/tests/fixtures-only preservation status review and prevent preservation-loop drift.
+
+Deliverables:
+
+- `docs/PHASE_28_0_PHASE_27_PRESERVATION_STATUS_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_28_0_phase_27_preservation_status_audit_charter.json`
+- `tests/test_phase_28_0_phase_27_preservation_status_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 27.0 through Phase 27.4 are in audit scope
+- Phase 29 must make a sharper decision than automatic preservation
+
+Status:
+
+- complete
+- tagged as `phase-28.0-phase-27-preservation-status-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

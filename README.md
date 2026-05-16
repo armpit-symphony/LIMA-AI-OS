@@ -540,6 +540,8 @@ Phase 27.3 recommends Phase 28 as a docs/tests/fixtures-only preservation status
 
 Phase 27.4 archives Phase 27 as a completed docs/tests/fixtures-only preservation lane and preserves Phase 28 as an explicit preservation status review gate. It changes no runtime code.
 
+Phase 28.0 opens the approved docs/tests/fixtures-only preservation status review and explicitly prevents an endless preservation loop by requiring a sharper Phase 29 decision gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
