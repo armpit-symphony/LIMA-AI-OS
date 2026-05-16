@@ -462,6 +462,8 @@ Phase 20.3 defines future acceptance tests and rollback/audit proof for the cand
 
 Phase 20.4 archives Phase 20 as a completed no-code design lane and preserves the exact Phase 21 approval question for a narrow candidate provenance hardening runtime slice. Phase 21 remains unapproved.
 
+Phase 20.5 archives Phase 20 as a completed no-code design package before any Phase 21 runtime decision. It adds no runtime behavior and keeps Phase 21 gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
