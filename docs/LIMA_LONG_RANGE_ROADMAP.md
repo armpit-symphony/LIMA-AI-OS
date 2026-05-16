@@ -284,6 +284,8 @@ Phase 19.4 archives Phase 19 as complete and recommends Phase 20 as a docs/tests
 
 Phase 20 is open as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice. It may compare candidate slice options and define future gates, but it may not modify runtime code or approve implementation.
 
+Phase 20.4 archives Phase 20 as completed no-code design work and recommends Phase 21 as a narrow candidate provenance hardening runtime slice only if Phil explicitly approves it.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries

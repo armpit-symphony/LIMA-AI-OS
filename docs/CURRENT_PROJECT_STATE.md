@@ -254,27 +254,29 @@ Phase 20.2 Exact File-Touch Map For Candidate Slice is complete, merged to `main
 
 Phase 20.3 Acceptance Test And Rollback Plan is complete, merged to `main`, and tagged. It defines future acceptance tests and rollback/audit proof for candidate provenance hardening while preserving that Phase 21 remains unapproved and no runtime code or future acceptance tests are implemented in Phase 20.
 
+Phase 20.4 Phase 20 Runtime Slice Approval Gate / Closeout is complete, merged to `main`, and tagged. It archives Phase 20 as completed no-code design work and preserves the exact Phase 21 approval question for candidate provenance hardening while keeping Phase 21 unapproved and all runtime expansion blocked.
+
 Latest completed phase merge:
 
-`17e3d079c969c9f0cdfa11d97667114523d71a57`
+`PENDING_PHASE_20_4_MERGE`
 
 Latest tag:
 
-`phase-20.3-acceptance-test-and-rollback-plan`
+`phase-20.4-phase-20-runtime-slice-approval-gate-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 20 docs/tests/fixtures-only no-code design lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Stop for explicit Phil decision. Phase 21 is not approved. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-20-4-phase-20-runtime-slice-approval-gate-closeout
+phase-21-0-candidate-provenance-hardening-preflight
 
 Latest completed merge:
 
-`17e3d079c969c9f0cdfa11d97667114523d71a57`
+`PENDING_PHASE_20_4_MERGE`
 
 Recommended PR target:
 
@@ -284,7 +286,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 20.4 - Phase 20 Runtime Slice Approval Gate / Closeout.
+Phase 21.0 - Candidate Provenance Hardening Preflight, only if Phil explicitly approves Phase 21.
+
+Phase 21 approval question:
+
+Do you approve Phase 21 as a narrow runtime implementation slice limited to candidate provenance hardening for existing non-executing candidates, touching only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`, requiring the Phase 20.3 acceptance tests and rollback/audit proof, and still forbidding `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?
 
 Phase 20 approval question:
 

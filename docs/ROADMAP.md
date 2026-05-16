@@ -6000,6 +6000,35 @@ Status:
 - complete
 - tagged as `phase-20.3-acceptance-test-and-rollback-plan`
 
+## Phase 20.4 - Phase 20 Runtime Slice Approval Gate / Closeout
+
+Goal:
+
+Archive Phase 20 and preserve the exact Phase 21 approval question.
+
+Deliverables:
+
+- `docs/PHASE_20_4_PHASE_20_RUNTIME_SLICE_APPROVAL_GATE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_20_4_phase_20_runtime_slice_approval_gate_closeout.json`
+- `tests/test_phase_20_4_phase_20_runtime_slice_approval_gate_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 20.0 through Phase 20.3 are listed as complete
+- Phase 21 approval question is preserved
+- Phase 21 remains unapproved
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-20.4-phase-20-runtime-slice-approval-gate-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

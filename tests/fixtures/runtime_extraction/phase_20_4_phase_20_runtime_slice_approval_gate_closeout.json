@@ -1,0 +1,58 @@
+{
+  "phase": "20.4",
+  "status": "phase_20_runtime_slice_approval_gate_closeout",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_20_4_PHASE_20_RUNTIME_SLICE_APPROVAL_GATE_CLOSEOUT.md",
+  "completed_scope": [
+    "phase_20_0_post_regression_runtime_slice_design_charter",
+    "phase_20_1_next_runtime_slice_options_review",
+    "phase_20_2_exact_file_touch_map_for_candidate_slice",
+    "phase_20_3_acceptance_test_and_rollback_plan"
+  ],
+  "phase_20_added": [
+    "no_code_design_docs",
+    "static_fixtures",
+    "static_tests",
+    "roadmap_state_updates"
+  ],
+  "phase_20_not_added": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "candidate_provenance_implementation",
+    "future_acceptance_test_implementation",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation_robotics_physical_world_action"
+  ],
+  "recommended_phase_21_direction": "candidate_provenance_hardening_runtime_slice",
+  "phase_21_approved": false,
+  "exact_phase_21_approval_question": "Do you approve Phase 21 as a narrow runtime implementation slice limited to candidate provenance hardening for existing non-executing candidates, touching only lima/kernel/intake_candidate.py and lima/kernel/candidate_status.py, requiring the Phase 20.3 acceptance tests and rollback/audit proof, and still forbidding lima/kernel/__init__.py, new runtime modules, all other lima files, tests/support changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "future_eligible_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

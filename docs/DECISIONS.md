@@ -3904,6 +3904,25 @@ Consequences:
 - No future acceptance tests are implemented in Phase 20.
 - Future implementation must pass targeted tests, full suite, compileall, diff-check, and file-scope audit.
 
+## ADR-0208: Phase 20 Closes At Candidate Provenance Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 20.4 archives Phase 20 as completed no-code design work and preserves the exact Phase 21 approval question for candidate provenance hardening.
+
+Rationale:
+
+Phase 20 selected a narrow future slice, mapped exact eligible files, and defined acceptance and rollback requirements. Closing the lane prevents the design package from being mistaken for implementation approval.
+
+Consequences:
+
+- Phase 21 remains unapproved.
+- Runtime implementation remains blocked.
+- The future eligible runtime files are only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain forbidden unless Phil explicitly approves a new scope.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
