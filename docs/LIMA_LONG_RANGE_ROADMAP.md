@@ -286,6 +286,8 @@ Phase 20 is open as a docs/tests/fixtures-only no-code design lane for the next 
 
 Phase 20.4 archives Phase 20 as completed no-code design work and recommends Phase 21 as a narrow candidate provenance hardening runtime slice only if Phil explicitly approves it.
 
+Phase 20.5 archives the Phase 20 design lane as no-code work only. Phase 21 remains gated and requires explicit Phil approval before any runtime implementation.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries

@@ -256,13 +256,15 @@ Phase 20.3 Acceptance Test And Rollback Plan is complete, merged to `main`, and 
 
 Phase 20.4 Phase 20 Runtime Slice Approval Gate / Closeout is complete, merged to `main`, and tagged. It archives Phase 20 as completed no-code design work and preserves the exact Phase 21 approval question for candidate provenance hardening while keeping Phase 21 unapproved and all runtime expansion blocked.
 
+Phase 20.5 Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 20.0 through Phase 20.4 as completed no-code design work, preserves the exact Phase 21 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`6910c3ad7bb86087c3125dbe0e801b3d75628c79`
+`PENDING_PHASE_20_5_MERGE`
 
 Latest tag:
 
-`phase-20.4-phase-20-runtime-slice-approval-gate-closeout`
+`phase-20.5-phase-20-next-runtime-slice-design-lane-audit-archive-closeout`
 
 ## Current Next Step
 
@@ -276,7 +278,7 @@ phase-21-0-candidate-provenance-hardening-preflight
 
 Latest completed merge:
 
-`6910c3ad7bb86087c3125dbe0e801b3d75628c79`
+`PENDING_PHASE_20_5_MERGE`
 
 Recommended PR target:
 

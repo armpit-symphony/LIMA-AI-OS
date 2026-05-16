@@ -3923,6 +3923,26 @@ Consequences:
 - The future eligible runtime files are only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
 - `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain forbidden unless Phil explicitly approves a new scope.
 
+## ADR-0209: Phase 20 Is Archived As No-Code Candidate Provenance Design
+
+Status: Accepted
+
+Decision:
+
+Phase 20.5 archives Phase 20.0 through Phase 20.4 as a completed no-code next runtime slice design lane before any Phase 21 candidate provenance hardening decision.
+
+Rationale:
+
+Phase 20 produced a design package, exact future file-touch map, acceptance-test plan, rollback/audit proof requirements, and approval gate. Archiving the lane keeps that design package distinct from runtime approval.
+
+Consequences:
+
+- Phase 21 remains unapproved.
+- Runtime implementation remains blocked.
+- No `lima/` files are changed by Phase 20.5.
+- No `tests/support/` files are changed.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
