@@ -312,7 +312,7 @@ Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete, merged t
 
 Phase 25.4 Cross-API Boundary Readiness Review is complete, merged to `main`, and tagged. It reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout without runtime changes.
 
-Phase 25.5 Phase 25 Test-Only Hardening Archive / Closeout is complete on branch `phase-25-5-phase-25-test-only-hardening-archive-closeout` pending merge. It archives Phase 25 and preserves Phase 26 as a gated docs/tests/fixtures-only audit/archive decision lane.
+Phase 25.5 Phase 25 Test-Only Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 25 and preserves Phase 26 as a gated docs/tests/fixtures-only audit/archive decision lane.
 
 Latest completed phase merge:
 

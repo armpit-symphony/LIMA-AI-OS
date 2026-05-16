@@ -6760,7 +6760,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-25-5-phase-25-test-only-hardening-archive-closeout`
+- complete
+- tagged as `phase-25.5-phase-25-test-only-hardening-archive-closeout`
 
 Reserved from Phase 3.4:
 
