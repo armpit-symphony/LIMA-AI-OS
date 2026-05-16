@@ -1,0 +1,31 @@
+{
+  "phase": "22.4",
+  "status": "phase_22_decision_gate_closeout",
+  "runtime_code_modified": false,
+  "completed_phase_22_scope": [
+    "phase_22_0_post_phase_21_runtime_slice_audit_charter",
+    "phase_22_1_candidate_provenance_coverage_review",
+    "phase_22_2_remaining_safety_gap_review",
+    "phase_22_3_next_lane_decision_matrix"
+  ],
+  "recommended_phase_23_direction": "test_only_hardening_for_provenance_candidate_invariants",
+  "phase_23_requires_explicit_phil_approval": true,
+  "phase_23_approval_question": "Do you approve Phase 23 as a test-only hardening lane for provenance and candidate invariants, limited to tests/test_phase_23_*.py, tests/fixtures/runtime_extraction/phase_23_*.json, docs/PHASE_23_*.md, and required roadmap/state docs only, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_added": false,
+    "background_worker_queue_daemon_subprocess_thread_database_write_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

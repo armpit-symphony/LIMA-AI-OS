@@ -4131,6 +4131,24 @@ Consequences:
 - Phase 23 remains gated and requires explicit Phil approval.
 - Phase 22.4 should preserve the exact Phase 23 approval question.
 
+## ADR-0220: Phase 22 Closes At A Phase 23 Test-Only Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 22.4 closes Phase 22 and preserves Phase 23 as a gated test-only hardening direction.
+
+Rationale:
+
+The Phase 22 audit and decision matrix found that the safest next lane is additional tests and fixtures around provenance and candidate invariants, not runtime expansion.
+
+Consequences:
+
+- Phase 22.4 changes no runtime files.
+- Phase 23 must not begin without explicit Phil approval.
+- The Phase 23 approval question must preserve the no-runtime, no-`lima/`, no-`tests/support/`, no-Sparkbot, no-HumanInput-bridge, no-execution, no-dispatch, no-audit-persistence, and no-physical-world boundaries.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

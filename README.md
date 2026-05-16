@@ -484,6 +484,8 @@ Phase 22.2 reviews remaining safety gaps and finds they are best handled by test
 
 Phase 22.3 compares next-lane options and recommends Phase 23 as test-only hardening for provenance and candidate invariants.
 
+Phase 22.4 closes the Phase 22 no-code decision lane and preserves the exact Phase 23 approval question. Phase 23 remains gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

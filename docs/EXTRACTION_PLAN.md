@@ -5984,6 +5984,34 @@ Phase 23 should be a test-only hardening lane for provenance and candidate invar
 
 Continue only to Phase 22.4 decision gate closeout.
 
+## Phase 22.4 Gate: Phase 22 Decision Gate / Closeout
+
+Phase 22.4 closes the Phase 22 decision lane.
+
+Allowed:
+
+- closeout documentation
+- static closeout fixture metadata
+- static closeout tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 22 is complete. Phase 23 should be test-only hardening for provenance and candidate invariants, but it remains gated and requires explicit Phil approval.
+
+Stop before Phase 23.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
