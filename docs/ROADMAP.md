@@ -5855,6 +5855,35 @@ Status:
 - complete
 - tagged as `phase-19.3-next-lane-decision-matrix`
 
+## Phase 19.4 - Phase 19 Regression Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 19 and preserve the exact Phase 20 approval question.
+
+Deliverables:
+
+- `docs/PHASE_19_4_PHASE_19_REGRESSION_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_19_4_phase_19_regression_audit_archive_closeout.json`
+- `tests/test_phase_19_4_phase_19_regression_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 19.0 through Phase 19.3 are listed as complete
+- Phase 20 direction and approval question are preserved
+- Phase 20 remains unapproved
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-19.4-phase-19-regression-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

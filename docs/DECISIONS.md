@@ -3811,6 +3811,25 @@ Consequences:
 - Sparkbot, Robo-OS, and HumanInput runtime bridge work remain separate lanes.
 - Phil must explicitly approve Phase 20 before it starts.
 
+## ADR-0203: Phase 19 Archives Regression Audit And Preserves Phase 20 Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 19.4 archives Phase 19 as completed docs/tests/fixtures-only acceptance-gate audit/archive work and preserves the exact Phase 20 approval question.
+
+Rationale:
+
+Phase 19 audited the Phase 18 regression hardening package, reviewed coverage, identified remaining gaps, and selected a recommended next direction. Closing the lane prevents the recommendation from being mistaken for implementation approval.
+
+Consequences:
+
+- Phase 20 remains unapproved.
+- Runtime implementation remains blocked.
+- Phase 5 HumanInput runtime bridge remains gated.
+- Phil must explicitly approve Phase 20 before work continues.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

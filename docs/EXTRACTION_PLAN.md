@@ -5527,6 +5527,35 @@ Phase 20 should be a docs/tests/fixtures-only no-code design lane for the next n
 
 Continue only to Phase 19.4 archive closeout.
 
+## Phase 19.4 Gate: Phase 19 Regression Audit Archive / Closeout
+
+Phase 19.4 may archive Phase 19 and preserve the Phase 20 approval question.
+
+Allowed:
+
+- archive closeout documentation
+- static archive fixture metadata
+- static archive tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 19 is archived as completed docs/tests/fixtures-only regression audit work. Phase 20 is recommended as a no-code design lane for the next narrow runtime slice, but Phase 20 remains unapproved.
+
+Stop for explicit Phil decision before Phase 20.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

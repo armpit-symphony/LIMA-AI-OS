@@ -450,6 +450,8 @@ Phase 19.2 records remaining regression gaps after Phase 18: static checks are n
 
 Phase 19.3 evaluates the approved Phase 20 options and recommends a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, without approving Phase 20 implementation.
 
+Phase 19.4 archives Phase 19 as complete and preserves the exact Phase 20 approval question. Phase 20 remains unapproved and runtime expansion remains blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

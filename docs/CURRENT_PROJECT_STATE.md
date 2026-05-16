@@ -244,27 +244,29 @@ Phase 19.2 Remaining Regression Gap Review is complete, merged to `main`, and ta
 
 Phase 19.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It evaluates Phase 20 options and recommends a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice while preserving explicit Phil approval and blocking runtime implementation.
 
+Phase 19.4 Phase 19 Regression Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 19 as completed docs/tests/fixtures-only audit/archive work, preserves the exact Phase 20 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`a279ae7cc5e7932b1712d8aa17172a86b7105fa9`
+`PENDING_PHASE_19_4_MERGE`
 
 Latest tag:
 
-`phase-19.3-next-lane-decision-matrix`
+`phase-19.4-phase-19-regression-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 19 docs/tests/fixtures-only acceptance-gate audit/archive lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Stop for explicit Phil decision. Phase 20 is not approved. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-19-4-phase-19-regression-audit-archive-closeout
+phase-20-0-no-code-next-runtime-slice-design-charter
 
 Latest completed merge:
 
-`a279ae7cc5e7932b1712d8aa17172a86b7105fa9`
+`PENDING_PHASE_19_4_MERGE`
 
 Recommended PR target:
 
@@ -274,7 +276,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 19.4 - Phase 19 Regression Audit Archive / Closeout.
+Phase 20.0 - No-Code Next Runtime Slice Design Charter, only if Phil explicitly approves Phase 20.
+
+Phase 20 approval question:
+
+Do you approve Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, using Phase 18 regression coverage and Phase 19 audit findings as inputs, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 19 approval question:
 
