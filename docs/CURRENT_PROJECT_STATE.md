@@ -268,7 +268,7 @@ Phase 21.3 Candidate Provenance Regression Review is complete on branch `phase-2
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_3_MERGE`
+`4e10f2f5d529783cbf9494852711af60a599495f`
 
 Latest tag:
 
@@ -286,7 +286,7 @@ phase-21-4-runtime-slice-readiness-review
 
 Latest completed merge:
 
-`PENDING_PHASE_21_3_MERGE`
+`4e10f2f5d529783cbf9494852711af60a599495f`
 
 Recommended PR target:
 
