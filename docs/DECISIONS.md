@@ -4913,6 +4913,25 @@ Consequences:
 - Runtime state boundary evidence is preserved as docs/tests/fixtures only.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0265: Phase 32 Should Not Default To Runtime Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 31.2 finds no blocking safety regression after Phase 30 and recommends that Phase 32 should not default to another runtime implementation phase.
+
+Context:
+
+The Phase 30 slice is stable and bounded, but Phase 31 is an audit/archive lane. The safer next decision is to evaluate options through docs/tests/fixtures-only design or targeted test-only hardening if a concrete gap is found.
+
+Consequences:
+
+- Phase 31.2 changes no runtime files.
+- Phase 31.2 changes no `tests/support/` files.
+- Remaining gaps are non-blocking and gated.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
