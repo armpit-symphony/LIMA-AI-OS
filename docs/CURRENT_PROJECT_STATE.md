@@ -308,7 +308,7 @@ Phase 25.1 Candidate API Matrix Fixtures is complete, merged to `main`, and tagg
 
 Phase 25.2 Cross-API Non-Execution Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving existing candidate-facing APIs preserve non-execution invariants without runtime changes.
 
-Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete on branch `phase-25-3-cross-api-provenance-and-status-invariant-tests` pending merge. It adds deterministic tests for provenance and status invariants without runtime changes.
+Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests for provenance and status invariants without runtime changes.
 
 Latest completed phase merge:
 

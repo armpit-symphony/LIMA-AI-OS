@@ -6710,7 +6710,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-25-3-cross-api-provenance-and-status-invariant-tests`
+- complete
+- tagged as `phase-25.3-cross-api-provenance-and-status-invariant-tests`
 
 Reserved from Phase 3.4:
 
