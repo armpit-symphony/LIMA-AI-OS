@@ -6258,6 +6258,33 @@ Blocked:
 
 Continue only to Phase 24.3 next-lane decision matrix.
 
+## Phase 24.3 Gate: Next-Lane Decision Matrix
+
+Phase 24.3 recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
+
+Allowed:
+
+- Phase 24.3 tests
+- Phase 24.3 fixture metadata
+- Phase 24.3 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 24.4 archive/closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

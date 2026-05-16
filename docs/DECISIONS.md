@@ -4317,6 +4317,25 @@ Consequences:
 - Runtime implementation remains blocked.
 - Phase 24.3 may evaluate next-lane options only.
 
+## ADR-0230: Phase 25 Should Be Additional Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 24.3 recommends Phase 25 as additional test-only hardening focused on a cross-API candidate invariant matrix.
+
+Rationale:
+
+The safest next step is to deepen deterministic offline regression protection before considering any future runtime expansion.
+
+Consequences:
+
+- Phase 24.3 changes no runtime files.
+- Phase 24.3 changes no `tests/support/` files.
+- Phase 25 remains gated and requires explicit approval.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
