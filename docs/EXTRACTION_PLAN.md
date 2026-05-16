@@ -6285,6 +6285,33 @@ Blocked:
 
 Continue only to Phase 24.4 archive/closeout.
 
+## Phase 24.4 Gate: Phase 24 Hardening Audit Archive / Closeout
+
+Phase 24.4 archives Phase 24 and preserves Phase 25 as a gated test-only hardening direction.
+
+Allowed:
+
+- Phase 24.4 tests
+- Phase 24.4 fixture metadata
+- Phase 24.4 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 24.4. Phase 25 requires explicit approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

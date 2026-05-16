@@ -300,6 +300,8 @@ Phase 24.2 Remaining Candidate Invariant Gap Review is complete, merged to `main
 
 Phase 24.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
 
+Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete on branch `phase-24-4-phase-24-hardening-audit-archive-closeout` pending merge. It archives Phase 24 and preserves Phase 25 as a gated test-only hardening lane.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -312,7 +314,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 24 docs/tests/fixtures-only audit/archive lane. Phase 24.4 may archive Phase 24 and preserve the Phase 25 gate only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Stop after Phase 24.4. Phase 25 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -330,7 +332,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 24.4 - Phase 24 Hardening Audit Archive / Closeout.
+Phase 25 - test-only cross-API candidate invariant matrix hardening, if explicitly approved.
 
 Phase 21 approval question:
 
