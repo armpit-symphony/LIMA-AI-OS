@@ -1,0 +1,51 @@
+{
+  "phase": "29.3",
+  "status": "future_implementation_eligibility_matrix",
+  "runtime_code_modified": false,
+  "recommended_future_slice": "read_only_runtime_state_inspection",
+  "future_eligible_runtime_files": [
+    "lima/kernel/runtime_state.py",
+    "lima/kernel/__init__.py_only_if_safe_public_export_required"
+  ],
+  "future_forbidden_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "all_other_lima_files",
+    "new_live_adapter_modules",
+    "sparkbot_files",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior"
+  ],
+  "eligibility_criteria": {
+    "explicit_phil_approval_required": true,
+    "exact_runtime_file_scope_required": true,
+    "tests_before_runtime_edits": true,
+    "deterministic_local_only_read_only": true,
+    "non_authoritative_output_only": true,
+    "already_existing_non_executing_candidate_state_only": true,
+    "execution_allowed_remains_false": true,
+    "side_effects_allowed_remains_false": true,
+    "approval_state_never_approved": true,
+    "unsafe_state_surfaces_blocked_invalid_not_ready_or_needs_review": true,
+    "dangerous_wording_does_not_change_output": true,
+    "rollback_can_remove_runtime_state_and_export": true,
+    "audit_proof_required": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "required_future_acceptance_tests": [
+    "valid_state_produces_non_authoritative_snapshot",
+    "malformed_state_reported_safe",
+    "unknown_status_or_missing_provenance_not_executable_or_approved",
+    "stale_replayed_suspicious_or_bypass_wording_safe",
+    "execution_allowed_false",
+    "side_effects_allowed_false",
+    "approval_state_never_approved",
+    "input_candidate_state_not_mutated",
+    "no_sparkbot_import_or_wiring",
+    "no_humaninput_runtime_bridge",
+    "no_live_adapter",
+    "no_execution_dispatch_approval_persistence_or_side_effects"
+  ],
+  "phase_30_approval_question": "Do you approve Phase 30 as a narrow runtime implementation slice limited to read-only runtime state inspection, touching only a possible new `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py` only if a safe public export is required, requiring Phase 29.3 acceptance tests, rollback plan, and audit proof, and still forbidding `lima/kernel/intake_candidate.py`, `lima/kernel/candidate_status.py`, all other `lima/` files, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "next_phase": "29.4"
+}

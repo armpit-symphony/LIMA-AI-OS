@@ -6960,6 +6960,35 @@ Forbidden:
 
 Continue only to Phase 29.3 future implementation eligibility matrix.
 
+## Phase 29.3 Gate: Future Implementation Eligibility Matrix
+
+Phase 29.3 defines the future implementation eligibility criteria, acceptance tests, rollback/audit proof, and exact Phase 30 approval question for a possible read-only runtime state inspection slice.
+
+Allowed:
+
+- Phase 29.3 tests
+- Phase 29.3 fixture metadata
+- Phase 29.3 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 29.4 Phase 29 no-code design review archive / closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
