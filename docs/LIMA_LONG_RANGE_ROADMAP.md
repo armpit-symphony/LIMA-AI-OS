@@ -278,6 +278,8 @@ Phase 18 is open as a test-only regression hardening lane for existing non-execu
 
 Phase 18 is complete and tagged as a test-only regression hardening lane. It added candidate API regression tests, synthetic acceptance-boundary regression fixtures, forbidden integration regression tests, readiness review metadata, and archive metadata without changing `lima/`, `tests/support/`, runtime behavior, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior.
 
+Phase 19 is open as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase for the Phase 18 regression hardening package. It may review coverage, identify remaining gaps, and recommend a Phase 20 direction without changing runtime behavior or approving runtime expansion.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries

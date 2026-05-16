@@ -5741,6 +5741,34 @@ Status:
 - complete
 - tagged as `phase-18.5-phase-18-regression-hardening-archive-closeout`
 
+## Phase 19.0 - Phase 18 Regression Hardening Audit Charter
+
+Goal:
+
+Open Phase 19 as a docs/tests/fixtures-only audit/archive lane for the Phase 18 regression hardening package.
+
+Deliverables:
+
+- `docs/PHASE_19_0_PHASE_18_REGRESSION_HARDENING_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_19_0_phase_18_regression_hardening_audit_charter.json`
+- `tests/test_phase_19_0_phase_18_regression_hardening_audit_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18.0 through Phase 18.5 are in audit scope
+- Phase 20 options are listed for later evaluation
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-19.0-phase-18-regression-hardening-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

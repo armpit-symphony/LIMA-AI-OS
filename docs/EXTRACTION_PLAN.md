@@ -5407,6 +5407,32 @@ Blocked:
 
 Stop for explicit Phil decision. No Phase 19 work is approved by this closeout.
 
+## Phase 19.0 Gate: Phase 18 Regression Hardening Audit Charter
+
+Phase 19.0 may open the approved docs/tests/fixtures-only acceptance-gate audit/archive lane.
+
+Allowed:
+
+- audit charter documentation
+- static audit charter fixture metadata
+- static audit charter tests
+- project tracking updates
+- Phase 20 option list for later evaluation
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 19.1 regression coverage review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
