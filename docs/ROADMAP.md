@@ -6939,6 +6939,31 @@ Status:
 - complete
 - tagged as `phase-27.1-current-runtime-test-state-preservation-record`
 
+## Phase 27.2 - Gated Runtime Boundary Review
+
+Goal:
+
+Review the runtime and integration boundaries that remain gated.
+
+Deliverables:
+
+- `docs/PHASE_27_2_GATED_RUNTIME_BOUNDARY_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_27_2_gated_runtime_boundary_review.json`
+- `tests/test_phase_27_2_gated_runtime_boundary_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Sparkbot, HumanInput bridge, live adapters, execution, dispatch, persistence, and physical-world behavior remain absent
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-27.2-gated-runtime-boundary-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

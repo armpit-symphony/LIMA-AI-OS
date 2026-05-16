@@ -328,6 +328,8 @@ Phase 27.0 Phase 26 Preservation Audit Charter is complete, merged to `main`, an
 
 Phase 27.1 Current Runtime/Test State Preservation Record is complete, merged to `main`, and tagged. It preserves the current known-good runtime/test state without runtime changes.
 
+Phase 27.2 Gated Runtime Boundary Review is complete, merged to `main`, and tagged. It reviews the blocked runtime and integration boundaries without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

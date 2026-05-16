@@ -534,6 +534,8 @@ Phase 27.0 opens the approved docs/tests/fixtures-only preservation and roadmap 
 
 Phase 27.1 records the current known-good runtime/test state and preserves the constrained non-executing candidate APIs before any future expansion decision. It changes no runtime code.
 
+Phase 27.2 reviews the gated runtime and integration boundaries that remain blocked after Phase 26. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

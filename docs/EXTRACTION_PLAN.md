@@ -6663,6 +6663,33 @@ Forbidden:
 
 Continue only to Phase 27.2 gated runtime boundary review.
 
+## Phase 27.2 Gate: Gated Runtime Boundary Review
+
+Phase 27.2 reviews blocked runtime and integration boundaries.
+
+Allowed:
+
+- Phase 27.2 tests
+- Phase 27.2 fixture metadata
+- Phase 27.2 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 27.3 next-lane risk decision matrix.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
