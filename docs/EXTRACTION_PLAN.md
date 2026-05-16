@@ -7366,6 +7366,33 @@ Forbidden:
 - live adapters
 - execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
 
+## Phase 32.3 Gate: Phase 33 Eligibility And Test Plan Matrix
+
+Phase 32.3 defines the eligibility and test plan matrix for the recommended Phase 33 test-only hardening lane.
+
+Allowed:
+
+- Phase 32.3 tests
+- Phase 32.3 fixture metadata
+- Phase 32.3 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 33 should be test-only `runtime_state` hardening.
+- Phase 33 implementation file scope is empty.
+- Phase 33 requires explicit Phil approval before beginning.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## Phase 32.2 Gate: Next-Slice Safety And Scope Comparison
 
 Phase 32.2 compares candidate lanes against safety, scope, testability, rollback, usefulness, and readiness.

@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0271: Phase 33 Eligibility Is Test-Only Runtime State Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 32.3 defines the Phase 33 eligibility gate as test-only hardening for the existing read-only `runtime_state` inspection slice, with no runtime implementation file scope.
+
+Context:
+
+Phase 32.2 found Option A to be the safest immediate lane and found runtime implementation candidates not ready for immediate approval.
+
+Consequences:
+
+- Phase 33 requires explicit Phil approval.
+- The recommended Phase 33 lane may add nested suspicious metadata fixtures and regression tests.
+- The recommended Phase 33 lane may not change `lima/` or `tests/support/`.
+- The Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0270: Phase 32 Does Not Recommend Immediate Phase 33 Runtime Implementation
 
 Status: Accepted
