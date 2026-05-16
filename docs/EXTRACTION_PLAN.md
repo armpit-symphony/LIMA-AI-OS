@@ -7366,6 +7366,29 @@ Forbidden:
 - live adapters
 - execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
 
+## Phase 33.0 Gate: Phase 32 Test-Only Hardening Audit Charter
+
+Phase 33.0 opens the approved test-only hardening lane for the existing read-only `runtime_state` inspection slice.
+
+Allowed:
+
+- Phase 33.0 tests
+- Phase 33.0 fixture metadata
+- Phase 33.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 33.1 nested suspicious metadata fixture design.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
