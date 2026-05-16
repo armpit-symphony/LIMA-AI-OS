@@ -5356,6 +5356,31 @@ Blocked:
 
 Continue only to Phase 18.4 regression hardening readiness review.
 
+## Phase 18.4 Gate: Regression Hardening Readiness Review
+
+Phase 18.4 may review the regression hardening package before archive.
+
+Allowed:
+
+- readiness review documentation
+- static readiness review fixture metadata
+- static readiness review tests
+- list ready-for and not-ready-for states
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Continue only to Phase 18.5 archive / closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

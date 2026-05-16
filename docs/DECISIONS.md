@@ -3692,6 +3692,26 @@ Consequences:
 - no `tests/support/` files are changed
 - Phase 18.4 may review readiness
 
+## ADR-0197: Regression Hardening Readiness Does Not Approve Runtime Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 18.4 reviews the Phase 18 regression hardening package as ready for archive/closeout only.
+
+Rationale:
+
+The package adds useful regression coverage but remains a test-only lane. It should not be interpreted as approval for runtime implementation, integration work, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior.
+
+Consequences:
+
+- Phase 18.4 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 18.5 may archive the lane
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

@@ -5680,6 +5680,34 @@ Status:
 - complete
 - tagged as `phase-18.3-forbidden-integration-regression-tests`
 
+## Phase 18.4 - Regression Hardening Readiness Review
+
+Goal:
+
+Review the Phase 18 regression hardening package before archive/closeout.
+
+Deliverables:
+
+- `docs/PHASE_18_4_REGRESSION_HARDENING_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_18_4_regression_hardening_readiness_review.json`
+- `tests/test_phase_18_4_regression_hardening_readiness_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18.1 through Phase 18.3 reviewed
+- ready for archive/closeout
+- not ready for runtime implementation
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-18.4-regression-hardening-readiness-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
