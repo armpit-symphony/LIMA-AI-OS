@@ -6216,6 +6216,30 @@ Status:
 - complete
 - tagged as `phase-21.5-phase-21-runtime-slice-audit-archive-closeout`
 
+## Phase 22.0 - Post-Phase-21 Runtime Slice Audit Charter
+
+Goal:
+
+Open the Phase 22 no-code decision lane after auditing Phase 21.
+
+Deliverables:
+
+- `docs/PHASE_22_0_POST_PHASE_21_RUNTIME_SLICE_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_22_0_post_phase_21_runtime_slice_audit_charter.json`
+- `tests/test_phase_22_0_post_phase_21_runtime_slice_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- Phase 21 audit baseline is recorded
+- Phase 22 options are listed
+- Phase 23 remains gated
+
+Status:
+
+- complete
+- tagged as `phase-22.0-post-phase-21-runtime-slice-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

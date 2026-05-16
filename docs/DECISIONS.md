@@ -4058,6 +4058,25 @@ Consequences:
 - Runtime remains non-executing, approval-free, dispatch-free, persistence-free, Sparkbot-free, HumanInput-bridge-free, and physical-world-free.
 - Phase 22 remains gated and requires explicit Phil approval.
 
+## ADR-0216: Phase 22 Opens As A No-Code Decision Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 22.0 opens a docs/tests/fixtures-only no-code lane to review Phase 21 and decide the safest Phase 23 direction.
+
+Rationale:
+
+After a narrow runtime slice, the safest next step is a design and decision lane rather than immediate runtime expansion.
+
+Consequences:
+
+- Phase 22.0 changes no runtime files.
+- Phase 22 may evaluate next-lane options.
+- Phase 23 remains gated and requires explicit Phil approval.
+- `lima/`, `tests/support/`, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, and physical-world behavior remain blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

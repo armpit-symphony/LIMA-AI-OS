@@ -270,27 +270,29 @@ Phase 21.4 Runtime Slice Readiness Review is complete on branch `phase-21-4-runt
 
 Phase 21.5 Phase 21 Runtime Slice Audit Archive / Closeout is complete on branch `phase-21-5-phase-21-runtime-slice-audit-archive-closeout` pending merge. It archives Phase 21 as complete, records the exact runtime files touched, and keeps Phase 22 gated.
 
+Phase 22.0 Post-Phase-21 Runtime Slice Audit Charter is complete on branch `phase-22-0-post-phase-21-runtime-slice-audit-charter` pending merge. It opens the docs/tests/fixtures-only no-code decision lane and records the Phase 21 audit baseline.
+
 Latest completed phase merge:
 
-`32916503b6bdc67196197ec9e9964335a45344a2`
+`PENDING_PHASE_22_0_MERGE`
 
 Latest tag:
 
-`phase-21.5-phase-21-runtime-slice-audit-archive-closeout`
+`phase-22.0-post-phase-21-runtime-slice-audit-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Phase 21 is archived as complete. Stop before Phase 22. Any future lane requires explicit Phil approval and must preserve that HumanInput runtime bridge behavior, Sparkbot integration, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked unless explicitly approved later.
+Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-none_until_phase_22_is_explicitly_approved
+phase-22-1-candidate-provenance-coverage-review
 
 Latest completed merge:
 
-`32916503b6bdc67196197ec9e9964335a45344a2`
+`PENDING_PHASE_22_0_MERGE`
 
 Recommended PR target:
 
@@ -300,7 +302,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Stop at the Phase 22 gate.
+Phase 22.1 - Candidate Provenance Coverage Review.
 
 Phase 21 approval question:
 
