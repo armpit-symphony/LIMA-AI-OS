@@ -7469,6 +7469,31 @@ Status:
 - complete
 - tagged as `phase-31.2-runtime-slice-regression-and-gap-review`
 
+## Phase 31.3 - Phase 32 Next-Lane Decision Matrix
+
+Goal:
+
+Evaluate Phase 32 options and recommend the safest next lane after the Phase 30 runtime slice audit.
+
+Deliverables:
+
+- `docs/PHASE_31_3_PHASE_32_NEXT_LANE_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_31_3_phase_32_next_lane_decision_matrix.json`
+- `tests/test_phase_31_3_phase_32_next_lane_decision_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- all recommended Phase 32 options are evaluated
+- exactly one Phase 32 direction is recommended
+
+Status:
+
+- complete
+- tagged as `phase-31.3-phase-32-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

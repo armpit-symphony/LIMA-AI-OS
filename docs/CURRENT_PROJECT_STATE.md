@@ -370,6 +370,8 @@ Phase 31.1 Read-Only Runtime State Boundary Evidence Review is complete, merged 
 
 Phase 31.2 Runtime Slice Regression and Gap Review is complete, merged to `main`, and tagged. It reviews Phase 30 regression coverage, finds no blocking safety regression, and recommends Phase 32 not default to implementation.
 
+Phase 31.3 Phase 32 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 32 as docs/tests/fixtures-only design review for the next narrow runtime slice, not runtime implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
