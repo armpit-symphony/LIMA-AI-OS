@@ -7366,6 +7366,33 @@ Forbidden:
 - live adapters
 - execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
 
+## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
+
+Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
+
+Allowed:
+
+- Phase 32.4 tests
+- Phase 32.4 fixture metadata
+- Phase 32.4 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 32 stops at the Phase 33 approval gate.
+- Recommended Phase 33 direction is test-only `runtime_state` hardening.
+- Recommended Phase 33 implementation file scope is empty.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## Phase 32.3 Gate: Phase 33 Eligibility And Test Plan Matrix
 
 Phase 32.3 defines the eligibility and test plan matrix for the recommended Phase 33 test-only hardening lane.
