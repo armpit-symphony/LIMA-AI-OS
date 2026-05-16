@@ -6190,6 +6190,32 @@ Status:
 - complete
 - tagged as `phase-21.4-runtime-slice-readiness-review`
 
+## Phase 21.5 - Phase 21 Runtime Slice Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 21 as a completed narrow runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_21_5_PHASE_21_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_21_5_phase_21_runtime_slice_audit_archive_closeout.json`
+- `tests/test_phase_21_5_phase_21_runtime_slice_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- Phase 21.0 through Phase 21.4 are listed as complete
+- exact Phase 21 runtime files touched are recorded
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain outside scope
+- runtime remains non-executing, approval-free, dispatch-free, persistence-free, Sparkbot-free, HumanInput-bridge-free, and physical-world-free
+- Phase 22 remains gated and requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-21.5-phase-21-runtime-slice-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

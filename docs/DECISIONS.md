@@ -4039,6 +4039,25 @@ Consequences:
 - Phase 22 remains gated and requires explicit Phil approval.
 - Runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
+## ADR-0215: Phase 21 Is Archived As A Narrow Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 21.5 archives Phase 21 as a completed candidate provenance hardening runtime slice.
+
+Rationale:
+
+Phase 21 completed preflight, acceptance scaffolding, narrow runtime implementation, regression review, readiness review, and archive closeout while preserving the approved file scope and safety boundaries.
+
+Consequences:
+
+- The only runtime files touched by Phase 21 were `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain untouched by Phase 21 after the approved runtime slice.
+- Runtime remains non-executing, approval-free, dispatch-free, persistence-free, Sparkbot-free, HumanInput-bridge-free, and physical-world-free.
+- Phase 22 remains gated and requires explicit Phil approval.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

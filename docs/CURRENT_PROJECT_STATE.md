@@ -268,27 +268,29 @@ Phase 21.3 Candidate Provenance Regression Review is complete on branch `phase-2
 
 Phase 21.4 Runtime Slice Readiness Review is complete on branch `phase-21-4-runtime-slice-readiness-review` pending merge. It finds the Phase 21 candidate provenance hardening slice ready for archive closeout and keeps Phase 22 gated.
 
+Phase 21.5 Phase 21 Runtime Slice Audit Archive / Closeout is complete on branch `phase-21-5-phase-21-runtime-slice-audit-archive-closeout` pending merge. It archives Phase 21 as complete, records the exact runtime files touched, and keeps Phase 22 gated.
+
 Latest completed phase merge:
 
-`70d2d8dea409f461fad137337a03071b5c70dddf`
+`PENDING_PHASE_21_5_MERGE`
 
 Latest tag:
 
-`phase-21.4-runtime-slice-readiness-review`
+`phase-21.5-phase-21-runtime-slice-audit-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Phase 21.5 must archive the Phase 21 runtime slice and stop before Phase 22. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Phase 21 is archived as complete. Stop before Phase 22. Any future lane requires explicit Phil approval and must preserve that HumanInput runtime bridge behavior, Sparkbot integration, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked unless explicitly approved later.
 
 Recommended next branch:
 
-phase-21-5-phase-21-runtime-slice-audit-archive-closeout
+none_until_phase_22_is_explicitly_approved
 
 Latest completed merge:
 
-`70d2d8dea409f461fad137337a03071b5c70dddf`
+`PENDING_PHASE_21_5_MERGE`
 
 Recommended PR target:
 
@@ -298,7 +300,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 21.5 - Phase 21 Runtime Slice Audit Archive / Closeout.
+Stop at the Phase 22 gate.
 
 Phase 21 approval question:
 

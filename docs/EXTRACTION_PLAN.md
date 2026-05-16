@@ -5844,6 +5844,34 @@ Phase 21.0 through Phase 21.3 are complete, the runtime slice remains non-execut
 
 Continue only to Phase 21.5 archive closeout.
 
+## Phase 21.5 Gate: Phase 21 Runtime Slice Audit Archive / Closeout
+
+Phase 21.5 archives Phase 21 as a completed narrow runtime slice.
+
+Allowed:
+
+- archive closeout documentation
+- static archive fixture metadata
+- archive tests under `tests/`
+- project tracking updates
+
+Blocked:
+
+- runtime changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 21 is archived as complete. The only runtime files touched by the lane were `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`. Phase 22 remains gated and requires explicit Phil approval.
+
+Stop before Phase 22.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
