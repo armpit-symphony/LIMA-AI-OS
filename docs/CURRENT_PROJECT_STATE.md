@@ -284,7 +284,7 @@ Phase 23.0 Provenance Invariant Test Hardening Charter is complete on branch `ph
 
 Latest completed phase merge:
 
-`PENDING_PHASE_23_0_MERGE`
+`ac6e2c9ec9b54f3dc3cf6b9bbf5b5004a565ee98`
 
 Latest tag:
 
@@ -302,7 +302,7 @@ phase-23-1-candidate-provenance-regression-tests
 
 Latest completed merge:
 
-`PENDING_PHASE_23_0_MERGE`
+`ac6e2c9ec9b54f3dc3cf6b9bbf5b5004a565ee98`
 
 Recommended PR target:
 
