@@ -474,6 +474,8 @@ Phase 21.3 reviews the candidate provenance hardening slice as regression-only d
 
 Phase 21.4 marks the candidate provenance hardening runtime slice ready for archive closeout. It adds no runtime changes and keeps Phase 22 gated.
 
+Phase 21.5 archives Phase 21 as a completed narrow runtime slice. The only runtime files touched by the lane were `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`; Phase 22 remains gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
