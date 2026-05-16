@@ -6084,6 +6084,33 @@ Status:
 - complete
 - tagged as `phase-21.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
+## Phase 21.1 - Candidate Provenance Acceptance Test Scaffolding
+
+Goal:
+
+Scaffold deterministic candidate provenance acceptance tests before runtime implementation.
+
+Deliverables:
+
+- `docs/PHASE_21_1_CANDIDATE_PROVENANCE_ACCEPTANCE_TEST_SCAFFOLDING.md`
+- `tests/fixtures/runtime_extraction/phase_21_1_candidate_provenance_acceptance_test_scaffolding.json`
+- `tests/fixtures/runtime_extraction/phase_21_1_candidate_provenance_acceptance_cases.json`
+- `tests/test_phase_21_1_candidate_provenance_acceptance_test_scaffolding.py`
+
+Acceptance criteria:
+
+- no runtime implementation yet
+- valid candidate provenance is preserved by existing candidate APIs
+- missing, empty, or non-mapping provenance is rejected or invalid
+- suspicious provenance wording does not bypass safety
+- stale and replayed candidates remain blocked or invalid
+- no forbidden integration, execution, dispatch, approval enforcement, audit persistence, or physical-world surface is reachable
+
+Status:
+
+- complete
+- tagged as `phase-21.1-candidate-provenance-acceptance-test-scaffolding`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

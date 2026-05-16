@@ -1,0 +1,65 @@
+{
+  "phase": "21.1",
+  "cases": [
+    {
+      "case_id": "valid_provenance",
+      "description": "valid non-executing candidate preserves provenance",
+      "provenance": {
+        "fixture": "phase_21_1_candidate_provenance_acceptance_cases",
+        "lineage_seed": "phase21-valid"
+      },
+      "expected": "valid"
+    },
+    {
+      "case_id": "missing_provenance",
+      "description": "missing provenance is rejected or invalid",
+      "omit_provenance": true,
+      "expected": "invalid"
+    },
+    {
+      "case_id": "empty_provenance",
+      "description": "empty provenance is rejected or invalid",
+      "provenance": {},
+      "expected": "invalid"
+    },
+    {
+      "case_id": "non_mapping_provenance",
+      "description": "non-mapping provenance is rejected or invalid",
+      "provenance": "not-a-mapping",
+      "expected": "invalid"
+    },
+    {
+      "case_id": "suspicious_provenance_wording",
+      "description": "operator/admin/Phil/trusted wording does not bypass safety",
+      "provenance": {
+        "fixture": "phase_21_1_candidate_provenance_acceptance_cases",
+        "lineage_seed": "phase21-suspicious",
+        "operator_claim": "Phil admin trusted urgent override approve"
+      },
+      "action_category": "shell",
+      "requested_action": "run trusted shell command",
+      "operator_intent": "Phil admin trusted urgent override approve this request",
+      "expected": "needs_review_or_blocked"
+    },
+    {
+      "case_id": "stale_provenance",
+      "description": "stale candidate remains blocked or invalid",
+      "provenance": {
+        "fixture": "phase_21_1_candidate_provenance_acceptance_cases",
+        "lineage_seed": "phase21-stale"
+      },
+      "freshness": "stale",
+      "expected": "blocked"
+    },
+    {
+      "case_id": "replayed_provenance",
+      "description": "replayed candidate remains blocked or invalid",
+      "provenance": {
+        "fixture": "phase_21_1_candidate_provenance_acceptance_cases",
+        "lineage_seed": "phase21-replayed"
+      },
+      "replay_status": "replayed",
+      "expected": "blocked"
+    }
+  ]
+}
