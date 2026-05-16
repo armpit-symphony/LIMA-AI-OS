@@ -526,6 +526,8 @@ Phase 26.1 reviews Phase 25 cross-API candidate invariant coverage across constr
 
 Phase 26.2 records remaining cross-API candidate invariant gaps as planning inputs only. It changes no runtime code.
 
+Phase 26.3 recommends Phase 27 as a docs/tests/fixtures-only preservation and roadmap decision lane to pause and preserve the current runtime/test state. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

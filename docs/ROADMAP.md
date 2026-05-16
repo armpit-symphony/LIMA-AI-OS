@@ -6838,6 +6838,32 @@ Status:
 - complete
 - tagged as `phase-26.2-remaining-cross-api-gap-review`
 
+## Phase 26.3 - Next-Lane Decision Matrix
+
+Goal:
+
+Evaluate Phase 27 options and recommend exactly one next direction.
+
+Deliverables:
+
+- `docs/PHASE_26_3_NEXT_LANE_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_26_3_next_lane_decision_matrix.json`
+- `tests/test_phase_26_3_next_lane_decision_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- all recommended Phase 27 options are evaluated
+- exactly one Phase 27 direction is recommended
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-26.3-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
