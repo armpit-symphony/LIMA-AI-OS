@@ -266,27 +266,29 @@ Phase 21.2 Candidate Provenance Hardening Runtime Implementation is complete on 
 
 Phase 21.3 Candidate Provenance Regression Review is complete on branch `phase-21-3-candidate-provenance-regression-review` pending merge. It reviews the Phase 21.2 runtime slice using docs, fixtures, and tests only, with no runtime changes.
 
+Phase 21.4 Runtime Slice Readiness Review is complete on branch `phase-21-4-runtime-slice-readiness-review` pending merge. It finds the Phase 21 candidate provenance hardening slice ready for archive closeout and keeps Phase 22 gated.
+
 Latest completed phase merge:
 
-`4e10f2f5d529783cbf9494852711af60a599495f`
+`PENDING_PHASE_21_4_MERGE`
 
 Latest tag:
 
-`phase-21.3-candidate-provenance-regression-review`
+`phase-21.4-runtime-slice-readiness-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Phase 21.4 must be a readiness review of the Phase 21 runtime slice unless a later explicit approval changes scope. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Phase 21.5 must archive the Phase 21 runtime slice and stop before Phase 22. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-21-4-runtime-slice-readiness-review
+phase-21-5-phase-21-runtime-slice-audit-archive-closeout
 
 Latest completed merge:
 
-`4e10f2f5d529783cbf9494852711af60a599495f`
+`PENDING_PHASE_21_4_MERGE`
 
 Recommended PR target:
 
@@ -296,7 +298,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 21.4 - Runtime Slice Readiness Review.
+Phase 21.5 - Phase 21 Runtime Slice Audit Archive / Closeout.
 
 Phase 21 approval question:
 

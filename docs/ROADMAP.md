@@ -6164,6 +6164,32 @@ Status:
 - complete
 - tagged as `phase-21.3-candidate-provenance-regression-review`
 
+## Phase 21.4 - Runtime Slice Readiness Review
+
+Goal:
+
+Confirm the Phase 21 candidate provenance hardening runtime slice is ready for archive closeout.
+
+Deliverables:
+
+- `docs/PHASE_21_4_RUNTIME_SLICE_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_21_4_runtime_slice_readiness_review.json`
+- `tests/test_phase_21_4_runtime_slice_readiness_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- Phase 21.0 through Phase 21.3 are reviewed as complete
+- candidate provenance hardening remains limited to the approved runtime files
+- valid provenance remains preserved
+- malformed or suspicious provenance fails closed
+- Phase 22 remains gated and requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-21.4-runtime-slice-readiness-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

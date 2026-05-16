@@ -472,6 +472,8 @@ Phase 21.2 implements the narrow candidate provenance hardening slice inside `li
 
 Phase 21.3 reviews the candidate provenance hardening slice as regression-only docs/tests/fixtures work. It adds no runtime changes and preserves the Phase 21.2 boundaries.
 
+Phase 21.4 marks the candidate provenance hardening runtime slice ready for archive closeout. It adds no runtime changes and keeps Phase 22 gated.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
