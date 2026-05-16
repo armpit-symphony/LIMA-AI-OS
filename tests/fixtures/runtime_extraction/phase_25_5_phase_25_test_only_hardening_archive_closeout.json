@@ -1,0 +1,47 @@
+{
+  "phase": "25.5",
+  "status": "phase_25_test_only_hardening_archive_closeout",
+  "runtime_code_modified": false,
+  "archived_phases": [
+    "25.0",
+    "25.1",
+    "25.2",
+    "25.3",
+    "25.4"
+  ],
+  "archive_results": {
+    "phase_25_remained_test_only": true,
+    "runtime_files_changed": false,
+    "tests_support_changed": false,
+    "cross_api_candidate_invariant_matrix_added": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "coverage_archived": [
+    "candidate_construction_non_executing",
+    "status_normalization_non_executing",
+    "candidate_validation_non_executing",
+    "valid_provenance_preserved",
+    "unknown_status_blocked",
+    "suspicious_provenance_invalid_or_blocked",
+    "stale_replayed_candidates_invalid_or_blocked",
+    "bypass_wording_not_approved",
+    "risky_action_categories_need_review"
+  ],
+  "recommended_phase_26_direction": "docs_tests_fixtures_only_audit_archive_and_next_lane_decision",
+  "phase_26_approval_question": "Do you approve Phase 26 as a docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 25 cross-API candidate invariant hardening package, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_26_requires_explicit_approval": true
+  }
+}

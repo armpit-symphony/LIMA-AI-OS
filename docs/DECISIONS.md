@@ -4450,6 +4450,25 @@ Consequences:
 - Phase 25.5 may archive Phase 25 only.
 - Phase 26 requires explicit approval.
 
+## ADR-0237: Phase 25 Is Archived As Test-Only Cross-API Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 25.5 archives Phase 25 as a completed test-only hardening lane for cross-API candidate invariants.
+
+Rationale:
+
+Phase 25 added deterministic offline protection for existing candidate-facing APIs without modifying runtime code or support helpers.
+
+Consequences:
+
+- Phase 25.5 changes no runtime files.
+- Phase 25.5 changes no `tests/support/` files.
+- Phase 5 HumanInput runtime bridge remains gated.
+- Phase 26 should be docs/tests/fixtures-only audit/archive and next-lane decision if explicitly approved.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
