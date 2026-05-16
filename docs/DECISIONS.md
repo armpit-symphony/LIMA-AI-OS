@@ -4167,6 +4167,24 @@ Consequences:
 - `lima/` and `tests/support/` remain unchanged.
 - Phase 23.1 may add candidate provenance regression tests only.
 
+## ADR-0222: Candidate Provenance Regression Tests Are Hardened
+
+Status: Accepted
+
+Decision:
+
+Phase 23.1 adds test-only regression coverage for candidate provenance behavior.
+
+Rationale:
+
+The Phase 23 charter calls for deterministic tests around valid, missing, malformed, stale, and replayed provenance behavior before any future runtime expansion.
+
+Consequences:
+
+- Phase 23.1 changes no runtime files.
+- `lima/` and `tests/support/` remain unchanged.
+- Phase 23.2 may add suspicious provenance fixtures only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

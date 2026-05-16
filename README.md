@@ -488,6 +488,8 @@ Phase 22.4 closes the Phase 22 no-code decision lane and preserves the exact Pha
 
 Phase 23.0 opens the approved test-only hardening lane for provenance and candidate invariants. It adds no runtime behavior and keeps `lima/` and `tests/support/` unchanged.
 
+Phase 23.1 adds deterministic candidate provenance regression tests for valid, missing, malformed, stale, and replayed provenance behavior. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

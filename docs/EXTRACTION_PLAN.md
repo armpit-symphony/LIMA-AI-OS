@@ -6040,6 +6040,34 @@ Phase 23 is constrained to deterministic offline tests and fixtures around exist
 
 Continue only to Phase 23.1 candidate provenance regression tests.
 
+## Phase 23.1 Gate: Candidate Provenance Regression Tests
+
+Phase 23.1 adds deterministic regression tests for existing candidate provenance APIs.
+
+Allowed:
+
+- Phase 23.1 tests
+- Phase 23.1 fixture metadata
+- Phase 23.1 documentation
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Valid provenance is preserved, missing or malformed provenance fails closed, and stale or replayed candidates remain blocked or invalid.
+
+Continue only to Phase 23.2 suspicious provenance fixture hardening.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
