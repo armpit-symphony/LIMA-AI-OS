@@ -282,27 +282,29 @@ Phase 22.4 Phase 22 Decision Gate / Closeout is complete on branch `phase-22-4-p
 
 Phase 23.0 Provenance Invariant Test Hardening Charter is complete on branch `phase-23-0-provenance-invariant-test-hardening-charter` pending merge. It opens the approved test-only hardening lane for provenance and candidate invariants without runtime changes.
 
+Phase 23.1 Candidate Provenance Regression Tests is complete on branch `phase-23-1-candidate-provenance-regression-tests` pending merge. It adds deterministic tests for valid, missing, malformed, stale, and replayed provenance behavior without runtime changes.
+
 Latest completed phase merge:
 
-`ac6e2c9ec9b54f3dc3cf6b9bbf5b5004a565ee98`
+`PENDING_PHASE_23_1_MERGE`
 
 Latest tag:
 
-`phase-23.0-provenance-invariant-test-hardening-charter`
+`phase-23.1-candidate-provenance-regression-tests`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 23 test-only hardening lane. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 23 test-only hardening lane. Phase 23.2 may add suspicious provenance fixtures only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-23-1-candidate-provenance-regression-tests
+phase-23-2-suspicious-provenance-fixture-hardening
 
 Latest completed merge:
 
-`ac6e2c9ec9b54f3dc3cf6b9bbf5b5004a565ee98`
+`PENDING_PHASE_23_1_MERGE`
 
 Recommended PR target:
 
@@ -312,7 +314,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 23.1 - Candidate Provenance Regression Tests.
+Phase 23.2 - Suspicious Provenance Fixture Hardening.
 
 Phase 21 approval question:
 

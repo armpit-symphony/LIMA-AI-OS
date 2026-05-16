@@ -1,0 +1,27 @@
+{
+  "phase": "23.1",
+  "status": "candidate_provenance_regression_tests",
+  "runtime_code_modified": false,
+  "coverage": [
+    "valid_provenance_preserved",
+    "missing_provenance_rejected_or_invalid",
+    "malformed_provenance_rejected_or_invalid",
+    "stale_candidate_blocked_or_invalid",
+    "replayed_candidate_blocked_or_invalid",
+    "non_executing_invariants_preserved",
+    "phase_5_runtime_bridge_remains_gated"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false
+  }
+}

@@ -6361,6 +6361,31 @@ Status:
 - complete
 - tagged as `phase-23.0-provenance-invariant-test-hardening-charter`
 
+## Phase 23.1 - Candidate Provenance Regression Tests
+
+Goal:
+
+Add deterministic regression tests for existing candidate provenance behavior.
+
+Deliverables:
+
+- `docs/PHASE_23_1_CANDIDATE_PROVENANCE_REGRESSION_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_23_1_candidate_provenance_regression_tests.json`
+- `tests/test_phase_23_1_candidate_provenance_regression_tests.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- valid provenance is preserved
+- missing or malformed provenance fails closed
+- stale and replayed candidates remain blocked or invalid
+- non-executing invariants remain preserved
+
+Status:
+
+- complete
+- tagged as `phase-23.1-candidate-provenance-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
