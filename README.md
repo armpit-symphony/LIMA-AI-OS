@@ -588,6 +588,8 @@ Phase 32.2 compares next-slice safety and scope and confirms that no immediate P
 
 Phase 32.3 defines the Phase 33 eligibility and test plan matrix, preserving an exact test-only hardening approval question for Phil.
 
+Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review and stops at the Phase 33 test-only hardening approval gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0272: Phase 32 Archives At A Test-Only Phase 33 Hardening Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 32.4 archives Phase 32 as a completed no-code design review and stops at a Phase 33 test-only hardening approval gate.
+
+Context:
+
+Phase 32 compared runtime and planning options after the completed Phase 30 read-only `runtime_state` slice and found that immediate runtime implementation is not the safest next step.
+
+Consequences:
+
+- Phase 33 should not begin without explicit Phil approval.
+- The recommended Phase 33 lane is test-only hardening for nested suspicious metadata fixtures.
+- Recommended Phase 33 implementation file scope is empty.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0271: Phase 33 Eligibility Is Test-Only Runtime State Hardening
 
 Status: Accepted
