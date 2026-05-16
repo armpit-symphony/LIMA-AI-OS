@@ -4241,6 +4241,25 @@ Consequences:
 - Phase 23.5 may archive Phase 23 only.
 - Phase 24 remains gated.
 
+## ADR-0226: Phase 23 Is Archived As Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 23.5 archives Phase 23 as a completed test-only hardening lane for provenance and candidate invariants.
+
+Rationale:
+
+Phase 23 added deterministic tests and fixtures around existing non-executing candidate APIs without changing runtime code or integration boundaries.
+
+Consequences:
+
+- Phase 23.5 changes no runtime files.
+- Phase 23.5 changes no `tests/support/` files.
+- Phase 5 HumanInput runtime bridge remains gated.
+- Phase 24 should be a docs/tests/fixtures-only audit/archive and next-lane decision phase if explicitly approved.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

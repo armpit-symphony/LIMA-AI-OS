@@ -6462,6 +6462,31 @@ Status:
 - complete
 - tagged as `phase-23.4-provenance-hardening-readiness-review`
 
+## Phase 23.5 - Phase 23 Test-Only Hardening Archive / Closeout
+
+Goal:
+
+Archive Phase 23 as a completed test-only hardening lane.
+
+Deliverables:
+
+- `docs/PHASE_23_5_PHASE_23_TEST_ONLY_HARDENING_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_23_5_phase_23_test_only_hardening_archive_closeout.json`
+- `tests/test_phase_23_5_phase_23_test_only_hardening_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 23.0 through Phase 23.4 are archived
+- Phase 5 runtime bridge remains gated
+- Phase 24 requires explicit approval
+
+Status:
+
+- complete on branch `phase-23-5-phase-23-test-only-hardening-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

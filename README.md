@@ -496,6 +496,8 @@ Phase 23.3 adds explicit bypass-wording provenance tests covering Phil, operator
 
 Phase 23.4 reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout. It changes no runtime code.
 
+Phase 23.5 archives Phase 23 as a completed test-only hardening lane and preserves Phase 24 as a docs/tests/fixtures-only next-lane decision gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
