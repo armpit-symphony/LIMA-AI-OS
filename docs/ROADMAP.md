@@ -6613,6 +6613,30 @@ Status:
 - complete
 - tagged as `phase-24.4-phase-24-hardening-audit-archive-closeout`
 
+## Phase 25.0 - Cross-API Candidate Invariant Matrix Charter
+
+Goal:
+
+Open a test-only hardening lane for a cross-API candidate invariant matrix.
+
+Deliverables:
+
+- `docs/PHASE_25_0_CROSS_API_CANDIDATE_INVARIANT_MATRIX_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_25_0_cross_api_candidate_invariant_matrix_charter.json`
+- `tests/test_phase_25_0_cross_api_candidate_invariant_matrix_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- cross-API matrix APIs and invariants are declared
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-25-0-cross-api-candidate-invariant-matrix-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

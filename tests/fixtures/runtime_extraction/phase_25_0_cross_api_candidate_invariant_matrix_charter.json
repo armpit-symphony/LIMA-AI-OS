@@ -1,0 +1,36 @@
+{
+  "phase": "25.0",
+  "status": "cross_api_candidate_invariant_matrix_charter",
+  "runtime_code_modified": false,
+  "scope": "test_docs_fixtures_only",
+  "matrix_apis": [
+    "build_intake_candidate",
+    "normalize_candidate_status",
+    "validate_candidate",
+    "provenance_hardening_behavior"
+  ],
+  "matrix_invariants": [
+    "execution_allowed_remains_false",
+    "side_effects_allowed_remains_false",
+    "approval_state_never_approved",
+    "provenance_preserved_or_safely_rejected",
+    "malformed_input_safe",
+    "unknown_status_safe",
+    "suspicious_provenance_safe",
+    "bypass_wording_does_not_change_safety"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
