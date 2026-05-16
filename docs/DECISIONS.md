@@ -4412,6 +4412,25 @@ Consequences:
 - Phase 25.3 may add provenance and status invariant tests only.
 - Runtime expansion remains blocked.
 
+## ADR-0235: Cross-API Provenance And Status Invariants Are Hardened
+
+Status: Accepted
+
+Decision:
+
+Phase 25.3 adds deterministic tests for provenance and status invariants across existing candidate-facing APIs.
+
+Rationale:
+
+The candidate matrix must prove that provenance and status handling remain safe across valid, suspicious, stale, replayed, unknown, malformed, risky, and bypass-wording cases.
+
+Consequences:
+
+- Phase 25.3 changes no runtime files.
+- Phase 25.3 changes no `tests/support/` files.
+- Phase 25.4 may perform a cross-API boundary readiness review only.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
