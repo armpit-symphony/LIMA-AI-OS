@@ -288,7 +288,7 @@ Phase 23.2 Suspicious Provenance Fixture Hardening is complete on branch `phase-
 
 Phase 23.3 Bypass-Wording Provenance Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving Phil/operator/admin/trusted/urgent/override/approve/emergency wording does not bypass non-executing candidate safety.
 
-Phase 23.4 Provenance Hardening Readiness Review is complete on branch `phase-23-4-provenance-hardening-readiness-review` pending merge. It reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout without runtime changes.
+Phase 23.4 Provenance Hardening Readiness Review is complete, merged to `main`, and tagged. It reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout without runtime changes.
 
 Latest completed phase merge:
 

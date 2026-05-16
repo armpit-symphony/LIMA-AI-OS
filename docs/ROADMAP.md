@@ -6459,7 +6459,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-23-4-provenance-hardening-readiness-review`
+- complete
+- tagged as `phase-23.4-provenance-hardening-readiness-review`
 
 Reserved from Phase 3.4:
 
