@@ -7253,6 +7253,35 @@ Forbidden:
 
 Continue only to Phase 31.3 Phase 32 next-lane decision matrix.
 
+## Phase 31.3 Gate: Phase 32 Next-Lane Decision Matrix
+
+Phase 31.3 evaluates Phase 32 options and recommends the safest next lane after the Phase 30 runtime slice audit.
+
+Allowed:
+
+- Phase 31.3 tests
+- Phase 31.3 fixture metadata
+- Phase 31.3 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 31.4 Phase 31 runtime slice audit archive / closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

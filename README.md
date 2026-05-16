@@ -576,6 +576,8 @@ Phase 31.1 records evidence that the Phase 30 runtime state inspection slice rem
 
 Phase 31.2 reviews Phase 30 regression coverage and remaining gaps, finding no blocking safety regression and recommending Phase 32 not default to implementation. It changes no runtime code.
 
+Phase 31.3 recommends Phase 32 as a docs/tests/fixtures-only design review for the next narrow runtime slice, not runtime implementation. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
