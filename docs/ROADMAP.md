@@ -7595,6 +7595,32 @@ Status:
 - complete
 - tagged as `phase-32.2-next-slice-safety-and-scope-comparison`
 
+## Phase 32.3 - Phase 33 Eligibility And Test Plan Matrix
+
+Goal:
+
+- Define eligibility criteria for the recommended Phase 33 lane.
+- Define required test-only evidence before Phase 33 can proceed.
+- Preserve the exact Phase 33 approval question.
+
+Result:
+
+- Phase 33 is recommended as test-only `runtime_state` hardening.
+- Recommended Phase 33 implementation file scope is empty.
+- Phase 33 must add nested suspicious metadata fixtures and regression tests only.
+
+Acceptance criteria:
+
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- exact approval question preserved
+
+Status:
+
+- complete
+- tagged as `phase-32.3-phase-33-eligibility-and-test-plan-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

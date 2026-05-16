@@ -1,0 +1,48 @@
+{
+  "phase": "32.3",
+  "status": "phase_33_eligibility_and_test_plan_matrix",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "recommended_phase_33_direction": "runtime_state_test_only_hardening",
+  "recommended_phase_33_implementation_file_scope": [],
+  "phase_33_allowed_paths": [
+    "docs/PHASE_33_*.md",
+    "tests/fixtures/runtime_extraction/phase_33_*.json",
+    "tests/test_phase_33_*.py",
+    "README.md and roadmap/state docs only if required by repository convention"
+  ],
+  "phase_33_forbidden_scope": [
+    "lima/**",
+    "tests/support/**",
+    "runtime_implementation",
+    "helper_behavior_changes",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "shell_browser_network_file_mutation",
+    "robotics_physical_world_action",
+    "external_service_calls",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "phase_33_required_tests": [
+    "nested_suspicious_metadata_remains_non_authoritative",
+    "nested_suspicious_metadata_cannot_enable_execution",
+    "nested_suspicious_metadata_cannot_enable_side_effects",
+    "bypass_wording_does_not_change_safety_outcome",
+    "missing_malformed_unknown_suspicious_and_bypass_worded_input_remains_safe",
+    "runtime_state_remains_deterministic_local_only_read_only_non_authoritative_non_executing_side_effect_free",
+    "phase_5_humaninput_runtime_bridge_remains_gated",
+    "sparkbot_wiring_imports_remain_absent",
+    "live_adapters_remain_absent",
+    "execution_approval_dispatch_audit_persistence_remain_absent",
+    "shell_browser_network_file_robotics_physical_world_behavior_remains_absent",
+    "no_lima_files_changed",
+    "no_tests_support_files_changed"
+  ],
+  "approval_question": "Do you approve Phase 33 as a test-only hardening lane for the existing read-only runtime_state inspection slice, limited to docs/tests/fixtures under Phase 33 plus roadmap/state metadata, adding nested suspicious metadata fixtures and regression tests only, with no runtime implementation, no new `lima/` changes, no `tests/support/` changes, no Sparkbot wiring, no HumanInput runtime bridge behavior, no live adapters, no IntentCompiler runtime behavior, no GuardianDecision runtime behavior, no approval enforcement, no execution, no dispatch, no audit persistence, no shell/browser/network/file mutation, no robotics, no physical-world action, no external service calls, no background workers, no queues, no daemons, no subprocesses, no threads, no database writes, and no hidden side effects?",
+  "next_phase": "32.4"
+}

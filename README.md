@@ -586,6 +586,8 @@ Phase 32.1 inventories candidate next lanes and recommends Phase 33 as test-only
 
 Phase 32.2 compares next-slice safety and scope and confirms that no immediate Phase 33 runtime implementation is recommended.
 
+Phase 32.3 defines the Phase 33 eligibility and test plan matrix, preserving an exact test-only hardening approval question for Phil.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
