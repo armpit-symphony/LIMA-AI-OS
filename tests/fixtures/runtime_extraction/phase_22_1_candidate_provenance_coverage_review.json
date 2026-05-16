@@ -1,0 +1,36 @@
+{
+  "phase": "22.1",
+  "status": "candidate_provenance_coverage_review",
+  "runtime_code_modified": false,
+  "covered_areas": [
+    "exact_approved_runtime_file_scope",
+    "valid_provenance_preservation",
+    "malformed_provenance_rejection_or_invalidation",
+    "suspicious_authority_wording_blocked_or_invalid",
+    "non_executing_candidate_invariants",
+    "stale_replayed_candidates_blocked_or_invalid",
+    "no_sparkbot_wiring",
+    "no_humaninput_runtime_bridge",
+    "no_live_adapter",
+    "no_approval_execution_dispatch_audit_persistence"
+  ],
+  "coverage_limits": [
+    "broader_nested_provenance_fixture_cases",
+    "authority_wording_inside_lists_and_nested_mappings",
+    "side_by_side_construction_normalization_validation_matrix",
+    "static_guardrails_for_future_runtime_expansion"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

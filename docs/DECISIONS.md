@@ -4077,6 +4077,24 @@ Consequences:
 - Phase 23 remains gated and requires explicit Phil approval.
 - `lima/`, `tests/support/`, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, and physical-world behavior remain blocked.
 
+## ADR-0217: Phase 22 Coverage Review Finds Test-Only Hardening Opportunities
+
+Status: Accepted
+
+Decision:
+
+Phase 22.1 records that existing candidate provenance coverage is strong, while remaining gaps are best addressed by test-only hardening.
+
+Rationale:
+
+The current runtime slice is narrow and stable. Remaining needs focus on broader fixtures, static guardrails, and matrix coverage rather than new runtime behavior.
+
+Consequences:
+
+- Phase 22.1 changes no runtime files.
+- Phase 22.2 should evaluate whether the remaining gaps justify a test-only Phase 23 lane.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

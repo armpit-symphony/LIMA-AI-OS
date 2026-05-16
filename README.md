@@ -478,6 +478,8 @@ Phase 21.5 archives Phase 21 as a completed narrow runtime slice. The only runti
 
 Phase 22.0 opens the approved docs/tests/fixtures-only no-code decision lane after Phase 21. It audits the provenance hardening slice and lists possible Phase 23 directions without implementing anything.
 
+Phase 22.1 reviews candidate provenance coverage and identifies test-only gaps for nested provenance and static guardrails. It adds no runtime behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
