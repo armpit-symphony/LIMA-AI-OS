@@ -6139,6 +6139,31 @@ Status:
 - complete
 - tagged as `phase-21.2-candidate-provenance-hardening-runtime-implementation`
 
+## Phase 21.3 - Candidate Provenance Regression Review
+
+Goal:
+
+Review the Phase 21.2 provenance hardening runtime slice for regression coverage.
+
+Deliverables:
+
+- `docs/PHASE_21_3_CANDIDATE_PROVENANCE_REGRESSION_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_21_3_candidate_provenance_regression_review.json`
+- `tests/test_phase_21_3_candidate_provenance_regression_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- valid provenance remains preserved
+- malformed provenance fails closed
+- suspicious provenance authority claims remain blocked or invalid
+- execution, approval enforcement, dispatch, audit persistence, Sparkbot wiring, HumanInput bridge behavior, live adapters, and physical-world behavior remain absent
+
+Status:
+
+- complete
+- tagged as `phase-21.3-candidate-provenance-regression-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

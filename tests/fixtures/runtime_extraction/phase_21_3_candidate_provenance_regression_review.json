@@ -1,0 +1,26 @@
+{
+  "phase": "21.3",
+  "status": "candidate_provenance_regression_review",
+  "runtime_code_modified": false,
+  "reviewed_runtime_slice": "phase_21_2_candidate_provenance_hardening_runtime_implementation",
+  "regression_findings": {
+    "valid_provenance_preserved": true,
+    "malformed_provenance_invalid": true,
+    "suspicious_provenance_blocked": true,
+    "non_executing_invariants_preserved": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "boundary_results": {
+    "lima_modified_by_phase_21_3": false,
+    "tests_support_modified": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
