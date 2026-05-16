@@ -6447,6 +6447,33 @@ Blocked:
 
 Continue only to Phase 25.5 archive/closeout.
 
+## Phase 25.5 Gate: Phase 25 Test-Only Hardening Archive / Closeout
+
+Phase 25.5 archives Phase 25 as a completed test-only cross-API candidate invariant hardening lane.
+
+Allowed:
+
+- Phase 25.5 tests
+- Phase 25.5 fixture metadata
+- Phase 25.5 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 25.5. Phase 26 requires explicit approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

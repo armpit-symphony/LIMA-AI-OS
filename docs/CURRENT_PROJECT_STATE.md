@@ -312,6 +312,8 @@ Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete, merged t
 
 Phase 25.4 Cross-API Boundary Readiness Review is complete, merged to `main`, and tagged. It reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout without runtime changes.
 
+Phase 25.5 Phase 25 Test-Only Hardening Archive / Closeout is complete on branch `phase-25-5-phase-25-test-only-hardening-archive-closeout` pending merge. It archives Phase 25 and preserves Phase 26 as a gated docs/tests/fixtures-only audit/archive decision lane.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -324,7 +326,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 25 test-only hardening lane. Phase 25.5 may archive Phase 25 only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Stop after Phase 25.5. Phase 26 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -342,7 +344,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 25.5 - Phase 25 Test-Only Hardening Archive / Closeout.
+Phase 26 - docs/tests/fixtures-only audit/archive and next-lane decision, if explicitly approved.
 
 Phase 21 approval question:
 

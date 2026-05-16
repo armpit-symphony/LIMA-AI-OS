@@ -6738,6 +6738,30 @@ Status:
 - complete
 - tagged as `phase-25.4-cross-api-boundary-readiness-review`
 
+## Phase 25.5 - Phase 25 Test-Only Hardening Archive / Closeout
+
+Goal:
+
+Archive Phase 25 as a completed test-only cross-API candidate invariant hardening lane.
+
+Deliverables:
+
+- `docs/PHASE_25_5_PHASE_25_TEST_ONLY_HARDENING_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_25_5_phase_25_test_only_hardening_archive_closeout.json`
+- `tests/test_phase_25_5_phase_25_test_only_hardening_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 25.0 through Phase 25.4 are archived
+- Phase 26 requires explicit approval
+
+Status:
+
+- complete on branch `phase-25-5-phase-25-test-only-hardening-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
