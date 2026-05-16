@@ -4894,6 +4894,25 @@ Consequences:
 - Phase 31 forbids new `lima/` changes, including `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py`.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0264: Phase 30 Runtime State Boundary Evidence Is Preserved
+
+Status: Accepted
+
+Decision:
+
+Phase 31.1 records evidence that the Phase 30 runtime state inspection slice remains deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free.
+
+Context:
+
+Phase 31 must audit the first runtime state inspection primitive without adding more runtime behavior.
+
+Consequences:
+
+- Phase 31.1 changes no runtime files.
+- Phase 31.1 changes no `tests/support/` files.
+- Runtime state boundary evidence is preserved as docs/tests/fixtures only.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted

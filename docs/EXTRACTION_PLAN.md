@@ -7195,6 +7195,35 @@ Forbidden:
 
 Continue only to Phase 31.1 read-only runtime state boundary evidence review.
 
+## Phase 31.1 Gate: Read-Only Runtime State Boundary Evidence Review
+
+Phase 31.1 records evidence that the completed Phase 30 runtime state inspection slice remains inside the approved read-only boundary.
+
+Allowed:
+
+- Phase 31.1 tests
+- Phase 31.1 fixture metadata
+- Phase 31.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 31.2 runtime slice regression and gap review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
