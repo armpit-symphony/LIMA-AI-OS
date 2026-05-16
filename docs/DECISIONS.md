@@ -4603,6 +4603,25 @@ Consequences:
 - Runtime behavior remains unchanged.
 - Future expansion still requires explicit Phil approval.
 
+## ADR-0245: Runtime And Integration Boundaries Remain Gated
+
+Status: Accepted
+
+Decision:
+
+Phase 27.2 records that runtime, Sparkbot, HumanInput bridge, live adapter, Robo-OS, execution, dispatch, persistence, and physical-world boundaries remain gated.
+
+Context:
+
+The preservation lane needs an explicit boundary review before selecting the next Phase 28 direction.
+
+Consequences:
+
+- Phase 27.2 changes no runtime files.
+- Phase 27.2 changes no `tests/support/` files.
+- Runtime behavior remains unchanged.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
