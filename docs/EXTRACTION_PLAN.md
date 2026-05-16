@@ -5872,6 +5872,34 @@ Phase 21 is archived as complete. The only runtime files touched by the lane wer
 
 Stop before Phase 22.
 
+## Phase 22.0 Gate: Post-Phase-21 Runtime Slice Audit Charter
+
+Phase 22.0 opens a no-code decision lane after auditing Phase 21.
+
+Allowed:
+
+- audit charter documentation
+- static audit fixture metadata
+- static audit tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 21 audit passes with the approved narrow-runtime-slice scope. Phase 22 may compare next-lane options without implementation.
+
+Continue only to Phase 22.1 candidate provenance coverage review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

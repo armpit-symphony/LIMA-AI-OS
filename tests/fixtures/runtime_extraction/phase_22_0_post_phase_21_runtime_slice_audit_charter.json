@@ -1,0 +1,39 @@
+{
+  "phase": "22.0",
+  "status": "post_phase_21_runtime_slice_audit_charter",
+  "runtime_code_modified": false,
+  "phase_21_audit_result": "pass_with_approved_narrow_runtime_slice",
+  "phase_21_runtime_files_touched": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "phase_21_runtime_files_not_touched": [
+    "lima/kernel/__init__.py",
+    "all_other_lima_files",
+    "tests/support"
+  ],
+  "phase_22_options": [
+    "no_code_design_for_another_narrow_runtime_slice",
+    "test_only_hardening_for_provenance_candidate_invariants",
+    "sparkbot_integration_boundary_planning",
+    "robo_os_physical_world_boundary_planning",
+    "pause_and_preserve_current_runtime_state"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "phase_23_gate": {
+    "requires_explicit_phil_approval": true
+  }
+}

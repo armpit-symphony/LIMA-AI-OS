@@ -476,6 +476,8 @@ Phase 21.4 marks the candidate provenance hardening runtime slice ready for arch
 
 Phase 21.5 archives Phase 21 as a completed narrow runtime slice. The only runtime files touched by the lane were `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`; Phase 22 remains gated.
 
+Phase 22.0 opens the approved docs/tests/fixtures-only no-code decision lane after Phase 21. It audits the provenance hardening slice and lists possible Phase 23 directions without implementing anything.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
