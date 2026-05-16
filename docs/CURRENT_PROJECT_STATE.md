@@ -388,6 +388,8 @@ Phase 33.0 Phase 32 Test-Only Hardening Audit Charter is complete, merged to `ma
 
 Phase 33.1 Nested Suspicious Metadata Fixture Design is complete, merged to `main`, and tagged. It adds synthetic caller-provided nested metadata fixtures for `runtime_state` hardening without changing runtime code.
 
+Phase 33.2 Runtime State Nested Metadata Regression Tests is complete, merged to `main`, and tagged. It adds regression tests proving nested suspicious metadata remains safe under the existing `inspect_runtime_state` API without runtime code changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

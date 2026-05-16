@@ -1,0 +1,24 @@
+{
+  "phase": "33.2",
+  "status": "runtime_state_nested_metadata_regression_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed": [],
+  "tests_support_changed": false,
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_33_1_nested_suspicious_metadata_cases.json",
+  "regression_coverage": [
+    "nested_suspicious_metadata_does_not_enable_execution",
+    "nested_suspicious_metadata_does_not_enable_side_effects",
+    "nested_bypass_wording_does_not_enable_approval",
+    "bridge_adapter_and_sparkbot_claims_remain_inert",
+    "shell_browser_network_file_mutation_claims_remain_inert",
+    "robotics_physical_world_claims_remain_inert",
+    "external_service_and_background_work_claims_remain_inert",
+    "malformed_nested_metadata_remains_safe",
+    "unknown_nested_values_remain_safe",
+    "inspection_is_deterministic_and_non_mutating",
+    "phase_5_humaninput_runtime_bridge_remains_gated"
+  ],
+  "runtime_state_gap_found": false,
+  "next_phase": "33.3"
+}

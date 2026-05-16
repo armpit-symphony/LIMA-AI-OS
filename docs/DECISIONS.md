@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0275: Phase 33 Nested Metadata Regression Found No Runtime Gap
+
+Status: Accepted
+
+Decision:
+
+Phase 33.2 adds regression tests against the existing `inspect_runtime_state` API and records that no runtime_state gap requiring runtime code changes was found.
+
+Context:
+
+The Phase 33.1 fixtures model nested suspicious metadata, bridge claims, adapter claims, Sparkbot claims, external action claims, malformed metadata, and unknown nested values.
+
+Consequences:
+
+- Runtime behavior remains unchanged.
+- `lima/` and `tests/support/` remain untouched.
+- Phase 34 should default to docs/tests/fixtures-only audit/archive unless later Phase 33 evidence creates a concrete gap.
+
 ## ADR-0274: Phase 33 Uses Synthetic Nested Metadata Fixtures Only
 
 Status: Accepted

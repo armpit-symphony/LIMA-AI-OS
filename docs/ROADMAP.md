@@ -7685,6 +7685,25 @@ Status:
 - complete
 - tagged as `phase-33.1-nested-suspicious-metadata-fixture-design`
 
+## Phase 33.2 - Runtime State Nested Metadata Regression Tests
+
+Goal:
+
+- Use Phase 33.1 fixtures against the existing `inspect_runtime_state` API.
+- Prove nested suspicious metadata cannot enable execution, side effects, approval, dispatch, persistence, bridge behavior, adapter behavior, Sparkbot wiring, external calls, robotics, or physical-world behavior.
+- Confirm the API remains deterministic and does not mutate caller input.
+
+Result:
+
+- Nested suspicious metadata regression coverage added.
+- No concrete runtime_state gap was found.
+- Runtime behavior is unchanged.
+
+Status:
+
+- complete
+- tagged as `phase-33.2-runtime-state-nested-metadata-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
