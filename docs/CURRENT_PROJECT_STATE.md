@@ -302,7 +302,7 @@ Phase 24.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. 
 
 Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 24 and preserves Phase 25 as a gated test-only hardening lane.
 
-Phase 25.0 Cross-API Candidate Invariant Matrix Charter is complete on branch `phase-25-0-cross-api-candidate-invariant-matrix-charter` pending merge. It opens the approved test-only hardening lane without runtime changes.
+Phase 25.0 Cross-API Candidate Invariant Matrix Charter is complete, merged to `main`, and tagged. It opens the approved test-only hardening lane without runtime changes.
 
 Latest completed phase merge:
 

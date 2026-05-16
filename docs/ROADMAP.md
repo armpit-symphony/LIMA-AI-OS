@@ -6635,7 +6635,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-25-0-cross-api-candidate-invariant-matrix-charter`
+- complete
+- tagged as `phase-25.0-cross-api-candidate-invariant-matrix-charter`
 
 Reserved from Phase 3.4:
 
