@@ -6879,6 +6879,33 @@ Forbidden:
 
 Stop after Phase 28.4. Phase 29 requires explicit approval.
 
+## Phase 29.0 Gate: Phase 28 No-Code Design Review Audit Charter
+
+Phase 29.0 opens the approved docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
+
+Allowed:
+
+- Phase 29.0 tests
+- Phase 29.0 fixture metadata
+- Phase 29.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 29.1 narrow runtime slice candidate inventory.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

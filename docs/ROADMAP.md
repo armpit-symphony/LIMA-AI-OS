@@ -7141,6 +7141,31 @@ Status:
 - complete
 - tagged as `phase-28.4-phase-28-preservation-status-archive-closeout`
 
+## Phase 29.0 - Phase 28 No-Code Design Review Audit Charter
+
+Goal:
+
+Open the approved docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_29_0_PHASE_28_NO_CODE_DESIGN_REVIEW_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_29_0_phase_28_no_code_design_review_audit_charter.json`
+- `tests/test_phase_29_0_phase_28_no_code_design_review_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 28.0 through Phase 28.4 are in audit scope
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-29.0-phase-28-no-code-design-review-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

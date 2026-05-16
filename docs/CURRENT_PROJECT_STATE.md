@@ -344,6 +344,8 @@ Phase 28.3 Phase 29 Decision Readiness Matrix is complete, merged to `main`, and
 
 Phase 28.4 Phase 28 Preservation Status Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 28 and preserves Phase 29 as a gated docs/tests/fixtures-only no-code design review.
 
+Phase 29.0 Phase 28 No-Code Design Review Audit Charter is complete, merged to `main`, and tagged. It opens the approved no-code design review lane without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

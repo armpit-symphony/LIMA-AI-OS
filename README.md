@@ -550,6 +550,8 @@ Phase 28.3 recommends Phase 29 as a docs/tests/fixtures-only no-code design revi
 
 Phase 28.4 archives Phase 28 as a completed preservation status review and preserves Phase 29 as an explicit docs/tests/fixtures-only no-code design review gate. It changes no runtime code.
 
+Phase 29.0 opens the approved docs/tests/fixtures-only no-code design review for the next narrow runtime slice. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
