@@ -5942,6 +5942,35 @@ Status:
 - complete
 - tagged as `phase-20.1-next-runtime-slice-options-review`
 
+## Phase 20.2 - Exact File-Touch Map For Candidate Slice
+
+Goal:
+
+Define the exact future file-touch map for the candidate provenance hardening slice.
+
+Deliverables:
+
+- `docs/PHASE_20_2_EXACT_FILE_TOUCH_MAP_FOR_CANDIDATE_SLICE.md`
+- `tests/fixtures/runtime_extraction/phase_20_2_exact_file_touch_map_for_candidate_slice.json`
+- `tests/test_phase_20_2_exact_file_touch_map_for_candidate_slice.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- exact eligible runtime files are listed
+- future forbidden runtime files are listed
+- Phase 5 runtime bridge remains gated
+- Phase 21 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-20.2-exact-file-touch-map-for-candidate-slice`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

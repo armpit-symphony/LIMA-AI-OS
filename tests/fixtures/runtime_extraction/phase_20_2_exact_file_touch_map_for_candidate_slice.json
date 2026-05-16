@@ -1,0 +1,50 @@
+{
+  "phase": "20.2",
+  "status": "exact_file_touch_map_for_candidate_slice",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_20_2_EXACT_FILE_TOUCH_MAP_FOR_CANDIDATE_SLICE.md",
+  "recommended_phase_21_slice": "candidate_provenance_hardening",
+  "future_eligible_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "future_forbidden_runtime_files": [
+    "lima/kernel/__init__.py",
+    "lima/kernel/candidate_provenance.py",
+    "any_other_lima_file",
+    "tests/support",
+    "sparkbot_files",
+    "live_adapter_files",
+    "intentcompiler_files",
+    "guardiandecision_files",
+    "approval_execution_dispatch_audit_persistence_files",
+    "shell_browser_network_file_mutation_robotics_physical_world_files"
+  ],
+  "future_touch_intent": {
+    "lima/kernel/intake_candidate.py": [
+      "define_provenance_shape_requirements_for_candidate_construction",
+      "preserve_non_executing_candidate_guarantees"
+    ],
+    "lima/kernel/candidate_status.py": [
+      "validate_or_normalize_provenance_metadata_for_existing_candidates",
+      "preserve_fail_closed_validation_and_status_normalization"
+    ]
+  },
+  "phase_21_approved": false,
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
