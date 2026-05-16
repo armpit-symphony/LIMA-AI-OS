@@ -290,7 +290,7 @@ Phase 23.3 Bypass-Wording Provenance Tests is complete, merged to `main`, and ta
 
 Phase 23.4 Provenance Hardening Readiness Review is complete, merged to `main`, and tagged. It reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout without runtime changes.
 
-Phase 23.5 Phase 23 Test-Only Hardening Archive / Closeout is complete on branch `phase-23-5-phase-23-test-only-hardening-archive-closeout` pending merge. It archives Phase 23 as test-only hardening and preserves Phase 24 as a docs/tests/fixtures-only next-lane decision gate.
+Phase 23.5 Phase 23 Test-Only Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 23 as test-only hardening and preserves Phase 24 as a docs/tests/fixtures-only next-lane decision gate.
 
 Latest completed phase merge:
 

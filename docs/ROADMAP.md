@@ -6485,7 +6485,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-23-5-phase-23-test-only-hardening-archive-closeout`
+- complete
+- tagged as `phase-23.5-phase-23-test-only-hardening-archive-closeout`
 
 Reserved from Phase 3.4:
 
