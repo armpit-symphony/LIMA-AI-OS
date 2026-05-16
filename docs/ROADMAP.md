@@ -6059,6 +6059,31 @@ Status:
 - complete
 - tagged as `phase-20.5-phase-20-next-runtime-slice-design-lane-audit-archive-closeout`
 
+## Phase 21.0 - Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Goal:
+
+Confirm Phase 21 eligible runtime files before any implementation.
+
+Deliverables:
+
+- `docs/PHASE_21_0_RUNTIME_SLICE_PREFLIGHT_AUDIT_ELIGIBLE_FILE_CONFIRMATION.md`
+- `tests/fixtures/runtime_extraction/phase_21_0_runtime_slice_preflight_audit_eligible_file_confirmation.json`
+- `tests/test_phase_21_0_runtime_slice_preflight_audit_eligible_file_confirmation.py`
+
+Acceptance criteria:
+
+- no runtime implementation yet
+- eligible runtime files are exactly `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain forbidden
+- Phase 5 runtime bridge remains gated
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-21.0-runtime-slice-preflight-audit-eligible-file-confirmation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

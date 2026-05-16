@@ -258,27 +258,29 @@ Phase 20.4 Phase 20 Runtime Slice Approval Gate / Closeout is complete, merged t
 
 Phase 20.5 Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 20.0 through Phase 20.4 as completed no-code design work, preserves the exact Phase 21 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 21.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complete, merged to `main`, and tagged. It confirms Phase 20.2 is unambiguous and that only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` are eligible runtime files for candidate provenance hardening.
+
 Latest completed phase merge:
 
-`7019a86523fd099e78954c0e4019ab37b6b33376`
+`PENDING_PHASE_21_0_MERGE`
 
 Latest tag:
 
-`phase-20.5-phase-20-next-runtime-slice-design-lane-audit-archive-closeout`
+`phase-21.0-runtime-slice-preflight-audit-eligible-file-confirmation`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit Phil decision. Phase 21 is not approved. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Runtime files are limited to `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`; `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-21-0-candidate-provenance-hardening-preflight
+phase-21-1-candidate-provenance-acceptance-test-scaffolding
 
 Latest completed merge:
 
-`7019a86523fd099e78954c0e4019ab37b6b33376`
+`PENDING_PHASE_21_0_MERGE`
 
 Recommended PR target:
 
@@ -288,7 +290,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 21.0 - Candidate Provenance Hardening Preflight, only if Phil explicitly approves Phase 21.
+Phase 21.1 - Candidate Provenance Acceptance Test Scaffolding.
 
 Phase 21 approval question:
 

@@ -1,0 +1,35 @@
+{
+  "phase": "21.0",
+  "status": "runtime_slice_preflight_audit_eligible_file_confirmation",
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_21_0_RUNTIME_SLICE_PREFLIGHT_AUDIT_ELIGIBLE_FILE_CONFIRMATION.md",
+  "eligible_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "forbidden_runtime_files": [
+    "lima/kernel/__init__.py",
+    "new_runtime_modules",
+    "all_other_lima_files",
+    "tests/support"
+  ],
+  "preflight_result": "phase_20_2_file_touch_map_is_unambiguous",
+  "phase_21_scope": "candidate_provenance_hardening_only",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_added": false,
+    "background_worker_queue_daemon_subprocess_thread_database_write_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
