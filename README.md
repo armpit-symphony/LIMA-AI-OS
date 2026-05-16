@@ -574,6 +574,8 @@ Phase 31.0 opens the docs/tests/fixtures-only audit/archive lane for the complet
 
 Phase 31.1 records evidence that the Phase 30 runtime state inspection slice remains deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free. It changes no runtime code.
 
+Phase 31.2 reviews Phase 30 regression coverage and remaining gaps, finding no blocking safety regression and recommending Phase 32 not default to implementation. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

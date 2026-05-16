@@ -7224,6 +7224,35 @@ Forbidden:
 
 Continue only to Phase 31.2 runtime slice regression and gap review.
 
+## Phase 31.2 Gate: Runtime Slice Regression and Gap Review
+
+Phase 31.2 reviews Phase 30 regression coverage and remaining gaps before selecting the Phase 32 direction.
+
+Allowed:
+
+- Phase 31.2 tests
+- Phase 31.2 fixture metadata
+- Phase 31.2 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 31.3 Phase 32 next-lane decision matrix.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

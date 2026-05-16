@@ -1,0 +1,36 @@
+{
+  "phase": "31.2",
+  "status": "runtime_slice_regression_and_gap_review",
+  "runtime_code_modified": false,
+  "runtime_state_py_changed_in_phase_31": false,
+  "kernel_init_changed_in_phase_31": false,
+  "blocking_safety_regression_found": false,
+  "regression_coverage_reviewed": [
+    "deterministic_output",
+    "missing_input_safe",
+    "malformed_input_safe",
+    "unknown_status_safe",
+    "bypass_wording_resistance",
+    "no_input_mutation",
+    "non_authoritative_advisory_output",
+    "non_execution_invariants",
+    "dispatch_and_persistence_disallowed",
+    "phase_5_runtime_bridge_gated",
+    "sparkbot_absent",
+    "live_adapter_absent",
+    "forbidden_imports_and_calls_absent"
+  ],
+  "remaining_non_blocking_gaps": [
+    "additional_nested_suspicious_metadata_fixtures_could_harden_runtime_state_tests",
+    "future_no_code_design_review_could_evaluate_second_advisory_field_family",
+    "humaninput_bridge_planning_remains_separate_and_gated",
+    "sparkbot_integration_boundary_planning_remains_separate_and_gated",
+    "robo_os_physical_world_boundary_planning_remains_separate_and_gated"
+  ],
+  "phase_32_implication": {
+    "default_to_runtime_implementation": false,
+    "recommended_direction": "docs_tests_fixtures_only_design_review_for_next_narrow_runtime_slice",
+    "test_only_hardening_fallback_only_if_concrete_gap_found": true
+  },
+  "next_phase": "31.3"
+}

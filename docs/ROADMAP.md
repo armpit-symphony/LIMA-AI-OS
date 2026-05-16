@@ -7444,6 +7444,31 @@ Status:
 - complete
 - tagged as `phase-31.1-read-only-runtime-state-boundary-evidence-review`
 
+## Phase 31.2 - Runtime Slice Regression and Gap Review
+
+Goal:
+
+Review Phase 30 regression coverage and remaining gaps before selecting the Phase 32 direction.
+
+Deliverables:
+
+- `docs/PHASE_31_2_RUNTIME_SLICE_REGRESSION_AND_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_31_2_runtime_slice_regression_and_gap_review.json`
+- `tests/test_phase_31_2_runtime_slice_regression_and_gap_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- regression coverage is reviewed
+- remaining gaps are documented as non-blocking or gated
+
+Status:
+
+- complete
+- tagged as `phase-31.2-runtime-slice-regression-and-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
