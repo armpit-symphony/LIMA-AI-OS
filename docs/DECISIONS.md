@@ -3830,6 +3830,25 @@ Consequences:
 - Phase 5 HumanInput runtime bridge remains gated.
 - Phil must explicitly approve Phase 20 before work continues.
 
+## ADR-0204: Phase 20 Opens As No-Code Next Runtime Slice Design
+
+Status: Accepted
+
+Decision:
+
+Phase 20.0 opens Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice.
+
+Rationale:
+
+Phil approved Phase 20 only as no-code design work. The lane may use Phase 18 regression coverage and Phase 19 audit findings to compare candidate slice options, but it must not modify runtime files or implement behavior.
+
+Consequences:
+
+- Phase 20 may compare candidate provenance, lifecycle, replay/staleness, error taxonomy, pause, and Sparkbot-boundary options.
+- Runtime implementation remains blocked.
+- `lima/` and `tests/support/` remain untouched.
+- Phase 21 remains unapproved.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

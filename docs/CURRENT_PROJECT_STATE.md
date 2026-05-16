@@ -246,27 +246,29 @@ Phase 19.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. 
 
 Phase 19.4 Phase 19 Regression Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 19 as completed docs/tests/fixtures-only audit/archive work, preserves the exact Phase 20 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 20.0 Post-Regression Runtime Slice Design Charter is complete, merged to `main`, and tagged. It opens Phase 20 as docs/tests/fixtures-only no-code design for the next narrow runtime slice, lists candidate slice options, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`2eea883536afbc1f91b6efa4e3077da302894eff`
+`PENDING_PHASE_20_0_MERGE`
 
 Latest tag:
 
-`phase-19.4-phase-19-regression-audit-archive-closeout`
+`phase-20.0-post-regression-runtime-slice-design-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop for explicit Phil decision. Phase 20 is not approved. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Continue only inside the approved Phase 20 docs/tests/fixtures-only no-code design lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-20-0-no-code-next-runtime-slice-design-charter
+phase-20-1-next-runtime-slice-options-review
 
 Latest completed merge:
 
-`2eea883536afbc1f91b6efa4e3077da302894eff`
+`PENDING_PHASE_20_0_MERGE`
 
 Recommended PR target:
 
@@ -276,7 +278,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 20.0 - No-Code Next Runtime Slice Design Charter, only if Phil explicitly approves Phase 20.
+Phase 20.1 - Next Runtime Slice Options Review.
 
 Phase 20 approval question:
 

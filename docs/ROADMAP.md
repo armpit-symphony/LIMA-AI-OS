@@ -5884,6 +5884,35 @@ Status:
 - complete
 - tagged as `phase-19.4-phase-19-regression-audit-archive-closeout`
 
+## Phase 20.0 - Post-Regression Runtime Slice Design Charter
+
+Goal:
+
+Open Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_20_0_POST_REGRESSION_RUNTIME_SLICE_DESIGN_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_20_0_post_regression_runtime_slice_design_charter.json`
+- `tests/test_phase_20_0_post_regression_runtime_slice_design_charter.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18 and Phase 19 inputs are listed
+- candidate next-slice options are listed
+- Phase 5 runtime bridge remains gated
+- Phase 21 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-20.0-post-regression-runtime-slice-design-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

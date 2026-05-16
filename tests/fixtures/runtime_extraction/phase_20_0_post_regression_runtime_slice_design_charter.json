@@ -1,0 +1,46 @@
+{
+  "phase": "20.0",
+  "status": "post_regression_runtime_slice_design_charter",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_20_0_POST_REGRESSION_RUNTIME_SLICE_DESIGN_CHARTER.md",
+  "design_inputs": [
+    "phase_18_candidate_api_regression_tests",
+    "phase_18_acceptance_boundary_fixtures",
+    "phase_18_forbidden_integration_regression_tests",
+    "phase_19_regression_coverage_review",
+    "phase_19_remaining_regression_gap_review",
+    "phase_19_next_lane_decision_matrix",
+    "phase_19_archive_closeout"
+  ],
+  "candidate_slice_options": [
+    "candidate_provenance_hardening",
+    "candidate_lifecycle_metadata",
+    "replay_staleness_marker_normalization",
+    "candidate_error_taxonomy",
+    "pause_and_preserve",
+    "sparkbot_integration_boundary_planning_instead_of_runtime_work"
+  ],
+  "required_design_outputs": [
+    "exact_future_file_touch_map",
+    "future_acceptance_test_requirements",
+    "rollback_and_audit_proof_requirements",
+    "phase_21_decision_gate"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_21_approved": false
+  }
+}
