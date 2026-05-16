@@ -310,6 +310,8 @@ Phase 25.2 Cross-API Non-Execution Invariant Tests is complete, merged to `main`
 
 Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests for provenance and status invariants without runtime changes.
 
+Phase 25.4 Cross-API Boundary Readiness Review is complete on branch `phase-25-4-cross-api-boundary-readiness-review` pending merge. It reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -322,7 +324,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 25 test-only hardening lane. Phase 25.4 may perform a cross-API boundary readiness review only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 25 test-only hardening lane. Phase 25.5 may archive Phase 25 only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -340,7 +342,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 25.4 - Cross-API Boundary Readiness Review.
+Phase 25.5 - Phase 25 Test-Only Hardening Archive / Closeout.
 
 Phase 21 approval question:
 

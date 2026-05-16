@@ -516,6 +516,8 @@ Phase 25.2 adds deterministic cross-API non-execution invariant tests for existi
 
 Phase 25.3 adds deterministic provenance and status invariant tests across existing candidate-facing APIs. It changes no runtime code.
 
+Phase 25.4 reviews the cross-API candidate invariant hardening package as ready for archive/closeout. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
