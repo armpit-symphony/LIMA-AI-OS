@@ -4623,6 +4623,25 @@ Consequences:
 - Phase 28 requires explicit approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0248: Phase 28 Opens With An Anti-Loop Constraint
+
+Status: Accepted
+
+Decision:
+
+Phase 28.0 opens the approved docs/tests/fixtures-only preservation status review with an explicit anti-loop constraint.
+
+Context:
+
+Phase 27 preserved the current runtime/test state. Phase 28 may confirm stability one more time, but it must not become an automatic preservation loop.
+
+Consequences:
+
+- Phase 28.0 changes no runtime files.
+- Phase 28.0 changes no `tests/support/` files.
+- Phase 29 must recommend a sharper next direction.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted

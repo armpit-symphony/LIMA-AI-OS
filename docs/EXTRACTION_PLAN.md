@@ -6744,6 +6744,33 @@ Forbidden:
 
 Stop after Phase 27.4. Phase 28 requires explicit approval.
 
+## Phase 28.0 Gate: Phase 27 Preservation Status Audit Charter
+
+Phase 28.0 opens the approved docs/tests/fixtures-only preservation status review after Phase 27.
+
+Allowed:
+
+- Phase 28.0 tests
+- Phase 28.0 fixture metadata
+- Phase 28.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 28.1 stable runtime/test state review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
