@@ -1,0 +1,44 @@
+{
+  "phase": "20.1",
+  "status": "next_runtime_slice_options_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_20_1_NEXT_RUNTIME_SLICE_OPTIONS_REVIEW.md",
+  "options_reviewed": {
+    "candidate_provenance_hardening": "recommended",
+    "candidate_lifecycle_metadata": "defer",
+    "replay_staleness_marker_normalization": "defer",
+    "candidate_error_taxonomy": "defer",
+    "pause_and_preserve": "keep_available",
+    "sparkbot_integration_boundary_planning_instead_of_runtime_work": "defer"
+  },
+  "recommended_phase_21_slice": "candidate_provenance_hardening",
+  "recommended_slice_constraints": [
+    "normalize_and_validate_provenance_metadata_only",
+    "operate_only_on_existing_non_executing_candidates",
+    "no_humaninput_runtime_bridge",
+    "no_sparkbot_wiring",
+    "no_live_adapter",
+    "no_approval_enforcement",
+    "no_execution",
+    "no_dispatch",
+    "no_audit_persistence",
+    "no_external_side_effects"
+  ],
+  "phase_21_approved": false,
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

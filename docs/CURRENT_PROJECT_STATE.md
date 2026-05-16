@@ -248,13 +248,15 @@ Phase 19.4 Phase 19 Regression Audit Archive / Closeout is complete, merged to `
 
 Phase 20.0 Post-Regression Runtime Slice Design Charter is complete, merged to `main`, and tagged. It opens Phase 20 as docs/tests/fixtures-only no-code design for the next narrow runtime slice, lists candidate slice options, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 20.1 Next Runtime Slice Options Review is complete, merged to `main`, and tagged. It compares candidate provenance hardening, lifecycle metadata, replay/staleness marker normalization, error taxonomy, pause/preserve, and Sparkbot boundary planning, and recommends candidate provenance hardening as the single future slice to carry forward without approving implementation.
+
 Latest completed phase merge:
 
-`24c95dfca66d2e0bc93d95ebe67960ce51553439`
+`PENDING_PHASE_20_1_MERGE`
 
 Latest tag:
 
-`phase-20.0-post-regression-runtime-slice-design-charter`
+`phase-20.1-next-runtime-slice-options-review`
 
 ## Current Next Step
 
@@ -264,11 +266,11 @@ Continue only inside the approved Phase 20 docs/tests/fixtures-only no-code desi
 
 Recommended next branch:
 
-phase-20-1-next-runtime-slice-options-review
+phase-20-2-exact-file-touch-map-for-candidate-slice
 
 Latest completed merge:
 
-`24c95dfca66d2e0bc93d95ebe67960ce51553439`
+`PENDING_PHASE_20_1_MERGE`
 
 Recommended PR target:
 
@@ -278,7 +280,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 20.1 - Next Runtime Slice Options Review.
+Phase 20.2 - Exact File-Touch Map for Candidate Slice.
 
 Phase 20 approval question:
 
