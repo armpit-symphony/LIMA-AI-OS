@@ -258,7 +258,7 @@ Phase 20.4 Phase 20 Runtime Slice Approval Gate / Closeout is complete, merged t
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_4_MERGE`
+`6910c3ad7bb86087c3125dbe0e801b3d75628c79`
 
 Latest tag:
 
@@ -276,7 +276,7 @@ phase-21-0-candidate-provenance-hardening-preflight
 
 Latest completed merge:
 
-`PENDING_PHASE_20_4_MERGE`
+`6910c3ad7bb86087c3125dbe0e801b3d75628c79`
 
 Recommended PR target:
 
