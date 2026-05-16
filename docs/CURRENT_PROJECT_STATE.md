@@ -246,7 +246,7 @@ Phase 19.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_19_3_MERGE`
+`a279ae7cc5e7932b1712d8aa17172a86b7105fa9`
 
 Latest tag:
 
@@ -264,7 +264,7 @@ phase-19-4-phase-19-regression-audit-archive-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_19_3_MERGE`
+`a279ae7cc5e7932b1712d8aa17172a86b7105fa9`
 
 Recommended PR target:
 
