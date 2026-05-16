@@ -288,7 +288,7 @@ Phase 23.2 Suspicious Provenance Fixture Hardening is complete on branch `phase-
 
 Latest completed phase merge:
 
-`PENDING_PHASE_23_2_MERGE`
+`c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
 
 Latest tag:
 
@@ -306,7 +306,7 @@ phase-23-3-bypass-wording-provenance-tests
 
 Latest completed merge:
 
-`PENDING_PHASE_23_2_MERGE`
+`c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
 
 Recommended PR target:
 
