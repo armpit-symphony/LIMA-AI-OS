@@ -6914,6 +6914,31 @@ Status:
 - complete
 - tagged as `phase-27.0-phase-26-preservation-audit-charter`
 
+## Phase 27.1 - Current Runtime/Test State Preservation Record
+
+Goal:
+
+Record and preserve the current known-good runtime/test state.
+
+Deliverables:
+
+- `docs/PHASE_27_1_CURRENT_RUNTIME_TEST_STATE_PRESERVATION_RECORD.md`
+- `tests/fixtures/runtime_extraction/phase_27_1_current_runtime_test_state_preservation_record.json`
+- `tests/test_phase_27_1_current_runtime_test_state_preservation_record.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- constrained non-executing candidate API state is preserved
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-27.1-current-runtime-test-state-preservation-record`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

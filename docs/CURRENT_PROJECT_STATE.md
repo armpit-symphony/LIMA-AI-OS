@@ -326,6 +326,8 @@ Phase 26.4 Phase 26 Cross-API Audit Archive / Closeout is complete, merged to `m
 
 Phase 27.0 Phase 26 Preservation Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only preservation and roadmap decision lane without runtime changes.
 
+Phase 27.1 Current Runtime/Test State Preservation Record is complete, merged to `main`, and tagged. It preserves the current known-good runtime/test state without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
