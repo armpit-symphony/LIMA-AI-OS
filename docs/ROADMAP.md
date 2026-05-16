@@ -7191,6 +7191,31 @@ Status:
 - complete
 - tagged as `phase-29.1-narrow-runtime-slice-candidate-inventory`
 
+## Phase 29.2 - Runtime Slice Safety Boundary Design
+
+Goal:
+
+Define the no-code safety boundary for the recommended future runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_29_2_RUNTIME_SLICE_SAFETY_BOUNDARY_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_29_2_runtime_slice_safety_boundary_design.json`
+- `tests/test_phase_29_2_runtime_slice_safety_boundary_design.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- future behavior is local-only, read-only, deterministic, and non-authoritative
+- future forbidden behavior and file scope are explicit
+
+Status:
+
+- complete
+- tagged as `phase-29.2-runtime-slice-safety-boundary-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

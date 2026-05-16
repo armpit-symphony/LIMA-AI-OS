@@ -1,0 +1,51 @@
+{
+  "phase": "29.2",
+  "status": "runtime_slice_safety_boundary_design",
+  "runtime_code_modified": false,
+  "future_slice": "read_only_runtime_state_inspection_slice",
+  "allowed_future_behavior": [
+    "deterministic_local_only_read_only_inspection",
+    "inspect_already_existing_non_executing_runtime_candidate_state",
+    "produce_non_authoritative_state_snapshot",
+    "report_candidate_safety_flags",
+    "report_provenance_presence",
+    "report_status_category",
+    "report_blocked_not_ready_or_needs_review_signals"
+  ],
+  "future_eligible_runtime_files": [
+    "lima/kernel/runtime_state.py",
+    "lima/kernel/__init__.py_only_if_safe_public_export_required"
+  ],
+  "future_forbidden_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "new_live_adapter_modules",
+    "sparkbot_files",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "all_other_lima_files"
+  ],
+  "future_forbidden_behavior": [
+    "mutate_candidate_state",
+    "create_candidates_from_humaninput",
+    "infer_intentenvelope_runtime_behavior",
+    "preview_guardiandecision_behavior",
+    "approval_enforcement",
+    "audit_persistence",
+    "dispatch",
+    "execution",
+    "external_system_calls",
+    "physical_world_action"
+  ],
+  "safety_invariants": {
+    "output_non_authoritative": true,
+    "output_deterministic_local_only": true,
+    "execution_allowed_remains_false": true,
+    "side_effects_allowed_remains_false": true,
+    "approval_state_never_approved": true,
+    "unsafe_state_reported_blocked_invalid_not_ready_or_needs_review": true,
+    "dangerous_wording_does_not_change_result": true,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "next_phase": "29.3"
+}
