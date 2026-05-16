@@ -7282,6 +7282,35 @@ Forbidden:
 
 Continue only to Phase 31.4 Phase 31 runtime slice audit archive / closeout.
 
+## Phase 31.4 Gate: Phase 31 Runtime Slice Audit Archive / Closeout
+
+Phase 31.4 archives Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and preserves the Phase 32 gate.
+
+Allowed:
+
+- Phase 31.4 tests
+- Phase 31.4 fixture metadata
+- Phase 31.4 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Stop after Phase 31.4. Phase 32 requires explicit Phil approval.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

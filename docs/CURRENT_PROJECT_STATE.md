@@ -372,6 +372,8 @@ Phase 31.2 Runtime Slice Regression and Gap Review is complete, merged to `main`
 
 Phase 31.3 Phase 32 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 32 as docs/tests/fixtures-only design review for the next narrow runtime slice, not runtime implementation.
 
+Phase 31.4 Phase 31 Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and stops at the Phase 32 gate.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
