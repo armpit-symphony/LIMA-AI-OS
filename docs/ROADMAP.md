@@ -6788,6 +6788,31 @@ Status:
 - complete
 - tagged as `phase-26.0-phase-25-cross-api-invariant-audit-charter`
 
+## Phase 26.1 - Cross-API Invariant Coverage Review
+
+Goal:
+
+Review Phase 25 cross-API candidate invariant coverage.
+
+Deliverables:
+
+- `docs/PHASE_26_1_CROSS_API_INVARIANT_COVERAGE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_26_1_cross_api_invariant_coverage_review.json`
+- `tests/test_phase_26_1_cross_api_invariant_coverage_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- existing candidate construction, status normalization, validation, and provenance hardening coverage is reviewed
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-26.1-cross-api-invariant-coverage-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -316,6 +316,8 @@ Phase 25.5 Phase 25 Test-Only Hardening Archive / Closeout is complete, merged t
 
 Phase 26.0 Phase 25 Cross-API Invariant Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision lane without runtime changes.
 
+Phase 26.1 Cross-API Invariant Coverage Review is complete, merged to `main`, and tagged. It confirms Phase 25 coverage across existing candidate-facing APIs without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
