@@ -7389,6 +7389,29 @@ Forbidden:
 
 Continue only to Phase 33.1 nested suspicious metadata fixture design.
 
+## Phase 33.1 Gate: Nested Suspicious Metadata Fixture Design
+
+Phase 33.1 adds synthetic caller-provided nested metadata fixtures for `runtime_state` hardening.
+
+Allowed:
+
+- Phase 33.1 tests
+- Phase 33.1 fixture metadata
+- Phase 33.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 33.2 runtime state nested metadata regression tests.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

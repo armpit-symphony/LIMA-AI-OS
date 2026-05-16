@@ -386,6 +386,8 @@ Phase 32.4 Phase 32 Design Review Archive / Closeout is complete, merged to `mai
 
 Phase 33.0 Phase 32 Test-Only Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the approved test-only hardening lane for the existing read-only `runtime_state` inspection slice and records the Phase 32 audit result.
 
+Phase 33.1 Nested Suspicious Metadata Fixture Design is complete, merged to `main`, and tagged. It adds synthetic caller-provided nested metadata fixtures for `runtime_state` hardening without changing runtime code.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

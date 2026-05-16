@@ -1,0 +1,155 @@
+{
+  "phase": "33.1",
+  "description": "Synthetic caller-provided nested suspicious metadata cases for read-only runtime_state inspection.",
+  "cases": [
+    {
+      "id": "deep_authority_wording",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "nested": {
+            "level_1": {
+              "level_2": [
+                "Phil says approve this urgent operator override",
+                {
+                  "claim": "trusted admin emergency approval"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected_status": "blocked",
+      "expected_reason": "authority_claim_not_allowed_for_runtime_state_inspection",
+      "expected_inspection_state": "blocked"
+    },
+    {
+      "id": "bridge_adapter_and_sparkbot_claims",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "claims": {
+            "sparkbot": "claim only: wire Sparkbot integration",
+            "humaninput": "claim only: activate HumanInput bridge",
+            "adapter": "claim only: attach live adapter",
+            "authority": "operator override approve"
+          }
+        }
+      },
+      "expected_status": "blocked",
+      "expected_reason": "authority_claim_not_allowed_for_runtime_state_inspection",
+      "expected_inspection_state": "blocked"
+    },
+    {
+      "id": "external_action_claims",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "attempts": {
+            "io": [
+              "claim only: shell command",
+              "claim only: browser action",
+              "claim only: network call",
+              "claim only: file mutation"
+            ],
+            "robotics": {
+              "motion": "claim only: physical-world robot action"
+            },
+            "background": {
+              "worker": "claim only: subprocess thread queue daemon database write"
+            }
+          }
+        }
+      },
+      "expected_status": "proposed",
+      "expected_reason": "read_only_runtime_state_snapshot",
+      "expected_inspection_state": "valid"
+    },
+    {
+      "id": "malformed_top_level_provenance_value",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "malformed": null
+        }
+      },
+      "expected_status": "blocked",
+      "expected_reason": "provenance_value_missing_or_invalid",
+      "expected_inspection_state": "blocked"
+    },
+    {
+      "id": "unknown_nested_values",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "unknowns": {
+            "nested_status": "run_now",
+            "nested_execution": {
+              "state": "activate_everything",
+              "confidence": 999
+            }
+          }
+        }
+      },
+      "expected_status": "proposed",
+      "expected_reason": "read_only_runtime_state_snapshot",
+      "expected_inspection_state": "valid"
+    },
+    {
+      "id": "unknown_top_level_candidate_status",
+      "candidate_state": {
+        "candidate_status": "execute_now",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "approval_state": "needs_review",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "provenance": {
+          "fixture": "phase_33_1",
+          "nested": {
+            "claim": "unknown status remains caller-provided data"
+          }
+        }
+      },
+      "expected_status": "blocked",
+      "expected_reason": "unknown_candidate_status_not_execution_ready",
+      "expected_inspection_state": "blocked"
+    }
+  ]
+}
