@@ -5956,6 +5956,34 @@ Remaining gaps are test/planning gaps. Test-only hardening is the safest respons
 
 Continue only to Phase 22.3 next-lane decision matrix.
 
+## Phase 22.3 Gate: Next-Lane Decision Matrix
+
+Phase 22.3 recommends exactly one Phase 23 direction.
+
+Allowed:
+
+- decision matrix documentation
+- static decision fixture metadata
+- static decision tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 23 should be a test-only hardening lane for provenance and candidate invariants. Runtime expansion and integration planning are deferred.
+
+Continue only to Phase 22.4 decision gate closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

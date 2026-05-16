@@ -1,0 +1,43 @@
+{
+  "phase": "22.3",
+  "status": "next_lane_decision_matrix",
+  "runtime_code_modified": false,
+  "options": {
+    "option_a": {
+      "direction": "no_code_design_for_another_narrow_runtime_slice",
+      "recommendation": "defer"
+    },
+    "option_b": {
+      "direction": "test_only_hardening_for_provenance_candidate_invariants",
+      "recommendation": "recommend"
+    },
+    "option_c": {
+      "direction": "sparkbot_integration_boundary_planning",
+      "recommendation": "defer"
+    },
+    "option_d": {
+      "direction": "robo_os_physical_world_boundary_planning",
+      "recommendation": "defer"
+    },
+    "option_e": {
+      "direction": "pause_and_preserve_current_runtime_state",
+      "recommendation": "acceptable_fallback"
+    }
+  },
+  "recommended_phase_23_direction": "test_only_hardening_for_provenance_candidate_invariants",
+  "phase_23_approval_question": "Do you approve Phase 23 as a test-only hardening lane for provenance and candidate invariants, limited to tests/test_phase_23_*.py, tests/fixtures/runtime_extraction/phase_23_*.json, docs/PHASE_23_*.md, and required roadmap/state docs only, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

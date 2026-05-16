@@ -276,27 +276,29 @@ Phase 22.1 Candidate Provenance Coverage Review is complete on branch `phase-22-
 
 Phase 22.2 Remaining Safety Gap Review is complete on branch `phase-22-2-remaining-safety-gap-review` pending merge. It finds the remaining gaps are test/planning gaps and recommends test-only hardening before runtime expansion.
 
+Phase 22.3 Next-Lane Decision Matrix is complete on branch `phase-22-3-next-lane-decision-matrix` pending merge. It recommends Phase 23 as test-only hardening for provenance and candidate invariants.
+
 Latest completed phase merge:
 
-`8d932e2485d47eb50238ad0d64bf8fb5cbbbf741`
+`PENDING_PHASE_22_3_MERGE`
 
 Latest tag:
 
-`phase-22.2-remaining-safety-gap-review`
+`phase-22.3-next-lane-decision-matrix`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.3 should choose the safest Phase 23 direction without implementation. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.4 should close the lane and preserve the Phase 23 approval question. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-22-3-next-lane-decision-matrix
+phase-22-4-phase-22-decision-gate-closeout
 
 Latest completed merge:
 
-`8d932e2485d47eb50238ad0d64bf8fb5cbbbf741`
+`PENDING_PHASE_22_3_MERGE`
 
 Recommended PR target:
 
@@ -306,7 +308,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 22.3 - Next-Lane Decision Matrix.
+Phase 22.4 - Phase 22 Decision Gate / Closeout.
 
 Phase 21 approval question:
 
