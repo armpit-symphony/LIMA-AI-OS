@@ -7216,6 +7216,31 @@ Status:
 - complete
 - tagged as `phase-29.2-runtime-slice-safety-boundary-design`
 
+## Phase 29.3 - Future Implementation Eligibility Matrix
+
+Goal:
+
+Define future implementation eligibility criteria, acceptance-test expectations, rollback/audit proof, and the exact Phase 30 approval question for the recommended read-only runtime state inspection slice.
+
+Deliverables:
+
+- `docs/PHASE_29_3_FUTURE_IMPLEMENTATION_ELIGIBILITY_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_29_3_future_implementation_eligibility_matrix.json`
+- `tests/test_phase_29_3_future_implementation_eligibility_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- future eligible file scope is exact
+- Phase 30 approval requires Phil's explicit approval
+
+Status:
+
+- complete
+- tagged as `phase-29.3-future-implementation-eligibility-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -4737,6 +4737,26 @@ Consequences:
 - Future eligible runtime file scope is limited to a possible `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py` only if a safe public export is required.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0256: Phase 30 Runtime State Inspection Requires Exact Eligibility Proof
+
+Status: Accepted
+
+Decision:
+
+Phase 29.3 defines the future implementation eligibility criteria, required acceptance tests, rollback/audit proof, and exact approval question for a possible Phase 30 read-only runtime state inspection slice.
+
+Context:
+
+Phase 29.2 selected a future slice that can improve observability only if it stays deterministic, local-only, read-only, non-authoritative, and side-effect-free. The implementation must remain blocked until Phil explicitly approves exact runtime file scope and acceptance evidence.
+
+Consequences:
+
+- Phase 29.3 changes no runtime files.
+- Phase 29.3 changes no `tests/support/` files.
+- Future eligible runtime file scope is limited to a possible `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- Phase 30 is not approved until Phil explicitly approves the preserved question.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
