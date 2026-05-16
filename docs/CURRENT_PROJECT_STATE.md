@@ -288,6 +288,8 @@ Phase 23.2 Suspicious Provenance Fixture Hardening is complete on branch `phase-
 
 Phase 23.3 Bypass-Wording Provenance Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving Phil/operator/admin/trusted/urgent/override/approve/emergency wording does not bypass non-executing candidate safety.
 
+Phase 23.4 Provenance Hardening Readiness Review is complete on branch `phase-23-4-provenance-hardening-readiness-review` pending merge. It reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -300,7 +302,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 23 test-only hardening lane. Phase 23.4 may review provenance hardening readiness only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 23 test-only hardening lane. Phase 23.5 may archive Phase 23 only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -318,7 +320,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 23.4 - Provenance Hardening Readiness Review.
+Phase 23.5 - Phase 23 Test-Only Hardening Archive / Closeout.
 
 Phase 21 approval question:
 

@@ -494,6 +494,8 @@ Phase 23.2 adds synthetic suspicious provenance fixtures covering authority clai
 
 Phase 23.3 adds explicit bypass-wording provenance tests covering Phil, operator, admin, trusted, urgent, override, approve, and emergency wording. It changes no runtime code.
 
+Phase 23.4 reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

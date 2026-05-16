@@ -6123,6 +6123,33 @@ Blocked:
 
 Continue only to Phase 23.4 provenance hardening readiness review.
 
+## Phase 23.4 Gate: Provenance Hardening Readiness Review
+
+Phase 23.4 reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout.
+
+Allowed:
+
+- Phase 23.4 tests
+- Phase 23.4 fixture metadata
+- Phase 23.4 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 23.5 archive/closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
