@@ -7040,6 +7040,31 @@ Status:
 - complete
 - tagged as `phase-28.0-phase-27-preservation-status-audit-charter`
 
+## Phase 28.1 - Stable Runtime/Test State Review
+
+Goal:
+
+Confirm the current runtime/test state remains stable and preserved.
+
+Deliverables:
+
+- `docs/PHASE_28_1_STABLE_RUNTIME_TEST_STATE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_28_1_stable_runtime_test_state_review.json`
+- `tests/test_phase_28_1_stable_runtime_test_state_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- current runtime/test state remains stable
+- no concrete immediate test-only hardening gap is found
+
+Status:
+
+- complete
+- tagged as `phase-28.1-stable-runtime-test-state-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
