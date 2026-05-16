@@ -1,0 +1,40 @@
+{
+  "phase": "24.2",
+  "status": "remaining_candidate_invariant_gap_review",
+  "runtime_code_modified": false,
+  "remaining_gaps": [
+    "broader_nested_provenance_fixture_matrix",
+    "cross_api_candidate_regression_matrix",
+    "static_import_and_call_pattern_review",
+    "replay_staleness_timestamp_lineage_matrix",
+    "future_no_code_next_runtime_slice_design_question"
+  ],
+  "not_approved": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_integration",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_behavior"
+  ],
+  "gap_result": "planning_inputs_only",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

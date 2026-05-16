@@ -4298,6 +4298,25 @@ Consequences:
 - Coverage remains deterministic and offline.
 - Phase 24.2 may review remaining candidate invariant gaps only.
 
+## ADR-0229: Remaining Candidate Invariant Gaps Are Planning Inputs
+
+Status: Accepted
+
+Decision:
+
+Phase 24.2 records remaining provenance and candidate-invariant gaps as planning inputs only.
+
+Rationale:
+
+The Phase 24 audit needs a clear gap list before recommending a Phase 25 direction, but a gap list must not be mistaken for runtime approval.
+
+Consequences:
+
+- Phase 24.2 changes no runtime files.
+- Phase 24.2 changes no `tests/support/` files.
+- Runtime implementation remains blocked.
+- Phase 24.3 may evaluate next-lane options only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

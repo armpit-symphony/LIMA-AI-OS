@@ -6538,6 +6538,30 @@ Status:
 - complete
 - tagged as `phase-24.1-provenance-hardening-coverage-review`
 
+## Phase 24.2 - Remaining Candidate Invariant Gap Review
+
+Goal:
+
+Identify remaining provenance and candidate-invariant gaps as planning inputs.
+
+Deliverables:
+
+- `docs/PHASE_24_2_REMAINING_CANDIDATE_INVARIANT_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_24_2_remaining_candidate_invariant_gap_review.json`
+- `tests/test_phase_24_2_remaining_candidate_invariant_gap_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- remaining gaps are documented as planning inputs only
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-24-2-remaining-candidate-invariant-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

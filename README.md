@@ -502,6 +502,8 @@ Phase 24.0 opens the approved docs/tests/fixtures-only audit/archive and next-la
 
 Phase 24.1 reviews Phase 23 provenance and candidate-invariant coverage as deterministic offline test protection. It changes no runtime code.
 
+Phase 24.2 identifies remaining provenance and candidate-invariant gaps as planning inputs only. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
