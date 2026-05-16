@@ -464,6 +464,8 @@ Phase 20.4 archives Phase 20 as a completed no-code design lane and preserves th
 
 Phase 20.5 archives Phase 20 as a completed no-code design package before any Phase 21 runtime decision. It adds no runtime behavior and keeps Phase 21 gated.
 
+Phase 21.0 opens the approved candidate provenance hardening runtime slice with preflight confirmation that only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` are eligible runtime files.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

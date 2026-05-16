@@ -5703,6 +5703,36 @@ Phase 20 is archived as no-code design only. Phase 21 remains unapproved and mus
 
 Stop for explicit Phil decision before Phase 21.
 
+## Phase 21.0 Gate: Runtime Slice Preflight Audit / Eligible File Confirmation
+
+Phase 21.0 may confirm the approved candidate provenance hardening file scope before implementation.
+
+Allowed:
+
+- preflight audit documentation
+- static preflight fixture metadata
+- static preflight tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/kernel/__init__.py` changes
+- new runtime modules
+- any `lima/` file outside `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 20.2 is unambiguous. Future Phase 21 runtime work is limited to `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+
+Continue only to Phase 21.1 candidate provenance acceptance test scaffolding.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

@@ -3943,6 +3943,25 @@ Consequences:
 - No `tests/support/` files are changed.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0210: Phase 21 Eligible Runtime Files Are Confirmed
+
+Status: Accepted
+
+Decision:
+
+Phase 21.0 confirms that Phase 21 candidate provenance hardening may touch only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+
+Rationale:
+
+Phase 20.2 listed the eligible files without ambiguity, and Phil approved the slice under that exact scope.
+
+Consequences:
+
+- `lima/kernel/__init__.py` remains forbidden.
+- No new runtime module is allowed.
+- All other `lima/` files and `tests/support/` remain forbidden.
+- Implementation cannot begin until Phase 21.1 acceptance tests are scaffolded.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
