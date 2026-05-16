@@ -6588,6 +6588,30 @@ Status:
 - complete
 - tagged as `phase-24.3-next-lane-decision-matrix`
 
+## Phase 24.4 - Phase 24 Hardening Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 24 and preserve the Phase 25 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_24_4_PHASE_24_HARDENING_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_24_4_phase_24_hardening_audit_archive_closeout.json`
+- `tests/test_phase_24_4_phase_24_hardening_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 24.0 through Phase 24.3 are archived
+- Phase 25 requires explicit approval
+
+Status:
+
+- complete on branch `phase-24-4-phase-24-hardening-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

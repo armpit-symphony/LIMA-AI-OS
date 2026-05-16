@@ -4336,6 +4336,25 @@ Consequences:
 - Phase 25 remains gated and requires explicit approval.
 - Runtime expansion remains blocked.
 
+## ADR-0231: Phase 24 Closes At A Phase 25 Test-Only Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 24.4 archives Phase 24 as a completed docs/tests/fixtures-only audit/archive lane and preserves Phase 25 as a gated test-only hardening direction.
+
+Rationale:
+
+Phase 24 audited Phase 23, reviewed coverage, identified gaps, and selected the safest next lane without changing runtime code.
+
+Consequences:
+
+- Phase 24.4 changes no runtime files.
+- Phase 24.4 changes no `tests/support/` files.
+- Phase 5 HumanInput runtime bridge remains gated.
+- Phase 25 requires explicit approval.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
