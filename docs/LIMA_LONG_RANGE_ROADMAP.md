@@ -280,6 +280,8 @@ Phase 18 is complete and tagged as a test-only regression hardening lane. It add
 
 Phase 19 is open as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase for the Phase 18 regression hardening package. It may review coverage, identify remaining gaps, and recommend a Phase 20 direction without changing runtime behavior or approving runtime expansion.
 
+Phase 19.4 archives Phase 19 as complete and recommends Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice. Phase 20 remains unapproved until Phil explicitly approves it.
+
 After Phase 4.16, stop for explicit operator approval before any next lane, runtime extraction, live adapter, Sparkbot integration, product shell, approval/enforcement/execution/audit, model/tool/terminal/robot, live lookup, or physical-world phase.
 
 ## Standing Phase 3 Boundaries
