@@ -254,7 +254,7 @@ Phase 20.2 Exact File-Touch Map For Candidate Slice is complete, merged to `main
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_2_MERGE`
+`5e2d9a5757040b65020e7ca4ad3db17dba518925`
 
 Latest tag:
 
@@ -272,7 +272,7 @@ phase-20-3-acceptance-test-and-rollback-plan
 
 Latest completed merge:
 
-`PENDING_PHASE_20_2_MERGE`
+`5e2d9a5757040b65020e7ca4ad3db17dba518925`
 
 Recommended PR target:
 
