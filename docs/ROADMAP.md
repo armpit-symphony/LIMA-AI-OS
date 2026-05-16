@@ -6685,7 +6685,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-25-2-cross-api-non-execution-invariant-tests`
+- complete
+- tagged as `phase-25.2-cross-api-non-execution-invariant-tests`
 
 Reserved from Phase 3.4:
 

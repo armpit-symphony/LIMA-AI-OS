@@ -306,7 +306,7 @@ Phase 25.0 Cross-API Candidate Invariant Matrix Charter is complete, merged to `
 
 Phase 25.1 Candidate API Matrix Fixtures is complete, merged to `main`, and tagged. It adds synthetic matrix fixtures without runtime changes.
 
-Phase 25.2 Cross-API Non-Execution Invariant Tests is complete on branch `phase-25-2-cross-api-non-execution-invariant-tests` pending merge. It adds deterministic tests proving existing candidate-facing APIs preserve non-execution invariants without runtime changes.
+Phase 25.2 Cross-API Non-Execution Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving existing candidate-facing APIs preserve non-execution invariants without runtime changes.
 
 Latest completed phase merge:
 
