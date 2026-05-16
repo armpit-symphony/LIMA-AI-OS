@@ -7116,6 +7116,31 @@ Status:
 - complete
 - tagged as `phase-28.3-phase-29-decision-readiness-matrix`
 
+## Phase 28.4 - Phase 28 Preservation Status Archive / Closeout
+
+Goal:
+
+Archive Phase 28 and preserve the Phase 29 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_28_4_PHASE_28_PRESERVATION_STATUS_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_28_4_phase_28_preservation_status_archive_closeout.json`
+- `tests/test_phase_28_4_phase_28_preservation_status_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 28.0 through Phase 28.3 are archived
+- Phase 29 requires explicit approval
+
+Status:
+
+- complete
+- tagged as `phase-28.4-phase-28-preservation-status-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

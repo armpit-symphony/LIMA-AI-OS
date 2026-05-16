@@ -4699,6 +4699,25 @@ Consequences:
 - Phase 29 is not runtime implementation approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 28.4 archives Phase 28 as a completed docs/tests/fixtures-only preservation status review and preserves Phase 29 as a gated no-code design review.
+
+Context:
+
+Phase 28 confirmed stable state, found no concrete immediate test-only hardening gap, found no specific risk requiring another automatic pause, and selected no-code design review as the sharper next step.
+
+Consequences:
+
+- Phase 28.4 changes no runtime files.
+- Phase 28.4 changes no `tests/support/` files.
+- Phase 29 requires explicit approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted

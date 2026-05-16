@@ -342,6 +342,8 @@ Phase 28.2 Preservation Pause Justification Review is complete, merged to `main`
 
 Phase 28.3 Phase 29 Decision Readiness Matrix is complete, merged to `main`, and tagged. It recommends Phase 29 as a docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
 
+Phase 28.4 Phase 28 Preservation Status Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 28 and preserves Phase 29 as a gated docs/tests/fixtures-only no-code design review.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -354,7 +356,7 @@ Latest tag:
 
 Current operator step:
 
-Stop after Phase 27.4. Phase 28 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Stop after Phase 28.4. Phase 29 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -376,7 +378,9 @@ Phase 26 - complete/tagged.
 
 Phase 27 - complete/tagged.
 
-Phase 28 - docs/tests/fixtures-only preservation status review, if explicitly approved.
+Phase 28 - complete/tagged.
+
+Phase 29 - docs/tests/fixtures-only no-code design review for the next narrow runtime slice, if explicitly approved.
 
 Phase 21 approval question:
 
