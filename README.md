@@ -438,6 +438,8 @@ Phase 18.2 adds synthetic acceptance-boundary regression fixtures for approval-b
 
 Phase 18.3 adds forbidden integration regression tests that scan existing candidate runtime files for forbidden imports, calls, side-effect patterns, and integration wiring names without adding runtime enforcement.
 
+Phase 18.4 reviews the regression hardening package as ready for archive while still not ready for runtime implementation, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, or physical-world work.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

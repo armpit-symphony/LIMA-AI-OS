@@ -232,13 +232,15 @@ Phase 18.2 Acceptance Boundary Regression Fixtures is complete, merged to `main`
 
 Phase 18.3 Forbidden Integration Regression Tests is complete, merged to `main`, and tagged. It adds test-only static regression checks that existing candidate runtime files do not import or call Sparkbot, HumanInput runtime bridge behavior, live adapters, IntentCompiler, GuardianDecision, subprocess, shell, browser, network, file mutation, persistence, queues, workers, dispatch, approval enforcement, robotics, or physical-world behavior.
 
+Phase 18.4 Regression Hardening Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 18 regression hardening package as ready for archive/closeout while keeping runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`79ed7822c238ce5fc2ad411e440f687ad6f48af8`
+`PENDING_PHASE_18_4_MERGE`
 
 Latest tag:
 
-`phase-18.3-forbidden-integration-regression-tests`
+`phase-18.4-regression-hardening-readiness-review`
 
 ## Current Next Step
 
@@ -248,11 +250,11 @@ Continue only inside the approved Phase 18 test-only regression hardening lane. 
 
 Recommended next branch:
 
-phase-18-4-regression-hardening-readiness-review
+phase-18-5-phase-18-regression-hardening-archive-closeout
 
 Latest completed merge:
 
-`79ed7822c238ce5fc2ad411e440f687ad6f48af8`
+`PENDING_PHASE_18_4_MERGE`
 
 Recommended PR target:
 
@@ -262,7 +264,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 18.4 - Regression Hardening Readiness Review.
+Phase 18.5 - Phase 18 Regression Hardening Archive / Closeout.
 
 Phase 18 approval question:
 
