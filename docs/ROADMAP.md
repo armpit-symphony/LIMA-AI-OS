@@ -7266,6 +7266,31 @@ Status:
 - complete
 - tagged as `phase-29.4-phase-29-no-code-design-review-archive-closeout`
 
+## Phase 30.0 - Phase 29 Runtime Implementation Audit Charter
+
+Goal:
+
+Audit Phase 29 and confirm the approved Phase 30 read-only runtime state inspection scope before runtime files are touched.
+
+Deliverables:
+
+- `docs/PHASE_30_0_PHASE_29_RUNTIME_IMPLEMENTATION_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_30_0_phase_29_runtime_implementation_audit_charter.json`
+- `tests/test_phase_30_0_phase_29_runtime_implementation_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 29 audit result is recorded
+- Phase 30 runtime scope is exact and narrow
+
+Status:
+
+- complete
+- tagged as `phase-30.0-phase-29-runtime-implementation-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

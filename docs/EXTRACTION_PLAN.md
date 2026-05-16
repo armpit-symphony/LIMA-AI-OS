@@ -7018,6 +7018,35 @@ Forbidden:
 
 Stop after Phase 29.4. Phase 30 requires explicit Phil approval.
 
+## Phase 30.0 Gate: Phase 29 Runtime Implementation Audit Charter
+
+Phase 30.0 audits Phase 29 and confirms the approved Phase 30 read-only runtime state inspection scope before runtime files are touched.
+
+Allowed:
+
+- Phase 30.0 tests
+- Phase 30.0 fixture metadata
+- Phase 30.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 30.1 read-only runtime state inspection acceptance design.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
