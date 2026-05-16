@@ -264,7 +264,7 @@ Phase 21.1 Candidate Provenance Acceptance Test Scaffolding is complete on branc
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_1_MERGE`
+`bbe43d9666a12485787c5c1983153bbd3facea35`
 
 Latest tag:
 
@@ -282,7 +282,7 @@ phase-21-2-candidate-provenance-hardening-runtime-implementation
 
 Latest completed merge:
 
-`PENDING_PHASE_21_1_MERGE`
+`bbe43d9666a12485787c5c1983153bbd3facea35`
 
 Recommended PR target:
 
