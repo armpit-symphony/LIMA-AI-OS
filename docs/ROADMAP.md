@@ -7344,6 +7344,31 @@ Status:
 - complete
 - tagged as `phase-30.2-read-only-runtime-state-inspection-implementation`
 
+## Phase 30.3 - Runtime State Inspection Boundary Regression Review
+
+Goal:
+
+Review the Phase 30.2 runtime state inspection boundary and confirm the slice remains inside the approved scope.
+
+Deliverables:
+
+- `docs/PHASE_30_3_RUNTIME_STATE_INSPECTION_BOUNDARY_REGRESSION_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_30_3_runtime_state_inspection_boundary_regression_review.json`
+- `tests/test_phase_30_3_runtime_state_inspection_boundary_regression_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- approved runtime files are reviewed
+- forbidden behavior remains absent
+
+Status:
+
+- complete
+- tagged as `phase-30.3-runtime-state-inspection-boundary-regression-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

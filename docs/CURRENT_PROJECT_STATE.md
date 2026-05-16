@@ -360,6 +360,8 @@ Phase 30.1 Read-Only Runtime State Inspection Acceptance Design is complete, mer
 
 Phase 30.2 Read-Only Runtime State Inspection Implementation is complete, merged to `main`, and tagged. It adds `lima/kernel/runtime_state.py` plus a safe `lima/kernel/__init__.py` export for deterministic, local-only, read-only, non-authoritative runtime state inspection.
 
+Phase 30.3 Runtime State Inspection Boundary Regression Review is complete, merged to `main`, and tagged. It reviews the Phase 30.2 slice and confirms it remains inside the approved read-only, non-authoritative, non-executing boundary without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
