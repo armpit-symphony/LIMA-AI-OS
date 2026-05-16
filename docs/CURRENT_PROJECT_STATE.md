@@ -252,7 +252,7 @@ Phase 20.1 Next Runtime Slice Options Review is complete, merged to `main`, and 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_1_MERGE`
+`bb3c536ec3a78975e182fe3faa8c4857a9e9d9f3`
 
 Latest tag:
 
@@ -270,7 +270,7 @@ phase-20-2-exact-file-touch-map-for-candidate-slice
 
 Latest completed merge:
 
-`PENDING_PHASE_20_1_MERGE`
+`bb3c536ec3a78975e182fe3faa8c4857a9e9d9f3`
 
 Recommended PR target:
 
