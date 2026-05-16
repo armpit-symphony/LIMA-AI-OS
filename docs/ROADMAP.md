@@ -5827,6 +5827,34 @@ Status:
 - complete
 - tagged as `phase-19.2-remaining-regression-gap-review`
 
+## Phase 19.3 - Next-Lane Decision Matrix
+
+Goal:
+
+Compare Phase 20 options and recommend the safest next lane before any future runtime expansion.
+
+Deliverables:
+
+- `docs/PHASE_19_3_NEXT_LANE_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_19_3_next_lane_decision_matrix.json`
+- `tests/test_phase_19_3_next_lane_decision_matrix.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- all approved Phase 20 options are evaluated
+- recommended Phase 20 direction is no-code design only
+- Phase 20 still requires explicit Phil approval
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-19.3-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -448,6 +448,8 @@ Phase 19.1 reviews Phase 18 regression coverage and records that the coverage is
 
 Phase 19.2 records remaining regression gaps after Phase 18: static checks are not runtime monitors, fixtures are synthetic, future integration behavior still needs separate design, and direct runtime expansion remains blocked.
 
+Phase 19.3 evaluates the approved Phase 20 options and recommends a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, without approving Phase 20 implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

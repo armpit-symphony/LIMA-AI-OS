@@ -242,13 +242,15 @@ Phase 19.1 Regression Coverage Review is complete, merged to `main`, and tagged.
 
 Phase 19.2 Remaining Regression Gap Review is complete, merged to `main`, and tagged. It records that Phase 18 coverage is useful but still not runtime monitoring or enforcement, keeps Sparkbot/Robo-OS/HumanInput bridge work separate, and blocks direct runtime expansion before a separately approved next lane.
 
+Phase 19.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It evaluates Phase 20 options and recommends a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice while preserving explicit Phil approval and blocking runtime implementation.
+
 Latest completed phase merge:
 
-`1266c11d48d72f35c54f17943e4c7a34acd408d3`
+`PENDING_PHASE_19_3_MERGE`
 
 Latest tag:
 
-`phase-19.2-remaining-regression-gap-review`
+`phase-19.3-next-lane-decision-matrix`
 
 ## Current Next Step
 
@@ -258,11 +260,11 @@ Continue only inside the approved Phase 19 docs/tests/fixtures-only acceptance-g
 
 Recommended next branch:
 
-phase-19-3-next-lane-decision-matrix
+phase-19-4-phase-19-regression-audit-archive-closeout
 
 Latest completed merge:
 
-`1266c11d48d72f35c54f17943e4c7a34acd408d3`
+`PENDING_PHASE_19_3_MERGE`
 
 Recommended PR target:
 
@@ -272,7 +274,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 19.3 - Next-Lane Decision Matrix.
+Phase 19.4 - Phase 19 Regression Audit Archive / Closeout.
 
 Phase 19 approval question:
 

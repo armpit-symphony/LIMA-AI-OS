@@ -3792,6 +3792,25 @@ Consequences:
 - Sparkbot and Robo-OS work remain separate boundary-planning topics.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0202: Recommend Phase 20 As No-Code Next Runtime Slice Design
+
+Status: Accepted
+
+Decision:
+
+Phase 19.3 recommends Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice.
+
+Rationale:
+
+Phase 18 strengthened candidate regression protection and Phase 19.2 captured remaining static/test-only gaps. The safest active continuation is design-only work that defines a future slice and its gates before any runtime implementation is considered.
+
+Consequences:
+
+- Phase 20 is not approved by this recommendation.
+- Runtime implementation remains blocked.
+- Sparkbot, Robo-OS, and HumanInput runtime bridge work remain separate lanes.
+- Phil must explicitly approve Phase 20 before it starts.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
