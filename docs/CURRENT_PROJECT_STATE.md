@@ -330,6 +330,8 @@ Phase 27.1 Current Runtime/Test State Preservation Record is complete, merged to
 
 Phase 27.2 Gated Runtime Boundary Review is complete, merged to `main`, and tagged. It reviews the blocked runtime and integration boundaries without runtime changes.
 
+Phase 27.3 Next-Lane Risk Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 28 as a docs/tests/fixtures-only preservation status review without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
