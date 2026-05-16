@@ -6535,7 +6535,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-24-1-provenance-hardening-coverage-review`
+- complete
+- tagged as `phase-24.1-provenance-hardening-coverage-review`
 
 Reserved from Phase 3.4:
 

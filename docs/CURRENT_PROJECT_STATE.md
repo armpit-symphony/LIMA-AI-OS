@@ -294,7 +294,7 @@ Phase 23.5 Phase 23 Test-Only Hardening Archive / Closeout is complete, merged t
 
 Phase 24.0 Phase 23 Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
 
-Phase 24.1 Provenance Hardening Coverage Review is complete on branch `phase-24-1-provenance-hardening-coverage-review` pending merge. It confirms the Phase 23 provenance and candidate-invariant coverage without runtime changes.
+Phase 24.1 Provenance Hardening Coverage Review is complete, merged to `main`, and tagged. It confirms the Phase 23 provenance and candidate-invariant coverage without runtime changes.
 
 Latest completed phase merge:
 
