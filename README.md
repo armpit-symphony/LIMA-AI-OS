@@ -498,6 +498,8 @@ Phase 23.4 reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout. 
 
 Phase 23.5 archives Phase 23 as a completed test-only hardening lane and preserves Phase 24 as a docs/tests/fixtures-only next-lane decision gate. It changes no runtime code.
 
+Phase 24.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 test-only hardening package. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -4260,6 +4260,25 @@ Consequences:
 - Phase 5 HumanInput runtime bridge remains gated.
 - Phase 24 should be a docs/tests/fixtures-only audit/archive and next-lane decision phase if explicitly approved.
 
+## ADR-0227: Phase 24 Opens As Phase 23 Hardening Audit
+
+Status: Accepted
+
+Decision:
+
+Phase 24.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 test-only hardening package.
+
+Rationale:
+
+Phase 23 ended at a clean archive gate. Phase 24 may review coverage, gaps, and next-lane options without changing runtime code.
+
+Consequences:
+
+- Phase 24.0 changes no runtime files.
+- Phase 24.0 changes no `tests/support/` files.
+- Phase 24.1 may review provenance hardening coverage only.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

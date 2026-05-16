@@ -6488,6 +6488,30 @@ Status:
 - complete
 - tagged as `phase-23.5-phase-23-test-only-hardening-archive-closeout`
 
+## Phase 24.0 - Phase 23 Hardening Audit Charter
+
+Goal:
+
+Open the docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
+
+Deliverables:
+
+- `docs/PHASE_24_0_PHASE_23_HARDENING_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_24_0_phase_23_hardening_audit_charter.json`
+- `tests/test_phase_24_0_phase_23_hardening_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 23 hardening package is named as audit target
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-24-0-phase-23-hardening-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
