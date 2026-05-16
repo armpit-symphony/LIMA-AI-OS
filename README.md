@@ -568,6 +568,8 @@ Phase 30.2 implements the approved read-only runtime state inspection slice in `
 
 Phase 30.3 reviews the Phase 30.2 runtime state inspection boundary and confirms the slice remains deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free. It changes no runtime code.
 
+Phase 30.4 archives Phase 30 as the completed narrow read-only runtime state inspection slice and stops at the Phase 31 gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

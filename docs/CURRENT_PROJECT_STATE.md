@@ -362,6 +362,8 @@ Phase 30.2 Read-Only Runtime State Inspection Implementation is complete, merged
 
 Phase 30.3 Runtime State Inspection Boundary Regression Review is complete, merged to `main`, and tagged. It reviews the Phase 30.2 slice and confirms it remains inside the approved read-only, non-authoritative, non-executing boundary without runtime changes.
 
+Phase 30.4 Phase 30 Runtime Slice Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 30 as the completed read-only runtime state inspection slice and stops at the Phase 31 gate without new runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

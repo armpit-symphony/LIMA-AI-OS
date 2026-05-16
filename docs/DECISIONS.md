@@ -4855,6 +4855,26 @@ Consequences:
 - The only Phase 30.2 runtime files remain `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py`.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0262: Phase 30 Archives At A Phase 31 Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 30.4 archives Phase 30 as the completed narrow read-only runtime state inspection slice and stops at a Phase 31 docs/tests/fixtures-only audit/archive decision gate.
+
+Context:
+
+Phase 30 added the first runtime state inspection primitive while preserving non-execution, non-authority, no dispatch, no persistence, no Sparkbot wiring, no HumanInput bridge, no live adapter, and no physical-world behavior.
+
+Consequences:
+
+- Phase 30.4 changes no runtime files.
+- Phase 30.4 changes no `tests/support/` files.
+- Phase 30 runtime files touched were limited to `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py`.
+- Phase 31 is not approved without explicit Phil approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
