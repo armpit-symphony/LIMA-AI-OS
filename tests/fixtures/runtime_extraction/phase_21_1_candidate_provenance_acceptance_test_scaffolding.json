@@ -1,0 +1,35 @@
+{
+  "phase": "21.1",
+  "status": "candidate_provenance_acceptance_test_scaffolding",
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_21_1_CANDIDATE_PROVENANCE_ACCEPTANCE_TEST_SCAFFOLDING.md",
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_21_1_candidate_provenance_acceptance_cases.json",
+  "approved_future_runtime_files": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "acceptance_coverage": [
+    "valid_non_executing_candidate_preserves_provenance",
+    "missing_provenance_rejected_or_invalid",
+    "empty_provenance_rejected_or_invalid",
+    "non_mapping_provenance_rejected_or_invalid",
+    "suspicious_provenance_wording_no_bypass",
+    "stale_replayed_candidates_blocked_or_invalid",
+    "non_executing_invariants_preserved",
+    "forbidden_integrations_unreachable"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

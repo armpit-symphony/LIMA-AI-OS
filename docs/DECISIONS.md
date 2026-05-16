@@ -3962,6 +3962,25 @@ Consequences:
 - All other `lima/` files and `tests/support/` remain forbidden.
 - Implementation cannot begin until Phase 21.1 acceptance tests are scaffolded.
 
+## ADR-0211: Phase 21 Provenance Acceptance Tests Are Scaffolded
+
+Status: Accepted
+
+Decision:
+
+Phase 21.1 adds deterministic acceptance scaffolding for candidate provenance hardening before runtime implementation.
+
+Rationale:
+
+The Phase 20.3 acceptance plan requires proof that valid provenance is preserved, malformed or missing provenance fails closed, suspicious authority wording cannot bypass safety, stale or replayed candidates remain blocked or invalid, and forbidden integration or side-effect surfaces remain unreachable.
+
+Consequences:
+
+- Phase 21.1 changes no runtime files.
+- Phase 21.2 may begin only inside `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain forbidden.
+- HumanInput runtime bridge behavior, Sparkbot wiring, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

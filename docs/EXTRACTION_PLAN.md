@@ -5733,6 +5733,33 @@ Phase 20.2 is unambiguous. Future Phase 21 runtime work is limited to `lima/kern
 
 Continue only to Phase 21.1 candidate provenance acceptance test scaffolding.
 
+## Phase 21.1 Gate: Candidate Provenance Acceptance Test Scaffolding
+
+Phase 21.1 scaffolds deterministic acceptance coverage before candidate provenance hardening runtime changes.
+
+Allowed:
+
+- acceptance test scaffolding under `tests/`
+- synthetic Phase 21.1 fixtures under `tests/fixtures/runtime_extraction/`
+- phase documentation and project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 21.1 proves the existing non-executing candidate APIs preserve valid provenance and fail closed for missing, empty, non-mapping, suspicious, stale, or replayed provenance cases.
+
+Continue only to Phase 21.2 candidate provenance hardening runtime implementation inside `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
