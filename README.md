@@ -592,6 +592,8 @@ Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design revi
 
 Phase 33.0 opens the approved test-only hardening lane for the existing read-only `runtime_state` inspection slice and records the Phase 32 audit result.
 
+Phase 33.1 adds synthetic nested suspicious metadata fixtures for `runtime_state` hardening without changing runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

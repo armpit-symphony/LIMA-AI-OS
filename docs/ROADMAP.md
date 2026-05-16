@@ -7667,6 +7667,24 @@ Status:
 - complete
 - tagged as `phase-33.0-phase-32-test-only-hardening-audit-charter`
 
+## Phase 33.1 - Nested Suspicious Metadata Fixture Design
+
+Goal:
+
+- Add synthetic nested suspicious metadata fixtures for the existing read-only `runtime_state` inspection slice.
+- Cover nested authority wording, bridge claims, adapter claims, Sparkbot claims, external action claims, malformed nested metadata, and unknown nested values.
+
+Result:
+
+- Phase 33.1 fixture cases are caller-provided data only.
+- Runtime behavior is unchanged.
+- Phase 33.2 can use the fixtures for regression tests.
+
+Status:
+
+- complete
+- tagged as `phase-33.1-nested-suspicious-metadata-fixture-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

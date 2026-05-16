@@ -1,0 +1,34 @@
+{
+  "phase": "33.1",
+  "status": "nested_suspicious_metadata_fixture_design",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed": [],
+  "tests_support_changed": false,
+  "fixture_file": "tests/fixtures/runtime_extraction/phase_33_1_nested_suspicious_metadata_cases.json",
+  "coverage": [
+    "nested_authority_wording",
+    "nested_sparkbot_wiring_claim",
+    "nested_humaninput_bridge_claim",
+    "nested_live_adapter_claim",
+    "nested_shell_browser_network_file_mutation_claim",
+    "nested_robotics_physical_world_claim",
+    "nested_external_service_and_background_work_claim",
+    "malformed_nested_metadata",
+    "unknown_nested_values"
+  ],
+  "expected_safety": {
+    "non_authoritative": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approved": false,
+    "approval_state_never_approved": true,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "phase_5_humaninput_runtime_bridge_gated": true,
+    "sparkbot_wiring_present": false,
+    "humaninput_runtime_bridge_present": false,
+    "live_adapter_present": false
+  },
+  "next_phase": "33.2"
+}

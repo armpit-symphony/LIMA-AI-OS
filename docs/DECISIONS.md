@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0274: Phase 33 Uses Synthetic Nested Metadata Fixtures Only
+
+Status: Accepted
+
+Decision:
+
+Phase 33.1 adds synthetic caller-provided nested suspicious metadata fixtures for the existing read-only `runtime_state` inspection slice.
+
+Context:
+
+Phase 33 is test-only hardening. Runtime code changes are explicitly forbidden.
+
+Consequences:
+
+- Fixtures may model hostile-looking nested metadata claims.
+- Fixtures do not create behavior, authority, adapters, bridges, execution, dispatch, persistence, external calls, or physical-world action.
+- Phase 33.2 may use these fixtures for regression tests against existing runtime behavior.
+
 ## ADR-0273: Phase 33 Opens As Test-Only Runtime State Hardening
 
 Status: Accepted
