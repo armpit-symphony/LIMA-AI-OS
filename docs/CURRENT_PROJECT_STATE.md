@@ -236,27 +236,29 @@ Phase 18.4 Regression Hardening Readiness Review is complete, merged to `main`, 
 
 Phase 18.5 Phase 18 Regression Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 18 as completed test-only regression hardening work, preserves the Phase 19 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 19.0 Phase 18 Regression Hardening Audit Charter is complete, merged to `main`, and tagged. It opens Phase 19 as docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision work, audits Phase 18.0 through Phase 18.5, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`9772f69a9b6b1e887be96b15ca1bcf7d3f58d98f`
+`PENDING_PHASE_19_0_MERGE`
 
 Latest tag:
 
-`phase-18.5-phase-18-regression-hardening-archive-closeout`
+`phase-19.0-phase-18-regression-hardening-audit-charter`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop before Phase 19. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Continue only inside the approved Phase 19 docs/tests/fixtures-only acceptance-gate audit/archive lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-none - Phase 19 requires explicit Phil approval
+phase-19-1-regression-coverage-review
 
 Latest completed merge:
 
-`9772f69a9b6b1e887be96b15ca1bcf7d3f58d98f`
+`PENDING_PHASE_19_0_MERGE`
 
 Recommended PR target:
 
@@ -266,7 +268,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 19 - gated pending explicit Phil approval.
+Phase 19.1 - Regression Coverage Review.
 
 Phase 19 approval question:
 

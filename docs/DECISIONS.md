@@ -3733,6 +3733,27 @@ Consequences:
 - Phase 19 requires explicit Phil approval
 - runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
 
+## ADR-0199: Phase 19 Opens As Regression Hardening Audit Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 19.0 opens Phase 19 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase for the Phase 18 regression hardening package.
+
+Rationale:
+
+Phase 18 added test-only regression coverage. The next safe step is to audit that package, archive its coverage, identify remaining gaps, and recommend a future lane before any runtime expansion.
+
+Consequences:
+
+- Phase 19.0 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 20 remains unapproved
+- runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
