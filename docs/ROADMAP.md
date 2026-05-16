@@ -7519,6 +7519,31 @@ Status:
 - complete
 - tagged as `phase-31.4-phase-31-runtime-slice-audit-archive-closeout`
 
+## Phase 32.0 - Phase 31 Next-Slice Design Audit Charter
+
+Goal:
+
+Open the docs/tests/fixtures-only design review for the next narrow runtime slice and record the Phase 31 audit result.
+
+Deliverables:
+
+- `docs/PHASE_32_0_PHASE_31_NEXT_SLICE_DESIGN_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_32_0_phase_31_next_slice_design_audit_charter.json`
+- `tests/test_phase_32_0_phase_31_next_slice_design_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 31 audit result is recorded
+- Phase 32 remains design review only
+
+Status:
+
+- complete
+- tagged as `phase-32.0-phase-31-next-slice-design-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

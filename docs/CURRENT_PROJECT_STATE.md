@@ -374,6 +374,8 @@ Phase 31.3 Phase 32 Next-Lane Decision Matrix is complete, merged to `main`, and
 
 Phase 31.4 Phase 31 Runtime Slice Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and stops at the Phase 32 gate.
 
+Phase 32.0 Phase 31 Next-Slice Design Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only design review for the next narrow runtime slice and records the Phase 31 audit result.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

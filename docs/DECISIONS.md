@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0268: Phase 32 Opens As No-Code Next-Slice Design Review
+
+Status: Accepted
+
+Decision:
+
+Phase 32.0 opens the docs/tests/fixtures-only design review for the next narrow runtime slice after the completed Phase 30 read-only runtime state inspection slice.
+
+Context:
+
+Phase 31 archived the Phase 30 runtime slice audit and recommended a no-code design review rather than immediate implementation.
+
+Consequences:
+
+- Phase 32.0 changes no runtime files.
+- Phase 32.0 changes no `tests/support/` files.
+- Phase 32 is not runtime implementation approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
