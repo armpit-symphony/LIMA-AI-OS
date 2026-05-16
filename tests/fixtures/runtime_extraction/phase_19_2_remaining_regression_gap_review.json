@@ -1,0 +1,37 @@
+{
+  "phase": "19.2",
+  "status": "remaining_regression_gap_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_19_2_REMAINING_REGRESSION_GAP_REVIEW.md",
+  "remaining_gaps": [
+    "no_new_runtime_slice_defined",
+    "static_tests_are_not_runtime_monitors",
+    "synthetic_fixtures_do_not_exercise_live_adapters_or_external_services",
+    "future_integration_behavior_requires_separate_design",
+    "phase_5_humaninput_runtime_bridge_remains_gated",
+    "sparkbot_and_robo_os_boundaries_remain_separate_planning_topics"
+  ],
+  "gap_treatment": [
+    "do_not_proceed_directly_to_runtime_expansion",
+    "allow_future_no_code_design_lane_if_explicitly_approved",
+    "allow_additional_test_only_hardening_if_prioritized",
+    "keep_sparkbot_and_robo_os_boundary_planning_separate"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_20_approved": false
+  }
+}
