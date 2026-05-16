@@ -4584,6 +4584,25 @@ Consequences:
 - Runtime behavior remains unchanged.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 27.1 records the current known-good runtime/test state as a preservation record.
+
+Context:
+
+The existing small runtime slice remains non-executing and guarded by accumulated deterministic offline tests. Preserving this state creates a clean pause before any future expansion decision.
+
+Consequences:
+
+- Phase 27.1 changes no runtime files.
+- Phase 27.1 changes no `tests/support/` files.
+- Runtime behavior remains unchanged.
+- Future expansion still requires explicit Phil approval.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

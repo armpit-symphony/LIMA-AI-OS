@@ -532,6 +532,8 @@ Phase 26.4 archives Phase 26 as a completed docs/tests/fixtures-only audit/archi
 
 Phase 27.0 opens the approved docs/tests/fixtures-only preservation and roadmap decision lane after the Phase 26 archive. It changes no runtime code.
 
+Phase 27.1 records the current known-good runtime/test state and preserves the constrained non-executing candidate APIs before any future expansion decision. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
