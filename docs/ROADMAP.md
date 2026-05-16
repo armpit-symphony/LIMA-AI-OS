@@ -6638,6 +6638,30 @@ Status:
 - complete
 - tagged as `phase-25.0-cross-api-candidate-invariant-matrix-charter`
 
+## Phase 25.1 - Candidate API Matrix Fixtures
+
+Goal:
+
+Add synthetic fixtures for the cross-API candidate invariant matrix.
+
+Deliverables:
+
+- `docs/PHASE_25_1_CANDIDATE_API_MATRIX_FIXTURES.md`
+- `tests/fixtures/runtime_extraction/phase_25_1_candidate_api_matrix_cases.json`
+- `tests/fixtures/runtime_extraction/phase_25_1_candidate_api_matrix_fixtures.json`
+- `tests/test_phase_25_1_candidate_api_matrix_fixtures.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- matrix cases cover valid, malformed, suspicious, stale, replayed, risky, and bypass-wording scenarios
+
+Status:
+
+- complete on branch `phase-25-1-candidate-api-matrix-fixtures`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

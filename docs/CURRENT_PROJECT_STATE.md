@@ -304,6 +304,8 @@ Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete, merged to `m
 
 Phase 25.0 Cross-API Candidate Invariant Matrix Charter is complete, merged to `main`, and tagged. It opens the approved test-only hardening lane without runtime changes.
 
+Phase 25.1 Candidate API Matrix Fixtures is complete on branch `phase-25-1-candidate-api-matrix-fixtures` pending merge. It adds synthetic matrix fixtures without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -316,7 +318,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 25 test-only hardening lane. Phase 25.1 may add synthetic matrix fixtures only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 25 test-only hardening lane. Phase 25.2 may add cross-API non-execution invariant tests only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -334,7 +336,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 25.1 - Candidate API Matrix Fixtures.
+Phase 25.2 - Cross-API Non-Execution Invariant Tests.
 
 Phase 21 approval question:
 

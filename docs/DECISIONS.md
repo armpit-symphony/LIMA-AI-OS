@@ -4374,6 +4374,25 @@ Consequences:
 - Phase 25.1 may add synthetic matrix fixtures only.
 - Runtime expansion remains blocked.
 
+## ADR-0233: Candidate API Matrix Fixtures Are Synthetic And Test-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 25.1 adds synthetic fixtures for the cross-API candidate invariant matrix.
+
+Rationale:
+
+Future hardening tests need deterministic offline cases before adding cross-API assertions.
+
+Consequences:
+
+- Phase 25.1 changes no runtime files.
+- Phase 25.1 changes no `tests/support/` files.
+- Fixtures do not approve runtime expansion.
+- Phase 25.2 may add cross-API non-execution invariant tests only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
