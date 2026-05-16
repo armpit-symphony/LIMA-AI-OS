@@ -240,7 +240,7 @@ Phase 19.0 Phase 18 Regression Hardening Audit Charter is complete, merged to `m
 
 Latest completed phase merge:
 
-`PENDING_PHASE_19_0_MERGE`
+`d2e4d37f759c94aefb716adbf0e0ff5d8bf6c9a3`
 
 Latest tag:
 
@@ -258,7 +258,7 @@ phase-19-1-regression-coverage-review
 
 Latest completed merge:
 
-`PENDING_PHASE_19_0_MERGE`
+`d2e4d37f759c94aefb716adbf0e0ff5d8bf6c9a3`
 
 Recommended PR target:
 
