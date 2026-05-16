@@ -6510,7 +6510,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-24-0-phase-23-hardening-audit-charter`
+- complete
+- tagged as `phase-24.0-phase-23-hardening-audit-charter`
 
 Reserved from Phase 3.4:
 

@@ -292,7 +292,7 @@ Phase 23.4 Provenance Hardening Readiness Review is complete, merged to `main`, 
 
 Phase 23.5 Phase 23 Test-Only Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 23 as test-only hardening and preserves Phase 24 as a docs/tests/fixtures-only next-lane decision gate.
 
-Phase 24.0 Phase 23 Hardening Audit Charter is complete on branch `phase-24-0-phase-23-hardening-audit-charter` pending merge. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
+Phase 24.0 Phase 23 Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
 
 Latest completed phase merge:
 
