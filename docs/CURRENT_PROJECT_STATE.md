@@ -238,7 +238,7 @@ Phase 18.5 Phase 18 Regression Hardening Archive / Closeout is complete, merged 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_5_MERGE`
+`9772f69a9b6b1e887be96b15ca1bcf7d3f58d98f`
 
 Latest tag:
 
@@ -256,7 +256,7 @@ none - Phase 19 requires explicit Phil approval
 
 Latest completed merge:
 
-`PENDING_PHASE_18_5_MERGE`
+`9772f69a9b6b1e887be96b15ca1bcf7d3f58d98f`
 
 Recommended PR target:
 
