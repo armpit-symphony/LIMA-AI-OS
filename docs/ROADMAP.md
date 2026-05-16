@@ -7316,6 +7316,34 @@ Status:
 - complete
 - tagged as `phase-30.1-read-only-runtime-state-inspection-acceptance-design`
 
+## Phase 30.2 - Read-Only Runtime State Inspection Implementation
+
+Goal:
+
+Implement the approved narrow read-only runtime state inspection slice.
+
+Deliverables:
+
+- `lima/kernel/runtime_state.py`
+- safe public export in `lima/kernel/__init__.py`
+- `docs/PHASE_30_2_READ_ONLY_RUNTIME_STATE_INSPECTION_IMPLEMENTATION.md`
+- `tests/fixtures/runtime_extraction/phase_30_2_read_only_runtime_state_inspection_cases.json`
+- `tests/fixtures/runtime_extraction/phase_30_2_read_only_runtime_state_inspection_implementation.json`
+- `tests/test_phase_30_2_read_only_runtime_state_inspection_implementation.py`
+
+Acceptance criteria:
+
+- implementation is deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free
+- no forbidden runtime files are changed
+- no `tests/support/` changes
+- no Sparkbot wiring, HumanInput bridge, live adapter, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-30.2-read-only-runtime-state-inspection-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
