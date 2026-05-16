@@ -274,7 +274,7 @@ Phase 22.0 Post-Phase-21 Runtime Slice Audit Charter is complete on branch `phas
 
 Latest completed phase merge:
 
-`PENDING_PHASE_22_0_MERGE`
+`83407463cd1da4809361aa01c6788ba7822ebfe3`
 
 Latest tag:
 
@@ -292,7 +292,7 @@ phase-22-1-candidate-provenance-coverage-review
 
 Latest completed merge:
 
-`PENDING_PHASE_22_0_MERGE`
+`83407463cd1da4809361aa01c6788ba7822ebfe3`
 
 Recommended PR target:
 
