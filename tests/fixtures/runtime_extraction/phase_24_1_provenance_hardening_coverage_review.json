@@ -1,0 +1,37 @@
+{
+  "phase": "24.1",
+  "status": "provenance_hardening_coverage_review",
+  "runtime_code_modified": false,
+  "confirmed_coverage": [
+    "valid_provenance_preserved",
+    "missing_provenance_fail_closed",
+    "malformed_provenance_fail_closed",
+    "stale_provenance_fail_closed",
+    "replayed_provenance_fail_closed",
+    "suspicious_provenance_authority_claims_fail_closed",
+    "risky_attempt_metadata_non_executing",
+    "bypass_wording_does_not_bypass_safety",
+    "execution_allowed_remains_false",
+    "side_effects_allowed_remains_false",
+    "approval_state_never_approved"
+  ],
+  "coverage_limitations": [
+    "deterministic_offline_tests_only",
+    "does_not_approve_runtime_expansion",
+    "does_not_add_runtime_behavior"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

@@ -294,6 +294,8 @@ Phase 23.5 Phase 23 Test-Only Hardening Archive / Closeout is complete, merged t
 
 Phase 24.0 Phase 23 Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
 
+Phase 24.1 Provenance Hardening Coverage Review is complete on branch `phase-24-1-provenance-hardening-coverage-review` pending merge. It confirms the Phase 23 provenance and candidate-invariant coverage without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -306,7 +308,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 24 docs/tests/fixtures-only audit/archive lane. Phase 24.1 may review provenance hardening coverage only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 24 docs/tests/fixtures-only audit/archive lane. Phase 24.2 may review remaining candidate invariant gaps only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -324,7 +326,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 24.1 - Provenance Hardening Coverage Review.
+Phase 24.2 - Remaining Candidate Invariant Gap Review.
 
 Phase 21 approval question:
 

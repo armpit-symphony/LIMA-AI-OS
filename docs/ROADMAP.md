@@ -6513,6 +6513,30 @@ Status:
 - complete
 - tagged as `phase-24.0-phase-23-hardening-audit-charter`
 
+## Phase 24.1 - Provenance Hardening Coverage Review
+
+Goal:
+
+Review the Phase 23 provenance and candidate-invariant coverage.
+
+Deliverables:
+
+- `docs/PHASE_24_1_PROVENANCE_HARDENING_COVERAGE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_24_1_provenance_hardening_coverage_review.json`
+- `tests/test_phase_24_1_provenance_hardening_coverage_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 23 coverage is summarized
+- coverage limitations remain static/test-only
+
+Status:
+
+- complete on branch `phase-24-1-provenance-hardening-coverage-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

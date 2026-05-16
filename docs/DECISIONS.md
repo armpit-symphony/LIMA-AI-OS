@@ -4279,6 +4279,25 @@ Consequences:
 - Phase 24.1 may review provenance hardening coverage only.
 - Runtime expansion remains blocked.
 
+## ADR-0228: Phase 23 Coverage Is Confirmed As Test-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 24.1 confirms Phase 23 coverage for provenance preservation, malformed/suspicious/stale/replayed provenance, bypass wording resistance, and non-executing candidate invariants.
+
+Rationale:
+
+The Phase 24 audit must separate confirmed test coverage from any implication of runtime approval.
+
+Consequences:
+
+- Phase 24.1 changes no runtime files.
+- Phase 24.1 changes no `tests/support/` files.
+- Coverage remains deterministic and offline.
+- Phase 24.2 may review remaining candidate invariant gaps only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

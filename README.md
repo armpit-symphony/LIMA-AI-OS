@@ -500,6 +500,8 @@ Phase 23.5 archives Phase 23 as a completed test-only hardening lane and preserv
 
 Phase 24.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 test-only hardening package. It changes no runtime code.
 
+Phase 24.1 reviews Phase 23 provenance and candidate-invariant coverage as deterministic offline test protection. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

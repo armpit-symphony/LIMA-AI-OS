@@ -6204,6 +6204,33 @@ Blocked:
 
 Continue only to Phase 24.1 provenance hardening coverage review.
 
+## Phase 24.1 Gate: Provenance Hardening Coverage Review
+
+Phase 24.1 reviews the Phase 23 provenance and candidate-invariant coverage.
+
+Allowed:
+
+- Phase 24.1 tests
+- Phase 24.1 fixture metadata
+- Phase 24.1 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 24.2 remaining candidate invariant gap review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
