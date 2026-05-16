@@ -3849,6 +3849,24 @@ Consequences:
 - `lima/` and `tests/support/` remain untouched.
 - Phase 21 remains unapproved.
 
+## ADR-0205: Recommend Candidate Provenance Hardening For Phase 21
+
+Status: Accepted
+
+Decision:
+
+Phase 20.1 recommends candidate provenance hardening as the single future runtime slice to carry forward to file-touch mapping and acceptance planning.
+
+Rationale:
+
+Provenance is already required by existing non-executing candidate APIs, supports auditability, and can be narrowed to validation/normalization semantics without adding execution, dispatch, approval enforcement, Sparkbot wiring, or HumanInput runtime bridge behavior.
+
+Consequences:
+
+- Lifecycle metadata, replay/staleness marker normalization, error taxonomy, pause/preserve, and Sparkbot boundary planning are not selected for the Phase 21 runtime approval question.
+- Phase 21 remains unapproved.
+- The next step is exact future file-touch mapping.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

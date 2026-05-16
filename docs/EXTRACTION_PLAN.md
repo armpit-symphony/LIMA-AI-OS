@@ -5585,6 +5585,35 @@ Phase 20 opens with candidate slice options but does not choose or implement a r
 
 Continue only to Phase 20.1 next runtime slice options review.
 
+## Phase 20.1 Gate: Next Runtime Slice Options Review
+
+Phase 20.1 may compare candidate slice options and recommend one future slice without implementing it.
+
+Allowed:
+
+- options review documentation
+- static options review fixture metadata
+- static options review tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Candidate provenance hardening is the recommended future slice because provenance is already required, non-executing, and audit-relevant.
+
+Continue only to Phase 20.2 exact file-touch map for candidate slice.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

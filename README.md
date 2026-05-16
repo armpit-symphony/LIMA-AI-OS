@@ -454,6 +454,8 @@ Phase 19.4 archives Phase 19 as complete and preserves the exact Phase 20 approv
 
 Phase 20.0 opens Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, using Phase 18 regression coverage and Phase 19 audit findings without modifying runtime code.
 
+Phase 20.1 compares next-slice options and recommends candidate provenance hardening as the only future runtime slice to carry forward, without approving Phase 21 or implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

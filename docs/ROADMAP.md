@@ -5913,6 +5913,35 @@ Status:
 - complete
 - tagged as `phase-20.0-post-regression-runtime-slice-design-charter`
 
+## Phase 20.1 - Next Runtime Slice Options Review
+
+Goal:
+
+Compare next runtime slice options and recommend exactly one future slice or no runtime work.
+
+Deliverables:
+
+- `docs/PHASE_20_1_NEXT_RUNTIME_SLICE_OPTIONS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_20_1_next_runtime_slice_options_review.json`
+- `tests/test_phase_20_1_next_runtime_slice_options_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- all candidate slice options are reviewed
+- exactly one future runtime slice is recommended
+- Phase 5 runtime bridge remains gated
+- Phase 21 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-20.1-next-runtime-slice-options-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
