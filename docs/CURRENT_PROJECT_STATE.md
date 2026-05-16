@@ -390,6 +390,8 @@ Phase 33.1 Nested Suspicious Metadata Fixture Design is complete, merged to `mai
 
 Phase 33.2 Runtime State Nested Metadata Regression Tests is complete, merged to `main`, and tagged. It adds regression tests proving nested suspicious metadata remains safe under the existing `inspect_runtime_state` API without runtime code changes.
 
+Phase 33.3 Phase 34 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 34 as docs/tests/fixtures-only audit/archive for Phase 33 hardening rather than runtime implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0276: Phase 34 Should Archive Phase 33 Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 33.3 recommends Phase 34 as docs/tests/fixtures-only audit/archive for the completed Phase 33 `runtime_state` hardening package.
+
+Context:
+
+Phase 33.2 added nested metadata regression coverage and found no concrete runtime_state gap requiring runtime changes.
+
+Consequences:
+
+- Immediate runtime implementation is not recommended.
+- Phase 34 should audit and archive Phase 33 before any later design or runtime decision.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0275: Phase 33 Nested Metadata Regression Found No Runtime Gap
 
 Status: Accepted

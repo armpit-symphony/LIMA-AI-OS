@@ -596,6 +596,8 @@ Phase 33.1 adds synthetic nested suspicious metadata fixtures for `runtime_state
 
 Phase 33.2 adds regression tests proving nested suspicious metadata remains deterministic, read-only, non-authoritative, non-executing, and side-effect free under the existing `runtime_state` API.
 
+Phase 33.3 recommends Phase 34 as docs/tests/fixtures-only audit/archive for the Phase 33 hardening package, not runtime implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
