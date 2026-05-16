@@ -7065,6 +7065,31 @@ Status:
 - complete
 - tagged as `phase-28.1-stable-runtime-test-state-review`
 
+## Phase 28.2 - Preservation Pause Justification Review
+
+Goal:
+
+Review whether continued preservation pause is still justified.
+
+Deliverables:
+
+- `docs/PHASE_28_2_PRESERVATION_PAUSE_JUSTIFICATION_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_28_2_preservation_pause_justification_review.json`
+- `tests/test_phase_28_2_preservation_pause_justification_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- continued pause is not recommended without a specific documented risk
+- Phase 29 direction remains no-code unless explicitly approved later
+
+Status:
+
+- complete
+- tagged as `phase-28.2-preservation-pause-justification-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
