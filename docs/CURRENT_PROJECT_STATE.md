@@ -324,6 +324,8 @@ Phase 26.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. 
 
 Phase 26.4 Phase 26 Cross-API Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 26 and preserves Phase 27 as a gated docs/tests/fixtures-only preservation and roadmap decision lane.
 
+Phase 27.0 Phase 26 Preservation Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only preservation and roadmap decision lane without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
