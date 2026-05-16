@@ -562,6 +562,8 @@ Phase 29.4 archives Phase 29 as a completed docs/tests/fixtures-only no-code des
 
 Phase 30.0 opens the explicitly approved narrow runtime implementation lane by auditing Phase 29 and confirming the allowed runtime scope before runtime files are touched. It changes no runtime code.
 
+Phase 30.1 defines acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

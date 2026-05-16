@@ -4797,6 +4797,25 @@ Consequences:
 - `lima/kernel/intake_candidate.py`, `lima/kernel/candidate_status.py`, and all other existing `lima/` files remain forbidden.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0259: Runtime State Inspection Requires Acceptance Tests First
+
+Status: Accepted
+
+Decision:
+
+Phase 30.1 defines acceptance and regression coverage for read-only runtime state inspection before implementation.
+
+Context:
+
+The approved Phase 30 runtime slice is intentionally tiny, but it still touches runtime code later in the lane. Test obligations must be explicit before the runtime module is introduced.
+
+Consequences:
+
+- Phase 30.1 changes no runtime files.
+- Phase 30.1 changes no `tests/support/` files.
+- Phase 30.2 must prove deterministic, local-only, read-only, non-authoritative, non-executing, side-effect-free behavior.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted

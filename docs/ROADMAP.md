@@ -7291,6 +7291,31 @@ Status:
 - complete
 - tagged as `phase-30.0-phase-29-runtime-implementation-audit-charter`
 
+## Phase 30.1 - Read-Only Runtime State Inspection Acceptance Design
+
+Goal:
+
+Define acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation.
+
+Deliverables:
+
+- `docs/PHASE_30_1_READ_ONLY_RUNTIME_STATE_INSPECTION_ACCEPTANCE_DESIGN.md`
+- `tests/fixtures/runtime_extraction/phase_30_1_read_only_runtime_state_inspection_acceptance_design.json`
+- `tests/test_phase_30_1_read_only_runtime_state_inspection_acceptance_design.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- required runtime contract is explicit
+- required test families and synthetic fixtures are listed
+
+Status:
+
+- complete
+- tagged as `phase-30.1-read-only-runtime-state-inspection-acceptance-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

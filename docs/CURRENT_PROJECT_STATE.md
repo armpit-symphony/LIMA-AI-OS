@@ -356,6 +356,8 @@ Phase 29.4 Phase 29 No-Code Design Review Archive / Closeout is complete, merged
 
 Phase 30.0 Phase 29 Runtime Implementation Audit Charter is complete, merged to `main`, and tagged. It audits Phase 29 and confirms the approved Phase 30 read-only runtime state inspection scope before runtime files are touched.
 
+Phase 30.1 Read-Only Runtime State Inspection Acceptance Design is complete, merged to `main`, and tagged. It defines acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

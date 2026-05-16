@@ -7047,6 +7047,35 @@ Forbidden:
 
 Continue only to Phase 30.1 read-only runtime state inspection acceptance design.
 
+## Phase 30.1 Gate: Read-Only Runtime State Inspection Acceptance Design
+
+Phase 30.1 defines acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation.
+
+Allowed:
+
+- Phase 30.1 tests
+- Phase 30.1 fixture metadata
+- Phase 30.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 30.2 read-only runtime state inspection implementation.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
