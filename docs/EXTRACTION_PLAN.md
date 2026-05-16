@@ -6177,6 +6177,33 @@ Blocked:
 
 Stop after Phase 23.5. Phase 24 requires explicit approval.
 
+## Phase 24.0 Gate: Phase 23 Hardening Audit Charter
+
+Phase 24.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 package.
+
+Allowed:
+
+- Phase 24.0 tests
+- Phase 24.0 fixture metadata
+- Phase 24.0 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 24.1 provenance hardening coverage review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
