@@ -6906,6 +6906,33 @@ Forbidden:
 
 Continue only to Phase 29.1 narrow runtime slice candidate inventory.
 
+## Phase 29.1 Gate: Narrow Runtime Slice Candidate Inventory
+
+Phase 29.1 inventories candidate future runtime slices and recommends the safest candidate for no-code boundary design.
+
+Allowed:
+
+- Phase 29.1 tests
+- Phase 29.1 fixture metadata
+- Phase 29.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 29.2 runtime slice safety boundary design.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

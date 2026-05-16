@@ -346,6 +346,8 @@ Phase 28.4 Phase 28 Preservation Status Archive / Closeout is complete, merged t
 
 Phase 29.0 Phase 28 No-Code Design Review Audit Charter is complete, merged to `main`, and tagged. It opens the approved no-code design review lane without runtime changes.
 
+Phase 29.1 Narrow Runtime Slice Candidate Inventory is complete, merged to `main`, and tagged. It recommends a future read-only runtime state inspection slice for detailed no-code boundary design.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
