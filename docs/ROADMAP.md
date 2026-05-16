@@ -7369,6 +7369,31 @@ Status:
 - complete
 - tagged as `phase-30.3-runtime-state-inspection-boundary-regression-review`
 
+## Phase 30.4 - Phase 30 Runtime Slice Archive / Closeout
+
+Goal:
+
+Archive Phase 30 as the completed narrow read-only runtime state inspection slice and preserve the Phase 31 gate.
+
+Deliverables:
+
+- `docs/PHASE_30_4_PHASE_30_RUNTIME_SLICE_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_30_4_phase_30_runtime_slice_archive_closeout.json`
+- `tests/test_phase_30_4_phase_30_runtime_slice_archive_closeout.py`
+
+Acceptance criteria:
+
+- no new runtime changes
+- no `lima/` changes in Phase 30.4
+- no `tests/support/` changes
+- Phase 30.0 through Phase 30.3 are archived
+- Phase 31 requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-30.4-phase-30-runtime-slice-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
