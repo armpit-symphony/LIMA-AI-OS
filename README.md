@@ -504,6 +504,8 @@ Phase 24.1 reviews Phase 23 provenance and candidate-invariant coverage as deter
 
 Phase 24.2 identifies remaining provenance and candidate-invariant gaps as planning inputs only. It changes no runtime code.
 
+Phase 24.3 recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

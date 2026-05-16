@@ -298,6 +298,8 @@ Phase 24.1 Provenance Hardening Coverage Review is complete, merged to `main`, a
 
 Phase 24.2 Remaining Candidate Invariant Gap Review is complete, merged to `main`, and tagged. It identifies remaining gaps as planning inputs only without runtime changes.
 
+Phase 24.3 Next-Lane Decision Matrix is complete on branch `phase-24-3-next-lane-decision-matrix` pending merge. It recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -310,7 +312,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 24 docs/tests/fixtures-only audit/archive lane. Phase 24.3 may evaluate next-lane options only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 24 docs/tests/fixtures-only audit/archive lane. Phase 24.4 may archive Phase 24 and preserve the Phase 25 gate only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -328,7 +330,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 24.3 - Next-Lane Decision Matrix.
+Phase 24.4 - Phase 24 Hardening Audit Archive / Closeout.
 
 Phase 21 approval question:
 

@@ -6563,6 +6563,30 @@ Status:
 - complete
 - tagged as `phase-24.2-remaining-candidate-invariant-gap-review`
 
+## Phase 24.3 - Next-Lane Decision Matrix
+
+Goal:
+
+Evaluate Phase 25 options and recommend exactly one next direction.
+
+Deliverables:
+
+- `docs/PHASE_24_3_NEXT_LANE_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_24_3_next_lane_decision_matrix.json`
+- `tests/test_phase_24_3_next_lane_decision_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- all recommended Phase 25 options are evaluated
+- exactly one Phase 25 direction is recommended
+
+Status:
+
+- complete on branch `phase-24-3-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
