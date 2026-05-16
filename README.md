@@ -552,6 +552,8 @@ Phase 28.4 archives Phase 28 as a completed preservation status review and prese
 
 Phase 29.0 opens the approved docs/tests/fixtures-only no-code design review for the next narrow runtime slice. It changes no runtime code.
 
+Phase 29.1 recommends a future read-only runtime state inspection slice as the safest next narrow runtime candidate for detailed no-code boundary design. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

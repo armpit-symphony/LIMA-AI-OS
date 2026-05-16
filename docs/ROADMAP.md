@@ -7166,6 +7166,31 @@ Status:
 - complete
 - tagged as `phase-29.0-phase-28-no-code-design-review-audit-charter`
 
+## Phase 29.1 - Narrow Runtime Slice Candidate Inventory
+
+Goal:
+
+Inventory candidate future runtime slices and recommend the safest candidate for design review.
+
+Deliverables:
+
+- `docs/PHASE_29_1_NARROW_RUNTIME_SLICE_CANDIDATE_INVENTORY.md`
+- `tests/fixtures/runtime_extraction/phase_29_1_narrow_runtime_slice_candidate_inventory.json`
+- `tests/test_phase_29_1_narrow_runtime_slice_candidate_inventory.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- candidate slice options are evaluated
+- exactly one future slice is recommended for boundary design
+
+Status:
+
+- complete
+- tagged as `phase-29.1-narrow-runtime-slice-candidate-inventory`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

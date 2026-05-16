@@ -4699,6 +4699,25 @@ Consequences:
 - Phase 29 is not runtime implementation approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0254: Read-Only Runtime State Inspection Is The Safest Candidate Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 29.1 recommends a future read-only runtime state inspection slice as the safest candidate for detailed no-code boundary design.
+
+Context:
+
+HumanInput bridge behavior, GuardianDecision runtime behavior, status semantic expansion, Sparkbot integration, and physical-world behavior remain gated. A read-only local inspection slice offers useful observability without authority.
+
+Consequences:
+
+- Phase 29.1 changes no runtime files.
+- Phase 29.1 changes no `tests/support/` files.
+- The recommendation is not runtime implementation approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
