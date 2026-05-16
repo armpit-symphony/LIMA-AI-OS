@@ -480,6 +480,8 @@ Phase 22.0 opens the approved docs/tests/fixtures-only no-code decision lane aft
 
 Phase 22.1 reviews candidate provenance coverage and identifies test-only gaps for nested provenance and static guardrails. It adds no runtime behavior.
 
+Phase 22.2 reviews remaining safety gaps and finds they are best handled by test-only hardening before any future runtime expansion.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

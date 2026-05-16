@@ -6264,6 +6264,30 @@ Status:
 - complete
 - tagged as `phase-22.1-candidate-provenance-coverage-review`
 
+## Phase 22.2 - Remaining Safety Gap Review
+
+Goal:
+
+Review remaining safety gaps after Phase 21 and the Phase 22.1 coverage review.
+
+Deliverables:
+
+- `docs/PHASE_22_2_REMAINING_SAFETY_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_22_2_remaining_safety_gap_review.json`
+- `tests/test_phase_22_2_remaining_safety_gap_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- remaining gaps are identified as test or planning gaps
+- no immediate runtime work is recommended
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-22.2-remaining-safety-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
