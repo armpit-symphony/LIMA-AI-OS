@@ -4488,6 +4488,25 @@ Consequences:
 - Phase 26.1 may review cross-API invariant coverage only.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0239: Phase 26 Confirms Cross-API Invariant Coverage
+
+Status: Accepted
+
+Decision:
+
+Phase 26.1 confirms that Phase 25 strengthened deterministic offline coverage across candidate construction, candidate status normalization, candidate validation, and provenance hardening.
+
+Context:
+
+The Phase 26 audit needs a coverage checkpoint before identifying remaining gaps or recommending a Phase 27 direction.
+
+Consequences:
+
+- Phase 26.1 changes no runtime files.
+- Phase 26.1 changes no `tests/support/` files.
+- Phase 26.2 may review remaining cross-API gaps only.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

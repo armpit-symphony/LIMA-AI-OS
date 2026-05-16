@@ -6501,6 +6501,33 @@ Forbidden:
 
 Continue only to Phase 26.1 cross-API invariant coverage review.
 
+## Phase 26.1 Gate: Cross-API Invariant Coverage Review
+
+Phase 26.1 reviews Phase 25 coverage across existing candidate-facing APIs.
+
+Allowed:
+
+- Phase 26.1 tests
+- Phase 26.1 fixture metadata
+- Phase 26.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 26.2 remaining cross-API gap review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

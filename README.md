@@ -522,6 +522,8 @@ Phase 25.5 archives Phase 25 as a completed test-only cross-API candidate invari
 
 Phase 26.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision lane for the Phase 25 cross-API candidate invariant hardening package. It changes no runtime code.
 
+Phase 26.1 reviews Phase 25 cross-API candidate invariant coverage across construction, status normalization, validation, and provenance hardening. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
