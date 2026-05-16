@@ -570,6 +570,8 @@ Phase 30.3 reviews the Phase 30.2 runtime state inspection boundary and confirms
 
 Phase 30.4 archives Phase 30 as the completed narrow read-only runtime state inspection slice and stops at the Phase 31 gate. It changes no runtime code.
 
+Phase 31.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 30 runtime slice and records the Phase 30 audit result. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

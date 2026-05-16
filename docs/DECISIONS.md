@@ -4875,6 +4875,25 @@ Consequences:
 - Phase 31 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0263: Phase 31 Opens As Runtime Slice Audit Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 31.0 opens the docs/tests/fixtures-only audit/archive and next-lane decision lane for the completed Phase 30 read-only runtime state inspection slice.
+
+Context:
+
+Phase 30 was the first narrow runtime implementation slice. The next step must audit and archive that runtime touch before considering any additional lane.
+
+Consequences:
+
+- Phase 31.0 changes no runtime files.
+- Phase 31.0 changes no `tests/support/` files.
+- Phase 31 forbids new `lima/` changes, including `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py`.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted

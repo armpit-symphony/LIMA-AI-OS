@@ -7166,6 +7166,35 @@ Forbidden:
 
 Stop after Phase 30.4. Phase 31 requires explicit Phil approval.
 
+## Phase 31.0 Gate: Phase 30 Runtime Slice Audit Charter
+
+Phase 31.0 opens the docs/tests/fixtures-only audit/archive and next-lane decision phase for the completed Phase 30 runtime slice.
+
+Allowed:
+
+- Phase 31.0 tests
+- Phase 31.0 fixture metadata
+- Phase 31.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 31.1 read-only runtime state boundary evidence review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
