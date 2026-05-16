@@ -460,6 +460,8 @@ Phase 20.2 defines the exact future file-touch map for that candidate provenance
 
 Phase 20.3 defines future acceptance tests and rollback/audit proof for the candidate provenance slice, while still not implementing those tests or touching runtime code.
 
+Phase 20.4 archives Phase 20 as a completed no-code design lane and preserves the exact Phase 21 approval question for a narrow candidate provenance hardening runtime slice. Phase 21 remains unapproved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

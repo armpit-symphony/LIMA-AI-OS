@@ -5673,6 +5673,36 @@ Future Phase 21 must prove provenance validation/normalization, non-executing in
 
 Continue only to Phase 20.4 runtime slice approval gate / closeout.
 
+## Phase 20.4 Gate: Phase 20 Runtime Slice Approval Gate / Closeout
+
+Phase 20.4 may archive Phase 20 and preserve the Phase 21 approval question.
+
+Allowed:
+
+- approval gate closeout documentation
+- static approval gate fixture metadata
+- static approval gate tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- actual future acceptance-test implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 20 is archived as no-code design only. Phase 21 remains unapproved and must not begin without explicit Phil approval.
+
+Stop for explicit Phil decision before Phase 21.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
