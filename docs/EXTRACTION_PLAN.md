@@ -6825,6 +6825,33 @@ Forbidden:
 
 Continue only to Phase 28.3 Phase 29 decision readiness matrix.
 
+## Phase 28.3 Gate: Phase 29 Decision Readiness Matrix
+
+Phase 28.3 recommends Phase 29 as a docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
+
+Allowed:
+
+- Phase 28.3 tests
+- Phase 28.3 fixture metadata
+- Phase 28.3 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 28.4 preservation status archive/closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
