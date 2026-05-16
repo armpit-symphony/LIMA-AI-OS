@@ -4469,6 +4469,25 @@ Consequences:
 - Phase 5 HumanInput runtime bridge remains gated.
 - Phase 26 should be docs/tests/fixtures-only audit/archive and next-lane decision if explicitly approved.
 
+## ADR-0238: Phase 26 Opens As Phase 25 Cross-API Invariant Audit
+
+Status: Accepted
+
+Decision:
+
+Phase 26.0 opens the approved docs/tests/fixtures-only audit/archive and next-lane decision lane for the Phase 25 cross-API candidate invariant hardening package.
+
+Context:
+
+Phase 25 ended at a clean test-only archive gate. Phase 26 may audit coverage, review remaining gaps, and select a Phase 27 direction without changing runtime code.
+
+Consequences:
+
+- Phase 26.0 changes no runtime files.
+- Phase 26.0 changes no `tests/support/` files.
+- Phase 26.1 may review cross-API invariant coverage only.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

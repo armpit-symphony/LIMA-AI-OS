@@ -6763,6 +6763,31 @@ Status:
 - complete
 - tagged as `phase-25.5-phase-25-test-only-hardening-archive-closeout`
 
+## Phase 26.0 - Phase 25 Cross-API Invariant Audit Charter
+
+Goal:
+
+Open the approved docs/tests/fixtures-only audit/archive and next-lane decision lane for the Phase 25 package.
+
+Deliverables:
+
+- `docs/PHASE_26_0_PHASE_25_CROSS_API_INVARIANT_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_26_0_phase_25_cross_api_invariant_audit_charter.json`
+- `tests/test_phase_26_0_phase_25_cross_api_invariant_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 25.0 through Phase 25.5 are in audit scope
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-26.0-phase-25-cross-api-invariant-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
