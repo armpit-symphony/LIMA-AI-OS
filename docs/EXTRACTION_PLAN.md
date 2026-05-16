@@ -6312,6 +6312,33 @@ Blocked:
 
 Stop after Phase 24.4. Phase 25 requires explicit approval.
 
+## Phase 25.0 Gate: Cross-API Candidate Invariant Matrix Charter
+
+Phase 25.0 opens the approved test-only hardening lane for a cross-API candidate invariant matrix.
+
+Allowed:
+
+- Phase 25.0 tests
+- Phase 25.0 fixture metadata
+- Phase 25.0 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 25.1 candidate API matrix fixtures.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

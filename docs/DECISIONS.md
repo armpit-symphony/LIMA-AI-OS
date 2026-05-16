@@ -4355,6 +4355,25 @@ Consequences:
 - Phase 5 HumanInput runtime bridge remains gated.
 - Phase 25 requires explicit approval.
 
+## ADR-0232: Phase 25 Opens As Test-Only Cross-API Candidate Matrix
+
+Status: Accepted
+
+Decision:
+
+Phase 25.0 opens an approved test-only hardening lane for a cross-API candidate invariant matrix.
+
+Rationale:
+
+The safest next step after Phase 24 is deterministic offline test coverage that proves existing candidate-facing APIs preserve the same safety invariants.
+
+Consequences:
+
+- Phase 25.0 changes no runtime files.
+- Phase 25.0 changes no `tests/support/` files.
+- Phase 25.1 may add synthetic matrix fixtures only.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
