@@ -5498,6 +5498,35 @@ Remaining gaps are static/test-only limitations. The regression suite does not c
 
 Continue only to Phase 19.3 next-lane decision matrix.
 
+## Phase 19.3 Gate: Next-Lane Decision Matrix
+
+Phase 19.3 may compare Phase 20 options and recommend a lane without approving implementation.
+
+Allowed:
+
+- next-lane decision documentation
+- static decision-matrix fixture metadata
+- static decision-matrix tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Recommended direction:
+
+Phase 20 should be a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, if Phil explicitly approves it.
+
+Continue only to Phase 19.4 archive closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
