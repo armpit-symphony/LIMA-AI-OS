@@ -1,0 +1,46 @@
+{
+  "phase": "26.0",
+  "status": "phase_25_cross_api_invariant_audit_charter",
+  "runtime_code_modified": false,
+  "audit_subject": "phase_25_cross_api_candidate_invariant_hardening_package",
+  "audited_phases": [
+    "25.0",
+    "25.1",
+    "25.2",
+    "25.3",
+    "25.4",
+    "25.5"
+  ],
+  "audit_focus": [
+    "candidate_construction_invariants",
+    "candidate_status_normalization_invariants",
+    "candidate_validation_invariants",
+    "provenance_hardening_invariants",
+    "phase_25_remained_test_only",
+    "phase_5_runtime_bridge_remains_gated"
+  ],
+  "phase_26_lane": [
+    "26.0_audit_charter",
+    "26.1_cross_api_invariant_coverage_review",
+    "26.2_remaining_cross_api_gap_review",
+    "26.3_next_lane_decision_matrix",
+    "26.4_archive_closeout"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_behavior_added": false,
+    "external_service_calls_added": false,
+    "background_worker_queue_daemon_subprocess_thread_database_write_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  },
+  "next_phase": "26.1"
+}

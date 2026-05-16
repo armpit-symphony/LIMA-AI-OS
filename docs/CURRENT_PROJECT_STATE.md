@@ -314,6 +314,8 @@ Phase 25.4 Cross-API Boundary Readiness Review is complete, merged to `main`, an
 
 Phase 25.5 Phase 25 Test-Only Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 25 and preserves Phase 26 as a gated docs/tests/fixtures-only audit/archive decision lane.
 
+Phase 26.0 Phase 25 Cross-API Invariant Audit Charter is complete, merged to `main`, and tagged. It opens the approved docs/tests/fixtures-only audit/archive and next-lane decision lane without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
