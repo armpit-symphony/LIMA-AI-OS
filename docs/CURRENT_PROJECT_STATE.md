@@ -248,7 +248,7 @@ Phase 19.4 Phase 19 Regression Audit Archive / Closeout is complete, merged to `
 
 Latest completed phase merge:
 
-`PENDING_PHASE_19_4_MERGE`
+`2eea883536afbc1f91b6efa4e3077da302894eff`
 
 Latest tag:
 
@@ -266,7 +266,7 @@ phase-20-0-no-code-next-runtime-slice-design-charter
 
 Latest completed merge:
 
-`PENDING_PHASE_19_4_MERGE`
+`2eea883536afbc1f91b6efa4e3077da302894eff`
 
 Recommended PR target:
 
