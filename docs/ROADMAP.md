@@ -6663,6 +6663,30 @@ Status:
 - complete
 - tagged as `phase-25.1-candidate-api-matrix-fixtures`
 
+## Phase 25.2 - Cross-API Non-Execution Invariant Tests
+
+Goal:
+
+Add deterministic tests proving existing candidate-facing APIs preserve non-execution invariants.
+
+Deliverables:
+
+- `docs/PHASE_25_2_CROSS_API_NON_EXECUTION_INVARIANT_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_25_2_cross_api_non_execution_invariant_tests.json`
+- `tests/test_phase_25_2_cross_api_non_execution_invariant_tests.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- construction, normalization, and validation remain non-executing
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-25-2-cross-api-non-execution-invariant-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -4393,6 +4393,25 @@ Consequences:
 - Fixtures do not approve runtime expansion.
 - Phase 25.2 may add cross-API non-execution invariant tests only.
 
+## ADR-0234: Cross-API Candidate Paths Remain Non-Executing
+
+Status: Accepted
+
+Decision:
+
+Phase 25.2 adds deterministic tests proving candidate construction, status normalization, and validation preserve non-execution invariants across the matrix fixtures.
+
+Rationale:
+
+Every candidate-facing API must keep execution, side effects, approval, dispatch, and bridge creation disabled.
+
+Consequences:
+
+- Phase 25.2 changes no runtime files.
+- Phase 25.2 changes no `tests/support/` files.
+- Phase 25.3 may add provenance and status invariant tests only.
+- Runtime expansion remains blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
