@@ -6096,6 +6096,33 @@ Suspicious provenance authority claims in values, keys, nested mappings, and lis
 
 Continue only to Phase 23.3 bypass-wording provenance tests.
 
+## Phase 23.3 Gate: Bypass-Wording Provenance Tests
+
+Phase 23.3 adds deterministic bypass-wording tests for provenance and risky request metadata.
+
+Allowed:
+
+- Phase 23.3 tests
+- Phase 23.3 synthetic fixtures
+- Phase 23.3 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 23.4 provenance hardening readiness review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

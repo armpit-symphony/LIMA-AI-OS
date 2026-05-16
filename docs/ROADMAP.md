@@ -6411,6 +6411,31 @@ Status:
 - complete
 - tagged as `phase-23.2-suspicious-provenance-fixture-hardening`
 
+## Phase 23.3 - Bypass-Wording Provenance Tests
+
+Goal:
+
+Add explicit test-only bypass-wording provenance coverage.
+
+Deliverables:
+
+- `docs/PHASE_23_3_BYPASS_WORDING_PROVENANCE_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_23_3_bypass_wording_cases.json`
+- `tests/fixtures/runtime_extraction/phase_23_3_bypass_wording_provenance_tests.json`
+- `tests/test_phase_23_3_bypass_wording_provenance_tests.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phil/operator/admin/trusted/urgent/override/approve/emergency wording does not bypass safety
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-23-3-bypass-wording-provenance-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

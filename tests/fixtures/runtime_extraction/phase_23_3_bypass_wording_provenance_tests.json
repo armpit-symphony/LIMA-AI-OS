@@ -1,0 +1,30 @@
+{
+  "phase": "23.3",
+  "status": "bypass_wording_provenance_tests",
+  "runtime_code_modified": false,
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_23_3_bypass_wording_cases.json",
+  "coverage": [
+    "phil_wording_does_not_bypass_safety",
+    "operator_wording_does_not_bypass_safety",
+    "admin_wording_does_not_bypass_safety",
+    "trusted_wording_does_not_bypass_safety",
+    "urgent_wording_does_not_bypass_safety",
+    "override_wording_does_not_bypass_safety",
+    "approve_wording_does_not_bypass_safety",
+    "emergency_wording_does_not_bypass_safety"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

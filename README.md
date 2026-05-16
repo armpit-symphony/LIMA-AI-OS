@@ -492,6 +492,8 @@ Phase 23.1 adds deterministic candidate provenance regression tests for valid, m
 
 Phase 23.2 adds synthetic suspicious provenance fixtures covering authority claims in values, keys, nested mappings, lists, and risky action metadata. It changes no runtime code.
 
+Phase 23.3 adds explicit bypass-wording provenance tests covering Phil, operator, admin, trusted, urgent, override, approve, and emergency wording. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
