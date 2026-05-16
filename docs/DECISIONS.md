@@ -3773,6 +3773,25 @@ Consequences:
 - Phase 20 remains unapproved.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0201: Remaining Regression Gaps Block Direct Runtime Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 19.2 records remaining Phase 18 regression gaps as static/test-only limitations and blocks direct runtime expansion from Phase 19.
+
+Rationale:
+
+The Phase 18 package is useful regression protection, but it is not runtime monitoring, Guardian enforcement, live adapter coverage, Sparkbot integration coverage, HumanInput bridge behavior, or physical-world coverage.
+
+Consequences:
+
+- Phase 19.3 must compare next-lane options before recommending Phase 20.
+- A future runtime lane would require separate explicit Phil approval.
+- Sparkbot and Robo-OS work remain separate boundary-planning topics.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

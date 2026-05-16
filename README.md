@@ -446,6 +446,8 @@ Phase 19.0 opens the acceptance-gate audit/archive lane for the Phase 18 regress
 
 Phase 19.1 reviews Phase 18 regression coverage and records that the coverage is meaningful but still test-only; it does not create runtime enforcement or approve Phase 20.
 
+Phase 19.2 records remaining regression gaps after Phase 18: static checks are not runtime monitors, fixtures are synthetic, future integration behavior still needs separate design, and direct runtime expansion remains blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

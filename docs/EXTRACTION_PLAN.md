@@ -5469,6 +5469,35 @@ Phase 18 coverage is meaningful as test-only regression protection. It does not 
 
 Continue only to Phase 19.2 remaining regression gap review.
 
+## Phase 19.2 Gate: Remaining Regression Gap Review
+
+Phase 19.2 may document remaining regression gaps without changing runtime code.
+
+Allowed:
+
+- gap review documentation
+- static gap review fixture metadata
+- static gap review tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Remaining gaps are static/test-only limitations. The regression suite does not create runtime monitoring, runtime enforcement, live adapter coverage, Sparkbot integration coverage, HumanInput runtime bridge behavior, or physical-world coverage.
+
+Continue only to Phase 19.3 next-lane decision matrix.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

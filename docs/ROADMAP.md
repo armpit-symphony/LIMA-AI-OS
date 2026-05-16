@@ -5798,6 +5798,35 @@ Status:
 - complete
 - tagged as `phase-19.1-regression-coverage-review`
 
+## Phase 19.2 - Remaining Regression Gap Review
+
+Goal:
+
+Identify remaining regression gaps before recommending a Phase 20 lane.
+
+Deliverables:
+
+- `docs/PHASE_19_2_REMAINING_REGRESSION_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_19_2_remaining_regression_gap_review.json`
+- `tests/test_phase_19_2_remaining_regression_gap_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- remaining static/test-only limitations are listed
+- direct runtime expansion remains blocked
+- Phase 5 runtime bridge remains gated
+- Phase 20 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-19.2-remaining-regression-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

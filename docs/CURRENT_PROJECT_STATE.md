@@ -240,13 +240,15 @@ Phase 19.0 Phase 18 Regression Hardening Audit Charter is complete, merged to `m
 
 Phase 19.1 Regression Coverage Review is complete, merged to `main`, and tagged. It reviews the Phase 18 candidate API, acceptance-boundary fixture, forbidden integration, readiness, and archive coverage as meaningful test-only regression protection while preserving the Phase 20 gate and all runtime boundaries.
 
+Phase 19.2 Remaining Regression Gap Review is complete, merged to `main`, and tagged. It records that Phase 18 coverage is useful but still not runtime monitoring or enforcement, keeps Sparkbot/Robo-OS/HumanInput bridge work separate, and blocks direct runtime expansion before a separately approved next lane.
+
 Latest completed phase merge:
 
-`1715bc25af9f02159211dc453ef02d6308ff4dea`
+`PENDING_PHASE_19_2_MERGE`
 
 Latest tag:
 
-`phase-19.1-regression-coverage-review`
+`phase-19.2-remaining-regression-gap-review`
 
 ## Current Next Step
 
@@ -256,11 +258,11 @@ Continue only inside the approved Phase 19 docs/tests/fixtures-only acceptance-g
 
 Recommended next branch:
 
-phase-19-2-remaining-regression-gap-review
+phase-19-3-next-lane-decision-matrix
 
 Latest completed merge:
 
-`1715bc25af9f02159211dc453ef02d6308ff4dea`
+`PENDING_PHASE_19_2_MERGE`
 
 Recommended PR target:
 
@@ -270,7 +272,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 19.2 - Remaining Regression Gap Review.
+Phase 19.3 - Next-Lane Decision Matrix.
 
 Phase 19 approval question:
 
