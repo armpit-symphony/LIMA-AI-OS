@@ -364,6 +364,8 @@ Phase 30.3 Runtime State Inspection Boundary Regression Review is complete, merg
 
 Phase 30.4 Phase 30 Runtime Slice Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 30 as the completed read-only runtime state inspection slice and stops at the Phase 31 gate without new runtime changes.
 
+Phase 31.0 Phase 30 Runtime Slice Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only Phase 31 audit/archive lane and records the Phase 30 audit result without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

@@ -7394,6 +7394,31 @@ Status:
 - complete
 - tagged as `phase-30.4-phase-30-runtime-slice-archive-closeout`
 
+## Phase 31.0 - Phase 30 Runtime Slice Audit Charter
+
+Goal:
+
+Open the docs/tests/fixtures-only audit/archive and next-lane decision phase for the completed Phase 30 runtime slice.
+
+Deliverables:
+
+- `docs/PHASE_31_0_PHASE_30_RUNTIME_SLICE_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_31_0_phase_30_runtime_slice_audit_charter.json`
+- `tests/test_phase_31_0_phase_30_runtime_slice_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 30 audit result is recorded
+- Phase 31 runtime write scope remains forbidden
+
+Status:
+
+- complete
+- tagged as `phase-31.0-phase-30-runtime-slice-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
