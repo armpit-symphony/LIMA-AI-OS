@@ -252,13 +252,15 @@ Phase 20.1 Next Runtime Slice Options Review is complete, merged to `main`, and 
 
 Phase 20.2 Exact File-Touch Map For Candidate Slice is complete, merged to `main`, and tagged. It maps a future Phase 21 candidate provenance hardening slice to only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`, while keeping `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, Sparkbot, live adapter, HumanInput bridge, approval, execution, dispatch, audit persistence, and physical-world surfaces forbidden.
 
+Phase 20.3 Acceptance Test And Rollback Plan is complete, merged to `main`, and tagged. It defines future acceptance tests and rollback/audit proof for candidate provenance hardening while preserving that Phase 21 remains unapproved and no runtime code or future acceptance tests are implemented in Phase 20.
+
 Latest completed phase merge:
 
-`5e2d9a5757040b65020e7ca4ad3db17dba518925`
+`PENDING_PHASE_20_3_MERGE`
 
 Latest tag:
 
-`phase-20.2-exact-file-touch-map-for-candidate-slice`
+`phase-20.3-acceptance-test-and-rollback-plan`
 
 ## Current Next Step
 
@@ -268,11 +270,11 @@ Continue only inside the approved Phase 20 docs/tests/fixtures-only no-code desi
 
 Recommended next branch:
 
-phase-20-3-acceptance-test-and-rollback-plan
+phase-20-4-phase-20-runtime-slice-approval-gate-closeout
 
 Latest completed merge:
 
-`5e2d9a5757040b65020e7ca4ad3db17dba518925`
+`PENDING_PHASE_20_3_MERGE`
 
 Recommended PR target:
 
@@ -282,7 +284,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 20.3 - Acceptance Test and Rollback Plan.
+Phase 20.4 - Phase 20 Runtime Slice Approval Gate / Closeout.
 
 Phase 20 approval question:
 

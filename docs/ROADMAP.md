@@ -5971,6 +5971,35 @@ Status:
 - complete
 - tagged as `phase-20.2-exact-file-touch-map-for-candidate-slice`
 
+## Phase 20.3 - Acceptance Test And Rollback Plan
+
+Goal:
+
+Define future acceptance tests and rollback/audit proof for the candidate provenance hardening slice.
+
+Deliverables:
+
+- `docs/PHASE_20_3_ACCEPTANCE_TEST_AND_ROLLBACK_PLAN.md`
+- `tests/fixtures/runtime_extraction/phase_20_3_acceptance_test_and_rollback_plan.json`
+- `tests/test_phase_20_3_acceptance_test_and_rollback_plan.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- future provenance acceptance tests are listed
+- rollback/audit proof requirements are listed
+- Phase 5 runtime bridge remains gated
+- Phase 21 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-20.3-acceptance-test-and-rollback-plan`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

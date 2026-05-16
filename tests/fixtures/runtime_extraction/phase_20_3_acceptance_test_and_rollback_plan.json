@@ -1,0 +1,47 @@
+{
+  "phase": "20.3",
+  "status": "acceptance_test_and_rollback_plan",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_20_3_ACCEPTANCE_TEST_AND_ROLLBACK_PLAN.md",
+  "future_acceptance_tests": [
+    "candidate_construction_rejects_missing_provenance",
+    "candidate_construction_rejects_empty_provenance",
+    "candidate_construction_rejects_non_mapping_provenance",
+    "candidate_validation_marks_missing_provenance_invalid",
+    "candidate_validation_marks_malformed_provenance_invalid",
+    "status_normalization_preserves_valid_provenance",
+    "provenance_hardening_preserves_non_executing_invariants",
+    "provenance_hardening_never_sets_approval_state_approved",
+    "stale_or_replayed_candidates_remain_blocked_or_invalid",
+    "operator_admin_phil_trusted_urgent_override_approve_wording_does_not_bypass_safety",
+    "forbidden_integrations_and_side_effects_are_unreachable",
+    "only_phase_20_2_eligible_runtime_files_changed"
+  ],
+  "rollback_audit_proof": [
+    "no_database_migration_queue_worker_daemon_subprocess_thread_external_call_or_persistence",
+    "rollback_is_clean_revert_of_eligible_runtime_files_and_phase_21_artifacts",
+    "git_diff_check_passes",
+    "compileall_lima_passes",
+    "phase_21_targeted_tests_pass",
+    "full_suite_passes",
+    "no_runtime_files_outside_phase_20_2_eligible_list",
+    "phase_5_humaninput_runtime_bridge_remains_gated"
+  ],
+  "phase_21_approved": false,
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

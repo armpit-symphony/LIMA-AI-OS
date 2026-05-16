@@ -5643,6 +5643,36 @@ Future Phase 21 eligibility is limited to `lima/kernel/intake_candidate.py` and 
 
 Continue only to Phase 20.3 acceptance test and rollback plan.
 
+## Phase 20.3 Gate: Acceptance Test And Rollback Plan
+
+Phase 20.3 may define future acceptance tests and rollback/audit proof for the selected candidate provenance hardening slice.
+
+Allowed:
+
+- acceptance/rollback plan documentation
+- static acceptance/rollback fixture metadata
+- static acceptance/rollback tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- actual future acceptance-test implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Future Phase 21 must prove provenance validation/normalization, non-executing invariants, no approval bypass, no side effects, no forbidden integrations, exact runtime file scope, full validation, and clean rollback.
+
+Continue only to Phase 20.4 runtime slice approval gate / closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
