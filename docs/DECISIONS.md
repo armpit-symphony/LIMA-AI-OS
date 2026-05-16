@@ -4113,6 +4113,24 @@ Consequences:
 - Phase 22.3 should compare next-lane options with test-only hardening favored by the gap review.
 - Phase 23 remains gated.
 
+## ADR-0219: Phase 23 Should Be Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 22.3 recommends Phase 23 as test-only hardening for provenance and candidate invariants.
+
+Rationale:
+
+This direction addresses the remaining Phase 22 gaps without runtime expansion, Sparkbot integration, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior.
+
+Consequences:
+
+- Runtime and integration options are deferred.
+- Phase 23 remains gated and requires explicit Phil approval.
+- Phase 22.4 should preserve the exact Phase 23 approval question.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

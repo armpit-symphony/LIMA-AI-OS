@@ -6288,6 +6288,30 @@ Status:
 - complete
 - tagged as `phase-22.2-remaining-safety-gap-review`
 
+## Phase 22.3 - Next-Lane Decision Matrix
+
+Goal:
+
+Recommend exactly one Phase 23 direction from the Phase 22 options.
+
+Deliverables:
+
+- `docs/PHASE_22_3_NEXT_LANE_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_22_3_next_lane_decision_matrix.json`
+- `tests/test_phase_22_3_next_lane_decision_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- exactly one Phase 23 direction is recommended
+- runtime and integration expansion options are deferred
+- Phase 23 approval question preserves forbidden scope
+
+Status:
+
+- complete
+- tagged as `phase-22.3-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

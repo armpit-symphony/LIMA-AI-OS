@@ -482,6 +482,8 @@ Phase 22.1 reviews candidate provenance coverage and identifies test-only gaps f
 
 Phase 22.2 reviews remaining safety gaps and finds they are best handled by test-only hardening before any future runtime expansion.
 
+Phase 22.3 compares next-lane options and recommends Phase 23 as test-only hardening for provenance and candidate invariants.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
