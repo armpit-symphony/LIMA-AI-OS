@@ -440,6 +440,8 @@ Phase 18.3 adds forbidden integration regression tests that scan existing candid
 
 Phase 18.4 reviews the regression hardening package as ready for archive while still not ready for runtime implementation, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, or physical-world work.
 
+Phase 18.5 archives Phase 18 as a completed test-only regression hardening lane and preserves the Phase 19 approval question for a docs/tests/fixtures-only audit/archive and next-lane decision phase.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
