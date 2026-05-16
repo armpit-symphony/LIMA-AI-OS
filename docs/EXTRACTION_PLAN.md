@@ -7366,6 +7366,33 @@ Forbidden:
 - live adapters
 - execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
 
+## Phase 32.2 Gate: Next-Slice Safety And Scope Comparison
+
+Phase 32.2 compares candidate lanes against safety, scope, testability, rollback, usefulness, and readiness.
+
+Allowed:
+
+- Phase 32.2 tests
+- Phase 32.2 fixture metadata
+- Phase 32.2 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Option A remains the safest immediate Phase 33 direction.
+- Phase 33 runtime implementation is not recommended.
+- Implementation file scope for recommended Phase 33 Option A is empty.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

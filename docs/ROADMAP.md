@@ -7570,6 +7570,31 @@ Status:
 - complete
 - tagged as `phase-32.1-candidate-runtime-slice-inventory`
 
+## Phase 32.2 - Next-Slice Safety And Scope Comparison
+
+Goal:
+
+- Compare Phase 32.1 candidate next lanes against safety, scope, testability, rollback, usefulness, and readiness.
+- Decide whether a Phase 33 runtime implementation is justified.
+
+Result:
+
+- Option A remains the safest immediate Phase 33 direction.
+- No immediate Phase 33 runtime implementation is recommended.
+- Runtime options remain deferred until a later gate proves exact runtime file scope and Phase 30-equivalent boundaries.
+
+Acceptance criteria:
+
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 33 Option A file scope excludes runtime and support paths
+
+Status:
+
+- complete
+- tagged as `phase-32.2-next-slice-safety-and-scope-comparison`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0270: Phase 32 Does Not Recommend Immediate Phase 33 Runtime Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 32.2 confirms that the immediate Phase 33 recommendation should remain test-only hardening for `runtime_state`, with no runtime implementation file scope.
+
+Context:
+
+Runtime candidates B, C, and D require additional design proof before they can meet the Phase 30 safety and scope bar.
+
+Consequences:
+
+- Recommended Phase 33 implementation file scope is empty.
+- All `lima/` files remain forbidden for the recommended Phase 33 lane.
+- `tests/support/` remains forbidden.
+- Any later runtime implementation requires a separate explicit Phil approval question.
+
 ## ADR-0269: Phase 32 Recommends Test-Only Runtime State Hardening As The Immediate Phase 33 Direction
 
 Status: Accepted
