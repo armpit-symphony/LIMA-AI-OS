@@ -7108,6 +7108,35 @@ Forbidden:
 
 Continue only to Phase 30.3 runtime state inspection boundary regression review.
 
+## Phase 30.3 Gate: Runtime State Inspection Boundary Regression Review
+
+Phase 30.3 reviews the Phase 30.2 runtime state inspection boundary and confirms the slice remains inside the approved scope.
+
+Allowed:
+
+- Phase 30.3 tests
+- Phase 30.3 fixture metadata
+- Phase 30.3 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 30.4 Phase 30 runtime slice archive / closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

@@ -4836,6 +4836,25 @@ Consequences:
 - The new inspection output is deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0261: Runtime State Inspection Boundary Remains Constrained
+
+Status: Accepted
+
+Decision:
+
+Phase 30.3 reviews the Phase 30.2 runtime state inspection slice and confirms it remains inside the approved read-only, non-authoritative, non-executing boundary.
+
+Context:
+
+The first runtime touch in Phase 30 must be reviewed before archive/closeout to prevent drift into bridge, adapter, approval, dispatch, persistence, execution, Sparkbot, or physical-world behavior.
+
+Consequences:
+
+- Phase 30.3 changes no runtime files.
+- Phase 30.3 changes no `tests/support/` files.
+- The only Phase 30.2 runtime files remain `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py`.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
