@@ -4507,6 +4507,25 @@ Consequences:
 - Phase 26.2 may review remaining cross-API gaps only.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0240: Phase 26 Records Remaining Cross-API Gaps As Planning Inputs
+
+Status: Accepted
+
+Decision:
+
+Phase 26.2 records remaining cross-API candidate invariant gaps as planning inputs only.
+
+Context:
+
+The Phase 25 hardening package strengthened the gate, but remaining fixture, static-check, import-boundary, and traceability improvements should be visible before selecting a Phase 27 direction.
+
+Consequences:
+
+- Phase 26.2 changes no runtime files.
+- Phase 26.2 changes no `tests/support/` files.
+- The gap list does not approve runtime implementation.
+- Phase 26.3 may evaluate next-lane options only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

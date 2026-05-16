@@ -6813,6 +6813,31 @@ Status:
 - complete
 - tagged as `phase-26.1-cross-api-invariant-coverage-review`
 
+## Phase 26.2 - Remaining Cross-API Gap Review
+
+Goal:
+
+Record remaining cross-API candidate invariant gaps as planning inputs only.
+
+Deliverables:
+
+- `docs/PHASE_26_2_REMAINING_CROSS_API_GAP_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_26_2_remaining_cross_api_gap_review.json`
+- `tests/test_phase_26_2_remaining_cross_api_gap_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- remaining gaps are planning inputs only
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-26.2-remaining-cross-api-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

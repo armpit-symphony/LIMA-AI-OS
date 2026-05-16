@@ -524,6 +524,8 @@ Phase 26.0 opens the approved docs/tests/fixtures-only audit/archive and next-la
 
 Phase 26.1 reviews Phase 25 cross-API candidate invariant coverage across construction, status normalization, validation, and provenance hardening. It changes no runtime code.
 
+Phase 26.2 records remaining cross-API candidate invariant gaps as planning inputs only. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

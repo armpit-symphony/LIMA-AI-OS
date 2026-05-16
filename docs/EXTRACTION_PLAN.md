@@ -6528,6 +6528,33 @@ Forbidden:
 
 Continue only to Phase 26.2 remaining cross-API gap review.
 
+## Phase 26.2 Gate: Remaining Cross-API Gap Review
+
+Phase 26.2 records remaining gaps as planning inputs only.
+
+Allowed:
+
+- Phase 26.2 tests
+- Phase 26.2 fixture metadata
+- Phase 26.2 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 26.3 next-lane decision matrix.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

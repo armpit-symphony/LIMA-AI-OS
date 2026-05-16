@@ -318,6 +318,8 @@ Phase 26.0 Phase 25 Cross-API Invariant Audit Charter is complete, merged to `ma
 
 Phase 26.1 Cross-API Invariant Coverage Review is complete, merged to `main`, and tagged. It confirms Phase 25 coverage across existing candidate-facing APIs without runtime changes.
 
+Phase 26.2 Remaining Cross-API Gap Review is complete, merged to `main`, and tagged. It records remaining cross-API candidate invariant gaps as planning inputs only without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
