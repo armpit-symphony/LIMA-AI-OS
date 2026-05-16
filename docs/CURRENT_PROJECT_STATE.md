@@ -286,7 +286,7 @@ Phase 23.1 Candidate Provenance Regression Tests is complete on branch `phase-23
 
 Phase 23.2 Suspicious Provenance Fixture Hardening is complete on branch `phase-23-2-suspicious-provenance-fixture-hardening` pending merge. It adds synthetic suspicious provenance fixtures and tests without runtime changes.
 
-Phase 23.3 Bypass-Wording Provenance Tests is complete on branch `phase-23-3-bypass-wording-provenance-tests` pending merge. It adds deterministic tests proving Phil/operator/admin/trusted/urgent/override/approve/emergency wording does not bypass non-executing candidate safety.
+Phase 23.3 Bypass-Wording Provenance Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving Phil/operator/admin/trusted/urgent/override/approve/emergency wording does not bypass non-executing candidate safety.
 
 Latest completed phase merge:
 

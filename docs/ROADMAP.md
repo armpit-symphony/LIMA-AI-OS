@@ -6434,7 +6434,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-23-3-bypass-wording-provenance-tests`
+- complete
+- tagged as `phase-23.3-bypass-wording-provenance-tests`
 
 Reserved from Phase 3.4:
 
