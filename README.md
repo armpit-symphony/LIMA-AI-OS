@@ -490,6 +490,8 @@ Phase 23.0 opens the approved test-only hardening lane for provenance and candid
 
 Phase 23.1 adds deterministic candidate provenance regression tests for valid, missing, malformed, stale, and replayed provenance behavior. It changes no runtime code.
 
+Phase 23.2 adds synthetic suspicious provenance fixtures covering authority claims in values, keys, nested mappings, lists, and risky action metadata. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -1,0 +1,66 @@
+{
+  "phase": "23.2",
+  "cases": [
+    {
+      "case_id": "value_claims_phil_override",
+      "description": "authority claim in provenance value",
+      "provenance": {
+        "fixture": "phase_23_2",
+        "authority_claim": "Phil admin trusted urgent override approve"
+      },
+      "expected_validation_error": "provenance_authority_claim_not_allowed"
+    },
+    {
+      "case_id": "key_claims_operator",
+      "description": "authority claim in provenance key",
+      "provenance": {
+        "operator": "phase23-key-claim",
+        "fixture": "phase_23_2"
+      },
+      "expected_validation_error": "provenance_authority_claim_not_allowed"
+    },
+    {
+      "case_id": "nested_mapping_claims_admin",
+      "description": "authority claim inside nested mapping",
+      "provenance": {
+        "fixture": "phase_23_2",
+        "nested": {
+          "claim": "admin trusted approve"
+        }
+      },
+      "expected_validation_error": "provenance_authority_claim_not_allowed"
+    },
+    {
+      "case_id": "list_claims_emergency_override",
+      "description": "authority claim inside provenance list",
+      "provenance": {
+        "fixture": "phase_23_2",
+        "claims": [
+          "routine",
+          "urgent override approve"
+        ]
+      },
+      "expected_validation_error": "provenance_authority_claim_not_allowed"
+    },
+    {
+      "case_id": "shell_attempt_metadata",
+      "description": "shell attempt represented as risky metadata remains non-executing",
+      "provenance": {
+        "fixture": "phase_23_2",
+        "attempt": "shell command request"
+      },
+      "action_category": "shell",
+      "expected_status": "needs_review"
+    },
+    {
+      "case_id": "robotics_attempt_metadata",
+      "description": "physical-world attempt represented as risky metadata remains non-executing",
+      "provenance": {
+        "fixture": "phase_23_2",
+        "attempt": "robotics physical world request"
+      },
+      "action_category": "robotics_physical_world",
+      "expected_status": "needs_review"
+    }
+  ]
+}

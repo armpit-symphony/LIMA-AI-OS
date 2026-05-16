@@ -6386,6 +6386,31 @@ Status:
 - complete
 - tagged as `phase-23.1-candidate-provenance-regression-tests`
 
+## Phase 23.2 - Suspicious Provenance Fixture Hardening
+
+Goal:
+
+Add synthetic suspicious provenance fixtures and tests.
+
+Deliverables:
+
+- `docs/PHASE_23_2_SUSPICIOUS_PROVENANCE_FIXTURE_HARDENING.md`
+- `tests/fixtures/runtime_extraction/phase_23_2_suspicious_provenance_cases.json`
+- `tests/fixtures/runtime_extraction/phase_23_2_suspicious_provenance_fixture_hardening.json`
+- `tests/test_phase_23_2_suspicious_provenance_fixture_hardening.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- suspicious provenance authority claims fail closed
+- risky action metadata remains non-executing
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-23.2-suspicious-provenance-fixture-hardening`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

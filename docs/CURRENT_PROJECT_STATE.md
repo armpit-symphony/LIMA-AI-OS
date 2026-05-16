@@ -284,27 +284,29 @@ Phase 23.0 Provenance Invariant Test Hardening Charter is complete on branch `ph
 
 Phase 23.1 Candidate Provenance Regression Tests is complete on branch `phase-23-1-candidate-provenance-regression-tests` pending merge. It adds deterministic tests for valid, missing, malformed, stale, and replayed provenance behavior without runtime changes.
 
+Phase 23.2 Suspicious Provenance Fixture Hardening is complete on branch `phase-23-2-suspicious-provenance-fixture-hardening` pending merge. It adds synthetic suspicious provenance fixtures and tests without runtime changes.
+
 Latest completed phase merge:
 
-`2bdb3d7773d99e57e7192a1c28b159486a708cb0`
+`PENDING_PHASE_23_2_MERGE`
 
 Latest tag:
 
-`phase-23.1-candidate-provenance-regression-tests`
+`phase-23.2-suspicious-provenance-fixture-hardening`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 23 test-only hardening lane. Phase 23.2 may add suspicious provenance fixtures only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 23 test-only hardening lane. Phase 23.3 may add explicit bypass-wording provenance tests only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-23-2-suspicious-provenance-fixture-hardening
+phase-23-3-bypass-wording-provenance-tests
 
 Latest completed merge:
 
-`2bdb3d7773d99e57e7192a1c28b159486a708cb0`
+`PENDING_PHASE_23_2_MERGE`
 
 Recommended PR target:
 
@@ -314,7 +316,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 23.2 - Suspicious Provenance Fixture Hardening.
+Phase 23.3 - Bypass-Wording Provenance Tests.
 
 Phase 21 approval question:
 
