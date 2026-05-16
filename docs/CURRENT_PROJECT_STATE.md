@@ -332,6 +332,8 @@ Phase 27.2 Gated Runtime Boundary Review is complete, merged to `main`, and tagg
 
 Phase 27.3 Next-Lane Risk Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 28 as a docs/tests/fixtures-only preservation status review without runtime changes.
 
+Phase 27.4 Phase 27 Preservation Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 27 and preserves Phase 28 as a gated docs/tests/fixtures-only preservation status review.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -344,7 +346,7 @@ Latest tag:
 
 Current operator step:
 
-Stop after Phase 26.4. Phase 27 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Stop after Phase 27.4. Phase 28 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -364,7 +366,9 @@ Next intended milestone:
 
 Phase 26 - complete/tagged.
 
-Phase 27 - docs/tests/fixtures-only preservation and roadmap decision, if explicitly approved.
+Phase 27 - complete/tagged.
+
+Phase 28 - docs/tests/fixtures-only preservation status review, if explicitly approved.
 
 Phase 21 approval question:
 

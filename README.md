@@ -538,6 +538,8 @@ Phase 27.2 reviews the gated runtime and integration boundaries that remain bloc
 
 Phase 27.3 recommends Phase 28 as a docs/tests/fixtures-only preservation status review to continue pausing and preserving the current runtime/test state. It changes no runtime code.
 
+Phase 27.4 archives Phase 27 as a completed docs/tests/fixtures-only preservation lane and preserves Phase 28 as an explicit preservation status review gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

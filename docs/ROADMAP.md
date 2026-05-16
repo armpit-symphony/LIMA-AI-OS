@@ -6990,6 +6990,31 @@ Status:
 - complete
 - tagged as `phase-27.3-next-lane-risk-decision-matrix`
 
+## Phase 27.4 - Phase 27 Preservation Archive / Closeout
+
+Goal:
+
+Archive Phase 27 and preserve the Phase 28 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_27_4_PHASE_27_PRESERVATION_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_27_4_phase_27_preservation_archive_closeout.json`
+- `tests/test_phase_27_4_phase_27_preservation_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 27.0 through Phase 27.3 are archived
+- Phase 28 requires explicit approval
+
+Status:
+
+- complete
+- tagged as `phase-27.4-phase-27-preservation-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
