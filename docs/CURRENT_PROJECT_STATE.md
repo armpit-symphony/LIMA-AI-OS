@@ -262,7 +262,7 @@ Phase 21.0 Runtime Slice Preflight Audit / Eligible File Confirmation is complet
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_0_MERGE`
+`8e1337818c15d43907bbbd00ca93ccaa9fd856eb`
 
 Latest tag:
 
@@ -280,7 +280,7 @@ phase-21-1-candidate-provenance-acceptance-test-scaffolding
 
 Latest completed merge:
 
-`PENDING_PHASE_21_0_MERGE`
+`8e1337818c15d43907bbbd00ca93ccaa9fd856eb`
 
 Recommended PR target:
 
