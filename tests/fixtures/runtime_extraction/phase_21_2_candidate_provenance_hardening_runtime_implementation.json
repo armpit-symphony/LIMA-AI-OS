@@ -1,0 +1,38 @@
+{
+  "phase": "21.2",
+  "status": "candidate_provenance_hardening_runtime_implementation",
+  "runtime_code_modified": true,
+  "runtime_files_touched": [
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py"
+  ],
+  "forbidden_runtime_files_untouched": [
+    "lima/kernel/__init__.py",
+    "new_runtime_modules",
+    "all_other_lima_files"
+  ],
+  "implemented_guarantees": [
+    "candidate_construction_rejects_malformed_provenance_keys",
+    "candidate_construction_rejects_missing_provenance_values",
+    "status_normalization_blocks_malformed_provenance",
+    "status_normalization_blocks_suspicious_provenance_authority_claims",
+    "candidate_validation_marks_malformed_or_suspicious_provenance_invalid",
+    "valid_provenance_preserved",
+    "non_executing_invariants_preserved"
+  ],
+  "boundary_results": {
+    "tests_support_modified": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "shell_browser_network_file_mutation_robotics_physical_world_added": false,
+    "background_worker_queue_daemon_subprocess_thread_database_write_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

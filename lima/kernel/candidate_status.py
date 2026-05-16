@@ -33,6 +33,9 @@ REQUIRED_CANDIDATE_FIELDS: Final[tuple[str, ...]] = (
     "execution_allowed",
     "side_effects_allowed",
 )
+PROVENANCE_AUTHORITY_CLAIM_MARKERS: Final[frozenset[str]] = frozenset(
+    {"phil", "operator", "admin", "trusted", "urgent", "override", "approve", "approved"}
+)
 
 
 class CandidateStatusError(ValueError):
@@ -99,6 +102,10 @@ def _derive_status(candidate: Mapping[str, Any]) -> tuple[str, str]:
     if candidate.get("approved") is True:
         return BLOCKED_STATUS, "candidate_cannot_be_approved_by_status_normalization"
 
+    provenance_errors = _provenance_validation_errors(candidate.get("provenance"))
+    if provenance_errors:
+        return BLOCKED_STATUS, ";".join(provenance_errors)
+
     freshness = str(candidate.get("freshness", "fresh")).strip().lower()
     replay_status = str(candidate.get("replay_status", "not_replayed")).strip().lower()
     if freshness != "fresh":
@@ -141,9 +148,7 @@ def _candidate_validation_errors(candidate: Mapping[str, Any]) -> list[str]:
     if missing:
         errors.append(f"missing_required_candidate_fields:{','.join(missing)}")
 
-    provenance = candidate.get("provenance")
-    if not isinstance(provenance, Mapping) or not provenance:
-        errors.append("provenance_missing_or_invalid")
+    errors.extend(_provenance_validation_errors(candidate.get("provenance")))
 
     if candidate.get("executable") is not False:
         errors.append("executable_must_be_false")
@@ -164,3 +169,34 @@ def _candidate_validation_errors(candidate: Mapping[str, Any]) -> list[str]:
         errors.append("candidate_must_not_be_replayed")
 
     return errors
+
+
+def _provenance_validation_errors(provenance: Any) -> list[str]:
+    if not isinstance(provenance, Mapping) or not provenance:
+        return ["provenance_missing_or_invalid"]
+
+    errors: list[str] = []
+    for key, value in provenance.items():
+        if not isinstance(key, str) or not key.strip():
+            errors.append("provenance_key_missing_or_invalid")
+        if value is None:
+            errors.append("provenance_value_missing_or_invalid")
+        if _contains_authority_claim(key) or _contains_authority_claim(value):
+            errors.append("provenance_authority_claim_not_allowed")
+
+    return list(dict.fromkeys(errors))
+
+
+def _contains_authority_claim(value: Any) -> bool:
+    if isinstance(value, Mapping):
+        return any(
+            _contains_authority_claim(nested_key) or _contains_authority_claim(nested_value)
+            for nested_key, nested_value in value.items()
+        )
+    if isinstance(value, (list, tuple, set, frozenset)):
+        return any(_contains_authority_claim(item) for item in value)
+    if not isinstance(value, str):
+        return False
+
+    folded = value.strip().lower()
+    return any(marker in folded.split() for marker in PROVENANCE_AUTHORITY_CLAIM_MARKERS)

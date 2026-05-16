@@ -3981,6 +3981,26 @@ Consequences:
 - `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain forbidden.
 - HumanInput runtime bridge behavior, Sparkbot wiring, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
+## ADR-0212: Candidate Provenance Hardening Is Implemented Narrowly
+
+Status: Accepted
+
+Decision:
+
+Phase 21.2 implements candidate provenance hardening only in `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+
+Rationale:
+
+The approved Phase 21 slice allowed candidate provenance hardening for existing non-executing candidates, and Phase 21.1 acceptance tests established the required fail-closed behavior before runtime edits.
+
+Consequences:
+
+- Candidate construction rejects malformed provenance keys and missing provenance values.
+- Candidate status normalization and validation block malformed or suspicious provenance authority claims.
+- Valid provenance remains preserved.
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain untouched.
+- Runtime remains non-executing, approval-free, dispatch-free, persistence-free, Sparkbot-free, HumanInput-bridge-free, and physical-world-free.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
