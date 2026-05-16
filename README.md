@@ -544,6 +544,8 @@ Phase 28.0 opens the approved docs/tests/fixtures-only preservation status revie
 
 Phase 28.1 confirms the current runtime/test state remains stable and preserved, with no concrete immediate test-only hardening gap found. It changes no runtime code.
 
+Phase 28.2 finds that continued pause is safe but no longer the sharpest default recommendation; Phase 29 should be a docs/tests/fixtures-only no-code design review for the next narrow runtime slice. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -4661,6 +4661,25 @@ Consequences:
 - No concrete immediate test-only hardening gap is identified.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0250: Phase 29 Should Move To No-Code Design Review
+
+Status: Accepted
+
+Decision:
+
+Phase 28.2 finds no specific documented risk requiring another automatic preservation pause and recommends Phase 29 as a docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
+
+Context:
+
+The current runtime/test state is stable and no concrete immediate test-only hardening gap was identified. Continued pause remains safe, but a sharper next decision is appropriate.
+
+Consequences:
+
+- Phase 28.2 changes no runtime files.
+- Phase 28.2 changes no `tests/support/` files.
+- Phase 29 remains no-code unless separately approved.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted
