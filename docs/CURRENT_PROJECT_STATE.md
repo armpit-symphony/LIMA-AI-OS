@@ -280,7 +280,7 @@ Phase 22.3 Next-Lane Decision Matrix is complete on branch `phase-22-3-next-lane
 
 Latest completed phase merge:
 
-`PENDING_PHASE_22_3_MERGE`
+`b4a7fa9642c242c4b396c2209846e2705ba6bc38`
 
 Latest tag:
 
@@ -298,7 +298,7 @@ phase-22-4-phase-22-decision-gate-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_22_3_MERGE`
+`b4a7fa9642c242c4b396c2209846e2705ba6bc38`
 
 Recommended PR target:
 
