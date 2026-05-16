@@ -4020,6 +4020,25 @@ Consequences:
 - Phase 21.4 may proceed as a readiness review only.
 - No runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, live adapter, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved.
 
+## ADR-0214: Phase 21 Runtime Slice Is Ready For Archive Closeout
+
+Status: Accepted
+
+Decision:
+
+Phase 21.4 finds the candidate provenance hardening runtime slice ready for Phase 21.5 archive closeout.
+
+Rationale:
+
+The lane has preflight confirmation, acceptance scaffolding, a narrow runtime implementation, and regression review coverage while preserving all non-executing and no-side-effect boundaries.
+
+Consequences:
+
+- Phase 21.4 changes no runtime files.
+- Phase 21.5 may archive the lane.
+- Phase 22 remains gated and requires explicit Phil approval.
+- Runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
