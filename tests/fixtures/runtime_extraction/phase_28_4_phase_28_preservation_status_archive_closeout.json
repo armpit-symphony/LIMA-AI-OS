@@ -1,0 +1,40 @@
+{
+  "phase": "28.4",
+  "status": "phase_28_preservation_status_archive_closeout",
+  "runtime_code_modified": false,
+  "phase_27_audit_result": "PASS",
+  "archived_phases": [
+    "28.0",
+    "28.1",
+    "28.2",
+    "28.3"
+  ],
+  "archive_results": {
+    "phase_28_remained_docs_tests_fixtures_only": true,
+    "runtime_files_changed": false,
+    "tests_support_changed": false,
+    "runtime_behavior_changed": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "continued_preservation_pause_is_safe": true,
+    "continued_preservation_pause_is_sharpest_default": false,
+    "concrete_test_only_gap_found": false,
+    "specific_pause_risk_found": false
+  },
+  "recommended_phase_29_direction": "docs_tests_fixtures_only_no_code_design_review_for_next_narrow_runtime_slice",
+  "phase_29_approval_question": "Do you approve Phase 29 as a docs/tests/fixtures-only no-code design review for the next narrow runtime slice, limited to docs/PHASE_29_*.md, tests/fixtures/runtime_extraction/phase_29_*.json, tests/test_phase_29_*.py, and required roadmap/state metadata, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_29_requires_explicit_approval": true
+  }
+}

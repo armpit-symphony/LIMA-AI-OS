@@ -548,6 +548,8 @@ Phase 28.2 finds that continued pause is safe but no longer the sharpest default
 
 Phase 28.3 recommends Phase 29 as a docs/tests/fixtures-only no-code design review for the next narrow runtime slice, not runtime implementation. It changes no runtime code.
 
+Phase 28.4 archives Phase 28 as a completed preservation status review and preserves Phase 29 as an explicit docs/tests/fixtures-only no-code design review gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
