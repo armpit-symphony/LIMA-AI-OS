@@ -242,7 +242,7 @@ Phase 19.1 Regression Coverage Review is complete, merged to `main`, and tagged.
 
 Latest completed phase merge:
 
-`PENDING_PHASE_19_1_MERGE`
+`1715bc25af9f02159211dc453ef02d6308ff4dea`
 
 Latest tag:
 
@@ -260,7 +260,7 @@ phase-19-2-remaining-regression-gap-review
 
 Latest completed merge:
 
-`PENDING_PHASE_19_1_MERGE`
+`1715bc25af9f02159211dc453ef02d6308ff4dea`
 
 Recommended PR target:
 
