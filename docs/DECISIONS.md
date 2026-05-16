@@ -4718,6 +4718,25 @@ Consequences:
 - Phase 29 requires explicit approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0253: Phase 29 Opens As No-Code Runtime Slice Design Review
+
+Status: Accepted
+
+Decision:
+
+Phase 29.0 opens the approved docs/tests/fixtures-only no-code design review for the next narrow runtime slice.
+
+Context:
+
+Phase 28 selected a sharper next step than another automatic preservation pause while still forbidding runtime implementation and `lima/` changes.
+
+Consequences:
+
+- Phase 29.0 changes no runtime files.
+- Phase 29.0 changes no `tests/support/` files.
+- Phase 29 is not runtime implementation approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted
