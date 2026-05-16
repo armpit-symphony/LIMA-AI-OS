@@ -7090,6 +7090,32 @@ Status:
 - complete
 - tagged as `phase-28.2-preservation-pause-justification-review`
 
+## Phase 28.3 - Phase 29 Decision Readiness Matrix
+
+Goal:
+
+Evaluate Phase 29 options and recommend exactly one sharper next direction.
+
+Deliverables:
+
+- `docs/PHASE_28_3_PHASE_29_DECISION_READINESS_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_28_3_phase_29_decision_readiness_matrix.json`
+- `tests/test_phase_28_3_phase_29_decision_readiness_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- all recommended Phase 29 options are evaluated
+- exactly one Phase 29 direction is recommended
+- Phase 29 remains no-code unless explicitly approved later
+
+Status:
+
+- complete
+- tagged as `phase-28.3-phase-29-decision-readiness-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
