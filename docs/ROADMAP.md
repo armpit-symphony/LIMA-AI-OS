@@ -7544,6 +7544,32 @@ Status:
 - complete
 - tagged as `phase-32.0-phase-31-next-slice-design-audit-charter`
 
+## Phase 32.1 - Candidate Runtime Slice Inventory
+
+Goal:
+
+- Inventory candidate next lanes after the completed Phase 30 read-only `runtime_state` inspection slice.
+- Compare runtime, planning, test-only, and pause options at inventory level.
+- Recommend the safest immediate Phase 33 direction without approving implementation.
+
+Result:
+
+- Option A, `runtime_state` test-only hardening with nested suspicious metadata fixtures, is the safest immediate Phase 33 direction.
+- Phase 33 should not implement runtime code or change `lima/`.
+- Runtime options remain deferred until exact file scope, test evidence, rollback proof, and safety boundaries are proven.
+
+Boundary:
+
+- No `lima/` changes.
+- No `tests/support/` changes.
+- No runtime behavior changes.
+- No Sparkbot wiring, HumanInput bridge behavior, live adapter, approval enforcement, execution, dispatch, persistence, external calls, background work, robotics, or physical-world behavior.
+
+Status:
+
+- complete
+- tagged as `phase-32.1-candidate-runtime-slice-inventory`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

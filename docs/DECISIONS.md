@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0269: Phase 32 Recommends Test-Only Runtime State Hardening As The Immediate Phase 33 Direction
+
+Status: Accepted
+
+Decision:
+
+Phase 32.1 recommends Phase 33 as a test-only hardening lane for the existing read-only `runtime_state` slice, focused on nested suspicious metadata fixtures and regression coverage.
+
+Context:
+
+Phase 31 found no blocking safety regression in the Phase 30 runtime slice. The safest next step is to strengthen tests around the existing slice before considering another runtime implementation.
+
+Consequences:
+
+- Phase 33 is not recommended as runtime implementation.
+- Phase 33 should not change `lima/` or `tests/support/`.
+- Runtime options remain deferred until a later gate proves exact scope, acceptance tests, rollback proof, and safety boundaries.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0268: Phase 32 Opens As No-Code Next-Slice Design Review
 
 Status: Accepted

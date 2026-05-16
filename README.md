@@ -582,6 +582,8 @@ Phase 31.4 archives Phase 31 as the completed docs/tests/fixtures-only audit/arc
 
 Phase 32.0 opens the docs/tests/fixtures-only design review for the next narrow runtime slice and records the Phase 31 audit result. It changes no runtime code.
 
+Phase 32.1 inventories candidate next lanes and recommends Phase 33 as test-only `runtime_state` hardening with nested suspicious metadata fixtures, not runtime implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
