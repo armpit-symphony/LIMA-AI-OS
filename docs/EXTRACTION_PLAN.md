@@ -5788,6 +5788,34 @@ Candidate construction rejects malformed provenance keys and missing provenance 
 
 Continue only to Phase 21.3 candidate provenance regression review.
 
+## Phase 21.3 Gate: Candidate Provenance Regression Review
+
+Phase 21.3 reviews the Phase 21.2 runtime slice without runtime changes.
+
+Allowed:
+
+- regression review documentation
+- static regression fixture metadata
+- regression tests under `tests/`
+- project tracking updates
+
+Blocked:
+
+- runtime changes
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 21.3 confirms valid provenance remains preserved, malformed provenance fails closed, suspicious provenance is blocked or invalid, and non-executing invariants remain enforced.
+
+Continue only to Phase 21.4 runtime slice readiness review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

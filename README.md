@@ -470,6 +470,8 @@ Phase 21.1 scaffolds deterministic candidate provenance acceptance tests and fix
 
 Phase 21.2 implements the narrow candidate provenance hardening slice inside `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` only. Runtime remains non-executing, side-effect-free, approval-free, and dispatch-free.
 
+Phase 21.3 reviews the candidate provenance hardening slice as regression-only docs/tests/fixtures work. It adds no runtime changes and preserves the Phase 21.2 boundaries.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

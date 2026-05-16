@@ -4001,6 +4001,25 @@ Consequences:
 - `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain untouched.
 - Runtime remains non-executing, approval-free, dispatch-free, persistence-free, Sparkbot-free, HumanInput-bridge-free, and physical-world-free.
 
+## ADR-0213: Candidate Provenance Regression Review Confirms The Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 21.3 reviews the Phase 21.2 provenance hardening runtime slice as docs/tests/fixtures-only regression work.
+
+Rationale:
+
+After the narrow runtime touch, the next safe step is to prove the slice remains limited, non-executing, provenance-preserving, and fail-closed for malformed or suspicious provenance.
+
+Consequences:
+
+- Phase 21.3 changes no runtime files.
+- The Phase 21.2 behavior remains the only runtime change in this lane so far.
+- Phase 21.4 may proceed as a readiness review only.
+- No runtime expansion, Sparkbot wiring, HumanInput runtime bridge behavior, live adapter, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior is approved.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

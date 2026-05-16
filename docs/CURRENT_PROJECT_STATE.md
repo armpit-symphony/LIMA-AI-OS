@@ -264,27 +264,29 @@ Phase 21.1 Candidate Provenance Acceptance Test Scaffolding is complete on branc
 
 Phase 21.2 Candidate Provenance Hardening Runtime Implementation is complete on branch `phase-21-2-candidate-provenance-hardening-runtime-implementation` pending merge. It hardens candidate provenance construction, status normalization, and validation while touching only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
 
+Phase 21.3 Candidate Provenance Regression Review is complete on branch `phase-21-3-candidate-provenance-regression-review` pending merge. It reviews the Phase 21.2 runtime slice using docs, fixtures, and tests only, with no runtime changes.
+
 Latest completed phase merge:
 
-`e16c7817e2b0e9ea5f2d2410c9ab9d726526803a`
+`PENDING_PHASE_21_3_MERGE`
 
 Latest tag:
 
-`phase-21.2-candidate-provenance-hardening-runtime-implementation`
+`phase-21.3-candidate-provenance-regression-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Phase 21.3 must be a regression review of the Phase 21.2 runtime slice unless a later explicit approval changes scope. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
+Continue only inside the approved Phase 21 candidate provenance hardening runtime slice. Phase 21.4 must be a readiness review of the Phase 21 runtime slice unless a later explicit approval changes scope. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-21-3-candidate-provenance-regression-review
+phase-21-4-runtime-slice-readiness-review
 
 Latest completed merge:
 
-`e16c7817e2b0e9ea5f2d2410c9ab9d726526803a`
+`PENDING_PHASE_21_3_MERGE`
 
 Recommended PR target:
 
@@ -294,7 +296,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 21.3 - Candidate Provenance Regression Review.
+Phase 21.4 - Runtime Slice Readiness Review.
 
 Phase 21 approval question:
 
