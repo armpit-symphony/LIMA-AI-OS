@@ -1,0 +1,56 @@
+{
+  "phase": "32.2",
+  "status": "next_slice_safety_and_scope_comparison",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "recommended_option": "runtime_state_test_only_hardening",
+  "recommended_option_ready": true,
+  "runtime_implementation_recommended": false,
+  "comparison": {
+    "runtime_state_test_only_hardening": {
+      "safety": "highest",
+      "scope": "docs_tests_fixtures_only",
+      "testability": "high",
+      "rollback": "simple_test_doc_revert",
+      "readiness": "ready"
+    },
+    "second_read_only_runtime_inspection_slice": {
+      "runtime_scope_needed": true,
+      "readiness": "not_ready"
+    },
+    "non_executing_candidate_preview_helper": {
+      "humaninput_boundary_proof_needed": true,
+      "readiness": "not_ready"
+    },
+    "candidate_status_read_only_normalization_hardening": {
+      "runtime_rollback_required": true,
+      "readiness": "not_ready"
+    },
+    "humaninput_bridge_boundary_planning": {
+      "planning_only": true,
+      "separate_lane": true
+    },
+    "sparkbot_integration_boundary_planning": {
+      "planning_only": true,
+      "separate_lane": true
+    },
+    "pause_and_preserve_state": {
+      "available_if_unresolved_risk_exists": true,
+      "required_immediately": false
+    }
+  },
+  "phase_33_option_a_file_scope": {
+    "implementation_file_scope": [],
+    "allowed_paths": [
+      "docs/PHASE_33_*.md",
+      "tests/fixtures/runtime_extraction/phase_33_*.json",
+      "tests/test_phase_33_*.py",
+      "README.md and roadmap/state docs only if required by repository convention"
+    ],
+    "forbidden_paths": [
+      "lima/**",
+      "tests/support/**"
+    ]
+  },
+  "next_phase": "32.3"
+}
