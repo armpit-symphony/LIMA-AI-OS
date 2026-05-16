@@ -1,0 +1,51 @@
+{
+  "phase": "23.5",
+  "status": "phase_23_test_only_hardening_archive_closeout",
+  "runtime_code_modified": false,
+  "archived_phases": [
+    "23.0",
+    "23.1",
+    "23.2",
+    "23.3",
+    "23.4"
+  ],
+  "phase_23_added": [
+    "docs",
+    "synthetic_fixtures",
+    "test_only_acceptance_and_regression_coverage",
+    "roadmap_state_decision_metadata"
+  ],
+  "phase_23_not_added": [
+    "runtime_behavior",
+    "lima_changes",
+    "tests_support_changes",
+    "helper_behavior_changes",
+    "sparkbot_wiring",
+    "humaninput_runtime_bridge",
+    "live_adapter",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "physical_world_behavior"
+  ],
+  "recommended_phase_24_direction": "docs_tests_fixtures_only_audit_archive_and_next_lane_decision",
+  "phase_24_approval_question": "Do you approve Phase 24 as a docs/tests/fixtures-only audit/archive and next-lane decision phase for the Phase 23 test-only hardening package, while still forbidding runtime implementation, lima/ changes, tests/support/ changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?",
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_24_requires_explicit_approval": true
+  }
+}
