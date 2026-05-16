@@ -236,7 +236,7 @@ Phase 18.4 Regression Hardening Readiness Review is complete, merged to `main`, 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_18_4_MERGE`
+`6d20f722c063b14a3f324657f8ffbd04d5b5a782`
 
 Latest tag:
 
@@ -254,7 +254,7 @@ phase-18-5-phase-18-regression-hardening-archive-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_18_4_MERGE`
+`6d20f722c063b14a3f324657f8ffbd04d5b5a782`
 
 Recommended PR target:
 
