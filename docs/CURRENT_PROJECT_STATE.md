@@ -286,7 +286,7 @@ Phase 23.1 Candidate Provenance Regression Tests is complete on branch `phase-23
 
 Latest completed phase merge:
 
-`PENDING_PHASE_23_1_MERGE`
+`2bdb3d7773d99e57e7192a1c28b159486a708cb0`
 
 Latest tag:
 
@@ -304,7 +304,7 @@ phase-23-2-suspicious-provenance-fixture-hardening
 
 Latest completed merge:
 
-`PENDING_PHASE_23_1_MERGE`
+`2bdb3d7773d99e57e7192a1c28b159486a708cb0`
 
 Recommended PR target:
 
