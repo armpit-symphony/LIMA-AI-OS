@@ -4431,6 +4431,25 @@ Consequences:
 - Phase 25.4 may perform a cross-API boundary readiness review only.
 - Runtime expansion remains blocked.
 
+## ADR-0236: Phase 25 Cross-API Hardening Is Ready For Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 25.4 reviews Phase 25.0 through Phase 25.3 as ready for archive/closeout.
+
+Rationale:
+
+The cross-API matrix fixtures and tests now protect candidate construction, normalization, validation, provenance, status, and non-execution invariants without runtime changes.
+
+Consequences:
+
+- Phase 25.4 changes no runtime files.
+- Phase 25.4 changes no `tests/support/` files.
+- Phase 25.5 may archive Phase 25 only.
+- Phase 26 requires explicit approval.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

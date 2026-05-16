@@ -6713,6 +6713,30 @@ Status:
 - complete
 - tagged as `phase-25.3-cross-api-provenance-and-status-invariant-tests`
 
+## Phase 25.4 - Cross-API Boundary Readiness Review
+
+Goal:
+
+Review Phase 25.0 through Phase 25.3 as ready for archive/closeout.
+
+Deliverables:
+
+- `docs/PHASE_25_4_CROSS_API_BOUNDARY_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_25_4_cross_api_boundary_readiness_review.json`
+- `tests/test_phase_25_4_cross_api_boundary_readiness_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 25.0 through Phase 25.3 are reviewed
+- Phase 26 requires explicit approval
+
+Status:
+
+- complete on branch `phase-25-4-cross-api-boundary-readiness-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
