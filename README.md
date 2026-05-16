@@ -444,6 +444,8 @@ Phase 18.5 archives Phase 18 as a completed test-only regression hardening lane 
 
 Phase 19.0 opens the acceptance-gate audit/archive lane for the Phase 18 regression hardening package, while keeping runtime, `lima/`, `tests/support`, Sparkbot, HumanInput bridge, live adapter, execution, dispatch, persistence, and physical-world work blocked.
 
+Phase 19.1 reviews Phase 18 regression coverage and records that the coverage is meaningful but still test-only; it does not create runtime enforcement or approve Phase 20.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

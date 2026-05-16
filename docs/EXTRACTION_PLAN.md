@@ -5433,6 +5433,42 @@ Blocked:
 
 Continue only to Phase 19.1 regression coverage review.
 
+## Phase 19.1 Gate: Regression Coverage Review
+
+Phase 19.1 may review Phase 18 regression coverage without changing runtime code.
+
+Allowed:
+
+- coverage review documentation
+- static coverage review fixture metadata
+- static coverage review tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Coverage reviewed:
+
+- candidate API regression tests
+- acceptance-boundary fixtures
+- forbidden integration regression tests
+- readiness and archive checks
+
+Result:
+
+Phase 18 coverage is meaningful as test-only regression protection. It does not create runtime enforcement or approve runtime expansion.
+
+Continue only to Phase 19.2 remaining regression gap review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

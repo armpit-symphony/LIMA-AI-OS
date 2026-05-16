@@ -5769,6 +5769,35 @@ Status:
 - complete
 - tagged as `phase-19.0-phase-18-regression-hardening-audit-charter`
 
+## Phase 19.1 - Regression Coverage Review
+
+Goal:
+
+Review whether the Phase 18 regression hardening package provides meaningful coverage before any next-lane decision.
+
+Deliverables:
+
+- `docs/PHASE_19_1_REGRESSION_COVERAGE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_19_1_regression_coverage_review.json`
+- `tests/test_phase_19_1_regression_coverage_review.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18 candidate API, fixture, forbidden integration, readiness, and archive coverage are reviewed
+- static/test-only limitations are documented
+- Phase 5 runtime bridge remains gated
+- Phase 20 remains unapproved
+- tests pass
+
+Status:
+
+- complete
+- tagged as `phase-19.1-regression-coverage-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

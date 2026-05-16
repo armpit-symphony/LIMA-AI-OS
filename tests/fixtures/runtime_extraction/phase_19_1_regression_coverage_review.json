@@ -1,0 +1,47 @@
+{
+  "phase": "19.1",
+  "status": "regression_coverage_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_code_modified": false,
+  "phase_document": "docs/PHASE_19_1_REGRESSION_COVERAGE_REVIEW.md",
+  "reviewed_phase_18_groups": [
+    "candidate_api_regression_tests",
+    "acceptance_boundary_regression_fixtures",
+    "forbidden_integration_regression_tests",
+    "readiness_and_archive_checks"
+  ],
+  "covered_boundaries": [
+    "non_executing_candidate_invariants",
+    "malformed_candidate_safety",
+    "unknown_status_safety",
+    "stale_or_replayed_candidate_safety",
+    "approval_bypass_wording_no_bypass",
+    "shell_browser_network_file_robotics_physical_world_attempts_inert",
+    "sparkbot_integration_absent",
+    "humaninput_runtime_bridge_absent",
+    "live_adapter_absent",
+    "approval_enforcement_execution_dispatch_audit_persistence_absent"
+  ],
+  "limitations": [
+    "test_only_checks_do_not_create_runtime_enforcement",
+    "fixtures_are_synthetic_and_inert",
+    "static_scans_are_boundary_regression_guards_not_runtime_monitors",
+    "future_runtime_expansion_still_requires_explicit_phil_approval"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "helper_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_action_added": false,
+    "phase_5_runtime_bridge_remains_gated": true,
+    "phase_20_approved": false
+  }
+}
