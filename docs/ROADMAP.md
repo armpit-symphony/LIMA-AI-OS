@@ -6437,6 +6437,30 @@ Status:
 - complete
 - tagged as `phase-23.3-bypass-wording-provenance-tests`
 
+## Phase 23.4 - Provenance Hardening Readiness Review
+
+Goal:
+
+Review Phase 23.0 through Phase 23.3 as a completed test-only provenance hardening package.
+
+Deliverables:
+
+- `docs/PHASE_23_4_PROVENANCE_HARDENING_READINESS_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_23_4_provenance_hardening_readiness_review.json`
+- `tests/test_phase_23_4_provenance_hardening_readiness_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 23.0 through Phase 23.3 are reviewed
+- Phase 24 remains gated
+
+Status:
+
+- complete on branch `phase-23-4-provenance-hardening-readiness-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

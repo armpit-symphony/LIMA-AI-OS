@@ -4222,6 +4222,25 @@ Consequences:
 - Bypass wording must not approve, execute, dispatch, persist, or enable side effects.
 - Phase 23.4 may perform a readiness review only.
 
+## ADR-0225: Phase 23 Hardening Is Ready For Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 23.4 reviews Phase 23.0 through Phase 23.3 as ready for archive/closeout.
+
+Rationale:
+
+The test-only hardening lane now covers provenance invariants, suspicious provenance shapes, risky action metadata, and bypass wording without changing runtime code.
+
+Consequences:
+
+- Phase 23.4 changes no runtime files.
+- Phase 23.4 changes no `tests/support/` files.
+- Phase 23.5 may archive Phase 23 only.
+- Phase 24 remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
