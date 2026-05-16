@@ -336,6 +336,8 @@ Phase 27.4 Phase 27 Preservation Archive / Closeout is complete, merged to `main
 
 Phase 28.0 Phase 27 Preservation Status Audit Charter is complete, merged to `main`, and tagged. It opens the preservation status review and requires a sharper Phase 29 decision gate without runtime changes.
 
+Phase 28.1 Stable Runtime/Test State Review is complete, merged to `main`, and tagged. It confirms the current runtime/test state remains stable and preserved without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

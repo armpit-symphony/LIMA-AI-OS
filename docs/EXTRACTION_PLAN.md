@@ -6771,6 +6771,33 @@ Forbidden:
 
 Continue only to Phase 28.1 stable runtime/test state review.
 
+## Phase 28.1 Gate: Stable Runtime/Test State Review
+
+Phase 28.1 confirms the current runtime/test state remains stable and preserved.
+
+Allowed:
+
+- Phase 28.1 tests
+- Phase 28.1 fixture metadata
+- Phase 28.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 28.2 preservation pause justification review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

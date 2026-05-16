@@ -4642,6 +4642,25 @@ Consequences:
 - Phase 29 must recommend a sharper next direction.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0249: Current Runtime/Test State Remains Stable
+
+Status: Accepted
+
+Decision:
+
+Phase 28.1 confirms the current runtime/test state remains stable and preserved.
+
+Context:
+
+The preservation status review should verify stability before deciding whether another pause is justified or whether Phase 29 should move to no-code design review.
+
+Consequences:
+
+- Phase 28.1 changes no runtime files.
+- Phase 28.1 changes no `tests/support/` files.
+- No concrete immediate test-only hardening gap is identified.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted

@@ -542,6 +542,8 @@ Phase 27.4 archives Phase 27 as a completed docs/tests/fixtures-only preservatio
 
 Phase 28.0 opens the approved docs/tests/fixtures-only preservation status review and explicitly prevents an endless preservation loop by requiring a sharper Phase 29 decision gate. It changes no runtime code.
 
+Phase 28.1 confirms the current runtime/test state remains stable and preserved, with no concrete immediate test-only hardening gap found. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
