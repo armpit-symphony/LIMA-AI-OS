@@ -274,27 +274,29 @@ Phase 22.0 Post-Phase-21 Runtime Slice Audit Charter is complete on branch `phas
 
 Phase 22.1 Candidate Provenance Coverage Review is complete on branch `phase-22-1-candidate-provenance-coverage-review` pending merge. It reviews existing provenance coverage and identifies remaining test-only hardening opportunities without runtime changes.
 
+Phase 22.2 Remaining Safety Gap Review is complete on branch `phase-22-2-remaining-safety-gap-review` pending merge. It finds the remaining gaps are test/planning gaps and recommends test-only hardening before runtime expansion.
+
 Latest completed phase merge:
 
-`5dd57da2a88e81e3c8ccddf55d6844d130b6c2d3`
+`PENDING_PHASE_22_2_MERGE`
 
 Latest tag:
 
-`phase-22.1-candidate-provenance-coverage-review`
+`phase-22.2-remaining-safety-gap-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.2 should review remaining safety gaps without implementation. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 22 docs/tests/fixtures-only no-code design lane. Phase 22.3 should choose the safest Phase 23 direction without implementation. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
-phase-22-2-remaining-safety-gap-review
+phase-22-3-next-lane-decision-matrix
 
 Latest completed merge:
 
-`5dd57da2a88e81e3c8ccddf55d6844d130b6c2d3`
+`PENDING_PHASE_22_2_MERGE`
 
 Recommended PR target:
 
@@ -304,7 +306,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 22.2 - Remaining Safety Gap Review.
+Phase 22.3 - Next-Lane Decision Matrix.
 
 Phase 21 approval question:
 

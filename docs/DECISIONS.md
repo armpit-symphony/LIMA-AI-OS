@@ -4095,6 +4095,24 @@ Consequences:
 - Phase 22.2 should evaluate whether the remaining gaps justify a test-only Phase 23 lane.
 - Runtime expansion remains blocked.
 
+## ADR-0218: Remaining Phase 22 Gaps Are Test And Planning Gaps
+
+Status: Accepted
+
+Decision:
+
+Phase 22.2 classifies the remaining post-Phase-21 gaps as test-only or planning work, not immediate runtime work.
+
+Rationale:
+
+The Phase 21 runtime slice remains non-executing and authority-free. The next useful hardening is broader fixture and static regression coverage before any further runtime expansion.
+
+Consequences:
+
+- Phase 22.2 changes no runtime files.
+- Phase 22.3 should compare next-lane options with test-only hardening favored by the gap review.
+- Phase 23 remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
