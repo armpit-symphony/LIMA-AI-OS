@@ -4777,6 +4777,26 @@ Consequences:
 - The recommended future runtime slice is read-only runtime state inspection.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0258: Phase 30 Opens With A Runtime Scope Audit
+
+Status: Accepted
+
+Decision:
+
+Phase 30.0 opens the approved runtime implementation lane by auditing Phase 29 and confirming that Phase 30 is limited to read-only runtime state inspection before runtime files are touched.
+
+Context:
+
+Phil explicitly approved Phase 30 only as a tiny, local-only, deterministic, read-only, non-authoritative, non-executing runtime state inspection slice.
+
+Consequences:
+
+- Phase 30.0 changes no runtime files.
+- Phase 30.0 changes no `tests/support/` files.
+- Future runtime edits in this lane are limited to `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- `lima/kernel/intake_candidate.py`, `lima/kernel/candidate_status.py`, and all other existing `lima/` files remain forbidden.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
