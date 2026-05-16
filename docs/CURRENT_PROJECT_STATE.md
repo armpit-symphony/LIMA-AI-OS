@@ -282,7 +282,7 @@ Phase 22.4 Phase 22 Decision Gate / Closeout is complete on branch `phase-22-4-p
 
 Latest completed phase merge:
 
-`PENDING_PHASE_22_4_MERGE`
+`aa80817690a6a32559b2c7880b46d1192449eca1`
 
 Latest tag:
 
@@ -300,7 +300,7 @@ none_until_phase_23_is_explicitly_approved
 
 Latest completed merge:
 
-`PENDING_PHASE_22_4_MERGE`
+`aa80817690a6a32559b2c7880b46d1192449eca1`
 
 Recommended PR target:
 
