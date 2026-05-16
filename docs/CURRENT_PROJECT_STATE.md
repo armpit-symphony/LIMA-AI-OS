@@ -272,7 +272,7 @@ Phase 21.5 Phase 21 Runtime Slice Audit Archive / Closeout is complete on branch
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_5_MERGE`
+`32916503b6bdc67196197ec9e9964335a45344a2`
 
 Latest tag:
 
@@ -290,7 +290,7 @@ none_until_phase_22_is_explicitly_approved
 
 Latest completed merge:
 
-`PENDING_PHASE_21_5_MERGE`
+`32916503b6bdc67196197ec9e9964335a45344a2`
 
 Recommended PR target:
 
