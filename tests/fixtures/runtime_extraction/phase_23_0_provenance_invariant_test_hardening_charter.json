@@ -1,0 +1,35 @@
+{
+  "phase": "23.0",
+  "status": "provenance_invariant_test_hardening_charter",
+  "runtime_code_modified": false,
+  "approved_lane": "test_only_hardening_for_provenance_candidate_invariants",
+  "allowed_write_scope": [
+    "tests/test_phase_23_*.py",
+    "tests/fixtures/runtime_extraction/phase_23_*.json",
+    "docs/PHASE_23_*.md",
+    "roadmap_state_docs_only_as_required"
+  ],
+  "hardening_goals": [
+    "valid_provenance_preserved",
+    "missing_provenance_fails_closed",
+    "malformed_provenance_fails_closed",
+    "suspicious_provenance_fails_closed",
+    "stale_replayed_candidates_blocked_or_invalid",
+    "approval_bypass_wording_cannot_change_safety",
+    "non_executing_invariants_preserved",
+    "phase_5_runtime_bridge_remains_gated"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "approval_enforcement_added": false,
+    "execution_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false
+  }
+}

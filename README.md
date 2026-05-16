@@ -486,6 +486,8 @@ Phase 22.3 compares next-lane options and recommends Phase 23 as test-only harde
 
 Phase 22.4 closes the Phase 22 no-code decision lane and preserves the exact Phase 23 approval question. Phase 23 remains gated.
 
+Phase 23.0 opens the approved test-only hardening lane for provenance and candidate invariants. It adds no runtime behavior and keeps `lima/` and `tests/support/` unchanged.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
