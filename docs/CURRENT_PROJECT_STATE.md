@@ -234,27 +234,29 @@ Phase 18.3 Forbidden Integration Regression Tests is complete, merged to `main`,
 
 Phase 18.4 Regression Hardening Readiness Review is complete, merged to `main`, and tagged. It reviews the Phase 18 regression hardening package as ready for archive/closeout while keeping runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
 
+Phase 18.5 Phase 18 Regression Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 18 as completed test-only regression hardening work, preserves the Phase 19 approval question, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior blocked.
+
 Latest completed phase merge:
 
-`6d20f722c063b14a3f324657f8ffbd04d5b5a782`
+`PENDING_PHASE_18_5_MERGE`
 
 Latest tag:
 
-`phase-18.4-regression-hardening-readiness-review`
+`phase-18.5-phase-18-regression-hardening-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Continue only inside the approved Phase 18 test-only regression hardening lane. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
+Stop before Phase 19. Runtime implementation, `lima/` changes, `tests/support/` changes, HumanInput runtime bridge behavior, Sparkbot integration, live adapter, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, or physical-world behavior remain blocked unless Phil explicitly approves a later scope.
 
 Recommended next branch:
 
-phase-18-5-phase-18-regression-hardening-archive-closeout
+none - Phase 19 requires explicit Phil approval
 
 Latest completed merge:
 
-`6d20f722c063b14a3f324657f8ffbd04d5b5a782`
+`PENDING_PHASE_18_5_MERGE`
 
 Recommended PR target:
 
@@ -264,7 +266,11 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 18.5 - Phase 18 Regression Hardening Archive / Closeout.
+Phase 19 - gated pending explicit Phil approval.
+
+Phase 19 approval question:
+
+Do you approve Phase 19 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase that reviews the Phase 18 regression hardening tests before any future runtime expansion, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
 
 Phase 18 approval question:
 

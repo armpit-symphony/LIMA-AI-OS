@@ -3712,6 +3712,27 @@ Consequences:
 - no runtime behavior is changed
 - Phase 18.5 may archive the lane
 
+## ADR-0198: Phase 18 Closes At A Phase 19 Audit Archive Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 18.5 archives Phase 18 as completed test-only regression hardening and preserves a Phase 19 approval question for docs/tests/fixtures-only audit/archive and next-lane decision work.
+
+Rationale:
+
+Phase 18 strengthened regression coverage for existing non-executing candidate APIs and acceptance-gate boundaries. The lane should close before any future runtime expansion, integration planning, or new scope.
+
+Consequences:
+
+- Phase 18.5 is docs/tests/fixtures only
+- no `lima/` files are changed
+- no `tests/support/` files are changed
+- no runtime behavior is changed
+- Phase 19 requires explicit Phil approval
+- runtime expansion, Sparkbot wiring, HumanInput bridge behavior, live adapters, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

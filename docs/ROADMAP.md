@@ -5708,6 +5708,39 @@ Status:
 - complete
 - tagged as `phase-18.4-regression-hardening-readiness-review`
 
+## Phase 18.5 - Phase 18 Regression Hardening Archive / Closeout
+
+Goal:
+
+Archive Phase 18 and preserve the Phase 19 decision gate.
+
+Deliverables:
+
+- `docs/PHASE_18_5_PHASE_18_REGRESSION_HARDENING_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_18_5_phase_18_regression_hardening_archive_closeout.json`
+- `tests/test_phase_18_5_phase_18_regression_hardening_archive_closeout.py`
+
+Acceptance criteria:
+
+- docs/tests/fixtures only
+- no `lima/` changes
+- no `tests/support/` changes
+- no runtime behavior changes
+- Phase 18.0 through Phase 18.4 listed as complete
+- Phase 18 archived as test-only regression hardening
+- recommended Phase 19 direction is preserved
+- Phase 19 requires explicit Phil approval
+- tests pass
+
+Next likely phase:
+
+- Phase 19 - gated pending explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-18.5-phase-18-regression-hardening-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -5381,6 +5381,32 @@ Blocked:
 
 Continue only to Phase 18.5 archive / closeout.
 
+## Phase 18.5 Gate: Phase 18 Regression Hardening Archive / Closeout
+
+Phase 18.5 may archive Phase 18 and preserve the Phase 19 approval question.
+
+Allowed:
+
+- list Phase 18.0 through Phase 18.4 as complete
+- document what Phase 18 added
+- document what Phase 18 did not add
+- preserve recommended Phase 19 direction
+- preserve exact Phase 19 approval question
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Stop for explicit Phil decision. No Phase 19 work is approved by this closeout.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.
