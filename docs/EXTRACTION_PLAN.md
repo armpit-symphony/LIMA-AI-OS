@@ -7440,6 +7440,34 @@ Forbidden:
 
 Continue only to Phase 33.3 Phase 34 next-lane decision matrix.
 
+## Phase 33.3 Gate: Phase 34 Next-Lane Decision Matrix
+
+Phase 33.3 recommends the safest Phase 34 direction after Phase 33 nested metadata regression hardening.
+
+Allowed:
+
+- Phase 33.3 tests
+- Phase 33.3 fixture metadata
+- Phase 33.3 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 34 should be docs/tests/fixtures-only audit/archive for Phase 33 hardening.
+- Immediate runtime implementation is not recommended.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 33.4 test-only hardening archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
