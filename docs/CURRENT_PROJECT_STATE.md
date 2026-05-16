@@ -366,6 +366,8 @@ Phase 30.4 Phase 30 Runtime Slice Archive / Closeout is complete, merged to `mai
 
 Phase 31.0 Phase 30 Runtime Slice Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only Phase 31 audit/archive lane and records the Phase 30 audit result without runtime changes.
 
+Phase 31.1 Read-Only Runtime State Boundary Evidence Review is complete, merged to `main`, and tagged. It records evidence that the Phase 30 slice remains deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

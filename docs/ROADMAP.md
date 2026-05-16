@@ -7419,6 +7419,31 @@ Status:
 - complete
 - tagged as `phase-31.0-phase-30-runtime-slice-audit-charter`
 
+## Phase 31.1 - Read-Only Runtime State Boundary Evidence Review
+
+Goal:
+
+Record evidence that the completed Phase 30 runtime state inspection slice remains inside the approved read-only boundary.
+
+Deliverables:
+
+- `docs/PHASE_31_1_READ_ONLY_RUNTIME_STATE_BOUNDARY_EVIDENCE_REVIEW.md`
+- `tests/fixtures/runtime_extraction/phase_31_1_read_only_runtime_state_boundary_evidence_review.json`
+- `tests/test_phase_31_1_read_only_runtime_state_boundary_evidence_review.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- read-only boundary evidence is recorded
+- forbidden behavior remains absent
+
+Status:
+
+- complete
+- tagged as `phase-31.1-read-only-runtime-state-boundary-evidence-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
