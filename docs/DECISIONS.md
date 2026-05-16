@@ -4203,6 +4203,25 @@ Consequences:
 - `lima/` and `tests/support/` remain unchanged.
 - Phase 23.3 may add explicit bypass-wording tests only.
 
+## ADR-0224: Phase 23.3 Bypass Wording Cannot Grant Authority
+
+Status: Accepted
+
+Decision:
+
+Phase 23.3 adds deterministic tests and fixtures proving that Phil, operator, admin, trusted, urgent, override, approve, and emergency wording does not grant candidate authority.
+
+Rationale:
+
+Phase 23 requires explicit hardening against provenance and metadata that attempts to smuggle authority through trusted language.
+
+Consequences:
+
+- Phase 23.3 changes no runtime files.
+- Phase 23.3 changes no `tests/support/` files.
+- Bypass wording must not approve, execute, dispatch, persist, or enable side effects.
+- Phase 23.4 may perform a readiness review only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
