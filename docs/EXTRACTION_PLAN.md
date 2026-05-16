@@ -6933,6 +6933,33 @@ Forbidden:
 
 Continue only to Phase 29.2 runtime slice safety boundary design.
 
+## Phase 29.2 Gate: Runtime Slice Safety Boundary Design
+
+Phase 29.2 defines the no-code safety boundary for a future read-only runtime state inspection slice.
+
+Allowed:
+
+- Phase 29.2 tests
+- Phase 29.2 fixture metadata
+- Phase 29.2 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 29.3 future implementation eligibility matrix.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

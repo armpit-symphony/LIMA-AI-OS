@@ -554,6 +554,8 @@ Phase 29.0 opens the approved docs/tests/fixtures-only no-code design review for
 
 Phase 29.1 recommends a future read-only runtime state inspection slice as the safest next narrow runtime candidate for detailed no-code boundary design. It changes no runtime code.
 
+Phase 29.2 defines the no-code safety boundary for a future read-only runtime state inspection slice. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

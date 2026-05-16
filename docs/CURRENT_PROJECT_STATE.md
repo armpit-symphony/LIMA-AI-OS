@@ -348,6 +348,8 @@ Phase 29.0 Phase 28 No-Code Design Review Audit Charter is complete, merged to `
 
 Phase 29.1 Narrow Runtime Slice Candidate Inventory is complete, merged to `main`, and tagged. It recommends a future read-only runtime state inspection slice for detailed no-code boundary design.
 
+Phase 29.2 Runtime Slice Safety Boundary Design is complete, merged to `main`, and tagged. It defines the future read-only runtime state inspection boundary without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

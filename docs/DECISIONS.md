@@ -4718,6 +4718,25 @@ Consequences:
 - The recommendation is not runtime implementation approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0255: Future Runtime State Inspection Must Be Read-Only
+
+Status: Accepted
+
+Decision:
+
+Phase 29.2 defines the future read-only runtime state inspection slice as local-only, deterministic, non-authoritative, and side-effect-free.
+
+Context:
+
+The future slice must improve observability without adding authority, persistence, dispatch, execution, live adapters, HumanInput bridge behavior, or GuardianDecision runtime behavior.
+
+Consequences:
+
+- Phase 29.2 changes no runtime files.
+- Phase 29.2 changes no `tests/support/` files.
+- Future eligible runtime file scope is limited to a possible `lima/kernel/runtime_state.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted
