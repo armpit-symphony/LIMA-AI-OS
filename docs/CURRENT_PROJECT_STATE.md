@@ -298,7 +298,7 @@ Phase 24.1 Provenance Hardening Coverage Review is complete, merged to `main`, a
 
 Phase 24.2 Remaining Candidate Invariant Gap Review is complete, merged to `main`, and tagged. It identifies remaining gaps as planning inputs only without runtime changes.
 
-Phase 24.3 Next-Lane Decision Matrix is complete on branch `phase-24-3-next-lane-decision-matrix` pending merge. It recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
+Phase 24.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
 
 Latest completed phase merge:
 

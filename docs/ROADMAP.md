@@ -6585,7 +6585,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-24-3-next-lane-decision-matrix`
+- complete
+- tagged as `phase-24.3-next-lane-decision-matrix`
 
 Reserved from Phase 3.4:
 
