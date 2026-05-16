@@ -296,7 +296,7 @@ Phase 24.0 Phase 23 Hardening Audit Charter is complete, merged to `main`, and t
 
 Phase 24.1 Provenance Hardening Coverage Review is complete, merged to `main`, and tagged. It confirms the Phase 23 provenance and candidate-invariant coverage without runtime changes.
 
-Phase 24.2 Remaining Candidate Invariant Gap Review is complete on branch `phase-24-2-remaining-candidate-invariant-gap-review` pending merge. It identifies remaining gaps as planning inputs only without runtime changes.
+Phase 24.2 Remaining Candidate Invariant Gap Review is complete, merged to `main`, and tagged. It identifies remaining gaps as planning inputs only without runtime changes.
 
 Latest completed phase merge:
 

@@ -6560,7 +6560,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-24-2-remaining-candidate-invariant-gap-review`
+- complete
+- tagged as `phase-24.2-remaining-candidate-invariant-gap-review`
 
 Reserved from Phase 3.4:
 
