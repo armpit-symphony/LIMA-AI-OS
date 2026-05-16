@@ -304,7 +304,7 @@ Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete, merged to `m
 
 Phase 25.0 Cross-API Candidate Invariant Matrix Charter is complete, merged to `main`, and tagged. It opens the approved test-only hardening lane without runtime changes.
 
-Phase 25.1 Candidate API Matrix Fixtures is complete on branch `phase-25-1-candidate-api-matrix-fixtures` pending merge. It adds synthetic matrix fixtures without runtime changes.
+Phase 25.1 Candidate API Matrix Fixtures is complete, merged to `main`, and tagged. It adds synthetic matrix fixtures without runtime changes.
 
 Latest completed phase merge:
 

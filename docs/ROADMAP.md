@@ -6660,7 +6660,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-25-1-candidate-api-matrix-fixtures`
+- complete
+- tagged as `phase-25.1-candidate-api-matrix-fixtures`
 
 Reserved from Phase 3.4:
 
