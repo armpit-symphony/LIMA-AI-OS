@@ -6111,6 +6111,34 @@ Status:
 - complete
 - tagged as `phase-21.1-candidate-provenance-acceptance-test-scaffolding`
 
+## Phase 21.2 - Candidate Provenance Hardening Runtime Implementation
+
+Goal:
+
+Implement the narrow candidate provenance hardening runtime slice.
+
+Deliverables:
+
+- `lima/kernel/intake_candidate.py`
+- `lima/kernel/candidate_status.py`
+- `docs/PHASE_21_2_CANDIDATE_PROVENANCE_HARDENING_RUNTIME_IMPLEMENTATION.md`
+- `tests/fixtures/runtime_extraction/phase_21_2_candidate_provenance_hardening_runtime_implementation.json`
+- `tests/test_phase_21_2_candidate_provenance_hardening_runtime_implementation.py`
+
+Acceptance criteria:
+
+- runtime edits are limited to `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`
+- `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` remain untouched
+- provenance construction rejects malformed provenance keys and missing provenance values
+- status normalization and validation block malformed or suspicious provenance
+- valid provenance is preserved
+- execution, approval enforcement, dispatch, audit persistence, Sparkbot wiring, HumanInput bridge behavior, live adapters, and physical-world behavior remain absent
+
+Status:
+
+- complete
+- tagged as `phase-21.2-candidate-provenance-hardening-runtime-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

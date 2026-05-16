@@ -5760,6 +5760,34 @@ Phase 21.1 proves the existing non-executing candidate APIs preserve valid prove
 
 Continue only to Phase 21.2 candidate provenance hardening runtime implementation inside `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
 
+## Phase 21.2 Gate: Candidate Provenance Hardening Runtime Implementation
+
+Phase 21.2 implements candidate provenance hardening inside the approved runtime files only.
+
+Allowed:
+
+- `lima/kernel/intake_candidate.py`
+- `lima/kernel/candidate_status.py`
+- acceptance tests, synthetic fixtures, phase documentation, and project tracking updates
+
+Blocked:
+
+- `lima/kernel/__init__.py`
+- new runtime modules
+- all other `lima/` files
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Candidate construction rejects malformed provenance keys and missing provenance values. Candidate status normalization and validation block malformed or suspicious provenance while preserving valid provenance and all non-executing guarantees.
+
+Continue only to Phase 21.3 candidate provenance regression review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

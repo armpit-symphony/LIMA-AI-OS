@@ -122,8 +122,7 @@ def _validate_intake(intake: Mapping[str, Any]) -> None:
         _normalized_text(intake[field_name], field_name)
 
     provenance = intake["provenance"]
-    if not isinstance(provenance, Mapping) or not provenance:
-        raise IntakeCandidateError("provenance must be a non-empty mapping")
+    _validate_provenance(provenance)
 
 
 def _classify_candidate(intake: Mapping[str, Any], action_category: str) -> tuple[str, str, str]:
@@ -145,3 +144,14 @@ def _normalized_text(value: Any, field_name: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise IntakeCandidateError(f"{field_name} must be a non-empty string")
     return value.strip().lower() if field_name == "action_category" else value.strip()
+
+
+def _validate_provenance(provenance: Any) -> None:
+    if not isinstance(provenance, Mapping) or not provenance:
+        raise IntakeCandidateError("provenance must be a non-empty mapping")
+
+    for key, value in provenance.items():
+        if not isinstance(key, str) or not key.strip():
+            raise IntakeCandidateError("provenance keys must be non-empty strings")
+        if value is None:
+            raise IntakeCandidateError("provenance values must not be missing")
