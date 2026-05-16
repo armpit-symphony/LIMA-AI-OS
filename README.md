@@ -458,6 +458,8 @@ Phase 20.1 compares next-slice options and recommends candidate provenance harde
 
 Phase 20.2 defines the exact future file-touch map for that candidate provenance slice: only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` would be eligible in a later explicitly approved runtime phase.
 
+Phase 20.3 defines future acceptance tests and rollback/audit proof for the candidate provenance slice, while still not implementing those tests or touching runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

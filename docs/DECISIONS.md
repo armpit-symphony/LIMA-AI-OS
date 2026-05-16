@@ -3886,6 +3886,24 @@ Consequences:
 - All other `lima/` files and `tests/support/` remain forbidden.
 - Phase 21 remains unapproved.
 
+## ADR-0207: Phase 21 Requires Provenance Acceptance And Rollback Proof
+
+Status: Accepted
+
+Decision:
+
+Phase 20.3 defines acceptance-test and rollback/audit proof requirements for any future candidate provenance hardening implementation.
+
+Rationale:
+
+The future slice would touch runtime candidate files, so it must be gated by tests proving provenance safety, non-executing invariants, no approval bypass, no side effects, exact file scope, and clean rollback.
+
+Consequences:
+
+- Phase 21 remains unapproved.
+- No future acceptance tests are implemented in Phase 20.
+- Future implementation must pass targeted tests, full suite, compileall, diff-check, and file-scope audit.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
