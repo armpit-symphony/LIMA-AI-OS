@@ -6068,6 +6068,34 @@ Valid provenance is preserved, missing or malformed provenance fails closed, and
 
 Continue only to Phase 23.2 suspicious provenance fixture hardening.
 
+## Phase 23.2 Gate: Suspicious Provenance Fixture Hardening
+
+Phase 23.2 adds synthetic suspicious provenance fixtures and tests.
+
+Allowed:
+
+- Phase 23.2 tests
+- Phase 23.2 synthetic fixtures
+- Phase 23.2 documentation
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Suspicious provenance authority claims in values, keys, nested mappings, and lists fail closed, while risky action metadata remains non-executing.
+
+Continue only to Phase 23.3 bypass-wording provenance tests.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

@@ -1,0 +1,28 @@
+{
+  "phase": "23.2",
+  "status": "suspicious_provenance_fixture_hardening",
+  "runtime_code_modified": false,
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_23_2_suspicious_provenance_cases.json",
+  "coverage": [
+    "authority_claim_in_provenance_value",
+    "authority_claim_in_provenance_key",
+    "authority_claim_in_nested_provenance_mapping",
+    "authority_claim_in_provenance_list",
+    "risky_shell_attempt_metadata_non_executing",
+    "risky_robotics_attempt_metadata_non_executing"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}

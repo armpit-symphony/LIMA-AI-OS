@@ -4185,6 +4185,24 @@ Consequences:
 - `lima/` and `tests/support/` remain unchanged.
 - Phase 23.2 may add suspicious provenance fixtures only.
 
+## ADR-0223: Suspicious Provenance Fixtures Are Hardened
+
+Status: Accepted
+
+Decision:
+
+Phase 23.2 adds synthetic suspicious provenance fixtures for authority claims in values, keys, nested mappings, lists, and risky action metadata.
+
+Rationale:
+
+Phase 22 identified nested and matrix-style suspicious provenance coverage as a remaining test-only gap.
+
+Consequences:
+
+- Phase 23.2 changes no runtime files.
+- `lima/` and `tests/support/` remain unchanged.
+- Phase 23.3 may add explicit bypass-wording tests only.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
