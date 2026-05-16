@@ -594,6 +594,8 @@ Phase 33.0 opens the approved test-only hardening lane for the existing read-onl
 
 Phase 33.1 adds synthetic nested suspicious metadata fixtures for `runtime_state` hardening without changing runtime code.
 
+Phase 33.2 adds regression tests proving nested suspicious metadata remains deterministic, read-only, non-authoritative, non-executing, and side-effect free under the existing `runtime_state` API.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

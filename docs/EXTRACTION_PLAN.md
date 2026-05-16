@@ -7412,6 +7412,34 @@ Forbidden:
 
 Continue only to Phase 33.2 runtime state nested metadata regression tests.
 
+## Phase 33.2 Gate: Runtime State Nested Metadata Regression Tests
+
+Phase 33.2 adds regression tests for nested suspicious metadata using the existing `inspect_runtime_state` API.
+
+Allowed:
+
+- Phase 33.2 tests
+- Phase 33.2 fixture metadata
+- Phase 33.2 documentation
+- roadmap/state metadata updates
+
+Result:
+
+- Nested suspicious metadata remains safe.
+- No runtime_state gap requiring runtime code changes was found.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 33.3 Phase 34 next-lane decision matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
