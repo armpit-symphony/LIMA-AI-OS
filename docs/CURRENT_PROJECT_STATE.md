@@ -260,7 +260,7 @@ Phase 20.5 Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout is c
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_5_MERGE`
+`7019a86523fd099e78954c0e4019ab37b6b33376`
 
 Latest tag:
 
@@ -278,7 +278,7 @@ phase-21-0-candidate-provenance-hardening-preflight
 
 Latest completed merge:
 
-`PENDING_PHASE_20_5_MERGE`
+`7019a86523fd099e78954c0e4019ab37b6b33376`
 
 Recommended PR target:
 
