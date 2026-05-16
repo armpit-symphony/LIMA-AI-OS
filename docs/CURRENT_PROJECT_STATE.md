@@ -256,7 +256,7 @@ Phase 20.3 Acceptance Test And Rollback Plan is complete, merged to `main`, and 
 
 Latest completed phase merge:
 
-`PENDING_PHASE_20_3_MERGE`
+`17e3d079c969c9f0cdfa11d97667114523d71a57`
 
 Latest tag:
 
@@ -274,7 +274,7 @@ phase-20-4-phase-20-runtime-slice-approval-gate-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_20_3_MERGE`
+`17e3d079c969c9f0cdfa11d97667114523d71a57`
 
 Recommended PR target:
 
