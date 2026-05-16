@@ -7494,6 +7494,31 @@ Status:
 - complete
 - tagged as `phase-31.3-phase-32-next-lane-decision-matrix`
 
+## Phase 31.4 - Phase 31 Runtime Slice Audit Archive / Closeout
+
+Goal:
+
+Archive Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and preserve the Phase 32 gate.
+
+Deliverables:
+
+- `docs/PHASE_31_4_PHASE_31_RUNTIME_SLICE_AUDIT_ARCHIVE_CLOSEOUT.md`
+- `tests/fixtures/runtime_extraction/phase_31_4_phase_31_runtime_slice_audit_archive_closeout.json`
+- `tests/test_phase_31_4_phase_31_runtime_slice_audit_archive_closeout.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 31.0 through Phase 31.3 are archived
+- Phase 32 requires explicit Phil approval
+
+Status:
+
+- complete
+- tagged as `phase-31.4-phase-31-runtime-slice-audit-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

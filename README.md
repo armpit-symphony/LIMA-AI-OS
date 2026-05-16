@@ -578,6 +578,8 @@ Phase 31.2 reviews Phase 30 regression coverage and remaining gaps, finding no b
 
 Phase 31.3 recommends Phase 32 as a docs/tests/fixtures-only design review for the next narrow runtime slice, not runtime implementation. It changes no runtime code.
 
+Phase 31.4 archives Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and stops at the Phase 32 gate. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
