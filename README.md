@@ -580,6 +580,8 @@ Phase 31.3 recommends Phase 32 as a docs/tests/fixtures-only design review for t
 
 Phase 31.4 archives Phase 31 as the completed docs/tests/fixtures-only audit/archive for the Phase 30 runtime slice and stops at the Phase 32 gate. It changes no runtime code.
 
+Phase 32.0 opens the docs/tests/fixtures-only design review for the next narrow runtime slice and records the Phase 31 audit result. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
