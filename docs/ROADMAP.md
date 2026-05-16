@@ -6964,6 +6964,32 @@ Status:
 - complete
 - tagged as `phase-27.2-gated-runtime-boundary-review`
 
+## Phase 27.3 - Next-Lane Risk Decision Matrix
+
+Goal:
+
+Evaluate Phase 28 options and recommend exactly one next direction.
+
+Deliverables:
+
+- `docs/PHASE_27_3_NEXT_LANE_RISK_DECISION_MATRIX.md`
+- `tests/fixtures/runtime_extraction/phase_27_3_next_lane_risk_decision_matrix.json`
+- `tests/test_phase_27_3_next_lane_risk_decision_matrix.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- all recommended Phase 28 options are evaluated
+- exactly one Phase 28 direction is recommended
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-27.3-next-lane-risk-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

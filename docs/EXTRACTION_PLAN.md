@@ -6690,6 +6690,33 @@ Forbidden:
 
 Continue only to Phase 27.3 next-lane risk decision matrix.
 
+## Phase 27.3 Gate: Next-Lane Risk Decision Matrix
+
+Phase 27.3 recommends Phase 28 as a docs/tests/fixtures-only preservation status review.
+
+Allowed:
+
+- Phase 27.3 tests
+- Phase 27.3 fixture metadata
+- Phase 27.3 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 27.4 preservation archive/closeout.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

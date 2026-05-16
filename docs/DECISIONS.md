@@ -4584,6 +4584,25 @@ Consequences:
 - Runtime behavior remains unchanged.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0246: Phase 28 Should Continue Preservation Pause
+
+Status: Accepted
+
+Decision:
+
+Phase 27.3 recommends Phase 28 as a docs/tests/fixtures-only preservation status review to continue pausing and preserving the current runtime/test state.
+
+Context:
+
+The current runtime/test state is known-good. Runtime expansion, Sparkbot integration, Robo-OS planning, or future design proposal work should wait for a fresh Phil decision.
+
+Consequences:
+
+- Phase 27.3 changes no runtime files.
+- Phase 27.3 changes no `tests/support/` files.
+- Phase 28 remains gated and requires explicit approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0244: Current Runtime/Test State Is Preserved Before Expansion
 
 Status: Accepted
