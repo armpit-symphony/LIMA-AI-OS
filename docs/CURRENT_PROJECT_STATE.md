@@ -308,6 +308,8 @@ Phase 25.1 Candidate API Matrix Fixtures is complete, merged to `main`, and tagg
 
 Phase 25.2 Cross-API Non-Execution Invariant Tests is complete, merged to `main`, and tagged. It adds deterministic tests proving existing candidate-facing APIs preserve non-execution invariants without runtime changes.
 
+Phase 25.3 Cross-API Provenance and Status Invariant Tests is complete on branch `phase-25-3-cross-api-provenance-and-status-invariant-tests` pending merge. It adds deterministic tests for provenance and status invariants without runtime changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
@@ -320,7 +322,7 @@ Latest tag:
 
 Current operator step:
 
-Continue inside the approved Phase 25 test-only hardening lane. Phase 25.3 may add provenance and status invariant tests only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue inside the approved Phase 25 test-only hardening lane. Phase 25.4 may perform a cross-API boundary readiness review only. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
 
 Recommended next branch:
 
@@ -338,7 +340,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 25.3 - Cross-API Provenance and Status Invariant Tests.
+Phase 25.4 - Cross-API Boundary Readiness Review.
 
 Phase 21 approval question:
 

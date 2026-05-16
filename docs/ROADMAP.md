@@ -6688,6 +6688,30 @@ Status:
 - complete
 - tagged as `phase-25.2-cross-api-non-execution-invariant-tests`
 
+## Phase 25.3 - Cross-API Provenance and Status Invariant Tests
+
+Goal:
+
+Add deterministic tests for provenance and status invariants across existing candidate-facing APIs.
+
+Deliverables:
+
+- `docs/PHASE_25_3_CROSS_API_PROVENANCE_AND_STATUS_INVARIANT_TESTS.md`
+- `tests/fixtures/runtime_extraction/phase_25_3_cross_api_provenance_and_status_invariant_tests.json`
+- `tests/test_phase_25_3_cross_api_provenance_and_status_invariant_tests.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- valid, suspicious, stale, replayed, unknown, malformed, and risky cases remain safe
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete on branch `phase-25-3-cross-api-provenance-and-status-invariant-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

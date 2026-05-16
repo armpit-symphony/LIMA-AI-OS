@@ -6393,6 +6393,33 @@ Blocked:
 
 Continue only to Phase 25.3 cross-API provenance and status invariant tests.
 
+## Phase 25.3 Gate: Cross-API Provenance and Status Invariant Tests
+
+Phase 25.3 adds deterministic tests for provenance and status invariants across existing candidate-facing APIs.
+
+Allowed:
+
+- Phase 25.3 tests
+- Phase 25.3 fixture metadata
+- Phase 25.3 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 25.4 cross-API boundary readiness review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

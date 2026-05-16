@@ -1,0 +1,30 @@
+{
+  "phase": "25.3",
+  "status": "cross_api_provenance_and_status_invariant_tests",
+  "runtime_code_modified": false,
+  "case_fixture": "tests/fixtures/runtime_extraction/phase_25_1_candidate_api_matrix_cases.json",
+  "assertions": [
+    "valid_provenance_preserved",
+    "suspicious_provenance_blocked_or_invalid",
+    "unknown_status_blocked",
+    "stale_candidate_invalid_or_blocked",
+    "replayed_candidate_invalid_or_blocked",
+    "bypass_wording_does_not_approve",
+    "malformed_humaninput_like_intake_rejected",
+    "status_and_validation_never_create_bridge_records"
+  ],
+  "boundary_results": {
+    "lima_modified": false,
+    "tests_support_modified": false,
+    "runtime_behavior_changed": false,
+    "sparkbot_imported_or_wired": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "execution_added": false,
+    "approval_enforcement_added": false,
+    "dispatch_added": false,
+    "audit_persistence_added": false,
+    "physical_world_behavior_added": false,
+    "phase_5_runtime_bridge_remains_gated": true
+  }
+}
