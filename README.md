@@ -530,6 +530,8 @@ Phase 26.3 recommends Phase 27 as a docs/tests/fixtures-only preservation and ro
 
 Phase 26.4 archives Phase 26 as a completed docs/tests/fixtures-only audit/archive lane and preserves Phase 27 as an explicit preservation and roadmap decision gate. It changes no runtime code.
 
+Phase 27.0 opens the approved docs/tests/fixtures-only preservation and roadmap decision lane after the Phase 26 archive. It changes no runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

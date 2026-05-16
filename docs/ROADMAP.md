@@ -6889,6 +6889,31 @@ Status:
 - complete
 - tagged as `phase-26.4-phase-26-cross-api-audit-archive-closeout`
 
+## Phase 27.0 - Phase 26 Preservation Audit Charter
+
+Goal:
+
+Open the approved docs/tests/fixtures-only preservation and roadmap decision lane after Phase 26.
+
+Deliverables:
+
+- `docs/PHASE_27_0_PHASE_26_PRESERVATION_AUDIT_CHARTER.md`
+- `tests/fixtures/runtime_extraction/phase_27_0_phase_26_preservation_audit_charter.json`
+- `tests/test_phase_27_0_phase_26_preservation_audit_charter.py`
+
+Acceptance criteria:
+
+- no runtime changes
+- no `lima/` changes
+- no `tests/support/` changes
+- Phase 26.0 through Phase 26.4 are in audit scope
+- Phase 5 runtime bridge remains gated
+
+Status:
+
+- complete
+- tagged as `phase-27.0-phase-26-preservation-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

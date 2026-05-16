@@ -4565,6 +4565,25 @@ Consequences:
 - Phase 27 requires explicit approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0243: Phase 27 Opens As Preservation And Roadmap Decision
+
+Status: Accepted
+
+Decision:
+
+Phase 27.0 opens the approved docs/tests/fixtures-only preservation and roadmap decision lane after the Phase 26 cross-API audit/archive.
+
+Context:
+
+Phase 26 closed at a clean preservation gate. The safest next step is to document and preserve the known-good runtime/test state before any future expansion decision.
+
+Consequences:
+
+- Phase 27.0 changes no runtime files.
+- Phase 27.0 changes no `tests/support/` files.
+- Runtime behavior remains unchanged.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
