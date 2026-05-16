@@ -4816,6 +4816,26 @@ Consequences:
 - Phase 30.2 must prove deterministic, local-only, read-only, non-authoritative, non-executing, side-effect-free behavior.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0260: Runtime State Inspection Is Advisory Only
+
+Status: Accepted
+
+Decision:
+
+Phase 30.2 implements read-only runtime state inspection as advisory snapshot metadata only.
+
+Context:
+
+The approved Phase 30 runtime slice can improve observability, but it must not create authority, bridge HumanInput, dispatch, execute, persist, approve, or call external systems.
+
+Consequences:
+
+- `lima/kernel/runtime_state.py` is added.
+- `lima/kernel/__init__.py` changes only to expose the safe inspection primitive.
+- `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` remain unchanged.
+- The new inspection output is deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect-free.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0252: Phase 28 Archives At A Phase 29 No-Code Design Gate
 
 Status: Accepted

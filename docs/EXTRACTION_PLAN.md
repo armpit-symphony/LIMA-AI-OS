@@ -7076,6 +7076,38 @@ Forbidden:
 
 Continue only to Phase 30.2 read-only runtime state inspection implementation.
 
+## Phase 30.2 Gate: Read-Only Runtime State Inspection Implementation
+
+Phase 30.2 implements the approved read-only runtime state inspection slice.
+
+Allowed:
+
+- `lima/kernel/runtime_state.py`
+- `lima/kernel/__init__.py` only for safe public export
+- Phase 30.2 tests
+- Phase 30.2 fixture metadata
+- Phase 30.2 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- `lima/kernel/intake_candidate.py` changes
+- `lima/kernel/candidate_status.py` changes
+- all other `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior
+- GuardianDecision runtime behavior
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 30.3 runtime state inspection boundary regression review.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

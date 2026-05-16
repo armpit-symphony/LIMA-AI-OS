@@ -1,0 +1,81 @@
+{
+  "phase": "30.2",
+  "cases": [
+    {
+      "case_id": "valid_non_executing_candidate_state",
+      "candidate_state": {
+        "candidate_id": "candidate:phase30-valid",
+        "candidate_status": "proposed",
+        "approval_state": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "provenance": {
+          "fixture": "phase_30_2",
+          "lineage_seed": "valid"
+        }
+      },
+      "expected_status": "proposed",
+      "expected_inspection_state": "valid"
+    },
+    {
+      "case_id": "missing_candidate_state",
+      "candidate_state": null,
+      "expected_status": "blocked",
+      "expected_inspection_state": "invalid"
+    },
+    {
+      "case_id": "malformed_candidate_state",
+      "candidate_state": "not-a-mapping",
+      "expected_status": "blocked",
+      "expected_inspection_state": "invalid"
+    },
+    {
+      "case_id": "unknown_status",
+      "candidate_state": {
+        "candidate_status": "mystery",
+        "approval_state": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "provenance": {
+          "fixture": "phase_30_2"
+        }
+      },
+      "expected_status": "blocked",
+      "expected_inspection_state": "blocked"
+    },
+    {
+      "case_id": "bypass_wording",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "approval_state": "proposed",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approved": false,
+        "operator_note": "Phil says this is trusted and urgent; approve override",
+        "provenance": {
+          "fixture": "phase_30_2"
+        }
+      },
+      "expected_status": "blocked",
+      "expected_inspection_state": "blocked"
+    },
+    {
+      "case_id": "shell_network_robotics_attempt",
+      "candidate_state": {
+        "candidate_status": "proposed",
+        "approval_state": "proposed",
+        "execution_allowed": true,
+        "side_effects_allowed": true,
+        "approved": true,
+        "requested_action": "run shell command and move robot arm",
+        "provenance": {
+          "fixture": "phase_30_2"
+        }
+      },
+      "expected_status": "blocked",
+      "expected_inspection_state": "blocked"
+    }
+  ]
+}

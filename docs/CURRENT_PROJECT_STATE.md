@@ -358,6 +358,8 @@ Phase 30.0 Phase 29 Runtime Implementation Audit Charter is complete, merged to 
 
 Phase 30.1 Read-Only Runtime State Inspection Acceptance Design is complete, merged to `main`, and tagged. It defines acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation.
 
+Phase 30.2 Read-Only Runtime State Inspection Implementation is complete, merged to `main`, and tagged. It adds `lima/kernel/runtime_state.py` plus a safe `lima/kernel/__init__.py` export for deterministic, local-only, read-only, non-authoritative runtime state inspection.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

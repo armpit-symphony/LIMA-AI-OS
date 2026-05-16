@@ -564,6 +564,8 @@ Phase 30.0 opens the explicitly approved narrow runtime implementation lane by a
 
 Phase 30.1 defines acceptance and regression coverage for the approved read-only runtime state inspection slice before implementation. It changes no runtime code.
 
+Phase 30.2 implements the approved read-only runtime state inspection slice in `lima/kernel/runtime_state.py` with a safe public export from `lima/kernel/__init__.py`. It remains local-only, non-authoritative, non-executing, read-only, and side-effect-free.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
