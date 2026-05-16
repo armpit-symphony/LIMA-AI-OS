@@ -6231,6 +6231,33 @@ Blocked:
 
 Continue only to Phase 24.2 remaining candidate invariant gap review.
 
+## Phase 24.2 Gate: Remaining Candidate Invariant Gap Review
+
+Phase 24.2 identifies remaining provenance and candidate-invariant gaps as planning inputs only.
+
+Allowed:
+
+- Phase 24.2 tests
+- Phase 24.2 fixture metadata
+- Phase 24.2 documentation
+- roadmap/state metadata
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation/robotics/physical-world behavior
+
+Continue only to Phase 24.3 next-lane decision matrix.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.
