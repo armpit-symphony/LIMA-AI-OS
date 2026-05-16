@@ -270,7 +270,7 @@ Phase 21.4 Runtime Slice Readiness Review is complete on branch `phase-21-4-runt
 
 Latest completed phase merge:
 
-`PENDING_PHASE_21_4_MERGE`
+`70d2d8dea409f461fad137337a03071b5c70dddf`
 
 Latest tag:
 
@@ -288,7 +288,7 @@ phase-21-5-phase-21-runtime-slice-audit-archive-closeout
 
 Latest completed merge:
 
-`PENDING_PHASE_21_4_MERGE`
+`70d2d8dea409f461fad137337a03071b5c70dddf`
 
 Recommended PR target:
 
