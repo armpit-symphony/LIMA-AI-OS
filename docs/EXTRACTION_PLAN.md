@@ -5556,6 +5556,35 @@ Phase 19 is archived as completed docs/tests/fixtures-only regression audit work
 
 Stop for explicit Phil decision before Phase 20.
 
+## Phase 20.0 Gate: Post-Regression Runtime Slice Design Charter
+
+Phase 20.0 may open the approved docs/tests/fixtures-only no-code design lane for the next narrow runtime slice.
+
+Allowed:
+
+- design charter documentation
+- static design charter fixture metadata
+- static design charter tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Phase 20 opens with candidate slice options but does not choose or implement a runtime slice yet.
+
+Continue only to Phase 20.1 next runtime slice options review.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

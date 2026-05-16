@@ -452,6 +452,8 @@ Phase 19.3 evaluates the approved Phase 20 options and recommends a docs/tests/f
 
 Phase 19.4 archives Phase 19 as complete and preserves the exact Phase 20 approval question. Phase 20 remains unapproved and runtime expansion remains blocked.
 
+Phase 20.0 opens Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, using Phase 18 regression coverage and Phase 19 audit findings without modifying runtime code.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
