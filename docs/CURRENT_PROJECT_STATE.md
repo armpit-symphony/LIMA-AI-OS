@@ -300,7 +300,7 @@ Phase 24.2 Remaining Candidate Invariant Gap Review is complete, merged to `main
 
 Phase 24.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 25 as additional test-only hardening for a cross-API candidate invariant matrix.
 
-Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete on branch `phase-24-4-phase-24-hardening-audit-archive-closeout` pending merge. It archives Phase 24 and preserves Phase 25 as a gated test-only hardening lane.
+Phase 24.4 Phase 24 Hardening Audit Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 24 and preserves Phase 25 as a gated test-only hardening lane.
 
 Latest completed phase merge:
 

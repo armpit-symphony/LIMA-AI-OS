@@ -6610,7 +6610,8 @@ Acceptance criteria:
 
 Status:
 
-- complete on branch `phase-24-4-phase-24-hardening-audit-archive-closeout`
+- complete
+- tagged as `phase-24.4-phase-24-hardening-audit-archive-closeout`
 
 Reserved from Phase 3.4:
 
