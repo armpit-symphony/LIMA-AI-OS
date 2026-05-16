@@ -7340,6 +7340,32 @@ Forbidden:
 
 Continue only to Phase 32.1 candidate runtime slice inventory.
 
+## Phase 32.1 Gate: Candidate Runtime Slice Inventory
+
+Phase 32.1 inventories the requested candidate next lanes after the Phase 30 read-only runtime state inspection slice.
+
+Allowed:
+
+- Phase 32.1 tests
+- Phase 32.1 fixture metadata
+- Phase 32.1 documentation
+- roadmap/state metadata updates
+
+Recommendation:
+
+- Phase 33 should be test-only `runtime_state` hardening with nested suspicious metadata fixtures.
+- Phase 33 should not implement runtime code or change `lima/`.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## Phase 20.5 Gate: Phase 20 Next Runtime Slice Design Lane Audit Archive / Closeout
 
 Phase 20.5 may archive Phase 20 after a dedicated Phase 20.0 through Phase 20.4 audit.

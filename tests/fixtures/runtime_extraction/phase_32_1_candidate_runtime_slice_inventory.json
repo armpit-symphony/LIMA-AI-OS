@@ -1,0 +1,38 @@
+{
+  "phase": "32.1",
+  "status": "candidate_runtime_slice_inventory",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "lima_changes_allowed": false,
+  "tests_support_changes_allowed": false,
+  "candidate_options_reviewed": [
+    "runtime_state_test_only_hardening",
+    "second_read_only_runtime_inspection_slice",
+    "non_executing_candidate_preview_helper",
+    "candidate_status_read_only_normalization_hardening",
+    "humaninput_bridge_boundary_planning_only",
+    "sparkbot_integration_boundary_planning_only",
+    "pause_and_preserve_state"
+  ],
+  "recommended_phase_33_direction": "runtime_state_test_only_hardening",
+  "recommended_phase_33_is_runtime_implementation": false,
+  "recommended_phase_33_allowed_paths": [
+    "docs/PHASE_33_*.md",
+    "tests/fixtures/runtime_extraction/phase_33_*.json",
+    "tests/test_phase_33_*.py",
+    "README.md and roadmap/state docs only if required by repository convention"
+  ],
+  "recommended_phase_33_forbidden": {
+    "lima_changes": true,
+    "tests_support_changes": true,
+    "runtime_implementation": true,
+    "sparkbot_wiring": true,
+    "humaninput_runtime_bridge": true,
+    "live_adapter": true,
+    "approval_execution_dispatch_persistence": true,
+    "shell_browser_network_file_robotics_physical_world": true,
+    "external_service_calls": true,
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects": true
+  },
+  "next_phase": "32.2"
+}

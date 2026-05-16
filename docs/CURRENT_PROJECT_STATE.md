@@ -376,6 +376,8 @@ Phase 31.4 Phase 31 Runtime Slice Audit Archive / Closeout is complete, merged t
 
 Phase 32.0 Phase 31 Next-Slice Design Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only design review for the next narrow runtime slice and records the Phase 31 audit result.
 
+Phase 32.1 Candidate Runtime Slice Inventory is complete, merged to `main`, and tagged. It reviews seven next-lane options and recommends Phase 33 as test-only `runtime_state` hardening with nested suspicious metadata fixtures rather than runtime implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
