@@ -4526,6 +4526,25 @@ Consequences:
 - The gap list does not approve runtime implementation.
 - Phase 26.3 may evaluate next-lane options only.
 
+## ADR-0241: Phase 27 Should Pause And Preserve Current Runtime State
+
+Status: Accepted
+
+Decision:
+
+Phase 26.3 recommends Phase 27 as a docs/tests/fixtures-only preservation and roadmap decision lane to pause and preserve the current runtime/test state.
+
+Context:
+
+Phase 25 already strengthened cross-API candidate invariant coverage, and Phase 26 is archiving the evidence path. The safest next move is preservation rather than runtime expansion or integration planning.
+
+Consequences:
+
+- Phase 26.3 changes no runtime files.
+- Phase 26.3 changes no `tests/support/` files.
+- Phase 27 remains gated and requires explicit approval.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted
