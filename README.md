@@ -456,6 +456,8 @@ Phase 20.0 opens Phase 20 as a docs/tests/fixtures-only no-code design lane for 
 
 Phase 20.1 compares next-slice options and recommends candidate provenance hardening as the only future runtime slice to carry forward, without approving Phase 21 or implementation.
 
+Phase 20.2 defines the exact future file-touch map for that candidate provenance slice: only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py` would be eligible in a later explicitly approved runtime phase.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

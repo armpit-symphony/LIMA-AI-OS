@@ -3867,6 +3867,25 @@ Consequences:
 - Phase 21 remains unapproved.
 - The next step is exact future file-touch mapping.
 
+## ADR-0206: Phase 21 Candidate Provenance File Scope Is Narrow
+
+Status: Accepted
+
+Decision:
+
+Phase 20.2 maps the future candidate provenance hardening slice to exactly `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`.
+
+Rationale:
+
+Both files already own non-executing candidate construction, status normalization, and validation. Keeping the future slice inside those files avoids new public exports, new modules, integration surfaces, and broader runtime churn.
+
+Consequences:
+
+- `lima/kernel/__init__.py` is not eligible for the future Phase 21 slice.
+- No new `lima/kernel/candidate_provenance.py` module is eligible.
+- All other `lima/` files and `tests/support/` remain forbidden.
+- Phase 21 remains unapproved.
+
 ## ADR-0155: Phase 10 Is Archived As No-Code Next-Slice Design
 
 Status: Accepted

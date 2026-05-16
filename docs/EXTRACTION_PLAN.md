@@ -5614,6 +5614,35 @@ Candidate provenance hardening is the recommended future slice because provenanc
 
 Continue only to Phase 20.2 exact file-touch map for candidate slice.
 
+## Phase 20.2 Gate: Exact File-Touch Map For Candidate Slice
+
+Phase 20.2 may define the exact future file-touch map for the selected candidate provenance hardening slice.
+
+Allowed:
+
+- file-touch map documentation
+- static file-touch map fixture metadata
+- static file-touch map tests
+- project tracking updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- helper behavior changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution, dispatch, audit persistence, or physical-world behavior
+
+Result:
+
+Future Phase 21 eligibility is limited to `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`. `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, and `tests/support/` are forbidden unless a later explicit approval changes scope.
+
+Continue only to Phase 20.3 acceptance test and rollback plan.
+
 ## Phase 9.5 Gate: First Runtime Slice Audit Archive / Closeout
 
 Phase 9.5 may archive the completed first runtime slice after a dedicated Phase 9.0 through Phase 9.4 audit.

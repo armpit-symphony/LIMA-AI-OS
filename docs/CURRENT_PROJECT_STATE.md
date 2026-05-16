@@ -250,13 +250,15 @@ Phase 20.0 Post-Regression Runtime Slice Design Charter is complete, merged to `
 
 Phase 20.1 Next Runtime Slice Options Review is complete, merged to `main`, and tagged. It compares candidate provenance hardening, lifecycle metadata, replay/staleness marker normalization, error taxonomy, pause/preserve, and Sparkbot boundary planning, and recommends candidate provenance hardening as the single future slice to carry forward without approving implementation.
 
+Phase 20.2 Exact File-Touch Map For Candidate Slice is complete, merged to `main`, and tagged. It maps a future Phase 21 candidate provenance hardening slice to only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`, while keeping `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/`, Sparkbot, live adapter, HumanInput bridge, approval, execution, dispatch, audit persistence, and physical-world surfaces forbidden.
+
 Latest completed phase merge:
 
-`bb3c536ec3a78975e182fe3faa8c4857a9e9d9f3`
+`PENDING_PHASE_20_2_MERGE`
 
 Latest tag:
 
-`phase-20.1-next-runtime-slice-options-review`
+`phase-20.2-exact-file-touch-map-for-candidate-slice`
 
 ## Current Next Step
 
@@ -266,11 +268,11 @@ Continue only inside the approved Phase 20 docs/tests/fixtures-only no-code desi
 
 Recommended next branch:
 
-phase-20-2-exact-file-touch-map-for-candidate-slice
+phase-20-3-acceptance-test-and-rollback-plan
 
 Latest completed merge:
 
-`bb3c536ec3a78975e182fe3faa8c4857a9e9d9f3`
+`PENDING_PHASE_20_2_MERGE`
 
 Recommended PR target:
 
@@ -280,7 +282,7 @@ Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to
 
 Next intended milestone:
 
-Phase 20.2 - Exact File-Touch Map for Candidate Slice.
+Phase 20.3 - Acceptance Test and Rollback Plan.
 
 Phase 20 approval question:
 
