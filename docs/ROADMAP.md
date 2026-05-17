@@ -7946,6 +7946,24 @@ Status:
 - complete
 - tagged as `phase-36.0-phase-35-runtime-implementation-audit-charter`
 
+## Phase 36.1 - Candidate Preview Acceptance Design
+
+Goal:
+
+- Define acceptance requirements for the candidate preview helper before implementation.
+- Require explicit safe preview fields, malformed/suspicious input coverage, and static boundary scans.
+
+Result:
+
+- Preview safety flags and input coverage are defined.
+- Phase 36.1 adds no runtime implementation.
+- Continue only to Phase 36.2 implementation.
+
+Status:
+
+- complete
+- tagged as `phase-36.1-candidate-preview-acceptance-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

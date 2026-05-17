@@ -7801,6 +7801,35 @@ Forbidden:
 
 Continue only to Phase 36.1 candidate preview acceptance design.
 
+## Phase 36.1 Gate: Candidate Preview Acceptance Design
+
+Phase 36.1 defines acceptance requirements before candidate preview implementation.
+
+Allowed:
+
+- Phase 36.1 tests
+- Phase 36.1 fixture metadata
+- Phase 36.1 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Candidate preview output must expose explicit safe flags.
+- Missing, malformed, unknown, suspicious, nested, and bypass-worded input must remain safe.
+- Static boundary scans are required before implementation can land.
+
+Forbidden:
+
+- runtime implementation in Phase 36.1
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 36.2 candidate preview runtime implementation.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0289: Candidate Preview Requires Explicit Safe Output Fields
+
+Status: Accepted
+
+Decision:
+
+Phase 36.1 requires the candidate preview helper to emit explicit non-authoritative, read-only, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, adapter-inactive, Sparkbot-inactive, external-call-free, robotics-free, and physical-world-free metadata.
+
+Context:
+
+Phase 36 is allowed to implement a tiny candidate preview helper only if tests can prove the output stays inspectable and inert under benign, malformed, unknown, suspicious, nested, and bypass-worded caller-provided input.
+
+Consequences:
+
+- Phase 36.2 must include acceptance tests for the required shape and safety outcomes.
+- Static boundary scans are required.
+- Runtime implementation remains limited to `candidate_preview.py` and optional safe export.
+
 ## ADR-0288: Phase 36 Opens As Bounded Candidate Preview Runtime Slice
 
 Status: Accepted

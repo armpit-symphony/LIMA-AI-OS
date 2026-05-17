@@ -622,6 +622,8 @@ Phase 35.4 archives Phase 35 as completed docs/tests/fixtures-only no-code desig
 
 Phase 36.0 opens the explicitly approved narrow candidate preview runtime implementation lane with a Phase 35 audit PASS and no runtime implementation yet.
 
+Phase 36.1 defines candidate preview acceptance requirements and static boundary checks before implementation, with no runtime code added.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
