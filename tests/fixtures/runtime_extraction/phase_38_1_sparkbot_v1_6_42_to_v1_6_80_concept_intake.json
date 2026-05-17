@@ -1,0 +1,62 @@
+{
+  "phase": "38.1",
+  "status": "sparkbot_concept_intake",
+  "docs_tests_fixtures_only": true,
+  "baseline_v1_6_42": [
+    "computer_control_checkbox_persistence",
+    "model_stack_provider_setting_persistence",
+    "startup_loading_saved_settings"
+  ],
+  "v1_6_80_concepts_identified": [
+    "local_first_desktop_server_operation",
+    "command_center_operator_hub",
+    "owner_local_posture",
+    "strict_security_posture",
+    "confirmation_pin_breakglass_for_risky_actions",
+    "policy_simulation_explain_plan",
+    "persistent_approval_inbox",
+    "agent_identity_metadata",
+    "run_timeline_audit_hash_connector_health_eval_evidence",
+    "guardian_spine_task_event_approval_ledger",
+    "memory_lifecycle_trust_metadata",
+    "token_guardian_honest_live_shadow_posture",
+    "codex_subscription_provider_support",
+    "round_table_task_linked_project_rooms",
+    "mcp_registry_lima_robo_os_manifests",
+    "robotics_replay_simulation_default",
+    "real_hardware_motion_blocked_by_default",
+    "audited_emergency_stop",
+    "sparkbot_command_center_lima_runtime_substrate"
+  ],
+  "lima_inclusion_rule": "planning_preview_metadata_only",
+  "hard_invariants": {
+    "execution_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "side_effects_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_active": false,
+    "robotics_physical_world_active": false
+  },
+  "concept_groups_for_vocabulary_review": [
+    "consumer_identity",
+    "operator_posture",
+    "action_class",
+    "risk_tier",
+    "approval_posture",
+    "dry_run_posture",
+    "run_state",
+    "agent_identity",
+    "memory_trust",
+    "connector_health",
+    "robotics_posture",
+    "audit_surface"
+  ],
+  "sparkbot_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "next_phase": "38.2"
+}

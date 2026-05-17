@@ -20,6 +20,24 @@ Consequences:
 - LIMA may absorb vocabulary and contract concepts.
 - LIMA may not wire Sparkbot, change runtime files, implement integration behavior, execute, approve, dispatch, persist audit, or connect to external/robotics systems in Phase 38.
 
+## ADR-0299: Sparkbot Concepts Are Planning Metadata Until Explicit Runtime Approval
+
+Status: Accepted
+
+Decision:
+
+Sparkbot v1.6.80 concepts may inform LIMA vocabulary, fixtures, and roadmap only as planning metadata in Phase 38.
+
+Context:
+
+Sparkbot owner-local behavior is intentionally friendlier for a self-hosted assistant, but LIMA's current runtime slices remain non-authoritative and non-executing.
+
+Consequences:
+
+- `execution_allowed`, `approval_granted`, `dispatch_allowed`, `persistence_allowed`, and `side_effects_allowed` remain false in Phase 38.
+- Sparkbot wiring, HumanInput bridge behavior, live adapters, external calls, and robotics/physical-world behavior remain inactive.
+- Phase 38 may define terms; it may not grant runtime permissions.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
