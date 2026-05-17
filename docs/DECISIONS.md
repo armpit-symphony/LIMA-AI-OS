@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0287: Phase 35 Archives At Phase 36 Candidate Preview Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 35.4 archives Phase 35 as a completed docs/tests/fixtures-only no-code design review and stops at a Phase 36 explicit approval gate.
+
+Context:
+
+Phase 35 reviewed possible second runtime slices and found that a tightly bounded non-executing candidate preview helper is the safest future implementation candidate if Phil approves it.
+
+Consequences:
+
+- Phase 36 remains unapproved.
+- The exact Phase 36 approval question is preserved.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, approval, execution, dispatch, persistence, mutation, external calls, background work, robotics, and physical-world behavior remain blocked unless Phase 36 is explicitly approved.
+
 ## ADR-0286: Phase 36 Requires Explicit Candidate Preview Approval And Test Proof
 
 Status: Accepted

@@ -7908,6 +7908,25 @@ Status:
 - complete
 - tagged as `phase-35.3-phase-36-eligibility-and-test-plan-matrix`
 
+## Phase 35.4 - Phase 35 Design Review Archive / Closeout
+
+Goal:
+
+- Archive Phase 35 as completed docs/tests/fixtures-only no-code design review.
+- Preserve the candidate second runtime slice review.
+- Preserve the exact Phase 36 approval question.
+
+Result:
+
+- Phase 35 is archived as no-code design review only.
+- The recommended Phase 36 direction is a candidate preview helper only if Phil explicitly approves it.
+- Phase 36 remains gated.
+
+Status:
+
+- complete
+- tagged as `phase-35.4-phase-35-design-review-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

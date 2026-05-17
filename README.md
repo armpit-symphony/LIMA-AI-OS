@@ -618,6 +618,8 @@ Phase 35.2 compares second-slice safety and scope and recommends the future cand
 
 Phase 35.3 defines Phase 36 eligibility criteria, acceptance-test requirements, rollback/audit proof, stop conditions, and the exact future approval question for Phil.
 
+Phase 35.4 archives Phase 35 as completed docs/tests/fixtures-only no-code design review and stops at the Phase 36 explicit approval gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

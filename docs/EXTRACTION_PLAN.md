@@ -7745,6 +7745,35 @@ Forbidden:
 
 Continue only to Phase 35.4 Phase 35 design review archive and closeout.
 
+## Phase 35.4 Gate: Phase 35 Design Review Archive / Closeout
+
+Phase 35.4 archives Phase 35 as a completed docs/tests/fixtures-only no-code design review.
+
+Allowed:
+
+- Phase 35.4 tests
+- Phase 35.4 fixture metadata
+- Phase 35.4 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 35 is archived as no-code design review only.
+- The recommended Phase 36 direction is a candidate preview helper only if explicitly approved by Phil.
+- Phase 36 remains gated.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Stop after Phase 35.4.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
