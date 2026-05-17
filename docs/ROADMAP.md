@@ -8446,6 +8446,24 @@ Status:
 - complete
 - tagged as `phase-41.3-arc-bot-hardening-gap-and-next-lane-review`
 
+## Phase 41.4 - Arc Bot Candidate Preview Hardening Archive / Closeout
+
+Goal:
+
+- Archive the completed Arc Bot-shaped `candidate_preview` hardening lane.
+- Recommend the safest next direction.
+
+Result:
+
+- No concrete runtime gap was found.
+- No runtime or support changes were needed.
+- The next recommended direction is a docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review.
+
+Status:
+
+- complete
+- tagged as `phase-41.4-arc-bot-candidate-preview-hardening-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

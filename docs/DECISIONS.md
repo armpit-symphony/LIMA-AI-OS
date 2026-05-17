@@ -220,6 +220,24 @@ Consequences:
 - Concept classifications are archived as adopted, adapted, Sparkbot-only, deferred, or rejected.
 - Phase 41 may proceed automatically as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
 
+## ADR-0310: Phase 41 Found No Candidate Preview Runtime Gap
+
+Status: Accepted
+
+Decision:
+
+Phase 41 is closed as test-only hardening. No `candidate_preview` runtime change is needed.
+
+Context:
+
+Arc Bot-shaped fixtures show the existing helper either safely previews benign draft-only work or conservatively blocks risky office, Sparkbot-only, robotics, physical-world, external-write, persistence, background-work, admin, and explain-plan shaped inputs.
+
+Consequences:
+
+- Conservative blocking of suspicious planning keys is accepted as safe.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, execution, approval enforcement, dispatch, persistence, external calls, background work, robotics, and physical-world behavior remain unapproved.
+- The recommended next direction is docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
