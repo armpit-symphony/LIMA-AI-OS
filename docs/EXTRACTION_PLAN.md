@@ -7520,6 +7520,29 @@ Forbidden:
 
 Continue only to Phase 34.1 nested metadata coverage evidence review.
 
+## Phase 34.1 Gate: Nested Metadata Coverage Evidence Review
+
+Phase 34.1 reviews the Phase 33 nested metadata fixture and regression evidence.
+
+Allowed:
+
+- Phase 34.1 tests
+- Phase 34.1 fixture metadata
+- Phase 34.1 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 34.2 runtime state hardening gap review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -396,6 +396,8 @@ Phase 33.4 Phase 33 Test-Only Hardening Archive / Closeout is complete, merged t
 
 Phase 34.0 Phase 33 Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only audit/archive lane and records the Phase 33 audit result.
 
+Phase 34.1 Nested Metadata Coverage Evidence Review is complete, merged to `main`, and tagged. It confirms Phase 33 nested metadata coverage and records that the claims remain inert caller-provided data.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
