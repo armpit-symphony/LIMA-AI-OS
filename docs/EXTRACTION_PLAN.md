@@ -7468,6 +7468,35 @@ Forbidden:
 
 Continue only to Phase 33.4 test-only hardening archive and closeout.
 
+## Phase 33.4 Gate: Phase 33 Test-Only Hardening Archive / Closeout
+
+Phase 33.4 archives Phase 33 as completed test-only hardening for the existing read-only `runtime_state` inspection slice.
+
+Allowed:
+
+- Phase 33.4 tests
+- Phase 33.4 fixture metadata
+- Phase 33.4 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 33 found no concrete runtime_state gap.
+- Phase 34 should be docs/tests/fixtures-only audit/archive.
+- Immediate runtime implementation is not recommended.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Stop after Phase 33.4.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

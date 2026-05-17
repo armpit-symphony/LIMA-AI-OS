@@ -598,6 +598,8 @@ Phase 33.2 adds regression tests proving nested suspicious metadata remains dete
 
 Phase 33.3 recommends Phase 34 as docs/tests/fixtures-only audit/archive for the Phase 33 hardening package, not runtime implementation.
 
+Phase 33.4 archives Phase 33 as completed test-only `runtime_state` hardening and stops at the Phase 34 audit/archive approval gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
