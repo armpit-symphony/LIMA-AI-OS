@@ -8575,6 +8575,30 @@ Recommended next lane:
 
 - docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review.
 
+## Phase 42.0 Gate: LIMA Universal Runtime Contract Reframing Audit
+
+Phase 42.0 corrects the next lane from Arc-centered consumer planning to universal LIMA AI OS contract planning.
+
+Allowed:
+
+- Phase 42.0 documentation
+- Phase 42.0 fixture metadata
+- Phase 42.0 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 42.1 model-agnostic task/intent contract design.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

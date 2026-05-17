@@ -680,6 +680,8 @@ Phase 41.3 reviews the Arc Bot-shaped hardening results and finds no concrete ru
 
 Phase 41.4 archives the Arc Bot-shaped `candidate_preview` hardening lane. It confirms no runtime gap, no `lima/` changes, no `tests/support/` changes, and recommends a future docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review rather than implementation.
 
+Phase 42.0 reframes the next lane around LIMA AI OS as the universal, model-agnostic, consumer-agnostic, embodiment-agnostic runtime contract target. Arc Bot / LIMA Office is preserved as an example guarded office-agent consumer profile, Sparkbot Public is framed as an open-source showcase shell and reference evidence, and paid/proprietary LIMA robotics/IoT unlocks are separated from the public contract surface.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -8464,6 +8464,24 @@ Status:
 - complete
 - tagged as `phase-41.4-arc-bot-candidate-preview-hardening-archive-closeout`
 
+## Phase 42.0 - LIMA Universal Runtime Contract Reframing Audit
+
+Goal:
+
+- Reframe Phase 42 from Arc-centered planning to universal LIMA AI OS contract planning.
+- Define the product split between public LIMA AI OS, Sparkbot Public, proprietary Arc Bot, and paid/proprietary robotics/IoT unlocks.
+
+Result:
+
+- Arc Bot is demoted to one example guarded office-agent consumer profile.
+- Sparkbot remains reference evidence and open-source showcase shell.
+- LIMA AI OS is the universal runtime contract target.
+
+Status:
+
+- complete
+- tagged as `phase-42.0-lima-universal-runtime-contract-reframing-audit`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
