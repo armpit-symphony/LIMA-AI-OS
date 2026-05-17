@@ -7859,6 +7859,35 @@ Forbidden:
 
 Continue only to Phase 36.3 candidate preview boundary regression review.
 
+## Phase 36.3 Gate: Candidate Preview Boundary Regression Review
+
+Phase 36.3 reviews the Phase 36.2 candidate preview implementation.
+
+Allowed:
+
+- Phase 36.3 tests
+- Phase 36.3 fixture metadata
+- Phase 36.3 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 36.2 changed only approved runtime files.
+- Phase 36.3 adds no new runtime behavior.
+- The stale Phase 35 test adjustment is narrow and documented.
+
+Forbidden:
+
+- new runtime behavior
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 36.4 runtime slice archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
