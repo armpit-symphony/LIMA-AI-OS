@@ -7830,6 +7830,35 @@ Forbidden:
 
 Continue only to Phase 36.2 candidate preview runtime implementation.
 
+## Phase 36.2 Gate: Candidate Preview Runtime Implementation
+
+Phase 36.2 adds the approved candidate preview runtime helper.
+
+Allowed:
+
+- `lima/kernel/candidate_preview.py`
+- `lima/kernel/__init__.py` only for safe public export
+- Phase 36.2 tests
+- Phase 36.2 fixture metadata
+- Phase 36.2 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- `preview_candidate` returns deterministic, local-only, read-only, non-authoritative, non-executing preview metadata.
+- Suspicious caller-provided claims are blocked and reported as metadata only.
+- Phase 5 HumanInput runtime bridge remains gated.
+
+Forbidden:
+
+- changes to `runtime_state.py`, `intake_candidate.py`, `candidate_status.py`, any other existing `lima/` file, or `tests/support/`
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 36.3 candidate preview boundary regression review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

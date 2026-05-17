@@ -63,10 +63,12 @@ def test_authority_adjacent_options_are_not_implementation_candidates() -> None:
 
 
 def test_possible_future_file_scope_is_explicit_but_not_touched() -> None:
-    scope = _load_json(PHASE_FIXTURE_PATH)["possible_future_phase_36_file_scope_to_evaluate_only"]
+    fixture = _load_json(PHASE_FIXTURE_PATH)
+    scope = fixture["possible_future_phase_36_file_scope_to_evaluate_only"]
     assert "lima/kernel/candidate_preview.py" in scope
     assert "lima/kernel/__init__.py_if_safe_public_export_required" in scope
-    assert not (REPO_ROOT / "lima" / "kernel" / "candidate_preview.py").exists()
+    assert fixture["runtime_implementation_approved"] is False
+    assert fixture["runtime_files_changed_in_phase_35"] == []
 
 
 def test_no_phase_35_1_files_exist_under_lima_or_tests_support() -> None:

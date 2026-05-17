@@ -1,0 +1,44 @@
+{
+  "phase": "36.2",
+  "status": "candidate_preview_runtime_implementation",
+  "runtime_implementation_added": true,
+  "approved_runtime_files_changed": [
+    "lima/kernel/candidate_preview.py",
+    "lima/kernel/__init__.py"
+  ],
+  "forbidden_runtime_files_changed": [],
+  "tests_support_changed": false,
+  "candidate_preview_properties": {
+    "deterministic": true,
+    "local_only": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "side_effect_free": true,
+    "caller_provided_data_only": true,
+    "safe_by_default": true
+  },
+  "safe_outputs_required": [
+    "benign_input",
+    "missing_input",
+    "malformed_input",
+    "unknown_values",
+    "suspicious_values",
+    "nested_suspicious_metadata",
+    "bypass_wording"
+  ],
+  "forbidden_behaviors_absent": [
+    "approval",
+    "execution",
+    "dispatch",
+    "persistence",
+    "humaninput_runtime_bridge",
+    "sparkbot_wiring",
+    "live_adapters",
+    "shell_browser_network_file_mutation",
+    "robotics_physical_world_behavior",
+    "external_calls",
+    "workers_threads_subprocesses_queues_daemons_database_writes_hidden_side_effects"
+  ],
+  "next_phase": "36.3"
+}
