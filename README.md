@@ -654,6 +654,8 @@ Phase 39.0 opens the test-only `candidate_preview` hardening lane for Sparkbot-s
 
 Phase 39.1 adds inert Sparkbot-shaped caller-provided fixture data for owner-local reads, strict-security writes, breakglass/Vault, MCP explain-plan, Robo OS simulation, real hardware motion, kill-switch agent identity, and low-confidence memory write cases.
 
+Phase 39.2 adds regression tests proving the existing `candidate_preview` helper keeps every Sparkbot-shaped fixture blocked, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, and side-effect free.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

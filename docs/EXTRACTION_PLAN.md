@@ -8255,6 +8255,27 @@ Blocked:
 
 Continue only to Phase 39.2 runtime candidate preview Sparkbot-shaped regression tests.
 
+## Phase 39.2 Gate: Candidate Preview Sparkbot-Shaped Regression Tests
+
+Phase 39.2 tests the existing `candidate_preview` helper against Sparkbot-shaped fixtures.
+
+Allowed:
+
+- Phase 39.2 regression tests
+- Phase 39.2 fixture metadata
+- Phase 39.2 documentation
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- approval enforcement, execution, dispatch, persistence, MCP calls, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 39.3 hardening gap and next-lane decision review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
