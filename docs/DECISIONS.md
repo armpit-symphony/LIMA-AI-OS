@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0279: Phase 34 Confirms Phase 33 Nested Metadata Coverage Evidence
+
+Status: Accepted
+
+Decision:
+
+Phase 34.1 records that Phase 33 added nested suspicious metadata coverage and that the covered claims remain inert caller-provided data.
+
+Context:
+
+The Phase 33 hardening package added fixtures and regression tests without runtime code changes.
+
+Consequences:
+
+- Runtime behavior remains unchanged.
+- Phase 34 continues as audit/archive only.
+- No additional test-only hardening gap is identified in this evidence review.
+
 ## ADR-0278: Phase 34 Opens As Audit Archive For Phase 33 Hardening
 
 Status: Accepted

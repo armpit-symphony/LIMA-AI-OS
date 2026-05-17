@@ -602,6 +602,8 @@ Phase 33.4 archives Phase 33 as completed test-only `runtime_state` hardening an
 
 Phase 34.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 33 hardening package and records the Phase 33 audit result.
 
+Phase 34.1 reviews nested metadata coverage evidence and confirms Phase 33 hardening remained test-only and inert.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
