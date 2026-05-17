@@ -8499,6 +8499,23 @@ Status:
 - complete
 - tagged as `phase-42.1-model-agnostic-task-intent-contract-design`
 
+## Phase 42.2 - Consumer And Embodiment Profile Taxonomy
+
+Goal:
+
+- Define universal LIMA AI OS consumer profiles, embodiment/action profiles, action classes, and adapter-boundary vocabulary.
+- Preserve Arc Bot as one example consumer profile and Sparkbot as reference/showcase.
+
+Result:
+
+- Bots, automation, agents, robots, drones, humanoids, IoT, and future embodiments are represented as profile vocabulary.
+- Robotics and IoT remain blocked/deferred with no hardware calls.
+
+Status:
+
+- complete
+- tagged as `phase-42.2-consumer-and-embodiment-profile-taxonomy`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

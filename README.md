@@ -684,6 +684,8 @@ Phase 42.0 reframes the next lane around LIMA AI OS as the universal, model-agno
 
 Phase 42.1 defines universal model-agnostic planning contracts for input, task/intent, candidate action preview, approval posture description, telemetry/evidence references, and embodiment/profile metadata. These are docs/tests/fixtures-only contract descriptions, not runtime schemas or authority grants.
 
+Phase 42.2 defines the universal consumer and embodiment profile taxonomy for LIMA AI OS, covering Arc Bot / LIMA Office, Sparkbot Public, generic chatbots, automation agents, coding/research agents, robot/drone/humanoid/IoT controllers, action classes, and adapter-boundary vocabulary. Robotics and IoT remain profile vocabulary only with no hardware calls.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

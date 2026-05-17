@@ -1,0 +1,73 @@
+{
+  "phase": "42.2",
+  "status": "consumer_and_embodiment_profile_taxonomy",
+  "docs_tests_fixtures_only": true,
+  "consumer_profiles": [
+    "arc_bot_lima_office",
+    "sparkbot_public",
+    "generic_chatbot",
+    "automation_agent",
+    "office_agent",
+    "coding_agent",
+    "research_agent",
+    "robot_controller",
+    "drone_controller",
+    "humanoid_controller",
+    "iot_controller"
+  ],
+  "consumer_profile_roles": {
+    "arc_bot_lima_office": "example_guarded_office_agent_profile",
+    "sparkbot_public": "open_source_showcase_shell_and_reference_profile",
+    "robot_controller": "future_embodied_consumer_profile_blocked_without_guardian_adapter",
+    "drone_controller": "future_embodied_consumer_profile_blocked_without_guardian_adapter",
+    "humanoid_controller": "future_embodied_consumer_profile_blocked_without_guardian_adapter",
+    "iot_controller": "future_embodied_consumer_profile_blocked_without_guardian_adapter"
+  },
+  "embodiment_action_profiles": [
+    "text_only",
+    "office_workflow",
+    "browser",
+    "shell",
+    "file_system",
+    "network_api",
+    "database",
+    "scheduled_background_work",
+    "iot_device",
+    "mobile_robot",
+    "drone",
+    "humanoid",
+    "physical_world_actuator",
+    "emergency_stop"
+  ],
+  "universal_action_classes": [
+    "read",
+    "internal_write",
+    "external_write",
+    "execute",
+    "admin",
+    "secret_use",
+    "scheduled_work",
+    "robot_motion",
+    "physical_world_action",
+    "iot_device_action",
+    "human_proximity_action",
+    "emergency_stop"
+  ],
+  "adapter_boundary_taxonomy": [
+    "no_adapter",
+    "planning_only",
+    "mock_fixture",
+    "contract_preview",
+    "guardian_gated_adapter_required",
+    "private_product_adapter",
+    "paid_embodiment_unlock_required",
+    "blocked_without_explicit_approval"
+  ],
+  "robotics_iot_posture": "profile_vocabulary_blocked_or_deferred_no_hardware_calls",
+  "profile_vocabulary_grants_runtime_authority": false,
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "42.3"
+}
