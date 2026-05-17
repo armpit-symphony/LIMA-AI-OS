@@ -474,9 +474,11 @@ Phase 41.3 Arc Bot Hardening Gap And Next-Lane Review is complete, merged to `ma
 
 Phase 41.4 Arc Bot Candidate Preview Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 41 as a completed docs/tests/fixtures-only hardening lane, confirms no runtime gap, and recommends a future no-code Arc Bot / LIMA Office consumer contract design review rather than runtime implementation.
 
+Phase 42.0 LIMA Universal Runtime Contract Reframing Audit is complete, merged to `main`, and tagged. It corrects Phase 42 away from Arc-centered framing and records LIMA AI OS as the universal model-, consumer-, and embodiment-agnostic runtime contract target while preserving Arc Bot as one example guarded office-agent profile.
+
 Latest completed phase merge:
 
-`0eaa66c7b564007a29141cffc2c81b568935a51f`
+`1cd250fb29daaf3bdf6534627ec1b689ad37561c`
 
 Latest tag:
 

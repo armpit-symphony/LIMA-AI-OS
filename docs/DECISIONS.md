@@ -238,6 +238,25 @@ Consequences:
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, execution, approval enforcement, dispatch, persistence, external calls, background work, robotics, and physical-world behavior remain unapproved.
 - The recommended next direction is docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review.
 
+## ADR-0311: LIMA AI OS Is Universal, Not Arc-Centered
+
+Status: Accepted
+
+Decision:
+
+Phase 42 is reframed as a LIMA AI OS universal runtime contract lane. Arc Bot / LIMA Office is one guarded office-agent consumer profile, not the OS center.
+
+Context:
+
+LIMA AI OS is intended to become the model-agnostic, consumer-agnostic, embodiment-agnostic reasoning runtime for bots, automation, agents, physical robots, humanoids, drones, IoT devices, and future embodiments.
+
+Consequences:
+
+- Sparkbot Public is reference evidence and an open-source showcase shell, not the default runtime posture.
+- Arc Bot remains proprietary worker-bot shell planning, not public OS center.
+- Paid/proprietary LIMA robotics and IoT unlock paths are separated from the public contract surface.
+- Profile vocabulary cannot grant approval, execution, dispatch, persistence, mutation, adapter behavior, robotics, or physical-world authority.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
