@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0293: Phase 37 Opens Candidate Preview Audit Archive Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 37.0 opens a docs/tests/fixtures-only audit/archive lane for the completed Phase 36 candidate preview runtime slice.
+
+Context:
+
+Phase 36 passed audit, changed only approved runtime files plus the approved stale Phase 35 test adjustment, and preserved all non-executing and side-effect-free boundaries.
+
+Consequences:
+
+- Phase 37 may add docs, fixtures, and tests only.
+- Phase 37 may not change `lima/`, `tests/support/`, or stale prior-phase tests.
+- New runtime implementation remains unapproved.
+
 ## ADR-0292: Phase 36 Archives Candidate Preview Runtime Slice
 
 Status: Accepted
