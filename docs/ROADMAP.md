@@ -8167,6 +8167,24 @@ Status:
 - complete
 - tagged as `phase-38.2-lima-consumer-boundary-vocabulary-review`
 
+## Phase 38.3 - Sparkbot-to-LIMA Gap and Risk Matrix
+
+Goal:
+
+- Compare Sparkbot v1.6.80 concepts with current LIMA runtime slices.
+- Identify gaps and recommend the safest next lane.
+
+Result:
+
+- Current LIMA supports read-only `runtime_state` inspection and non-executing `candidate_preview` preview only.
+- Sparkbot-shaped fixture coverage gaps remain.
+- Phase 39 is recommended as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures, not implementation.
+
+Status:
+
+- complete
+- tagged as `phase-38.3-sparkbot-to-lima-gap-and-risk-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

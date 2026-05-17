@@ -440,6 +440,8 @@ Phase 38.1 Sparkbot v1.6.42-to-v1.6.80 Concept Intake is complete, merged to `ma
 
 Phase 38.2 LIMA Consumer Boundary Vocabulary Review is complete, merged to `main`, and tagged. It defines Sparkbot-shaped consumer vocabulary for LIMA planning and fixtures while keeping owner-local, strict-security, explain-plan, approval, MCP, and robotics terms non-authoritative and non-executing.
 
+Phase 38.3 Sparkbot-to-LIMA Gap and Risk Matrix is complete, merged to `main`, and tagged. It finds Sparkbot-shaped fixture coverage gaps and recommends Phase 39 as test-only `candidate_preview` hardening, with no runtime implementation, no `lima/` changes, and no Sparkbot wiring.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

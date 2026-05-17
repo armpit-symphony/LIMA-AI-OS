@@ -646,6 +646,8 @@ Phase 38.1 records the Sparkbot v1.6.42-to-v1.6.80 concept delta and carries for
 
 Phase 38.2 defines Sparkbot-shaped LIMA consumer boundary vocabulary for posture, action class, risk, approval posture, dry-run posture, run state, agent identity, memory trust, connector health, robotics posture, and audit surfaces while keeping every term non-authoritative and non-executing.
 
+Phase 38.3 compares Sparkbot v1.6.80 concepts against current LIMA runtime slices and recommends Phase 39 as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures, not implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
