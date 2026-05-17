@@ -446,6 +446,8 @@ Phase 38.4 Phase 38 Alignment Archive / Closeout is complete, merged to `main`, 
 
 Phase 39.0 Sparkbot-Shaped Candidate Preview Hardening Charter is complete, merged to `main`, and tagged. It opens a docs/tests/fixtures-only hardening lane for Sparkbot-shaped `candidate_preview` fixtures without approving runtime implementation or `lima/` changes.
 
+Phase 39.1 Sparkbot-Shaped Candidate Preview Fixtures is complete, merged to `main`, and tagged. It adds inert caller-provided JSON fixtures for Sparkbot-shaped owner-local, strict-security, breakglass, MCP, Robo OS, hardware-motion, agent kill-switch, and memory-trust cases.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
