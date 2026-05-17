@@ -444,6 +444,8 @@ Phase 38.3 Sparkbot-to-LIMA Gap and Risk Matrix is complete, merged to `main`, a
 
 Phase 38.4 Phase 38 Alignment Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 38 as docs/tests/fixtures-only Sparkbot v1.6.80 alignment intake and recommends Phase 39 as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
 
+Phase 39.0 Sparkbot-Shaped Candidate Preview Hardening Charter is complete, merged to `main`, and tagged. It opens a docs/tests/fixtures-only hardening lane for Sparkbot-shaped `candidate_preview` fixtures without approving runtime implementation or `lima/` changes.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

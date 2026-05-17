@@ -8207,6 +8207,33 @@ Recommended next lane:
 
 - Phase 39 test-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
 
+## Phase 39.0 Gate: Sparkbot-Shaped Candidate Preview Hardening Charter
+
+Phase 39.0 opens the test-only hardening lane for existing `candidate_preview` behavior.
+
+Allowed:
+
+- Phase 39.0 documentation
+- Phase 39.0 fixture metadata
+- Phase 39.0 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- stale prior-phase test changes
+- approval enforcement
+- execution
+- dispatch
+- persistence
+- MCP calls
+- robotics/physical-world behavior
+
+Continue only to Phase 39.1 Sparkbot-shaped candidate preview fixtures.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
