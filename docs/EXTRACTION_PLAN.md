@@ -8323,6 +8323,39 @@ Outcome:
 - No remaining gap.
 - Pause and preserve current runtime/test state.
 
+## Phase 40.0 Gate: Arc Bot Consumer Boundary Clarification
+
+Phase 40.0 clarifies the Phase 38 Sparkbot alignment intake without rewriting completed history.
+
+Allowed:
+
+- Phase 40.0 clarification documentation
+- Phase 40.0 fixture metadata
+- Phase 40.0 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- stale prior-phase test changes
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- persistence
+- shell/browser/network/file mutation
+- robotics/physical-world behavior
+- external calls or background work
+
+Framing:
+
+- Sparkbot v1.6.80 concept intake for future Arc Bot / LIMA Office consumer boundary planning.
+- Not direct Sparkbot integration planning.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
