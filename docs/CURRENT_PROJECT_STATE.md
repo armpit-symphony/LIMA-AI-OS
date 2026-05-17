@@ -480,9 +480,11 @@ Phase 42.1 Model-Agnostic Task Intent Contract Design is complete, merged to `ma
 
 Phase 42.2 Consumer And Embodiment Profile Taxonomy is complete, merged to `main`, and tagged. It records universal LIMA AI OS consumer profiles, embodiment/action profiles, action classes, and adapter-boundary vocabulary while keeping Arc Bot as one profile and robotics/IoT as blocked/deferred planning vocabulary.
 
+Phase 42.3 Universal Safety Invariants And Guardian Boundary Matrix is complete, merged to `main`, and tagged. It records that Guardian or a future policy membrane owns real approval state, while LIMA Phase 42 only describes posture and cannot grant approval, execute, dispatch, persist, call adapters, or touch physical-world systems.
+
 Latest completed phase merge:
 
-`13d1bcd01ed87f36bd0d99b56e5e19d0ae9f5521`
+`999203253f33c10e4d7b6f9790e533f0c40f5f82`
 
 Latest tag:
 

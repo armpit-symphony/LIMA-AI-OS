@@ -1,0 +1,52 @@
+{
+  "phase": "42.3",
+  "status": "universal_safety_invariants_and_guardian_boundary_matrix",
+  "docs_tests_fixtures_only": true,
+  "guardian_or_future_policy_membrane_owns_real_approval_state": true,
+  "lima_describes_approval_posture_only": true,
+  "consumer_profile_vocabulary_can_grant_runtime_authority": false,
+  "hard_invariants": {
+    "preview_only": true,
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false,
+    "lima_grants_approval": false
+  },
+  "boundary_matrix": {
+    "read": "preview_only_future_policy_may_allow",
+    "internal_write": "described_only_future_approval_required",
+    "external_write": "blocked_or_approval_postured_guardian_confirmation_required",
+    "execute": "blocked_future_implementation_and_guardian_approval_required",
+    "admin": "blocked_or_breakglass_postured_guardian_pin_breakglass_required",
+    "secret_use": "blocked_or_redacted_guardian_vault_approval_required",
+    "scheduled_work": "planned_only_no_worker_queue",
+    "robot_motion": "blocked_deferred_guardian_hardware_adapter_emergency_stop_required",
+    "physical_world_action": "blocked_deferred_guardian_embodiment_policy_emergency_stop_required",
+    "iot_device_action": "blocked_deferred_guardian_device_adapter_contract_required",
+    "human_proximity_action": "blocked_deferred_guardian_safety_policy_emergency_stop_required",
+    "emergency_stop": "descriptive_only_future_audited_path_requires_explicit_approval"
+  },
+  "robotics_iot_boundary": {
+    "profile_vocabulary_only": true,
+    "blocked_or_deferred_action_classes": true,
+    "hardware_calls_added": false,
+    "mcp_calls_added": false,
+    "adapters_added": false,
+    "physical_world_behavior_added": false
+  },
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "42.4"
+}

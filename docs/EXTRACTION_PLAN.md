@@ -8648,6 +8648,30 @@ Blocked:
 
 Continue only to Phase 42.3 universal safety invariants and Guardian boundary matrix.
 
+## Phase 42.3 Gate: Universal Safety Invariants And Guardian Boundary Matrix
+
+Phase 42.3 records hard invariants and the Guardian/future policy membrane boundary for universal LIMA AI OS planning.
+
+Allowed:
+
+- Phase 42.3 documentation
+- Phase 42.3 fixture metadata
+- Phase 42.3 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, MCP/hardware calls, adapters, or physical-world behavior
+
+Continue only to Phase 42.4 universal runtime contract archive / closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
