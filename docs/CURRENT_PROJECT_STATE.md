@@ -476,9 +476,11 @@ Phase 41.4 Arc Bot Candidate Preview Hardening Archive / Closeout is complete, m
 
 Phase 42.0 LIMA Universal Runtime Contract Reframing Audit is complete, merged to `main`, and tagged. It corrects Phase 42 away from Arc-centered framing and records LIMA AI OS as the universal model-, consumer-, and embodiment-agnostic runtime contract target while preserving Arc Bot as one example guarded office-agent profile.
 
+Phase 42.1 Model-Agnostic Task Intent Contract Design is complete, merged to `main`, and tagged. It records universal planning contracts for input, task/intent, candidate preview, approval posture, telemetry/evidence, and embodiment/profile metadata without adding runtime schemas or authority.
+
 Latest completed phase merge:
 
-`1cd250fb29daaf3bdf6534627ec1b689ad37561c`
+`540995394823bc7dc269dc8da7e333a418306b5a`
 
 Latest tag:
 
