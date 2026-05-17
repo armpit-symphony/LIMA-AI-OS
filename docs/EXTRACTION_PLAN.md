@@ -7947,6 +7947,36 @@ Forbidden:
 
 Continue only to Phase 37.1 candidate preview boundary evidence review.
 
+## Phase 37.1 Gate: Candidate Preview Boundary Evidence Review
+
+Phase 37.1 reviews Phase 36 candidate preview boundary evidence.
+
+Allowed:
+
+- Phase 37.1 tests
+- Phase 37.1 fixture metadata
+- Phase 37.1 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Candidate preview boundary evidence remains inert and non-authoritative.
+- Static scan evidence is preserved.
+- No runtime change is needed.
+
+Forbidden:
+
+- new runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- stale prior-phase test changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 37.2 candidate preview regression and gap review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
