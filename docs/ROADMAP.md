@@ -8236,6 +8236,23 @@ Status:
 - complete
 - tagged as `phase-39.1-sparkbot-shaped-candidate-preview-fixtures`
 
+## Phase 39.2 - Candidate Preview Sparkbot-Shaped Regression Tests
+
+Goal:
+
+- Prove existing `candidate_preview` behavior remains safe for Sparkbot-shaped inputs.
+
+Result:
+
+- Every Phase 39.1 fixture remains blocked and inert under `preview_candidate`.
+- No runtime files changed.
+- No runtime gap was found.
+
+Status:
+
+- complete
+- tagged as `phase-39.2-candidate-preview-sparkbot-shaped-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

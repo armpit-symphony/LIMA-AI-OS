@@ -448,6 +448,8 @@ Phase 39.0 Sparkbot-Shaped Candidate Preview Hardening Charter is complete, merg
 
 Phase 39.1 Sparkbot-Shaped Candidate Preview Fixtures is complete, merged to `main`, and tagged. It adds inert caller-provided JSON fixtures for Sparkbot-shaped owner-local, strict-security, breakglass, MCP, Robo OS, hardware-motion, agent kill-switch, and memory-trust cases.
 
+Phase 39.2 Candidate Preview Sparkbot-Shaped Regression Tests is complete, merged to `main`, and tagged. It proves the existing `candidate_preview` helper keeps every Sparkbot-shaped fixture blocked, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, and side-effect free.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

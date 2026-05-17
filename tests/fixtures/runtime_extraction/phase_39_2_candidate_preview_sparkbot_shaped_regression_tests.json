@@ -1,0 +1,37 @@
+{
+  "phase": "39.2",
+  "status": "candidate_preview_sparkbot_shaped_regression_tests",
+  "docs_tests_fixtures_only": true,
+  "runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "fixture_source": "tests/fixtures/runtime_extraction/phase_39_1_sparkbot_shaped_candidate_preview_fixtures.json",
+  "cases_tested": [
+    "owner_local_routine_read_request",
+    "strict_security_risky_write_request",
+    "breakglass_required_vault_request",
+    "mcp_explain_plan_request",
+    "robo_os_simulation_request",
+    "real_hardware_robot_motion_request",
+    "agent_identity_kill_switch_true",
+    "low_confidence_memory_write_pending_approval"
+  ],
+  "assertions": {
+    "deterministic_output": true,
+    "all_cases_blocked": true,
+    "expected_blocked_claims_present": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "phase_5_humaninput_runtime_bridge_gated": true,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false
+  },
+  "runtime_gap_found": false,
+  "next_phase": "39.3"
+}
