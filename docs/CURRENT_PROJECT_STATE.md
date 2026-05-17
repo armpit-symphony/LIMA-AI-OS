@@ -412,6 +412,8 @@ Phase 35.2 Second-Slice Safety And Scope Comparison is complete, merged to `main
 
 Phase 35.3 Phase 36 Eligibility And Test Plan Matrix is complete, merged to `main`, and tagged. It defines eligibility criteria, acceptance-test requirements, rollback/audit proof, stop conditions, and the exact future Phase 36 approval question without approving implementation.
 
+Phase 35.4 Phase 35 Design Review Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 35 as completed docs/tests/fixtures-only no-code design review, preserves the exact Phase 36 approval question, and confirms Phase 36 remains gated pending explicit Phil approval.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
