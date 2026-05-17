@@ -608,6 +608,8 @@ Phase 34.2 reviews runtime_state hardening gaps and finds no concrete gap, no ru
 
 Phase 34.3 recommends Phase 35 as docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice, not implementation.
 
+Phase 34.4 archives Phase 34 as completed docs/tests/fixtures-only audit/archive and stops at the Phase 35 no-code design review approval gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -402,6 +402,8 @@ Phase 34.2 Runtime State Hardening Gap Review is complete, merged to `main`, and
 
 Phase 34.3 Phase 35 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 35 as docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice, not implementation.
 
+Phase 34.4 Phase 34 Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 34, confirms no remaining gaps, and stops at the Phase 35 no-code design review gate.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

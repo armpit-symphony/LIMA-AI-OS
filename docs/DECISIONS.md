@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0282: Phase 34 Archives At Phase 35 No-Code Design Review Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 34.4 archives Phase 34 as completed docs/tests/fixtures-only audit/archive and stops at a Phase 35 no-code design review gate.
+
+Context:
+
+Phase 34 confirmed Phase 33 hardening remained test-only, found no remaining gaps, and found no runtime code change need.
+
+Consequences:
+
+- Phase 35 requires explicit Phil approval.
+- Phase 35 should be no-code design review for a possible second narrow runtime slice.
+- Runtime implementation remains unapproved.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0281: Phase 35 Should Be No-Code Design Review For A Second Narrow Runtime Slice
 
 Status: Accepted
