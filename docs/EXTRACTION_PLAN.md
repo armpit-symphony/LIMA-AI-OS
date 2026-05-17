@@ -8179,6 +8179,34 @@ Blocked:
 
 Continue only to Phase 38.4 alignment archive and closeout.
 
+## Phase 38.4 Gate: Alignment Archive Closeout
+
+Phase 38.4 archives Sparkbot v1.6.80 alignment intake.
+
+Allowed:
+
+- Archive documentation
+- Phase 38.4 fixture metadata
+- Phase 38.4 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- approval enforcement
+- execution
+- dispatch
+- persistence
+- MCP calls
+- robotics/physical-world behavior
+
+Recommended next lane:
+
+- Phase 39 test-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

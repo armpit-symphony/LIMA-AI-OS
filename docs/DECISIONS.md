@@ -76,6 +76,24 @@ Consequences:
 - Phase 39 should be tests/fixtures/docs only if pursued.
 - Sparkbot wiring, HumanInput bridge behavior, approval enforcement, execution, dispatch, persistence, MCP calls, and robotics/physical-world behavior remain blocked.
 
+## ADR-0302: Phase 38 Alignment Intake Closes Into Test-Only Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 38 closes with a recommendation for Phase 39 test-only `candidate_preview` hardening using Sparkbot-shaped fixtures.
+
+Context:
+
+Phase 38 absorbed Sparkbot v1.6.80 operating concepts into LIMA planning vocabulary, but found no runtime implementation need.
+
+Consequences:
+
+- No Phase 39 runtime implementation is recommended.
+- No `lima/`, Sparkbot, or `tests/support/` changes are required for the recommended next lane.
+- The next safe evidence step is deterministic offline fixture coverage.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

@@ -8185,6 +8185,24 @@ Status:
 - complete
 - tagged as `phase-38.3-sparkbot-to-lima-gap-and-risk-matrix`
 
+## Phase 38.4 - Phase 38 Alignment Archive / Closeout
+
+Goal:
+
+- Archive Phase 38 Sparkbot alignment intake.
+- Preserve source list, concepts absorbed, boundaries, remaining gaps, and next-lane recommendation.
+
+Result:
+
+- Phase 38 is complete as docs/tests/fixtures-only work.
+- No LIMA runtime files, Sparkbot files, or `tests/support/` files changed.
+- Phase 39 is recommended as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
+
+Status:
+
+- complete
+- tagged as `phase-38.4-phase-38-alignment-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
