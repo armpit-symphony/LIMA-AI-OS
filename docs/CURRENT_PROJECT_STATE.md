@@ -470,9 +470,11 @@ Phase 41.1 Arc Bot Candidate Preview Fixtures is complete, merged to `main`, and
 
 Phase 41.2 Arc Bot Candidate Preview Regression Tests is complete, merged to `main`, and tagged. It exercises the existing `candidate_preview` helper against Arc Bot-shaped fixture data and confirms deterministic, read-only, non-authoritative, non-executing, side-effect-free behavior without runtime changes.
 
+Phase 41.3 Arc Bot Hardening Gap And Next-Lane Review is complete, merged to `main`, and tagged. It records that Phase 41 found no concrete runtime gap and recommends Phase 41.4 as docs/tests/fixtures-only archive closeout.
+
 Latest completed phase merge:
 
-`d77d49951f27574419987425d6597b1f52cff8a1`
+`2bb099bd3eed385cf8db2b0d3215b4602b3be29e`
 
 Latest tag:
 

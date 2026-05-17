@@ -8525,6 +8525,30 @@ Blocked:
 
 Continue only to Phase 41.3 Arc Bot hardening gap and next-lane review.
 
+## Phase 41.3 Gate: Arc Bot Hardening Gap And Next-Lane Review
+
+Phase 41.3 reviews the Arc Bot-shaped `candidate_preview` hardening results.
+
+Allowed:
+
+- Phase 41.3 documentation
+- Phase 41.3 fixture metadata
+- Phase 41.3 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 41.4 Arc Bot hardening archive closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
