@@ -7716,6 +7716,35 @@ Forbidden:
 
 Continue only to Phase 35.3 Phase 36 eligibility and test plan matrix.
 
+## Phase 35.3 Gate: Phase 36 Eligibility And Test Plan Matrix
+
+Phase 35.3 defines eligibility criteria, acceptance-test requirements, rollback/audit proof, stop conditions, and the exact future Phase 36 approval question.
+
+Allowed:
+
+- Phase 35.3 tests
+- Phase 35.3 fixture metadata
+- Phase 35.3 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 36 implementation remains unapproved.
+- Candidate preview is eligible only if it remains deterministic, local-only, read-only, non-authoritative, non-executing, caller-provided-data only, and fully testable without `tests/support/` changes.
+- Stop conditions and rollback/audit proof are defined.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 35.4 Phase 35 design review archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

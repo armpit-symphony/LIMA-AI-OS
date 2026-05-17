@@ -7890,6 +7890,24 @@ Status:
 - complete
 - tagged as `phase-35.2-second-slice-safety-and-scope-comparison`
 
+## Phase 35.3 - Phase 36 Eligibility And Test Plan Matrix
+
+Goal:
+
+- Define future Phase 36 eligibility criteria.
+- Define acceptance tests, rollback proof, audit proof, stop conditions, and the exact Phil approval question.
+
+Result:
+
+- Phase 36 remains unapproved.
+- The future candidate must stay deterministic, local-only, read-only, non-authoritative, non-executing, and caller-provided-data only.
+- The approval question is preserved for Phase 35.4 closeout.
+
+Status:
+
+- complete
+- tagged as `phase-35.3-phase-36-eligibility-and-test-plan-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0286: Phase 36 Requires Explicit Candidate Preview Approval And Test Proof
+
+Status: Accepted
+
+Decision:
+
+Phase 35.3 defines the exact future Phase 36 approval question, eligibility criteria, acceptance tests, rollback proof, and stop conditions for the candidate preview helper.
+
+Context:
+
+Phase 35.2 identified candidate preview as the leading future option, but implementation remains unapproved and must stay smaller than or equal in risk to the Phase 30 `runtime_state` slice.
+
+Consequences:
+
+- Phase 36 cannot begin without explicit Phil approval.
+- Phase 36 must stop if it needs existing runtime file changes, `tests/support/` changes, HumanInput bridge behavior, Sparkbot wiring, live adapters, approval, execution, dispatch, persistence, mutation, external calls, background work, robotics, or physical-world behavior.
+- Acceptance tests and rollback/audit proof are required before any implementation can be considered complete.
+
 ## ADR-0285: Phase 35 Recommends Candidate Preview Only For Future Approval
 
 Status: Accepted
