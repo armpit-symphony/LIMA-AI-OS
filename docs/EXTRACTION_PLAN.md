@@ -7497,6 +7497,29 @@ Forbidden:
 
 Stop after Phase 33.4.
 
+## Phase 34.0 Gate: Phase 33 Hardening Audit Charter
+
+Phase 34.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 33 hardening package.
+
+Allowed:
+
+- Phase 34.0 tests
+- Phase 34.0 fixture metadata
+- Phase 34.0 documentation
+- roadmap/state metadata updates
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 34.1 nested metadata coverage evidence review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

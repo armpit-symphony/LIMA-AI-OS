@@ -600,6 +600,8 @@ Phase 33.3 recommends Phase 34 as docs/tests/fixtures-only audit/archive for the
 
 Phase 33.4 archives Phase 33 as completed test-only `runtime_state` hardening and stops at the Phase 34 audit/archive approval gate.
 
+Phase 34.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 33 hardening package and records the Phase 33 audit result.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

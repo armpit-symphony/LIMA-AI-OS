@@ -394,6 +394,8 @@ Phase 33.3 Phase 34 Next-Lane Decision Matrix is complete, merged to `main`, and
 
 Phase 33.4 Phase 33 Test-Only Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 33 as test-only `runtime_state` hardening, records no runtime gap, and stops at the Phase 34 audit/archive gate.
 
+Phase 34.0 Phase 33 Hardening Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only audit/archive lane and records the Phase 33 audit result.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
