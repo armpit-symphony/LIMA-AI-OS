@@ -662,6 +662,8 @@ Phase 39.4 archives the Sparkbot-shaped `candidate_preview` hardening lane. It f
 
 Phase 40.0 clarifies that Sparkbot v1.6.80 is reference evidence for product/control vocabulary, not the direct future consumer to wire next. Arc Bot / LIMA AI Office is recorded as the primary guarded task-oriented office consumer for the next boundary-planning thread, with stricter defaults than Sparkbot's owner-local workstation posture.
 
+Phase 40.1 defines Arc Bot / LIMA AI Office as a guarded task-oriented office consumer boundary over LIMA AI OS/runtime safety concepts, explicitly not a Sparkbot clone, workstation surface, HumanInput bridge, approval executor, dispatch system, or physical-world controller.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -456,6 +456,8 @@ Phase 39.4 Phase 39 Sparkbot-Shaped Hardening Archive / Closeout is complete, me
 
 Phase 40.0 Arc Bot Consumer Boundary Clarification is complete, merged to `main`, and tagged. It clarifies that Sparkbot v1.6.80 is reference evidence only, records Arc Bot / LIMA AI Office as the primary guarded task-oriented office consumer for future boundary planning, and preserves all runtime, Sparkbot, `tests/support/`, execution, approval, dispatch, persistence, external-call, robotics, and physical-world boundaries.
 
+Phase 40.1 Arc Bot Guarded Task Consumer Boundary Review is complete, merged to `main`, and tagged. It defines Arc Bot / LIMA AI Office as a guarded task-oriented office consumer over LIMA AI OS/runtime safety concepts, with stricter defaults than Sparkbot and no runtime implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
