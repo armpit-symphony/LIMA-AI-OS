@@ -670,6 +670,8 @@ Phase 40.3 defines the Arc Bot-shaped `candidate_preview` fixture plan for a fut
 
 Phase 40.4 archives Phase 40 as a completed Arc Bot / LIMA Office consumer boundary review. Sparkbot remains reference evidence only, Arc Bot / LIMA Office remains the primary guarded task consumer, and Phase 41 is recommended as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
 
+Phase 41.0 opens a docs/tests/fixtures-only test-hardening lane for the existing `candidate_preview` helper using Arc Bot / LIMA Office-shaped task fixtures. No runtime implementation or `lima/` changes are approved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
