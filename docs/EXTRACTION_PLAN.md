@@ -7629,6 +7629,35 @@ Forbidden:
 
 Stop after Phase 34.4.
 
+## Phase 35.0 Gate: Phase 34 Second-Slice Design Audit Charter
+
+Phase 35.0 opens the docs/tests/fixtures-only no-code design review lane for a possible second narrow runtime slice.
+
+Allowed:
+
+- Phase 35.0 tests
+- Phase 35.0 fixture metadata
+- Phase 35.0 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 34 audit result is PASS.
+- Phase 35 is no-code design review only.
+- No Phase 36 runtime implementation is approved.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 35.1 second runtime slice candidate inventory.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

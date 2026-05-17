@@ -610,6 +610,8 @@ Phase 34.3 recommends Phase 35 as docs/tests/fixtures-only no-code design review
 
 Phase 34.4 archives Phase 34 as completed docs/tests/fixtures-only audit/archive and stops at the Phase 35 no-code design review approval gate.
 
+Phase 35.0 opens the docs/tests/fixtures-only no-code design review lane for a possible second narrow runtime slice and records the Phase 34 audit result.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
