@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0295: Candidate Preview Gap Review Finds No Immediate Hardening Need
+
+Status: Accepted
+
+Decision:
+
+Phase 37.2 records no regression, no blocking gap, and no immediate test-only hardening need after the Phase 36 candidate preview slice.
+
+Context:
+
+Phase 37.1 reviewed acceptance and static scan evidence for the candidate preview helper.
+
+Consequences:
+
+- No runtime change is needed.
+- No `tests/support/` change is needed.
+- Phase 37.3 should evaluate next-lane options conservatively.
+
 ## ADR-0294: Candidate Preview Boundary Evidence Remains Inert
 
 Status: Accepted

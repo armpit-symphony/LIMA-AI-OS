@@ -428,6 +428,8 @@ Phase 37.0 Phase 36 Candidate Preview Audit Charter is complete, merged to `main
 
 Phase 37.1 Candidate Preview Boundary Evidence Review is complete, merged to `main`, and tagged. It reviews Phase 36 acceptance evidence and static scan evidence without modifying runtime files.
 
+Phase 37.2 Candidate Preview Regression And Gap Review is complete, merged to `main`, and tagged. It finds no regression, no blocking gap, and no immediate hardening need after the Phase 36 candidate preview slice.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

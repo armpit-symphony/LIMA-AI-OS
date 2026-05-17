@@ -8055,6 +8055,24 @@ Status:
 - complete
 - tagged as `phase-37.1-candidate-preview-boundary-evidence-review`
 
+## Phase 37.2 - Candidate Preview Regression And Gap Review
+
+Goal:
+
+- Review remaining regressions or gaps after the Phase 36 candidate preview slice.
+- Decide whether runtime changes, test-only hardening, or additional scope is needed.
+
+Result:
+
+- No regression was found.
+- No blocking gap was found.
+- No immediate test-only hardening need was found.
+
+Status:
+
+- complete
+- tagged as `phase-37.2-candidate-preview-regression-and-gap-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
