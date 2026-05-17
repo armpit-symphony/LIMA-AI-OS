@@ -7872,6 +7872,24 @@ Status:
 - complete
 - tagged as `phase-35.1-second-runtime-slice-candidate-inventory`
 
+## Phase 35.2 - Second-Slice Safety And Scope Comparison
+
+Goal:
+
+- Compare candidate second runtime slices by safety, usefulness, file scope, testability, rollback simplicity, and risk.
+- Identify exact future file scope only if a candidate remains eligible.
+
+Result:
+
+- Option C remains the recommended future Phase 36 candidate if explicitly approved later.
+- The proposed future file scope is a new `lima/kernel/candidate_preview.py` plus `lima/kernel/__init__.py` only if a safe public export is required.
+- Existing runtime files and `tests/support/` remain out of scope.
+
+Status:
+
+- complete
+- tagged as `phase-35.2-second-slice-safety-and-scope-comparison`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0285: Phase 35 Recommends Candidate Preview Only For Future Approval
+
+Status: Accepted
+
+Decision:
+
+Phase 35.2 recommends a non-executing candidate preview helper only as a future Phase 36 approval candidate, not as current implementation.
+
+Context:
+
+The safety and scope comparison found the preview helper more useful than another read-only runtime inspection helper and less authority-adjacent than GuardianDecision, HumanInput bridge, Sparkbot, or candidate-status wrapper options.
+
+Consequences:
+
+- Phase 36 file scope, if later approved, should be limited to a new `lima/kernel/candidate_preview.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- `runtime_state`, `intake_candidate`, `candidate_status`, all other `lima/`, and `tests/support/` remain forbidden for this candidate.
+- Approval, execution, dispatch, persistence, bridge behavior, adapters, Sparkbot wiring, mutation, external calls, background work, robotics, and physical-world behavior remain forbidden.
+
 ## ADR-0284: Phase 35 Inventories Candidate Preview As Leading Future Design Candidate
 
 Status: Accepted

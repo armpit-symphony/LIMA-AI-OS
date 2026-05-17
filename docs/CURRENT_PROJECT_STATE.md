@@ -408,6 +408,8 @@ Phase 35.0 Phase 34 Second-Slice Design Audit Charter is complete, merged to `ma
 
 Phase 35.1 Second Runtime Slice Candidate Inventory is complete, merged to `main`, and tagged. It reviews options A through H and identifies a future-only, non-executing candidate preview helper as the leading design candidate, while keeping Phase 36 implementation unapproved and `lima/` untouched.
 
+Phase 35.2 Second-Slice Safety And Scope Comparison is complete, merged to `main`, and tagged. It compares candidate safety, usefulness, file scope, testability, rollback simplicity, and risk, then recommends a future candidate preview helper only for a later explicit Phase 36 approval question.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

@@ -614,6 +614,8 @@ Phase 35.0 opens the docs/tests/fixtures-only no-code design review lane for a p
 
 Phase 35.1 inventories second runtime slice options and carries forward a future-only non-executing candidate preview helper as the leading design candidate, without implementation.
 
+Phase 35.2 compares second-slice safety and scope and recommends the future candidate preview helper only for a later explicit Phase 36 approval question.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
