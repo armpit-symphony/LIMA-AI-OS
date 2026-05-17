@@ -8342,6 +8342,23 @@ Status:
 - complete
 - tagged as `phase-40.2-lima-office-task-approval-audit-vocabulary-matrix`
 
+## Phase 40.3 - Arc Bot Candidate Preview Fixture Plan
+
+Goal:
+
+- Define Arc Bot-shaped synthetic fixture targets for a future `candidate_preview` hardening lane.
+- Keep the next step test-only and docs/tests/fixtures-only.
+
+Result:
+
+- Fixture targets cover office email, calendar, file, memory, connector, kill switch, scheduled work, admin, robotics, Sparkbot-only, strict-security, and explain-plan cases.
+- Phase 41 is recommended as test-only hardening, not implementation.
+
+Status:
+
+- complete
+- tagged as `phase-40.3-arc-bot-candidate-preview-fixture-plan`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

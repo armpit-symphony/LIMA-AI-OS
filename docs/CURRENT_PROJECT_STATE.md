@@ -460,9 +460,11 @@ Phase 40.1 Arc Bot Guarded Task Consumer Boundary Review is complete, merged to 
 
 Phase 40.2 LIMA Office Task Approval Audit Vocabulary Matrix is complete, merged to `main`, and tagged. It records the Arc Bot task, approval, explain-plan, run-state, audit/evidence, connector, memory-trust, scheduled-work, secret-use, admin-action, and physical-world planning vocabulary without adding runtime behavior.
 
+Phase 40.3 Arc Bot Candidate Preview Fixture Plan is complete, merged to `main`, and tagged. It identifies the Arc Bot-shaped synthetic fixture cases for a future docs/tests/fixtures-only `candidate_preview` hardening lane and does not approve runtime implementation.
+
 Latest completed phase merge:
 
-`81c7b19e4ec7e43e12d44ca8fbc9dd566f3eafbc`
+`11a2c07745c91866e64b3e9d6b6ec51dabf4a325`
 
 Latest tag:
 

@@ -8404,6 +8404,30 @@ Blocked:
 
 Continue only to Phase 40.3 Arc Bot candidate preview fixture plan.
 
+## Phase 40.3 Gate: Arc Bot Candidate Preview Fixture Plan
+
+Phase 40.3 defines Arc Bot-shaped fixture targets for future `candidate_preview` hardening.
+
+Allowed:
+
+- Phase 40.3 documentation
+- Phase 40.3 fixture metadata
+- Phase 40.3 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 40.4 Arc Bot consumer boundary archive / closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
