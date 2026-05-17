@@ -658,6 +658,8 @@ Phase 39.2 adds regression tests proving the existing `candidate_preview` helper
 
 Phase 39.3 reviews the hardening result, finds no runtime gap, and recommends only Phase 39.4 archive/closeout followed by pause and preserve.
 
+Phase 39.4 archives the Sparkbot-shaped `candidate_preview` hardening lane. It finds no remaining gap, no need for runtime changes, and recommends pausing and preserving the current runtime/test state.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

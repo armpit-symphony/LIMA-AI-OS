@@ -112,6 +112,24 @@ Consequences:
 - No `lima/`, Sparkbot, or `tests/support/` changes are approved.
 - Candidate preview must remain non-authoritative, non-executing, side-effect free, bridge-inactive, and Sparkbot-wiring-inactive.
 
+## ADR-0304: Phase 39 Closes With No Remaining Sparkbot-Shaped Preview Gap
+
+Status: Accepted
+
+Decision:
+
+Phase 39 closes with no remaining Sparkbot-shaped `candidate_preview` hardening gap and recommends pausing and preserving the current runtime/test state.
+
+Context:
+
+The existing `candidate_preview` helper blocked all Sparkbot-shaped Phase 39 fixtures without requiring runtime changes.
+
+Consequences:
+
+- No runtime implementation is recommended.
+- No additional automatic docs/tests/fixtures lane is required by this closeout.
+- Future runtime work or scope expansion requires explicit approval.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
