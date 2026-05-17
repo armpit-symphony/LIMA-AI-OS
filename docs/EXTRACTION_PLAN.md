@@ -8502,6 +8502,29 @@ Blocked:
 
 Continue only to Phase 41.2 Arc Bot candidate preview regression tests.
 
+## Phase 41.2 Gate: Arc Bot Candidate Preview Regression Tests
+
+Phase 41.2 adds regression tests over the Phase 41.1 Arc Bot-shaped fixture corpus using the existing `candidate_preview` helper.
+
+Allowed:
+
+- Phase 41.2 documentation
+- Phase 41.2 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 41.3 Arc Bot hardening gap and next-lane review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
