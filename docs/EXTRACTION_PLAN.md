@@ -8428,6 +8428,32 @@ Blocked:
 
 Continue only to Phase 40.4 Arc Bot consumer boundary archive / closeout.
 
+## Phase 40.4 Gate: Arc Bot Consumer Boundary Archive / Closeout
+
+Phase 40.4 archives Phase 40 as a completed docs/tests/fixtures-only Arc Bot / LIMA Office consumer boundary review.
+
+Allowed:
+
+- Phase 40.4 documentation
+- Phase 40.4 fixture metadata
+- Phase 40.4 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Recommended next lane:
+
+- Phase 41 docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -462,9 +462,11 @@ Phase 40.2 LIMA Office Task Approval Audit Vocabulary Matrix is complete, merged
 
 Phase 40.3 Arc Bot Candidate Preview Fixture Plan is complete, merged to `main`, and tagged. It identifies the Arc Bot-shaped synthetic fixture cases for a future docs/tests/fixtures-only `candidate_preview` hardening lane and does not approve runtime implementation.
 
+Phase 40.4 Arc Bot Consumer Boundary Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 40 as a completed docs/tests/fixtures-only Arc Bot / LIMA Office boundary review and recommends Phase 41 as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
 Latest completed phase merge:
 
-`11a2c07745c91866e64b3e9d6b6ec51dabf4a325`
+`bde319821ba8799fe02136183d0c9f4aceb746f0`
 
 Latest tag:
 

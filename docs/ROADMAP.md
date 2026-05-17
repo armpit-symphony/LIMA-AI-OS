@@ -8359,6 +8359,24 @@ Status:
 - complete
 - tagged as `phase-40.3-arc-bot-candidate-preview-fixture-plan`
 
+## Phase 40.4 - Arc Bot Consumer Boundary Archive / Closeout
+
+Goal:
+
+- Archive Phase 40 as a completed Arc Bot / LIMA Office consumer boundary review.
+- Recommend the safest next lane.
+
+Result:
+
+- Sparkbot remains reference evidence only.
+- Arc Bot / LIMA Office remains the primary guarded task-oriented consumer.
+- Phase 41 is recommended as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
+Status:
+
+- complete
+- tagged as `phase-40.4-arc-bot-consumer-boundary-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

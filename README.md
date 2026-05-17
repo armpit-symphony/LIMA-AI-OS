@@ -668,6 +668,8 @@ Phase 40.2 records the LIMA Office task, approval, audit, connector, memory-trus
 
 Phase 40.3 defines the Arc Bot-shaped `candidate_preview` fixture plan for a future test-only hardening lane. The plan covers draft-only email, external send, calendar write, file mutation, low-confidence memory, connector setup, kill switch, scheduled work, admin breakglass, robotics, Sparkbot-only behavior, strict-security posture, and explain-plan-only cases without approving implementation.
 
+Phase 40.4 archives Phase 40 as a completed Arc Bot / LIMA Office consumer boundary review. Sparkbot remains reference evidence only, Arc Bot / LIMA Office remains the primary guarded task consumer, and Phase 41 is recommended as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
