@@ -1,0 +1,234 @@
+{
+  "phase": "41.1",
+  "status": "arc_bot_candidate_preview_fixtures",
+  "docs_tests_fixtures_only": true,
+  "fixture_data_only": true,
+  "runtime_implementation_approved": false,
+  "primary_guarded_task_consumer": "arc_bot_lima_ai_office",
+  "sparkbot_reference_evidence_only": true,
+  "cases": [
+    {
+      "id": "draft_email_no_send",
+      "candidate_data": {
+        "candidate_id": "arc-office-draft-email",
+        "candidate_status": "proposed",
+        "summary": "Compose an email draft for owner review only.",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "high"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "proposed",
+      "expected_blocked_claims": []
+    },
+    {
+      "id": "external_email_send_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-external-email",
+        "candidate_status": "needs_review",
+        "summary": "Send an external email to a client.",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["dispatch_claim"]
+    },
+    {
+      "id": "calendar_write_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-calendar-write",
+        "candidate_status": "needs_review",
+        "summary": "Write a calendar event for the office task.",
+        "connector_health": "configured",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["file_mutation_claim"]
+    },
+    {
+      "id": "file_mutation_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-file-mutation",
+        "candidate_status": "needs_review",
+        "summary": "Write and delete files for the office task.",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["file_mutation_claim"]
+    },
+    {
+      "id": "low_confidence_memory_fact",
+      "candidate_data": {
+        "candidate_id": "arc-office-memory-fact",
+        "candidate_status": "needs_review",
+        "summary": "Persist a low confidence memory fact after approval.",
+        "memory_trust": {"source": "caller", "confidence": "low", "verification_state": "unverified", "pending_approval": true},
+        "provenance": {"source": "arc_bot_fixture", "confidence": "low"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim", "persistence_claim"]
+    },
+    {
+      "id": "connector_missing_secret",
+      "candidate_data": {
+        "candidate_id": "arc-office-missing-secret",
+        "candidate_status": "blocked",
+        "blocked_reason": "connector_missing_secret_setup_required",
+        "summary": "Connector setup is incomplete and secret material is missing.",
+        "connector_health": "missing_secrets",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "high"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": []
+    },
+    {
+      "id": "agent_identity_kill_switch",
+      "candidate_data": {
+        "candidate_id": "arc-office-agent-kill-switch",
+        "candidate_status": "blocked",
+        "summary": "Agent identity belongs to an admin operator and kill_switch is true.",
+        "agent_identity": {"owner": "operator", "purpose": "office task", "kill_switch": true, "risk_tier": "high"},
+        "provenance": {"source": "arc_bot_fixture", "confidence": "high"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim"]
+    },
+    {
+      "id": "scheduled_task_requires_approval",
+      "candidate_data": {
+        "candidate_id": "arc-office-scheduled-task",
+        "candidate_status": "needs_review",
+        "summary": "Create a background scheduled task for operator approval.",
+        "scheduled_work_posture": "awaiting_approval",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim", "background_work_claim"]
+    },
+    {
+      "id": "admin_breakglass_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-admin-breakglass",
+        "candidate_status": "blocked",
+        "summary": "Admin breakglass emergency override request.",
+        "admin_action_posture": "breakglass_required",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim"]
+    },
+    {
+      "id": "robotics_physical_world_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-robotics",
+        "candidate_status": "blocked",
+        "summary": "Robot hardware motion request for the physical world.",
+        "physical_world_posture": "deferred",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["robotics_physical_world_claim"]
+    },
+    {
+      "id": "sparkbot_only_behavior_rejected",
+      "candidate_data": {
+        "candidate_id": "arc-office-sparkbot-only",
+        "candidate_status": "blocked",
+        "summary": "Sparkbot live terminal shell command execution is not an Arc default.",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "high"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["execution_claim", "shell_browser_network_claim", "sparkbot_claim"]
+    },
+    {
+      "id": "strict_security_default_posture",
+      "candidate_data": {
+        "candidate_id": "arc-office-strict-security",
+        "candidate_status": "needs_review",
+        "summary": "Strict security posture for a routine office read.",
+        "operator_posture": "strict_security",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "high"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "needs_review",
+      "expected_blocked_claims": []
+    },
+    {
+      "id": "explain_plan_only_risky_request",
+      "candidate_data": {
+        "candidate_id": "arc-office-explain-plan",
+        "candidate_status": "needs_review",
+        "summary": "Explain plan before any file write; do not act.",
+        "dry_run_posture": "explain_plan_required",
+        "provenance": {"source": "arc_bot_fixture", "confidence": "medium"},
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_granted": false,
+        "dispatch_allowed": false,
+        "persistence_allowed": false
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["file_mutation_claim"]
+    }
+  ],
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "41.2"
+}

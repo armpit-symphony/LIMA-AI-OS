@@ -8394,6 +8394,23 @@ Status:
 - complete
 - tagged as `phase-41.0-arc-bot-candidate-preview-hardening-charter`
 
+## Phase 41.1 - Arc Bot Candidate Preview Fixtures
+
+Goal:
+
+- Add synthetic Arc Bot / LIMA Office fixture cases for `candidate_preview` hardening.
+- Keep the lane test-only with no runtime changes.
+
+Result:
+
+- Fixture cases cover safe draft-only work and risky external write, memory, connector, schedule, admin, Sparkbot-only, and physical-world requests.
+- Runtime implementation remains unapproved.
+
+Status:
+
+- complete
+- tagged as `phase-41.1-arc-bot-candidate-preview-fixtures`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

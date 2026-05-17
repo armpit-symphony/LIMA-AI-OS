@@ -8478,6 +8478,30 @@ Blocked:
 
 Continue only to Phase 41.1 Arc Bot candidate preview fixtures.
 
+## Phase 41.1 Gate: Arc Bot Candidate Preview Fixtures
+
+Phase 41.1 adds synthetic Arc Bot / LIMA Office fixture data for the existing `candidate_preview` helper.
+
+Allowed:
+
+- Phase 41.1 documentation
+- Phase 41.1 fixture metadata
+- Phase 41.1 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 41.2 Arc Bot candidate preview regression tests.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
