@@ -1,0 +1,39 @@
+{
+  "phase": "38.2",
+  "status": "lima_consumer_boundary_vocabulary_review",
+  "docs_tests_fixtures_only": true,
+  "vocabulary": {
+    "consumer_kind": ["sparkbot", "arc_office", "guardian_suite", "robotics_os"],
+    "operator_posture": ["owner_local", "strict_security", "breakglass_active", "simulation_only"],
+    "action_class": ["read", "internal_write", "external_write", "execute", "admin", "robot_motion", "secret_use"],
+    "risk_tier": ["low", "medium", "high", "critical"],
+    "approval_posture": ["not_required", "confirmation_required", "pin_required", "breakglass_required", "blocked"],
+    "dry_run_posture": ["native_dry_run", "explain_plan_required", "simulation_only", "unavailable"],
+    "run_state": ["planned", "awaiting_approval", "ready", "blocked", "completed", "failed"],
+    "agent_identity": ["owner", "purpose", "scopes", "allowed_tools", "expires_at", "risk_tier", "kill_switch"],
+    "memory_trust": ["source", "confidence", "verification_state", "redaction_state", "pending_approval"],
+    "connector_health": ["configured", "missing_secrets", "disabled", "demo_ready", "bridge_needed"],
+    "robotics_posture": ["no_hardware", "replay", "simulation", "real_hardware_blocked", "emergency_stop_available"],
+    "audit_surface": ["policy_decision", "run_timeline", "audit_hash", "redacted_args", "evidence_ref"]
+  },
+  "safe_by_default_invariants": {
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_active": false,
+    "robotics_physical_world_active": false
+  },
+  "owner_local_is_runtime_permission": false,
+  "strict_security_enforced_in_phase_38": false,
+  "explain_plan_executes_tools": false,
+  "dry_run_connects_to_mcp": false,
+  "sparkbot_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "next_phase": "38.3"
+}

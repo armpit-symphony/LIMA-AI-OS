@@ -38,6 +38,25 @@ Consequences:
 - Sparkbot wiring, HumanInput bridge behavior, live adapters, external calls, and robotics/physical-world behavior remain inactive.
 - Phase 38 may define terms; it may not grant runtime permissions.
 
+## ADR-0300: Consumer Boundary Vocabulary Is Non-Authoritative
+
+Status: Accepted
+
+Decision:
+
+Phase 38.2 defines Sparkbot-shaped consumer boundary vocabulary for planning and fixtures, but the vocabulary itself is non-authoritative.
+
+Context:
+
+Sparkbot now distinguishes owner-local operation, strict Security posture, explain-plan behavior, approval posture, memory trust, connector health, and robotics simulation posture. LIMA needs these terms before future consumer contracts.
+
+Consequences:
+
+- `owner_local` does not authorize host reads, shell access, browser access, SSH, file reads, network calls, or tool execution in LIMA.
+- `approval_posture` does not grant approval.
+- `dry_run_posture` does not call MCP or tools.
+- Robotics posture remains planning metadata only.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

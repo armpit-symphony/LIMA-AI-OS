@@ -8149,6 +8149,24 @@ Status:
 - complete
 - tagged as `phase-38.1-sparkbot-v1-6-42-to-v1-6-80-concept-intake`
 
+## Phase 38.2 - LIMA Consumer Boundary Vocabulary Review
+
+Goal:
+
+- Define Sparkbot-shaped vocabulary for LIMA planning and fixtures.
+- Keep vocabulary separate from runtime authority.
+
+Result:
+
+- Consumer, posture, action, risk, approval, dry-run, run-state, identity, memory, connector, robotics, and audit vocabulary is defined.
+- Owner-local and strict-security terms remain planning labels only.
+- Explain-plan and dry-run terms do not execute tools or connect to MCP.
+
+Status:
+
+- complete
+- tagged as `phase-38.2-lima-consumer-boundary-vocabulary-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
