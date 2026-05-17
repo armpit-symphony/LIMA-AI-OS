@@ -202,6 +202,24 @@ Consequences:
 - Phase 41 should cover draft-only email, external send, calendar write, file mutation, memory trust, connector setup, kill switch, scheduled work, admin breakglass, robotics, Sparkbot-only, strict-security, and explain-plan-only cases.
 - Runtime code, `lima/`, Sparkbot, Arc Bot implementation, HumanInput bridge behavior, live adapters, execution, approvals, dispatch, persistence, mutation, external calls, background work, robotics, and physical-world behavior remain forbidden.
 
+## ADR-0309: Phase 40 Closed As Arc Bot Boundary Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 40 is closed as a docs/tests/fixtures-only Arc Bot / LIMA Office consumer boundary review.
+
+Context:
+
+The lane preserved Sparkbot v1.6.80 as reference evidence only while recording Arc Bot / LIMA Office as the guarded task-oriented consumer over LIMA AI OS/runtime safety concepts.
+
+Consequences:
+
+- Direct Sparkbot integration, Arc Bot implementation, HumanInput bridge behavior, and runtime implementation remain unapproved.
+- Concept classifications are archived as adopted, adapted, Sparkbot-only, deferred, or rejected.
+- Phase 41 may proceed automatically as docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
