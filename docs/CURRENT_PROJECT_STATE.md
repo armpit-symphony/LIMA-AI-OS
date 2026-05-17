@@ -416,6 +416,8 @@ Phase 35.4 Phase 35 Design Review Archive / Closeout is complete, merged to `mai
 
 Phase 36.0 Phase 35 Runtime Implementation Audit Charter is complete, merged to `main`, and tagged. It records the Phase 35 audit as PASS, opens Phase 36 for the explicitly approved candidate preview runtime slice, and adds no runtime implementation yet.
 
+Phase 36.1 Candidate Preview Acceptance Design is complete, merged to `main`, and tagged. It defines the preview output shape, required input coverage, safety outcomes, and static boundary checks before implementation, without modifying runtime files.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
