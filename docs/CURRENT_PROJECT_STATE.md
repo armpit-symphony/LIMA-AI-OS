@@ -454,6 +454,8 @@ Phase 39.3 Hardening Gap and Next-Lane Decision Review is complete, merged to `m
 
 Phase 39.4 Phase 39 Sparkbot-Shaped Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 39 as completed docs/tests/fixtures-only hardening, finds no remaining gap, and recommends pausing and preserving the current runtime/test state.
 
+Phase 40.0 Arc Bot Consumer Boundary Clarification is complete, merged to `main`, and tagged. It clarifies that Sparkbot v1.6.80 is reference evidence only, records Arc Bot / LIMA AI Office as the primary guarded task-oriented office consumer for future boundary planning, and preserves all runtime, Sparkbot, `tests/support/`, execution, approval, dispatch, persistence, external-call, robotics, and physical-world boundaries.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

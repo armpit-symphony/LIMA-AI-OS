@@ -660,6 +660,8 @@ Phase 39.3 reviews the hardening result, finds no runtime gap, and recommends on
 
 Phase 39.4 archives the Sparkbot-shaped `candidate_preview` hardening lane. It finds no remaining gap, no need for runtime changes, and recommends pausing and preserving the current runtime/test state.
 
+Phase 40.0 clarifies that Sparkbot v1.6.80 is reference evidence for product/control vocabulary, not the direct future consumer to wire next. Arc Bot / LIMA AI Office is recorded as the primary guarded task-oriented office consumer for the next boundary-planning thread, with stricter defaults than Sparkbot's owner-local workstation posture.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

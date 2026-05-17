@@ -130,6 +130,25 @@ Consequences:
 - No additional automatic docs/tests/fixtures lane is required by this closeout.
 - Future runtime work or scope expansion requires explicit approval.
 
+## ADR-0305: Arc Bot Is The Primary Guarded Office Consumer For Next Boundary Planning
+
+Status: Accepted
+
+Decision:
+
+Sparkbot v1.6.80 is reference evidence for product/control vocabulary, but Arc Bot / LIMA AI Office is the primary guarded task-oriented office consumer for the next boundary-planning thread.
+
+Context:
+
+Sparkbot is an open R&D / self-hosted workstation assistant with a broader personal-owner computer-control surface. Arc Bot / LIMA Office should use LIMA AI OS runtime concepts with tighter default boundaries, stronger task/approval/audit posture, and stricter treatment of external writes, secrets, admin actions, and physical-world actions.
+
+Consequences:
+
+- Do not frame Phase 38 as preparing direct Sparkbot integration.
+- Do not inherit Sparkbot owner-local execution posture into LIMA runtime safety.
+- Prefer future docs/tests/fixtures-only Arc Bot consumer boundary review or Arc Bot-shaped `candidate_preview` hardening.
+- Do not recommend Arc Bot implementation or HumanInput bridge implementation without explicit approval.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

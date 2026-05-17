@@ -8288,6 +8288,24 @@ Status:
 - complete
 - tagged as `phase-39.4-phase-39-sparkbot-shaped-hardening-archive-closeout`
 
+## Phase 40.0 - Arc Bot Consumer Boundary Clarification
+
+Goal:
+
+- Clarify the completed Sparkbot alignment intake so Sparkbot v1.6.80 is treated as reference evidence, not the direct future consumer to wire next.
+- Record Arc Bot / LIMA AI Office as the primary guarded task-oriented office consumer for future boundary planning.
+
+Result:
+
+- Sparkbot remains an R&D/self-hosted workstation reference.
+- Arc Bot / LIMA Office receives stricter default boundary framing.
+- Sparkbot concepts are classified as adopted, adapted, Sparkbot-only, deferred, or rejected from the LIMA runtime safety model.
+
+Status:
+
+- complete
+- tagged as `phase-40.0-arc-bot-consumer-boundary-clarification`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
