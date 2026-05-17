@@ -8127,6 +8127,32 @@ Blocked:
 
 Continue only to Phase 38.2 LIMA consumer boundary vocabulary review.
 
+## Phase 38.2 Gate: LIMA Consumer Boundary Vocabulary Review
+
+Phase 38.2 defines Sparkbot-shaped vocabulary for future LIMA consumer contracts.
+
+Allowed:
+
+- Vocabulary documentation
+- Phase 38.2 fixture metadata
+- Phase 38.2 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime authority
+- Sparkbot wiring
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- persistence
+- MCP calls
+- robotics/physical-world behavior
+
+Continue only to Phase 38.3 Sparkbot-to-LIMA gap and risk matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

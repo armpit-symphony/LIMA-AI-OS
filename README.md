@@ -644,6 +644,8 @@ Phase 38.0 opens a docs/tests/fixtures-only Sparkbot v1.6.80 alignment intake la
 
 Phase 38.1 records the Sparkbot v1.6.42-to-v1.6.80 concept delta and carries forward local-first, Command Center, owner-local, strict Security, policy simulation, persistent approval, agent identity, memory trust, Guardian Spine, MCP/Robo OS, and audit vocabulary as LIMA planning metadata only.
 
+Phase 38.2 defines Sparkbot-shaped LIMA consumer boundary vocabulary for posture, action class, risk, approval posture, dry-run posture, run state, agent identity, memory trust, connector health, robotics posture, and audit surfaces while keeping every term non-authoritative and non-executing.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
