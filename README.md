@@ -682,6 +682,8 @@ Phase 41.4 archives the Arc Bot-shaped `candidate_preview` hardening lane. It co
 
 Phase 42.0 reframes the next lane around LIMA AI OS as the universal, model-agnostic, consumer-agnostic, embodiment-agnostic runtime contract target. Arc Bot / LIMA Office is preserved as an example guarded office-agent consumer profile, Sparkbot Public is framed as an open-source showcase shell and reference evidence, and paid/proprietary LIMA robotics/IoT unlocks are separated from the public contract surface.
 
+Phase 42.1 defines universal model-agnostic planning contracts for input, task/intent, candidate action preview, approval posture description, telemetry/evidence references, and embodiment/profile metadata. These are docs/tests/fixtures-only contract descriptions, not runtime schemas or authority grants.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

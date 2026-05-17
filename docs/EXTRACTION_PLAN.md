@@ -8599,6 +8599,31 @@ Blocked:
 
 Continue only to Phase 42.1 model-agnostic task/intent contract design.
 
+## Phase 42.1 Gate: Model-Agnostic Task Intent Contract Design
+
+Phase 42.1 records universal LIMA AI OS planning contracts for model-agnostic input, task/intent, candidate action preview, approval posture, telemetry/evidence, and embodiment/profile metadata.
+
+Allowed:
+
+- Phase 42.1 documentation
+- Phase 42.1 fixture metadata
+- Phase 42.1 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- runtime schemas
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 42.2 consumer and embodiment profile taxonomy.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

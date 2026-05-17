@@ -8482,6 +8482,23 @@ Status:
 - complete
 - tagged as `phase-42.0-lima-universal-runtime-contract-reframing-audit`
 
+## Phase 42.1 - Model-Agnostic Task Intent Contract Design
+
+Goal:
+
+- Define universal planning contracts for model-agnostic input, task/intent, candidate action preview, approval posture, telemetry/evidence, and embodiment/profile metadata.
+- Preserve preview-only and non-authoritative boundaries.
+
+Result:
+
+- Contract vocabulary is documented as planning metadata only.
+- LIMA cannot grant approval or runtime authority through these descriptions.
+
+Status:
+
+- complete
+- tagged as `phase-42.1-model-agnostic-task-intent-contract-design`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
