@@ -452,6 +452,8 @@ Phase 39.2 Candidate Preview Sparkbot-Shaped Regression Tests is complete, merge
 
 Phase 39.3 Hardening Gap and Next-Lane Decision Review is complete, merged to `main`, and tagged. It finds no runtime gap after Sparkbot-shaped hardening and recommends only Phase 39.4 archive/closeout followed by pause and preserve.
 
+Phase 39.4 Phase 39 Sparkbot-Shaped Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 39 as completed docs/tests/fixtures-only hardening, finds no remaining gap, and recommends pausing and preserving the current runtime/test state.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

@@ -8270,6 +8270,24 @@ Status:
 - complete
 - tagged as `phase-39.3-hardening-gap-and-next-lane-decision-review`
 
+## Phase 39.4 - Phase 39 Sparkbot-Shaped Hardening Archive / Closeout
+
+Goal:
+
+- Archive the completed Sparkbot-shaped `candidate_preview` hardening lane.
+
+Result:
+
+- Phase 39 is complete as docs/tests/fixtures-only work.
+- No runtime gap remains.
+- No `lima/`, Sparkbot, `tests/support/`, or stale prior-phase test changes occurred.
+- Pause and preserve current runtime/test state is recommended.
+
+Status:
+
+- complete
+- tagged as `phase-39.4-phase-39-sparkbot-shaped-hardening-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
