@@ -8020,6 +8020,24 @@ Status:
 - complete
 - tagged as `phase-36.4-phase-36-runtime-slice-archive-closeout`
 
+## Phase 37.0 - Phase 36 Candidate Preview Audit Charter
+
+Goal:
+
+- Audit Phase 36.0 through Phase 36.4.
+- Open a docs/tests/fixtures-only audit/archive lane for the completed candidate preview runtime slice.
+
+Result:
+
+- Phase 36 audit result is PASS.
+- Phase 37 remains docs/tests/fixtures-only.
+- No new runtime implementation is approved.
+
+Status:
+
+- complete
+- tagged as `phase-37.0-phase-36-candidate-preview-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

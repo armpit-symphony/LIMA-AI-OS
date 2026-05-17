@@ -7917,6 +7917,36 @@ Forbidden:
 
 Stop after Phase 36.4.
 
+## Phase 37.0 Gate: Phase 36 Candidate Preview Audit Charter
+
+Phase 37.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 36 candidate preview runtime slice.
+
+Allowed:
+
+- Phase 37.0 tests
+- Phase 37.0 fixture metadata
+- Phase 37.0 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 36 audit result is PASS.
+- Phase 37 is audit/archive only.
+- No new runtime implementation is approved.
+
+Forbidden:
+
+- new runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- stale prior-phase test changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 37.1 candidate preview boundary evidence review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

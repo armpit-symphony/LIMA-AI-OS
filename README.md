@@ -630,6 +630,8 @@ Phase 36.3 reviews the candidate preview boundary and confirms Phase 36.2 change
 
 Phase 36.4 archives Phase 36 as a completed narrow candidate preview runtime slice and stops at the Phase 37 audit/archive approval gate.
 
+Phase 37.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 36 candidate preview runtime slice and records the Phase 36 audit result.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
