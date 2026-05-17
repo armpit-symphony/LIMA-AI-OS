@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0278: Phase 34 Opens As Audit Archive For Phase 33 Hardening
+
+Status: Accepted
+
+Decision:
+
+Phase 34.0 opens a docs/tests/fixtures-only audit/archive lane for the completed Phase 33 test-only `runtime_state` hardening package.
+
+Context:
+
+Phase 33 passed audit, changed no runtime files, found no runtime_state gap, and recommended Phase 34 audit/archive.
+
+Consequences:
+
+- Phase 34 may add docs, fixtures, and tests only.
+- Phase 34 may not change `lima/` or `tests/support/`.
+- Phase 34 may not add runtime behavior, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## ADR-0277: Phase 33 Archives With No Runtime State Gap Found
 
 Status: Accepted
