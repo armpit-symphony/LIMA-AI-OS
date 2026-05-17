@@ -8549,6 +8549,32 @@ Blocked:
 
 Continue only to Phase 41.4 Arc Bot hardening archive closeout.
 
+## Phase 41.4 Gate: Arc Bot Candidate Preview Hardening Archive / Closeout
+
+Phase 41.4 archives the Arc Bot-shaped `candidate_preview` hardening lane.
+
+Allowed:
+
+- Phase 41.4 documentation
+- Phase 41.4 fixture metadata
+- Phase 41.4 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Recommended next lane:
+
+- docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

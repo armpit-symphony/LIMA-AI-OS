@@ -472,9 +472,11 @@ Phase 41.2 Arc Bot Candidate Preview Regression Tests is complete, merged to `ma
 
 Phase 41.3 Arc Bot Hardening Gap And Next-Lane Review is complete, merged to `main`, and tagged. It records that Phase 41 found no concrete runtime gap and recommends Phase 41.4 as docs/tests/fixtures-only archive closeout.
 
+Phase 41.4 Arc Bot Candidate Preview Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 41 as a completed docs/tests/fixtures-only hardening lane, confirms no runtime gap, and recommends a future no-code Arc Bot / LIMA Office consumer contract design review rather than runtime implementation.
+
 Latest completed phase merge:
 
-`2bb099bd3eed385cf8db2b0d3215b4602b3be29e`
+`0eaa66c7b564007a29141cffc2c81b568935a51f`
 
 Latest tag:
 

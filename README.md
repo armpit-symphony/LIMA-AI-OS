@@ -678,6 +678,8 @@ Phase 41.2 adds regression tests proving the existing `candidate_preview` helper
 
 Phase 41.3 reviews the Arc Bot-shaped hardening results and finds no concrete runtime gap. Existing conservative blocking of suspicious planning keys is accepted as safe, and Phase 41.4 is recommended as docs/tests/fixtures-only archive closeout.
 
+Phase 41.4 archives the Arc Bot-shaped `candidate_preview` hardening lane. It confirms no runtime gap, no `lima/` changes, no `tests/support/` changes, and recommends a future docs/tests/fixtures-only no-code Arc Bot / LIMA Office consumer contract design review rather than implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
