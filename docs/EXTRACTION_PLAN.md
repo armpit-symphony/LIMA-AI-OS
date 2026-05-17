@@ -8672,6 +8672,32 @@ Blocked:
 
 Continue only to Phase 42.4 universal runtime contract archive / closeout.
 
+## Phase 42.4 Gate: Universal Runtime Contract Archive / Closeout
+
+Phase 42.4 archives Phase 42 as a completed docs/tests/fixtures-only LIMA AI OS Universal Runtime Contract Design lane.
+
+Allowed:
+
+- Phase 42.4 documentation
+- Phase 42.4 fixture metadata
+- Phase 42.4 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, or physical-world behavior
+
+Recommended next lane:
+
+- Phase 43 docs/tests/fixtures-only Universal Contract Fixture Hardening.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

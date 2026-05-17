@@ -688,6 +688,8 @@ Phase 42.2 defines the universal consumer and embodiment profile taxonomy for LI
 
 Phase 42.3 records universal safety invariants and the Guardian boundary matrix. LIMA may describe approval posture, risk, evidence, simulation, and adapter requirements, but Guardian or a future policy membrane owns real approval state; LIMA cannot grant approval, execute, dispatch, persist, mutate, call adapters, or touch physical-world systems in this lane.
 
+Phase 42.4 archives Phase 42 as a completed LIMA AI OS Universal Runtime Contract Design lane. The lane reframes Phase 42 away from Arc-centered planning, preserves Arc Bot as one example guarded office-agent profile, keeps Sparkbot Public as reference/showcase, separates public/private product surfaces, and recommends Phase 43 as docs/tests/fixtures-only Universal Contract Fixture Hardening.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

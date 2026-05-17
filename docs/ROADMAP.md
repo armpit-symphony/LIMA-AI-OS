@@ -8533,6 +8533,24 @@ Status:
 - complete
 - tagged as `phase-42.3-universal-safety-invariants-and-guardian-boundary-matrix`
 
+## Phase 42.4 - Universal Runtime Contract Archive / Closeout
+
+Goal:
+
+- Archive Phase 42 as a completed universal LIMA AI OS contract design lane.
+- Recommend the safest next docs/tests/fixtures-only lane.
+
+Result:
+
+- Phase 42 is explicitly reframed from Arc-centered to universal LIMA AI OS contract-centered.
+- Arc Bot is one example consumer profile, Sparkbot Public is reference/showcase, and robots/humanoids/drones/IoT are future profiles.
+- Phase 43 is recommended as Universal Contract Fixture Hardening, not implementation.
+
+Status:
+
+- complete
+- tagged as `phase-42.4-universal-runtime-contract-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

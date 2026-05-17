@@ -257,6 +257,23 @@ Consequences:
 - Paid/proprietary LIMA robotics and IoT unlock paths are separated from the public contract surface.
 - Profile vocabulary cannot grant approval, execution, dispatch, persistence, mutation, adapter behavior, robotics, or physical-world authority.
 
+## ADR-0312: Phase 43 Should Harden Universal Contract Fixtures
+
+Status: Accepted
+
+Decision:
+
+After Phase 42 closes cleanly, Phase 43 should be docs/tests/fixtures-only Universal Contract Fixture Hardening.
+
+Context:
+
+Phase 42 defines universal LIMA AI OS contracts and profile taxonomies without runtime implementation. The next safe step is fixture coverage across representative consumer and embodiment profiles.
+
+Consequences:
+
+- Phase 43 should cover Arc Bot, Sparkbot reference, automation, coding, research, browser, shell, file, network/API, scheduled work, IoT, drone, humanoid, robot motion, emergency stop, malicious profile, malformed profile, unknown model/provider, and nested bypass cases.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, adapters, approval enforcement, execution, dispatch, persistence, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
