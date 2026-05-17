@@ -8075,6 +8075,37 @@ Outcome:
 - Pause and preserve current runtime/test state.
 - No Phase 38 approval question is required by this closeout.
 
+## Phase 38.0 Gate: Sparkbot Alignment Audit Charter
+
+Phase 38.0 opens Sparkbot v1.6.80 alignment intake after the Phase 37 checkpoint.
+
+Allowed:
+
+- Sparkbot source review as read-only reference material
+- Phase 38.0 tests
+- Phase 38.0 fixture metadata
+- Phase 38.0 documentation
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Sparkbot repository changes
+- Sparkbot imports or wiring
+- LIMA runtime changes
+- `tests/support/` changes
+- HumanInput runtime bridge behavior
+- live adapters
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation
+- robotics or physical-world behavior
+- external service calls
+- background workers, queues, daemons, subprocesses, threads, database writes, or hidden side effects
+
+Continue only to Phase 38.1 Sparkbot v1.6.42-to-v1.6.80 concept intake.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
