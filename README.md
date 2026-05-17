@@ -620,6 +620,8 @@ Phase 35.3 defines Phase 36 eligibility criteria, acceptance-test requirements, 
 
 Phase 35.4 archives Phase 35 as completed docs/tests/fixtures-only no-code design review and stops at the Phase 36 explicit approval gate.
 
+Phase 36.0 opens the explicitly approved narrow candidate preview runtime implementation lane with a Phase 35 audit PASS and no runtime implementation yet.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

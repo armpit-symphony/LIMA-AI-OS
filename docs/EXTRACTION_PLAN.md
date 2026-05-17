@@ -7774,6 +7774,33 @@ Forbidden:
 
 Stop after Phase 35.4.
 
+## Phase 36.0 Gate: Phase 35 Runtime Implementation Audit Charter
+
+Phase 36.0 opens the explicitly approved narrow candidate preview runtime implementation lane after auditing Phase 35.
+
+Allowed:
+
+- Phase 36.0 tests
+- Phase 36.0 fixture metadata
+- Phase 36.0 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 35 audit result is PASS.
+- Phase 36 implementation scope is limited to `lima/kernel/candidate_preview.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- Phase 36.0 itself adds no runtime implementation.
+
+Forbidden:
+
+- changes to `runtime_state.py`, `intake_candidate.py`, `candidate_status.py`, any other existing `lima/` file, or `tests/support/`
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 36.1 candidate preview acceptance design.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

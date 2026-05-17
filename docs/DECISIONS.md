@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0288: Phase 36 Opens As Bounded Candidate Preview Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 36.0 opens the explicitly approved narrow runtime implementation lane for a non-executing candidate preview helper over caller-provided data only.
+
+Context:
+
+Phil approved Phase 36 only as Option C from Phase 35. Phase 35 passed audit and preserved exact file scope and acceptance gates.
+
+Consequences:
+
+- Phase 36 may add `lima/kernel/candidate_preview.py`.
+- Phase 36 may change `lima/kernel/__init__.py` only for a safe public export if required by package convention.
+- Existing runtime files, `tests/support/`, HumanInput bridge behavior, Sparkbot wiring, live adapters, approval, execution, dispatch, persistence, mutation, external calls, background work, robotics, and physical-world behavior remain forbidden.
+
 ## ADR-0287: Phase 35 Archives At Phase 36 Candidate Preview Gate
 
 Status: Accepted

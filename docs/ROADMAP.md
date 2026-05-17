@@ -7927,6 +7927,25 @@ Status:
 - complete
 - tagged as `phase-35.4-phase-35-design-review-archive-closeout`
 
+## Phase 36.0 - Phase 35 Runtime Implementation Audit Charter
+
+Goal:
+
+- Audit Phase 35.0 through Phase 35.4.
+- Open Phase 36 as the explicitly approved narrow candidate preview runtime implementation lane.
+- Preserve exact file scope before implementation.
+
+Result:
+
+- Phase 35 audit result is PASS.
+- Phase 36.0 adds no runtime implementation.
+- Candidate preview implementation remains limited to `lima/kernel/candidate_preview.py` and optional safe export in `lima/kernel/__init__.py`.
+
+Status:
+
+- complete
+- tagged as `phase-36.0-phase-35-runtime-implementation-audit-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

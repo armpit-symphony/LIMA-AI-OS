@@ -1,0 +1,44 @@
+{
+  "phase": "36.0",
+  "status": "phase_35_runtime_implementation_audit_charter",
+  "phase_35_audit_result": "PASS",
+  "runtime_implementation_scope": "candidate_preview_preflight_only",
+  "runtime_files_changed_in_phase_36_0": [],
+  "phase_35_verified": {
+    "clean_synced_main": true,
+    "merge_commits_exist": true,
+    "tags_exist": true,
+    "runtime_files_changed": false,
+    "runtime_state_py_changed": false,
+    "kernel_init_changed": false,
+    "intake_candidate_changed": false,
+    "candidate_status_changed": false,
+    "other_forbidden_lima_files_changed": false,
+    "tests_support_changed": false,
+    "sparkbot_wiring_imports_added": false,
+    "humaninput_runtime_bridge_added": false,
+    "live_adapter_added": false,
+    "intentcompiler_runtime_behavior_changed": false,
+    "guardiandecision_runtime_behavior_changed": false,
+    "execution_approval_dispatch_audit_persistence_added": false,
+    "shell_browser_network_file_robotics_physical_world_behavior_added": false,
+    "external_service_calls_added": false,
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects_added": false,
+    "phase_35_targeted_tests_passed": true,
+    "full_suite_passed": true,
+    "compileall_lima_passed": true,
+    "git_diff_check_passed": true
+  },
+  "approved_phase_36_runtime_files": [
+    "lima/kernel/candidate_preview.py",
+    "lima/kernel/__init__.py_if_safe_public_export_required"
+  ],
+  "forbidden_phase_36_existing_runtime_files": [
+    "lima/kernel/runtime_state.py",
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "all_other_lima_files"
+  ],
+  "tests_support_changes_allowed": false,
+  "next_phase": "36.1"
+}
