@@ -149,6 +149,24 @@ Consequences:
 - Prefer future docs/tests/fixtures-only Arc Bot consumer boundary review or Arc Bot-shaped `candidate_preview` hardening.
 - Do not recommend Arc Bot implementation or HumanInput bridge implementation without explicit approval.
 
+## ADR-0306: Arc Bot Defaults Stricter Than Sparkbot Workstation
+
+Status: Accepted
+
+Decision:
+
+Arc Bot / LIMA AI Office is a guarded task-oriented office consumer and must default stricter than Sparkbot's personal-owner workstation posture.
+
+Context:
+
+Sparkbot remains useful evidence, but its broad shell/browser/live-terminal/code-execution affordances are not appropriate Arc Bot defaults.
+
+Consequences:
+
+- Arc Bot boundary planning emphasizes task intake, approval posture, explain-plan, audit/evidence, connector health, memory trust, and guarded scheduled work.
+- Arc Bot does not inherit Sparkbot-only workstation affordances.
+- Runtime implementation remains blocked.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

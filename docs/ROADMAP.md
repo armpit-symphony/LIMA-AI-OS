@@ -8306,6 +8306,24 @@ Status:
 - complete
 - tagged as `phase-40.0-arc-bot-consumer-boundary-clarification`
 
+## Phase 40.1 - Arc Bot Guarded Task Consumer Boundary Review
+
+Goal:
+
+- Define the Arc Bot / LIMA AI Office guarded task consumer boundary.
+- Preserve Sparkbot as reference evidence only.
+
+Result:
+
+- Arc Bot is framed as a task-oriented office consumer over LIMA AI OS/runtime safety concepts.
+- Arc Bot does not inherit Sparkbot's broad workstation or owner-local execution posture.
+- No runtime implementation is approved.
+
+Status:
+
+- complete
+- tagged as `phase-40.1-arc-bot-guarded-task-consumer-boundary-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

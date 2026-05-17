@@ -8356,6 +8356,30 @@ Framing:
 - Sparkbot v1.6.80 concept intake for future Arc Bot / LIMA Office consumer boundary planning.
 - Not direct Sparkbot integration planning.
 
+## Phase 40.1 Gate: Arc Bot Guarded Task Consumer Boundary Review
+
+Phase 40.1 defines Arc Bot / LIMA AI Office as a guarded task-oriented office consumer.
+
+Allowed:
+
+- Phase 40.1 documentation
+- Phase 40.1 fixture metadata
+- Phase 40.1 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 40.2 LIMA Office task/approval/audit vocabulary matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

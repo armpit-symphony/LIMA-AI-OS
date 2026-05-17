@@ -1,0 +1,50 @@
+{
+  "phase": "40.1",
+  "status": "arc_bot_guarded_task_consumer_boundary_review",
+  "docs_tests_fixtures_only": true,
+  "sparkbot_reference_evidence_only": true,
+  "primary_guarded_task_consumer": "arc_bot_lima_ai_office",
+  "lima_ai_os_runtime_safety_substrate_target": true,
+  "arc_bot_is_not": [
+    "full_personal_workstation_bot",
+    "shell_browser_live_terminal_code_execution_surface",
+    "sparkbot_clone",
+    "humaninput_runtime_bridge",
+    "approval_executor",
+    "dispatch_system",
+    "audit_persistence_system",
+    "robotics_physical_world_controller"
+  ],
+  "stricter_default_posture": [
+    "external_writes_require_approval_posture",
+    "secrets_blocked_or_breakglass_required",
+    "admin_actions_blocked_or_breakglass_required",
+    "connector_setup_issues_block_execution_like_interpretation",
+    "scheduled_work_planned_or_awaiting_approval",
+    "physical_world_robotics_rejected_or_deferred",
+    "sparkbot_workstation_affordances_not_inherited"
+  ],
+  "consumer_boundary_fields": [
+    "consumer_kind",
+    "task_intake",
+    "task_classification",
+    "office_workflow_context",
+    "operator_approval_boundary",
+    "explain_plan_required",
+    "run_state",
+    "audit_evidence_ref",
+    "connector_health",
+    "memory_trust",
+    "agent_identity",
+    "scheduled_work_posture",
+    "external_write_posture",
+    "secret_use_posture",
+    "admin_action_posture",
+    "physical_world_posture"
+  ],
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "40.2"
+}
