@@ -400,6 +400,8 @@ Phase 34.1 Nested Metadata Coverage Evidence Review is complete, merged to `main
 
 Phase 34.2 Runtime State Hardening Gap Review is complete, merged to `main`, and tagged. It finds no concrete `runtime_state` gap, no runtime code change need, and no immediate additional test-only hardening need.
 
+Phase 34.3 Phase 35 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends Phase 35 as docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice, not implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
