@@ -8002,6 +8002,24 @@ Status:
 - complete
 - tagged as `phase-36.3-candidate-preview-boundary-regression-review`
 
+## Phase 36.4 - Phase 36 Runtime Slice Archive / Closeout
+
+Goal:
+
+- Archive Phase 36 as a completed narrow runtime slice.
+- Record runtime file scope, safety result, stale Phase 35 test adjustment, and Phase 37 recommendation.
+
+Result:
+
+- Candidate preview runtime slice is archived.
+- Phase 37 should be docs/tests/fixtures-only audit/archive and next-lane decision.
+- Runtime expansion remains gated.
+
+Status:
+
+- complete
+- tagged as `phase-36.4-phase-36-runtime-slice-archive-closeout`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
