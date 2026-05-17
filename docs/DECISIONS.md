@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0298: Sparkbot v1.6.80 Alignment Intake Opens As Read-Only Planning
+
+Status: Accepted
+
+Decision:
+
+Phase 38 opens Sparkbot v1.6.80 alignment intake as docs/tests/fixtures-only planning.
+
+Context:
+
+Sparkbot has advanced from the v1.6.42 Controls persistence baseline to v1.6.80 with local-first owner operation, Command Center, owner-enabled strict Security posture, Guardian controls, persistent approvals, policy simulation, run timelines, memory lifecycle controls, model stack subscription support, Round Table orchestration, MCP/Robo OS manifests, and LIMA Robotics OS positioning.
+
+Consequences:
+
+- Sparkbot remains read-only reference material.
+- LIMA may absorb vocabulary and contract concepts.
+- LIMA may not wire Sparkbot, change runtime files, implement integration behavior, execute, approve, dispatch, persist audit, or connect to external/robotics systems in Phase 38.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

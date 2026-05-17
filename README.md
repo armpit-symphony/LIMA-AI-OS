@@ -640,6 +640,8 @@ Phase 37.3 recommends pausing and preserving the current runtime/test state afte
 
 Phase 37.4 archives Phase 37 as a completed docs/tests/fixtures-only candidate preview audit lane. It finds no remaining gap and recommends pausing and preserving the current runtime/test state with no Phase 38 approval question required by this closeout.
 
+Phase 38.0 opens a docs/tests/fixtures-only Sparkbot v1.6.80 alignment intake lane after a Phase 37 audit PASS. Sparkbot is reviewed as read-only source material only; no Sparkbot wiring, LIMA runtime change, or integration behavior is approved.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
