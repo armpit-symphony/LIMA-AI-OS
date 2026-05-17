@@ -638,6 +638,8 @@ Phase 37.2 reviews candidate preview regressions and gaps, finding no blocking g
 
 Phase 37.3 recommends pausing and preserving the current runtime/test state after Phase 37.4 rather than starting another automatic lane.
 
+Phase 37.4 archives Phase 37 as a completed docs/tests/fixtures-only candidate preview audit lane. It finds no remaining gap and recommends pausing and preserving the current runtime/test state with no Phase 38 approval question required by this closeout.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

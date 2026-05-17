@@ -8037,6 +8037,44 @@ Forbidden:
 
 Continue only to Phase 37.4 candidate preview audit archive and closeout.
 
+## Phase 37.4 Gate: Candidate Preview Audit Archive Closeout
+
+Phase 37.4 archives Phase 37 as the completed docs/tests/fixtures-only audit lane for the Phase 36 candidate preview runtime slice.
+
+Allowed:
+
+- Phase 37.4 tests
+- Phase 37.4 fixture metadata
+- Phase 37.4 documentation
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- stale prior-phase test changes
+- Sparkbot wiring/imports
+- HumanInput runtime bridge behavior
+- live adapters
+- IntentCompiler runtime behavior changes
+- GuardianDecision runtime behavior changes
+- approval enforcement
+- execution
+- dispatch
+- audit persistence
+- shell/browser/network/file mutation
+- robotics or physical-world behavior
+- external service calls
+- background workers, queues, daemons, subprocesses, threads, database writes, or hidden side effects
+
+Outcome:
+
+- Phase 37 is complete.
+- No remaining gap was found.
+- Pause and preserve current runtime/test state.
+- No Phase 38 approval question is required by this closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
