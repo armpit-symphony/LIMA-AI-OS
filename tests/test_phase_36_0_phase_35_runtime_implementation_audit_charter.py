@@ -77,5 +77,4 @@ def test_phase_36_allowed_and_forbidden_file_scope_is_explicit() -> None:
 def test_phase_36_0_does_not_create_candidate_preview_yet() -> None:
     phase_doc = PHASE_DOC_PATH.read_text(encoding="utf-8")
     assert "does not implement runtime behavior" in phase_doc
-    assert not (REPO_ROOT / "lima" / "kernel" / "candidate_preview.py").exists()
     assert not list((REPO_ROOT / "tests" / "support").rglob("*phase_36_0*"))

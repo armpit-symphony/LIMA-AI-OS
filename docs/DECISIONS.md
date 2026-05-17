@@ -2,6 +2,25 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0290: Candidate Preview Is Non-Authoritative Caller-Provided Metadata Only
+
+Status: Accepted
+
+Decision:
+
+Phase 36.2 adds a tiny `candidate_preview` runtime helper that converts caller-provided data into inert, inspectable, non-authoritative preview metadata.
+
+Context:
+
+Phil approved Phase 36 only as Option C from Phase 35. The helper may not bridge HumanInput, approve, execute, dispatch, persist, mutate, call external systems, wire Sparkbot, activate live adapters, or touch robotics/physical-world behavior.
+
+Consequences:
+
+- `lima/kernel/candidate_preview.py` is the only new runtime module.
+- `lima/kernel/__init__.py` changes only for a safe public export.
+- Existing runtime files and `tests/support/` remain untouched.
+- Suspicious caller-provided claims are recorded as blocked claims and never become authority.
+
 ## ADR-0289: Candidate Preview Requires Explicit Safe Output Fields
 
 Status: Accepted

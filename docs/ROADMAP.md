@@ -7964,6 +7964,25 @@ Status:
 - complete
 - tagged as `phase-36.1-candidate-preview-acceptance-design`
 
+## Phase 36.2 - Candidate Preview Runtime Implementation
+
+Goal:
+
+- Add the approved `candidate_preview` helper.
+- Export it safely through `lima/kernel/__init__.py` by existing package convention.
+- Prove the helper is deterministic, local-only, read-only, non-authoritative, non-executing, and side-effect free.
+
+Result:
+
+- `lima/kernel/candidate_preview.py` was added.
+- `CandidatePreview` and `preview_candidate` were safely exported.
+- Acceptance tests cover benign, missing, malformed, unknown, suspicious, nested, and bypass-worded input.
+
+Status:
+
+- complete
+- tagged as `phase-36.2-candidate-preview-runtime-implementation`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

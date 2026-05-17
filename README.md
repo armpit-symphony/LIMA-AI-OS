@@ -624,6 +624,8 @@ Phase 36.0 opens the explicitly approved narrow candidate preview runtime implem
 
 Phase 36.1 defines candidate preview acceptance requirements and static boundary checks before implementation, with no runtime code added.
 
+Phase 36.2 adds the approved `candidate_preview` runtime helper and safe kernel export. The helper is local-only, read-only, non-authoritative, non-executing, side-effect free, and accepts caller-provided data only.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

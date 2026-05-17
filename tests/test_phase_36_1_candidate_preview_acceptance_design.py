@@ -81,5 +81,4 @@ def test_required_safety_outcomes_keep_preview_inert() -> None:
 def test_static_boundary_scan_is_required_before_runtime_lands() -> None:
     fixture = _load_json(PHASE_FIXTURE_PATH)
     assert fixture["static_boundary_scan_required"] is True
-    assert not (REPO_ROOT / "lima" / "kernel" / "candidate_preview.py").exists()
     assert not list((REPO_ROOT / "tests" / "support").rglob("*phase_36_1*"))
