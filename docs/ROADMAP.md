@@ -8428,6 +8428,24 @@ Status:
 - complete
 - tagged as `phase-41.2-arc-bot-candidate-preview-regression-tests`
 
+## Phase 41.3 - Arc Bot Hardening Gap And Next-Lane Review
+
+Goal:
+
+- Review the Phase 41 hardening evidence and identify gaps.
+- Recommend the safest next lane.
+
+Result:
+
+- No concrete runtime gap was found.
+- Conservative blocking of suspicious Arc Bot planning keys is accepted as safe.
+- Phase 41.4 is recommended as archive closeout.
+
+Status:
+
+- complete
+- tagged as `phase-41.3-arc-bot-hardening-gap-and-next-lane-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

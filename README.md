@@ -676,6 +676,8 @@ Phase 41.1 adds the Arc Bot-shaped synthetic fixture corpus for `candidate_previ
 
 Phase 41.2 adds regression tests proving the existing `candidate_preview` helper keeps Arc Bot-shaped office fixtures deterministic, non-authoritative, read-only, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, adapter-inactive, Sparkbot-wiring inactive, external-call inactive, robotics inactive, and physical-world inactive.
 
+Phase 41.3 reviews the Arc Bot-shaped hardening results and finds no concrete runtime gap. Existing conservative blocking of suspicious planning keys is accepted as safe, and Phase 41.4 is recommended as docs/tests/fixtures-only archive closeout.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
