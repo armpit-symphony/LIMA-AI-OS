@@ -7983,6 +7983,25 @@ Status:
 - complete
 - tagged as `phase-36.2-candidate-preview-runtime-implementation`
 
+## Phase 36.3 - Candidate Preview Boundary Regression Review
+
+Goal:
+
+- Review the Phase 36.2 candidate preview runtime implementation.
+- Confirm it stayed within approved file scope and behavior boundaries.
+- Record the narrow stale Phase 35 test adjustment.
+
+Result:
+
+- Phase 36.2 changed only approved runtime files.
+- No new runtime behavior was added in Phase 36.3.
+- The stale Phase 35 test adjustment is documented.
+
+Status:
+
+- complete
+- tagged as `phase-36.3-candidate-preview-boundary-regression-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

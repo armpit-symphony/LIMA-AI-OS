@@ -1,0 +1,30 @@
+{
+  "phase": "36.3",
+  "status": "candidate_preview_boundary_regression_review",
+  "runtime_behavior_added_in_phase_36_3": false,
+  "runtime_files_changed_in_phase_36_3": [],
+  "phase_36_2_approved_runtime_files_changed": [
+    "lima/kernel/candidate_preview.py",
+    "lima/kernel/__init__.py"
+  ],
+  "phase_36_2_forbidden_runtime_files_changed": [],
+  "runtime_state_py_changed": false,
+  "intake_candidate_py_changed": false,
+  "candidate_status_py_changed": false,
+  "tests_support_changed": false,
+  "candidate_preview_safety_evidence": {
+    "deterministic": true,
+    "local_only": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "side_effect_free": true,
+    "caller_provided_data_only": true,
+    "safe_by_default": true
+  },
+  "stale_phase_35_test_adjusted": true,
+  "stale_phase_35_test_adjusted_file": "tests/test_phase_35_1_second_runtime_slice_candidate_inventory.py",
+  "stale_phase_35_test_adjustment_reason": "Phase 36 explicitly approved candidate_preview.py, making the prior absolute non-existence assertion stale.",
+  "other_old_phase_tests_changed": false,
+  "next_phase": "36.4"
+}

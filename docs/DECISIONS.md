@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0291: Candidate Preview Boundary Review Confirms Narrow Scope
+
+Status: Accepted
+
+Decision:
+
+Phase 36.3 confirms the Phase 36.2 candidate preview implementation stayed within approved runtime scope and added no execution, approval, dispatch, persistence, bridge, adapter, Sparkbot, external-call, robotics, or physical-world behavior.
+
+Context:
+
+Phase 36.2 added `candidate_preview.py`, exported it safely, and adjusted one stale Phase 35 test after explicit approval.
+
+Consequences:
+
+- No further runtime implementation is approved in Phase 36.3.
+- The stale Phase 35 test adjustment remains narrow and documented.
+- Phase 36 may proceed only to archive/closeout.
+
 ## ADR-0290: Candidate Preview Is Non-Authoritative Caller-Provided Metadata Only
 
 Status: Accepted

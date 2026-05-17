@@ -420,6 +420,8 @@ Phase 36.1 Candidate Preview Acceptance Design is complete, merged to `main`, an
 
 Phase 36.2 Candidate Preview Runtime Implementation is complete, merged to `main`, and tagged. It adds `lima/kernel/candidate_preview.py` and safe exports in `lima/kernel/__init__.py` only, preserving non-execution, no approval, no dispatch, no persistence, no HumanInput bridge behavior, no Sparkbot wiring, no live adapters, no external calls, no background work, no robotics, and no physical-world behavior.
 
+Phase 36.3 Candidate Preview Boundary Regression Review is complete, merged to `main`, and tagged. It confirms Phase 36.2 stayed within approved runtime scope and records the narrow stale Phase 35 test adjustment approved for Phase 36.2.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
