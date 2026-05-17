@@ -8007,6 +8007,36 @@ Forbidden:
 
 Continue only to Phase 37.3 next-lane decision matrix.
 
+## Phase 37.3 Gate: Next-Lane Decision Matrix
+
+Phase 37.3 evaluates next-lane options after the Phase 36 candidate preview runtime slice.
+
+Allowed:
+
+- Phase 37.3 tests
+- Phase 37.3 fixture metadata
+- Phase 37.3 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Pause and preserve current runtime/test state is recommended after Phase 37.4.
+- No immediate runtime implementation is recommended.
+- No immediate test-only hardening is recommended.
+
+Forbidden:
+
+- new runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- stale prior-phase test changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 37.4 candidate preview audit archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

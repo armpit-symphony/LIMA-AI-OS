@@ -430,6 +430,8 @@ Phase 37.1 Candidate Preview Boundary Evidence Review is complete, merged to `ma
 
 Phase 37.2 Candidate Preview Regression And Gap Review is complete, merged to `main`, and tagged. It finds no regression, no blocking gap, and no immediate hardening need after the Phase 36 candidate preview slice.
 
+Phase 37.3 Next-Lane Decision Matrix is complete, merged to `main`, and tagged. It recommends pausing and preserving the current runtime/test state after Phase 37.4, with no immediate runtime implementation, no immediate test-only hardening, and no Phil approval question required by this closeout.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

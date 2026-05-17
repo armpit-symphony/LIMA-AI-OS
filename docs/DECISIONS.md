@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0296: Phase 37 Recommends Pause And Preserve After Candidate Preview Audit
+
+Status: Accepted
+
+Decision:
+
+Phase 37.3 recommends pausing and preserving the current runtime/test state after Phase 37.4.
+
+Context:
+
+Phase 37 found no regression, no blocking gap, and no immediate test-only hardening need after the Phase 36 candidate preview runtime slice.
+
+Consequences:
+
+- No immediate runtime implementation is recommended.
+- No immediate test-only hardening is recommended.
+- No Phase 38 work is required to close this lane.
+
 ## ADR-0295: Candidate Preview Gap Review Finds No Immediate Hardening Need
 
 Status: Accepted
