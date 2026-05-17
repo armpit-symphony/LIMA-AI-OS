@@ -1,0 +1,58 @@
+{
+  "phase": "35.2",
+  "status": "second_slice_safety_and_scope_comparison",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed_in_phase_35": [],
+  "recommended_future_candidate": {
+    "option": "C",
+    "name": "non_executing_candidate_preview_helper",
+    "recommended_for_future_phase_36_approval_question": true,
+    "implementation_approved_now": false,
+    "risk_level_if_bounded": "low",
+    "usefulness": "high",
+    "testability": "high",
+    "rollback_simplicity": "simple"
+  },
+  "future_phase_36_file_scope_if_approved": {
+    "allowed_runtime_files": [
+      "lima/kernel/candidate_preview.py",
+      "lima/kernel/__init__.py_if_safe_public_export_required"
+    ],
+    "forbidden_runtime_files": [
+      "lima/kernel/runtime_state.py",
+      "lima/kernel/intake_candidate.py",
+      "lima/kernel/candidate_status.py",
+      "all_other_lima_files"
+    ],
+    "tests_support_changes_allowed": false
+  },
+  "future_candidate_required_properties": {
+    "deterministic": true,
+    "local_only": true,
+    "side_effect_free": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "caller_provided_data_only": true,
+    "safe_under_missing_malformed_unknown_suspicious_nested_bypass_input": true
+  },
+  "forbidden_future_candidate_behaviors": [
+    "humaninput_runtime_bridge_behavior",
+    "sparkbot_wiring",
+    "live_adapters",
+    "intentcompiler_runtime_behavior",
+    "guardiandecision_runtime_behavior",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "persistence",
+    "audit_persistence",
+    "shell_browser_network_file_mutation",
+    "robotics",
+    "physical_world_behavior",
+    "external_service_calls",
+    "workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "next_phase": "35.3"
+}

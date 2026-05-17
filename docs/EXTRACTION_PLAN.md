@@ -7687,6 +7687,35 @@ Forbidden:
 
 Continue only to Phase 35.2 second-slice safety and scope comparison.
 
+## Phase 35.2 Gate: Second-Slice Safety And Scope Comparison
+
+Phase 35.2 compares candidate second runtime slices by safety, usefulness, file scope, testability, rollback simplicity, and risk.
+
+Allowed:
+
+- Phase 35.2 tests
+- Phase 35.2 fixture metadata
+- Phase 35.2 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Option C remains the recommended future Phase 36 candidate if Phil explicitly approves it later.
+- The possible future runtime file scope is limited to `lima/kernel/candidate_preview.py` and `lima/kernel/__init__.py` only if a safe public export is required.
+- Existing runtime files and `tests/support/` remain forbidden.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 35.3 Phase 36 eligibility and test plan matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
