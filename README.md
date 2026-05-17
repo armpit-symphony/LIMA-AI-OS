@@ -674,6 +674,8 @@ Phase 41.0 opens a docs/tests/fixtures-only test-hardening lane for the existing
 
 Phase 41.1 adds the Arc Bot-shaped synthetic fixture corpus for `candidate_preview` hardening, including safe draft-only work, external writes, connector setup, memory trust, scheduled work, admin posture, Sparkbot-only behavior, and robotics/physical-world cases.
 
+Phase 41.2 adds regression tests proving the existing `candidate_preview` helper keeps Arc Bot-shaped office fixtures deterministic, non-authoritative, read-only, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, adapter-inactive, Sparkbot-wiring inactive, external-call inactive, robotics inactive, and physical-world inactive.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

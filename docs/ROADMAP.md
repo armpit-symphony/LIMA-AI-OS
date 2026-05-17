@@ -8411,6 +8411,23 @@ Status:
 - complete
 - tagged as `phase-41.1-arc-bot-candidate-preview-fixtures`
 
+## Phase 41.2 - Arc Bot Candidate Preview Regression Tests
+
+Goal:
+
+- Exercise the existing `candidate_preview` helper against Arc Bot-shaped fixtures.
+- Prove the helper remains read-only, non-authoritative, non-executing, and side-effect free.
+
+Result:
+
+- Arc Bot-shaped risky office tasks remain blocked or safely previewed.
+- No runtime code changes were needed.
+
+Status:
+
+- complete
+- tagged as `phase-41.2-arc-bot-candidate-preview-regression-tests`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

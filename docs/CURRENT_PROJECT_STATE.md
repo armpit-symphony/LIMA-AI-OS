@@ -468,9 +468,11 @@ Phase 41.0 Arc Bot Candidate Preview Hardening Charter is complete, merged to `m
 
 Phase 41.1 Arc Bot Candidate Preview Fixtures is complete, merged to `main`, and tagged. It adds synthetic Arc Bot / LIMA Office fixture data for later `candidate_preview` regression tests without modifying runtime code.
 
+Phase 41.2 Arc Bot Candidate Preview Regression Tests is complete, merged to `main`, and tagged. It exercises the existing `candidate_preview` helper against Arc Bot-shaped fixture data and confirms deterministic, read-only, non-authoritative, non-executing, side-effect-free behavior without runtime changes.
+
 Latest completed phase merge:
 
-`3f3694c2db987785f91fbcd0cee48a35cfded8dd`
+`d77d49951f27574419987425d6597b1f52cff8a1`
 
 Latest tag:
 
