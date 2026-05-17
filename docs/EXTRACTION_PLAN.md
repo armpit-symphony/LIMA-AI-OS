@@ -8380,6 +8380,30 @@ Blocked:
 
 Continue only to Phase 40.2 LIMA Office task/approval/audit vocabulary matrix.
 
+## Phase 40.2 Gate: LIMA Office Task Approval Audit Vocabulary Matrix
+
+Phase 40.2 records the planning vocabulary for Arc Bot / LIMA AI Office as a guarded task-oriented consumer.
+
+Allowed:
+
+- Phase 40.2 documentation
+- Phase 40.2 fixture metadata
+- Phase 40.2 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 40.3 Arc Bot candidate preview fixture plan.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

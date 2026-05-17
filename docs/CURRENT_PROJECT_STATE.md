@@ -458,9 +458,11 @@ Phase 40.0 Arc Bot Consumer Boundary Clarification is complete, merged to `main`
 
 Phase 40.1 Arc Bot Guarded Task Consumer Boundary Review is complete, merged to `main`, and tagged. It defines Arc Bot / LIMA AI Office as a guarded task-oriented office consumer over LIMA AI OS/runtime safety concepts, with stricter defaults than Sparkbot and no runtime implementation.
 
+Phase 40.2 LIMA Office Task Approval Audit Vocabulary Matrix is complete, merged to `main`, and tagged. It records the Arc Bot task, approval, explain-plan, run-state, audit/evidence, connector, memory-trust, scheduled-work, secret-use, admin-action, and physical-world planning vocabulary without adding runtime behavior.
+
 Latest completed phase merge:
 
-`c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
+`81c7b19e4ec7e43e12d44ca8fbc9dd566f3eafbc`
 
 Latest tag:
 

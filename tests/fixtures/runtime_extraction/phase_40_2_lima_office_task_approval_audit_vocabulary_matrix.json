@@ -1,0 +1,81 @@
+{
+  "phase": "40.2",
+  "status": "lima_office_task_approval_audit_vocabulary_matrix",
+  "docs_tests_fixtures_only": true,
+  "primary_guarded_task_consumer": "arc_bot_lima_ai_office",
+  "sparkbot_reference_evidence_only": true,
+  "direct_sparkbot_integration_recommended": false,
+  "arc_bot_implementation_recommended": false,
+  "humaninput_bridge_implementation_recommended": false,
+  "classification_matrix": {
+    "adopt": [
+      "task_intake",
+      "task_classification",
+      "run_state",
+      "audit_evidence_ref",
+      "connector_health",
+      "memory_trust",
+      "agent_identity"
+    ],
+    "adapt_for_arc_bot_stricter_defaults": [
+      "operator_approval_boundary",
+      "explain_plan_required",
+      "scheduled_work_posture",
+      "external_write_posture",
+      "secret_use_posture",
+      "admin_action_posture"
+    ],
+    "sparkbot_only": [
+      "personal_workstation_shell_browser_live_terminal",
+      "broad_owner_local_execution_surface",
+      "sparkbot_product_model_stack_controls"
+    ],
+    "defer": [
+      "physical_world_posture",
+      "robotics_manifest_consumption",
+      "direct_consumer_bridge"
+    ],
+    "reject": [
+      "runtime_authority_from_planning_labels",
+      "approval_grant_from_vocabulary",
+      "dispatch_from_vocabulary",
+      "persistence_from_vocabulary"
+    ]
+  },
+  "run_states": [
+    "planned",
+    "awaiting_approval",
+    "ready",
+    "blocked",
+    "completed",
+    "failed"
+  ],
+  "connector_health_values": [
+    "configured",
+    "missing_secrets",
+    "disabled",
+    "demo_ready",
+    "bridge_needed"
+  ],
+  "hard_invariants": {
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false,
+    "non_authoritative": true,
+    "preview_only": true,
+    "safe_by_default": true
+  },
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "40.3"
+}

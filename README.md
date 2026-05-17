@@ -664,6 +664,8 @@ Phase 40.0 clarifies that Sparkbot v1.6.80 is reference evidence for product/con
 
 Phase 40.1 defines Arc Bot / LIMA AI Office as a guarded task-oriented office consumer boundary over LIMA AI OS/runtime safety concepts, explicitly not a Sparkbot clone, workstation surface, HumanInput bridge, approval executor, dispatch system, or physical-world controller.
 
+Phase 40.2 records the LIMA Office task, approval, audit, connector, memory-trust, scheduled-work, and physical-world vocabulary matrix. Sparkbot remains reference evidence only; Arc Bot / LIMA AI Office keeps stricter defaults and planning labels do not grant runtime authority.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

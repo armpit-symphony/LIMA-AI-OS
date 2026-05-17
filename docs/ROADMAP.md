@@ -8324,6 +8324,24 @@ Status:
 - complete
 - tagged as `phase-40.1-arc-bot-guarded-task-consumer-boundary-review`
 
+## Phase 40.2 - LIMA Office Task Approval Audit Vocabulary Matrix
+
+Goal:
+
+- Define the Arc Bot / LIMA Office planning vocabulary for task, approval, explain-plan, run-state, audit, connector, memory, schedule, secret, admin, and physical-world posture.
+- Classify Sparkbot-informed concepts as adopted, adapted, Sparkbot-only, deferred, or rejected.
+
+Result:
+
+- Planning labels are non-authoritative and cannot grant runtime authority.
+- Arc Bot keeps stricter defaults than Sparkbot's workstation posture.
+- No runtime implementation is approved.
+
+Status:
+
+- complete
+- tagged as `phase-40.2-lima-office-task-approval-audit-vocabulary-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
