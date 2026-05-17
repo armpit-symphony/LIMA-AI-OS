@@ -666,6 +666,8 @@ Phase 40.1 defines Arc Bot / LIMA AI Office as a guarded task-oriented office co
 
 Phase 40.2 records the LIMA Office task, approval, audit, connector, memory-trust, scheduled-work, and physical-world vocabulary matrix. Sparkbot remains reference evidence only; Arc Bot / LIMA AI Office keeps stricter defaults and planning labels do not grant runtime authority.
 
+Phase 40.3 defines the Arc Bot-shaped `candidate_preview` fixture plan for a future test-only hardening lane. The plan covers draft-only email, external send, calendar write, file mutation, low-confidence memory, connector setup, kill switch, scheduled work, admin breakglass, robotics, Sparkbot-only behavior, strict-security posture, and explain-plan-only cases without approving implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

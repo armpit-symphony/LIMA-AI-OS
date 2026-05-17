@@ -185,6 +185,23 @@ Consequences:
 - External writes, secret use, admin actions, scheduled work, and physical-world requests remain blocked, deferred, or approval-postured by default.
 - Future implementation requires explicit approval and cannot rely on vocabulary labels as authority.
 
+## ADR-0308: Phase 41 Should Harden Arc Bot-Shaped Preview Fixtures
+
+Status: Accepted
+
+Decision:
+
+If Phase 40 closes cleanly, Phase 41 should be docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
+
+Context:
+
+Phase 40.3 finds clear synthetic fixture targets for office-task preview boundaries and no need for runtime implementation.
+
+Consequences:
+
+- Phase 41 should cover draft-only email, external send, calendar write, file mutation, memory trust, connector setup, kill switch, scheduled work, admin breakglass, robotics, Sparkbot-only, strict-security, and explain-plan-only cases.
+- Runtime code, `lima/`, Sparkbot, Arc Bot implementation, HumanInput bridge behavior, live adapters, execution, approvals, dispatch, persistence, mutation, external calls, background work, robotics, and physical-world behavior remain forbidden.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
