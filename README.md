@@ -686,6 +686,8 @@ Phase 42.1 defines universal model-agnostic planning contracts for input, task/i
 
 Phase 42.2 defines the universal consumer and embodiment profile taxonomy for LIMA AI OS, covering Arc Bot / LIMA Office, Sparkbot Public, generic chatbots, automation agents, coding/research agents, robot/drone/humanoid/IoT controllers, action classes, and adapter-boundary vocabulary. Robotics and IoT remain profile vocabulary only with no hardware calls.
 
+Phase 42.3 records universal safety invariants and the Guardian boundary matrix. LIMA may describe approval posture, risk, evidence, simulation, and adapter requirements, but Guardian or a future policy membrane owns real approval state; LIMA cannot grant approval, execute, dispatch, persist, mutate, call adapters, or touch physical-world systems in this lane.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

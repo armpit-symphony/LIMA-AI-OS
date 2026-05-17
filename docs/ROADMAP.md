@@ -8516,6 +8516,23 @@ Status:
 - complete
 - tagged as `phase-42.2-consumer-and-embodiment-profile-taxonomy`
 
+## Phase 42.3 - Universal Safety Invariants And Guardian Boundary Matrix
+
+Goal:
+
+- Record hard invariants for universal LIMA AI OS profile/contract planning.
+- Clarify that Guardian or a future policy membrane owns real approval state.
+
+Result:
+
+- LIMA describes approval posture only and cannot grant runtime authority.
+- Robotics, IoT, drones, humanoids, and physical-world actions remain blocked/deferred vocabulary only.
+
+Status:
+
+- complete
+- tagged as `phase-42.3-universal-safety-invariants-and-guardian-boundary-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
