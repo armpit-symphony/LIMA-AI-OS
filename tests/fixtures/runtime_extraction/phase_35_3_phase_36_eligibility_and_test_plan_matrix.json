@@ -1,0 +1,63 @@
+{
+  "phase": "35.3",
+  "status": "phase_36_eligibility_and_test_plan_matrix",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed_in_phase_35": [],
+  "phase_36_candidate": {
+    "name": "non_executing_candidate_preview_helper",
+    "allowed_runtime_files_if_approved_later": [
+      "lima/kernel/candidate_preview.py",
+      "lima/kernel/__init__.py_if_safe_public_export_required"
+    ],
+    "forbidden_runtime_files": [
+      "lima/kernel/runtime_state.py",
+      "lima/kernel/intake_candidate.py",
+      "lima/kernel/candidate_status.py",
+      "all_other_lima_files"
+    ],
+    "tests_support_changes_allowed": false
+  },
+  "eligibility_criteria": {
+    "deterministic": true,
+    "local_only": true,
+    "side_effect_free": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "caller_provided_data_only": true,
+    "inspectable": true,
+    "safe_by_default": true,
+    "safe_under_missing_malformed_unknown_suspicious_nested_bypass_input": true,
+    "fully_testable_without_tests_support_changes": true
+  },
+  "acceptance_test_requirements": [
+    "benign_input_yields_inspectable_non_authoritative_preview",
+    "missing_input_safe",
+    "malformed_input_safe",
+    "unknown_values_safe",
+    "suspicious_nested_metadata_safe",
+    "bypass_wording_no_authority",
+    "execution_allowed_false",
+    "side_effects_allowed_false",
+    "approval_false_or_blocked",
+    "dispatch_false_or_blocked",
+    "persistence_false_or_blocked",
+    "phase_5_humaninput_runtime_bridge_gated",
+    "sparkbot_wiring_absent",
+    "live_adapters_absent",
+    "external_calls_and_hidden_side_effects_absent",
+    "only_approved_runtime_files_changed",
+    "tests_support_unchanged"
+  ],
+  "rollback_audit_proof": [
+    "remove_lima_kernel_candidate_preview_py",
+    "remove_optional_kernel_init_export",
+    "remove_phase_36_docs_tests_fixtures",
+    "git_diff_name_only_against_pre_phase_36_main",
+    "forbidden_import_and_behavior_scan",
+    "targeted_tests_full_suite_compileall_diff_check_clean_status"
+  ],
+  "phase_36_approval_question_preserved": true,
+  "next_phase": "35.4"
+}

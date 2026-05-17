@@ -616,6 +616,8 @@ Phase 35.1 inventories second runtime slice options and carries forward a future
 
 Phase 35.2 compares second-slice safety and scope and recommends the future candidate preview helper only for a later explicit Phase 36 approval question.
 
+Phase 35.3 defines Phase 36 eligibility criteria, acceptance-test requirements, rollback/audit proof, stop conditions, and the exact future approval question for Phil.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

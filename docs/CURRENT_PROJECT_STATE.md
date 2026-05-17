@@ -410,6 +410,8 @@ Phase 35.1 Second Runtime Slice Candidate Inventory is complete, merged to `main
 
 Phase 35.2 Second-Slice Safety And Scope Comparison is complete, merged to `main`, and tagged. It compares candidate safety, usefulness, file scope, testability, rollback simplicity, and risk, then recommends a future candidate preview helper only for a later explicit Phase 36 approval question.
 
+Phase 35.3 Phase 36 Eligibility And Test Plan Matrix is complete, merged to `main`, and tagged. It defines eligibility criteria, acceptance-test requirements, rollback/audit proof, stop conditions, and the exact future Phase 36 approval question without approving implementation.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
