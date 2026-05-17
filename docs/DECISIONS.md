@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0283: Phase 35 Opens As No-Code Design Review For A Possible Second Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 35.0 opens a docs/tests/fixtures-only no-code design review lane for a possible second narrow runtime slice after the completed read-only `runtime_state` inspection slice and Phase 33 hardening.
+
+Context:
+
+Phase 34 passed audit, found no remaining `runtime_state` gap, and recommended Phase 35 design review rather than immediate implementation.
+
+Consequences:
+
+- Phase 35 may add docs, fixtures, and tests only.
+- Phase 35 may not change `lima/` or `tests/support/`.
+- Phase 35 may not add runtime behavior, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior.
+
 ## ADR-0001: Extract, Do Not Greenfield
 
 Status: Accepted
