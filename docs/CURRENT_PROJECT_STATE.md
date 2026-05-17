@@ -450,6 +450,8 @@ Phase 39.1 Sparkbot-Shaped Candidate Preview Fixtures is complete, merged to `ma
 
 Phase 39.2 Candidate Preview Sparkbot-Shaped Regression Tests is complete, merged to `main`, and tagged. It proves the existing `candidate_preview` helper keeps every Sparkbot-shaped fixture blocked, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, and side-effect free.
 
+Phase 39.3 Hardening Gap and Next-Lane Decision Review is complete, merged to `main`, and tagged. It finds no runtime gap after Sparkbot-shaped hardening and recommends only Phase 39.4 archive/closeout followed by pause and preserve.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

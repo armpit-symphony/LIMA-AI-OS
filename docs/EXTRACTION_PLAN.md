@@ -8276,6 +8276,27 @@ Blocked:
 
 Continue only to Phase 39.3 hardening gap and next-lane decision review.
 
+## Phase 39.3 Gate: Hardening Gap and Next-Lane Decision Review
+
+Phase 39.3 reviews Phase 39 hardening results.
+
+Allowed:
+
+- Phase 39.3 decision documentation
+- Phase 39.3 fixture metadata
+- Phase 39.3 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- approval enforcement, execution, dispatch, persistence, MCP calls, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 39.4 archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

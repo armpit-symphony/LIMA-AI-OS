@@ -656,6 +656,8 @@ Phase 39.1 adds inert Sparkbot-shaped caller-provided fixture data for owner-loc
 
 Phase 39.2 adds regression tests proving the existing `candidate_preview` helper keeps every Sparkbot-shaped fixture blocked, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, bridge-inactive, and side-effect free.
 
+Phase 39.3 reviews the hardening result, finds no runtime gap, and recommends only Phase 39.4 archive/closeout followed by pause and preserve.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
