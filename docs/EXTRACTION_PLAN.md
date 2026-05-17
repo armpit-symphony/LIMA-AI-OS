@@ -7977,6 +7977,36 @@ Forbidden:
 
 Continue only to Phase 37.2 candidate preview regression and gap review.
 
+## Phase 37.2 Gate: Candidate Preview Regression And Gap Review
+
+Phase 37.2 reviews remaining candidate preview regressions or gaps.
+
+Allowed:
+
+- Phase 37.2 tests
+- Phase 37.2 fixture metadata
+- Phase 37.2 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- No regression was found.
+- No blocking gap was found.
+- No immediate test-only hardening need was found.
+
+Forbidden:
+
+- new runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- stale prior-phase test changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 37.3 next-lane decision matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -634,6 +634,8 @@ Phase 37.0 opens the docs/tests/fixtures-only audit/archive lane for the complet
 
 Phase 37.1 reviews candidate preview boundary evidence and confirms the Phase 36 helper remains non-authoritative, non-executing, bridge-inactive, adapter-inactive, and side-effect free.
 
+Phase 37.2 reviews candidate preview regressions and gaps, finding no blocking gap and no immediate test-only hardening need.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
