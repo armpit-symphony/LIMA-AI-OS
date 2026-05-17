@@ -414,6 +414,8 @@ Phase 35.3 Phase 36 Eligibility And Test Plan Matrix is complete, merged to `mai
 
 Phase 35.4 Phase 35 Design Review Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 35 as completed docs/tests/fixtures-only no-code design review, preserves the exact Phase 36 approval question, and confirms Phase 36 remains gated pending explicit Phil approval.
 
+Phase 36.0 Phase 35 Runtime Implementation Audit Charter is complete, merged to `main`, and tagged. It records the Phase 35 audit as PASS, opens Phase 36 for the explicitly approved candidate preview runtime slice, and adds no runtime implementation yet.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
