@@ -1,0 +1,52 @@
+{
+  "phase": "38.3",
+  "status": "sparkbot_to_lima_gap_and_risk_matrix",
+  "docs_tests_fixtures_only": true,
+  "current_lima_support": [
+    "runtime_state_read_only_inspection",
+    "candidate_preview_non_executing_preview"
+  ],
+  "gaps": [
+    "owner_local_read_posture_fixture_coverage",
+    "strict_security_risky_write_fixture_coverage",
+    "breakglass_vault_posture_fixture_coverage",
+    "policy_simulation_explain_plan_fixture_coverage",
+    "persistent_approval_claim_fixture_coverage",
+    "agent_identity_kill_switch_fixture_coverage",
+    "memory_trust_pending_approval_fixture_coverage",
+    "mcp_robo_manifest_fixture_coverage",
+    "robotics_simulation_and_real_hardware_fixture_coverage",
+    "run_timeline_audit_hash_fixture_coverage"
+  ],
+  "not_recommended": [
+    "runtime_implementation",
+    "sparkbot_wiring_imports",
+    "humaninput_runtime_bridge_behavior",
+    "live_adapters",
+    "approval_enforcement",
+    "execution",
+    "dispatch",
+    "audit_persistence",
+    "mcp_connection",
+    "robotics_physical_world_behavior",
+    "external_service_calls",
+    "background_work_subprocesses_threads_queues_daemons_database_writes"
+  ],
+  "recommended_phase_39_direction": "test_only_candidate_preview_hardening_with_sparkbot_shaped_fixtures",
+  "phase_39_fixture_cases": [
+    "owner_local_routine_read_request",
+    "strict_security_risky_write_request",
+    "breakglass_required_vault_request",
+    "mcp_explain_plan_request",
+    "robo_os_simulation_request",
+    "real_hardware_robot_motion_request",
+    "agent_identity_kill_switch_true",
+    "low_confidence_memory_write_pending_approval"
+  ],
+  "phase_39_runtime_implementation_recommended": false,
+  "phase_39_lima_changes_required": false,
+  "sparkbot_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "next_phase": "38.4"
+}

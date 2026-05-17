@@ -57,6 +57,25 @@ Consequences:
 - `dry_run_posture` does not call MCP or tools.
 - Robotics posture remains planning metadata only.
 
+## ADR-0301: Sparkbot-Shaped Gaps Should Be Hardened With Tests First
+
+Status: Accepted
+
+Decision:
+
+Phase 38.3 recommends the next lane as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
+
+Context:
+
+LIMA has enough non-executing preview surface to test Sparkbot-shaped inputs, but not enough evidence that owner-local, strict-security, breakglass, MCP/Robo OS, memory trust, and agent identity claims remain inert when represented as caller-provided candidate data.
+
+Consequences:
+
+- No runtime implementation is recommended.
+- No `lima/` change is required.
+- Phase 39 should be tests/fixtures/docs only if pursued.
+- Sparkbot wiring, HumanInput bridge behavior, approval enforcement, execution, dispatch, persistence, MCP calls, and robotics/physical-world behavior remain blocked.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

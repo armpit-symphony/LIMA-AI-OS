@@ -8153,6 +8153,32 @@ Blocked:
 
 Continue only to Phase 38.3 Sparkbot-to-LIMA gap and risk matrix.
 
+## Phase 38.3 Gate: Sparkbot-to-LIMA Gap and Risk Matrix
+
+Phase 38.3 maps Sparkbot v1.6.80 concepts to current LIMA support and remaining gaps.
+
+Allowed:
+
+- Gap/risk documentation
+- Phase 38.3 fixture metadata
+- Phase 38.3 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot wiring
+- HumanInput bridge behavior
+- approval enforcement
+- execution
+- dispatch
+- persistence
+- MCP calls
+- robotics/physical-world behavior
+
+Continue only to Phase 38.4 alignment archive and closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
