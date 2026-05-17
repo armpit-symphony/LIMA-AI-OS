@@ -8203,6 +8203,23 @@ Status:
 - complete
 - tagged as `phase-38.4-phase-38-alignment-archive-closeout`
 
+## Phase 39.0 - Sparkbot-Shaped Candidate Preview Hardening Charter
+
+Goal:
+
+- Open a test-only hardening lane for existing `candidate_preview` behavior with Sparkbot-shaped fixtures.
+
+Result:
+
+- Phase 39 is docs/tests/fixtures-only.
+- No runtime implementation or `lima/` change is approved.
+- Required Sparkbot-shaped fixture cases are listed.
+
+Status:
+
+- complete
+- tagged as `phase-39.0-sparkbot-shaped-candidate-preview-hardening-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

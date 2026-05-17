@@ -94,6 +94,24 @@ Consequences:
 - No `lima/`, Sparkbot, or `tests/support/` changes are required for the recommended next lane.
 - The next safe evidence step is deterministic offline fixture coverage.
 
+## ADR-0303: Phase 39 Hardens Candidate Preview With Sparkbot-Shaped Tests Only
+
+Status: Accepted
+
+Decision:
+
+Phase 39 opens as test-only hardening for existing `candidate_preview` behavior with Sparkbot-shaped caller-provided fixtures.
+
+Context:
+
+Phase 38 found no runtime implementation need, but identified a concrete evidence gap around Sparkbot-shaped concepts.
+
+Consequences:
+
+- No runtime implementation is approved.
+- No `lima/`, Sparkbot, or `tests/support/` changes are approved.
+- Candidate preview must remain non-authoritative, non-executing, side-effect free, bridge-inactive, and Sparkbot-wiring-inactive.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

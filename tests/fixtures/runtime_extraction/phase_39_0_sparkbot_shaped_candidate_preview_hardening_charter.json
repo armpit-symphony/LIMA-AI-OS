@@ -1,0 +1,39 @@
+{
+  "phase": "39.0",
+  "status": "sparkbot_shaped_candidate_preview_hardening_charter",
+  "docs_tests_fixtures_only": true,
+  "starting_phase_38_audit_result": "PASS",
+  "runtime_implementation_approved": false,
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "required_fixture_cases": [
+    "owner_local_routine_read_request",
+    "strict_security_risky_write_request",
+    "breakglass_required_vault_request",
+    "mcp_explain_plan_request",
+    "robo_os_simulation_request",
+    "real_hardware_robot_motion_request",
+    "agent_identity_kill_switch_true",
+    "low_confidence_memory_write_pending_approval"
+  ],
+  "required_preview_outcome": {
+    "non_authoritative": true,
+    "read_only": true,
+    "local_only": true,
+    "deterministic": true,
+    "safe_by_default": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false
+  },
+  "next_phase": "39.1"
+}
