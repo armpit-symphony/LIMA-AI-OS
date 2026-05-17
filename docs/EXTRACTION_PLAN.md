@@ -7543,6 +7543,35 @@ Forbidden:
 
 Continue only to Phase 34.2 runtime state hardening gap review.
 
+## Phase 34.2 Gate: Runtime State Hardening Gap Review
+
+Phase 34.2 reviews whether the Phase 33 hardening package revealed a concrete `runtime_state` gap.
+
+Allowed:
+
+- Phase 34.2 tests
+- Phase 34.2 fixture metadata
+- Phase 34.2 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- No concrete `runtime_state` gap was found.
+- No runtime code change is needed.
+- No immediate additional test-only hardening is needed before archive.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 34.3 Phase 35 next-lane decision matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

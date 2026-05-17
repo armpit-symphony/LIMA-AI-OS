@@ -4970,6 +4970,24 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0280: Phase 34 Finds No Runtime State Hardening Gap
+
+Status: Accepted
+
+Decision:
+
+Phase 34.2 records that Phase 33 hardening revealed no concrete `runtime_state` gap and no runtime code change need.
+
+Context:
+
+Phase 34.1 confirmed the nested metadata coverage added by Phase 33.
+
+Consequences:
+
+- Runtime files remain untouched.
+- Additional immediate test-only hardening is not required before archive.
+- Phase 35 can be considered as no-code design review for a second narrow runtime slice if Phase 34 closeout remains clean.
+
 ## ADR-0279: Phase 34 Confirms Phase 33 Nested Metadata Coverage Evidence
 
 Status: Accepted

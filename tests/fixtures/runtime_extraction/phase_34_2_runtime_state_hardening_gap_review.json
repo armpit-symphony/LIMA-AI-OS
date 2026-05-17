@@ -1,0 +1,28 @@
+{
+  "phase": "34.2",
+  "status": "runtime_state_hardening_gap_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed": [],
+  "tests_support_changed": false,
+  "runtime_state_gap_found": false,
+  "runtime_code_change_needed": false,
+  "additional_test_only_hardening_needed_immediately": false,
+  "coverage_reviewed": [
+    "authority_bypass_wording",
+    "sparkbot_humaninput_live_adapter_claims",
+    "shell_browser_network_file_mutation_claims",
+    "robotics_physical_world_claims",
+    "external_service_background_work_claims",
+    "malformed_nested_metadata",
+    "unknown_nested_values"
+  ],
+  "forbidden_runtime_files_remain_forbidden": [
+    "lima/kernel/runtime_state.py",
+    "lima/kernel/__init__.py",
+    "lima/kernel/intake_candidate.py",
+    "lima/kernel/candidate_status.py",
+    "all other lima/ files"
+  ],
+  "next_phase": "34.3"
+}
