@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0292: Phase 36 Archives Candidate Preview Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 36.4 archives Phase 36 as a completed narrow runtime implementation slice for the non-executing candidate preview helper.
+
+Context:
+
+Phase 36.2 added the helper and safe export, Phase 36.3 confirmed the boundary, and validation passed.
+
+Consequences:
+
+- Phase 37 should be docs/tests/fixtures-only audit/archive and next-lane decision.
+- No additional runtime implementation is approved.
+- Phase 5 HumanInput runtime bridge remains gated.
+
 ## ADR-0291: Candidate Preview Boundary Review Confirms Narrow Scope
 
 Status: Accepted

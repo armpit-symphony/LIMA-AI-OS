@@ -7888,6 +7888,35 @@ Forbidden:
 
 Continue only to Phase 36.4 runtime slice archive and closeout.
 
+## Phase 36.4 Gate: Phase 36 Runtime Slice Archive / Closeout
+
+Phase 36.4 archives Phase 36 as a completed narrow candidate preview runtime slice.
+
+Allowed:
+
+- Phase 36.4 tests
+- Phase 36.4 fixture metadata
+- Phase 36.4 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Phase 36 candidate preview runtime slice is archived.
+- Phase 37 should be docs/tests/fixtures-only audit/archive and next-lane decision.
+- No additional runtime implementation is approved.
+
+Forbidden:
+
+- new runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Stop after Phase 36.4.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

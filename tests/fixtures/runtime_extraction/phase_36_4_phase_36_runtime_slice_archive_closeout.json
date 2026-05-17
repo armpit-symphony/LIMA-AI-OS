@@ -1,0 +1,49 @@
+{
+  "phase": "36.4",
+  "status": "phase_36_runtime_slice_archive_closeout",
+  "runtime_behavior_added_in_phase_36_4": false,
+  "runtime_files_changed_in_phase_36_4": [],
+  "phase_36_completed_phases": [
+    "36.0_phase_35_runtime_implementation_audit_charter",
+    "36.1_candidate_preview_acceptance_design",
+    "36.2_candidate_preview_runtime_implementation",
+    "36.3_candidate_preview_boundary_regression_review",
+    "36.4_phase_36_runtime_slice_archive_closeout"
+  ],
+  "phase_36_runtime_files_changed": [
+    "lima/kernel/candidate_preview.py",
+    "lima/kernel/__init__.py"
+  ],
+  "candidate_preview_py_added": true,
+  "kernel_init_changed_for_safe_export": true,
+  "runtime_state_py_changed": false,
+  "intake_candidate_py_changed": false,
+  "candidate_status_py_changed": false,
+  "tests_support_changed": false,
+  "forbidden_lima_files_changed": false,
+  "candidate_preview_safety_result": {
+    "deterministic": true,
+    "local_only": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "side_effect_free": true,
+    "caller_provided_data_only": true,
+    "safe_by_default": true,
+    "execution_absent": true,
+    "approval_absent": true,
+    "dispatch_absent": true,
+    "persistence_absent": true,
+    "sparkbot_absent": true,
+    "humaninput_runtime_bridge_absent": true,
+    "live_adapters_absent": true,
+    "external_calls_absent": true,
+    "background_work_absent": true,
+    "robotics_physical_world_absent": true
+  },
+  "stale_phase_35_test_adjusted": true,
+  "stale_phase_35_test_adjusted_file": "tests/test_phase_35_1_second_runtime_slice_candidate_inventory.py",
+  "other_old_phase_tests_changed": false,
+  "recommended_phase_37_direction": "docs_tests_fixtures_only_audit_archive_next_lane_decision",
+  "phase_37_approval_question_preserved": true
+}

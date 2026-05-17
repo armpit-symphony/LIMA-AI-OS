@@ -628,6 +628,8 @@ Phase 36.2 adds the approved `candidate_preview` runtime helper and safe kernel 
 
 Phase 36.3 reviews the candidate preview boundary and confirms Phase 36.2 changed only approved runtime files, with no additional runtime behavior.
 
+Phase 36.4 archives Phase 36 as a completed narrow candidate preview runtime slice and stops at the Phase 37 audit/archive approval gate.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
