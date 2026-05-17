@@ -466,9 +466,11 @@ Phase 40.4 Arc Bot Consumer Boundary Archive / Closeout is complete, merged to `
 
 Phase 41.0 Arc Bot Candidate Preview Hardening Charter is complete, merged to `main`, and tagged. It opens a docs/tests/fixtures-only test-hardening lane for the existing `candidate_preview` helper without approving runtime implementation or `lima/` changes.
 
+Phase 41.1 Arc Bot Candidate Preview Fixtures is complete, merged to `main`, and tagged. It adds synthetic Arc Bot / LIMA Office fixture data for later `candidate_preview` regression tests without modifying runtime code.
+
 Latest completed phase merge:
 
-`853f7596f33eb2a5a7ea9e3ea4b46f204e6562d4`
+`3f3694c2db987785f91fbcd0cee48a35cfded8dd`
 
 Latest tag:
 

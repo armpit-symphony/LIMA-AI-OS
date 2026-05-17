@@ -672,6 +672,8 @@ Phase 40.4 archives Phase 40 as a completed Arc Bot / LIMA Office consumer bound
 
 Phase 41.0 opens a docs/tests/fixtures-only test-hardening lane for the existing `candidate_preview` helper using Arc Bot / LIMA Office-shaped task fixtures. No runtime implementation or `lima/` changes are approved.
 
+Phase 41.1 adds the Arc Bot-shaped synthetic fixture corpus for `candidate_preview` hardening, including safe draft-only work, external writes, connector setup, memory trust, scheduled work, admin posture, Sparkbot-only behavior, and robotics/physical-world cases.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
