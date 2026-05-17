@@ -648,6 +648,8 @@ Phase 38.2 defines Sparkbot-shaped LIMA consumer boundary vocabulary for posture
 
 Phase 38.3 compares Sparkbot v1.6.80 concepts against current LIMA runtime slices and recommends Phase 39 as test-only `candidate_preview` hardening with Sparkbot-shaped fixtures, not implementation.
 
+Phase 38.4 archives the Sparkbot alignment intake lane. It confirms no LIMA runtime files, Sparkbot files, or `tests/support/` files changed, and recommends Phase 39 as docs/tests/fixtures-only `candidate_preview` hardening with Sparkbot-shaped fixtures.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
