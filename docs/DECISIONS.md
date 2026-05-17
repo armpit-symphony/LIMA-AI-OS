@@ -4970,6 +4970,25 @@ Consequences:
 - Phase 32 is not approved without explicit Phil approval.
 - Phase 5 HumanInput runtime bridge remains gated.
 
+## ADR-0281: Phase 35 Should Be No-Code Design Review For A Second Narrow Runtime Slice
+
+Status: Accepted
+
+Decision:
+
+Phase 34.3 recommends Phase 35 as docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice.
+
+Context:
+
+Phase 34 found no remaining test-only hardening gap after Phase 33, but implementation evidence for a second runtime slice has not been produced yet.
+
+Consequences:
+
+- Immediate runtime implementation is not recommended.
+- Phase 35 may design and compare candidate runtime slices only.
+- Phase 35 may not change `lima/` or `tests/support/`.
+- Any later implementation still requires explicit Phil approval.
+
 ## ADR-0280: Phase 34 Finds No Runtime State Hardening Gap
 
 Status: Accepted
