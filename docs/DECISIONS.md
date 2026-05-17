@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0294: Candidate Preview Boundary Evidence Remains Inert
+
+Status: Accepted
+
+Decision:
+
+Phase 37.1 records that Phase 36 candidate preview evidence preserves non-authoritative, non-executing, bridge-inactive, adapter-inactive, and side-effect-free behavior.
+
+Context:
+
+Phase 36 acceptance tests covered benign, missing, malformed, unknown, suspicious, nested, bypass-worded, and explicit forbidden-flag inputs.
+
+Consequences:
+
+- No runtime change is needed in Phase 37.1.
+- Candidate preview remains safe for audit/archive.
+- Phase 37 may proceed to regression and gap review.
+
 ## ADR-0293: Phase 37 Opens Candidate Preview Audit Archive Lane
 
 Status: Accepted

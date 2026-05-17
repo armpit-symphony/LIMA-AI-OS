@@ -426,6 +426,8 @@ Phase 36.4 Phase 36 Runtime Slice Archive / Closeout is complete, merged to `mai
 
 Phase 37.0 Phase 36 Candidate Preview Audit Charter is complete, merged to `main`, and tagged. It opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 36 candidate preview runtime slice and records the Phase 36 audit result as PASS.
 
+Phase 37.1 Candidate Preview Boundary Evidence Review is complete, merged to `main`, and tagged. It reviews Phase 36 acceptance evidence and static scan evidence without modifying runtime files.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

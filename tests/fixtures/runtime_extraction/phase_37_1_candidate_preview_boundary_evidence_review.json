@@ -1,0 +1,49 @@
+{
+  "phase": "37.1",
+  "status": "candidate_preview_boundary_evidence_review",
+  "docs_tests_fixtures_only": true,
+  "runtime_behavior_added_in_phase_37_1": false,
+  "runtime_files_changed_in_phase_37_1": [],
+  "evidence_reviewed": [
+    "benign_input_safe",
+    "missing_input_safe",
+    "malformed_input_safe",
+    "unknown_values_safe",
+    "suspicious_values_safe",
+    "nested_suspicious_metadata_safe",
+    "bypass_wording_no_authority",
+    "explicit_execution_approval_dispatch_persistence_flags_blocked",
+    "safe_kernel_export",
+    "forbidden_imports_and_calls_absent"
+  ],
+  "inert_output_flags": {
+    "non_authoritative": true,
+    "read_only": true,
+    "local_only": true,
+    "deterministic": true,
+    "safe_by_default": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "phase_5_humaninput_runtime_bridge_gated": true,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false
+  },
+  "static_scan_result": {
+    "forbidden_imports_absent": true,
+    "forbidden_calls_absent": true,
+    "sparkbot_imports_absent": true,
+    "humaninput_bridge_behavior_absent": true,
+    "live_adapter_behavior_absent": true,
+    "intentcompiler_calls_absent": true,
+    "guardiandecision_calls_absent": true,
+    "robotics_physical_world_behavior_absent": true
+  },
+  "next_phase": "37.2"
+}

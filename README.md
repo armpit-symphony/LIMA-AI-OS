@@ -632,6 +632,8 @@ Phase 36.4 archives Phase 36 as a completed narrow candidate preview runtime sli
 
 Phase 37.0 opens the docs/tests/fixtures-only audit/archive lane for the completed Phase 36 candidate preview runtime slice and records the Phase 36 audit result.
 
+Phase 37.1 reviews candidate preview boundary evidence and confirms the Phase 36 helper remains non-authoritative, non-executing, bridge-inactive, adapter-inactive, and side-effect free.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

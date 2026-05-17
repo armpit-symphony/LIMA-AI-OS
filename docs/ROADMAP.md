@@ -8038,6 +8038,23 @@ Status:
 - complete
 - tagged as `phase-37.0-phase-36-candidate-preview-audit-charter`
 
+## Phase 37.1 - Candidate Preview Boundary Evidence Review
+
+Goal:
+
+- Review Phase 36 candidate preview acceptance evidence.
+- Confirm inert output flags and static scan evidence.
+
+Result:
+
+- Candidate preview remains non-authoritative, non-executing, bridge-inactive, adapter-inactive, and side-effect free.
+- No runtime files changed in Phase 37.1.
+
+Status:
+
+- complete
+- tagged as `phase-37.1-candidate-preview-boundary-evidence-review`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
