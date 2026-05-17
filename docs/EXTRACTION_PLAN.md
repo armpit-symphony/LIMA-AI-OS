@@ -7600,6 +7600,35 @@ Forbidden:
 
 Continue only to Phase 34.4 hardening archive and closeout.
 
+## Phase 34.4 Gate: Phase 34 Hardening Archive / Closeout
+
+Phase 34.4 archives Phase 34 as a completed docs/tests/fixtures-only audit/archive lane.
+
+Allowed:
+
+- Phase 34.4 tests
+- Phase 34.4 fixture metadata
+- Phase 34.4 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Nested suspicious metadata audit result is PASS.
+- No remaining gaps were found.
+- Phase 35 should be docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, or physical-world behavior
+
+Stop after Phase 34.4.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
