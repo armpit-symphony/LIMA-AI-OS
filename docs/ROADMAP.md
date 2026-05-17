@@ -8377,6 +8377,23 @@ Status:
 - complete
 - tagged as `phase-40.4-arc-bot-consumer-boundary-archive-closeout`
 
+## Phase 41.0 - Arc Bot Candidate Preview Hardening Charter
+
+Goal:
+
+- Open a docs/tests/fixtures-only test-hardening lane for Arc Bot-shaped `candidate_preview` cases.
+- Preserve all runtime and integration boundaries.
+
+Result:
+
+- Hardening targets and invariants are documented.
+- No runtime implementation is approved.
+
+Status:
+
+- complete
+- tagged as `phase-41.0-arc-bot-candidate-preview-hardening-charter`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

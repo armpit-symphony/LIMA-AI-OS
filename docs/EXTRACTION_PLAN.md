@@ -8454,6 +8454,30 @@ Recommended next lane:
 
 - Phase 41 docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening.
 
+## Phase 41.0 Gate: Arc Bot Candidate Preview Hardening Charter
+
+Phase 41.0 opens the docs/tests/fixtures-only Arc Bot-shaped `candidate_preview` hardening lane.
+
+Allowed:
+
+- Phase 41.0 documentation
+- Phase 41.0 fixture metadata
+- Phase 41.0 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 41.1 Arc Bot candidate preview fixtures.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
