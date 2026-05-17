@@ -167,6 +167,24 @@ Consequences:
 - Arc Bot does not inherit Sparkbot-only workstation affordances.
 - Runtime implementation remains blocked.
 
+## ADR-0307: Planning Vocabulary Does Not Grant Runtime Authority
+
+Status: Accepted
+
+Decision:
+
+Arc Bot / LIMA Office planning labels may describe task, approval, audit, memory, connector, schedule, secret, admin, and physical-world posture, but they do not grant execution, approval, dispatch, persistence, adapter, Sparkbot, robotics, or physical-world authority.
+
+Context:
+
+Phase 40.2 imports Sparkbot-informed vocabulary into LIMA AI OS planning while preserving stricter Arc Bot defaults and LIMA runtime boundaries.
+
+Consequences:
+
+- `run_state`, `approval_posture`, `audit_evidence_ref`, and related labels remain non-authoritative.
+- External writes, secret use, admin actions, scheduled work, and physical-world requests remain blocked, deferred, or approval-postured by default.
+- Future implementation requires explicit approval and cannot rely on vocabulary labels as authority.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
