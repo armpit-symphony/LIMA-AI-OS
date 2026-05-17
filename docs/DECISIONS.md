@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0284: Phase 35 Inventories Candidate Preview As Leading Future Design Candidate
+
+Status: Accepted
+
+Decision:
+
+Phase 35.1 carries forward a non-executing candidate preview helper as the leading future Phase 36 design candidate, while keeping implementation unapproved.
+
+Context:
+
+The inventory compared test-only continuation, read-only inspection helpers, candidate preview, candidate status wrappers, GuardianDecision planning, HumanInput bridge planning, Sparkbot planning, and pause/preserve.
+
+Consequences:
+
+- Candidate preview remains future-only design material.
+- Phase 35 does not create `lima/kernel/candidate_preview.py`.
+- HumanInput bridge behavior, Sparkbot wiring, live adapters, approval, execution, dispatch, persistence, and side effects remain forbidden.
+
 ## ADR-0283: Phase 35 Opens As No-Code Design Review For A Possible Second Runtime Slice
 
 Status: Accepted

@@ -7658,6 +7658,35 @@ Forbidden:
 
 Continue only to Phase 35.1 second runtime slice candidate inventory.
 
+## Phase 35.1 Gate: Second Runtime Slice Candidate Inventory
+
+Phase 35.1 inventories candidate second runtime slices without implementation.
+
+Allowed:
+
+- Phase 35.1 tests
+- Phase 35.1 fixture metadata
+- Phase 35.1 documentation
+- roadmap/state metadata updates
+
+Decision:
+
+- Options A through H were reviewed.
+- Option C, a non-executing candidate preview helper over caller-provided data only, is the leading future design candidate.
+- Phase 36 implementation remains unapproved.
+
+Forbidden:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot wiring
+- HumanInput runtime bridge behavior
+- live adapters
+- execution, approval enforcement, dispatch, audit persistence, mutation, external calls, background work, robotics, or physical-world behavior
+
+Continue only to Phase 35.2 second-slice safety and scope comparison.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
