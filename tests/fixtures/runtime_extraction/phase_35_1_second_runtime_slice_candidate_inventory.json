@@ -1,0 +1,53 @@
+{
+  "phase": "35.1",
+  "status": "second_runtime_slice_candidate_inventory",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "runtime_files_changed_in_phase_35": [],
+  "candidate_options_reviewed": [
+    "A_test_only_continuation",
+    "B_second_read_only_runtime_inspection_helper",
+    "C_non_executing_candidate_preview_helper",
+    "D_read_only_candidate_status_normalization_wrapper",
+    "E_guardiandecision_read_only_preview_planning_only",
+    "F_humaninput_bridge_boundary_planning_only",
+    "G_sparkbot_integration_boundary_planning_only",
+    "H_pause_and_preserve_state"
+  ],
+  "leading_future_candidate": {
+    "option": "C",
+    "name": "non_executing_candidate_preview_helper",
+    "implementation_approved_now": false,
+    "deterministic": true,
+    "local_only": true,
+    "read_only": true,
+    "non_authoritative": true,
+    "non_executing": true,
+    "caller_provided_data_only": true,
+    "safe_by_default": true
+  },
+  "rejected_for_phase_36_implementation_without_more_evidence": [
+    "D_read_only_candidate_status_normalization_wrapper",
+    "E_guardiandecision_read_only_preview_planning_only",
+    "F_humaninput_bridge_boundary_planning_only",
+    "G_sparkbot_integration_boundary_planning_only"
+  ],
+  "possible_future_phase_36_file_scope_to_evaluate_only": [
+    "lima/kernel/candidate_preview.py",
+    "lima/kernel/__init__.py_if_safe_public_export_required",
+    "docs/PHASE_36_*.md",
+    "tests/fixtures/runtime_extraction/phase_36_*.json",
+    "tests/test_phase_36_*.py"
+  ],
+  "forbidden_for_phase_35": {
+    "lima_changes": true,
+    "tests_support_changes": true,
+    "runtime_behavior_changes": true,
+    "sparkbot_wiring": true,
+    "humaninput_runtime_bridge_behavior": true,
+    "live_adapters": true,
+    "execution_approval_dispatch_persistence": true,
+    "external_calls_or_side_effects": true
+  },
+  "next_phase": "35.2"
+}

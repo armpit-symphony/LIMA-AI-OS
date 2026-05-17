@@ -406,6 +406,8 @@ Phase 34.4 Phase 34 Hardening Archive / Closeout is complete, merged to `main`, 
 
 Phase 35.0 Phase 34 Second-Slice Design Audit Charter is complete, merged to `main`, and tagged. It opens Phase 35 as docs/tests/fixtures-only no-code design review for a possible second narrow runtime slice, records the Phase 34 audit result as PASS, and keeps runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, execution, approval enforcement, dispatch, audit persistence, external calls, background work, robotics, and physical-world behavior blocked.
 
+Phase 35.1 Second Runtime Slice Candidate Inventory is complete, merged to `main`, and tagged. It reviews options A through H and identifies a future-only, non-executing candidate preview helper as the leading design candidate, while keeping Phase 36 implementation unapproved and `lima/` untouched.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`

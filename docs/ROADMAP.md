@@ -7853,6 +7853,25 @@ Status:
 - complete
 - tagged as `phase-35.0-phase-34-second-slice-design-audit-charter`
 
+## Phase 35.1 - Second Runtime Slice Candidate Inventory
+
+Goal:
+
+- Inventory candidate second runtime slices.
+- Reject candidates that require bridge behavior, Sparkbot wiring, live adapters, execution, approval, dispatch, persistence, external calls, mutation, background work, robotics, or physical-world behavior.
+- Identify whether any future candidate is worth carrying to safety comparison.
+
+Result:
+
+- Options A through H were reviewed.
+- Option C, a non-executing candidate preview helper over caller-provided data only, is the leading future design candidate.
+- Phase 36 implementation remains unapproved.
+
+Status:
+
+- complete
+- tagged as `phase-35.1-second-runtime-slice-candidate-inventory`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

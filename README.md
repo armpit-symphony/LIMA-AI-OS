@@ -612,6 +612,8 @@ Phase 34.4 archives Phase 34 as completed docs/tests/fixtures-only audit/archive
 
 Phase 35.0 opens the docs/tests/fixtures-only no-code design review lane for a possible second narrow runtime slice and records the Phase 34 audit result.
 
+Phase 35.1 inventories second runtime slice options and carries forward a future-only non-executing candidate preview helper as the leading design candidate, without implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
