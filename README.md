@@ -642,6 +642,8 @@ Phase 37.4 archives Phase 37 as a completed docs/tests/fixtures-only candidate p
 
 Phase 38.0 opens a docs/tests/fixtures-only Sparkbot v1.6.80 alignment intake lane after a Phase 37 audit PASS. Sparkbot is reviewed as read-only source material only; no Sparkbot wiring, LIMA runtime change, or integration behavior is approved.
 
+Phase 38.1 records the Sparkbot v1.6.42-to-v1.6.80 concept delta and carries forward local-first, Command Center, owner-local, strict Security, policy simulation, persistent approval, agent identity, memory trust, Guardian Spine, MCP/Robo OS, and audit vocabulary as LIMA planning metadata only.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

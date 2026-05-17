@@ -8131,6 +8131,24 @@ Status:
 - complete
 - tagged as `phase-38.0-phase-37-sparkbot-alignment-audit-charter`
 
+## Phase 38.1 - Sparkbot v1.6.42-to-v1.6.80 Concept Intake
+
+Goal:
+
+- Review the Sparkbot v1.6.42 baseline and v1.6.80 direction.
+- Identify concepts LIMA should absorb as planning vocabulary.
+
+Result:
+
+- Sparkbot has moved from persistence fixes to a governed local-first command-center direction.
+- LIMA may absorb vocabulary for posture, approvals, identity, memory trust, audit surfaces, MCP/Robo OS, and simulation posture.
+- These concepts remain planning/preview metadata only in Phase 38.
+
+Status:
+
+- complete
+- tagged as `phase-38.1-sparkbot-v1-6-42-to-v1-6-80-concept-intake`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

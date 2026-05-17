@@ -8106,6 +8106,27 @@ Blocked:
 
 Continue only to Phase 38.1 Sparkbot v1.6.42-to-v1.6.80 concept intake.
 
+## Phase 38.1 Gate: Sparkbot v1.6.42-to-v1.6.80 Concept Intake
+
+Phase 38.1 records the Sparkbot concept delta as LIMA planning metadata.
+
+Allowed:
+
+- Concept intake documentation
+- Phase 38.1 fixture metadata
+- Phase 38.1 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Sparkbot code changes
+- Sparkbot imports or wiring
+- LIMA runtime changes
+- runtime permission changes
+- approval, execution, dispatch, persistence, mutation, external calls, or robotics/physical-world behavior
+
+Continue only to Phase 38.2 LIMA consumer boundary vocabulary review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -436,6 +436,8 @@ Phase 37.4 Phase 37 Candidate Preview Audit Archive / Closeout is complete, merg
 
 Phase 38.0 Phase 37 Sparkbot Alignment Audit Charter is complete, merged to `main`, and tagged. It opens Sparkbot v1.6.80 alignment intake as docs/tests/fixtures-only work, records a Phase 37 audit PASS, and treats Sparkbot as read-only reference material without wiring or runtime behavior.
 
+Phase 38.1 Sparkbot v1.6.42-to-v1.6.80 Concept Intake is complete, merged to `main`, and tagged. It records Sparkbot's current operating concepts as LIMA planning metadata only and preserves all non-execution, non-approval, non-dispatch, non-persistence, no-wiring, and no-physical-world invariants.
+
 Latest completed phase merge:
 
 `c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
