@@ -478,9 +478,11 @@ Phase 42.0 LIMA Universal Runtime Contract Reframing Audit is complete, merged t
 
 Phase 42.1 Model-Agnostic Task Intent Contract Design is complete, merged to `main`, and tagged. It records universal planning contracts for input, task/intent, candidate preview, approval posture, telemetry/evidence, and embodiment/profile metadata without adding runtime schemas or authority.
 
+Phase 42.2 Consumer And Embodiment Profile Taxonomy is complete, merged to `main`, and tagged. It records universal LIMA AI OS consumer profiles, embodiment/action profiles, action classes, and adapter-boundary vocabulary while keeping Arc Bot as one profile and robotics/IoT as blocked/deferred planning vocabulary.
+
 Latest completed phase merge:
 
-`540995394823bc7dc269dc8da7e333a418306b5a`
+`13d1bcd01ed87f36bd0d99b56e5e19d0ae9f5521`
 
 Latest tag:
 

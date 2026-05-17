@@ -8624,6 +8624,30 @@ Blocked:
 
 Continue only to Phase 42.2 consumer and embodiment profile taxonomy.
 
+## Phase 42.2 Gate: Consumer And Embodiment Profile Taxonomy
+
+Phase 42.2 records universal LIMA AI OS consumer profiles, embodiment/action profiles, action classes, and adapter-boundary vocabulary.
+
+Allowed:
+
+- Phase 42.2 documentation
+- Phase 42.2 fixture metadata
+- Phase 42.2 tests
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, hardware calls, or physical-world behavior
+
+Continue only to Phase 42.3 universal safety invariants and Guardian boundary matrix.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
