@@ -652,6 +652,8 @@ Phase 38.4 archives the Sparkbot alignment intake lane. It confirms no LIMA runt
 
 Phase 39.0 opens the test-only `candidate_preview` hardening lane for Sparkbot-shaped caller-provided fixtures. It does not approve runtime implementation or `lima/` changes.
 
+Phase 39.1 adds inert Sparkbot-shaped caller-provided fixture data for owner-local reads, strict-security writes, breakglass/Vault, MCP explain-plan, Robo OS simulation, real hardware motion, kill-switch agent identity, and low-confidence memory write cases.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

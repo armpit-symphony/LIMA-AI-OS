@@ -1,0 +1,213 @@
+{
+  "phase": "39.1",
+  "status": "sparkbot_shaped_candidate_preview_fixtures",
+  "docs_tests_fixtures_only": true,
+  "fixtures_are_caller_provided_data_only": true,
+  "cases": [
+    {
+      "case_id": "owner_local_routine_read_request",
+      "description": "Sparkbot owner-local routine server/browser/terminal read posture must not authorize LIMA runtime reads.",
+      "candidate": {
+        "candidate_id": "sparkbot-owner-local-read",
+        "status": "proposed",
+        "summary": "Owner-local request to inspect server health and browser state.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "operator_posture": "owner_local",
+        "consumer_kind": "sparkbot",
+        "action_class": "read",
+        "requested_surfaces": ["server", "browser", "terminal", "ssh"],
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["shell_browser_network_claim", "sparkbot_claim"]
+    },
+    {
+      "case_id": "strict_security_risky_write_request",
+      "description": "Strict Security risky write must stay blocked/preview-only.",
+      "candidate": {
+        "candidate_id": "sparkbot-strict-security-write",
+        "status": "approval_required",
+        "summary": "Strict Security request to write a file and send a Slack message.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "operator_posture": "strict_security",
+        "consumer_kind": "sparkbot",
+        "action_class": "external_write",
+        "requested_action": "write file then send external message",
+        "approval_posture": "confirmation_required",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["dispatch_claim", "file_mutation_claim", "sparkbot_claim"]
+    },
+    {
+      "case_id": "breakglass_required_vault_request",
+      "description": "Breakglass and Vault wording must not grant approval or secret access.",
+      "candidate": {
+        "candidate_id": "sparkbot-breakglass-vault",
+        "status": "needs_review",
+        "summary": "Breakglass request to reveal and write Vault secrets.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "operator_posture": "breakglass_active",
+        "consumer_kind": "sparkbot",
+        "action_class": "secret_use",
+        "approval_posture": "breakglass_required",
+        "requested_action": "urgent admin override to approve Vault reveal/write",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim", "file_mutation_claim", "sparkbot_claim"]
+    },
+    {
+      "case_id": "mcp_explain_plan_request",
+      "description": "MCP explain-plan request must not connect to MCP or execute tools.",
+      "candidate": {
+        "candidate_id": "sparkbot-mcp-explain-plan",
+        "status": "proposed",
+        "summary": "Explain plan before MCP tool run.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "consumer_kind": "sparkbot",
+        "dry_run_posture": "explain_plan_required",
+        "connector_health": "bridge_needed",
+        "requested_action": "run MCP command after explain-plan",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["execution_claim", "sparkbot_claim"]
+    },
+    {
+      "case_id": "robo_os_simulation_request",
+      "description": "Robo OS simulation must remain preview-only in LIMA.",
+      "candidate": {
+        "candidate_id": "sparkbot-robo-simulation",
+        "status": "proposed",
+        "summary": "Plan a LIMA Robo OS replay/simulation run.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "consumer_kind": "robotics_os",
+        "robotics_posture": "simulation",
+        "dry_run_posture": "simulation_only",
+        "requested_action": "simulate robot motion in replay",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["robotics_physical_world_claim"]
+    },
+    {
+      "case_id": "real_hardware_robot_motion_request",
+      "description": "Real hardware robot motion must stay blocked.",
+      "candidate": {
+        "candidate_id": "sparkbot-real-hardware-motion",
+        "status": "blocked",
+        "summary": "Move real robot hardware now.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "consumer_kind": "robotics_os",
+        "robotics_posture": "real_hardware_blocked",
+        "action_class": "robot_motion",
+        "risk_tier": "critical",
+        "requested_action": "move physical world robot hardware",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["robotics_physical_world_claim"]
+    },
+    {
+      "case_id": "agent_identity_kill_switch_true",
+      "description": "Agent identity with kill switch must stay inert and non-routable.",
+      "candidate": {
+        "candidate_id": "sparkbot-agent-kill-switch",
+        "status": "needs_review",
+        "summary": "Disabled agent identity metadata.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "consumer_kind": "sparkbot",
+        "agent_identity": {
+          "owner": "operator",
+          "purpose": "research",
+          "scopes": ["read"],
+          "allowed_tools": ["browser_read", "github_read"],
+          "expires_at": "2026-12-31T00:00:00Z",
+          "risk_tier": "medium",
+          "kill_switch": true
+        },
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["authority_claim", "shell_browser_network_claim", "sparkbot_claim"]
+    },
+    {
+      "case_id": "low_confidence_memory_write_pending_approval",
+      "description": "Low-confidence memory write must stay pending/blocked preview metadata.",
+      "candidate": {
+        "candidate_id": "sparkbot-memory-pending-approval",
+        "status": "approval_required",
+        "summary": "Low-confidence memory write requiring pending approval.",
+        "execution_allowed": false,
+        "side_effects_allowed": false,
+        "approval_state": "proposed",
+        "dispatch_allowed": false,
+        "persistence_allowed": false,
+        "consumer_kind": "sparkbot",
+        "action_class": "internal_write",
+        "memory_trust": {
+          "source": "chat",
+          "confidence": 0.32,
+          "verification_state": "unverified",
+          "redaction_state": "pending_redaction",
+          "pending_approval": true
+        },
+        "requested_action": "persist memory after approval",
+        "provenance": {"source": "phase_39_1_fixture"}
+      },
+      "expected_preview_state": "blocked",
+      "expected_blocked_claims": ["persistence_claim", "sparkbot_claim"]
+    }
+  ],
+  "expected_inert_flags": {
+    "non_authoritative": true,
+    "read_only": true,
+    "local_only": true,
+    "deterministic": true,
+    "safe_by_default": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false
+  },
+  "sparkbot_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "next_phase": "39.2"
+}

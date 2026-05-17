@@ -8234,6 +8234,27 @@ Blocked:
 
 Continue only to Phase 39.1 Sparkbot-shaped candidate preview fixtures.
 
+## Phase 39.1 Gate: Sparkbot-Shaped Candidate Preview Fixtures
+
+Phase 39.1 adds inert JSON fixtures for Sparkbot-shaped caller-provided candidate preview inputs.
+
+Allowed:
+
+- Phase 39.1 fixture metadata
+- Phase 39.1 tests
+- Phase 39.1 documentation
+- README and roadmap/state documentation updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- approval enforcement, execution, dispatch, persistence, MCP calls, external calls, robotics, or physical-world behavior
+
+Continue only to Phase 39.2 runtime candidate preview Sparkbot-shaped regression tests.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

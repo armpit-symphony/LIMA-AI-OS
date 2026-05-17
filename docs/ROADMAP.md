@@ -8220,6 +8220,22 @@ Status:
 - complete
 - tagged as `phase-39.0-sparkbot-shaped-candidate-preview-hardening-charter`
 
+## Phase 39.1 - Sparkbot-Shaped Candidate Preview Fixtures
+
+Goal:
+
+- Add inert Sparkbot-shaped caller-provided fixture data for candidate preview hardening.
+
+Result:
+
+- Eight fixture cases cover owner-local, strict-security, breakglass/Vault, MCP explain-plan, Robo OS simulation, real hardware motion, agent kill switch, and low-confidence memory write scenarios.
+- No runtime files changed.
+
+Status:
+
+- complete
+- tagged as `phase-39.1-sparkbot-shaped-candidate-preview-fixtures`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
