@@ -636,6 +636,8 @@ Phase 37.1 reviews candidate preview boundary evidence and confirms the Phase 36
 
 Phase 37.2 reviews candidate preview regressions and gaps, finding no blocking gap and no immediate test-only hardening need.
 
+Phase 37.3 recommends pausing and preserving the current runtime/test state after Phase 37.4 rather than starting another automatic lane.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

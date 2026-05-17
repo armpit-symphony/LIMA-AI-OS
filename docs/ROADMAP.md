@@ -8073,6 +8073,24 @@ Status:
 - complete
 - tagged as `phase-37.2-candidate-preview-regression-and-gap-review`
 
+## Phase 37.3 - Next-Lane Decision Matrix
+
+Goal:
+
+- Evaluate candidate next-lane options after the Phase 36 candidate preview runtime slice.
+- Avoid recommending immediate runtime implementation without evidence.
+
+Result:
+
+- Pause and preserve current runtime/test state is recommended after Phase 37.4.
+- No immediate runtime implementation is recommended.
+- No immediate test-only hardening is recommended.
+
+Status:
+
+- complete
+- tagged as `phase-37.3-next-lane-decision-matrix`
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine
