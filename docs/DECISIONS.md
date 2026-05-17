@@ -2,6 +2,24 @@
 
 Current phase and branch guidance lives in `docs/CURRENT_PROJECT_STATE.md`. Read that file before using older decisions to infer implementation sequencing.
 
+## ADR-0297: Phase 37 Closes With Pause And Preserve
+
+Status: Accepted
+
+Decision:
+
+Phase 37.4 closes the candidate preview audit lane and recommends pausing and preserving the current runtime/test state.
+
+Context:
+
+Phase 37 audited the completed Phase 36 candidate preview runtime slice, found no regression, found no remaining gap, and found no immediate test-only hardening need.
+
+Consequences:
+
+- No Phase 38 approval question is required by this closeout.
+- No immediate runtime implementation is recommended.
+- Future runtime implementation, `lima/` changes, `tests/support/` changes, stale prior-phase test changes, or scope expansion require new explicit Phil approval.
+
 ## ADR-0296: Phase 37 Recommends Pause And Preserve After Candidate Preview Audit
 
 Status: Accepted
