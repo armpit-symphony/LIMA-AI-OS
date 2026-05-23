@@ -8750,6 +8750,32 @@ Recommended next lane:
 
 - Phase 43.2 docs/tests/fixtures-only universal contract profile regression tests.
 
+## Phase 43.2 Gate: Universal Contract Profile Regression Tests
+
+Phase 43.2 adds regression tests over the Phase 43.1 universal profile fixture corpus using the existing `candidate_preview` helper.
+
+Allowed:
+
+- Phase 43.2 documentation
+- Phase 43.2 fixture metadata
+- Phase 43.2 tests using existing preview behavior only
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.3 docs/tests/fixtures-only universal contract hardening gap and next-lane review.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -311,6 +311,25 @@ Consequences:
 - Phase 43.2 is the recommended next docs/tests/fixtures-only slice for universal contract profile regression tests over the fixture corpus.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0315: Phase 43.2 Regression Tests Use Existing Preview Only
+
+Status: Accepted
+
+Decision:
+
+Phase 43.2 adds docs/tests/fixtures-only regression tests over the Phase 43.1 universal profile fixtures using the existing `candidate_preview` helper.
+
+Context:
+
+Phase 43.1 added fixture data only. The next safe step is to prove the existing preview boundary handles those fixtures without runtime changes.
+
+Consequences:
+
+- Risky, embodied, physical-world, and adversarial profile metadata must stay blocked.
+- Safe planning profiles may be conservatively blocked by existing suspicious-claim detection.
+- All preview outputs must stay deterministic, local-only, read-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, and physical-world inactive.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

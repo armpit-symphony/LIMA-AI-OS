@@ -8587,6 +8587,24 @@ Status:
 - prepared on `phase-43-1-universal-contract-profile-fixtures`
 - not merged or tagged
 
+## Phase 43.2 - Universal Contract Profile Regression Tests
+
+Goal:
+
+- Add tests over the Phase 43.1 universal profile fixtures using the existing `candidate_preview` helper.
+- Prove risky, embodied, physical-world, and adversarial profile metadata remains blocked and inert.
+
+Result:
+
+- The tests cover all Phase 43.1 profile cases without modifying runtime code.
+- Safe planning profiles may be conservatively blocked, but no profile can gain approval, execution, dispatch, persistence, external calls, adapter activity, robotics, or physical-world behavior.
+- No runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, live adapter, or physical-world path is added.
+
+Status:
+
+- prepared on `phase-43-2-universal-contract-profile-regression-tests`
+- not merged or tagged
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

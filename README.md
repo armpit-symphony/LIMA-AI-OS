@@ -694,6 +694,8 @@ Phase 43.0 opens the Universal Contract Fixture Hardening lane as a docs/tests/f
 
 Phase 43.1 adds the inert universal contract profile fixture corpus. The cases cover safe consumer profiles, risky browser/shell/file/network/scheduled action profiles, IoT/drone/humanoid/robot/emergency-stop profiles, and adversarial profile data while preserving preview-only, non-authoritative, local-only, approval-free, non-executing, adapter-inactive, robotics-inactive, and physical-world-inactive boundaries.
 
+Phase 43.2 adds regression tests over the Phase 43.1 universal profile fixtures using the existing `candidate_preview` helper. Risky, embodied, physical-world, and adversarial profile metadata stays blocked, while all preview outputs preserve deterministic, read-only, local-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, and physical-world-inactive flags.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
