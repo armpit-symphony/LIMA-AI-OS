@@ -330,6 +330,24 @@ Consequences:
 - All preview outputs must stay deterministic, local-only, read-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, and physical-world inactive.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0316: Phase 43.3 Finds No Universal Contract Runtime Gap
+
+Status: Accepted
+
+Decision:
+
+Phase 43.3 records no concrete runtime gap after the Phase 43.0 through Phase 43.2 Universal Contract Fixture Hardening work.
+
+Context:
+
+The existing preview boundary keeps risky, embodied, physical-world, and adversarial universal profile metadata blocked and inert.
+
+Consequences:
+
+- Conservative blocking of safe planning profiles is accepted.
+- Phase 43.4 should archive the completed docs/tests/fixtures-only hardening lane.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

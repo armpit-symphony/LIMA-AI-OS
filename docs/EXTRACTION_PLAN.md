@@ -8776,6 +8776,32 @@ Recommended next lane:
 
 - Phase 43.3 docs/tests/fixtures-only universal contract hardening gap and next-lane review.
 
+## Phase 43.3 Gate: Universal Contract Hardening Gap Review
+
+Phase 43.3 reviews the Phase 43.0 through Phase 43.2 Universal Contract Fixture Hardening evidence.
+
+Allowed:
+
+- Phase 43.3 documentation
+- Phase 43.3 fixture metadata
+- Phase 43.3 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.4 docs/tests/fixtures-only archive closeout.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
