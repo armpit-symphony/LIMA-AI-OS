@@ -8698,6 +8698,32 @@ Recommended next lane:
 
 - Phase 43 docs/tests/fixtures-only Universal Contract Fixture Hardening.
 
+## Phase 43.0 Gate: Universal Contract Fixture Hardening Charter
+
+Phase 43.0 opens Phase 43 as a docs/tests/fixtures-only Universal Contract Fixture Hardening lane.
+
+Allowed:
+
+- Phase 43.0 documentation
+- Phase 43.0 inert fixture metadata
+- Phase 43.0 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.1 docs/tests/fixtures-only inert universal contract profile fixture corpus.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

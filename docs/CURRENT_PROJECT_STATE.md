@@ -484,6 +484,8 @@ Phase 42.3 Universal Safety Invariants And Guardian Boundary Matrix is complete,
 
 Phase 42.4 Universal Runtime Contract Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 42 as a completed docs/tests/fixtures-only universal LIMA AI OS contract design lane and recommends Phase 43 as Universal Contract Fixture Hardening, not implementation.
 
+Phase 43.0 Universal Contract Fixture Hardening Charter is prepared on branch `phase-43-0-universal-contract-fixture-hardening-charter` as docs/tests/fixtures-only charter work. It opens the Phase 43 fixture-hardening lane without approving runtime implementation, `lima/` changes, `tests/support` changes, Sparkbot wiring, Arc Bot implementation, live adapters, real approval enforcement, execution, dispatch, persistence, external calls, robotics, physical-world behavior, background work, or hidden side effects.
+
 Latest completed phase merge:
 
 `0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
@@ -496,11 +498,11 @@ Latest tag:
 
 Current operator step:
 
-Continue only with docs/tests/fixtures-only Phase 43 Universal Contract Fixture Hardening while staying under autopilot. Phase 43 may add documentation, inert JSON fixtures, and tests proving universal contract/profile cases remain preview-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, physical-world-inactive, and side-effect free.
+Continue only with docs/tests/fixtures-only Phase 43 work while staying under autopilot. Phase 43.0 is charter work only; after review/merge/tag approval, Phase 43.1 should add the inert universal contract profile fixture corpus. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-`phase-43-0-universal-contract-fixture-hardening-charter`
+`phase-43-1-universal-contract-profile-fixtures`
 
 Latest completed merge:
 

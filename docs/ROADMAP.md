@@ -8551,6 +8551,24 @@ Status:
 - complete
 - tagged as `phase-42.4-universal-runtime-contract-archive-closeout`
 
+## Phase 43.0 - Universal Contract Fixture Hardening Charter
+
+Goal:
+
+- Open Phase 43 as docs/tests/fixtures-only Universal Contract Fixture Hardening.
+- Define the fixture categories and invariants needed before any future universal profile coverage.
+
+Result:
+
+- Phase 43.0 is a charter only.
+- Universal consumer, embodiment/action, and adversarial fixture categories are listed for later inert fixture slices.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-43-0-universal-contract-fixture-hardening-charter`
+- not merged or tagged
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

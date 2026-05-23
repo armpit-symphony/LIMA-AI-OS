@@ -690,6 +690,8 @@ Phase 42.3 records universal safety invariants and the Guardian boundary matrix.
 
 Phase 42.4 archives Phase 42 as a completed LIMA AI OS Universal Runtime Contract Design lane. The lane reframes Phase 42 away from Arc-centered planning, preserves Arc Bot as one example guarded office-agent profile, keeps Sparkbot Public as reference/showcase, separates public/private product surfaces, and recommends Phase 43 as docs/tests/fixtures-only Universal Contract Fixture Hardening.
 
+Phase 43.0 opens the Universal Contract Fixture Hardening lane as a docs/tests/fixtures-only charter. It converts the Phase 42.4 recommendation into fixture-hardening scope for consumer profiles, embodiment/action profiles, and adversarial profile data while keeping runtime implementation, `lima/` changes, `tests/support/` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

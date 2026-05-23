@@ -274,6 +274,24 @@ Consequences:
 - Phase 43 should cover Arc Bot, Sparkbot reference, automation, coding, research, browser, shell, file, network/API, scheduled work, IoT, drone, humanoid, robot motion, emergency stop, malicious profile, malformed profile, unknown model/provider, and nested bypass cases.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, adapters, approval enforcement, execution, dispatch, persistence, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0313: Phase 43 Starts With A Fixture Hardening Charter
+
+Status: Accepted
+
+Decision:
+
+Phase 43.0 opens as a docs/tests/fixtures-only charter for Universal Contract Fixture Hardening.
+
+Context:
+
+Phase 42.4 recommended Phase 43 fixture hardening. The safest first step is to define fixture categories and invariants before adding a larger inert fixture corpus.
+
+Consequences:
+
+- Phase 43.0 may add documentation, inert fixture metadata, tests, and roadmap/state updates only.
+- Phase 43.1 is the recommended next docs/tests/fixtures-only slice for the inert universal contract profile fixture corpus.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
