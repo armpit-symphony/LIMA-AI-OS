@@ -348,6 +348,24 @@ Consequences:
 - Phase 43.4 should archive the completed docs/tests/fixtures-only hardening lane.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0317: Phase 43 Closes At Merge/Tag Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 43.4 archives Universal Contract Fixture Hardening as completed docs/tests/fixtures-only work and stops at the merge/tag approval gate.
+
+Context:
+
+Phase 43.0 through Phase 43.3 added charter, inert fixtures, regression tests, and gap review without finding a runtime gap.
+
+Consequences:
+
+- The next action is operator approval for merge/tag handling of the Phase 43 stack.
+- No runtime implementation is recommended by Phase 43.4.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

@@ -8802,6 +8802,32 @@ Recommended next lane:
 
 - Phase 43.4 docs/tests/fixtures-only archive closeout.
 
+## Phase 43.4 Gate: Universal Contract Hardening Archive / Closeout
+
+Phase 43.4 archives Phase 43 as a completed docs/tests/fixtures-only Universal Contract Fixture Hardening lane.
+
+Allowed:
+
+- Phase 43.4 documentation
+- Phase 43.4 fixture metadata
+- Phase 43.4 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Stop at the merge/tag approval gate for the Phase 43 stack.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

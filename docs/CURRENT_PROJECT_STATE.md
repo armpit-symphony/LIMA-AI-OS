@@ -492,6 +492,8 @@ Phase 43.2 Universal Contract Profile Regression Tests is prepared on branch `ph
 
 Phase 43.3 Universal Contract Hardening Gap Review is prepared on branch `phase-43-3-universal-contract-hardening-gap-review` as docs/tests/fixtures-only review work. It finds no concrete runtime gap after Phase 43.0 through Phase 43.2, accepts conservative blocking as safe, and recommends Phase 43.4 archive closeout rather than runtime implementation.
 
+Phase 43.4 Universal Contract Hardening Archive / Closeout is prepared on branch `phase-43-4-universal-contract-hardening-archive-closeout` as docs/tests/fixtures-only archive work. It archives Phase 43, finds no concrete runtime gap, and stops at the merge/tag approval gate for the Phase 43 stack.
+
 Latest completed phase merge:
 
 `0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
@@ -504,11 +506,11 @@ Latest tag:
 
 Current operator step:
 
-Continue only with docs/tests/fixtures-only Phase 43 work while staying under autopilot. Phase 43.4 should archive the Universal Contract Fixture Hardening lane. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Stop at the merge/tag approval gate for the Phase 43 stack. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-`phase-43-4-universal-contract-hardening-archive-closeout`
+No next branch is approved until Phil decides how to handle the Phase 43 merge/tag gate.
 
 Latest completed merge:
 
