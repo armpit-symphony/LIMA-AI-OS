@@ -8569,6 +8569,24 @@ Status:
 - prepared on `phase-43-0-universal-contract-fixture-hardening-charter`
 - not merged or tagged
 
+## Phase 43.1 - Universal Contract Profile Fixtures
+
+Goal:
+
+- Add inert fixture data for universal LIMA AI OS consumer profiles, embodiment/action profiles, and adversarial profile cases.
+- Preserve preview-only, non-authoritative, non-executing fixture boundaries.
+
+Result:
+
+- The fixture corpus covers Arc Bot, Sparkbot reference, generic automation, coding, research, browser, shell, file, network/API, scheduled/background work, IoT, drone, humanoid, robot motion, emergency stop, malicious approval, malicious execution, malformed profile, unknown model/provider, and nested bypass cases.
+- Every case carries safe control flags denying approval, execution, dispatch, persistence, adapter activity, external calls, robotics, physical-world behavior, and LIMA approval authority.
+- No runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, live adapter, or physical-world path is added.
+
+Status:
+
+- prepared on `phase-43-1-universal-contract-profile-fixtures`
+- not merged or tagged
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

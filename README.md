@@ -692,6 +692,8 @@ Phase 42.4 archives Phase 42 as a completed LIMA AI OS Universal Runtime Contrac
 
 Phase 43.0 opens the Universal Contract Fixture Hardening lane as a docs/tests/fixtures-only charter. It converts the Phase 42.4 recommendation into fixture-hardening scope for consumer profiles, embodiment/action profiles, and adversarial profile data while keeping runtime implementation, `lima/` changes, `tests/support/` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects blocked.
 
+Phase 43.1 adds the inert universal contract profile fixture corpus. The cases cover safe consumer profiles, risky browser/shell/file/network/scheduled action profiles, IoT/drone/humanoid/robot/emergency-stop profiles, and adversarial profile data while preserving preview-only, non-authoritative, local-only, approval-free, non-executing, adapter-inactive, robotics-inactive, and physical-world-inactive boundaries.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

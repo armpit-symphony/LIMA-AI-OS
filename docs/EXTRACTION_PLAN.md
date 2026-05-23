@@ -8724,6 +8724,32 @@ Recommended next lane:
 
 - Phase 43.1 docs/tests/fixtures-only inert universal contract profile fixture corpus.
 
+## Phase 43.1 Gate: Universal Contract Profile Fixtures
+
+Phase 43.1 adds inert universal contract profile fixture data only.
+
+Allowed:
+
+- Phase 43.1 documentation
+- Phase 43.1 inert fixture metadata
+- Phase 43.1 tests that validate fixture shape and safety flags
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.2 docs/tests/fixtures-only universal contract profile regression tests.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -292,6 +292,25 @@ Consequences:
 - Phase 43.1 is the recommended next docs/tests/fixtures-only slice for the inert universal contract profile fixture corpus.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0314: Phase 43.1 Adds Inert Universal Profile Fixtures
+
+Status: Accepted
+
+Decision:
+
+Phase 43.1 adds inert universal contract profile fixture data for the Phase 43 hardening lane.
+
+Context:
+
+Phase 43.0 defined the fixture categories. The next safe step is fixture data only, not runtime behavior.
+
+Consequences:
+
+- Phase 43.1 covers consumer, embodiment/action, and adversarial profile cases.
+- Every fixture must deny approval, execution, dispatch, persistence, external calls, adapter activity, robotics, physical-world behavior, and LIMA approval authority.
+- Phase 43.2 is the recommended next docs/tests/fixtures-only slice for universal contract profile regression tests over the fixture corpus.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
