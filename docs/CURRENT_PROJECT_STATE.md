@@ -486,69 +486,39 @@ Phase 42.4 Universal Runtime Contract Archive / Closeout is complete, merged to 
 
 Latest completed phase merge:
 
-`a9b9a016d516cf3785add8ad8d1ac77274a0b688`
+`0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
 
 Latest tag:
 
-`phase-23.2-suspicious-provenance-fixture-hardening`
+`phase-42.4-universal-runtime-contract-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop after Phase 28.4. Phase 29 requires explicit approval. Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, and physical-world behavior remain blocked.
+Continue only with docs/tests/fixtures-only Phase 43 Universal Contract Fixture Hardening while staying under autopilot. Phase 43 may add documentation, inert JSON fixtures, and tests proving universal contract/profile cases remain preview-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, physical-world-inactive, and side-effect free.
 
 Recommended next branch:
 
-phase-23-3-bypass-wording-provenance-tests
+`phase-43-0-universal-contract-fixture-hardening-charter`
 
 Latest completed merge:
 
-`c2c3f9bf68cb2f3f2ec2d188a830f7647f18bd64`
+`0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
 
 Recommended PR target:
 
 `main`
 
-Corrected roadmap note: Phase 3.5 was intentionally inserted before returning to the pipeline report/map artifact path, to capture product-family and adaptive-trust doctrine.
+Canonical state anchor:
 
-Next intended milestone:
+Phase 42.4 is the canonical completed state before Phase 43. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
-Phase 26 - complete/tagged.
+Phase 43 boundary:
 
-Phase 27 - complete/tagged.
+Docs/tests/fixtures-only. Runtime implementation, `lima/` changes, `tests/support` changes, Sparkbot wiring, Arc Bot implementation, live adapters, real approval enforcement, execution, dispatch, persistence, external calls, shell/browser/network/file mutation, robotics, hardware control, physical-world behavior, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects remain blocked unless Phil explicitly approves a future implementation scope.
 
-Phase 28 - complete/tagged.
-
-Phase 29 - docs/tests/fixtures-only no-code design review for the next narrow runtime slice, if explicitly approved.
-
-Phase 21 approval question:
-
-Do you approve Phase 21 as a narrow runtime implementation slice limited to candidate provenance hardening for existing non-executing candidates, touching only `lima/kernel/intake_candidate.py` and `lima/kernel/candidate_status.py`, requiring the Phase 20.3 acceptance tests and rollback/audit proof, and still forbidding `lima/kernel/__init__.py`, new runtime modules, all other `lima/` files, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, physical-world action, external service calls, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects?
-
-Phase 20 approval question:
-
-Do you approve Phase 20 as a docs/tests/fixtures-only no-code design lane for the next narrow runtime slice, using Phase 18 regression coverage and Phase 19 audit findings as inputs, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
-
-Phase 19 approval question:
-
-Do you approve Phase 19 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase that reviews the Phase 18 regression hardening tests before any future runtime expansion, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
-
-Phase 18 approval question:
-
-Do you approve Phase 18 as a test-only regression hardening lane for existing non-executing candidate APIs and acceptance-gate boundaries, limited to tests/docs/fixtures only, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
-
-Phase 17 approval question:
-
-Do you approve Phase 17 as a docs/tests/fixtures-only acceptance-gate audit/archive and next-lane decision phase that reviews the Phase 16 acceptance tests before any future runtime expansion, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
-
-Phase 13 approval question:
-
-Do you approve Phase 13 as a docs/tests/fixtures-only threat-model-derived test planning lane that converts the Phase 12.2 threats into static, contract, fixture, and future acceptance-test requirements, while still forbidding runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, HumanInput runtime bridge behavior, live adapters, IntentCompiler runtime behavior, GuardianDecision runtime behavior, approval enforcement, execution, dispatch, audit persistence, shell/browser/network/file mutation, robotics, and physical-world action?
-
-Phase 12 approval question:
-
-Do you approve a new Phase 12 scope, and if so should it be docs/tests/fixtures-only planning, another narrow non-executing runtime slice, Sparkbot integration boundary planning, Robo-OS / physical-world boundary planning, or a pause to preserve the current state?
+No live/customer connector or production deployment is approved by this cleanup.
 
 ## Active Phase 4 Status
 
