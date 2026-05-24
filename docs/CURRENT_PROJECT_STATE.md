@@ -492,29 +492,31 @@ Phase 43.2 Universal Contract Profile Regression Tests is prepared on branch `ph
 
 Phase 43.3 Universal Contract Hardening Gap Review is prepared on branch `phase-43-3-universal-contract-hardening-gap-review` as docs/tests/fixtures-only review work. It finds no concrete runtime gap after Phase 43.0 through Phase 43.2, accepts conservative blocking as safe, and recommends Phase 43.4 archive closeout rather than runtime implementation.
 
-Phase 43.4 Universal Contract Hardening Archive / Closeout is prepared on branch `phase-43-4-universal-contract-hardening-archive-closeout` as docs/tests/fixtures-only archive work. It archives Phase 43, finds no concrete runtime gap, and stops at the merge/tag approval gate for the Phase 43 stack.
+Phase 43.4 Universal Contract Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 43, finds no concrete runtime gap, and stopped at the merge/tag approval gate before Phil approved the merge/tag.
+
+Phase 44.0 Typed IntentEnvelope Guardian Request Bridge Design Charter is prepared on branch `phase-44-0-typed-intentenvelope-guardian-request-bridge-design` as docs/tests/fixtures-only charter work. It defines the no-code design bridge from HumanInput, shell request, bot request, or automation request metadata to typed IntentEnvelope candidate metadata and Guardian request metadata while keeping GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, adapters, robotics, physical-world behavior, and hidden side effects blocked.
 
 Latest completed phase merge:
 
-`0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
+`493e1aa8c9f86ef7b733ff382549bf6a66593153`
 
 Latest tag:
 
-`phase-42.4-universal-runtime-contract-archive-closeout`
+`phase-43.4-universal-contract-hardening-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Stop at the merge/tag approval gate for the Phase 43 stack. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Complete Phase 44.0 as a docs/tests/fixtures-only typed IntentEnvelope / Guardian Request Bridge design charter and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-No next branch is approved until Phil decides how to handle the Phase 43 merge/tag gate.
+No next branch is approved beyond Phase 44.0. Phase 44.1 fixture data requires Phil approval after Phase 44.0 review.
 
 Latest completed merge:
 
-`0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e`
+`493e1aa8c9f86ef7b733ff382549bf6a66593153`
 
 Recommended PR target:
 
@@ -522,11 +524,11 @@ Recommended PR target:
 
 Canonical state anchor:
 
-Phase 42.4 is the canonical completed state before Phase 43. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
+Phase 43.4 is the canonical completed state before Phase 44. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
-Phase 43 boundary:
+Phase 44 boundary:
 
-Docs/tests/fixtures-only. Runtime implementation, `lima/` changes, `tests/support` changes, Sparkbot wiring, Arc Bot implementation, live adapters, real approval enforcement, execution, dispatch, persistence, external calls, shell/browser/network/file mutation, robotics, hardware control, physical-world behavior, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects remain blocked unless Phil explicitly approves a future implementation scope.
+Docs/tests/fixtures-only. Runtime implementation, `lima/` changes, `tests/support` changes, Sparkbot wiring, Arc Bot implementation, live adapters, real IntentCompiler behavior, real Guardian request behavior, real GuardianDecision creation, real approval enforcement, execution, dispatch, persistence, external calls, shell/browser/network/file mutation, model/tool/driver calls, robotics, hardware control, physical-world behavior, background workers, queues, daemons, subprocesses, threads, database writes, and hidden side effects remain blocked unless Phil explicitly approves a future implementation scope.
 
 No live/customer connector or production deployment is approved by this cleanup.
 

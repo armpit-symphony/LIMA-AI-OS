@@ -8638,7 +8638,28 @@ Result:
 
 Status:
 
-- prepared on `phase-43-4-universal-contract-hardening-archive-closeout`
+- complete
+- tagged as `phase-43.4-universal-contract-hardening-archive-closeout`
+
+## Phase 44.0 - Typed IntentEnvelope Guardian Request Bridge Design Charter
+
+Goal:
+
+- Open a no-code design charter for the typed IntentEnvelope / Guardian Request Bridge.
+- Define how HumanInput, shell request, bot request, and automation request metadata should flow toward typed IntentEnvelope candidate metadata and Guardian request metadata.
+- Preserve that Guardian request is not GuardianDecision and no execution is approved.
+
+Result:
+
+- Phase 44.0 is docs/tests/fixtures-only charter work.
+- Natural language remains unable to execute directly.
+- Typed intent remains metadata, not authority.
+- Guardian or a future policy membrane owns approval state.
+- Runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, external calls, model/tool/driver calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-44-0-typed-intentenvelope-guardian-request-bridge-design`
 - not merged or tagged
 
 Reserved from Phase 3.4:
