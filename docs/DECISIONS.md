@@ -6256,3 +6256,25 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
 - Phase 46.2 should remain docs/tests/fixtures-only readiness review or archive closeout unless a separate approval gate changes scope.
+
+## ADR-0327: Phase 46.2 Performs Static Dry-Run Readiness Review Before Archive
+
+Status: Accepted
+
+Decision:
+
+Phase 46.2 opens as docs/tests/fixtures-only static dry-run readiness review for the Phase 46.1 dry-run plan.
+
+Context:
+
+Phase 46.1 defined inert dry-run metadata, candidate-only file patterns, forbidden surfaces, stop conditions, rollback requirements, and blocked boundary flags. The next smallest safe step is to confirm that coverage and fail-closed boundaries are complete before archive closeout.
+
+Consequences:
+
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
+- If no SEV-1 or SEV-2 readiness gap is found, Phase 46.3 should remain docs/tests/fixtures-only archive closeout or static dry-run plan archive.
