@@ -8863,7 +8863,43 @@ Required proof:
 
 Recommended next lane:
 
-- Stop at review for Phase 44.0. Phase 44.1 fixture data requires Phil approval.
+- Phase 44.1 docs/tests/fixtures-only typed IntentEnvelope / Guardian request bridge fixture corpus.
+
+## Phase 44.1 Gate: Typed IntentEnvelope Guardian Request Fixtures
+
+Phase 44.1 adds docs/tests/fixtures-only inert fixture corpus metadata for the typed IntentEnvelope / Guardian request bridge lane.
+
+Allowed:
+
+- Phase 44.1 documentation
+- Phase 44.1 inert fixture metadata
+- Phase 44.1 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- fixture cases cover safe, ambiguous, risky, physical-world, malicious, and missing-metadata examples
+- source request, typed intent candidate, and Guardian request metadata remains non-authoritative
+- GuardianDecision remains absent/pending/blocked metadata only
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 44.1. Phase 44.2 requires Phil approval.
 
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
