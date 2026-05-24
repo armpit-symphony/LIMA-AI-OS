@@ -9062,6 +9062,50 @@ Recommended next lane:
 
 - Stop at review for Phase 45.1. Phase 45.2 requires Phil approval.
 
+## Phase 45.2 Gate: Typed Bridge Acceptance Test Matrix Readiness Review
+
+Phase 45.2 opens docs/tests/fixtures-only no-code readiness review for the Phase 45.1 typed bridge acceptance-test fixture matrix/scaffolding corpus.
+
+Allowed:
+
+- Phase 45.2 documentation
+- Phase 45.2 inert readiness-review fixture metadata
+- Phase 45.2 static tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- runtime test harness creation or activation
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- coverage result confirms all Phase 45.0 required future test families are mapped by Phase 45.1 matrix rows
+- positive rows exist
+- fail-closed rows exist
+- runtime/support boundary row exists
+- expected bridge states remain non-executing only
+- expected GuardianDecision states remain absent/pending/blocked only
+- gap result reports SEV-1 blockers, SEV-2 readiness gaps, and SEV-3 cleanup notes
+- if continuation is recommended, SEV-1 blockers must be empty
+- boundary result confirms no runtime bridge behavior, no runtime test harness, no `lima/` changes, no `tests/support/` changes, no GuardianDecision creation, no approval enforcement, no execution/dispatch/persistence, no model/tool/driver calls, no robotics/physical-world behavior, and no hidden side effects
+- no runtime implementation is recommended
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 45.2. Phase 45.3 requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

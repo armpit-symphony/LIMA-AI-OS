@@ -1,0 +1,96 @@
+{
+  "phase": "45.2",
+  "status": "typed_bridge_acceptance_test_matrix_readiness_review",
+  "docs_tests_fixtures_only": true,
+  "readiness_review_only": true,
+  "runtime_test_harness_created": false,
+  "phase_45_1_anchor": "1806a6ecddcb66106eb76da03e75664c8f17c27e",
+  "phase_45_1_tag": "phase-45.1-typed-bridge-acceptance-test-fixture-matrix",
+  "reviewed_phase": "45.1",
+  "coverage_results": {
+    "all_phase_45_0_required_future_test_families_mapped": true,
+    "mapped_future_test_families": [
+      "source_request_metadata_shape_tests",
+      "typed_intentenvelope_candidate_shape_tests",
+      "guardian_request_metadata_shape_tests",
+      "guardian_decision_metadata_boundary_tests",
+      "positive_non_authoritative_shape_tests",
+      "negative_approval_bypass_tests",
+      "negative_forged_guardian_decision_tests",
+      "negative_missing_actor_tenant_lineage_tests",
+      "negative_background_dispatch_tests",
+      "negative_adapter_external_call_tests",
+      "negative_model_tool_driver_call_tests",
+      "negative_robotics_physical_world_tests",
+      "runtime_support_boundary_path_tests"
+    ],
+    "positive_rows_exist": true,
+    "fail_closed_rows_exist": true,
+    "runtime_support_boundary_row_exists": true,
+    "expected_bridge_states_non_executing_only": true,
+    "expected_bridge_states": [
+      "needs_review",
+      "blocked"
+    ],
+    "guardian_decision_states_restricted": true,
+    "expected_guardian_decision_states": [
+      "absent",
+      "pending",
+      "blocked"
+    ]
+  },
+  "gap_results": {
+    "sev_1_blockers": [],
+    "sev_2_fixture_readiness_gaps": [],
+    "sev_3_cleanup_notes": [
+      "Optional matrix row naming glossary may reduce implementation-plan ambiguity.",
+      "Optional static acceptance-test implementation-plan template may reduce review variance."
+    ],
+    "continuation_recommended": true,
+    "continuation_reason": "No SEV-1 or SEV-2 readiness gap was found in Phase 45.1 matrix coverage."
+  },
+  "boundary_results": {
+    "runtime_bridge_behavior_added": false,
+    "runtime_test_harness_active": false,
+    "lima_changes": false,
+    "tests_support_changes": false,
+    "guardian_decision_created": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "model_tool_driver_calls_added": false,
+    "external_calls_added": false,
+    "shell_browser_network_file_mutation_added": false,
+    "robotics_physical_world_behavior_added": false,
+    "hidden_side_effects_added": false
+  },
+  "recommended_next_lane": "phase_45_3_docs_tests_fixtures_only_archive_closeout_or_static_acceptance_test_implementation_plan",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "runtime_test_harness_creation",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "humaninput_bridge_behavior",
+    "live_adapters",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence_mutation_external_calls",
+    "model_tool_driver_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "45.3_requires_phil_approval"
+}
