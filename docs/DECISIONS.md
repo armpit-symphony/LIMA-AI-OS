@@ -408,6 +408,25 @@ Consequences:
 - Phase 44.1 may add docs, inert fixtures, static tests, and shared roadmap/state updates only.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0320: Phase 44.2 Validates Fixture Coverage Before Any Bridge Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 44.2 performs a docs/tests/fixtures-only validation and gap review of the Phase 44.1 typed IntentEnvelope / Guardian request fixture corpus.
+
+Context:
+
+Phase 44.1 established inert fixture examples for source request metadata, typed IntentEnvelope candidate metadata, and Guardian request metadata with future GuardianDecision absent/pending/blocked states. Before any implementation scope could ever be considered, the project needs a review that explicitly checks shape coverage, blocked surfaces, malicious/bypass examples, and the invariant that Guardian request is not GuardianDecision authority.
+
+Consequences:
+
+- Phase 44.2 may add documentation, inert validation fixture metadata, static tests, and shared roadmap/state updates only.
+- The review must confirm no execution path exists and that typed intent and Guardian request remain metadata only.
+- No concrete runtime gap in this lane should trigger implementation from Phase 44.2.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
