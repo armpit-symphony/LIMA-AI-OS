@@ -9710,3 +9710,51 @@ Required proof:
 Recommended next lane:
 
 - Phase 46.1 docs/tests/fixtures-only static dry-run plan or readiness review.
+
+## Phase 46.1 Gate: Static Acceptance-Test Dry-Run Plan
+
+Phase 46.1 defines a static docs/tests/fixtures-only dry-run plan that simulates a future typed bridge acceptance-test implementation phase as metadata only.
+
+Allowed:
+
+- Phase 46.1 documentation
+- Phase 46.1 inert dry-run-plan fixture metadata
+- Phase 46.1 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- dry-run objective and inputs are explicit
+- all required dry-run cases are present with required fields
+- candidate file patterns remain candidate-only
+- forbidden file surfaces include runtime/support boundaries
+- stop and rollback gates fail closed on forbidden scope
+- boundary flags keep runtime and action surfaces blocked
+- no runtime implementation is recommended
+
+Recommended next lane:
+
+- Phase 46.2 docs/tests/fixtures-only static dry-run readiness review or archive closeout.

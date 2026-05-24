@@ -914,3 +914,23 @@ Status:
 
 - prepared on `phase-46-0-static-acceptance-test-implementation-plan-template`
 - not merged or tagged
+
+## Phase 46.1 - Static Acceptance-Test Dry-Run Plan
+
+Goal:
+
+- Use the Phase 46.0 static template to simulate a future typed bridge acceptance-test implementation phase as metadata only.
+- Define dry-run cases, candidate-only file patterns, forbidden surfaces, stop conditions, rollback requirements, and blocked boundaries before any implementation.
+- Keep runtime behavior, harness behavior, executable acceptance tests, and `lima/` or `tests/support/` changes blocked.
+
+Result:
+
+- Phase 46.1 is static dry-run planning metadata only.
+- No runtime test harness is created.
+- No actual or executable runtime bridge acceptance tests are added.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-46-1-static-acceptance-test-dry-run-plan`
+- not merged or tagged
