@@ -366,6 +366,27 @@ Consequences:
 - No runtime implementation is recommended by Phase 43.4.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0318: Phase 44 Opens The Typed IntentEnvelope Guardian Request Bridge Design Charter
+
+Status: Accepted
+
+Decision:
+
+Phase 44.0 opens as a docs/tests/fixtures-only no-code design charter for the typed IntentEnvelope / Guardian Request Bridge.
+
+Context:
+
+Phase 43.4 archived universal contract fixture hardening with no runtime gap. The next useful design boundary is the bridge from HumanInput, shell request, bot request, or automation request metadata into typed IntentEnvelope candidate metadata and Guardian request metadata, while still stopping before GuardianDecision creation or execution.
+
+Consequences:
+
+- Natural language cannot execute directly.
+- Typed intent is metadata, not authority.
+- Guardian request is not GuardianDecision.
+- Guardian or a future policy membrane owns approval state.
+- Phase 44.0 may add documentation, inert fixture metadata, static tests, and shared roadmap/state updates only.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, model/tool/driver calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

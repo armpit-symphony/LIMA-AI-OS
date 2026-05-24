@@ -700,6 +700,8 @@ Phase 43.3 reviews the Universal Contract Fixture Hardening lane and finds no co
 
 Phase 43.4 archives Phase 43 as completed docs/tests/fixtures-only Universal Contract Fixture Hardening. It confirms no runtime gap, no `lima/` changes, no `tests/support/` changes, no Sparkbot wiring, no Arc Bot implementation, no live adapters, no approval enforcement, no execution, no dispatch, no persistence, no robotics, no physical-world behavior, and no hidden side effects. The next action is a merge/tag approval gate for the Phase 43 stack.
 
+Phase 44.0 opens the typed IntentEnvelope / Guardian Request Bridge design charter as docs/tests/fixtures-only work. It defines the no-code path from HumanInput, shell, bot, or automation request metadata to a typed IntentEnvelope candidate and Guardian request, while keeping GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, adapters, robotics, physical-world behavior, and hidden side effects blocked.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -8828,6 +8828,43 @@ Recommended next lane:
 
 - Stop at the merge/tag approval gate for the Phase 43 stack.
 
+## Phase 44.0 Gate: Typed IntentEnvelope Guardian Request Bridge Design Charter
+
+Phase 44.0 opens a docs/tests/fixtures-only no-code design charter for the typed IntentEnvelope / Guardian Request Bridge.
+
+Allowed:
+
+- Phase 44.0 documentation
+- Phase 44.0 inert fixture metadata
+- Phase 44.0 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- raw natural language is not an execution surface
+- typed intent is metadata, not authority
+- Guardian request is not GuardianDecision
+- approval state is owned by a future Guardian or policy membrane
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 44.0. Phase 44.1 fixture data requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
