@@ -498,29 +498,31 @@ Phase 44.0 Typed IntentEnvelope Guardian Request Bridge Design Charter is comple
 
 Phase 44.1 Typed IntentEnvelope Guardian Request Fixtures is complete, merged to `main`, and tagged. It adds inert source request, typed intent candidate, and Guardian request metadata examples with future GuardianDecision absent/pending/blocked states and malicious bypass cases while keeping runtime behavior blocked.
 
-Phase 44.2 Typed Bridge Fixture Validation Gap Review is prepared on branch `phase-44-2-typed-bridge-fixture-validation-gap-review` as docs/tests/fixtures-only validation and review work. It validates that the Phase 44.1 fixture corpus adequately covers source request metadata -> typed IntentEnvelope candidate metadata -> Guardian request metadata with future GuardianDecision absent/pending/blocked metadata only, confirms no execution path exists, and records no concrete runtime gap.
+Phase 44.2 Typed Bridge Fixture Validation Gap Review is complete, merged to `main`, and tagged. It validates that the Phase 44.1 fixture corpus adequately covers source request metadata -> typed IntentEnvelope candidate metadata -> Guardian request metadata with future GuardianDecision absent/pending/blocked metadata only, confirms no execution path exists, and records no concrete runtime gap.
+
+Phase 44.3 Typed Bridge Archive / Closeout is prepared on branch `phase-44-3-typed-bridge-archive-closeout` as docs/tests/fixtures-only archive work. It archives Phase 44.0 through Phase 44.2 as a completed no-code typed bridge design/fixture/review lane and confirms no runtime implementation is recommended.
 
 Latest completed phase merge:
 
-`a3fb607aa092afea06333de6ac5ca9b09e36e24e`
+`cc81476c119389870df1328f0b98f0eece571276`
 
 Latest tag:
 
-`phase-44.1-typed-intentenvelope-guardian-request-fixtures`
+`phase-44.2-typed-bridge-fixture-validation-gap-review`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 44.2 as a docs/tests/fixtures-only validation and gap review of the Phase 44.1 typed bridge fixture corpus and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Complete Phase 44.3 as a docs/tests/fixtures-only archive closeout for the Phase 44 typed bridge lane and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-No next branch is approved beyond Phase 44.2. Phase 44.3 requires Phil approval after Phase 44.2 review.
+No next branch is approved beyond Phase 44.3. Phase 44.4 requires Phil approval after Phase 44.3 review.
 
 Latest completed merge:
 
-`a3fb607aa092afea06333de6ac5ca9b09e36e24e`
+`cc81476c119389870df1328f0b98f0eece571276`
 
 Recommended PR target:
 
@@ -528,7 +530,7 @@ Recommended PR target:
 
 Canonical state anchor:
 
-Phase 44.1 is the canonical completed state before Phase 44.2. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
+Phase 44.2 is the canonical completed state before Phase 44.3. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
 Phase 44 boundary:
 

@@ -427,6 +427,27 @@ Consequences:
 - No concrete runtime gap in this lane should trigger implementation from Phase 44.2.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0321: Phase 44.3 Archives The Typed Bridge Lane Without Runtime Expansion
+
+Status: Accepted
+
+Decision:
+
+Phase 44.3 archives Phase 44.0 through Phase 44.2 as a completed docs/tests/fixtures-only no-code typed IntentEnvelope / Guardian request bridge lane.
+
+Context:
+
+Phase 44.0 opened the no-code bridge design charter, Phase 44.1 added the inert fixture corpus, and Phase 44.2 validated the corpus coverage and found no concrete runtime gap. The lane now needs an explicit closeout artifact so future runtime implementation is not implied by design and fixture completion.
+
+Consequences:
+
+- Phase 44.3 may add documentation, inert archive fixture metadata, static tests, and shared roadmap/state updates only.
+- Guardian request remains metadata and not GuardianDecision authority.
+- GuardianDecision remains absent/pending/blocked metadata only.
+- No execution, dispatch, persistence, model/tool/driver calls, adapter calls, external calls, robotics, physical-world behavior, or hidden side effects are introduced.
+- No runtime implementation is recommended by Phase 44.3.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
