@@ -9020,6 +9020,48 @@ Recommended next lane:
 
 - Stop at review for Phase 45.0. Phase 45.1 requires Phil approval.
 
+## Phase 45.1 Gate: Typed Bridge Acceptance Test Fixture Matrix / Scaffolding Design
+
+Phase 45.1 opens docs/tests/fixtures-only no-code acceptance-test fixture matrix/scaffolding design for the future typed bridge runtime slice.
+
+Allowed:
+
+- Phase 45.1 documentation
+- Phase 45.1 inert fixture matrix/scaffolding metadata
+- Phase 45.1 static tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- runtime test harness creation
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- fixture matrix/scaffolding is design metadata only
+- matrix rows cover required positive and fail-closed future test families from Phase 45.0
+- expected blocked claims and non-authoritative state requirements are explicit
+- Guardian request remains metadata and not GuardianDecision authority
+- GuardianDecision metadata remains absent/pending/blocked/non-executing until future explicit approval
+- no runtime bridge behavior and no runtime test harness behavior is created
+- no execution, dispatch, persistence, model/tool/driver call, adapter call, external call, or physical-world path exists in this lane
+- no runtime implementation is recommended
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 45.1. Phase 45.2 requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

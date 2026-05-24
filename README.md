@@ -710,6 +710,8 @@ Phase 44.3 archives Phase 44.0 through Phase 44.2 as a completed no-code typed I
 
 Phase 45.0 opens a no-code typed bridge acceptance-test design lane. It defines the static test requirements that would be required before any future runtime bridge implementation could be considered, while keeping source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, future GuardianDecision metadata, execution, dispatch, persistence, model/tool/driver calls, adapters, external calls, robotics, physical-world behavior, and hidden side effects unimplemented.
 
+Phase 45.1 opens docs/tests/fixtures-only acceptance-test fixture matrix and scaffolding design for the future typed bridge slice. It maps positive and fail-closed case families into inert matrix metadata without creating runtime bridge behavior, test harness behavior, GuardianDecision records, approvals, execution, dispatch, persistence, adapter calls, model/tool/driver calls, external calls, or physical-world behavior.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

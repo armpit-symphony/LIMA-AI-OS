@@ -502,29 +502,31 @@ Phase 44.2 Typed Bridge Fixture Validation Gap Review is complete, merged to `ma
 
 Phase 44.3 Typed Bridge Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 44.0 through Phase 44.2 as a completed no-code typed bridge design/fixture/review lane and confirms no runtime implementation is recommended.
 
-Phase 45.0 Typed Bridge Acceptance Test Design is prepared on branch `phase-45-0-typed-bridge-acceptance-test-design` as docs/tests/fixtures-only no-code acceptance-test design work. It defines required future acceptance test families before any runtime typed bridge implementation could be considered, while keeping runtime implementation blocked.
+Phase 45.0 Typed Bridge Acceptance Test Design is complete, merged to `main`, and tagged. It defines required future acceptance test families before any runtime typed bridge implementation could be considered, while keeping runtime implementation blocked.
+
+Phase 45.1 Typed Bridge Acceptance Test Fixture Matrix / Scaffolding Design is prepared on branch `phase-45-1-typed-bridge-acceptance-test-fixture-matrix` as docs/tests/fixtures-only no-code fixture matrix design work. It maps Phase 45.0 required test families into inert acceptance-test fixture matrix/scaffolding metadata and keeps runtime implementation and test harness behavior blocked.
 
 Latest completed phase merge:
 
-`6d169d50c775bfd307c350802efebebd3f708e78`
+`f15e771436d0159a7be701feea044ad86e921c7e`
 
 Latest tag:
 
-`phase-44.3-typed-bridge-archive-closeout`
+`phase-45.0-typed-bridge-acceptance-test-design`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 45.0 as a docs/tests/fixtures-only no-code acceptance-test design lane for a future typed bridge runtime slice and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Complete Phase 45.1 as a docs/tests/fixtures-only acceptance-test fixture matrix / scaffolding design lane for a future typed bridge runtime slice and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-No next branch is approved beyond Phase 45.0. Phase 45.1 requires Phil approval after Phase 45.0 review.
+No next branch is approved beyond Phase 45.1. Phase 45.2 requires Phil approval after Phase 45.1 review.
 
 Latest completed merge:
 
-`6d169d50c775bfd307c350802efebebd3f708e78`
+`f15e771436d0159a7be701feea044ad86e921c7e`
 
 Recommended PR target:
 
@@ -532,7 +534,7 @@ Recommended PR target:
 
 Canonical state anchor:
 
-Phase 44.3 is the canonical completed state before Phase 45.0. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
+Phase 45.0 is the canonical completed state before Phase 45.1. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
 Phase 44 boundary:
 
