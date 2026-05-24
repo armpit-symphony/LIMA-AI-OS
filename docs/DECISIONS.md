@@ -469,6 +469,26 @@ Consequences:
 - GuardianDecision remains future metadata only and does not grant approval or execution.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0323: Phase 45.1 Defines Acceptance-Test Fixture Matrix Scaffolding Before Any Harness
+
+Status: Accepted
+
+Decision:
+
+Phase 45.1 opens a docs/tests/fixtures-only no-code acceptance-test fixture matrix and scaffolding design lane for the future typed bridge runtime slice.
+
+Context:
+
+Phase 45.0 defined required future acceptance-test families and invariants. Before any future runtime bridge implementation or test harness behavior can be considered, LIMA needs inert matrix/scaffolding metadata that maps positive and fail-closed test families into explicit expected states, blocked claims, and boundary assertions.
+
+Consequences:
+
+- Phase 45.1 may add documentation, inert fixture matrix/scaffolding metadata, static tests, and shared roadmap/state updates only.
+- Phase 45.1 does not create runtime bridge behavior and does not create a runtime test harness.
+- Guardian request remains metadata and not GuardianDecision authority.
+- GuardianDecision remains future metadata only and does not grant approval, execution, dispatch, persistence, adapter activity, model/tool/driver calls, external calls, robotics, or physical-world behavior.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

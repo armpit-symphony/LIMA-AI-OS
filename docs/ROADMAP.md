@@ -8742,7 +8742,27 @@ Result:
 
 Status:
 
-- prepared on `phase-45-0-typed-bridge-acceptance-test-design`
+- complete
+- tagged as `phase-45.0-typed-bridge-acceptance-test-design`
+
+## Phase 45.1 - Typed Bridge Acceptance Test Fixture Matrix / Scaffolding Design
+
+Goal:
+
+- Open a docs/tests/fixtures-only fixture matrix and scaffolding design lane for the future typed bridge acceptance-test stack.
+- Translate Phase 45.0 required future test families into inert matrix rows, expected states, and fail-closed expectation metadata.
+- Keep this lane as no-code test-design work with no runtime bridge behavior and no runtime test harness behavior.
+
+Result:
+
+- Phase 45.1 is docs/tests/fixtures-only fixture matrix/scaffolding design work.
+- Acceptance-test matrix metadata is defined as inert design data only.
+- Positive and negative/fail-closed case families are represented for future use without implementing runtime or harness behavior.
+- Runtime implementation, `lima/`, `tests/support/`, runtime test harness creation, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-45-1-typed-bridge-acceptance-test-fixture-matrix`
 - not merged or tagged
 
 Reserved from Phase 3.4:
