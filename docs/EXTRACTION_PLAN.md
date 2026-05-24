@@ -8939,6 +8939,46 @@ Recommended next lane:
 
 - Stop at review for Phase 44.2. Phase 44.3 requires Phil approval.
 
+## Phase 44.3 Gate: Typed Bridge Archive Closeout
+
+Phase 44.3 archives the typed IntentEnvelope / Guardian request bridge lane as completed docs/tests/fixtures-only no-code design/fixture/review work.
+
+Allowed:
+
+- Phase 44.3 documentation
+- Phase 44.3 inert archive fixture metadata
+- Phase 44.3 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- Phase 44.0 opened the no-code bridge design lane
+- Phase 44.1 added inert bridge fixture corpus metadata
+- Phase 44.2 validated corpus coverage and found no concrete runtime gap
+- Guardian request remains metadata and not GuardianDecision authority
+- GuardianDecision remains absent/pending/blocked metadata only
+- no execution, dispatch, persistence, model/tool/driver call path, adapter call path, external call path, or physical-world path exists in this lane
+- no runtime implementation is recommended
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 44.3. Phase 44.4 requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -1,0 +1,62 @@
+{
+  "phase": "44.3",
+  "status": "typed_intentenvelope_guardian_request_archive_closeout",
+  "docs_tests_fixtures_only": true,
+  "typed_bridge_lane_archived": true,
+  "phase_44_2_anchor": "cc81476c119389870df1328f0b98f0eece571276",
+  "phase_44_2_tag": "phase-44.2-typed-bridge-fixture-validation-gap-review",
+  "completed_phases": [
+    "44.0",
+    "44.1",
+    "44.2",
+    "44.3"
+  ],
+  "evidence_reviewed": [
+    "phase_44_0_bridge_design_charter",
+    "phase_44_1_fixture_corpus",
+    "phase_44_2_validation_gap_review"
+  ],
+  "archived_findings": {
+    "phase_44_0_opened_no_code_bridge_design": true,
+    "phase_44_1_added_inert_fixture_corpus": true,
+    "phase_44_2_validated_fixture_coverage": true,
+    "phase_44_2_found_no_concrete_runtime_gap": true,
+    "guardian_request_non_authoritative": true,
+    "guardian_request_not_guardiandecision_authority": true,
+    "guardiandecision_state_metadata_only": true,
+    "no_execution_dispatch_persistence_path": true,
+    "no_model_tool_driver_call_path": true,
+    "no_adapter_external_call_path": true,
+    "no_robotics_physical_world_path": true
+  },
+  "remaining_gaps": [],
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "recommended_next_direction": "stop_at_merge_tag_approval_gate_for_phase_44_stack",
+  "next_runtime_implementation_recommended": false,
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "humaninput_bridge_behavior",
+    "live_adapters",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence_mutation_external_calls",
+    "model_tool_driver_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "44.4_requires_phil_approval"
+}

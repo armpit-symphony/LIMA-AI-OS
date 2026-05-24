@@ -8700,7 +8700,29 @@ Result:
 
 Status:
 
-- prepared on `phase-44-2-typed-bridge-fixture-validation-gap-review`
+- complete
+- tagged as `phase-44.2-typed-bridge-fixture-validation-gap-review`
+
+## Phase 44.3 - Typed Bridge Archive Closeout
+
+Goal:
+
+- Archive Phase 44.0 through Phase 44.2 as a completed no-code typed IntentEnvelope / Guardian request bridge lane.
+- Confirm Guardian request remains metadata-only and not GuardianDecision authority.
+- Confirm the lane stops with no runtime implementation recommendation.
+
+Result:
+
+- Phase 44.3 is docs/tests/fixtures-only archive and closeout work.
+- Phase 44.0 opened the no-code typed bridge design charter.
+- Phase 44.1 added the inert typed bridge fixture corpus.
+- Phase 44.2 validated fixture coverage and found no concrete runtime gap.
+- No execution, dispatch, persistence, model/tool/driver calls, adapter calls, external calls, robotics, physical-world action, or hidden side effects are introduced.
+- Runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-44-3-typed-bridge-archive-closeout`
 - not merged or tagged
 
 Reserved from Phase 3.4:
