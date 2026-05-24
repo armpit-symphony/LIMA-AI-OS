@@ -494,7 +494,9 @@ Phase 43.3 Universal Contract Hardening Gap Review is prepared on branch `phase-
 
 Phase 43.4 Universal Contract Hardening Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 43, finds no concrete runtime gap, and stopped at the merge/tag approval gate before Phil approved the merge/tag.
 
-Phase 44.0 Typed IntentEnvelope Guardian Request Bridge Design Charter is prepared on branch `phase-44-0-typed-intentenvelope-guardian-request-bridge-design` as docs/tests/fixtures-only charter work. It defines the no-code design bridge from HumanInput, shell request, bot request, or automation request metadata to typed IntentEnvelope candidate metadata and Guardian request metadata while keeping GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, adapters, robotics, physical-world behavior, and hidden side effects blocked.
+Phase 44.0 Typed IntentEnvelope Guardian Request Bridge Design Charter is complete, merged to `main`, and tagged. It defines the no-code design bridge from HumanInput, shell request, bot request, or automation request metadata to typed IntentEnvelope candidate metadata and Guardian request metadata while keeping GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, adapters, robotics, physical-world behavior, and hidden side effects blocked.
+
+Phase 44.1 Typed IntentEnvelope Guardian Request Fixtures is prepared on branch `phase-44-1-typed-intentenvelope-guardian-request-fixtures` as docs/tests/fixtures-only fixture metadata work. It adds inert source request, typed intent candidate, and Guardian request metadata examples with future GuardianDecision absent/pending/blocked states and malicious bypass cases while keeping runtime behavior blocked.
 
 Latest completed phase merge:
 
@@ -502,17 +504,17 @@ Latest completed phase merge:
 
 Latest tag:
 
-`phase-43.4-universal-contract-hardening-archive-closeout`
+`phase-44.0-typed-intentenvelope-guardian-request-bridge-design`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 44.0 as a docs/tests/fixtures-only typed IntentEnvelope / Guardian Request Bridge design charter and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Complete Phase 44.1 as a docs/tests/fixtures-only typed IntentEnvelope / Guardian request fixture corpus and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-No next branch is approved beyond Phase 44.0. Phase 44.1 fixture data requires Phil approval after Phase 44.0 review.
+No next branch is approved beyond Phase 44.1. Phase 44.2 requires Phil approval after Phase 44.1 review.
 
 Latest completed merge:
 
@@ -524,7 +526,7 @@ Recommended PR target:
 
 Canonical state anchor:
 
-Phase 43.4 is the canonical completed state before Phase 44. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
+Phase 44.0 is the canonical completed state before Phase 44.1. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
 Phase 44 boundary:
 

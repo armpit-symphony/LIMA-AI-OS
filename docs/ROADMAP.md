@@ -8659,7 +8659,27 @@ Result:
 
 Status:
 
-- prepared on `phase-44-0-typed-intentenvelope-guardian-request-bridge-design`
+- complete
+- tagged as `phase-44.0-typed-intentenvelope-guardian-request-bridge-design`
+
+## Phase 44.1 - Typed IntentEnvelope Guardian Request Fixtures
+
+Goal:
+
+- Add inert fixture corpus metadata for the typed IntentEnvelope / Guardian request bridge lane.
+- Lock expected metadata shape for source request metadata, typed intent candidate metadata, Guardian request metadata, and future GuardianDecision absent/pending/blocked states.
+- Include malicious and bypass-shaped fixture cases before any runtime bridge exists.
+
+Result:
+
+- Phase 44.1 is docs/tests/fixtures-only fixture metadata work.
+- Source request, typed intent candidate, and Guardian request shapes are represented as inert examples only.
+- No runtime behavior is introduced and no bridge execution path exists.
+- Runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-44-1-typed-intentenvelope-guardian-request-fixtures`
 - not merged or tagged
 
 Reserved from Phase 3.4:

@@ -702,6 +702,8 @@ Phase 43.4 archives Phase 43 as completed docs/tests/fixtures-only Universal Con
 
 Phase 44.0 opens the typed IntentEnvelope / Guardian Request Bridge design charter as docs/tests/fixtures-only work. It defines the no-code path from HumanInput, shell, bot, or automation request metadata to a typed IntentEnvelope candidate and Guardian request, while keeping GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, adapters, robotics, physical-world behavior, and hidden side effects blocked.
 
+Phase 44.1 adds the inert typed IntentEnvelope / Guardian request bridge fixture corpus as docs/tests/fixtures-only metadata. It locks source request metadata, typed intent candidate metadata, Guardian request metadata, and future GuardianDecision absent/pending/blocked states while preserving non-authoritative, non-executing, non-dispatching, non-persistent boundaries with no runtime implementation.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

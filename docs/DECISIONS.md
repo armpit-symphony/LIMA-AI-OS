@@ -387,6 +387,27 @@ Consequences:
 - Phase 44.0 may add documentation, inert fixture metadata, static tests, and shared roadmap/state updates only.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, model/tool/driver calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0319: Phase 44.1 Uses Inert Bridge Fixture Corpus Before Runtime
+
+Status: Accepted
+
+Decision:
+
+Phase 44.1 adds docs/tests/fixtures-only inert fixture corpus metadata for the typed IntentEnvelope / Guardian request bridge lane.
+
+Context:
+
+Phase 44.0 established no-code bridge design boundaries. The safest next step is fixture corpus hardening that locks source request, typed intent candidate, and Guardian request metadata expectations, including malicious/bypass examples, before any runtime bridge behavior exists.
+
+Consequences:
+
+- Fixture cases may describe future bridge metadata only.
+- GuardianDecision state remains absent/pending/blocked metadata; no decision records are created.
+- Approval remains not granted in all cases.
+- Execution, dispatch, persistence, model/tool/driver calls, adapter activity, external calls, and physical-world behavior remain blocked.
+- Phase 44.1 may add docs, inert fixtures, static tests, and shared roadmap/state updates only.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
