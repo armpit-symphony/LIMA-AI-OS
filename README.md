@@ -912,8 +912,8 @@ Result:
 
 Status:
 
-- prepared on `phase-46-0-static-acceptance-test-implementation-plan-template`
-- not merged or tagged
+- complete
+- tagged as `phase-46.0-static-acceptance-test-implementation-plan-template`
 
 ## Phase 46.1 - Static Acceptance-Test Dry-Run Plan
 
@@ -932,5 +932,25 @@ Result:
 
 Status:
 
-- prepared on `phase-46-1-static-acceptance-test-dry-run-plan`
+- complete
+- tagged as `phase-46.1-static-acceptance-test-dry-run-plan`
+
+## Phase 46.2 - Static Acceptance-Test Dry-Run Readiness Review
+
+Goal:
+
+- Review whether the Phase 46.1 static dry-run plan is adequate before any future acceptance-test implementation planning continues.
+- Confirm all required dry-run cases exist, required fields are complete, candidate patterns remain candidate-only, forbidden surfaces remain explicit, stop/rollback coverage fails closed, and boundary flags stay blocked.
+- Preserve docs/tests/fixtures-only scope and keep runtime implementation blocked.
+
+Result:
+
+- Phase 46.2 is static dry-run readiness-review metadata only.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are added.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-46-2-static-acceptance-test-dry-run-readiness-review`
 - not merged or tagged
