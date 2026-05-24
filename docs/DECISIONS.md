@@ -489,6 +489,27 @@ Consequences:
 - GuardianDecision remains future metadata only and does not grant approval, execution, dispatch, persistence, adapter activity, model/tool/driver calls, external calls, robotics, or physical-world behavior.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0324: Phase 45.2 Uses Docs/Tests/Fixtures-Only Readiness Review Before Any Acceptance-Test Implementation Design
+
+Status: Accepted
+
+Decision:
+
+Phase 45.2 opens a docs/tests/fixtures-only no-code readiness-review lane for the Phase 45.1 acceptance-test fixture matrix/scaffolding corpus.
+
+Context:
+
+Phase 45.1 mapped future test families into inert matrix rows, expected states, blocked claims, and invariant flags. Before any future acceptance-test implementation design is considered, LIMA needs a deterministic readiness review that confirms complete mapping coverage, validates boundary constraints, and records severity-graded readiness gaps.
+
+Consequences:
+
+- Phase 45.2 may add documentation, inert readiness-review fixture metadata, static tests, and shared roadmap/state updates only.
+- Phase 45.2 does not create runtime bridge behavior and does not create or activate a runtime test harness.
+- Readiness output must explicitly report coverage result, SEV-1/SEV-2/SEV-3 gap result, and boundary result.
+- Guardian request remains metadata and not GuardianDecision authority.
+- GuardianDecision remains future metadata only and does not grant approval, execution, dispatch, persistence, adapter activity, model/tool/driver calls, external calls, robotics, or physical-world behavior.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted
