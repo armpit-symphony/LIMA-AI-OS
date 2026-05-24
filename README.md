@@ -708,6 +708,8 @@ Phase 44.2 validates and gap-reviews the Phase 44.1 typed bridge fixture corpus 
 
 Phase 44.3 archives Phase 44.0 through Phase 44.2 as a completed no-code typed IntentEnvelope / Guardian request bridge lane. It confirms the design, fixture corpus, and validation/gap-review stack is complete as metadata-only work with no GuardianDecision authority, no execution path, and no runtime implementation recommendation.
 
+Phase 45.0 opens a no-code typed bridge acceptance-test design lane. It defines the static test requirements that would be required before any future runtime bridge implementation could be considered, while keeping source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, future GuardianDecision metadata, execution, dispatch, persistence, model/tool/driver calls, adapters, external calls, robotics, physical-world behavior, and hidden side effects unimplemented.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:
