@@ -500,29 +500,31 @@ Phase 44.1 Typed IntentEnvelope Guardian Request Fixtures is complete, merged to
 
 Phase 44.2 Typed Bridge Fixture Validation Gap Review is complete, merged to `main`, and tagged. It validates that the Phase 44.1 fixture corpus adequately covers source request metadata -> typed IntentEnvelope candidate metadata -> Guardian request metadata with future GuardianDecision absent/pending/blocked metadata only, confirms no execution path exists, and records no concrete runtime gap.
 
-Phase 44.3 Typed Bridge Archive / Closeout is prepared on branch `phase-44-3-typed-bridge-archive-closeout` as docs/tests/fixtures-only archive work. It archives Phase 44.0 through Phase 44.2 as a completed no-code typed bridge design/fixture/review lane and confirms no runtime implementation is recommended.
+Phase 44.3 Typed Bridge Archive / Closeout is complete, merged to `main`, and tagged. It archives Phase 44.0 through Phase 44.2 as a completed no-code typed bridge design/fixture/review lane and confirms no runtime implementation is recommended.
+
+Phase 45.0 Typed Bridge Acceptance Test Design is prepared on branch `phase-45-0-typed-bridge-acceptance-test-design` as docs/tests/fixtures-only no-code acceptance-test design work. It defines required future acceptance test families before any runtime typed bridge implementation could be considered, while keeping runtime implementation blocked.
 
 Latest completed phase merge:
 
-`cc81476c119389870df1328f0b98f0eece571276`
+`6d169d50c775bfd307c350802efebebd3f708e78`
 
 Latest tag:
 
-`phase-44.2-typed-bridge-fixture-validation-gap-review`
+`phase-44.3-typed-bridge-archive-closeout`
 
 ## Current Next Step
 
 Current operator step:
 
-Complete Phase 44.3 as a docs/tests/fixtures-only archive closeout for the Phase 44 typed bridge lane and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
+Complete Phase 45.0 as a docs/tests/fixtures-only no-code acceptance-test design lane for a future typed bridge runtime slice and push the branch for review. Runtime implementation, `lima/` changes, `tests/support` changes, live adapters, approval enforcement, GuardianDecision creation, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects remain blocked.
 
 Recommended next branch:
 
-No next branch is approved beyond Phase 44.3. Phase 44.4 requires Phil approval after Phase 44.3 review.
+No next branch is approved beyond Phase 45.0. Phase 45.1 requires Phil approval after Phase 45.0 review.
 
 Latest completed merge:
 
-`cc81476c119389870df1328f0b98f0eece571276`
+`6d169d50c775bfd307c350802efebebd3f708e78`
 
 Recommended PR target:
 
@@ -530,7 +532,7 @@ Recommended PR target:
 
 Canonical state anchor:
 
-Phase 44.2 is the canonical completed state before Phase 44.3. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
+Phase 44.3 is the canonical completed state before Phase 45.0. The prior stale Phase 23/28/29 state-anchor text is superseded and must not be used to infer approval for runtime work.
 
 Phase 44 boundary:
 

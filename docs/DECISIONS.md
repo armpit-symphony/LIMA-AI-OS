@@ -448,6 +448,27 @@ Consequences:
 - No runtime implementation is recommended by Phase 44.3.
 - Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
 
+## ADR-0322: Phase 45.0 Designs Typed Bridge Acceptance Tests Before Runtime
+
+Status: Accepted
+
+Decision:
+
+Phase 45.0 opens a docs/tests/fixtures-only no-code acceptance-test design lane for a future typed bridge runtime slice.
+
+Context:
+
+Phase 44 closed the typed IntentEnvelope / Guardian request bridge lane as no-code metadata, fixture, validation, and archive work. Before any future runtime bridge can be considered, LIMA needs acceptance-test requirements that prove source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, and future GuardianDecision metadata remain bounded, non-authoritative, and non-executing.
+
+Consequences:
+
+- Phase 45.0 may add documentation, inert acceptance-test design fixture metadata, static tests, and shared roadmap/state updates only.
+- Acceptance-test design is not bridge implementation and does not create a test-only runtime harness.
+- The future test requirements must include positive shape checks, negative/bypass checks, boundary-path checks, and validation expectations.
+- Guardian request remains metadata, not GuardianDecision authority.
+- GuardianDecision remains future metadata only and does not grant approval or execution.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, background work, robotics, physical-world behavior, and hidden side effects remain unapproved.
+
 ## ADR-0297: Phase 37 Closes With Pause And Preserve
 
 Status: Accepted

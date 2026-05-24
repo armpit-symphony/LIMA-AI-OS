@@ -8722,7 +8722,27 @@ Result:
 
 Status:
 
-- prepared on `phase-44-3-typed-bridge-archive-closeout`
+- complete
+- tagged as `phase-44.3-typed-bridge-archive-closeout`
+
+## Phase 45.0 - Typed Bridge Acceptance Test Design
+
+Goal:
+
+- Open a no-code acceptance-test design lane for a future typed bridge runtime slice.
+- Define required future tests for source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, and future GuardianDecision metadata.
+- Keep all runtime bridge implementation, GuardianDecision creation, approval enforcement, and execution paths blocked.
+
+Result:
+
+- Phase 45.0 is docs/tests/fixtures-only acceptance-test design work.
+- Future acceptance tests are specified as requirements only, not runtime test harness behavior.
+- Required future tests must prove source request metadata never executes directly, typed intent is metadata not authority, Guardian request is not GuardianDecision, GuardianDecision metadata remains non-executing, and all risky surfaces fail closed.
+- Runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, HumanInput bridge behavior, live adapters, real IntentCompiler behavior, real Guardian request runtime behavior, GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-45-0-typed-bridge-acceptance-test-design`
 - not merged or tagged
 
 Reserved from Phase 3.4:

@@ -8979,6 +8979,47 @@ Recommended next lane:
 
 - Stop at review for Phase 44.3. Phase 44.4 requires Phil approval.
 
+## Phase 45.0 Gate: Typed Bridge Acceptance Test Design
+
+Phase 45.0 opens a docs/tests/fixtures-only no-code acceptance-test design lane for a future typed bridge runtime slice.
+
+Allowed:
+
+- Phase 45.0 documentation
+- Phase 45.0 inert acceptance-test design fixture metadata
+- Phase 45.0 static tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- acceptance-test requirements are design metadata only
+- future tests cover source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, and future GuardianDecision metadata
+- positive shape tests cannot imply authority
+- negative/bypass tests must fail closed
+- Guardian request remains metadata and not GuardianDecision authority
+- GuardianDecision metadata remains absent/pending/blocked/non-executing until a future approved policy membrane exists
+- no execution, dispatch, persistence, model/tool/driver call, adapter call, external call, or physical-world path exists in this lane
+- no runtime implementation is recommended
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 45.0. Phase 45.1 requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
