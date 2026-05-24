@@ -892,5 +892,25 @@ Result:
 
 Status:
 
-- prepared on `phase-45-3-typed-bridge-acceptance-test-archive-closeout`
+- complete
+- tagged as `phase-45.3-typed-bridge-acceptance-test-archive-closeout`
+
+## Phase 46.0 - Static Acceptance-Test Implementation-Plan Template
+
+Goal:
+
+- Define a docs/tests/fixtures-only static template for a future typed bridge acceptance-test implementation plan.
+- Record what future tests must prove, which files may be eligible after separate approval, which files remain forbidden, and which validation/rollback gates are mandatory.
+- Preserve Phil approval gates before actual acceptance-test implementation, runtime harness work, `lima/` changes, `tests/support/` changes, or runtime behavior.
+
+Result:
+
+- Phase 46.0 is static implementation-plan template work only.
+- No runtime test harness is created.
+- No executable runtime bridge acceptance tests are added.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-46-0-static-acceptance-test-implementation-plan-template`
 - not merged or tagged

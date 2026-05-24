@@ -9663,3 +9663,50 @@ Required proof:
 Recommended next lane:
 
 - Phase 46 docs/tests/fixtures-only static acceptance-test implementation-plan template or dry-run plan.
+
+## Phase 46.0 Gate: Static Acceptance-Test Implementation-Plan Template
+
+Phase 46.0 defines a static docs/tests/fixtures-only template for future typed bridge acceptance-test implementation planning.
+
+Allowed:
+
+- Phase 46.0 documentation
+- Phase 46.0 inert implementation-plan-template fixture metadata
+- Phase 46.0 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- the plan template is static metadata only
+- future acceptance-test proof requirements are explicit
+- future eligible file scope requires separate approval
+- forbidden file scope remains explicit
+- validation and rollback gates are mandatory
+- Phil approval gates are required before any actual implementation
+- no runtime implementation is recommended
+
+Recommended next lane:
+
+- Phase 46.1 docs/tests/fixtures-only static dry-run plan or readiness review.

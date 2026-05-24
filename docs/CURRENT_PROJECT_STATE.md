@@ -727,8 +727,19 @@ Do not merge or tag from a routine implementation thread.
 ## Phase 45.3 - Typed Bridge Acceptance Test Archive Closeout
 
 - branch: `phase-45-3-typed-bridge-acceptance-test-archive-closeout`
-- status: docs/tests/fixtures-only archive closeout in progress
+- status: complete, merged to `main`, and tagged as `phase-45.3-typed-bridge-acceptance-test-archive-closeout`
 - runtime implementation: blocked
 - `lima/` changes in phase lane: not allowed
 - `tests/support/` changes in phase lane: not allowed
 - recommended next lane (post-approval): Phase 46 docs/tests/fixtures-only static acceptance-test implementation-plan template or dry-run plan
+
+## Phase 46.0 - Static Acceptance-Test Implementation-Plan Template
+
+- branch: `phase-46-0-static-acceptance-test-implementation-plan-template`
+- status: docs/tests/fixtures-only static implementation-plan template in progress
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 46.1 docs/tests/fixtures-only static dry-run plan or readiness review

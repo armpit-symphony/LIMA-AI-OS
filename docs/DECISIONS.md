@@ -6213,3 +6213,24 @@ Consequences:
 - No `tests/support/` changes are approved by this closeout.
 - Runtime test harness creation remains blocked.
 - Phase 46 should remain docs/tests/fixtures-only and focus on static acceptance-test implementation-plan template or dry-run plan work.
+
+## ADR-0325: Phase 46 Starts With Static Acceptance-Test Implementation-Plan Template
+
+Status: Accepted
+
+Decision:
+
+Phase 46.0 opens as docs/tests/fixtures-only static acceptance-test implementation-plan template work for the future typed IntentEnvelope / Guardian request bridge acceptance-test lane.
+
+Context:
+
+Phase 45 archived the acceptance-test design, fixture matrix, readiness review, and closeout without runtime implementation. The next smallest safe step is to define a static template for how a future separately approved implementation phase would be planned and audited.
+
+Consequences:
+
+- No actual acceptance-test implementation is approved.
+- No runtime test harness is approved.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
+- Future implementation requires separate Phil approval after a design/audit gate.
