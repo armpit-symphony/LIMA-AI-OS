@@ -690,6 +690,16 @@ Phase 42.3 records universal safety invariants and the Guardian boundary matrix.
 
 Phase 42.4 archives Phase 42 as a completed LIMA AI OS Universal Runtime Contract Design lane. The lane reframes Phase 42 away from Arc-centered planning, preserves Arc Bot as one example guarded office-agent profile, keeps Sparkbot Public as reference/showcase, separates public/private product surfaces, and recommends Phase 43 as docs/tests/fixtures-only Universal Contract Fixture Hardening.
 
+Phase 43.0 opens the Universal Contract Fixture Hardening lane as a docs/tests/fixtures-only charter. It converts the Phase 42.4 recommendation into fixture-hardening scope for consumer profiles, embodiment/action profiles, and adversarial profile data while keeping runtime implementation, `lima/` changes, `tests/support/` changes, live adapters, approval enforcement, execution, dispatch, persistence, robotics, physical-world behavior, and hidden side effects blocked.
+
+Phase 43.1 adds the inert universal contract profile fixture corpus. The cases cover safe consumer profiles, risky browser/shell/file/network/scheduled action profiles, IoT/drone/humanoid/robot/emergency-stop profiles, and adversarial profile data while preserving preview-only, non-authoritative, local-only, approval-free, non-executing, adapter-inactive, robotics-inactive, and physical-world-inactive boundaries.
+
+Phase 43.2 adds regression tests over the Phase 43.1 universal profile fixtures using the existing `candidate_preview` helper. Risky, embodied, physical-world, and adversarial profile metadata stays blocked, while all preview outputs preserve deterministic, read-only, local-only, non-authoritative, non-executing, approval-free, dispatch-free, persistence-free, adapter-inactive, robotics-inactive, and physical-world-inactive flags.
+
+Phase 43.3 reviews the Universal Contract Fixture Hardening lane and finds no concrete runtime gap. Conservative blocking is accepted as safe, and Phase 43.4 is recommended as docs/tests/fixtures-only archive closeout rather than runtime implementation.
+
+Phase 43.4 archives Phase 43 as completed docs/tests/fixtures-only Universal Contract Fixture Hardening. It confirms no runtime gap, no `lima/` changes, no `tests/support/` changes, no Sparkbot wiring, no Arc Bot implementation, no live adapters, no approval enforcement, no execution, no dispatch, no persistence, no robotics, no physical-world behavior, and no hidden side effects. The next action is a merge/tag approval gate for the Phase 43 stack.
+
 ## Runtime Shape
 
 LIMA Runtime is organized around these layers:

@@ -8698,6 +8698,136 @@ Recommended next lane:
 
 - Phase 43 docs/tests/fixtures-only Universal Contract Fixture Hardening.
 
+## Phase 43.0 Gate: Universal Contract Fixture Hardening Charter
+
+Phase 43.0 opens Phase 43 as a docs/tests/fixtures-only Universal Contract Fixture Hardening lane.
+
+Allowed:
+
+- Phase 43.0 documentation
+- Phase 43.0 inert fixture metadata
+- Phase 43.0 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.1 docs/tests/fixtures-only inert universal contract profile fixture corpus.
+
+## Phase 43.1 Gate: Universal Contract Profile Fixtures
+
+Phase 43.1 adds inert universal contract profile fixture data only.
+
+Allowed:
+
+- Phase 43.1 documentation
+- Phase 43.1 inert fixture metadata
+- Phase 43.1 tests that validate fixture shape and safety flags
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.2 docs/tests/fixtures-only universal contract profile regression tests.
+
+## Phase 43.2 Gate: Universal Contract Profile Regression Tests
+
+Phase 43.2 adds regression tests over the Phase 43.1 universal profile fixture corpus using the existing `candidate_preview` helper.
+
+Allowed:
+
+- Phase 43.2 documentation
+- Phase 43.2 fixture metadata
+- Phase 43.2 tests using existing preview behavior only
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.3 docs/tests/fixtures-only universal contract hardening gap and next-lane review.
+
+## Phase 43.3 Gate: Universal Contract Hardening Gap Review
+
+Phase 43.3 reviews the Phase 43.0 through Phase 43.2 Universal Contract Fixture Hardening evidence.
+
+Allowed:
+
+- Phase 43.3 documentation
+- Phase 43.3 fixture metadata
+- Phase 43.3 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Phase 43.4 docs/tests/fixtures-only archive closeout.
+
+## Phase 43.4 Gate: Universal Contract Hardening Archive / Closeout
+
+Phase 43.4 archives Phase 43 as a completed docs/tests/fixtures-only Universal Contract Fixture Hardening lane.
+
+Allowed:
+
+- Phase 43.4 documentation
+- Phase 43.4 fixture metadata
+- Phase 43.4 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Recommended next lane:
+
+- Stop at the merge/tag approval gate for the Phase 43 stack.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.

@@ -8551,6 +8551,96 @@ Status:
 - complete
 - tagged as `phase-42.4-universal-runtime-contract-archive-closeout`
 
+## Phase 43.0 - Universal Contract Fixture Hardening Charter
+
+Goal:
+
+- Open Phase 43 as docs/tests/fixtures-only Universal Contract Fixture Hardening.
+- Define the fixture categories and invariants needed before any future universal profile coverage.
+
+Result:
+
+- Phase 43.0 is a charter only.
+- Universal consumer, embodiment/action, and adversarial fixture categories are listed for later inert fixture slices.
+- Runtime implementation, `lima/` changes, `tests/support/` changes, Sparkbot wiring, Arc Bot implementation, live adapters, approval enforcement, execution, dispatch, persistence, external calls, robotics, physical-world behavior, and hidden side effects remain blocked.
+
+Status:
+
+- prepared on `phase-43-0-universal-contract-fixture-hardening-charter`
+- not merged or tagged
+
+## Phase 43.1 - Universal Contract Profile Fixtures
+
+Goal:
+
+- Add inert fixture data for universal LIMA AI OS consumer profiles, embodiment/action profiles, and adversarial profile cases.
+- Preserve preview-only, non-authoritative, non-executing fixture boundaries.
+
+Result:
+
+- The fixture corpus covers Arc Bot, Sparkbot reference, generic automation, coding, research, browser, shell, file, network/API, scheduled/background work, IoT, drone, humanoid, robot motion, emergency stop, malicious approval, malicious execution, malformed profile, unknown model/provider, and nested bypass cases.
+- Every case carries safe control flags denying approval, execution, dispatch, persistence, adapter activity, external calls, robotics, physical-world behavior, and LIMA approval authority.
+- No runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, live adapter, or physical-world path is added.
+
+Status:
+
+- prepared on `phase-43-1-universal-contract-profile-fixtures`
+- not merged or tagged
+
+## Phase 43.2 - Universal Contract Profile Regression Tests
+
+Goal:
+
+- Add tests over the Phase 43.1 universal profile fixtures using the existing `candidate_preview` helper.
+- Prove risky, embodied, physical-world, and adversarial profile metadata remains blocked and inert.
+
+Result:
+
+- The tests cover all Phase 43.1 profile cases without modifying runtime code.
+- Safe planning profiles may be conservatively blocked, but no profile can gain approval, execution, dispatch, persistence, external calls, adapter activity, robotics, or physical-world behavior.
+- No runtime implementation, `lima/`, `tests/support/`, Sparkbot wiring, Arc Bot implementation, live adapter, or physical-world path is added.
+
+Status:
+
+- prepared on `phase-43-2-universal-contract-profile-regression-tests`
+- not merged or tagged
+
+## Phase 43.3 - Universal Contract Hardening Gap Review
+
+Goal:
+
+- Review the Phase 43.0 through Phase 43.2 hardening evidence.
+- Decide whether a runtime gap exists or whether the lane should archive.
+
+Result:
+
+- No concrete runtime gap is found.
+- Conservative blocking of safe planning profile metadata is accepted as safer than over-permissive review output.
+- Phase 43.4 is recommended as docs/tests/fixtures-only archive closeout, not runtime implementation.
+
+Status:
+
+- prepared on `phase-43-3-universal-contract-hardening-gap-review`
+- not merged or tagged
+
+## Phase 43.4 - Universal Contract Hardening Archive / Closeout
+
+Goal:
+
+- Archive Phase 43 as a completed docs/tests/fixtures-only Universal Contract Fixture Hardening lane.
+- Stop before merge/tag approval.
+
+Result:
+
+- Phase 43.0 through Phase 43.4 are archived as docs/tests/fixtures-only work.
+- No concrete runtime gap is found.
+- The next action is a merge/tag approval gate, not runtime implementation.
+
+Status:
+
+- prepared on `phase-43-4-universal-contract-hardening-archive-closeout`
+- not merged or tagged
+
 Reserved from Phase 3.4:
 
 - Phase 3.5 - LIMA Product Family and Adaptive Trust Doctrine

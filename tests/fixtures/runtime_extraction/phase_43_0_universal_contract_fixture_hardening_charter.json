@@ -1,0 +1,81 @@
+{
+  "phase": "43.0",
+  "status": "universal_contract_fixture_hardening_charter",
+  "docs_tests_fixtures_only": true,
+  "charter_only": true,
+  "phase_42_4_anchor": "0ea33ea9e7ec59c937cd2ec3cbcc0dbc1e72436e",
+  "phase_42_4_tag": "phase-42.4-universal-runtime-contract-archive-closeout",
+  "phase_43_lane": "docs_tests_fixtures_only_universal_contract_fixture_hardening",
+  "fixture_hardening_recommended": true,
+  "consumer_profiles_to_cover": [
+    "arc_bot_office_task_profile",
+    "sparkbot_reference_profile",
+    "generic_automation_agent_profile",
+    "coding_agent_profile",
+    "research_agent_profile"
+  ],
+  "embodiment_action_profiles_to_cover": [
+    "browser_action_profile",
+    "shell_action_profile",
+    "file_mutation_profile",
+    "network_api_action_profile",
+    "scheduled_background_work_profile",
+    "iot_device_action_profile",
+    "drone_action_profile",
+    "humanoid_action_profile",
+    "robot_motion_profile",
+    "emergency_stop_profile"
+  ],
+  "adversarial_cases_to_cover": [
+    "malicious_consumer_profile_trying_to_grant_approval",
+    "malicious_embodiment_profile_trying_to_allow_execution",
+    "malformed_profile_data",
+    "unknown_model_provider_data",
+    "nested_bypass_wording"
+  ],
+  "allowed_artifacts": [
+    "phase_43_0_documentation",
+    "phase_43_0_inert_fixture_metadata",
+    "phase_43_0_tests",
+    "readme_roadmap_decision_extraction_plan_current_state_updates"
+  ],
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "live_adapters",
+    "real_approval_enforcement",
+    "execution_dispatch_persistence_mutation_external_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects",
+    "live_customer_connectors_or_production_deployment_claims"
+  ],
+  "required_fixture_invariants": {
+    "preview_only": true,
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "arc_bot_implementation_active": false,
+    "live_adapter_active": false,
+    "external_calls_allowed": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false,
+    "lima_grants_approval": false
+  },
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "43.1"
+}
