@@ -743,3 +743,14 @@ Do not merge or tag from a routine implementation thread.
 - `lima/` changes in phase lane: not allowed
 - `tests/support/` changes in phase lane: not allowed
 - recommended next lane (post-approval): Phase 46.1 docs/tests/fixtures-only static dry-run plan or readiness review
+
+## Phase 46.1 - Static Acceptance-Test Dry-Run Plan
+
+- branch: `phase-46-1-static-acceptance-test-dry-run-plan`
+- status: docs/tests/fixtures-only static dry-run plan in progress
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 46.2 docs/tests/fixtures-only static dry-run readiness review or archive closeout

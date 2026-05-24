@@ -8831,3 +8831,23 @@ Status:
 
 - prepared on `phase-46-0-static-acceptance-test-implementation-plan-template`
 - not merged or tagged
+
+## Phase 46.1 - Static Acceptance-Test Dry-Run Plan
+
+Goal:
+
+- Simulate a future typed bridge acceptance-test implementation phase as static metadata only.
+- Convert Phase 46.0 template requirements into deterministic dry-run cases with candidate-only file patterns and explicit forbidden surfaces.
+- Define stop/rollback gates that fail closed before any runtime or harness implementation work.
+
+Result:
+
+- Phase 46.1 is static dry-run planning metadata only.
+- It does not create a runtime test harness.
+- It does not create actual or executable runtime bridge acceptance tests.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-46-1-static-acceptance-test-dry-run-plan`
+- not merged or tagged

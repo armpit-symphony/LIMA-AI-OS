@@ -1,0 +1,516 @@
+{
+  "phase": "46.1",
+  "status": "static_acceptance_test_dry_run_plan",
+  "docs_tests_fixtures_only": true,
+  "static_dry_run_only": true,
+  "runtime_test_harness_created": false,
+  "actual_acceptance_tests_created": false,
+  "executable_acceptance_tests_created": false,
+  "phase_46_0_anchor": "aa99e0b6746820caa4e45b0763646ea5152cd84e",
+  "phase_46_0_tag": "phase-46.0-static-acceptance-test-implementation-plan-template",
+  "dry_run_kind": "static_acceptance_test_implementation_plan_dry_run",
+  "dry_run_inputs": [
+    "phase_45_0_acceptance_test_families",
+    "phase_45_1_fixture_matrix_rows",
+    "phase_45_2_readiness_outcomes",
+    "phase_45_3_archive_closeout",
+    "phase_46_0_static_implementation_plan_template"
+  ],
+  "dry_run_cases": [
+    {
+      "dry_run_case_id": "source_request_metadata_shape_dry_run",
+      "source_phase_reference": "45.0",
+      "future_test_family": "source_request_metadata_shape",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_source_request_metadata.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_source_request_metadata.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "metadata_fields_declared_and_typed",
+        "no_runtime_execution_paths_present"
+      ],
+      "stop_conditions": [
+        "any_lima_change",
+        "any_tests_support_change"
+      ],
+      "rollback_requirements": [
+        "stop_on_forbidden_scope",
+        "report_and_revert_unapproved_paths"
+      ],
+      "expected_result": "plan_shape_valid_non_executing",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "typed_intentenvelope_candidate_shape_dry_run",
+      "source_phase_reference": "45.0",
+      "future_test_family": "typed_intentenvelope_candidate_shape",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_intentenvelope_shape.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_intentenvelope_shape.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "candidate_shape_is_non_authoritative",
+        "no_bridge_execution_claims"
+      ],
+      "stop_conditions": [
+        "runtime_test_harness_created",
+        "executable_acceptance_tests_created"
+      ],
+      "rollback_requirements": [
+        "block_merge_tag_until_clean_boundary",
+        "record_dry_run_failure_reason"
+      ],
+      "expected_result": "candidate_shape_declared_only",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "guardian_request_metadata_shape_dry_run",
+      "source_phase_reference": "45.0",
+      "future_test_family": "guardian_request_metadata_shape",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_guardian_request_shape.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_guardian_request_shape.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "guardian_request_metadata_is_not_decision_authority",
+        "no_real_guardian_runtime_behavior"
+      ],
+      "stop_conditions": [
+        "guardian_decision_created",
+        "approval_enforcement_added"
+      ],
+      "rollback_requirements": [
+        "stop_on_authority_boundary_violation",
+        "revert_to_docs_tests_fixtures_only"
+      ],
+      "expected_result": "guardian_request_shape_metadata_only",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "guardian_decision_boundary_dry_run",
+      "source_phase_reference": "45.1",
+      "future_test_family": "guardian_decision_boundary",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_guardian_decision_boundary.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_guardian_decision_boundary.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "allowed_states_are_absent_pending_blocked",
+        "decision_creation_path_absent"
+      ],
+      "stop_conditions": [
+        "guardian_decision_created",
+        "runtime_behavior_changed"
+      ],
+      "rollback_requirements": [
+        "restore_blocked_state_surface",
+        "require_new_approval_gate"
+      ],
+      "expected_result": "guardian_decision_state_boundary_preserved",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "positive_non_authoritative_shape_dry_run",
+      "source_phase_reference": "45.1",
+      "future_test_family": "positive_non_authoritative_shape",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_positive_shape.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_positive_shape.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "positive_rows_remain_non_authoritative",
+        "non_executing_expected_bridge_states_only"
+      ],
+      "stop_conditions": [
+        "actual_acceptance_test_harness_behavior_added",
+        "execution_dispatch_persistence_added"
+      ],
+      "rollback_requirements": [
+        "remove_execution_claims",
+        "reconfirm_non_runtime_scope"
+      ],
+      "expected_result": "positive_shape_ready_for_future_review",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "approval_bypass_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "approval_bypass_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_approval_bypass_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_approval_bypass_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "approval_bypass_claims_fail_closed",
+        "no_approval_enforcement_implementation"
+      ],
+      "stop_conditions": [
+        "approval_enforcement_added",
+        "next_runtime_implementation_approved_true"
+      ],
+      "rollback_requirements": [
+        "clear_unapproved_approval_paths",
+        "repeat_independent_audit"
+      ],
+      "expected_result": "fail_closed_boundary_preserved",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "forged_guardian_decision_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "forged_guardian_decision_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_forged_guardian_decision_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_forged_guardian_decision_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "forged_decision_claims_fail_closed",
+        "no_decision_creation_path_present"
+      ],
+      "stop_conditions": [
+        "guardian_decision_created",
+        "intentcompiler_behavior_added"
+      ],
+      "rollback_requirements": [
+        "remove_forged_decision_acceptance_paths",
+        "preserve_absent_pending_blocked_boundary"
+      ],
+      "expected_result": "forged_decision_rejected_in_plan",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "missing_actor_tenant_lineage_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "missing_actor_tenant_lineage_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_missing_lineage_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_missing_lineage_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "missing_actor_tenant_lineage_claims_fail_closed",
+        "no_background_dispatch_paths"
+      ],
+      "stop_conditions": [
+        "background_worker_or_queue_added",
+        "dispatch_behavior_added"
+      ],
+      "rollback_requirements": [
+        "remove_dispatch_or_worker_paths",
+        "restore_metadata_only_state"
+      ],
+      "expected_result": "lineage_boundary_preserved",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "background_dispatch_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "background_dispatch_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_background_dispatch_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_background_dispatch_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "background_dispatch_claims_fail_closed",
+        "no_daemon_queue_thread_subprocess_paths"
+      ],
+      "stop_conditions": [
+        "queue_or_daemon_path_added",
+        "subprocess_or_thread_path_added"
+      ],
+      "rollback_requirements": [
+        "stop_on_worker_surface_detection",
+        "reopen_boundary_audit_before_continue"
+      ],
+      "expected_result": "background_dispatch_blocked",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "adapter_external_call_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "adapter_external_call_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_adapter_external_call_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_adapter_external_call_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "adapter_and_external_call_claims_fail_closed",
+        "no_shell_browser_network_mutation_paths"
+      ],
+      "stop_conditions": [
+        "external_calls_added",
+        "shell_browser_network_file_mutation_added"
+      ],
+      "rollback_requirements": [
+        "remove_external_call_claims",
+        "retain_docs_only_path"
+      ],
+      "expected_result": "adapter_external_calls_blocked",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "model_tool_driver_call_fail_closed_dry_run",
+      "source_phase_reference": "45.2",
+      "future_test_family": "model_tool_driver_call_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_model_tool_driver_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_model_tool_driver_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "model_tool_driver_claims_fail_closed",
+        "no_execution_dispatch_persistence_paths"
+      ],
+      "stop_conditions": [
+        "model_tool_driver_calls_added",
+        "execution_dispatch_persistence_added"
+      ],
+      "rollback_requirements": [
+        "revert_call_surface_scope",
+        "revalidate_plan_boundaries"
+      ],
+      "expected_result": "model_tool_driver_calls_blocked",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "robotics_physical_world_fail_closed_dry_run",
+      "source_phase_reference": "45.3",
+      "future_test_family": "robotics_physical_world_fail_closed",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_robotics_physical_world_fail_closed.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_robotics_physical_world_fail_closed.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "robotics_physical_world_claims_fail_closed",
+        "no_hardware_control_or_live_adapter_paths"
+      ],
+      "stop_conditions": [
+        "robotics_physical_world_behavior_added",
+        "live_adapters_added"
+      ],
+      "rollback_requirements": [
+        "remove_robotics_or_hardware_paths",
+        "keep_runtime_implementation_blocked"
+      ],
+      "expected_result": "robotics_and_physical_world_blocked",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    },
+    {
+      "dry_run_case_id": "runtime_support_boundary_path_dry_run",
+      "source_phase_reference": "46.0",
+      "future_test_family": "runtime_support_boundary_path",
+      "future_candidate_files": [
+        "tests/test_typed_bridge_acceptance_runtime_support_boundary.py",
+        "tests/fixtures/runtime_extraction/typed_bridge_acceptance_runtime_support_boundary.json",
+        "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_IMPLEMENTATION_PLAN.md"
+      ],
+      "forbidden_files": [
+        "lima/",
+        "tests/support/"
+      ],
+      "expected_checks": [
+        "future_candidate_paths_do_not_include_lima_or_tests_support",
+        "phase_scope_remains_docs_tests_fixtures_only"
+      ],
+      "stop_conditions": [
+        "any_lima_change",
+        "any_tests_support_change",
+        "failed_validation",
+        "unclear_approval_boundary"
+      ],
+      "rollback_requirements": [
+        "block_merge_tag_until_independent_audit",
+        "revert_unapproved_runtime_or_support_paths"
+      ],
+      "expected_result": "runtime_support_path_boundary_preserved",
+      "boundary_flags": {
+        "runtime_execution_allowed": false,
+        "guardian_decision_creation_allowed": false,
+        "approval_enforcement_allowed": false
+      }
+    }
+  ],
+  "candidate_file_patterns": [
+    "tests/test_typed_bridge_acceptance_*.py",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_*.json",
+    "docs/PHASE_46_X_TYPED_BRIDGE_ACCEPTANCE_TEST_*.md",
+    "README.md",
+    "docs/CURRENT_PROJECT_STATE.md",
+    "docs/ROADMAP.md",
+    "docs/DECISIONS.md",
+    "docs/EXTRACTION_PLAN.md"
+  ],
+  "forbidden_file_surfaces": [
+    "lima/",
+    "tests/support/",
+    "sparkbot/",
+    "adapters/",
+    "drivers/",
+    "persistence/",
+    "runtime/",
+    "execution/",
+    "shell/",
+    "browser/",
+    "network/",
+    "file_mutation/",
+    "robotics/",
+    "hardware/",
+    "physical_world/"
+  ],
+  "stop_conditions": [
+    "any_lima_change",
+    "any_tests_support_change",
+    "runtime_test_harness_created",
+    "executable_runtime_bridge_acceptance_tests_created",
+    "actual_acceptance_test_harness_behavior_added",
+    "guardian_decision_created",
+    "approval_enforcement_added",
+    "execution_dispatch_persistence_added",
+    "external_model_tool_driver_calls_added",
+    "robotics_physical_world_behavior_added",
+    "failed_validation",
+    "unclear_approval_boundary"
+  ],
+  "rollback_requirements": [
+    "stop_immediately_on_forbidden_scope",
+    "revert_or_isolate_unapproved_files_before_continue",
+    "keep_merge_and_tag_blocked_until_independent_audit_and_phil_approval",
+    "report_failure_mode_and_boundary_risk"
+  ],
+  "boundary_flags": {
+    "docs_tests_fixtures_only": true,
+    "static_dry_run_only": true,
+    "runtime_test_harness_created": false,
+    "actual_acceptance_tests_created": false,
+    "executable_acceptance_tests_created": false,
+    "acceptance_test_harness_behavior_added": false,
+    "runtime_bridge_behavior_added": false,
+    "guardian_decision_created": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "model_tool_driver_calls_added": false,
+    "external_calls_added": false,
+    "shell_browser_network_file_mutation_added": false,
+    "robotics_physical_world_behavior_added": false,
+    "hidden_side_effects_added": false,
+    "runtime_implementation_recommended": false,
+    "next_runtime_implementation_approved": false
+  },
+  "recommended_next_lane": "phase_46_2_docs_tests_fixtures_only_static_dry_run_readiness_review_or_archive_closeout",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "46.2_requires_phil_approval"
+}

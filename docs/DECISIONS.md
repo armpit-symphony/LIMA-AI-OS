@@ -6234,3 +6234,25 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
 - Future implementation requires separate Phil approval after a design/audit gate.
+
+## ADR-0326: Phase 46.1 Uses a Static Dry-Run Plan Before Any Acceptance-Test Implementation
+
+Status: Accepted
+
+Decision:
+
+Phase 46.1 opens as docs/tests/fixtures-only static dry-run planning for future typed IntentEnvelope / Guardian request bridge acceptance-test implementation.
+
+Context:
+
+Phase 46.0 defined the static implementation-plan template and kept implementation blocked. The next smallest safe step is to simulate that future implementation plan as inert metadata and deterministic validation only.
+
+Consequences:
+
+- No runtime behavior is implemented.
+- No runtime test harness is created.
+- No actual or executable acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
+- Phase 46.2 should remain docs/tests/fixtures-only readiness review or archive closeout unless a separate approval gate changes scope.
