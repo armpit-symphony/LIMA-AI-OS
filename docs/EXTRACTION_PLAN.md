@@ -9621,3 +9621,45 @@ NO-GO:
 - natural-language inference
 - production Sparkbot wiring
 - real enforcement
+## Phase 45.3 Gate: Typed Bridge Acceptance-Test Archive Closeout
+
+Phase 45.3 archives the completed Phase 45 docs/tests/fixtures-only acceptance-test design lane.
+
+Allowed:
+
+- Phase 45.3 documentation
+- Phase 45.3 inert archive-closeout fixture metadata
+- Phase 45.3 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 45.0, 45.1, and 45.2 completion is recorded.
+- no SEV-1 or SEV-2 gap is recorded.
+- only optional SEV-3 notes may remain.
+- no runtime implementation is recommended.
+
+Recommended next lane:
+
+- Phase 46 docs/tests/fixtures-only static acceptance-test implementation-plan template or dry-run plan.

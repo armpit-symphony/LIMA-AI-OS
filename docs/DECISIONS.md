@@ -6194,3 +6194,22 @@ Consequences:
 - approval remains blocked
 - execution remains blocked
 - audit persistence remains blocked
+## ADR-0324: Phase 45 Archives As Docs/Tests/Fixtures-Only Typed Bridge Acceptance-Test Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 45.3 archives Phase 45.0 through Phase 45.2 as completed docs/tests/fixtures-only acceptance-test design, fixture-matrix, and readiness-review work for a future typed IntentEnvelope / Guardian request bridge slice.
+
+Context:
+
+Phase 45.0 defined required future acceptance-test families. Phase 45.1 mapped those families into inert matrix/scaffolding rows. Phase 45.2 readiness review found no SEV-1 blocker and no SEV-2 readiness gap.
+
+Consequences:
+
+- No runtime implementation is recommended.
+- No `lima/` changes are approved by this closeout.
+- No `tests/support/` changes are approved by this closeout.
+- Runtime test harness creation remains blocked.
+- Phase 46 should remain docs/tests/fixtures-only and focus on static acceptance-test implementation-plan template or dry-run plan work.
