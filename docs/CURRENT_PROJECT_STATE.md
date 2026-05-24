@@ -724,3 +724,11 @@ Use this sequence unless the operator explicitly directs otherwise:
 3. Merge/tag only after explicit approval.
 
 Do not merge or tag from a routine implementation thread.
+## Phase 45.3 - Typed Bridge Acceptance Test Archive Closeout
+
+- branch: `phase-45-3-typed-bridge-acceptance-test-archive-closeout`
+- status: docs/tests/fixtures-only archive closeout in progress
+- runtime implementation: blocked
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 46 docs/tests/fixtures-only static acceptance-test implementation-plan template or dry-run plan

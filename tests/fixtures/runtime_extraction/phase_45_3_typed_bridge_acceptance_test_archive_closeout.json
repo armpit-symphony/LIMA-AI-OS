@@ -1,0 +1,79 @@
+{
+  "phase": "45.3",
+  "status": "typed_bridge_acceptance_test_archive_closeout",
+  "docs_tests_fixtures_only": true,
+  "archive_closeout_only": true,
+  "runtime_test_harness_created": false,
+  "phase_45_2_anchor": "47ad1281ed15f556ee77ef3bf06141b8975cf6cd",
+  "phase_45_2_tag": "phase-45.2-typed-bridge-acceptance-test-matrix-readiness-review",
+  "completed_phases": [
+    "45.0",
+    "45.1",
+    "45.2",
+    "45.3"
+  ],
+  "completed_scope": [
+    "phase_45_0_acceptance_test_design",
+    "phase_45_1_fixture_matrix_scaffolding_design",
+    "phase_45_2_matrix_readiness_review",
+    "phase_45_3_archive_closeout"
+  ],
+  "evidence_summary": {
+    "phase_45_0_future_test_families_defined": true,
+    "phase_45_1_matrix_rows_mapped_families": true,
+    "phase_45_2_no_sev_1_or_sev_2_gaps": true,
+    "phase_45_2_only_optional_sev_3_notes": true
+  },
+  "gap_summary": {
+    "sev_1_blockers": [],
+    "sev_2_readiness_gaps": [],
+    "sev_3_cleanup_notes": [
+      "Optional matrix-row naming glossary for future implementation-plan consistency.",
+      "Optional static implementation-plan template for future review consistency."
+    ]
+  },
+  "boundary_results": {
+    "runtime_bridge_behavior_added": false,
+    "runtime_test_harness_active": false,
+    "lima_changes": false,
+    "tests_support_changes": false,
+    "guardian_decision_created": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "model_tool_driver_calls_added": false,
+    "external_calls_added": false,
+    "shell_browser_network_file_mutation_added": false,
+    "robotics_physical_world_behavior_added": false,
+    "hidden_side_effects_added": false
+  },
+  "recommended_next_lane": "phase_46_docs_tests_fixtures_only_static_acceptance_test_implementation_plan_or_dry_run_plan",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "runtime_test_harness_creation",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "humaninput_bridge_behavior",
+    "live_adapters",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence_mutation_external_calls",
+    "model_tool_driver_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "46_requires_phil_approval"
+}
