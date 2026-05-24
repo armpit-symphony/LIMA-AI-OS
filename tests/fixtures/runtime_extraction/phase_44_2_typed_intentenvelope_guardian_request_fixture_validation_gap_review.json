@@ -1,0 +1,80 @@
+{
+  "phase": "44.2",
+  "status": "typed_bridge_fixture_validation_gap_review",
+  "docs_tests_fixtures_only": true,
+  "fixture_validation_only": true,
+  "phase_44_1_anchor": "a3fb607aa092afea06333de6ac5ca9b09e36e24e",
+  "phase_44_1_tag": "phase-44.1-typed-intentenvelope-guardian-request-fixtures",
+  "evidence_reviewed": [
+    "phase_44_0_bridge_design_charter",
+    "phase_44_1_fixture_corpus",
+    "phase_44_1_fixture_tests"
+  ],
+  "validated_bridge_chain": [
+    "source_request_metadata",
+    "typed_intentenvelope_candidate_metadata",
+    "guardian_request_metadata",
+    "future_guardian_decision_metadata_only",
+    "no_execution_path"
+  ],
+  "validated_case_ids": [
+    "safe_draft_only_natural_language_request",
+    "ambiguous_request_requires_clarification",
+    "external_write_request_requires_guardian_review",
+    "tool_pack_scope_request",
+    "scheduled_background_request_without_dispatch",
+    "physical_world_request_blocked_before_drivers",
+    "emergency_stop_request_no_execution_path",
+    "malicious_typed_intent_claiming_approval",
+    "malicious_guardian_request_claiming_decision_authority",
+    "missing_actor_tenant_or_lineage_metadata"
+  ],
+  "reviewed_guardian_decision_states": [
+    "absent",
+    "pending",
+    "blocked"
+  ],
+  "findings": {
+    "bridge_shape_coverage_adequate": true,
+    "guardian_request_non_authoritative": true,
+    "guardian_request_not_guardian_decision": true,
+    "guardian_decision_state_metadata_only": true,
+    "approval_remains_not_granted": true,
+    "execution_dispatch_persistence_paths_absent": true,
+    "model_tool_driver_paths_absent": true,
+    "adapter_external_call_paths_absent": true,
+    "robotics_physical_world_paths_absent": true,
+    "malicious_and_bypass_claims_fail_closed": true
+  },
+  "remaining_gaps": [],
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "phase_44_3_recommended": true,
+  "phase_44_3_lane": "docs_tests_fixtures_only_archive_closeout",
+  "next_runtime_implementation_recommended": false,
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "humaninput_bridge_behavior",
+    "live_adapters",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence_mutation_external_calls",
+    "model_tool_driver_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "44.3_requires_phil_approval"
+}

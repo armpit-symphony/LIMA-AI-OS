@@ -8901,6 +8901,44 @@ Recommended next lane:
 
 - Stop at review for Phase 44.1. Phase 44.2 requires Phil approval.
 
+## Phase 44.2 Gate: Typed Bridge Fixture Validation Gap Review
+
+Phase 44.2 validates and reviews the Phase 44.1 typed IntentEnvelope / Guardian request fixture corpus as docs/tests/fixtures-only evidence work.
+
+Allowed:
+
+- Phase 44.2 documentation
+- Phase 44.2 inert validation fixture metadata
+- Phase 44.2 tests
+- README, roadmap, decision, extraction-plan, and current-state updates
+
+Blocked:
+
+- Runtime implementation
+- `lima/` changes
+- Sparkbot changes or wiring
+- `tests/support/` changes
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- real GuardianDecision creation
+- approval enforcement, execution, dispatch, persistence, mutation, external calls, model/tool/driver calls, robotics, adapters, hardware calls, physical-world behavior, background work, subprocesses, threads, queues, daemons, database writes, or hidden side effects
+
+Required proof:
+
+- source request -> typed IntentEnvelope candidate -> Guardian request coverage is validated as metadata-only
+- Guardian request remains non-authoritative and is not GuardianDecision
+- GuardianDecision remains absent/pending/blocked metadata only
+- no execution path, dispatch path, persistence path, model/tool/driver call path, or physical-world path exists in this lane
+- no concrete runtime gap is found
+- no `lima/` or `tests/support/` files are changed
+
+Recommended next lane:
+
+- Stop at review for Phase 44.2. Phase 44.3 requires Phil approval.
+
 ## Phase 32.4 Gate: Phase 32 Design Review Archive / Closeout
 
 Phase 32.4 archives Phase 32 as a completed docs/tests/fixtures-only design review.
