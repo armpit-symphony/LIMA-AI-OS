@@ -6348,3 +6348,26 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
 - Any future concrete acceptance-test implementation lane still requires separate Phil approval before touching `lima/`, `tests/support/`, runtime harness, or executable behavior.
+
+## ADR-0331: Phase 47.2 Opens Static Acceptance-Test Checklist Readiness Review
+
+Status: Accepted
+
+Decision:
+
+Phase 47.2 opens as docs/tests/fixtures-only static checklist readiness-review work over the completed Phase 47.1 static acceptance-test implementation checklist.
+
+Context:
+
+Phase 47.1 is complete and tagged on `main` as `phase-47.1-static-acceptance-test-implementation-checklist`. The next smallest safe step is readiness review before archive closeout, while runtime and harness implementation remain unapproved.
+
+Consequences:
+
+- Phase 47.2 may add readiness-review documentation, inert JSON review metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
+- If no SEV-1 or SEV-2 readiness gap is found, the recommended next lane is Phase 47.3 docs/tests/fixtures-only static checklist archive closeout.

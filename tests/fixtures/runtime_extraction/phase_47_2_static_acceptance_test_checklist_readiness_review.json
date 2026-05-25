@@ -1,0 +1,70 @@
+{
+  "phase": "47.2",
+  "status": "static_acceptance_test_checklist_readiness_review",
+  "docs_tests_fixtures_only": true,
+  "readiness_review_only": true,
+  "runtime_test_harness_created": false,
+  "actual_acceptance_tests_created": false,
+  "executable_acceptance_tests_created": false,
+  "phase_47_1_anchor": "e377000ee87867485fdfe79449dd0b69c51c6a38",
+  "phase_47_1_tag": "phase-47.1-static-acceptance-test-implementation-checklist",
+  "checklist_readiness_results": {
+    "phase_47_0_decision_b_carried_forward": true,
+    "docs_tests_fixtures_only_checklist_only_scope": true,
+    "phase_44_45_46_47_0_evidence_confirmed": true,
+    "blocks_lima_and_tests_support": true,
+    "blocks_runtime_harness_creation_or_activation": true,
+    "blocks_actual_or_executable_acceptance_tests": true,
+    "future_phil_approval_gates_explicit": true,
+    "runtime_implementation_recommended": false,
+    "runtime_implementation_approved": false,
+    "sev_1_blockers": [],
+    "sev_2_readiness_gaps": [],
+    "sev_3_cleanup_notes": [
+      "Optional token-name normalization across Phase 47 review fixtures."
+    ]
+  },
+  "readiness_decision": {
+    "decision": "ready_for_docs_tests_fixtures_only_static_archive_closeout",
+    "phase_47_3_archive_closeout_recommended": true,
+    "runtime_or_harness_implementation_approved": false
+  },
+  "future_approval_gates": [
+    "phil_approval_before_any_actual_acceptance_test_implementation",
+    "phil_approval_before_any_tests_support_change",
+    "phil_approval_before_any_lima_change",
+    "phil_approval_before_any_runtime_harness_creation_or_activation",
+    "phil_approval_before_any_real_bridge_behavior",
+    "phil_approval_before_guardian_decision_creation_or_approval_enforcement",
+    "phil_approval_before_execution_dispatch_persistence_model_tool_driver_external_calls",
+    "phil_approval_before_robotics_hardware_physical_world_behavior"
+  ],
+  "boundary_results": {
+    "runtime_bridge_behavior_added": false,
+    "runtime_test_harness_active": false,
+    "actual_acceptance_test_harness_behavior_added": false,
+    "executable_acceptance_tests_created": false,
+    "lima_changes": false,
+    "tests_support_changes": false,
+    "guardian_decision_created": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "model_tool_driver_calls_added": false,
+    "external_calls_added": false,
+    "shell_browser_network_file_mutation_added": false,
+    "robotics_physical_world_behavior_added": false,
+    "hidden_side_effects_added": false
+  },
+  "recommended_next_lane": "phase_47_3_docs_tests_fixtures_only_static_acceptance_test_checklist_archive_closeout",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "runtime_or_harness_implementation_approved": false,
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "47.3_requires_phil_approval"
+}
