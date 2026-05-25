@@ -10002,3 +10002,52 @@ Required proof:
 Recommended next lane:
 
 - Phase 47.3 docs/tests/fixtures-only static acceptance-test checklist archive closeout.
+
+## Phase 47.3 Gate: Static Acceptance-Test Checklist Archive Closeout
+
+Phase 47.3 archives the completed Phase 47.0 through Phase 47.2 docs/tests/fixtures-only static acceptance-test implementation preflight/checklist/readiness lane.
+
+Allowed:
+
+- Phase 47.3 documentation
+- Phase 47.3 inert checklist-archive-closeout fixture metadata
+- Phase 47.3 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 47.0 preflight review completion is recorded
+- Phase 47.1 static implementation checklist completion is recorded
+- Phase 47.2 checklist readiness review completion is recorded
+- no SEV-1 or SEV-2 readiness gap is recorded
+- only optional SEV-3 notes may remain
+- no runtime implementation is recommended
+- no future runtime implementation is approved
+- any future implementation lane requires a separate explicit Phil approval gate
+
+Recommended next lane:
+
+- merge/tag approval gate for the completed Phase 47 static acceptance-test lane; any future implementation lane remains blocked pending separate explicit Phil approval.
