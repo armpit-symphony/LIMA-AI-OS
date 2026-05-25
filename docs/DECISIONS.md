@@ -6395,3 +6395,27 @@ Consequences:
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
 - Runtime implementation remains not recommended.
 - Future runtime or harness implementation remains unapproved and requires separate explicit Phil approval.
+
+## ADR-0333: Phase 48.0 Opens An Implementation Gate Decision Charter
+
+Status: Accepted
+
+Decision:
+
+Phase 48.0 opens as docs/tests/fixtures-only implementation gate decision charter work after Phase 47.3 archived the static acceptance-test implementation preflight/checklist/readiness lane.
+
+Context:
+
+Phase 44 through Phase 47 created design, matrix, static plan, preflight, checklist, readiness, and archive evidence for a future typed bridge acceptance-test implementation decision. The next smallest safe step is to define the formal approval gate before any implementation lane, not to approve implementation.
+
+Consequences:
+
+- Phase 48.0 may add gate-charter documentation, inert JSON metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
+- Phase 48.0 does not approve implementation and does not recommend starting runtime.
+- Any future implementation lane requires separate explicit Phil approval with named file scope, rollback proof, audit proof, and stop conditions.
