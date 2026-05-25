@@ -9952,3 +9952,53 @@ Required proof:
 Recommended next lane:
 
 - Phase 47.2 docs/tests/fixtures-only static acceptance-test checklist readiness review.
+
+## Phase 47.2 Gate: Static Acceptance-Test Checklist Readiness Review
+
+Phase 47.2 reviews whether the Phase 47.1 static acceptance-test implementation checklist is complete and safe for archive/closeout.
+
+Allowed:
+
+- Phase 47.2 documentation
+- Phase 47.2 inert checklist-readiness-review fixture metadata
+- Phase 47.2 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 47.1 carried forward Phase 47.0 decision B
+- checklist scope is docs/tests/fixtures-only and checklist-only
+- checklist confirms Phase 44/45/46/47.0 evidence
+- checklist blocks `lima/` and `tests/support`
+- checklist blocks runtime harness creation and activation
+- checklist blocks actual and executable acceptance tests
+- future Phil approval gates remain explicit
+- no runtime implementation is recommended
+- no next runtime implementation is approved
+
+Recommended next lane:
+
+- Phase 47.3 docs/tests/fixtures-only static acceptance-test checklist archive closeout.
