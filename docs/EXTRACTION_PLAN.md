@@ -9855,3 +9855,53 @@ Required proof:
 Recommended next lane:
 
 - Phase 47 docs/tests/fixtures-only static acceptance-test planning archive or preflight review.
+
+## Phase 47.0 Gate: Static Acceptance-Test Implementation Preflight Review
+
+Phase 47.0 reviews whether the Phase 44 through Phase 46 planning stack is ready for a future separately approved concrete acceptance-test implementation checklist.
+
+Allowed:
+
+- Phase 47.0 documentation
+- Phase 47.0 inert preflight-review fixture metadata
+- Phase 47.0 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- reviewed stack includes Phase 44 typed bridge lane, Phase 45 acceptance-test lane, and Phase 46 static planning lane
+- design requirements, fixture matrix, dry-run plan, and readiness reviews are present
+- no SEV-1 or SEV-2 readiness blocker is recorded
+- archive closeouts preserve blocked runtime boundaries
+- no runtime implementation is currently approved
+- preflight decision does not approve runtime/test harness implementation
+- future approval gates explicitly require Phil approval before `lima/`, `tests/support/`, runtime harness, actual tests, real bridge behavior, GuardianDecision creation, approval enforcement, execution/dispatch/persistence, model/tool/driver calls, external calls, or robotics/physical-world behavior
+- no runtime implementation is recommended
+- no next runtime implementation is approved
+
+Recommended next lane:
+
+- Phase 47.1 docs/tests/fixtures-only static acceptance-test implementation checklist.
