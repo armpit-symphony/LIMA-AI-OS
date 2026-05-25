@@ -6278,3 +6278,27 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
 - If no SEV-1 or SEV-2 readiness gap is found, Phase 46.3 should remain docs/tests/fixtures-only archive closeout or static dry-run plan archive.
+
+## ADR-0328: Phase 46.3 Archives Static Acceptance-Test Planning Lane
+
+Status: Accepted
+
+Decision:
+
+Phase 46.3 opens as docs/tests/fixtures-only archive closeout for the completed Phase 46 static acceptance-test planning lane.
+
+Context:
+
+Phase 46.0 defined the static implementation-plan template. Phase 46.1 defined the static dry-run plan. Phase 46.2 readiness review found no SEV-1 blocker and no SEV-2 readiness gap.
+
+Consequences:
+
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, robotics, and hidden side effects remain blocked.
+- No runtime implementation is recommended.
+- No future runtime implementation is approved by this closeout.
+- Phase 47 should remain docs/tests/fixtures-only static planning/archive or preflight review work unless a separate approval gate changes scope.

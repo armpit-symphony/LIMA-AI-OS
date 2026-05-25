@@ -9807,3 +9807,51 @@ Required proof:
 Recommended next lane:
 
 - Phase 46.3 docs/tests/fixtures-only archive closeout or static dry-run implementation-plan archive.
+
+## Phase 46.3 Gate: Static Acceptance-Test Dry-Run Archive Closeout
+
+Phase 46.3 archives the completed Phase 46 docs/tests/fixtures-only static implementation-plan, dry-run plan, and readiness-review lane.
+
+Allowed:
+
+- Phase 46.3 documentation
+- Phase 46.3 inert archive-closeout fixture metadata
+- Phase 46.3 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 46.0 static implementation-plan template completion is recorded
+- Phase 46.1 static dry-run plan completion is recorded
+- Phase 46.2 static dry-run readiness review completion is recorded
+- no SEV-1 or SEV-2 readiness gap is recorded
+- only optional SEV-3 notes may remain
+- no runtime implementation is recommended
+- no next runtime implementation is approved
+
+Recommended next lane:
+
+- Phase 47 docs/tests/fixtures-only static acceptance-test planning archive or preflight review.

@@ -1,0 +1,86 @@
+{
+  "phase": "46.3",
+  "status": "static_acceptance_test_dry_run_archive_closeout",
+  "docs_tests_fixtures_only": true,
+  "archive_closeout_only": true,
+  "runtime_test_harness_created": false,
+  "actual_acceptance_tests_created": false,
+  "executable_acceptance_tests_created": false,
+  "phase_46_2_anchor": "2191d8281b5d115f770392d3ce9d8752e1071630",
+  "phase_46_2_tag": "phase-46.2-static-acceptance-test-dry-run-readiness-review",
+  "completed_phases": [
+    "46.0",
+    "46.1",
+    "46.2",
+    "46.3"
+  ],
+  "completed_scope": [
+    "phase_46_0_static_acceptance_test_implementation_plan_template",
+    "phase_46_1_static_acceptance_test_dry_run_plan",
+    "phase_46_2_static_acceptance_test_dry_run_readiness_review",
+    "phase_46_3_static_acceptance_test_dry_run_archive_closeout"
+  ],
+  "evidence_summary": {
+    "phase_46_0_static_template_defined": true,
+    "phase_46_1_static_dry_run_plan_defined": true,
+    "phase_46_2_readiness_review_no_sev_1_or_sev_2_gaps": true,
+    "phase_46_2_only_optional_sev_3_notes": true
+  },
+  "gap_summary": {
+    "sev_1_blockers": [],
+    "sev_2_readiness_gaps": [],
+    "sev_3_cleanup_notes": [
+      "Optional canonical dry-run case ordering may reduce reviewer variance.",
+      "Optional short stop-condition token glossary may reduce interpretation drift."
+    ]
+  },
+  "boundary_results": {
+    "runtime_bridge_behavior_added": false,
+    "runtime_test_harness_active": false,
+    "actual_acceptance_test_harness_behavior_added": false,
+    "executable_acceptance_tests_created": false,
+    "lima_changes": false,
+    "tests_support_changes": false,
+    "guardian_decision_created": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "model_tool_driver_calls_added": false,
+    "external_calls_added": false,
+    "shell_browser_network_file_mutation_added": false,
+    "robotics_physical_world_behavior_added": false,
+    "hidden_side_effects_added": false
+  },
+  "recommended_next_lane": "phase_47_docs_tests_fixtures_only_static_acceptance_test_planning_archive_or_preflight_review",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "blocked_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "runtime_test_harness_creation_or_activation",
+    "actual_acceptance_test_harness_behavior",
+    "executable_runtime_bridge_acceptance_tests",
+    "sparkbot_wiring",
+    "arc_bot_implementation",
+    "humaninput_bridge_behavior",
+    "live_adapters",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence",
+    "model_tool_driver_calls",
+    "external_calls",
+    "shell_browser_network_file_mutation",
+    "robotics_hardware_control_physical_world_behavior",
+    "background_workers_queues_daemons_subprocesses_threads_database_writes_hidden_side_effects"
+  ],
+  "runtime_gap_found": false,
+  "runtime_change_needed": false,
+  "lima_change_needed": false,
+  "tests_support_change_needed": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false,
+  "next_phase": "47_requires_phil_approval"
+}

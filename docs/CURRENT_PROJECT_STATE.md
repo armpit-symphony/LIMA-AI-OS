@@ -758,10 +758,21 @@ Do not merge or tag from a routine implementation thread.
 ## Phase 46.2 - Static Acceptance-Test Dry-Run Readiness Review
 
 - branch: `phase-46-2-static-acceptance-test-dry-run-readiness-review`
-- status: docs/tests/fixtures-only static dry-run readiness review in progress
+- status: complete, merged to `main`, and tagged as `phase-46.2-static-acceptance-test-dry-run-readiness-review`
 - runtime implementation: blocked
 - runtime test harness: not created
 - executable acceptance tests: not added
 - `lima/` changes in phase lane: not allowed
 - `tests/support/` changes in phase lane: not allowed
 - recommended next lane (post-approval): Phase 46.3 docs/tests/fixtures-only archive closeout or static dry-run plan archive
+
+## Phase 46.3 - Static Acceptance-Test Dry-Run Archive Closeout
+
+- branch: `phase-46-3-static-acceptance-test-dry-run-archive-closeout`
+- status: docs/tests/fixtures-only static dry-run archive closeout in progress
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 47 docs/tests/fixtures-only static acceptance-test planning archive or preflight review
