@@ -8967,5 +8967,25 @@ Result:
 
 Status:
 
-- prepared on `phase-47-3-static-acceptance-test-checklist-archive-closeout`
+- complete
+- tagged as `phase-47.3-static-acceptance-test-checklist-archive-closeout`
+
+## Phase 48.0 - Implementation Gate Decision Charter
+
+Goal:
+
+- Define the formal decision gate that must be passed before any future implementation lane can begin.
+- State what a later Phil approval would need to approve explicitly.
+- Preserve that implementation remains blocked by default.
+
+Result:
+
+- Phase 48.0 is docs/tests/fixtures-only implementation gate charter metadata.
+- It records reviewed evidence from Phases 44, 45, 46, and 47.
+- It defines future decision options, future implementation preconditions, and fail-closed stop conditions.
+- Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, and `tests/support/` changes remain unapproved.
+
+Status:
+
+- prepared on `phase-48-0-implementation-gate-decision-charter`
 - not merged or tagged

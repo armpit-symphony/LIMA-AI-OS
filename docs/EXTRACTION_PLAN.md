@@ -10051,3 +10051,54 @@ Required proof:
 Recommended next lane:
 
 - merge/tag approval gate for the completed Phase 47 static acceptance-test lane; any future implementation lane remains blocked pending separate explicit Phil approval.
+
+## Phase 48.0 Gate: Implementation Gate Decision Charter
+
+Phase 48.0 defines the formal decision gate that must be passed before any future implementation lane can begin.
+
+Allowed:
+
+- Phase 48.0 documentation
+- Phase 48.0 inert implementation-gate decision-charter fixture metadata
+- Phase 48.0 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- concrete implementation work
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 44, 45, 46, and 47 evidence is reviewed
+- current decision approves no implementation surfaces
+- valid future decision options include pause/preserve and docs-only readiness/design reviews
+- any future implementation requires explicit Phil approval
+- any future implementation approval must name allowed files and forbidden files
+- rollback, validation, audit, pre-merge audit, and post-merge verification requirements are explicit
+- stop conditions cover unapproved runtime, harness, executable-test, GuardianDecision, enforcement, execution, dispatch, persistence, call, wiring, robotics, failed-validation, dirty-worktree, branch/head, and base/tag failures
+- no runtime implementation is recommended
+- no next runtime implementation is approved
+
+Recommended next lane:
+
+- pause/preserve, or Phase 48.1 docs/tests/fixtures-only implementation gate readiness review after separate explicit Phil approval.
