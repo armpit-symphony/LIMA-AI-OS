@@ -802,10 +802,21 @@ Do not merge or tag from a routine implementation thread.
 ## Phase 47.2 - Static Acceptance-Test Checklist Readiness Review
 
 - branch: `phase-47-2-static-acceptance-test-checklist-readiness-review`
-- status: docs/tests/fixtures-only static acceptance-test checklist readiness review in progress
+- status: complete, merged to `main`, and tagged as `phase-47.2-static-acceptance-test-checklist-readiness-review`
 - runtime implementation: blocked
 - runtime test harness: not created
 - executable acceptance tests: not added
 - `lima/` changes in phase lane: not allowed
 - `tests/support/` changes in phase lane: not allowed
 - recommended next lane (post-approval): Phase 47.3 docs/tests/fixtures-only static acceptance-test checklist archive closeout
+
+## Phase 47.3 - Static Acceptance-Test Checklist Archive Closeout
+
+- branch: `phase-47-3-static-acceptance-test-checklist-archive-closeout`
+- status: docs/tests/fixtures-only static acceptance-test checklist archive closeout in progress
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): merge/tag approval gate for the Phase 47 static acceptance-test lane; any future implementation lane requires separate explicit Phil approval
