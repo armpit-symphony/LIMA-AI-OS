@@ -2,12 +2,12 @@
 
 Phase 48.1 reviews whether the Phase 48.0 implementation gate decision charter is complete, internally consistent, and safe to govern any future implementation decision.
 
-This phase is docs/tests/fixtures-only.  
-This phase is not implementation.  
-This phase does not create or activate a runtime test harness.  
-This phase does not create executable acceptance tests.  
-This phase does not modify `lima/`.  
-This phase does not modify `tests/support/`.  
+This phase is docs/tests/fixtures-only.
+This phase is not implementation.
+This phase does not create or activate a runtime test harness.
+This phase does not create executable acceptance tests.
+This phase does not modify `lima/`.
+This phase does not modify `tests/support/`.
 This phase does not modify Sparkbot Shell.
 
 ## Mission
