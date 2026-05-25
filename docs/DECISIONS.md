@@ -6302,3 +6302,26 @@ Consequences:
 - No runtime implementation is recommended.
 - No future runtime implementation is approved by this closeout.
 - Phase 47 should remain docs/tests/fixtures-only static planning/archive or preflight review work unless a separate approval gate changes scope.
+
+## ADR-0329: Phase 47.0 Opens Static Acceptance-Test Implementation Preflight Review
+
+Status: Accepted
+
+Decision:
+
+Phase 47.0 opens as docs/tests/fixtures-only static acceptance-test implementation preflight review over the completed Phase 44 through Phase 46 planning stack.
+
+Context:
+
+Phase 44 archived typed bridge design/fixture/review/archive work, Phase 45 archived acceptance-test design/matrix/readiness/archive work, and Phase 46 archived static implementation-plan/dry-run/readiness/archive work. The next smallest safe step is preflight review for checklist readiness, not runtime or harness implementation.
+
+Consequences:
+
+- Phase 47.0 may add docs, inert JSON metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
+- Default preflight decision is ready for docs/tests/fixtures-only static implementation checklist planning, while runtime implementation remains unapproved unless separately approved by Phil.
