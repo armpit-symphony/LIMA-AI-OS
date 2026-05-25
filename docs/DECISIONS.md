@@ -6325,3 +6325,59 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
 - Default preflight decision is ready for docs/tests/fixtures-only static implementation checklist planning, while runtime implementation remains unapproved unless separately approved by Phil.
+
+## ADR-0330: Phase 47.1 Defines Static Acceptance-Test Implementation Checklist
+
+Status: Accepted
+
+Decision:
+
+Phase 47.1 is a docs/tests/fixtures-only static checklist lane that defines what future acceptance-test implementation must prove without implementing runtime behavior.
+
+Context:
+
+Phase 47.0 preflight concluded the planning stack is adequate for checklist drafting and still fail-closed.
+
+Consequences:
+
+- Shared sequence is locked as:
+  - `ConsumerRequest -> TypedIntentEnvelope or TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
+- Required refs are locked:
+  - `consumer_profile`, `embodiment_profile`, `approval_posture`, `evidence_ref`
+- Invariants remain fail-closed and non-authoritative.
+- Runtime implementation remains blocked.
+
+## ADR-0331: Phase 47.2 Readiness Review Finds No Checklist Blocker
+
+Status: Accepted
+
+Decision:
+
+Phase 47.2 confirms the Phase 47.1 checklist is adequate for archive closeout and records no SEV-1 or SEV-2 blockers.
+
+Context:
+
+The checklist includes required sequence/refs, invariant naming/value alignment, Guardian ownership boundary, and forbidden scope.
+
+Consequences:
+
+- Docs/tests/fixtures-only continuation is approved for archive closeout.
+- Runtime implementation remains blocked.
+
+## ADR-0332: Phase 47.3 Archives Static Preflight Lane And Preserves Approval Gate
+
+Status: Accepted
+
+Decision:
+
+Phase 47.3 archives Phase 47.0 through Phase 47.2 as completed docs/tests/fixtures-only preflight work.
+
+Context:
+
+Preflight review, checklist definition, and readiness review are complete with fail-closed boundaries preserved.
+
+Consequences:
+
+- No `lima/` runtime behavior changes are approved.
+- No `tests/support/` behavior changes are approved.
+- Any future implementation lane requires explicit Phil approval.

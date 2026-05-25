@@ -1,0 +1,97 @@
+{
+  "phase": "47.1",
+  "status": "static_acceptance_test_implementation_checklist",
+  "docs_tests_fixtures_only": true,
+  "checklist_only": true,
+  "runtime_test_harness_created": false,
+  "actual_acceptance_tests_created": false,
+  "executable_acceptance_tests_created": false,
+  "phase_47_0_anchor": "e9f6c0f7d77e5604209a2001a326e3956d667f52",
+  "phase_47_0_branch": "phase-47-0-static-acceptance-test-implementation-preflight-review",
+  "required_shared_sequence": [
+    "ConsumerRequest",
+    "TypedIntentEnvelope_or_TaskIntent",
+    "CandidatePreview",
+    "RuntimeStateSnapshot"
+  ],
+  "required_sequence_refs": [
+    "consumer_profile",
+    "embodiment_profile",
+    "approval_posture",
+    "evidence_ref"
+  ],
+  "required_invariants": {
+    "preview_only": true,
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "execution_allowed": false,
+    "side_effects_permitted": false,
+    "approval_granted": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "model_provider_calls_allowed": false,
+    "connector_calls_allowed": false,
+    "runtime_active": false,
+    "human_input_bridge_active": false,
+    "live_adapter_active": false,
+    "robotics_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false,
+    "guardian_decision_created": false,
+    "adapter_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "audit_storage_written": false
+  },
+  "runtime_ladder_vocabulary": [
+    "preview_only",
+    "explain_plan",
+    "approval_required",
+    "approved_not_dispatched",
+    "dispatch_ready",
+    "executing",
+    "completed",
+    "audited",
+    "blocked",
+    "deferred"
+  ],
+  "mock_safe_active_states": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "guardian_ownership_boundary": {
+    "lima_describes_approval_posture_only": true,
+    "guardian_owns_real_approval_state": true,
+    "consumer_displays_posture_only": true,
+    "adapter_execution_requires_future_explicit_handoff_approval": true
+  },
+  "future_fixture_requirements": {
+    "consumer_profile_structured_required": true,
+    "embodiment_profile_required_on_every_candidate_preview": true,
+    "approval_posture_required": true,
+    "evidence_ref_required": true
+  },
+  "forbidden_scope": [
+    "runtime_implementation",
+    "lima_changes",
+    "tests_support_changes",
+    "runtime_test_harness_creation_or_activation",
+    "executable_runtime_bridge_acceptance_tests",
+    "guardian_decision_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence",
+    "model_tool_driver_adapter_calls",
+    "sparkbot_arc_live_wiring",
+    "robotics_physical_world_behavior",
+    "shell_browser_network_file_mutation",
+    "external_calls"
+  ],
+  "recommended_next_lane": "phase_47_2_docs_tests_fixtures_only_static_checklist_readiness_review",
+  "runtime_implementation_recommended": false,
+  "next_runtime_implementation_approved": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_behavior_changed": false
+}

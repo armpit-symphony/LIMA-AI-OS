@@ -9905,3 +9905,116 @@ Required proof:
 Recommended next lane:
 
 - Phase 47.1 docs/tests/fixtures-only static acceptance-test implementation checklist.
+
+## Phase 47.1 Gate: Static Acceptance-Test Implementation Checklist
+
+Phase 47.1 defines a docs/tests/fixtures-only static checklist for future typed bridge acceptance-test implementation.
+
+Allowed:
+
+- Phase 47.1 documentation
+- Phase 47.1 inert checklist fixture metadata
+- Phase 47.1 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver/adapter calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+
+Required proof:
+
+- shared sequence is explicit (`ConsumerRequest -> TypedIntentEnvelope or TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`)
+- required refs are explicit (`consumer_profile`, `embodiment_profile`, `approval_posture`, `evidence_ref`)
+- fail-closed invariants are explicit and aligned
+- Guardian ownership boundary is explicit
+- runtime ladder vocabulary and mock-safe active states are explicit
+
+Recommended next lane:
+
+- Phase 47.2 docs/tests/fixtures-only static checklist readiness review.
+
+## Phase 47.2 Gate: Static Acceptance-Test Implementation Checklist Readiness Review
+
+Phase 47.2 reviews Phase 47.1 checklist completeness and fail-closed boundaries.
+
+Allowed:
+
+- Phase 47.2 documentation
+- Phase 47.2 inert readiness fixture metadata
+- Phase 47.2 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver/adapter calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+
+Required proof:
+
+- no SEV-1 blockers
+- no SEV-2 readiness gaps
+- checklist coverage is complete for sequence, refs, invariants, and boundaries
+
+Recommended next lane:
+
+- Phase 47.3 docs/tests/fixtures-only static preflight archive closeout.
+
+## Phase 47.3 Gate: Static Acceptance-Test Implementation Preflight Archive / Closeout
+
+Phase 47.3 archives Phase 47.0 through Phase 47.2 as completed docs/tests/fixtures-only preflight work.
+
+Allowed:
+
+- Phase 47.3 documentation
+- Phase 47.3 inert archive fixture metadata
+- Phase 47.3 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver/adapter calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+
+Required proof:
+
+- completed scope includes Phase 47.0, 47.1, 47.2, 47.3
+- no runtime or support-path behavior was added
+- no SEV-1 or SEV-2 blockers remain
+
+Recommended next lane:
+
+- explicit Phil approval gate before any implementation lane.

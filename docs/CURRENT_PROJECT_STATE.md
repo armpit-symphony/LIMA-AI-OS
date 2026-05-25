@@ -780,10 +780,43 @@ Do not merge or tag from a routine implementation thread.
 ## Phase 47.0 - Static Acceptance-Test Implementation Preflight Review
 
 - branch: `phase-47-0-static-acceptance-test-implementation-preflight-review`
-- status: docs/tests/fixtures-only static implementation preflight review in progress
+- status: docs/tests/fixtures-only static implementation preflight review complete on branch
 - runtime implementation: blocked
 - runtime test harness: not created
 - executable acceptance tests: not added
 - `lima/` changes in phase lane: not allowed
 - `tests/support/` changes in phase lane: not allowed
 - recommended next lane (post-approval): Phase 47.1 docs/tests/fixtures-only static acceptance-test implementation checklist
+
+## Phase 47.1 - Static Acceptance-Test Implementation Checklist
+
+- branch: `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- status: docs/tests/fixtures-only static checklist defined on branch
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 47.2 docs/tests/fixtures-only static checklist readiness review
+
+## Phase 47.2 - Static Acceptance-Test Implementation Checklist Readiness Review
+
+- branch: `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- status: docs/tests/fixtures-only static checklist readiness review complete on branch
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): Phase 47.3 docs/tests/fixtures-only static preflight archive closeout
+
+## Phase 47.3 - Static Acceptance-Test Implementation Preflight Archive / Closeout
+
+- branch: `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- status: docs/tests/fixtures-only static preflight lane archived on branch
+- runtime implementation: blocked
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- recommended next lane (post-approval): explicit Phil approval gate before any implementation lane

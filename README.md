@@ -991,3 +991,59 @@ Status:
 
 - prepared on `phase-47-0-static-acceptance-test-implementation-preflight-review`
 - not merged or tagged
+
+## Phase 47.1 - Static Acceptance-Test Implementation Checklist
+
+Goal:
+
+- Define the static checklist for a future separately approved acceptance-test implementation lane.
+- Keep this lane docs/tests/fixtures-only and fail-closed.
+
+Result:
+
+- Required shared sequence is explicit:
+  - `ConsumerRequest -> TypedIntentEnvelope or TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
+- Required refs are explicit:
+  - `consumer_profile`, `embodiment_profile`, `approval_posture`, `evidence_ref`
+- Required invariant names and fail-closed values are explicit.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- not merged or tagged
+
+## Phase 47.2 - Static Acceptance-Test Implementation Checklist Readiness Review
+
+Goal:
+
+- Review readiness of the Phase 47.1 static checklist before archive closeout.
+
+Result:
+
+- No SEV-1 blockers and no SEV-2 readiness gaps.
+- Checklist is adequate for docs/tests/fixtures-only archive continuation.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- not merged or tagged
+
+## Phase 47.3 - Static Acceptance-Test Implementation Preflight Archive / Closeout
+
+Goal:
+
+- Archive Phase 47.0 through Phase 47.2 as completed docs/tests/fixtures-only preflight work.
+
+Result:
+
+- Preflight, checklist, and readiness review are archived.
+- No runtime behavior was added.
+- No `lima/` or `tests/support/` changes were made.
+- Runtime implementation remains blocked and requires new explicit Phil approval.
+
+Status:
+
+- prepared on `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- not merged or tagged
