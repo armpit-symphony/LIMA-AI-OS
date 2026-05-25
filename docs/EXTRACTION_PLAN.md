@@ -9905,3 +9905,50 @@ Required proof:
 Recommended next lane:
 
 - Phase 47.1 docs/tests/fixtures-only static acceptance-test implementation checklist.
+
+## Phase 47.1 Gate: Static Acceptance-Test Implementation Checklist
+
+Phase 47.1 converts the Phase 47.0 preflight decision into an exact docs/tests/fixtures-only static checklist for a future separately approved typed bridge acceptance-test implementation lane.
+
+Allowed:
+
+- Phase 47.1 documentation
+- Phase 47.1 inert checklist fixture metadata
+- Phase 47.1 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- `lima/` changes
+- `tests/support/` changes
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Sparkbot wiring
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- checklist confirms Phase 47.0 decision B was adopted
+- checklist item groups cover scope, preconditions, validation, rollback, and fail-closed stop criteria
+- checklist explicitly keeps runtime/test harness/executable behavior blocked
+- checklist preserves required Phil approval gates before any runtime, `lima/`, `tests/support/`, or executable acceptance-test behavior
+- no runtime implementation is recommended
+- no next runtime implementation is approved
+
+Recommended next lane:
+
+- Phase 47.2 docs/tests/fixtures-only static acceptance-test checklist readiness review.

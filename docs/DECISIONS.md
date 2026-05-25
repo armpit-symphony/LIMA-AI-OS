@@ -6325,3 +6325,26 @@ Consequences:
 - No `tests/support/` changes are approved.
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
 - Default preflight decision is ready for docs/tests/fixtures-only static implementation checklist planning, while runtime implementation remains unapproved unless separately approved by Phil.
+
+## ADR-0330: Phase 47.1 Opens Static Acceptance-Test Implementation Checklist
+
+Status: Accepted
+
+Decision:
+
+Phase 47.1 opens as docs/tests/fixtures-only static acceptance-test implementation checklist work based on the Phase 47.0 preflight decision.
+
+Context:
+
+Phase 47.0 is complete and tagged on `main` as `phase-47.0-static-acceptance-test-implementation-preflight-review` and selected decision B: ready for docs/tests/fixtures-only checklist planning, while runtime and harness implementation remain unapproved.
+
+Consequences:
+
+- Phase 47.1 may add checklist documentation, inert JSON checklist metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
+- Any future concrete acceptance-test implementation lane still requires separate Phil approval before touching `lima/`, `tests/support/`, runtime harness, or executable behavior.

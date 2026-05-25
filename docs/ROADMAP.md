@@ -8907,5 +8907,25 @@ Result:
 
 Status:
 
-- prepared on `phase-47-0-static-acceptance-test-implementation-preflight-review`
+- complete
+- tagged as `phase-47.0-static-acceptance-test-implementation-preflight-review`
+
+## Phase 47.1 - Static Acceptance-Test Implementation Checklist
+
+Goal:
+
+- Convert the Phase 47.0 preflight decision into a concrete docs/tests/fixtures-only static checklist for a future separately approved typed bridge acceptance-test implementation lane.
+- Preserve fail-closed boundaries so no runtime, harness, or executable acceptance-test behavior can be introduced by checklist work.
+
+Result:
+
+- Phase 47.1 is docs/tests/fixtures-only static checklist metadata.
+- No runtime bridge behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- Runtime implementation remains blocked.
+
+Status:
+
+- prepared on `phase-47-1-static-acceptance-test-implementation-checklist`
 - not merged or tagged
