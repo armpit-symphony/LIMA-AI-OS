@@ -6419,3 +6419,29 @@ Consequences:
 - GuardianDecision creation, approval enforcement, execution, dispatch, persistence, model/tool/driver calls, external calls, shell/browser/network/file mutation, robotics, and hidden side effects remain blocked.
 - Phase 48.0 does not approve implementation and does not recommend starting runtime.
 - Any future implementation lane requires separate explicit Phil approval with named file scope, rollback proof, audit proof, and stop conditions.
+
+## ADR-0334: Phase 48.1 Opens Implementation Gate Readiness Review
+
+Status: Accepted
+
+Decision:
+
+Phase 48.1 opens as docs/tests/fixtures-only implementation gate readiness-review work over the completed Phase 48.0 implementation gate decision charter.
+
+Context:
+
+Phase 48.0 established the formal decision gate requirements before any future implementation lane. The next smallest safe step is to verify readiness of that gate itself before any implementation design or approval path is considered.
+
+Consequences:
+
+- Phase 48.1 may add readiness-review documentation, inert JSON metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No actual or executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- No Sparkbot Shell modification or wiring is approved.
+- Sparkbot Shell public/open-source preview alignment may continue only as non-authoritative mock/display-only contract guidance.
+- Implementation approval remains false.
+- Runtime implementation remains not recommended.
+- Any future implementation lane remains blocked pending separate explicit Phil approval.

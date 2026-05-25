@@ -10102,3 +10102,55 @@ Required proof:
 Recommended next lane:
 
 - pause/preserve, or Phase 48.1 docs/tests/fixtures-only implementation gate readiness review after separate explicit Phil approval.
+
+## Phase 48.1 Gate: Implementation Gate Readiness Review
+
+Phase 48.1 reviews whether the Phase 48.0 implementation gate decision charter is complete, internally consistent, and safe to govern any future implementation decision.
+
+Allowed:
+
+- Phase 48.1 documentation
+- Phase 48.1 inert implementation-gate readiness-review fixture metadata
+- Phase 48.1 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- concrete implementation work
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot Shell modification
+- Sparkbot wiring
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- Phase 48.0 gate charter is complete enough to govern a future implementation decision
+- approval requirements are explicit enough
+- stop conditions are complete
+- file-scope and rollback requirements are clear
+- charter protections cover accidental runtime/harness/`lima/`/`tests/support`/approval/dispatch/persistence/robotics work
+- Sparkbot Shell preview alignment is limited to non-authoritative mock/display-only contract guidance
+- implementation approval remains false
+- runtime implementation remains not recommended
+- future implementation remains blocked pending separate explicit Phil approval
+
+Recommended next lane:
+
+- pause/preserve by default, or docs/tests/fixtures-only concrete implementation design review after separate explicit Phil approval.

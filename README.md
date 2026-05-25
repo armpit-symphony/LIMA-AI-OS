@@ -1068,5 +1068,24 @@ Result:
 
 Status:
 
-- prepared on `phase-48-0-implementation-gate-decision-charter`
+- complete
+- tagged as `phase-48.0-implementation-gate-decision-charter`
+
+## Phase 48.1 - Implementation Gate Readiness Review
+
+Goal:
+
+- Review whether the Phase 48.0 implementation gate decision charter is complete, internally consistent, and safe to govern future implementation decisions.
+- Keep this lane docs/tests/fixtures-only and non-implementing.
+
+Result:
+
+- Phase 48.1 is docs/tests/fixtures-only implementation gate readiness metadata.
+- It confirms approval requirements, stop conditions, file-scope requirements, and rollback requirements are explicit enough for a future decision gate.
+- It confirms Sparkbot Shell public/open-source preview alignment may continue only as non-authoritative mock/display-only contract guidance.
+- It does not approve runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, or Sparkbot wiring/modification.
+
+Status:
+
+- prepared on `phase-48-1-implementation-gate-readiness-review`
 - not merged or tagged
