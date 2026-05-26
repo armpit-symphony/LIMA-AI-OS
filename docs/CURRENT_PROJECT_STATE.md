@@ -836,7 +836,7 @@ Do not merge or tag from a routine implementation thread.
 ## Phase 48.1 - Implementation Gate Readiness Review
 
 - branch: `phase-48-1-implementation-gate-readiness-review`
-- status: docs/tests/fixtures-only implementation gate readiness review in progress
+- status: complete, merged to `main`, and tagged as `phase-48.1-implementation-gate-readiness-review`
 - runtime implementation: blocked
 - implementation approval: not granted
 - runtime test harness: not created
@@ -845,3 +845,16 @@ Do not merge or tag from a routine implementation thread.
 - `tests/support/` changes in phase lane: not allowed
 - Sparkbot Shell modifications in phase lane: not allowed
 - recommended next lane (post-approval): pause/preserve or docs/tests/fixtures-only concrete implementation design review; implementation still requires separate explicit Phil approval
+
+## Phase 48.2 - Concrete Implementation Design Review
+
+- branch: `phase-48-2-concrete-implementation-design-review`
+- status: docs/tests/fixtures-only concrete implementation design review in progress
+- runtime implementation: blocked
+- implementation approval: not granted
+- runtime test harness: not created
+- executable acceptance tests: not added
+- `lima/` changes in phase lane: not allowed
+- `tests/support/` changes in phase lane: not allowed
+- Sparkbot Shell modifications in phase lane: not allowed
+- recommended next lane (post-approval): pause/preserve or Phase 48.3 docs/tests/fixtures-only design readiness review; no implementation lane without separate explicit Phil approval
