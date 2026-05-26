@@ -10154,3 +10154,56 @@ Required proof:
 Recommended next lane:
 
 - pause/preserve by default, or docs/tests/fixtures-only concrete implementation design review after separate explicit Phil approval.
+
+## Phase 48.2 Gate: Concrete Implementation Design Review
+
+Phase 48.2 designs the first possible concrete implementation lane after Phase 48.1 without approving or implementing it.
+
+Allowed:
+
+- Phase 48.2 documentation
+- Phase 48.2 inert concrete implementation design-review fixture metadata
+- Phase 48.2 deterministic static tests
+- README/roadmap/decision/current-state/extraction-plan updates
+
+Blocked:
+
+- runtime implementation
+- concrete implementation work
+- `lima/` changes
+- `tests/support/` changes
+- Sparkbot Shell changes
+- Sparkbot wiring
+- runtime test harness creation or activation
+- actual acceptance-test harness behavior
+- executable runtime bridge acceptance tests
+- Arc Bot implementation
+- HumanInput bridge behavior
+- live adapters
+- real IntentCompiler behavior
+- real Guardian request runtime behavior
+- GuardianDecision creation
+- approval enforcement
+- execution, dispatch, persistence
+- model/tool/driver calls
+- external calls
+- shell/browser/network/file mutation
+- robotics/hardware/physical-world behavior
+- background workers, queues, daemons, subprocesses, threads, database writes, hidden side effects
+
+Required proof:
+
+- reviewed phase is Phase 48.1
+- proposed first implementation lane is design-only and unapproved
+- candidate future allowed files are named but not created
+- forbidden future file scope includes `lima/`, `tests/support/`, Sparkbot Shell, adapters, drivers, persistence, runtime dispatch, robotics/IoT, mutation paths, and background execution surfaces
+- behavior boundaries block real IntentCompiler behavior, GuardianDecision creation, approval enforcement, execution/dispatch/persistence, model/tool/driver/external calls, Sparkbot runtime integration, Guardian approval/enforcement claims, robotics/physical-world behavior, and hidden side effects
+- Sparkbot Shell implications remain mock/display/non-authoritative only
+- required future approval packet includes Phil approval, exact file lists, rollback, validation, independent audit, post-merge verification, active-allowance scan, and hidden side-effect scan
+- implementation approval remains false
+- runtime implementation remains not recommended
+- future implementation remains blocked pending separate explicit Phil approval
+
+Recommended next lane:
+
+- pause/preserve by default, or Phase 48.3 docs/tests/fixtures-only design readiness review after separate explicit Phil approval.

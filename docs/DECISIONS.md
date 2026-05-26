@@ -6445,3 +6445,30 @@ Consequences:
 - Implementation approval remains false.
 - Runtime implementation remains not recommended.
 - Any future implementation lane remains blocked pending separate explicit Phil approval.
+
+## ADR-0335: Phase 48.2 Opens Concrete Implementation Design Review
+
+Status: Accepted
+
+Decision:
+
+Phase 48.2 opens as docs/tests/fixtures-only concrete implementation design-review work after Phase 48.1 confirmed the implementation gate charter is ready to govern future decisions.
+
+Context:
+
+Sparkbot Shell needs clearer LIMA alignment for public/open-source preview work, but LIMA runtime implementation remains blocked. The next smallest safe step is to design the first possible concrete implementation lane without approving or implementing it.
+
+Consequences:
+
+- Phase 48.2 may add design-review documentation, inert JSON metadata, deterministic tests, and tracking-file updates only.
+- No runtime behavior is implemented.
+- No runtime test harness is created or activated.
+- No executable runtime bridge acceptance tests are created.
+- No `lima/` changes are approved.
+- No `tests/support/` changes are approved.
+- No Sparkbot Shell changes or wiring are approved.
+- Candidate future files may be named but must not be created by Phase 48.2.
+- Sparkbot Shell may use LIMA vocabulary only as non-authoritative mock/display-only preview guidance.
+- Implementation approval remains false.
+- Runtime implementation remains not recommended.
+- Any future implementation lane remains blocked pending separate explicit Phil approval.
