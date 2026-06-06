@@ -8,13 +8,27 @@ from .candidate_status import (
 )
 from .candidate_preview import CandidatePreview, preview_candidate
 from .intake_candidate import IntakeCandidateError, build_intake_candidate
+from .kernel import LimaKernel
+from .plugin_contract import (
+    CapabilityProfile,
+    ExecutionResult,
+    GuardianStubDecision,
+    KernelEvent,
+    KernelRequest,
+)
 from .runtime_state import RuntimeStateSnapshot, inspect_runtime_state
 
 __all__ = [
     "ALLOWED_CANDIDATE_STATUSES",
+    "CapabilityProfile",
     "CandidatePreview",
     "CandidateStatusError",
+    "ExecutionResult",
+    "GuardianStubDecision",
     "IntakeCandidateError",
+    "KernelEvent",
+    "KernelRequest",
+    "LimaKernel",
     "RuntimeStateSnapshot",
     "build_intake_candidate",
     "inspect_runtime_state",
