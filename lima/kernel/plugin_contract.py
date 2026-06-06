@@ -29,6 +29,26 @@ class CapabilityProfile:
     robotics_actuation: bool = False
     drone_actuation: bool = False
     scheduler_run: bool = False
+    connection_discovery: bool = False
+    network_discovery: bool = False
+    wifi_discovery: bool = False
+    bluetooth_discovery: bool = False
+    ble_discovery: bool = False
+    lan_discovery: bool = False
+    usb_discovery: bool = False
+    serial_discovery: bool = False
+    iot_discovery: bool = False
+    mdns_discovery: bool = False
+    mqtt_discovery: bool = False
+    matter_discovery: bool = False
+    device_discovery: bool = False
+    robotics_endpoint_discovery: bool = False
+    drone_endpoint_discovery: bool = False
+    connection_attempt: bool = False
+    device_pairing: bool = False
+    credential_use: bool = False
+    iot_control: bool = False
+    physical_world_actuation: bool = False
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -123,6 +143,12 @@ class ExecutionResult:
     persistence_allowed: bool = False
     model_calls_allowed: bool = False
     model_calls_executed: bool = False
+    live_discovery_executed: bool = False
+    connection_attempted: bool = False
+    pairing_attempted: bool = False
+    credentials_used: bool = False
+    session_opened: bool = False
+    device_control_executed: bool = False
     physical_world_allowed: bool = False
     physical_world_executed: bool = False
     guardian_decision_created: bool = False

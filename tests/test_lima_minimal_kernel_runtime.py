@@ -49,6 +49,12 @@ def _assert_non_execution_invariants(result: object) -> None:
     assert result.persistence_allowed is False
     assert result.model_calls_allowed is False
     assert result.model_calls_executed is False
+    assert result.live_discovery_executed is False
+    assert result.connection_attempted is False
+    assert result.pairing_attempted is False
+    assert result.credentials_used is False
+    assert result.session_opened is False
+    assert result.device_control_executed is False
     assert result.physical_world_allowed is False
     assert result.physical_world_executed is False
     assert result.guardian_decision_created is False

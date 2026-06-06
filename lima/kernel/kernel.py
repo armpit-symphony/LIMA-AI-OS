@@ -30,7 +30,39 @@ APPROVAL_REQUIRED_CAPABILITIES: Final[frozenset[str]] = frozenset(
     }
 )
 BLOCKED_CAPABILITIES: Final[frozenset[str]] = frozenset(
-    {"process_execute", "device_control", "robotics_actuation", "drone_actuation"}
+    {
+        "process_execute",
+        "device_control",
+        "robotics_actuation",
+        "drone_actuation",
+        "connection_attempt",
+        "device_pairing",
+        "credential_use",
+        "iot_control",
+        "physical_world_actuation",
+    }
+)
+CONNECTION_DISCOVERY_CAPABILITIES: Final[frozenset[str]] = frozenset(
+    {
+        "connection_discovery",
+        "network_discovery",
+        "wifi_discovery",
+        "bluetooth_discovery",
+        "ble_discovery",
+        "lan_discovery",
+        "usb_discovery",
+        "serial_discovery",
+        "iot_discovery",
+        "mdns_discovery",
+        "mqtt_discovery",
+        "matter_discovery",
+        "device_discovery",
+        "robotics_endpoint_discovery",
+        "drone_endpoint_discovery",
+    }
+)
+CONNECTION_CAPABILITIES: Final[frozenset[str]] = frozenset(
+    CONNECTION_DISCOVERY_CAPABILITIES | BLOCKED_CAPABILITIES
 )
 ACTION_CAPABILITY_MAP: Final[dict[str, str]] = {
     "model_call": "model_calls",
@@ -53,6 +85,26 @@ ACTION_CAPABILITY_MAP: Final[dict[str, str]] = {
     "robot_action": "robotics_actuation",
     "drone_actuation": "drone_actuation",
     "scheduler_run": "scheduler_run",
+    "connection_discovery": "connection_discovery",
+    "network_discovery": "network_discovery",
+    "wifi_discovery": "wifi_discovery",
+    "bluetooth_discovery": "bluetooth_discovery",
+    "ble_discovery": "ble_discovery",
+    "lan_discovery": "lan_discovery",
+    "usb_discovery": "usb_discovery",
+    "serial_discovery": "serial_discovery",
+    "iot_discovery": "iot_discovery",
+    "mdns_discovery": "mdns_discovery",
+    "mqtt_discovery": "mqtt_discovery",
+    "matter_discovery": "matter_discovery",
+    "device_discovery": "device_discovery",
+    "robotics_endpoint_discovery": "robotics_endpoint_discovery",
+    "drone_endpoint_discovery": "drone_endpoint_discovery",
+    "connection_attempt": "connection_attempt",
+    "device_pairing": "device_pairing",
+    "credential_use": "credential_use",
+    "iot_control": "iot_control",
+    "physical_world_actuation": "physical_world_actuation",
 }
 AUTHORITY_CLAIM_MARKERS: Final[frozenset[str]] = frozenset(
     {
@@ -95,6 +147,38 @@ CONNECTION_DISCOVERY_MARKERS: Final[frozenset[str]] = frozenset(
         "autoconnect",
     }
 )
+CONNECTION_DOMAINS: Final[frozenset[str]] = frozenset(
+    {
+        "connection",
+        "network",
+        "wifi",
+        "bluetooth",
+        "ble",
+        "lan",
+        "usb",
+        "serial",
+        "iot",
+        "mdns",
+        "mqtt",
+        "matter",
+        "device",
+        "local_metadata",
+    }
+)
+SIMULATION_MODES: Final[frozenset[str]] = frozenset(
+    {"simulated", "simulation", "dry_run", "dry-run", "fixture", "metadata_only"}
+)
+PASSIVE_MODES: Final[frozenset[str]] = frozenset(
+    {"passive", "local_metadata", "metadata_only", "preview"}
+)
+LIVE_DISCOVERY_MARKERS: Final[frozenset[str]] = frozenset(
+    {"scan", "probe", "enumerate", "discover", "discovery", "live"}
+)
+CREDENTIAL_MARKERS: Final[frozenset[str]] = frozenset(
+    {"credential", "credentials", "password", "token", "secret", "header", "pairingcode"}
+)
+PAIRING_MARKERS: Final[frozenset[str]] = frozenset({"pair", "pairing"})
+SESSION_MARKERS: Final[frozenset[str]] = frozenset({"session", "channel", "handle"})
 
 
 class LimaKernel:
@@ -133,9 +217,9 @@ class LimaKernel:
 
         kernel_request = _coerce_request(request)
         decision = self._evaluate_guardian_stub(kernel_request)
-        event_refs = (
-            self._append_event(kernel_request, "kernel.request_received", decision),
-            self._append_event(kernel_request, "kernel.guardian_stub_evaluated", decision),
+        event_refs = tuple(
+            self._append_event(kernel_request, event_type, decision)
+            for event_type in _event_types(kernel_request, decision)
         )
         return ExecutionResult(
             request_id=kernel_request.request_id,
@@ -181,6 +265,8 @@ class LimaKernel:
             request.metadata
         ):
             return _blocked("authority_claim_not_allowed", reviewed)
+        if capability in CONNECTION_CAPABILITIES:
+            return _classify_connection_intent(request, capability, reviewed)
         if _contains_connection_discovery_claim(request.normalized_intent):
             return _blocked("connection_discovery_claim_not_allowed", reviewed)
         if not capability:
@@ -192,7 +278,7 @@ class LimaKernel:
                     capabilities_reviewed=(),
                 )
             return _blocked("unknown_action_category_blocked", ())
-        if not getattr(request.capability_profile, capability):
+        if not getattr(request.capability_profile, capability, False):
             return _blocked(f"disabled_capability_blocked:{capability}", reviewed)
         if capability in BLOCKED_CAPABILITIES:
             return _blocked(f"dangerous_capability_blocked:{capability}", reviewed)
@@ -303,6 +389,89 @@ def _warnings(request: KernelRequest, decision: GuardianStubDecision) -> tuple[s
     return tuple(warnings)
 
 
+def _classify_connection_intent(
+    request: KernelRequest,
+    capability: str,
+    reviewed: tuple[str, ...],
+) -> GuardianStubDecision:
+    if not getattr(request.capability_profile, capability, False):
+        return _blocked(f"disabled_capability_blocked:{capability}", reviewed)
+    if capability in {
+        "connection_attempt",
+        "device_pairing",
+        "credential_use",
+        "iot_control",
+        "device_control",
+        "robotics_actuation",
+        "drone_actuation",
+        "physical_world_actuation",
+        "robotics_endpoint_discovery",
+        "drone_endpoint_discovery",
+    }:
+        return _blocked(f"connection_or_physical_capability_blocked:{capability}", reviewed)
+    if _contains_try_everything_claim(request.normalized_intent):
+        return _blocked("try_everything_connection_request_blocked", reviewed)
+    if _contains_auto_connect_claim(request.normalized_intent):
+        return _blocked("auto_connect_request_blocked", reviewed)
+    if _contains_credential_claim(request.normalized_intent):
+        return _blocked("credential_use_request_blocked", reviewed)
+    if _contains_pairing_claim(request.normalized_intent):
+        return _blocked("device_pairing_request_blocked", reviewed)
+    if _contains_session_claim(request.normalized_intent):
+        return _blocked("connector_or_device_session_blocked", reviewed)
+
+    domain = _connection_domain(request, capability)
+    if domain not in CONNECTION_DOMAINS:
+        return _blocked("unknown_connection_type_blocked", reviewed)
+    if capability == "network_discovery" and _contains_live_discovery_claim(request.normalized_intent):
+        return _blocked("unauthenticated_network_scan_blocked", reviewed)
+
+    mode = _connection_mode(request)
+    risk = str(request.normalized_intent.get("risk_class") or "unknown").strip().lower()
+    sensitive_target = request.normalized_intent.get("sensitive_target") is True
+    authenticated = request.normalized_intent.get("authenticated") is True
+
+    if mode in PASSIVE_MODES and not sensitive_target and not authenticated:
+        return GuardianStubDecision(
+            guardian_state="proposed",
+            reason_code=f"connection_discovery_metadata_proposed:{capability}",
+            capabilities_reviewed=reviewed,
+        )
+    if mode in SIMULATION_MODES and risk in {"low", "read_only"} and not sensitive_target:
+        return GuardianStubDecision(
+            guardian_state="proposed",
+            reason_code=f"simulated_connection_discovery_proposed:{capability}",
+            capabilities_reviewed=reviewed,
+        )
+    return GuardianStubDecision(
+        guardian_state="approval_required",
+        reason_code=f"connection_discovery_requires_approval:{capability}",
+        capabilities_reviewed=reviewed,
+    )
+
+
+def _event_types(request: KernelRequest, decision: GuardianStubDecision) -> tuple[str, ...]:
+    capability = _requested_capability(request)
+    if capability in CONNECTION_DISCOVERY_CAPABILITIES:
+        if decision.guardian_state == "proposed":
+            return ("connection_discovery_requested", "connection_discovery_proposed")
+        return ("connection_discovery_requested", "connection_discovery_blocked")
+    if capability == "connection_attempt":
+        return ("connection_attempt_requested", "connection_attempt_blocked")
+    if capability == "device_pairing":
+        return ("device_pairing_requested", "device_pairing_blocked")
+    if capability in {
+        "device_control",
+        "robotics_actuation",
+        "drone_actuation",
+        "physical_world_actuation",
+        "robotics_endpoint_discovery",
+        "drone_endpoint_discovery",
+    }:
+        return ("physical_endpoint_detected", "physical_endpoint_blocked")
+    return ("kernel.request_received", "kernel.guardian_stub_evaluated")
+
+
 def _redacted_summary(request: KernelRequest, state: str, reason_code: str) -> str:
     category = _action_category(request)
     return f"{state}:{category}:{reason_code}"
@@ -347,6 +516,81 @@ def _contains_connection_discovery_claim(value: Any) -> bool:
     )
     joined = "".join(words)
     return any(marker in words or marker == joined for marker in CONNECTION_DISCOVERY_MARKERS)
+
+
+def _connection_domain(request: KernelRequest, capability: str) -> str:
+    raw_domain = request.normalized_intent.get("discovery_domain") or request.normalized_intent.get(
+        "connection_type"
+    )
+    if isinstance(raw_domain, str) and raw_domain.strip():
+        return raw_domain.strip().lower().replace("-", "_")
+    if capability.endswith("_discovery"):
+        return capability.removesuffix("_discovery")
+    return "connection"
+
+
+def _connection_mode(request: KernelRequest) -> str:
+    raw_mode = request.normalized_intent.get("discovery_mode") or request.normalized_intent.get(
+        "mode"
+    )
+    if isinstance(raw_mode, str) and raw_mode.strip():
+        return raw_mode.strip().lower().replace(" ", "_")
+    return "unknown"
+
+
+def _contains_try_everything_claim(value: Any) -> bool:
+    return _contains_phrase(value, ("try everything", "try_all", "all methods", "any available"))
+
+
+def _contains_auto_connect_claim(value: Any) -> bool:
+    return _contains_phrase(value, ("auto connect", "auto-connect", "autoconnect"))
+
+
+def _contains_credential_claim(value: Any) -> bool:
+    return _contains_marker(value, CREDENTIAL_MARKERS)
+
+
+def _contains_pairing_claim(value: Any) -> bool:
+    return _contains_marker(value, PAIRING_MARKERS)
+
+
+def _contains_session_claim(value: Any) -> bool:
+    return _contains_marker(value, SESSION_MARKERS)
+
+
+def _contains_live_discovery_claim(value: Any) -> bool:
+    return _contains_marker(value, LIVE_DISCOVERY_MARKERS)
+
+
+def _contains_phrase(value: Any, phrases: tuple[str, ...]) -> bool:
+    if isinstance(value, Mapping):
+        return any(
+            _contains_phrase(nested_key, phrases) or _contains_phrase(nested_value, phrases)
+            for nested_key, nested_value in value.items()
+        )
+    if isinstance(value, (list, tuple, set, frozenset)):
+        return any(_contains_phrase(item, phrases) for item in value)
+    if not isinstance(value, str):
+        return False
+    folded = value.strip().lower()
+    return any(phrase in folded for phrase in phrases)
+
+
+def _contains_marker(value: Any, markers: frozenset[str]) -> bool:
+    if isinstance(value, Mapping):
+        return any(
+            _contains_marker(nested_key, markers) or _contains_marker(nested_value, markers)
+            for nested_key, nested_value in value.items()
+        )
+    if isinstance(value, (list, tuple, set, frozenset)):
+        return any(_contains_marker(item, markers) for item in value)
+    if not isinstance(value, str):
+        return False
+    words = tuple(
+        part for part in "".join(char.lower() if char.isalnum() else " " for char in value).split()
+    )
+    joined = "".join(words)
+    return any(marker in words or marker == joined for marker in markers)
 
 
 def _non_empty_text(value: Any, field_name: str) -> str:
