@@ -136,6 +136,8 @@ def test_model_call_never_calls_model_or_creates_authority() -> None:
     ("action_category", "profile", "expected_state"),
     (
         ("file_write", CapabilityProfile(file_write=True), "approval_required"),
+        ("connector_read", CapabilityProfile(connector_read=True), "approval_required"),
+        ("connector_write", CapabilityProfile(connector_write=True), "approval_required"),
         ("process_execute", CapabilityProfile(process_execute=True), "blocked"),
         ("browser_control", CapabilityProfile(browser_control=True), "approval_required"),
         ("network_action", CapabilityProfile(connector_read=True), "approval_required"),
@@ -154,6 +156,38 @@ def test_consequential_and_physical_actions_do_not_execute(
     result = LimaKernel().evaluate(_request(action_category, profile=profile))
 
     assert result.state == expected_state
+    _assert_non_execution_invariants(result)
+
+
+@pytest.mark.parametrize(
+    "connection_phrase",
+    (
+        "scan WiFi networks",
+        "pair Bluetooth device",
+        "discover IoT device",
+        "map LAN device",
+        "scan BLE beacon",
+        "open serial port",
+        "connect USB device",
+        "subscribe MQTT device",
+        "discover Matter endpoint",
+        "query mDNS services",
+        "start pairing",
+        "scan for devices",
+        "connect to local endpoint",
+        "auto-connect to office device",
+    ),
+)
+def test_connection_discovery_wording_blocks_without_execution(connection_phrase: str) -> None:
+    result = LimaKernel().evaluate(
+        _request(
+            "planning",
+            summary=connection_phrase,
+        )
+    )
+
+    assert result.state == "blocked"
+    assert result.blocked_reason == "connection_discovery_claim_not_allowed"
     _assert_non_execution_invariants(result)
 
 
@@ -261,11 +295,14 @@ def test_no_sparkbot_robo_persistence_dispatch_or_adapter_wiring_in_kernel_modul
         "LIMA-Robo-OS",
         "sqlite3",
         "requests.",
+        "socket",
         "subprocess",
         "threading",
+        "connect(",
         "dispatch(",
         "execute(",
         "open(",
+        "scan(",
     )
 
     for path in KERNEL_PATHS:

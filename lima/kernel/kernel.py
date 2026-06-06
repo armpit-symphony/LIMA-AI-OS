@@ -71,6 +71,30 @@ AUTHORITY_CLAIM_MARKERS: Final[frozenset[str]] = frozenset(
         "breakglass",
     }
 )
+CONNECTION_DISCOVERY_MARKERS: Final[frozenset[str]] = frozenset(
+    {
+        "wifi",
+        "wi",
+        "fi",
+        "bluetooth",
+        "iot",
+        "lan",
+        "ble",
+        "serial",
+        "usb",
+        "mqtt",
+        "matter",
+        "mdns",
+        "pairing",
+        "pair",
+        "scan",
+        "discovery",
+        "discover",
+        "connect",
+        "connection",
+        "autoconnect",
+    }
+)
 
 
 class LimaKernel:
@@ -157,6 +181,8 @@ class LimaKernel:
             request.metadata
         ):
             return _blocked("authority_claim_not_allowed", reviewed)
+        if _contains_connection_discovery_claim(request.normalized_intent):
+            return _blocked("connection_discovery_claim_not_allowed", reviewed)
         if not capability:
             action_category = _action_category(request)
             if action_category in SAFE_ACTION_CATEGORIES:
@@ -303,6 +329,24 @@ def _contains_authority_claim(value: Any) -> bool:
         part for part in "".join(char.lower() if char.isalnum() else " " for char in value).split()
     )
     return any(marker in words for marker in AUTHORITY_CLAIM_MARKERS)
+
+
+def _contains_connection_discovery_claim(value: Any) -> bool:
+    if isinstance(value, Mapping):
+        return any(
+            _contains_connection_discovery_claim(nested_key)
+            or _contains_connection_discovery_claim(nested_value)
+            for nested_key, nested_value in value.items()
+        )
+    if isinstance(value, (list, tuple, set, frozenset)):
+        return any(_contains_connection_discovery_claim(item) for item in value)
+    if not isinstance(value, str):
+        return False
+    words = tuple(
+        part for part in "".join(char.lower() if char.isalnum() else " " for char in value).split()
+    )
+    joined = "".join(words)
+    return any(marker in words or marker == joined for marker in CONNECTION_DISCOVERY_MARKERS)
 
 
 def _non_empty_text(value: Any, field_name: str) -> str:
