@@ -1,0 +1,292 @@
+{
+  "schema_version": "0.1",
+  "manifest_scope": "public_api_versioning_metadata_only",
+  "lima_runtime_behavior_changed": false,
+  "pyproject_modified": false,
+  "top_level_runtime_exports_added": false,
+  "public_sparkbot_repo_touched": false,
+  "arc_bot_repo_touched": false,
+  "consumer_integration_implemented": false,
+  "production_readiness_claimed": false,
+  "package": {
+    "name": "lima-runtime",
+    "current_version": "0.0.1",
+    "version_stage": "proof_only_runtime_candidate",
+    "python_requires": ">=3.11",
+    "package_discovery": ["lima*"]
+  },
+  "paths": {
+    "manifest": "docs/public_api/LIMA_PUBLIC_API_MANIFEST.md",
+    "design": "docs/design/LIMA_PUBLIC_API_VERSIONING_CONTRACT.md",
+    "audit": "docs/audits/LIMA_PUBLIC_API_VERSIONING_CONTRACT_AUDIT.md"
+  },
+  "top_level": {
+    "import_allowed": true,
+    "expected_all": ["contracts"],
+    "runtime_exports_allowed": false,
+    "forbidden_runtime_exports": ["LimaKernel"]
+  },
+  "classification_values": [
+    "proof_public",
+    "dry_run_candidate",
+    "experimental_internal",
+    "forbidden_consumer_import"
+  ],
+  "public_imports": [
+    {
+      "import": "import lima",
+      "module": "lima",
+      "symbol": null,
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import LimaKernel",
+      "module": "lima.kernel",
+      "symbol": "LimaKernel",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import CapabilityProfile",
+      "module": "lima.kernel",
+      "symbol": "CapabilityProfile",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import KernelRequest",
+      "module": "lima.kernel",
+      "symbol": "KernelRequest",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import ExecutionResult",
+      "module": "lima.kernel",
+      "symbol": "ExecutionResult",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import KernelEvent",
+      "module": "lima.kernel",
+      "symbol": "KernelEvent",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import GuardianStubDecision",
+      "module": "lima.kernel",
+      "symbol": "GuardianStubDecision",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import SimulatedDiscoveryAdapter",
+      "module": "lima.kernel",
+      "symbol": "SimulatedDiscoveryAdapter",
+      "classification": "proof_public",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import ALLOWED_CANDIDATE_STATUSES",
+      "module": "lima.kernel",
+      "symbol": "ALLOWED_CANDIDATE_STATUSES",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import CandidatePreview",
+      "module": "lima.kernel",
+      "symbol": "CandidatePreview",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import CandidateStatusError",
+      "module": "lima.kernel",
+      "symbol": "CandidateStatusError",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import DiscoveryAdapterManifest",
+      "module": "lima.kernel",
+      "symbol": "DiscoveryAdapterManifest",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import DiscoveryAdapterRequest",
+      "module": "lima.kernel",
+      "symbol": "DiscoveryAdapterRequest",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import DiscoveryAdapterResult",
+      "module": "lima.kernel",
+      "symbol": "DiscoveryAdapterResult",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import DiscoveryAdapterSurface",
+      "module": "lima.kernel",
+      "symbol": "DiscoveryAdapterSurface",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import IntakeCandidateError",
+      "module": "lima.kernel",
+      "symbol": "IntakeCandidateError",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import RuntimeStateSnapshot",
+      "module": "lima.kernel",
+      "symbol": "RuntimeStateSnapshot",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import build_intake_candidate",
+      "module": "lima.kernel",
+      "symbol": "build_intake_candidate",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import inspect_runtime_state",
+      "module": "lima.kernel",
+      "symbol": "inspect_runtime_state",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import normalize_candidate_status",
+      "module": "lima.kernel",
+      "symbol": "normalize_candidate_status",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import preview_candidate",
+      "module": "lima.kernel",
+      "symbol": "preview_candidate",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import validate_candidate",
+      "module": "lima.kernel",
+      "symbol": "validate_candidate",
+      "classification": "dry_run_candidate",
+      "execution_authority": false
+    }
+  ],
+  "forbidden_consumer_imports": [
+    "lima.io.*",
+    "lima.persistence.*",
+    "lima.spine.*",
+    "lima.services.*",
+    "lima.shells.*",
+    "lima.adapters.*"
+  ],
+  "experimental_internal_modules": [
+    "lima.harness.*",
+    "lima.guardian.*"
+  ],
+  "consumer_pin_fields": [
+    "LIMA repository URL",
+    "LIMA commit",
+    "package name",
+    "package version",
+    "public imports used",
+    "proof branch name",
+    "proof verdict",
+    "non-execution invariant evidence"
+  ],
+  "consumer_branches": [
+    "sparkbot-lima-dry-run-boundary-proof",
+    "arc-lima-dry-run-boundary-proof"
+  ],
+  "required_non_execution_invariants": {
+    "executable": false,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "dry_run": true,
+    "model_calls_allowed": false,
+    "model_calls_executed": false,
+    "live_discovery_executed": false,
+    "connection_attempted": false,
+    "pairing_attempted": false,
+    "credentials_used": false,
+    "session_opened": false,
+    "device_control_executed": false,
+    "physical_world_allowed": false,
+    "physical_world_executed": false,
+    "guardian_decision_created": false,
+    "approval_enforced": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "robo_os_wiring_active": false,
+    "adapter_active": false,
+    "tool_execution_allowed": false,
+    "driver_execution_allowed": false,
+    "scheduler_active": false,
+    "external_calls_allowed": false
+  },
+  "forbidden_version_claims": [
+    "production-ready AI OS",
+    "Sparkbot integrated",
+    "Arc Bot integrated",
+    "live HumanInput bridge ready",
+    "raw natural-language execution ready",
+    "real GuardianDecision authority ready",
+    "approval enforcement ready",
+    "model/provider routing ready",
+    "tool execution ready",
+    "connector access ready",
+    "storage/persistence ready",
+    "event spine persistence ready",
+    "live discovery ready",
+    "connection/pairing ready",
+    "credential use ready",
+    "Robo-OS ready",
+    "device/robot/drone/physical-world control ready"
+  ],
+  "forbidden_surfaces": [
+    "Sparkbot repo changes",
+    "Arc Bot repo changes",
+    "runtime behavior",
+    "top-level runtime re-exports",
+    "provider/model calls",
+    "tool execution",
+    "connector access",
+    "storage/persistence",
+    "live HumanInput bridge",
+    "real Guardian enforcement",
+    "approval enforcement",
+    "shell route wiring",
+    "browser/file/process/network actions",
+    "sockets",
+    "live discovery",
+    "connection attempts",
+    "pairing",
+    "credential use or storage",
+    "scheduler/background workers",
+    "subprocesses or threads",
+    "Robo-OS access",
+    "device control",
+    "robotics",
+    "drones",
+    "physical-world behavior"
+  ],
+  "next_review_gate": "audit-lima-public-api-versioning-metadata"
+}
