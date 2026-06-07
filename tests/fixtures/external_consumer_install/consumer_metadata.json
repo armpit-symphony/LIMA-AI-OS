@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "consumer_id": "synthetic-external-consumer",
+  "consumer_type": "sparkbot_like_shell",
+  "verification_mode": "subprocess_free_import_verification",
+  "imports_allowed": ["lima", "lima.kernel"],
+  "expected_package_name": "lima-runtime",
+  "expected_kernel_import": "LimaKernel",
+  "expected_result": {
+    "dry_run": true,
+    "executable": false,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false
+  },
+  "forbidden": {
+    "sparkbot_repo": true,
+    "arc_bot_repo": true,
+    "model_calls": true,
+    "tool_execution": true,
+    "connector_access": true,
+    "persistence": true,
+    "network_calls": true,
+    "socket_apis": true,
+    "device_control": true,
+    "physical_world_behavior": true
+  }
+}
