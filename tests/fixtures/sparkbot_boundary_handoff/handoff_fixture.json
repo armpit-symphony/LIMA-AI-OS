@@ -1,0 +1,293 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "synthetic_sparkbot_boundary_handoff_fixture_only",
+  "branch": "implement-lima-sparkbot-boundary-handoff-fixtures",
+  "public_sparkbot_repo_touched": false,
+  "arc_bot_repo_touched": false,
+  "lima_runtime_behavior_changed": false,
+  "sparkbot_integration_implemented": false,
+  "production_readiness_claimed": false,
+  "handoff_summary": "LIMA-local fixture for a future Sparkbot-owned dry-run boundary proof.",
+  "allowed_future_sparkbot_proof": {
+    "sparkbot_owned_branch": "sparkbot-lima-dry-run-boundary-proof",
+    "normalized_metadata_only": true,
+    "dry_run_only": true,
+    "may_call_lima_kernel_evaluate": true,
+    "may_pass_explicit_simulated_discovery_adapter": true,
+    "may_inspect_execution_result": true,
+    "must_not_wire_production_route": true,
+    "must_not_call_model": true,
+    "must_not_execute_tool": true,
+    "must_not_access_connector": true,
+    "must_not_persist": true,
+    "must_not_send_external_message": true,
+    "must_not_touch_device_or_physical_world": true
+  },
+  "required_sparkbot_side_evidence": [
+    "branch_name",
+    "lima_package_or_import_method",
+    "lima_commit_or_version",
+    "normalized_request_fixture",
+    "dry_run_execution_result_sample",
+    "non_execution_invariant_checklist",
+    "proof_no_raw_chat_sent_to_lima",
+    "proof_no_production_route_wired",
+    "proof_no_model_tool_connector_storage_action",
+    "proof_no_background_worker_or_scheduler_triggered",
+    "proof_no_external_send",
+    "proof_no_device_robot_drone_physical_world_action"
+  ],
+  "forbidden_inputs_to_lima": {
+    "raw_chat_text": true,
+    "raw_prompt_text": true,
+    "raw_attachments": true,
+    "raw_connector_records": true,
+    "raw_provider_payloads": true,
+    "raw_tool_arguments": true,
+    "credentials": true,
+    "headers": true,
+    "cookies": true,
+    "tokens": true,
+    "unsafe_command_bodies": true,
+    "live_scan_dumps": true,
+    "device_serials": true,
+    "physical_location": true,
+    "robot_drone_command_payloads": true
+  },
+  "non_execution_invariants": {
+    "executable": false,
+    "execution_allowed": false,
+    "side_effects_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "dry_run": true,
+    "model_calls_allowed": false,
+    "model_calls_executed": false,
+    "live_discovery_executed": false,
+    "connection_attempted": false,
+    "pairing_attempted": false,
+    "credentials_used": false,
+    "session_opened": false,
+    "device_control_executed": false,
+    "physical_world_allowed": false,
+    "physical_world_executed": false,
+    "guardian_decision_created": false,
+    "approval_enforced": false,
+    "humaninput_bridge_active": false,
+    "sparkbot_wiring_active": false,
+    "robo_os_wiring_active": false,
+    "adapter_active": false,
+    "tool_execution_allowed": false,
+    "driver_execution_allowed": false,
+    "scheduler_active": false,
+    "external_calls_allowed": false
+  },
+  "fixtures": [
+    {
+      "fixture_id": "sparkbot-handoff-planning-preview",
+      "description": "Synthetic Sparkbot-owned planning preview metadata.",
+      "expected_state": "proposed",
+      "expected_reason_code": "text_preview_or_planning_proposed",
+      "expected_kernel_called": true,
+      "requires_simulated_adapter": false,
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-handoff-planning-001",
+        "shell": {
+          "shell_id": "sparkbot-public-proof-shell",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-handoff-fixture",
+          "surface": "sparkbot_boundary_proof"
+        },
+        "actor": {
+          "actor_id": "redacted-sparkbot-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-sparkbot-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "planning",
+          "requested_capability": null,
+          "task_type": "sparkbot_boundary_preview",
+          "risk_class": "low",
+          "summary": "redacted future Sparkbot dry-run planning preview",
+          "input_origin": "sparkbot_owned_normalizer_fixture",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-handoff-default-deny",
+          "source": "sparkbot_boundary_handoff_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["browser", "files", "network", "robo", "system", "comms"],
+          "model_calls": false,
+          "memory_write": false,
+          "task_state_write": false,
+          "connector_read": false,
+          "connector_write": false,
+          "external_send": false,
+          "file_write": false,
+          "process_execute": false,
+          "browser_control": false,
+          "device_control": false,
+          "robotics_actuation": false,
+          "drone_actuation": false,
+          "scheduler_run": false
+        },
+        "source_surface": {
+          "surface": "sparkbot_boundary_handoff_fixture",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-sparkbot-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "sparkbot-handoff-simulated-discovery-preview",
+      "description": "Synthetic Sparkbot-owned simulated BLE discovery metadata.",
+      "expected_state": "proposed",
+      "expected_reason_code": "simulated_connection_discovery_proposed:ble_discovery",
+      "expected_kernel_called": true,
+      "requires_simulated_adapter": true,
+      "expected_synthetic_surface_id": "simulated-ble-preview",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-handoff-simulated-discovery-001",
+        "shell": {
+          "shell_id": "sparkbot-public-proof-shell",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-handoff-fixture",
+          "surface": "sparkbot_boundary_proof"
+        },
+        "actor": {
+          "actor_id": "redacted-sparkbot-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-sparkbot-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "ble_discovery",
+          "requested_capability": "ble_discovery",
+          "task_type": "sparkbot_simulated_connection_preview",
+          "risk_class": "low",
+          "summary": "redacted future Sparkbot simulated BLE preview",
+          "input_origin": "sparkbot_owned_normalizer_fixture",
+          "execution_mode": "dry_run",
+          "connection_type": "ble",
+          "discovery_mode": "simulated",
+          "dry_run": true,
+          "simulated_only": true,
+          "include_simulated_surfaces": true,
+          "target_hint": "synthetic_ble_fixture"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-handoff-simulated-discovery",
+          "source": "sparkbot_boundary_handoff_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["browser", "files", "network", "robo", "system", "comms"],
+          "model_calls": false,
+          "memory_write": false,
+          "task_state_write": false,
+          "connector_read": false,
+          "connector_write": false,
+          "external_send": false,
+          "file_write": false,
+          "process_execute": false,
+          "browser_control": false,
+          "device_control": false,
+          "robotics_actuation": false,
+          "drone_actuation": false,
+          "scheduler_run": false,
+          "ble_discovery": true
+        },
+        "source_surface": {
+          "surface": "sparkbot_boundary_handoff_fixture",
+          "privacy_class": "synthetic",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": [],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "sparkbot-handoff-external-send-blocked",
+      "description": "Synthetic Sparkbot-owned external send request that must remain blocked.",
+      "expected_state": "blocked",
+      "expected_reason_code": "disabled_capability_blocked:external_send",
+      "expected_kernel_called": true,
+      "requires_simulated_adapter": false,
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-handoff-external-send-001",
+        "shell": {
+          "shell_id": "sparkbot-public-proof-shell",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-handoff-fixture",
+          "surface": "sparkbot_boundary_proof"
+        },
+        "actor": {
+          "actor_id": "redacted-sparkbot-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-sparkbot-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "external_send",
+          "requested_capability": "external_send",
+          "task_type": "sparkbot_outbound_message_request",
+          "risk_class": "consequential",
+          "summary": "redacted blocked outbound message request",
+          "input_origin": "sparkbot_owned_normalizer_fixture",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-handoff-default-deny",
+          "source": "sparkbot_boundary_handoff_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["comms", "browser", "files", "network", "robo", "system"],
+          "external_send": false
+        },
+        "source_surface": {
+          "surface": "sparkbot_boundary_handoff_fixture",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-sparkbot-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    }
+  ]
+}
