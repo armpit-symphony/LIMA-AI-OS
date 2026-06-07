@@ -1,0 +1,351 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "synthetic_shell_owned_translator_fixtures_only",
+  "fixtures": [
+    {
+      "fixture_id": "sparkbot-translated-planning-preview",
+      "expected_kernel_called": true,
+      "expected_kernel_state": "proposed",
+      "expected_reason_code": "text_preview_or_planning_proposed",
+      "translator_input": {
+        "schema_version": "0.1",
+        "translator_id": "sparkbot-local-translator",
+        "shell": {
+          "shell_id": "sparkbot-workstation",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-fixture",
+          "surface": "desktop"
+        },
+        "actor": {
+          "actor_id": "redacted-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "shell_task": {
+          "task_ref": "redacted-task-ref",
+          "task_kind": "planning_preview",
+          "requested_surface": "preview",
+          "risk_hint": "low"
+        },
+        "raw_input_state": {
+          "raw_text_present": true,
+          "raw_text_forwarded": false,
+          "attachments_present": false,
+          "connector_payload_present": false,
+          "credential_material_present": false,
+          "unsafe_payload_present": false
+        }
+      },
+      "translator_output": {
+        "schema_version": "0.1",
+        "translator_id": "sparkbot-local-translator",
+        "translation_state": "translated",
+        "blocked_reason": null,
+        "redaction_summary": {
+          "raw_text_forwarded": false,
+          "attachments_forwarded": false,
+          "connector_payload_forwarded": false,
+          "credential_material_forwarded": false
+        },
+        "normalized_request": {
+          "schema_version": "0.1",
+          "request_id": "sparkbot-translator-fixture-planning-001",
+          "shell": {
+            "shell_id": "sparkbot-workstation",
+            "shell_type": "sparkbot",
+            "shell_version": "synthetic-fixture",
+            "surface": "desktop"
+          },
+          "actor": {
+            "actor_id": "redacted-operator-ref",
+            "actor_type": "human",
+            "role_refs": ["operator"]
+          },
+          "session": {
+            "session_id": "redacted-session-ref",
+            "tenant_ref": "redacted-tenant-ref",
+            "workspace_ref": "redacted-workspace-ref",
+            "conversation_ref": "redacted-conversation-ref"
+          },
+          "normalized_intent": {
+            "action_category": "planning",
+            "requested_capability": null,
+            "task_type": "workspace_task_preview",
+            "risk_class": "low",
+            "summary": "redacted shell-normalized planning preview",
+            "input_origin": "shell_owned_translator_fixture",
+            "execution_mode": "dry_run"
+          },
+          "capability_profile": {
+            "profile_id": "sparkbot-translator-default-deny",
+            "source": "sparkbot_translator_fixture",
+            "allowed_tool_packs": [],
+            "denied_tool_packs": ["browser", "files", "network", "robo", "system"],
+            "model_calls": false,
+            "memory_write": false,
+            "task_state_write": false,
+            "connector_read": false,
+            "connector_write": false,
+            "external_send": false,
+            "file_write": false,
+            "process_execute": false,
+            "browser_control": false,
+            "device_control": false,
+            "robotics_actuation": false,
+            "drone_actuation": false,
+            "scheduler_run": false
+          },
+          "source_surface": {
+            "surface": "sparkbot_workstation",
+            "privacy_class": "redacted",
+            "contains_raw_prompt": false,
+            "contains_secret": false,
+            "contains_unsafe_payload": false
+          },
+          "context_refs": {
+            "memory_refs": [],
+            "task_refs": ["redacted-task-ref"],
+            "document_refs": [],
+            "connector_refs": []
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "arc-translated-simulated-discovery",
+      "expected_kernel_called": true,
+      "expected_kernel_state": "proposed",
+      "expected_reason_code": "simulated_connection_discovery_proposed:ble_discovery",
+      "translator_input": {
+        "schema_version": "0.1",
+        "translator_id": "arc-local-translator",
+        "shell": {
+          "shell_id": "arc-office-worker",
+          "shell_type": "arc",
+          "shell_version": "synthetic-fixture",
+          "surface": "office_worker"
+        },
+        "actor": {
+          "actor_id": "redacted-office-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["office_operator"]
+        },
+        "session": {
+          "session_id": "redacted-arc-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-office-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "shell_task": {
+          "task_ref": "redacted-office-task-ref",
+          "task_kind": "simulated_connection_preview",
+          "requested_surface": "simulated_discovery",
+          "risk_hint": "low"
+        },
+        "raw_input_state": {
+          "raw_text_present": true,
+          "raw_text_forwarded": false,
+          "attachments_present": false,
+          "connector_payload_present": false,
+          "credential_material_present": false,
+          "unsafe_payload_present": false
+        }
+      },
+      "translator_output": {
+        "schema_version": "0.1",
+        "translator_id": "arc-local-translator",
+        "translation_state": "translated",
+        "blocked_reason": null,
+        "redaction_summary": {
+          "raw_text_forwarded": false,
+          "attachments_forwarded": false,
+          "connector_payload_forwarded": false,
+          "credential_material_forwarded": false
+        },
+        "normalized_request": {
+          "schema_version": "0.1",
+          "request_id": "arc-translator-fixture-simulated-discovery-001",
+          "shell": {
+            "shell_id": "arc-office-worker",
+            "shell_type": "arc",
+            "shell_version": "synthetic-fixture",
+            "surface": "office_worker"
+          },
+          "actor": {
+            "actor_id": "redacted-office-operator-ref",
+            "actor_type": "human",
+            "role_refs": ["office_operator"]
+          },
+          "session": {
+            "session_id": "redacted-arc-session-ref",
+            "tenant_ref": "redacted-tenant-ref",
+            "workspace_ref": "redacted-office-workspace-ref",
+            "conversation_ref": "redacted-conversation-ref"
+          },
+          "normalized_intent": {
+            "action_category": "ble_discovery",
+            "requested_capability": "ble_discovery",
+            "task_type": "simulated_connection_preview",
+            "risk_class": "low",
+            "summary": "redacted simulated BLE preview",
+            "input_origin": "shell_owned_translator_fixture",
+            "execution_mode": "dry_run",
+            "connection_type": "ble",
+            "discovery_mode": "simulated",
+            "dry_run": true,
+            "simulated_only": true,
+            "include_simulated_surfaces": true,
+            "target_hint": "synthetic_ble_fixture"
+          },
+          "capability_profile": {
+            "profile_id": "arc-translator-simulated-discovery",
+            "source": "arc_translator_fixture",
+            "allowed_tool_packs": [],
+            "denied_tool_packs": ["browser", "files", "network", "robo", "system"],
+            "model_calls": false,
+            "memory_write": false,
+            "task_state_write": false,
+            "connector_read": false,
+            "connector_write": false,
+            "external_send": false,
+            "file_write": false,
+            "process_execute": false,
+            "browser_control": false,
+            "device_control": false,
+            "robotics_actuation": false,
+            "drone_actuation": false,
+            "scheduler_run": false,
+            "ble_discovery": true
+          },
+          "source_surface": {
+            "surface": "arc_office_worker",
+            "privacy_class": "synthetic",
+            "contains_raw_prompt": false,
+            "contains_secret": false,
+            "contains_unsafe_payload": false
+          },
+          "context_refs": {
+            "memory_refs": [],
+            "task_refs": ["redacted-office-task-ref"],
+            "document_refs": [],
+            "connector_refs": []
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "sparkbot-blocked-raw-forwarding",
+      "expected_kernel_called": false,
+      "expected_kernel_state": null,
+      "expected_reason_code": null,
+      "translator_input": {
+        "schema_version": "0.1",
+        "translator_id": "sparkbot-local-translator",
+        "shell": {
+          "shell_id": "sparkbot-workstation",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-fixture",
+          "surface": "desktop"
+        },
+        "actor": {
+          "actor_id": "redacted-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "shell_task": {
+          "task_ref": "redacted-task-ref",
+          "task_kind": "unsupported_raw_input",
+          "requested_surface": "blocked",
+          "risk_hint": "unknown"
+        },
+        "raw_input_state": {
+          "raw_text_present": true,
+          "raw_text_forwarded": false,
+          "attachments_present": false,
+          "connector_payload_present": false,
+          "credential_material_present": false,
+          "unsafe_payload_present": false
+        }
+      },
+      "translator_output": {
+        "schema_version": "0.1",
+        "translator_id": "sparkbot-local-translator",
+        "translation_state": "blocked",
+        "blocked_reason": "raw_forwarding_not_allowed",
+        "redaction_summary": {
+          "raw_text_forwarded": false,
+          "attachments_forwarded": false,
+          "connector_payload_forwarded": false,
+          "credential_material_forwarded": false
+        },
+        "normalized_request": null
+      }
+    },
+    {
+      "fixture_id": "arc-needs-clarification",
+      "expected_kernel_called": false,
+      "expected_kernel_state": null,
+      "expected_reason_code": null,
+      "translator_input": {
+        "schema_version": "0.1",
+        "translator_id": "arc-local-translator",
+        "shell": {
+          "shell_id": "arc-office-worker",
+          "shell_type": "arc",
+          "shell_version": "synthetic-fixture",
+          "surface": "office_worker"
+        },
+        "actor": {
+          "actor_id": "redacted-office-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["office_operator"]
+        },
+        "session": {
+          "session_id": "redacted-arc-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-office-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "shell_task": {
+          "task_ref": "redacted-office-task-ref",
+          "task_kind": "ambiguous_office_request",
+          "requested_surface": "clarification",
+          "risk_hint": "unknown"
+        },
+        "raw_input_state": {
+          "raw_text_present": true,
+          "raw_text_forwarded": false,
+          "attachments_present": false,
+          "connector_payload_present": false,
+          "credential_material_present": false,
+          "unsafe_payload_present": false
+        }
+      },
+      "translator_output": {
+        "schema_version": "0.1",
+        "translator_id": "arc-local-translator",
+        "translation_state": "needs_clarification",
+        "blocked_reason": "ambiguous_shell_task",
+        "redaction_summary": {
+          "raw_text_forwarded": false,
+          "attachments_forwarded": false,
+          "connector_payload_forwarded": false,
+          "credential_material_forwarded": false
+        },
+        "normalized_request": null
+      }
+    }
+  ]
+}
