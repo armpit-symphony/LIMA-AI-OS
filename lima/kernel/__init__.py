@@ -7,6 +7,13 @@ from .candidate_status import (
     validate_candidate,
 )
 from .candidate_preview import CandidatePreview, preview_candidate
+from .discovery import (
+    DiscoveryAdapterManifest,
+    DiscoveryAdapterRequest,
+    DiscoveryAdapterResult,
+    DiscoveryAdapterSurface,
+    SimulatedDiscoveryAdapter,
+)
 from .intake_candidate import IntakeCandidateError, build_intake_candidate
 from .kernel import LimaKernel
 from .plugin_contract import (
@@ -23,6 +30,10 @@ __all__ = [
     "CapabilityProfile",
     "CandidatePreview",
     "CandidateStatusError",
+    "DiscoveryAdapterManifest",
+    "DiscoveryAdapterRequest",
+    "DiscoveryAdapterResult",
+    "DiscoveryAdapterSurface",
     "ExecutionResult",
     "GuardianStubDecision",
     "IntakeCandidateError",
@@ -30,6 +41,7 @@ __all__ = [
     "KernelRequest",
     "LimaKernel",
     "RuntimeStateSnapshot",
+    "SimulatedDiscoveryAdapter",
     "build_intake_candidate",
     "inspect_runtime_state",
     "normalize_candidate_status",
