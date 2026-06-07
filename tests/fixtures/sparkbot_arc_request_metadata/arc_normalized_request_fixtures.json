@@ -1,0 +1,183 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "synthetic_arc_normalized_metadata_only",
+  "fixtures": [
+    {
+      "fixture_id": "arc-office-task-preview",
+      "expected_state": "proposed",
+      "expected_reason_code": "text_preview_or_planning_proposed",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "arc-fixture-task-preview-001",
+        "shell": {
+          "shell_id": "arc-office-worker",
+          "shell_type": "arc",
+          "shell_version": "synthetic-fixture",
+          "surface": "office_worker"
+        },
+        "actor": {
+          "actor_id": "redacted-office-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["office_operator"]
+        },
+        "session": {
+          "session_id": "redacted-arc-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-office-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "planning",
+          "requested_capability": null,
+          "task_type": "office_task_preview",
+          "risk_class": "low",
+          "summary": "redacted office task preview",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "arc-default-deny",
+          "source": "arc_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["comms", "browser", "files", "network", "robo", "system"],
+          "model_calls": false,
+          "memory_write": false,
+          "task_state_write": false,
+          "connector_read": false,
+          "connector_write": false,
+          "external_send": false,
+          "file_write": false,
+          "process_execute": false,
+          "browser_control": false,
+          "device_control": false,
+          "robotics_actuation": false,
+          "drone_actuation": false,
+          "scheduler_run": false
+        },
+        "source_surface": {
+          "surface": "arc_office_worker",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-office-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "arc-scheduler-blocked",
+      "expected_state": "blocked",
+      "expected_reason_code": "disabled_capability_blocked:scheduler_run",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "arc-fixture-scheduler-001",
+        "shell": {
+          "shell_id": "arc-office-worker",
+          "shell_type": "arc",
+          "shell_version": "synthetic-fixture",
+          "surface": "office_worker"
+        },
+        "actor": {
+          "actor_id": "redacted-office-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["office_operator"]
+        },
+        "session": {
+          "session_id": "redacted-arc-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-office-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "scheduler_run",
+          "requested_capability": "scheduler_run",
+          "task_type": "office_schedule_request",
+          "risk_class": "consequential",
+          "summary": "redacted blocked scheduling request",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "arc-default-deny",
+          "source": "arc_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["system", "comms"],
+          "scheduler_run": false
+        },
+        "source_surface": {
+          "surface": "arc_office_worker",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-office-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "arc-device-control-blocked",
+      "expected_state": "blocked",
+      "expected_reason_code": "connection_or_physical_capability_blocked:device_control",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "arc-fixture-device-control-001",
+        "shell": {
+          "shell_id": "arc-office-worker",
+          "shell_type": "arc",
+          "shell_version": "synthetic-fixture",
+          "surface": "office_worker"
+        },
+        "actor": {
+          "actor_id": "redacted-office-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["office_operator"]
+        },
+        "session": {
+          "session_id": "redacted-arc-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-office-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "device_control",
+          "requested_capability": "device_control",
+          "task_type": "blocked_workstation_device_request",
+          "risk_class": "physical_world",
+          "summary": "redacted blocked workstation device request",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "arc-device-deny",
+          "source": "arc_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["robo", "system"],
+          "device_control": true
+        },
+        "source_surface": {
+          "surface": "arc_office_worker",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": [],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    }
+  ]
+}

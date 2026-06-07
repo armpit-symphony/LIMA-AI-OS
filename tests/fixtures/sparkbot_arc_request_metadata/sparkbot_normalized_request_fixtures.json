@@ -1,0 +1,202 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "synthetic_sparkbot_normalized_metadata_only",
+  "fixtures": [
+    {
+      "fixture_id": "sparkbot-planning-preview",
+      "expected_state": "proposed",
+      "expected_reason_code": "text_preview_or_planning_proposed",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-fixture-planning-001",
+        "shell": {
+          "shell_id": "sparkbot-workstation",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-fixture",
+          "surface": "desktop"
+        },
+        "actor": {
+          "actor_id": "redacted-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "planning",
+          "requested_capability": null,
+          "task_type": "workspace_task_preview",
+          "risk_class": "low",
+          "summary": "redacted dry-run workspace plan preview",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-default-deny",
+          "source": "sparkbot_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["browser", "files", "network", "robo", "system"],
+          "model_calls": false,
+          "memory_write": false,
+          "task_state_write": false,
+          "connector_read": false,
+          "connector_write": false,
+          "external_send": false,
+          "file_write": false,
+          "process_execute": false,
+          "browser_control": false,
+          "device_control": false,
+          "robotics_actuation": false,
+          "drone_actuation": false,
+          "scheduler_run": false
+        },
+        "source_surface": {
+          "surface": "sparkbot_workstation",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "sparkbot-simulated-discovery-preview",
+      "expected_state": "proposed",
+      "expected_reason_code": "simulated_connection_discovery_proposed:ble_discovery",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-fixture-simulated-discovery-001",
+        "shell": {
+          "shell_id": "sparkbot-workstation",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-fixture",
+          "surface": "desktop"
+        },
+        "actor": {
+          "actor_id": "redacted-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "ble_discovery",
+          "requested_capability": "ble_discovery",
+          "task_type": "simulated_connection_preview",
+          "risk_class": "low",
+          "summary": "redacted synthetic BLE discovery preview",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run",
+          "connection_type": "ble",
+          "discovery_mode": "simulated",
+          "dry_run": true,
+          "simulated_only": true,
+          "include_simulated_surfaces": true,
+          "target_hint": "synthetic_ble_fixture"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-simulated-discovery",
+          "source": "sparkbot_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["browser", "files", "network", "robo", "system"],
+          "model_calls": false,
+          "memory_write": false,
+          "task_state_write": false,
+          "connector_read": false,
+          "connector_write": false,
+          "external_send": false,
+          "file_write": false,
+          "process_execute": false,
+          "browser_control": false,
+          "device_control": false,
+          "robotics_actuation": false,
+          "drone_actuation": false,
+          "scheduler_run": false,
+          "ble_discovery": true
+        },
+        "source_surface": {
+          "surface": "sparkbot_workstation",
+          "privacy_class": "synthetic",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": [],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    },
+    {
+      "fixture_id": "sparkbot-external-send-blocked",
+      "expected_state": "blocked",
+      "expected_reason_code": "disabled_capability_blocked:external_send",
+      "request": {
+        "schema_version": "0.1",
+        "request_id": "sparkbot-fixture-external-send-001",
+        "shell": {
+          "shell_id": "sparkbot-workstation",
+          "shell_type": "sparkbot",
+          "shell_version": "synthetic-fixture",
+          "surface": "desktop"
+        },
+        "actor": {
+          "actor_id": "redacted-operator-ref",
+          "actor_type": "human",
+          "role_refs": ["operator"]
+        },
+        "session": {
+          "session_id": "redacted-session-ref",
+          "tenant_ref": "redacted-tenant-ref",
+          "workspace_ref": "redacted-workspace-ref",
+          "conversation_ref": "redacted-conversation-ref"
+        },
+        "normalized_intent": {
+          "action_category": "external_send",
+          "requested_capability": "external_send",
+          "task_type": "message_send_request",
+          "risk_class": "consequential",
+          "summary": "redacted blocked outbound message request",
+          "input_origin": "humaninput_normalized_by_shell",
+          "execution_mode": "dry_run"
+        },
+        "capability_profile": {
+          "profile_id": "sparkbot-default-deny",
+          "source": "sparkbot_fixture",
+          "allowed_tool_packs": [],
+          "denied_tool_packs": ["comms", "browser", "files", "network", "robo"],
+          "external_send": false
+        },
+        "source_surface": {
+          "surface": "sparkbot_workstation",
+          "privacy_class": "redacted",
+          "contains_raw_prompt": false,
+          "contains_secret": false,
+          "contains_unsafe_payload": false
+        },
+        "context_refs": {
+          "memory_refs": [],
+          "task_refs": ["redacted-task-ref"],
+          "document_refs": [],
+          "connector_refs": []
+        }
+      }
+    }
+  ]
+}
