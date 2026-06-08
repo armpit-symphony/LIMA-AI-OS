@@ -33,6 +33,7 @@ Every consumer-visible import is classified as one of:
 
 - `proof_public`
 - `dry_run_candidate`
+- `method_level_dry_run_candidate`
 - `experimental_internal`
 - `forbidden_consumer_import`
 
@@ -71,6 +72,16 @@ Dry-run candidate imports are visible today but not yet stable for consumer-owne
 | `from lima.kernel import normalize_candidate_status` | `dry_run_candidate` | none |
 | `from lima.kernel import preview_candidate` | `dry_run_candidate` | none |
 | `from lima.kernel import validate_candidate` | `dry_run_candidate` | none |
+
+### Method-Level Dry-Run Candidate
+
+Method-level dry-run candidates are existing methods reachable through proof-public symbols, but they are not standalone public exports and do not expose their internal result dataclasses as public API.
+
+| Import | Method | Classification | Execution Authority |
+| --- | --- | --- | --- |
+| `from lima.kernel import LimaKernel` | `LimaKernel.preview_guardian_lifecycle(...)` | `method_level_dry_run_candidate` | none |
+
+`LimaKernel.preview_guardian_lifecycle(...)` remains an explicit, dry-run-only Guardian lifecycle preview method for already-normalized `KernelRequest` metadata. Its preview result dataclasses remain internal and are not added to `lima.kernel.__all__`.
 
 ## Forbidden Or Internal Consumer Surfaces
 
@@ -206,6 +217,6 @@ Forbidden proof-stage use:
 
 The next safe branch after this manifest implementation is:
 
-`audit-lima-public-api-versioning-metadata`
+`audit-lima-guardian-lifecycle-public-api-metadata`
 
 No package version bump, runtime export change, or Sparkbot/Arc integration should occur before that audit passes.

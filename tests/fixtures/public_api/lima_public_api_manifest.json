@@ -29,6 +29,7 @@
   "classification_values": [
     "proof_public",
     "dry_run_candidate",
+    "method_level_dry_run_candidate",
     "experimental_internal",
     "forbidden_consumer_import"
   ],
@@ -46,6 +47,16 @@
       "symbol": "LimaKernel",
       "classification": "proof_public",
       "execution_authority": false
+    },
+    {
+      "import": "from lima.kernel import LimaKernel",
+      "module": "lima.kernel",
+      "symbol": "LimaKernel",
+      "member": "LimaKernel.preview_guardian_lifecycle",
+      "classification": "method_level_dry_run_candidate",
+      "execution_authority": false,
+      "public_export_added": false,
+      "result_objects_exported": false
     },
     {
       "import": "from lima.kernel import CapabilityProfile",
@@ -288,5 +299,5 @@
     "drones",
     "physical-world behavior"
   ],
-  "next_review_gate": "audit-lima-public-api-versioning-metadata"
+  "next_review_gate": "audit-lima-guardian-lifecycle-public-api-metadata"
 }

@@ -102,6 +102,11 @@ def test_public_imports_resolve_without_private_modules() -> None:
             continue
         module = importlib.import_module(entry["module"])
         assert hasattr(module, entry["symbol"]), entry["import"]
+        if "member" in entry:
+            member_owner_name, member_name = entry["member"].split(".", maxsplit=1)
+            member_owner = getattr(module, member_owner_name)
+            assert member_owner is getattr(module, entry["symbol"])
+            assert hasattr(member_owner, member_name), entry["member"]
 
 
 def test_proof_public_imports_are_limited_to_approved_symbols() -> None:
@@ -121,6 +126,35 @@ def test_proof_public_imports_are_limited_to_approved_symbols() -> None:
         "GuardianStubDecision",
         "SimulatedDiscoveryAdapter",
     }
+
+
+def test_method_level_dry_run_candidate_is_documented_and_non_authoritative() -> None:
+    fixture = _load_fixture()
+    text = _manifest_text()
+    entries = [
+        entry
+        for entry in fixture["public_imports"]
+        if entry["classification"] == "method_level_dry_run_candidate"
+    ]
+
+    assert entries == [
+        {
+            "import": "from lima.kernel import LimaKernel",
+            "module": "lima.kernel",
+            "symbol": "LimaKernel",
+            "member": "LimaKernel.preview_guardian_lifecycle",
+            "classification": "method_level_dry_run_candidate",
+            "execution_authority": False,
+            "public_export_added": False,
+            "result_objects_exported": False,
+        }
+    ]
+    assert entries[0]["symbol"] in lima_kernel.__all__
+    assert "GuardianLifecyclePreviewResult" not in lima_kernel.__all__
+    assert "GuardianRequestPreview" not in lima_kernel.__all__
+    assert "IntentEnvelopeCandidatePreview" not in lima_kernel.__all__
+    assert f"`{entries[0]['member']}(...)`" in text
+    assert "not added to `lima.kernel.__all__`" in text
 
 
 def test_forbidden_and_internal_consumer_imports_are_documented() -> None:
@@ -170,5 +204,5 @@ def test_manifest_points_to_next_audit_gate() -> None:
     fixture = _load_fixture()
     text = _manifest_text()
 
-    assert fixture["next_review_gate"] == "audit-lima-public-api-versioning-metadata"
+    assert fixture["next_review_gate"] == "audit-lima-guardian-lifecycle-public-api-metadata"
     assert f"`{fixture['next_review_gate']}`" in text
