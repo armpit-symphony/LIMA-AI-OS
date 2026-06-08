@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any, Final, Mapping
 
 from .discovery import DiscoveryAdapterRequest
+from .guardian_lifecycle import GuardianLifecyclePreviewResult, preview_guardian_lifecycle
 from .plugin_contract import (
     CapabilityProfile,
     ExecutionResult,
@@ -266,6 +267,23 @@ class LimaKernel:
                 "humaninput_bridge_present": self.humaninput_bridge is not None,
                 "driver_registry_present": self.driver_registry is not None,
                 **simulated_discovery_metadata,
+            },
+        )
+
+    def preview_guardian_lifecycle(
+        self,
+        request: KernelRequest | Mapping[str, Any],
+    ) -> GuardianLifecyclePreviewResult:
+        """Return a non-authoritative Guardian lifecycle preview."""
+
+        return preview_guardian_lifecycle(
+            request,
+            kernel_id=self.kernel_id,
+            runtime_dependencies_present={
+                "provider_registry": self.provider_registry is not None,
+                "storage": self.storage is not None,
+                "humaninput_bridge": self.humaninput_bridge is not None,
+                "driver_registry": self.driver_registry is not None,
             },
         )
 
