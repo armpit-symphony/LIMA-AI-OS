@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_approved_build_backend_environment_path_only",
+  "audit_status": "PASS",
+  "base_commit": "8c50603b02544ab0cf256a83bd210004e0b2dfea",
+  "design_path": "docs/design/LIMA_APPROVED_BUILD_BACKEND_ENVIRONMENT_PATH.md",
+  "readiness_review_path": "docs/audits/LIMA_APPROVED_BUILD_BACKEND_ENVIRONMENT_PATH_READINESS_REVIEW.md",
+  "independent_audit_path": "docs/audits/LIMA_APPROVED_BUILD_BACKEND_ENVIRONMENT_PATH_AUDIT.md",
+  "static_tests_audit_path": "docs/audits/LIMA_APPROVED_BUILD_BACKEND_ENVIRONMENT_PATH_STATIC_TESTS_IMPLEMENTATION_AUDIT.md",
+  "package_metadata_path": "pyproject.toml",
+  "declared_build_backend": "setuptools.build_meta",
+  "declared_build_requirement": "setuptools>=68",
+  "project_name": "lima-runtime",
+  "project_version": "0.0.1",
+  "requires_python": ">=3.11",
+  "package_include": "lima*",
+  "current_blocker_evidence": [
+    "`python -m pip show setuptools` returns `Package(s) not found: setuptools`",
+    "direct import of `setuptools.build_meta` fails",
+    "local no-network wheel proof is still blocked",
+    "package metadata should not be changed to work around the environment"
+  ],
+  "environment_options": {
+    "option_a": "Existing Environment With Backend Already Available",
+    "option_b": "Operator-Prepared Local Environment",
+    "option_c": "Temporary Isolated Environment Created By An Approved Branch",
+    "option_d": "Offline Wheelhouse Or Pre-Provisioned Build Backend"
+  },
+  "required_approval_record_fields": [
+    "operator approval statement or reference",
+    "target environment",
+    "Python version",
+    "pip version",
+    "`setuptools` version",
+    "backend import result for `setuptools.build_meta`",
+    "whether network access was used",
+    "whether dependency installation occurred",
+    "whether any temporary artifacts were created",
+    "confirmation that no artifacts were committed",
+    "confirmation that `pyproject.toml` was not changed",
+    "confirmation that `lima/` was not changed",
+    "confirmation that no consumer repositories were touched"
+  ],
+  "future_acceptance_criteria": [
+    "the declared backend `setuptools.build_meta` is importable",
+    "`setuptools` version satisfies `setuptools>=68`",
+    "any environment preparation is explicitly approved",
+    "no package metadata change is made",
+    "no runtime behavior change is made",
+    "no consumer repo is touched",
+    "no wheel/sdist/build artifacts are committed",
+    "repo validation passes",
+    "proof output explicitly distinguishes package build proof from Sparkbot/Arc product readiness"
+  ],
+  "forbidden_commands": [
+    "install `setuptools`",
+    "run `pip install`",
+    "run `pip wheel`",
+    "run `python -m build`",
+    "create virtual environments",
+    "download dependencies",
+    "access PyPI or registries",
+    "build wheels or sdists",
+    "publish packages"
+  ],
+  "forbidden_surfaces": [
+    "committing wheel, sdist, build, cache, virtualenv, or wheelhouse artifacts",
+    "modifying `pyproject.toml`",
+    "modifying package metadata",
+    "modifying `lima/`",
+    "modifying tests or examples",
+    "touching public Sparkbot",
+    "touching Arc Bot repositories",
+    "touching Robo-OS repositories",
+    "wiring Sparkbot or Arc Bot",
+    "adding provider/model calls",
+    "adding storage or persistence",
+    "adding Guardian enforcement",
+    "adding HumanInput runtime bridge",
+    "adding live adapters",
+    "running shell/browser/network/file mutation behavior",
+    "starting background workers, subprocesses, threads, queues, daemons, or schedulers",
+    "using credentials or secrets",
+    "controlling devices, robots, drones, or physical-world systems"
+  ],
+  "allowed_files": [
+    "tests/fixtures/approved_build_backend_environment_path/",
+    "tests/test_lima_approved_build_backend_environment_path_static.py",
+    "docs/audits/LIMA_APPROVED_BUILD_BACKEND_ENVIRONMENT_PATH_STATIC_TESTS_IMPLEMENTATION_AUDIT.md"
+  ],
+  "remaining_blockers": [
+    "missing build backend in the active environment",
+    "missing local wheel build proof",
+    "missing isolated install proof",
+    "missing Sparkbot-owned proof packet",
+    "missing Arc Bot-owned proof packet",
+    "missing operator delivery confirmation",
+    "missing public API compatibility freeze",
+    "missing product-ready release decision"
+  ],
+  "recommended_next_branch": "audit-lima-approved-build-backend-environment-path-static-tests"
+}
