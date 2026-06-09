@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_build_backend_operator_response_archive_only",
+  "audit_status": "PASS",
+  "base_commit": "f0676c0c1c0e523aff2fd06ee982e15ff7dd6f4a",
+  "design_path": "docs/design/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE.md",
+  "readiness_review_path": "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_READINESS_REVIEW.md",
+  "independent_audit_path": "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_AUDIT.md",
+  "static_tests_audit_path": "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_STATIC_TESTS_IMPLEMENTATION_AUDIT.md",
+  "package_metadata_path": "pyproject.toml",
+  "source_request_paths": [
+    "docs/design/LIMA_BUILD_BACKEND_OPERATOR_APPROVAL_REQUEST.md",
+    "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_APPROVAL_REQUEST_READINESS_REVIEW.md",
+    "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_APPROVAL_REQUEST_AUDIT.md",
+    "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_APPROVAL_REQUEST_STATIC_TESTS_AUDIT.md"
+  ],
+  "declared_build_backend": "setuptools.build_meta",
+  "declared_build_requirement": "setuptools>=68",
+  "project_name": "lima-runtime",
+  "project_version": "0.0.1",
+  "requires_python": ">=3.11",
+  "package_include": "lima*",
+  "current_blocker_evidence": [
+    "`pyproject.toml` declares build backend `setuptools.build_meta`",
+    "`pyproject.toml` declares build requirement `setuptools>=68`",
+    "the active Python 3.12 environment has pip",
+    "`setuptools` is not installed",
+    "direct import of `setuptools.build_meta` fails",
+    "local no-network wheel build proof remains blocked"
+  ],
+  "archive_principles": [
+    "An archived operator response is evidence, not execution.",
+    "No archive path may infer approval from silence.",
+    "If the response is missing, ambiguous, partial, contradictory, or unsafe, the archive result must be blocked."
+  ],
+  "operator_decisions": [
+    "approved: existing backend-ready environment",
+    "approved: prepare controlled local environment",
+    "approved: use operator-provided offline source",
+    "declined / keep blocked"
+  ],
+  "required_archive_fields": [
+    "source request path",
+    "response source or redacted reference",
+    "operator decision",
+    "target environment path or identifier",
+    "network access allowed",
+    "dependency installation allowed",
+    "offline source supplied",
+    "offline source path/reference, redacted if sensitive",
+    "expected `setuptools` version",
+    "operator notes, redacted if sensitive",
+    "operator name/date or redacted operator reference",
+    "ambiguity assessment",
+    "safety assessment",
+    "whether the response is actionable",
+    "whether package build proof remains blocked",
+    "next branch allowed by the archived response",
+    "explicit statement that no environment preparation happened on the archive branch"
+  ],
+  "fail_closed_conditions": [
+    "the response is missing",
+    "the response does not choose exactly one decision",
+    "network permission is unclear for any path requiring network",
+    "dependency-install permission is unclear for any path requiring install",
+    "target environment is missing for an environment-specific approval",
+    "offline source reference is missing for an offline-source approval",
+    "expected `setuptools` version is missing when backend provisioning is approved",
+    "the response authorizes package publication",
+    "the response authorizes consumer repo changes",
+    "the response authorizes runtime behavior changes",
+    "the response contains credentials, secrets, tokens, or unsafe private details that cannot be redacted safely",
+    "the response attempts to approve Sparkbot/Arc product readiness",
+    "the response conflicts with LIMA Guardian or non-execution boundaries"
+  ],
+  "redaction_forbidden_values": [
+    "passwords",
+    "tokens",
+    "API keys",
+    "registry credentials",
+    "private package registry auth headers",
+    "private URLs containing credentials",
+    "raw environment variables containing secrets",
+    "tenant/customer identifiers",
+    "sensitive local paths that reveal private infrastructure",
+    "private network addresses unless explicitly safe and necessary",
+    "raw command output containing secrets"
+  ],
+  "redacted_forms": [
+    "[redacted-secret]",
+    "[redacted-token]",
+    "[redacted-private-path]",
+    "[redacted-private-url]",
+    "[redacted-operator]"
+  ],
+  "future_archive_allowed_files": [
+    "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_AUDIT.md",
+    "optional `docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_SOURCE.md`"
+  ],
+  "allowed_files": [
+    "tests/fixtures/build_backend_operator_response_archive/",
+    "tests/test_lima_build_backend_operator_response_archive_static.py",
+    "docs/audits/LIMA_BUILD_BACKEND_OPERATOR_RESPONSE_ARCHIVE_STATIC_TESTS_IMPLEMENTATION_AUDIT.md"
+  ],
+  "forbidden_commands": [
+    "install `setuptools`",
+    "run `pip install`",
+    "run `pip wheel`",
+    "run `python -m build`",
+    "create virtual environments",
+    "download dependencies",
+    "access PyPI or registries",
+    "build wheels or sdists",
+    "publish packages"
+  ],
+  "forbidden_surfaces": [
+    "commit wheel, sdist, build, cache, virtualenv, or wheelhouse artifacts",
+    "modify `pyproject.toml`",
+    "modify package metadata",
+    "modify `lima/`",
+    "modify tests or examples",
+    "touch public Sparkbot",
+    "touch Arc Bot repositories",
+    "touch Robo-OS repositories",
+    "wire Sparkbot or Arc Bot",
+    "add provider/model calls",
+    "add storage or persistence",
+    "add Guardian enforcement",
+    "add HumanInput runtime bridge",
+    "add live adapters",
+    "run shell/browser/network/file mutation behavior",
+    "start background workers, subprocesses, threads, queues, daemons, or schedulers",
+    "use credentials or secrets",
+    "control devices, robots, drones, or physical-world systems"
+  ],
+  "conditional_next_branches": {
+    "existing_backend_ready_environment": "verify-lima-approved-existing-build-backend-environment",
+    "controlled_local_environment": "design-lima-controlled-build-backend-environment-preparation",
+    "offline_source": "design-lima-offline-build-backend-source-verification",
+    "blocked_response": "audit-lima-build-backend-operator-response-blocked"
+  },
+  "remaining_blockers": [
+    "missing archived operator response",
+    "missing build backend in the active environment",
+    "missing local wheel build proof",
+    "missing isolated install proof",
+    "missing Sparkbot-owned proof packet",
+    "missing Arc Bot-owned proof packet",
+    "missing operator delivery confirmation",
+    "missing public API compatibility freeze",
+    "missing product-ready release decision"
+  ],
+  "recommended_next_branch": "audit-lima-build-backend-operator-response-archive-static-tests"
+}
