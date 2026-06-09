@@ -32,9 +32,9 @@ LIMA Runtime is the trust-gated operating layer that should eventually sit under
 
 The long-term vision can be called an AI OS. The engineering surface is more concrete: runtime, kernel, contracts, trust gate, model harness, spine, drivers, shells, tool packs, and persistence interface.
 
-## Phase 0 Status
+## Current Proof-Stage Runtime Status
 
-**Phase 0 only. No runtime implementation yet.**
+LIMA-AI-OS is still not product-ready, but it is no longer docs-only.
 
 This repository currently contains:
 
@@ -42,9 +42,34 @@ This repository currently contains:
 - Extraction plan
 - Public contract definitions
 - Package skeleton
-- Import-only tests
+- proof-public package imports from `lima.kernel`
+- a narrow, non-executing `LimaKernel.evaluate(...)` surface for already-normalized metadata
+- fail-closed dry-run result objects
+- explicit synthetic-only simulated discovery support
+- proof request, handoff, redaction, audit, result-gate, and waiting-state guardrails for Sparkbot and Arc Bot teams
 
-It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
+It does not contain migrated Sparkbot runtime behavior, public Sparkbot wiring, Arc Bot wiring, live tool execution,
+production deployment wiring, credentials, real model calls, provider routing, durable storage, Guardian enforcement,
+HumanInput runtime bridge behavior, live discovery, connection attempts, pairing, device control, Robo-OS access,
+robotics control paths, drones, or physical-world behavior.
+
+Current proof-gate status:
+
+- `lima-runtime` is a `0.0.1` proof-only runtime candidate.
+- `import lima` is allowed for package import proof.
+- `from lima.kernel import LimaKernel` and the proof-public kernel contracts are allowed only for consumer-owned dry-run
+  proof branches.
+- top-level runtime exports from `lima` remain unapproved.
+- Sparkbot and Arc Bot proof packets have not been received.
+- compatibility freeze and product readiness remain blocked.
+
+Next movement is input-dependent:
+
+- If the operator confirms manual delivery and no proof packets exist:
+  `record-lima-consumer-proof-delivery-confirmation-status`
+- If Sparkbot or Arc Bot proof packets arrive:
+  `audit-consumer-owned-proof-results`
+- If neither input exists, remain in waiting state and do not claim Sparkbot/Arc readiness.
 
 ## Core Invariant
 

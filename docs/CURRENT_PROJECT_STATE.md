@@ -6,6 +6,53 @@ For long-range product direction, Phase 3 continuation assumptions, and operator
 
 ## Current State
 
+## Current Proof-Gate Snapshot - 2026-06-09
+
+The active LIMA-to-Sparkbot/Arc readiness track is proof-stage only.
+
+Current source-backed state:
+
+- `lima-runtime` package metadata exists at version `0.0.1`.
+- `import lima` works for package import proof.
+- proof-public runtime imports are exposed from `lima.kernel`, including `LimaKernel`, `CapabilityProfile`,
+  `KernelRequest`, `ExecutionResult`, `KernelEvent`, `GuardianStubDecision`, and `SimulatedDiscoveryAdapter`.
+- `LimaKernel.evaluate(...)` remains dry-run only and accepts already-normalized metadata only.
+- explicit simulated discovery support exists through `SimulatedDiscoveryAdapter`, but it returns synthetic/inert
+  surfaces only and does not scan, connect, pair, use credentials, or touch devices.
+- Sparkbot and Arc Bot consumer proof request, handoff, redaction, receipt, audit, result-gate, and waiting-state
+  guardrails exist in LIMA-local docs/tests.
+
+Current external evidence state:
+
+- operator delivery confirmation: not recorded in the current proof-gate branch stack.
+- Sparkbot proof packet: not received.
+- Arc Bot proof packet: not received.
+- Sparkbot proof audit: not started.
+- Arc Bot proof audit: not started.
+- dual-consumer result gate: not ready.
+- compatibility freeze: not ready.
+- product readiness: not production ready.
+
+Current latest proof-gate audit branch:
+
+- `audit-lima-waiting-on-consumer-proof-blocker-static-tests`
+- latest commit: `7949a386bc53dd6c5ea6b0ae55814150fee8bef7`
+- validation on that branch: `python -m compileall lima`, focused waiting-state static tests, full `pytest` with 3064
+  tests, and `git diff --check` passed.
+
+Allowed next actions are input-dependent:
+
+- If the operator explicitly confirms manual delivery and no proof packets are supplied:
+  `record-lima-consumer-proof-delivery-confirmation-status`
+- If Sparkbot or Arc Bot proof packets are supplied:
+  `audit-consumer-owned-proof-results`
+- If neither input is supplied, remain in waiting state and do not claim Sparkbot/Arc readiness.
+
+Do not infer product readiness, public Sparkbot release readiness, Arc Bot readiness, compatibility freeze readiness,
+Guardian enforcement, provider/model routing, storage/persistence, HumanInput bridge readiness, live discovery,
+connection, pairing, device control, Robo-OS access, robotics, drones, or physical-world behavior from the proof-stage
+runtime surface.
+
 Phase 3.5 is complete and tagged on `main`.
 
 Phase 3.6 is complete, merged to `main`, and tagged.
