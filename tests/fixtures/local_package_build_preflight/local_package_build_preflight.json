@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_local_package_build_preflight_only",
+  "audit_status": "PASS",
+  "base_commit": "3965fc2105290d490adbe8ac77086be134b4fb76",
+  "design_path": "docs/design/LIMA_LOCAL_PACKAGE_BUILD_PREFLIGHT.md",
+  "readiness_review_path": "docs/audits/LIMA_LOCAL_PACKAGE_BUILD_PREFLIGHT_READINESS_REVIEW.md",
+  "independent_audit_path": "docs/audits/LIMA_LOCAL_PACKAGE_BUILD_PREFLIGHT_AUDIT.md",
+  "static_tests_audit_path": "docs/audits/LIMA_LOCAL_PACKAGE_BUILD_PREFLIGHT_STATIC_TESTS_IMPLEMENTATION_AUDIT.md",
+  "package_metadata_path": "pyproject.toml",
+  "declared_build_backend": "setuptools.build_meta",
+  "declared_build_requirement": "setuptools>=68",
+  "project_name": "lima-runtime",
+  "project_version": "0.0.1",
+  "requires_python": ">=3.11",
+  "package_include": "lima*",
+  "failed_build_evidence": [
+    "BackendUnavailable: Cannot import 'setuptools.build_meta'",
+    "Package(s) not found: setuptools",
+    "no wheel was produced",
+    "source tree remained clean"
+  ],
+  "proof_modes": {
+    "mode_a": "repo-checkout import and example proof",
+    "mode_b": "build backend preflight only",
+    "mode_c": "approved local build dependency path",
+    "mode_d": "isolated build proof with backend already available"
+  },
+  "forbidden_commands": [
+    "pip install",
+    "pip wheel",
+    "python -m build",
+    "virtualenv creation",
+    "dependency download",
+    "registry access",
+    "package publication"
+  ],
+  "forbidden_surfaces": [
+    "dependency installation",
+    "network dependency download",
+    "package publication",
+    "committed wheel or sdist artifacts",
+    "pyproject.toml changes",
+    "lima/ runtime changes",
+    "public export changes",
+    "public Sparkbot repository changes",
+    "Arc Bot repository changes",
+    "Robo-OS wiring",
+    "provider/model calls",
+    "storage/persistence",
+    "Guardian enforcement",
+    "HumanInput runtime bridge",
+    "live adapters",
+    "tool execution",
+    "shell/browser/network/file mutation",
+    "background workers",
+    "credentials or secret storage",
+    "device control",
+    "robot/drone control",
+    "physical-world behavior"
+  ],
+  "future_acceptance_criteria": [
+    "the declared build backend is available in the build environment",
+    "no package publication occurs",
+    "no wheel, sdist, build directory, cache, or temporary artifact is committed",
+    "package name remains `lima-runtime`",
+    "`LimaKernel.evaluate(...)` remains dry-run and non-executing",
+    "no Sparkbot, Arc Bot, or product readiness claim is made"
+  ],
+  "allowed_files": [
+    "tests/fixtures/local_package_build_preflight/",
+    "tests/test_lima_local_package_build_preflight_static.py",
+    "docs/audits/LIMA_LOCAL_PACKAGE_BUILD_PREFLIGHT_STATIC_TESTS_IMPLEMENTATION_AUDIT.md"
+  ],
+  "recommended_next_branch": "audit-lima-local-package-build-preflight-static-tests"
+}
