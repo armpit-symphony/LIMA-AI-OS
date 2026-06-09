@@ -147,13 +147,27 @@ def test_method_level_dry_run_candidate_is_documented_and_non_authoritative() ->
             "execution_authority": False,
             "public_export_added": False,
             "result_objects_exported": False,
-        }
+        },
+        {
+            "import": "from lima.kernel import LimaKernel",
+            "module": "lima.kernel",
+            "symbol": "LimaKernel",
+            "member": "LimaKernel.preview_guardian_decision_authority",
+            "classification": "method_level_dry_run_candidate",
+            "execution_authority": False,
+            "public_export_added": False,
+            "result_objects_exported": False,
+        },
     ]
-    assert entries[0]["symbol"] in lima_kernel.__all__
+    assert all(entry["symbol"] in lima_kernel.__all__ for entry in entries)
     assert "GuardianLifecyclePreviewResult" not in lima_kernel.__all__
     assert "GuardianRequestPreview" not in lima_kernel.__all__
     assert "IntentEnvelopeCandidatePreview" not in lima_kernel.__all__
-    assert f"`{entries[0]['member']}(...)`" in text
+    assert "GuardianDecisionAuthorityPreview" not in lima_kernel.__all__
+    assert "GuardianDecisionAuthorityPreviewEvent" not in lima_kernel.__all__
+    assert "GuardianDecisionAuthorityPreviewResult" not in lima_kernel.__all__
+    for entry in entries:
+        assert f"`{entry['member']}(...)`" in text
     assert "not added to `lima.kernel.__all__`" in text
 
 
@@ -204,5 +218,7 @@ def test_manifest_points_to_next_audit_gate() -> None:
     fixture = _load_fixture()
     text = _manifest_text()
 
-    assert fixture["next_review_gate"] == "audit-lima-guardian-lifecycle-public-api-metadata"
+    assert fixture["next_review_gate"] == (
+        "audit-lima-guardian-decision-authority-public-api-metadata"
+    )
     assert f"`{fixture['next_review_gate']}`" in text

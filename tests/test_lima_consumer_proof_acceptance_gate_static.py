@@ -120,12 +120,12 @@ def test_acceptance_gate_public_api_matches_proof_public_manifest_entries() -> N
         for entry in public_api["public_imports"]
         if entry["classification"] == "method_level_dry_run_candidate"
     ]
-    assert [entry["member"] for entry in method_entries] == [
-        "LimaKernel.preview_guardian_lifecycle"
-    ]
+    method_members = [entry["member"] for entry in method_entries]
+    assert "LimaKernel.preview_guardian_lifecycle" in method_members
     assert all(entry["execution_authority"] is False for entry in method_entries)
 
     for candidate in fixture["method_level_candidates"]:
+        assert candidate.removesuffix("(...)") in method_members
         assert f"`{candidate}`" in gate
     assert "Consumer proof branches must not import lifecycle preview result dataclasses as public API." in gate
 

@@ -59,6 +59,16 @@
       "result_objects_exported": false
     },
     {
+      "import": "from lima.kernel import LimaKernel",
+      "module": "lima.kernel",
+      "symbol": "LimaKernel",
+      "member": "LimaKernel.preview_guardian_decision_authority",
+      "classification": "method_level_dry_run_candidate",
+      "execution_authority": false,
+      "public_export_added": false,
+      "result_objects_exported": false
+    },
+    {
       "import": "from lima.kernel import CapabilityProfile",
       "module": "lima.kernel",
       "symbol": "CapabilityProfile",
@@ -299,5 +309,5 @@
     "drones",
     "physical-world behavior"
   ],
-  "next_review_gate": "audit-lima-guardian-lifecycle-public-api-metadata"
+  "next_review_gate": "audit-lima-guardian-decision-authority-public-api-metadata"
 }

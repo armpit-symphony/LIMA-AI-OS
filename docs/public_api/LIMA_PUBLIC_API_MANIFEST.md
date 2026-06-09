@@ -80,8 +80,11 @@ Method-level dry-run candidates are existing methods reachable through proof-pub
 | Import | Method | Classification | Execution Authority |
 | --- | --- | --- | --- |
 | `from lima.kernel import LimaKernel` | `LimaKernel.preview_guardian_lifecycle(...)` | `method_level_dry_run_candidate` | none |
+| `from lima.kernel import LimaKernel` | `LimaKernel.preview_guardian_decision_authority(...)` | `method_level_dry_run_candidate` | none |
 
 `LimaKernel.preview_guardian_lifecycle(...)` remains an explicit, dry-run-only Guardian lifecycle preview method for already-normalized `KernelRequest` metadata. Its preview result dataclasses remain internal and are not added to `lima.kernel.__all__`.
+
+`LimaKernel.preview_guardian_decision_authority(...)` remains an explicit, dry-run-only Guardian decision authority preview method for already-normalized `KernelRequest` metadata. Its preview result dataclasses remain internal and are not added to `lima.kernel.__all__`.
 
 ## Forbidden Or Internal Consumer Surfaces
 
@@ -217,6 +220,6 @@ Forbidden proof-stage use:
 
 The next safe branch after this manifest implementation is:
 
-`audit-lima-guardian-lifecycle-public-api-metadata`
+`audit-lima-guardian-decision-authority-public-api-metadata`
 
 No package version bump, runtime export change, or Sparkbot/Arc integration should occur before that audit passes.
