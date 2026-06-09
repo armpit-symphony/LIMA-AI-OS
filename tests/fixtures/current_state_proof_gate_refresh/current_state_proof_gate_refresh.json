@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_current_state_proof_gate_refresh_only",
+  "readme_path": "README.md",
+  "current_state_path": "docs/CURRENT_PROJECT_STATE.md",
+  "public_api_manifest_path": "docs/public_api/LIMA_PUBLIC_API_MANIFEST.md",
+  "refresh_audit_path": "docs/audits/LIMA_CURRENT_STATE_PROOF_GATE_REFRESH_AUDIT.md",
+  "independent_audit_path": "docs/audits/LIMA_CURRENT_STATE_PROOF_GATE_REFRESH_INDEPENDENT_AUDIT.md",
+  "static_tests_audit_path": "docs/audits/LIMA_CURRENT_STATE_PROOF_GATE_REFRESH_STATIC_TESTS_IMPLEMENTATION_AUDIT.md",
+  "base_commit": "905445d684e7338c741cbfd46add6e4a3b4208e1",
+  "audit_status": "PASS",
+  "proof_stage_capabilities": [
+    "LIMA-AI-OS is still not product-ready, but it is no longer docs-only.",
+    "proof-public package imports from `lima.kernel`",
+    "a narrow, non-executing `LimaKernel.evaluate(...)` surface for already-normalized metadata",
+    "fail-closed dry-run result objects",
+    "explicit synthetic-only simulated discovery support"
+  ],
+  "current_state_capabilities": [
+    "`lima-runtime` package metadata exists at version `0.0.1`.",
+    "`import lima` works for package import proof.",
+    "proof-public runtime imports are exposed from `lima.kernel`",
+    "`LimaKernel.evaluate(...)` remains dry-run only and accepts already-normalized metadata only.",
+    "explicit simulated discovery support exists through `SimulatedDiscoveryAdapter`"
+  ],
+  "blocked_surfaces": [
+    "migrated Sparkbot runtime behavior",
+    "public Sparkbot wiring",
+    "Arc Bot wiring",
+    "live tool execution",
+    "production deployment wiring",
+    "credentials",
+    "real model calls",
+    "provider routing",
+    "durable storage",
+    "Guardian enforcement",
+    "HumanInput runtime bridge behavior",
+    "live discovery",
+    "connection attempts",
+    "pairing",
+    "device control",
+    "Robo-OS access",
+    "robotics control paths",
+    "drones",
+    "physical-world behavior"
+  ],
+  "external_evidence_state": [
+    "operator delivery confirmation: not recorded in the current proof-gate branch stack.",
+    "Sparkbot proof packet: not received.",
+    "Arc Bot proof packet: not received.",
+    "Sparkbot proof audit: not started.",
+    "Arc Bot proof audit: not started.",
+    "dual-consumer result gate: not ready.",
+    "compatibility freeze: not ready.",
+    "product readiness: not production ready."
+  ],
+  "proof_public_imports": [
+    "from lima.kernel import LimaKernel",
+    "from lima.kernel import CapabilityProfile",
+    "from lima.kernel import KernelRequest",
+    "from lima.kernel import ExecutionResult",
+    "from lima.kernel import KernelEvent",
+    "from lima.kernel import GuardianStubDecision",
+    "from lima.kernel import SimulatedDiscoveryAdapter"
+  ],
+  "next_branches": {
+    "manual_delivery_confirmed_without_packets": "record-lima-consumer-proof-delivery-confirmation-status",
+    "proof_packets_supplied": "audit-consumer-owned-proof-results"
+  },
+  "forbidden_inferences": [
+    "product readiness",
+    "public Sparkbot release readiness",
+    "Arc Bot readiness",
+    "compatibility freeze readiness",
+    "Guardian enforcement",
+    "provider/model routing",
+    "storage/persistence",
+    "HumanInput bridge readiness",
+    "live discovery",
+    "connection",
+    "pairing",
+    "device control",
+    "Robo-OS access",
+    "robotics",
+    "drones",
+    "physical-world behavior"
+  ],
+  "allowed_files": [
+    "tests/fixtures/current_state_proof_gate_refresh/current_state_proof_gate_refresh.json",
+    "tests/test_lima_current_state_proof_gate_refresh_static.py",
+    "docs/audits/LIMA_CURRENT_STATE_PROOF_GATE_REFRESH_STATIC_TESTS_IMPLEMENTATION_AUDIT.md"
+  ],
+  "recommended_next_branch": "audit-lima-current-state-proof-gate-refresh-static-tests"
+}
