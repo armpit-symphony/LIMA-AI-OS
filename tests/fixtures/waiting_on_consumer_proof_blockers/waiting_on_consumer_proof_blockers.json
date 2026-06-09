@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_waiting_on_consumer_proof_blocker_only",
+  "blocker_audit_path": "docs/audits/LIMA_WAITING_ON_CONSUMER_PROOF_BLOCKER_AUDIT.md",
+  "current_state_audit_path": "docs/audits/LIMA_SPARKBOT_ARC_READINESS_CURRENT_STATE_AUDIT.md",
+  "current_state_static_tests_audit_path": "docs/audits/LIMA_SPARKBOT_ARC_READINESS_CURRENT_STATE_STATIC_TESTS_AUDIT.md",
+  "operator_delivery_request_path": "docs/handoffs/LIMA_CONSUMER_PROOF_OPERATOR_DELIVERY_REQUEST.md",
+  "dry_run_delivery_brief_path": "docs/handoffs/LIMA_SPARKBOT_ARC_DRY_RUN_PROOF_DELIVERY_BRIEF.md",
+  "static_tests_audit_path": "docs/audits/LIMA_WAITING_ON_CONSUMER_PROOF_BLOCKER_STATIC_TESTS_IMPLEMENTATION_AUDIT.md",
+  "base_commit": "71ae071a7ab51395b3d6aa139a25a1a581ab39ce",
+  "audit_status": "PASS",
+  "current_evidence_state": {
+    "operator_delivery_confirmation": "operator delivery confirmation: not recorded in this branch",
+    "sparkbot_proof_packet": "Sparkbot proof packet: not received",
+    "arc_bot_proof_packet": "Arc Bot proof packet: not received",
+    "sparkbot_proof_audit": "Sparkbot proof audit: not started",
+    "arc_bot_proof_audit": "Arc Bot proof audit: not started",
+    "redaction_review": "redaction review: not started",
+    "proof_archive": "proof archive: not started",
+    "dual_consumer_result_gate": "dual-consumer result gate: not ready",
+    "compatibility_freeze": "compatibility freeze: not ready",
+    "product_readiness": "product readiness: not production ready"
+  },
+  "not_ready_claims": [
+    "Not ready for delivery confirmation recording without explicit operator confirmation.",
+    "Not ready for proof-result auditing without Sparkbot or Arc Bot proof packets.",
+    "Not ready for result gate, compatibility freeze, Sparkbot integration, Arc Bot integration, product use, production use",
+    "remain in waiting state and do not claim Sparkbot/Arc readiness"
+  ],
+  "must_not_run_branches": {
+    "delivery_confirmation_status": "record-lima-consumer-proof-delivery-confirmation-status",
+    "consumer_owned_proof_results": "audit-consumer-owned-proof-results"
+  },
+  "missing_external_inputs": [
+    "explicit operator statement confirming manual proof-request delivery",
+    "Sparkbot redacted proof packet produced by the Sparkbot repo team",
+    "Arc Bot redacted proof packet produced by the Arc Bot / LIMA Office repo team"
+  ],
+  "allowed_next_actions": [
+    "record that narrow status only",
+    "run redaction review and proof-result audit only",
+    "remain in waiting state and avoid readiness claims",
+    "Continue only LIMA-local documentation or static guardrail work"
+  ],
+  "forbidden_surfaces": [
+    "public Sparkbot repo edits",
+    "Arc Bot repo edits",
+    "consumer repo fetch, clone, scan, or inspection",
+    "consumer branch creation",
+    "proof packet fabrication",
+    "proof packet intake without supplied packet evidence",
+    "raw proof packet content copied into LIMA",
+    "automated delivery",
+    "webhooks",
+    "issue or PR creation",
+    "package version bump",
+    "top-level runtime export",
+    "`lima/` runtime changes",
+    "`tests/support/` changes",
+    "model/provider calls",
+    "storage/persistence",
+    "Guardian enforcement",
+    "HumanInput bridge",
+    "Sparkbot wiring",
+    "Arc Bot wiring",
+    "Robo-OS wiring",
+    "adapter expansion",
+    "tool execution",
+    "browser/file/process/network actions",
+    "live discovery",
+    "scanning",
+    "connection attempts",
+    "pairing",
+    "credential use or storage",
+    "sockets",
+    "background workers",
+    "scheduler",
+    "device control",
+    "robotics",
+    "drones",
+    "physical-world behavior"
+  ],
+  "allowed_files": [
+    "tests/fixtures/waiting_on_consumer_proof_blockers/waiting_on_consumer_proof_blockers.json",
+    "tests/test_lima_waiting_on_consumer_proof_blocker_static.py",
+    "docs/audits/LIMA_WAITING_ON_CONSUMER_PROOF_BLOCKER_STATIC_TESTS_IMPLEMENTATION_AUDIT.md"
+  ],
+  "recommended_next_branch": "audit-lima-waiting-on-consumer-proof-blocker-static-tests"
+}
