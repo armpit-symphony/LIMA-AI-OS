@@ -5,6 +5,10 @@ from __future__ import annotations
 from typing import Any, Final, Mapping
 
 from .discovery import DiscoveryAdapterRequest
+from .guardian_decision_authority import (
+    GuardianDecisionAuthorityPreviewResult,
+    preview_guardian_decision_authority,
+)
 from .guardian_lifecycle import GuardianLifecyclePreviewResult, preview_guardian_lifecycle
 from .plugin_contract import (
     CapabilityProfile,
@@ -277,6 +281,23 @@ class LimaKernel:
         """Return a non-authoritative Guardian lifecycle preview."""
 
         return preview_guardian_lifecycle(
+            request,
+            kernel_id=self.kernel_id,
+            runtime_dependencies_present={
+                "provider_registry": self.provider_registry is not None,
+                "storage": self.storage is not None,
+                "humaninput_bridge": self.humaninput_bridge is not None,
+                "driver_registry": self.driver_registry is not None,
+            },
+        )
+
+    def preview_guardian_decision_authority(
+        self,
+        request: KernelRequest | Mapping[str, Any],
+    ) -> GuardianDecisionAuthorityPreviewResult:
+        """Return a non-authoritative Guardian decision authority preview."""
+
+        return preview_guardian_decision_authority(
             request,
             kernel_id=self.kernel_id,
             runtime_dependencies_present={
