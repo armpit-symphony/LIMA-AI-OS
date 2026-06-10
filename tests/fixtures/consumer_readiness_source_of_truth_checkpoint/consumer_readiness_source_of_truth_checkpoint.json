@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1",
+  "checkpoint_scope": "consumer_readiness_source_of_truth",
+  "checkpoint_path": "docs/LIMA_CONSUMER_READINESS_SOURCE_OF_TRUTH.md",
+  "audit_path": "docs/audits/LIMA_CONSUMER_READINESS_SOURCE_OF_TRUTH_CHECKPOINT_AUDIT.md",
+  "covered_consumers": [
+    "Sparkbot",
+    "Arc Bot",
+    "LIMA Robo OS",
+    "LIMA Office",
+    "future shells"
+  ],
+  "consumer_status": "readiness_proof_only",
+  "required_gates_before_consumer_integration": [
+    "LIMA package build proof",
+    "LIMA isolated install/import proof",
+    "LIMA public API compatibility freeze",
+    "Sparkbot-owned consumer proof packet audit",
+    "Arc Bot-owned consumer proof packet audit",
+    "LIMA Robo OS-owned consumer proof packet audit",
+    "LIMA Office-owned consumer proof packet audit",
+    "Future-shell proof packet audit",
+    "Operator delivery confirmation",
+    "Product-ready release decision"
+  ],
+  "forbidden_until_gates_pass": [
+    "Sparkbot wiring",
+    "Arc Bot wiring",
+    "LIMA Robo OS wiring",
+    "LIMA Office wiring",
+    "future shell wiring",
+    "runtime integration",
+    "provider/model behavior changes",
+    "Guardian authority expansion",
+    "HumanInput bridge activation",
+    "connector actions",
+    "browser/file/network actions",
+    "external sends",
+    "live discovery",
+    "scanning",
+    "pairing",
+    "credential use",
+    "device control",
+    "robot/drone/IoT/physical-world behavior",
+    "product-readiness claims"
+  ],
+  "allowed_consumer_posture": [
+    "review LIMA handoff docs",
+    "prepare repo-owned proof plans",
+    "prepare synthetic dry-run metadata examples",
+    "prepare redacted proof packet drafts",
+    "identify shell-owned request translation needs",
+    "identify capability-profile expectations",
+    "identify Guardian and approval-boundary expectations"
+  ],
+  "recommended_next_branch": "archive-lima-build-backend-operator-response"
+}
