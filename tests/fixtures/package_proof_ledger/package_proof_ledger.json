@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1",
+  "fixture_scope": "static_package_proof_ledger_only",
+  "ledger_path": "docs/readiness/LIMA_PACKAGE_PROOF_LEDGER.md",
+  "package_metadata_path": "pyproject.toml",
+  "package_name": "lima-runtime",
+  "package_version": "0.0.1",
+  "declared_build_backend": "setuptools.build_meta",
+  "declared_build_requirement": "setuptools>=68",
+  "import_proofs": [
+    "import lima",
+    "import lima.kernel",
+    "from lima.kernel import LimaKernel"
+  ],
+  "required_non_authorization_statements": [
+    "Package proof is not runtime integration.",
+    "Package proof is not product readiness.",
+    "Package proof does not authorize consumer wiring."
+  ],
+  "consumer_names": [
+    "Sparkbot",
+    "Arc Bot",
+    "LIMA Robo OS",
+    "LIMA Office",
+    "future shell"
+  ],
+  "forbidden_surfaces": [
+    "provider/model routing",
+    "Guardian authority expansion",
+    "HumanInput bridge activation",
+    "storage/persistence runtime",
+    "connectors",
+    "browser/file/network behavior",
+    "external sends",
+    "live discovery",
+    "scanning",
+    "pairing",
+    "credential use",
+    "device control",
+    "robot/drone/IoT/physical-world behavior",
+    "product-readiness claims"
+  ],
+  "artifact_forbidden_patterns": [
+    "wheels",
+    "sdists",
+    "source archives",
+    "build/",
+    "dist/",
+    "*.egg-info",
+    "wheelhouses",
+    "virtual environments"
+  ],
+  "known_warning": "project.license",
+  "known_warning_deadline": "2027-02-18",
+  "recommended_next_branch": "design-lima-public-api-freeze-candidate"
+}
