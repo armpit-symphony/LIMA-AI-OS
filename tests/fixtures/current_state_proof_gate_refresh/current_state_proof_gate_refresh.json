@@ -45,9 +45,13 @@
     "physical-world behavior"
   ],
   "external_evidence_state": [
-    "operator delivery confirmation: not recorded in the current proof-gate branch stack.",
+    "operator delivery confirmation: recorded as manual-delivery-only",
+    "current LIMA waiting state: `WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES`.",
     "Sparkbot proof packet: not received.",
     "Arc Bot proof packet: not received.",
+    "LIMA Robo OS proof packet: not received.",
+    "LIMA Office proof packet: not received.",
+    "Future shell proof packet: not received.",
     "Sparkbot proof audit: not started.",
     "Arc Bot proof audit: not started.",
     "dual-consumer result gate: not ready.",

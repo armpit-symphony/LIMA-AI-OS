@@ -60,7 +60,6 @@ Blocked:
 - final public API freeze
 - consumer-owned proof packet responses
 - consumer-owned proof packet audits
-- operator delivery confirmation
 - Sparkbot integration
 - Arc Bot integration
 - LIMA Robo OS integration
@@ -90,7 +89,7 @@ Runtime integration: NOT_READY.
 Consumer integration: BLOCKED.
 
 No consumer repo may integrate LIMA runtime paths until package proof, isolated install proof, public API freeze, consumer
-proof packet audits, operator delivery confirmation, and product-ready release decisions are complete.
+proof packet audits, and product-ready release decisions are complete.
 
 ## Current Package Readiness Verdict
 
@@ -135,10 +134,20 @@ Consumer repos remain readiness/proof-only.
 
 ## Operator Delivery Confirmation Status
 
-Operator delivery confirmation: PENDING.
+Operator delivery confirmation: RECORDED_MANUAL_DELIVERY_ONLY.
 
-No delivery confirmation has authorized Sparkbot, Arc Bot, LIMA Robo OS, LIMA Office, or future shell runtime
-integration.
+Delivery record:
+
+- `docs/consumer_proof_packets/LIMA_CONSUMER_PROOF_PACKET_REQUEST_DELIVERY_RECORD.md`
+
+This confirms only that LIMA-side consumer proof packet requests were delivered or made available to separate consumer
+teams for response.
+
+It does not authorize Sparkbot, Arc Bot, LIMA Robo OS, LIMA Office, or future shell runtime integration.
+
+Current LIMA waiting state:
+
+`WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES`
 
 ## Release Readiness Status
 
@@ -166,11 +175,11 @@ Current disposition:
 
 Recommended next gate:
 
-1. Deliver the LIMA-side proof packet request templates to the consumer repo teams without editing consumer repos.
-2. Wait for consumer-owned proof packet responses.
-3. Audit each received consumer proof packet in LIMA-side audit branches.
-4. Only after consumer proof packet audits pass, create a final public API freeze decision branch.
-5. Only after final public API freeze and operator delivery confirmation, consider consumer integration planning.
+1. Wait for consumer-owned proof packet responses.
+2. Audit each received consumer proof packet in LIMA-side audit branches after redaction review.
+3. Only after consumer proof packet audits pass, create a final public API freeze decision branch.
+4. Only after final public API freeze and later explicit product-readiness approval, consider consumer integration
+   planning.
 
 Blocked until separately approved:
 

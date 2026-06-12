@@ -104,7 +104,7 @@ def test_current_state_pins_proof_gate_snapshot() -> None:
     fixture = _load_fixture()
     current_state = _current_state_text()
 
-    assert "## Current Proof-Gate Snapshot - 2026-06-09" in current_state
+    assert "## Current Proof-Gate Snapshot - 2026-06-12" in current_state
     assert "The active LIMA-to-Sparkbot/Arc readiness track is proof-stage only." in current_state
 
     for capability in fixture["current_state_capabilities"]:
@@ -131,7 +131,10 @@ def test_current_state_preserves_input_dependent_next_branches() -> None:
     assert proof_branch in current_state
     assert manual_branch in readme
     assert proof_branch in readme
-    assert "If neither input is supplied, remain in waiting state and do not claim Sparkbot/Arc readiness." in current_state
+    assert (
+        "If no proof packets are supplied, remain in `WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES`"
+        in current_state
+    )
     assert "If neither input exists, remain in waiting state and do not claim Sparkbot/Arc readiness." in readme
 
 

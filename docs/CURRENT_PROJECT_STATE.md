@@ -6,7 +6,7 @@ For long-range product direction, Phase 3 continuation assumptions, and operator
 
 ## Current State
 
-## Current Proof-Gate Snapshot - 2026-06-09
+## Current Proof-Gate Snapshot - 2026-06-12
 
 The active LIMA-to-Sparkbot/Arc readiness track is proof-stage only.
 
@@ -24,29 +24,32 @@ Current source-backed state:
 
 Current external evidence state:
 
-- operator delivery confirmation: not recorded in the current proof-gate branch stack.
+- operator delivery confirmation: recorded as manual-delivery-only in
+  `docs/consumer_proof_packets/LIMA_CONSUMER_PROOF_PACKET_REQUEST_DELIVERY_RECORD.md`.
+- current LIMA waiting state: `WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES`.
 - Sparkbot proof packet: not received.
 - Arc Bot proof packet: not received.
+- LIMA Robo OS proof packet: not received.
+- LIMA Office proof packet: not received.
+- Future shell proof packet: not received.
 - Sparkbot proof audit: not started.
 - Arc Bot proof audit: not started.
 - dual-consumer result gate: not ready.
 - compatibility freeze: not ready.
 - product readiness: not production ready.
 
-Current latest proof-gate audit branch:
+Current latest proof-gate branch:
 
-- `audit-lima-waiting-on-consumer-proof-blocker-static-tests`
-- latest commit: `7949a386bc53dd6c5ea6b0ae55814150fee8bef7`
-- validation on that branch: `python -m compileall lima`, focused waiting-state static tests, full `pytest` with 3064
-  tests, and `git diff --check` passed.
+- `record-lima-consumer-proof-delivery-confirmation-status`
+- scope: records operator delivery confirmation only and moves LIMA to
+  `WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES`.
 
 Allowed next actions are input-dependent:
 
-- If the operator explicitly confirms manual delivery and no proof packets are supplied:
-  `record-lima-consumer-proof-delivery-confirmation-status`
 - If Sparkbot or Arc Bot proof packets are supplied:
   `audit-consumer-owned-proof-results`
-- If neither input is supplied, remain in waiting state and do not claim Sparkbot/Arc readiness.
+- If no proof packets are supplied, remain in `WAITING_ON_CONSUMER_PROOF_PACKET_RESPONSES` and do not claim
+  Sparkbot/Arc/LIMA Robo OS/LIMA Office/future shell readiness.
 
 Do not infer product readiness, public Sparkbot release readiness, Arc Bot readiness, compatibility freeze readiness,
 Guardian enforcement, provider/model routing, storage/persistence, HumanInput bridge readiness, live discovery,
