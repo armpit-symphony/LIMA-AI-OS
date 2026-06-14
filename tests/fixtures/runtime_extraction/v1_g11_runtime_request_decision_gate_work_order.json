@@ -1,0 +1,101 @@
+{
+  "work_order_id": "v1_g11_runtime_request_decision_gate_work_order",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "source_commit": "3f844a5097e2be60653e2b85bbbec9ce758cbc48",
+  "document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md",
+  "approval_request_document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md",
+  "work_order_ready": true,
+  "operator_approval_recorded": false,
+  "runtime_implementation_approved": false,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_code_copied": false,
+  "sparkbot_import_added": false,
+  "provider_model_routing_added": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "existing_shapes_to_reuse": [
+    "lima.contracts.guardian.ConsequentialActionRequest",
+    "lima.contracts.guardian.ConsequentialActionType",
+    "lima.contracts.guardian.GuardianDecision",
+    "lima.contracts.guardian.GuardianDecisionStatus",
+    "lima.kernel.validate_candidate",
+    "lima.kernel.normalize_candidate_status"
+  ],
+  "approved_runtime_files_if_operator_approves": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/kernel/__init__.py",
+    "lima/guardian/v1_decision_gate.py",
+    "lima/guardian/__init__.py"
+  ],
+  "candidate_symbols_if_approved": [
+    "V1RuntimeRequestError",
+    "build_v1_runtime_request",
+    "V1GuardianDecisionGateError",
+    "review_v1_runtime_request"
+  ],
+  "required_mapping_rules_if_approved": {
+    "informational": "reviewed_non_executing_no_approval_token",
+    "planning": "reviewed_non_executing_no_approval_token",
+    "drafting": "reviewed_non_executing_no_approval_token",
+    "file_mutation": "approval_required_non_executing",
+    "destructive_edit": "approval_required_non_executing",
+    "destructive_delete": "approval_required_non_executing",
+    "model_call": "blocked_or_future_policy_required_no_routing",
+    "tool_call": "blocked_or_future_policy_required_no_execution",
+    "browser_network": "blocked_or_future_policy_required_no_browser_network_action",
+    "robotics_physical_world": "blocked_or_future_policy_required_no_physical_action",
+    "unknown": "denied_or_blocked"
+  },
+  "allowed_outputs_if_approved": [
+    "typed_request_metadata",
+    "guardian_decision_metadata",
+    "non_persistent_audit_evidence_linkage_metadata",
+    "redacted_summaries",
+    "deterministic_reason_codes"
+  ],
+  "forbidden_outputs": [
+    "raw_secrets",
+    "raw_prompts",
+    "raw_file_contents",
+    "approval_pins",
+    "approval_tokens",
+    "provider_credentials",
+    "executable_commands",
+    "mutation_instructions_marked_approved"
+  ],
+  "required_validation_if_approved": [
+    "cmd /c \"python3 --version || python --version\"",
+    "cmd /c \"python3 -m compileall lima || python -m compileall lima\"",
+    "cmd /c \"python3 -m pytest -q tests\\test_v1_g11_runtime_request_decision_gate.py || python -m pytest -q tests\\test_v1_g11_runtime_request_decision_gate.py\"",
+    "cmd /c \"python3 -m pytest -q || python -m pytest -q\"",
+    "git diff --check",
+    "git diff --cached --check"
+  ],
+  "rollback_files_if_approved": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/guardian/v1_decision_gate.py",
+    "v1_g11_candidate_exports_in_lima/kernel/__init__.py",
+    "v1_g11_candidate_exports_in_lima/guardian/__init__.py",
+    "v1_g11_docs_tests_fixtures"
+  ],
+  "stop_conditions": [
+    "files_outside_approved_v1_g11_file_map",
+    "raw_natural_language_parsing",
+    "execution_dispatch_persistence_workers_or_subprocesses",
+    "provider_model_calls_or_routing",
+    "shell_runtime_wiring",
+    "sparkbot_sparkbot_shell_arc_bot_shell_imports_or_code_copy",
+    "approval_token_issuance",
+    "destructive_edit_delete_approved_without_operator_approval_evidence",
+    "browser_file_network_device_robotics_physical_world_behavior",
+    "haptic_device_behavior",
+    "runtime_export_cleanup",
+    "final_api_freeze",
+    "v1_or_production_readiness_claims"
+  ],
+  "recommended_next_step": "operator_decision_on_exact_v1_g11_approval_request"
+}

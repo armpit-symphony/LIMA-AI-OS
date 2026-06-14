@@ -9042,6 +9042,7 @@ Result:
 
 - `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the proposed typed request and GuardianDecision preflight runtime slice.
 - `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` confirms the request is ready for operator decision.
+- `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md` translates the request into a concrete implementation work order that remains conditional on explicit approval.
 - The request does not approve runtime implementation.
 - No `lima/` files, `tests/support` files, shell repos, Sparkbot code, provider/model routing, persistence, shell wiring, haptic device behavior, runtime export cleanup, final freeze, or production behavior are added.
 

@@ -1122,6 +1122,7 @@ Do not merge or tag from a routine implementation thread.
 - base commit: `39b866a3be3756d10287e3cefbd674ace7d2d469`
 - approval request document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`
 - preflight audit document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md`
+- work order document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md`
 - V1-G11 request status: ready for operator decision
 - V1-G11 runtime approval status: not granted
 - operator approval recorded: no
@@ -1137,4 +1138,5 @@ Do not merge or tag from a routine implementation thread.
 - runtime export cleanup: not approved
 - final API freeze: not approved
 - exact approval question: approve V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
+- implementation work order status: ready if the exact V1-G11 runtime request is approved
 - recommended next step: operator decision on the exact V1-G11 approval question; if approved, create the V1-G11 implementation branch inside the approved scope
