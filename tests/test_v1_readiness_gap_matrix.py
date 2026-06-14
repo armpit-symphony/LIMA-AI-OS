@@ -78,7 +78,8 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
     assert gaps["V1-G1"]["runtime_approval_needed"] is False
     assert gaps["V1-G2"]["runtime_approval_needed"] is False
-    assert gaps["V1-G3"]["runtime_approval_needed"] is True
+    assert gaps["V1-G3"]["runtime_approval_needed"] is False
+    assert gaps["V1-G3"]["runtime_enforcement_approval_needed"] is True
     assert gaps["V1-G4"]["runtime_approval_needed"] is True
     assert gaps["V1-G5"]["runtime_approval_needed"] is True
     assert gaps["V1-G6"]["runtime_approval_needed"] is False
@@ -87,17 +88,17 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G9"]["runtime_approval_needed"] is False
 
 
-def test_v1_gap_matrix_recommends_typed_bridge_after_thinking_proof() -> None:
+def test_v1_gap_matrix_recommends_guardian_decision_after_static_approval_contract() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G3"
+    assert fixture["next_smallest_safe_step"] == "V1-G4"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_docs_tests_fixtures_only_contract_design_and_static_acceptance_tests"
+        == "pending_docs_tests_fixtures_only_design_gate_before_runtime_enforcement"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "destructive_edit_delete_operator_approval_contract_is_next_after_static_typed_bridge_acceptance_proof"
+        == "real_guardian_decision_and_live_approval_path_design_gate_is_next_after_static_destructive_approval_contract"
     )
 
 
@@ -118,6 +119,7 @@ def test_v1_gap_matrix_stop_conditions_cover_forbidden_surfaces() -> None:
 
 def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     boundary = _load_fixture()["boundary_results"]
+    assert boundary["operator_approval_contract_added"] is True
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -138,7 +140,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "This matrix turns the V1 product target into an implementation-readiness sequence." in text
     assert "`V1-G1` is accepted as source-backed local shell evidence." in text
     assert "`V1-G2` is complete as static docs/tests/fixtures-only typed bridge acceptance proof." in text
-    assert "The next smallest safe step is `V1-G3`" in text
+    assert "`V1-G3` is complete as static docs/tests/fixtures-only destructive edit/delete" in text
+    assert "The next smallest safe step is `V1-G4`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

@@ -80,6 +80,10 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G1` source-backed Sparkbot_shell `thinking` evidence has now been accepted in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` from Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`. This proves local shell-owned `received -> thinking -> completed` behavior only. It does not prove live model streaming parity, provider/model response pacing, LIMA runtime integration, approval enforcement, GuardianDecision authority, haptics, persistence, or production behavior.
 
+`V1-G2` static typed bridge acceptance proof has been accepted in `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md`. It proves metadata shape, status mapping, and fail-closed case coverage only.
+
+`V1-G3` static destructive edit/delete operator-approval contract proof has been accepted in `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md`. It proves destructive action classes require operator approval metadata and static approval-bypass claims fail closed. It does not prove live approval enforcement or runtime mutation blocking.
+
 ## Remaining Blockers
 
 - real `GuardianDecision` runtime path is not implemented
@@ -99,10 +103,12 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is now accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
 
-`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` now records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mapping, and fail-closed case coverage only. It does not prove runtime bridge behavior.
+`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mapping, and fail-closed case coverage only. It does not prove runtime bridge behavior.
 
-The next smallest safe step is `V1-G3`: destructive edit/delete operator-approval contract design and static acceptance tests.
+`docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` records the V1-G3 static destructive edit/delete approval contract proof. It proves destructive approval metadata requirements and approval-bypass fail-closed behavior only. It does not prove runtime approval enforcement.
+
+The next smallest safe step is `V1-G4`: real `GuardianDecision` and live approval path design gate.
 
 The likely next implementation design question is:
 
-Should the next concrete lane stay limited to typed bridge acceptance-test proof, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes live approval, real GuardianDecision, provider/model routing, haptic intent metadata, and destructive-action operator approval?
+Should the next concrete lane stay limited to real `GuardianDecision` and live approval path design, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes provider/model routing, haptic intent metadata, first-shell integration proof, audit persistence, and release readiness?

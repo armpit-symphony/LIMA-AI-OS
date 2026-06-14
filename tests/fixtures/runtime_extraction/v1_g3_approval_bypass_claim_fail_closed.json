@@ -1,0 +1,71 @@
+{
+  "case_id": "v1_g3_approval_bypass_claim_fail_closed",
+  "case_family": "approval_bypass_fail_closed",
+  "docs_tests_fixtures_only": true,
+  "action": {
+    "action_type": "delete_file",
+    "target_class": "file",
+    "target_ref": "fixture://workspace/payroll.xlsx",
+    "destructive": true,
+    "mutates_existing_state": true,
+    "risk_class": "critical"
+  },
+  "claimed_operator_approval_metadata": {
+    "operator_approval_required": true,
+    "operator_approval_state": "granted",
+    "approval_granted": true,
+    "approval_id": "claimed-static-approval",
+    "requires_operator_pin_or_stronger": true
+  },
+  "operator_approval_metadata": {
+    "operator_approval_required": true,
+    "operator_approval_state": "required_not_granted",
+    "approval_granted": false,
+    "approval_id": null,
+    "requires_operator_pin_or_stronger": true
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_approval": false,
+    "claimed_granted_state_rejected": true,
+    "result": "blocked_static_approval_grant_claim"
+  },
+  "future_guardian_decision_metadata": {
+    "state": "blocked",
+    "decision_id": null,
+    "approval_granted": false,
+    "execution_allowed": false
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "approval_bypass_claim",
+    "static_granted_state_claim",
+    "claimed_approval_id_without_live_operator_approval",
+    "file_delete_without_operator_approval",
+    "execution_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "approval_granted": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "guardian_decision_created": false,
+    "runtime_test_harness_active": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "v1_g3_safe_draft_preview_no_operator_approval_required",
+  "case_family": "safe_preview_no_operator_approval_required",
+  "docs_tests_fixtures_only": true,
+  "action": {
+    "action_type": "draft_generation",
+    "target_class": "draft_text",
+    "target_ref": "fixture://draft/customer-followup",
+    "destructive": false,
+    "mutates_existing_state": false,
+    "risk_class": "low"
+  },
+  "operator_approval_metadata": {
+    "operator_approval_required": false,
+    "operator_approval_state": "missing",
+    "approval_granted": false,
+    "approval_id": null,
+    "requires_operator_pin_or_stronger": false
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_approval": false,
+    "result": "preview_only_no_operator_approval_required"
+  },
+  "future_guardian_decision_metadata": {
+    "state": "absent",
+    "decision_id": null,
+    "approval_granted": false,
+    "execution_allowed": false
+  },
+  "kernel_status": "proposed",
+  "packet_status": "preview_only",
+  "expected_blocked_claims": [],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "approval_granted": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "guardian_decision_created": false,
+    "runtime_test_harness_active": false
+  }
+}

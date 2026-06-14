@@ -888,4 +888,25 @@ Do not merge or tag from a routine implementation thread.
 - `tests/support/` changes in proof lane: not allowed
 - shell repo modifications in proof lane: not allowed
 - provider/model routing, real `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, and physical-world behavior: not added
-- recommended next lane: V1-G3 destructive edit/delete operator-approval contract design and static acceptance tests
+- recommended next lane at V1-G2 closeout: V1-G3 destructive edit/delete operator-approval contract design and static acceptance tests; current V1-G3 status is tracked below
+
+## V1-G3 - Destructive Edit/Delete Operator-Approval Contract
+
+- branch: `v1-g3-destructive-edit-delete-approval-contract`
+- status: docs/tests/fixtures-only static contract complete
+- base branch: `v1-g2-typed-bridge-acceptance-proof`
+- base commit: `70075c5d8a46738513aafd3e687f006800c268fc`
+- contract document: `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md`
+- audit document: `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_AUDIT.md`
+- closeout document: `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CLOSEOUT.md`
+- V1-G3 status: complete as static docs/tests/fixtures-only destructive edit/delete operator-approval contract proof
+- accepted evidence: destructive action classes require operator approval metadata, safe draft preview does not require operator approval, static approval-bypass claims fail closed
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- static acceptance tests: added under `tests/`
+- `lima/` changes in proof lane: not allowed
+- `tests/support` changes in proof lane: not allowed
+- shell repo modifications in proof lane: not allowed
+- provider/model routing, real `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G4 real `GuardianDecision` and live approval path design gate

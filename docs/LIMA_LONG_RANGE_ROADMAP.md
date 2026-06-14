@@ -402,6 +402,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mappings, and fail-closed fixture cases only.
 
-The next smallest safe V1 gap is `V1-G3`: destructive edit/delete operator-approval contract design and static acceptance tests.
+`docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` records the V1-G3 static destructive edit/delete operator-approval contract proof. It proves destructive action classes require operator approval metadata and static approval-bypass claims fail closed.
+
+The next smallest safe V1 gap is `V1-G4`: real `GuardianDecision` and live approval path design gate.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
