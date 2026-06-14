@@ -15,6 +15,9 @@
   "v1_g5_contract_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md",
   "v1_g5_audit_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_AUDIT.md",
   "v1_g5_closeout_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_CLOSEOUT.md",
+  "v1_g6_contract_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md",
+  "v1_g6_audit_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_AUDIT.md",
+  "v1_g6_closeout_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_CLOSEOUT.md",
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
   "phase_48_2_implementation_approved": false,
@@ -66,6 +69,7 @@
     "shells_own_haptic_rendering": true,
     "lima_owns_haptic_device_implementation": false,
     "lima_may_define_future_haptic_intent_metadata": true,
+    "haptic_intent_metadata_contract_added": true,
     "haptic_implementation_added_here": false
   },
   "first_shell_readiness_requirements": [
@@ -87,6 +91,8 @@
     "sparkbot_code_copied": false,
     "sparkbot_import_added": false,
     "provider_model_routing_added": false,
+    "haptic_intent_metadata_contract_added": true,
+    "haptic_device_behavior_added": false,
     "guardian_decision_runtime_added": false,
     "approval_enforcement_added": false
   },
@@ -108,7 +114,11 @@
     "v1_g4_runtime_guardian_decision_authority_proven": false,
     "v1_g5_provider_model_routing_contract_accepted": true,
     "v1_g5_provider_model_routing_contract_scope": "static_docs_tests_fixtures_only",
-    "v1_g5_runtime_provider_model_routing_proven": false
+    "v1_g5_runtime_provider_model_routing_proven": false,
+    "v1_g6_haptic_intent_metadata_contract_accepted": true,
+    "v1_g6_haptic_intent_metadata_contract_scope": "static_docs_tests_fixtures_only",
+    "v1_g6_haptic_device_behavior_proven": false,
+    "v1_g6_shell_rendering_parity_proven": false
   },
   "remaining_blockers": [
     "real_guardian_decision_runtime_path_not_implemented",
@@ -117,17 +127,18 @@
     "typed_bridge_runtime_behavior_not_implemented",
     "shell_runtime_wiring_not_implemented",
     "live_model_streaming_parity_not_proven",
-    "haptics_proof_and_implementation_not_added_here",
+    "haptic_device_rendering_proof_remains_shell_owned",
     "audit_persistence_not_implemented",
     "destructive_edit_delete_approval_enforcement_not_implemented",
     "production_behavior_not_approved"
   ],
-  "recommended_next_step": "design_v1_g6_haptic_intent_metadata_contract_and_shell_fixture_proof",
+  "recommended_next_step": "request_v1_g7_first_shell_integration_proof_packets_and_lima_intake_audits",
   "recommended_first_gap_closed": "sparkbot_shell_source_backed_thinking_progress_state",
   "recommended_second_gap_closed": "typed_bridge_acceptance_proof_static_evidence",
   "recommended_third_gap_closed": "destructive_edit_delete_operator_approval_contract_static_evidence",
   "recommended_fourth_gap_closed": "real_guardian_decision_live_approval_path_static_design_gate",
   "recommended_fifth_gap_closed": "provider_model_routing_static_contract_and_acceptance_test_design",
-  "recommended_next_gap_to_close": "haptic_intent_metadata",
-  "recommended_next_gap_id": "V1-G6"
+  "recommended_sixth_gap_closed": "haptic_intent_metadata_static_contract_and_shell_fixture_proof",
+  "recommended_next_gap_to_close": "first_shell_integration_proof",
+  "recommended_next_gap_id": "V1-G7"
 }

@@ -6,7 +6,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 ## Current Anchor
 
-- Current branch: `v1-g5-provider-model-routing-contract`
+- Current branch: `v1-g6-haptic-intent-metadata-contract`
 - Source target: `docs/V1_PRODUCT_READINESS_TARGET.md`
 - Current product status: not V1-ready
 - Current implementation approval: not granted
@@ -21,8 +21,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | `V1-G3` | Destructive edit/delete approval contract | `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` and static fixtures/tests prove destructive action classes require operator approval metadata and approval-bypass claims fail closed | Contract and tests proving destructive action classes cannot be marked approved without explicit operator approval metadata | Complete as static docs/tests/fixtures-only contract; runtime enforcement remains out of scope | No for static contract; later runtime approval required for enforcement |
 | `V1-G4` | Real GuardianDecision and live approval path | `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` and static fixtures/tests define future decision outcomes, status mappings, approval-decision dependency, and fail-closed authority cases | Runtime GuardianDecision path that distinguishes allow, confirm, deny, privileged, expired, revoked, and blocked outcomes before consequential action | Complete as static docs/tests/fixtures-only design gate; runtime authority remains out of scope | No for static gate; later runtime approval required for implementation |
 | `V1-G5` | Provider/model routing | `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` and static fixtures/tests define route families, metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases | Model routing constrained by Guardian, shell tool-pack scope, secret policy, and audit/evidence rules | Complete as static docs/tests/fixtures-only contract and acceptance-test design; runtime routing remains out of scope | No for static contract; later runtime approval required for routing |
-| `V1-G6` | Haptic intent metadata | Haptics are accepted as shell-owned future UX requirement; no LIMA haptic intent contract exists; V1-G5 now constrains model routing before shell UX integration | LIMA may emit non-device-specific haptic intent metadata while shells own rendering/device feedback | Haptic intent contract design and shell fixture proof | No device implementation in LIMA |
-| `V1-G7` | First-shell integration proof | No shell runtime wiring is approved; Sparkbot is reference only | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` each prove they can consume LIMA contract outputs safely | Per-shell proof packets and LIMA intake audits | Runtime wiring requires later approval |
+| `V1-G6` | Haptic intent metadata | `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` and static fixtures/tests define shell state to haptic intent mapping, metadata fields, forbidden device fields, shell ownership, and fail-closed forged device claims | LIMA may emit non-device-specific haptic intent metadata while shells own rendering/device feedback | Complete as static docs/tests/fixtures-only contract; device behavior remains out of scope | No device implementation in LIMA |
+| `V1-G7` | First-shell integration proof | V1-G6 defines static haptic intent metadata; no shell runtime wiring is approved; Sparkbot is reference only | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` each prove they can consume LIMA contract outputs safely | Per-shell proof packets and LIMA intake audits | Runtime wiring requires later approval |
 | `V1-G8` | Audit/evidence persistence | Static audit/evidence lineage exists; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Audit persistence design, storage contract, threat model, then runtime gate | Yes |
 | `V1-G9` | Product release boundary | Current package remains candidate/proof-stage | V1 release gates, compatibility freeze, shell compatibility evidence, and rollback proof all pass | V1 release readiness audit after blockers close | No implementation by audit alone |
 
@@ -33,7 +33,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 3. Treat `V1-G3` as complete for static destructive edit/delete approval contract evidence, while rejecting runtime enforcement claims.
 4. Treat `V1-G4` as complete for static GuardianDecision/live approval path design-gate evidence, while rejecting runtime authority claims.
 5. Treat `V1-G5` as complete for static provider/model routing contract and acceptance-test design evidence, while rejecting runtime routing claims.
-6. Add `V1-G6` haptic intent metadata as a shell-contract lane, not device implementation.
+6. Treat `V1-G6` as complete for static haptic intent metadata contract and shell fixture evidence, while rejecting device haptic behavior claims.
 7. Require `V1-G7` shell proof packets before compatibility freeze.
 8. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
 
@@ -63,4 +63,6 @@ LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
 `V1-G5` is complete as static docs/tests/fixtures-only provider/model routing contract and acceptance-test design proof.
 
-The next smallest safe step is `V1-G6`: haptic intent metadata contract and shell fixture proof, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.
+`V1-G6` is complete as static docs/tests/fixtures-only haptic intent metadata contract and shell fixture proof.
+
+The next smallest safe step is `V1-G7`: first-shell integration proof packets and LIMA intake audits for `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.

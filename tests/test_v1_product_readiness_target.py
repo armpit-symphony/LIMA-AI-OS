@@ -61,6 +61,9 @@ def test_v1_target_document_and_fixture_exist() -> None:
     assert fixture["v1_g5_contract_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md"
     assert fixture["v1_g5_audit_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_AUDIT.md"
     assert fixture["v1_g5_closeout_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_CLOSEOUT.md"
+    assert fixture["v1_g6_contract_document"] == "docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md"
+    assert fixture["v1_g6_audit_document"] == "docs/V1_G6_HAPTIC_INTENT_METADATA_AUDIT.md"
+    assert fixture["v1_g6_closeout_document"] == "docs/V1_G6_HAPTIC_INTENT_METADATA_CLOSEOUT.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -127,6 +130,7 @@ def test_v1_haptics_remain_shell_owned_with_lima_intent_metadata_only() -> None:
     assert haptics["shells_own_haptic_rendering"] is True
     assert haptics["lima_owns_haptic_device_implementation"] is False
     assert haptics["lima_may_define_future_haptic_intent_metadata"] is True
+    assert haptics["haptic_intent_metadata_contract_added"] is True
     assert haptics["haptic_implementation_added_here"] is False
 
 
@@ -140,6 +144,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["shell_repos_changed"] is False
     assert current["sparkbot_code_copied"] is False
     assert current["sparkbot_import_added"] is False
+    assert current["haptic_intent_metadata_contract_added"] is True
+    assert current["haptic_device_behavior_added"] is False
     accepted = fixture["accepted_shell_evidence"]
     assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
     assert accepted["sparkbot_shell_thinking_proof_scope"] == "source_backed_local_shell_evidence_only"
@@ -166,12 +172,20 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         == "static_docs_tests_fixtures_only"
     )
     assert static_evidence["v1_g5_runtime_provider_model_routing_proven"] is False
+    assert static_evidence["v1_g6_haptic_intent_metadata_contract_accepted"] is True
+    assert (
+        static_evidence["v1_g6_haptic_intent_metadata_contract_scope"]
+        == "static_docs_tests_fixtures_only"
+    )
+    assert static_evidence["v1_g6_haptic_device_behavior_proven"] is False
+    assert static_evidence["v1_g6_shell_rendering_parity_proven"] is False
     blockers = set(fixture["remaining_blockers"])
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
     assert "provider_model_routing_not_implemented" in blockers
     assert "sparkbot_shell_real_thinking_state_proof_missing" not in blockers
     assert "live_model_streaming_parity_not_proven" in blockers
+    assert "haptic_device_rendering_proof_remains_shell_owned" in blockers
     assert "destructive_edit_delete_approval_enforcement_not_implemented" in blockers
     assert "production_behavior_not_approved" in blockers
     assert (
@@ -180,7 +194,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "design_v1_g6_haptic_intent_metadata_contract_and_shell_fixture_proof"
+        == "request_v1_g7_first_shell_integration_proof_packets_and_lima_intake_audits"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -195,5 +209,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_fifth_gap_closed"]
         == "provider_model_routing_static_contract_and_acceptance_test_design"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G6"
-    assert fixture["recommended_next_gap_to_close"] == "haptic_intent_metadata"
+    assert (
+        fixture["recommended_sixth_gap_closed"]
+        == "haptic_intent_metadata_static_contract_and_shell_fixture_proof"
+    )
+    assert fixture["recommended_next_gap_id"] == "V1-G7"
+    assert fixture["recommended_next_gap_to_close"] == "first_shell_integration_proof"

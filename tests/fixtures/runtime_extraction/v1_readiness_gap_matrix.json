@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g5-provider-model-routing-contract",
+  "current_branch": "v1-g6-haptic-intent-metadata-contract",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -76,9 +76,14 @@
     {
       "id": "V1-G6",
       "name": "haptic_intent_metadata",
-      "status": "not_designed",
-      "recommended_lane": "haptic_intent_contract_design_and_shell_fixture_proof",
-      "runtime_approval_needed": false
+      "status": "complete_static_docs_tests_fixtures_contract",
+      "contract_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md",
+      "audit_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_AUDIT.md",
+      "closeout_document": "docs/V1_G6_HAPTIC_INTENT_METADATA_CLOSEOUT.md",
+      "recommended_lane": "complete_static_docs_tests_fixtures_contract_device_behavior_out_of_scope",
+      "runtime_approval_needed": false,
+      "device_behavior_approval_needed_in_lima": false,
+      "shell_device_behavior_remains_shell_owned": true
     },
     {
       "id": "V1-G7",
@@ -113,9 +118,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G6",
-  "next_smallest_safe_step_reason": "haptic_intent_metadata_contract_and_shell_fixture_proof_is_next_after_static_provider_model_routing_contract",
-  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_haptic_intent_metadata_contract_and_shell_fixture_proof",
+  "next_smallest_safe_step": "V1-G7",
+  "next_smallest_safe_step_reason": "first_shell_integration_proof_is_next_after_static_haptic_intent_metadata_contract",
+  "next_smallest_safe_step_status": "pending_per_shell_proof_packets_and_lima_intake_audits",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -140,6 +145,7 @@
     "operator_approval_contract_added": true,
     "guardian_decision_design_gate_added": true,
     "provider_model_routing_contract_added": true,
+    "haptic_intent_metadata_contract_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

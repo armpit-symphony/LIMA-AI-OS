@@ -88,6 +88,8 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G5` static provider/model routing contract proof has been accepted in `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md`. It proves route families, metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases only. It does not prove runtime provider/model routing or model calls.
 
+`V1-G6` static haptic intent metadata contract proof has been accepted in `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md`. It proves shell response state to haptic intent family mapping, required non-device metadata, forbidden device fields, shell-owned haptic boundaries, accessibility/fallback metadata, and fail-closed forged device haptic claims only. It does not prove device haptic behavior, shell rendering, LIMA runtime integration, or live UX parity.
+
 ## Remaining Blockers
 
 - real `GuardianDecision` runtime path is not implemented
@@ -96,7 +98,7 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 - typed bridge runtime behavior is not implemented
 - shell runtime wiring is not implemented
 - live model streaming parity remains unproven
-- haptics proof and implementation remain shell-owned and not implemented here
+- haptic device rendering proof remains shell-owned and not implemented here
 - audit persistence is not implemented
 - destructive edit/delete approval enforcement is not implemented
 - production behavior is not approved
@@ -115,8 +117,10 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` records the V1-G5 static provider/model routing contract and acceptance-test design. It proves route constraints and fail-closed model-routing cases only. It does not prove runtime routing.
 
-The next smallest safe step is `V1-G6`: haptic intent metadata contract and shell fixture proof.
+`docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves non-device haptic intent metadata shape and fail-closed device haptic claim handling only. It does not prove device behavior or shell rendering.
+
+The next smallest safe step is `V1-G7`: first-shell integration proof packets and LIMA intake audits for `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`.
 
 The likely next implementation design question is:
 
-Should the next concrete lane stay limited to haptic intent metadata contract and shell fixture proof, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes first-shell integration proof, audit persistence, and release readiness?
+Should the next concrete lane stay limited to first-shell proof packets and intake audits, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes shell runtime wiring, audit persistence, and release readiness?

@@ -1110,11 +1110,13 @@ Result:
 - It adds `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` as the static V1-G3 destructive edit/delete operator-approval contract proof.
 - It adds `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` as the static V1-G4 real `GuardianDecision` and live approval path design gate.
 - It adds `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` as the static V1-G5 provider/model routing contract and acceptance-test design.
-- The next smallest safe V1 gap is `V1-G6` haptic intent metadata contract and shell fixture proof.
+- It adds `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` as the static V1-G6 haptic intent metadata contract and shell fixture proof.
+- The next smallest safe V1 gap is `V1-G7` first-shell integration proof packets and LIMA intake audits.
 - V1-G2 proof fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G3 contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G4 design-gate fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G5 routing contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G6 haptic intent metadata fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - Runtime implementation, runtime harness creation, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
 Status:

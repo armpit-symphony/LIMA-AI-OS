@@ -957,3 +957,27 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in proof lane: not allowed
 - runtime `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G6 haptic intent metadata contract and shell fixture proof
+
+## V1-G6 - Haptic Intent Metadata Contract
+
+- branch: `v1-g6-haptic-intent-metadata-contract`
+- status: docs/tests/fixtures-only static contract and shell fixture proof complete
+- base branch: `v1-g5-provider-model-routing-contract`
+- base commit: `fc9befe4b815861ed3edbb3e92d02072c3074106`
+- contract document: `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md`
+- audit document: `docs/V1_G6_HAPTIC_INTENT_METADATA_AUDIT.md`
+- closeout document: `docs/V1_G6_HAPTIC_INTENT_METADATA_CLOSEOUT.md`
+- V1-G6 status: complete as static docs/tests/fixtures-only haptic intent metadata contract proof
+- accepted evidence: shell response state to haptic intent family mapping, required non-device metadata, forbidden device fields, shell ownership, accessibility/fallback metadata, and fail-closed forged device haptic claims
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- haptic device behavior: not added
+- device vibration commands: not added
+- shell rendering: not invoked
+- static acceptance tests: added under `tests/`
+- `lima/` changes in proof lane: not allowed
+- `tests/support` changes in proof lane: not allowed
+- shell repo modifications in proof lane: not allowed
+- provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G7 first-shell integration proof packets and LIMA intake audits

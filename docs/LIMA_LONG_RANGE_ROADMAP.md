@@ -408,6 +408,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` records the V1-G5 static provider/model routing contract and acceptance-test design. It proves route families, route metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases.
 
-The next smallest safe V1 gap is `V1-G6`: haptic intent metadata contract and shell fixture proof.
+`docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves response-state to haptic-intent mapping, required metadata, forbidden device fields, shell ownership, and fail-closed forged device claims.
+
+The next smallest safe V1 gap is `V1-G7`: first-shell integration proof packets and LIMA intake audits.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
