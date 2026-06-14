@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g4-real-guardian-decision-live-approval-path-gate",
+  "current_branch": "v1-g5-provider-model-routing-contract",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -65,9 +65,13 @@
     {
       "id": "V1-G5",
       "name": "provider_model_routing",
-      "status": "not_implemented",
-      "recommended_lane": "provider_model_routing_contract_and_acceptance_test_design",
-      "runtime_approval_needed": true
+      "status": "complete_static_docs_tests_fixtures_contract_and_acceptance_test_design",
+      "contract_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md",
+      "audit_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_AUDIT.md",
+      "closeout_document": "docs/V1_G5_PROVIDER_MODEL_ROUTING_CLOSEOUT.md",
+      "recommended_lane": "complete_static_docs_tests_fixtures_contract_runtime_routing_out_of_scope",
+      "runtime_approval_needed": false,
+      "runtime_routing_approval_needed": true
     },
     {
       "id": "V1-G6",
@@ -109,9 +113,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G5",
-  "next_smallest_safe_step_reason": "provider_model_routing_contract_and_acceptance_test_design_is_next_after_static_guardian_decision_approval_path_gate",
-  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_provider_model_routing_contract_and_acceptance_test_design",
+  "next_smallest_safe_step": "V1-G6",
+  "next_smallest_safe_step_reason": "haptic_intent_metadata_contract_and_shell_fixture_proof_is_next_after_static_provider_model_routing_contract",
+  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_haptic_intent_metadata_contract_and_shell_fixture_proof",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -135,6 +139,7 @@
     "approval_enforcement_added": false,
     "operator_approval_contract_added": true,
     "guardian_decision_design_gate_added": true,
+    "provider_model_routing_contract_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

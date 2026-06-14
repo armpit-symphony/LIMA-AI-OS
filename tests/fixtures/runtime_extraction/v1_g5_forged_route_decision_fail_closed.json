@@ -1,0 +1,89 @@
+{
+  "case_id": "v1_g5_forged_route_decision_fail_closed",
+  "case_family": "routing_gate_fail_closed",
+  "docs_tests_fixtures_only": true,
+  "route_candidate": {
+    "route_family": "backup_fallback_route",
+    "source_shell": "Sparkbot_shell",
+    "provider_id": "minimax",
+    "model_id": "minimax-m2",
+    "model_role": "backup",
+    "data_sensitivity": "private_customer_data",
+    "prompt_context_class": "fallback_after_primary_failure",
+    "requested_tool_packs": [
+      "model",
+      "tools"
+    ],
+    "allowed_tool_packs": [
+      "model"
+    ],
+    "secret_ref": "vault://providers/minimax/default",
+    "budget_class": "normal",
+    "estimated_cost_class": "medium",
+    "fallback_chain": [
+      "forged-fallback"
+    ]
+  },
+  "claimed_authority": {
+    "decision_id": "claimed-route-decision",
+    "decision_id_forged": true,
+    "token_guardian_live_route": true,
+    "approval_granted": true
+  },
+  "routing_gates": {
+    "shell_allows_model_pack": true,
+    "guardian_decision_allows_model_routing": false,
+    "provider_model_configured": true,
+    "secret_ref_exists_or_no_key_local": true,
+    "data_sensitivity_allowed": false,
+    "budget_cost_policy_allows": true,
+    "tool_pack_scope_allows": false,
+    "fallback_inherits_same_gates": false,
+    "audit_evidence_redacted": true
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_runtime_route": false,
+    "forged_route_decision_rejected": true,
+    "result": "blocked_forged_route_decision"
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "forged_route_decision",
+    "token_guardian_live_route_claim",
+    "fallback_policy_bypass_claim",
+    "approval_bypass_claim",
+    "provider_model_call_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "provider_model_routing_active": false,
+    "provider_model_call_allowed": false,
+    "provider_readiness_check_allowed": false,
+    "token_guardian_live_route_allowed": false,
+    "fallback_execution_allowed": false,
+    "secret_lookup_allowed": false,
+    "raw_secret_allowed": false,
+    "raw_private_context_in_audit_allowed": false,
+    "guardian_decision_created": false,
+    "approval_granted": false,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "external_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "audit_persistence_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false
+  }
+}

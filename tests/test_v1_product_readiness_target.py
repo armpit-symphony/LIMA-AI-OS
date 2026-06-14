@@ -58,6 +58,9 @@ def test_v1_target_document_and_fixture_exist() -> None:
         fixture["v1_g4_closeout_document"]
         == "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_CLOSEOUT.md"
     )
+    assert fixture["v1_g5_contract_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md"
+    assert fixture["v1_g5_audit_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_AUDIT.md"
+    assert fixture["v1_g5_closeout_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_CLOSEOUT.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -157,6 +160,12 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         == "static_docs_tests_fixtures_only"
     )
     assert static_evidence["v1_g4_runtime_guardian_decision_authority_proven"] is False
+    assert static_evidence["v1_g5_provider_model_routing_contract_accepted"] is True
+    assert (
+        static_evidence["v1_g5_provider_model_routing_contract_scope"]
+        == "static_docs_tests_fixtures_only"
+    )
+    assert static_evidence["v1_g5_runtime_provider_model_routing_proven"] is False
     blockers = set(fixture["remaining_blockers"])
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
@@ -171,7 +180,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "design_v1_g5_provider_model_routing_contract_and_acceptance_tests"
+        == "design_v1_g6_haptic_intent_metadata_contract_and_shell_fixture_proof"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -182,5 +191,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_fourth_gap_closed"]
         == "real_guardian_decision_live_approval_path_static_design_gate"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G5"
-    assert fixture["recommended_next_gap_to_close"] == "provider_model_routing"
+    assert (
+        fixture["recommended_fifth_gap_closed"]
+        == "provider_model_routing_static_contract_and_acceptance_test_design"
+    )
+    assert fixture["recommended_next_gap_id"] == "V1-G6"
+    assert fixture["recommended_next_gap_to_close"] == "haptic_intent_metadata"

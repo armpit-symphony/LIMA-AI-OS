@@ -86,6 +86,8 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G4` static real `GuardianDecision` and live approval path design-gate proof has been accepted in `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md`. It proves future decision outcome families, status mappings, decision-scope requirements, and fail-closed authority cases only. It does not prove runtime `GuardianDecision` authority or live approval enforcement.
 
+`V1-G5` static provider/model routing contract proof has been accepted in `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md`. It proves route families, metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases only. It does not prove runtime provider/model routing or model calls.
+
 ## Remaining Blockers
 
 - real `GuardianDecision` runtime path is not implemented
@@ -111,8 +113,10 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` records the V1-G4 static real `GuardianDecision` and live approval path design gate. It proves decision outcome families, GuardianDecision status mapping, decision-scope requirements, and fail-closed authority cases only. It does not prove runtime authority.
 
-The next smallest safe step is `V1-G5`: provider/model routing contract and acceptance-test design.
+`docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` records the V1-G5 static provider/model routing contract and acceptance-test design. It proves route constraints and fail-closed model-routing cases only. It does not prove runtime routing.
+
+The next smallest safe step is `V1-G6`: haptic intent metadata contract and shell fixture proof.
 
 The likely next implementation design question is:
 
-Should the next concrete lane stay limited to provider/model routing contract and acceptance-test design, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes haptic intent metadata, first-shell integration proof, audit persistence, and release readiness?
+Should the next concrete lane stay limited to haptic intent metadata contract and shell fixture proof, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes first-shell integration proof, audit persistence, and release readiness?

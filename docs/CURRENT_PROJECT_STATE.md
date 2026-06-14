@@ -932,4 +932,28 @@ Do not merge or tag from a routine implementation thread.
 - `tests/support` changes in proof lane: not allowed
 - shell repo modifications in proof lane: not allowed
 - provider/model routing, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
-- recommended next lane: V1-G5 provider/model routing contract and acceptance-test design
+- recommended next lane at V1-G4 closeout: V1-G5 provider/model routing contract and acceptance-test design; current V1-G5 status is tracked below
+
+## V1-G5 - Provider/Model Routing Contract
+
+- branch: `v1-g5-provider-model-routing-contract`
+- status: docs/tests/fixtures-only static contract and acceptance-test design complete
+- base branch: `v1-g4-real-guardian-decision-live-approval-path-gate`
+- base commit: `8371368a483a80375927f152f93b809991f1ac50`
+- contract document: `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md`
+- audit document: `docs/V1_G5_PROVIDER_MODEL_ROUTING_AUDIT.md`
+- closeout document: `docs/V1_G5_PROVIDER_MODEL_ROUTING_CLOSEOUT.md`
+- V1-G5 status: complete as static docs/tests/fixtures-only provider/model routing contract and acceptance-test design proof
+- accepted evidence: route families, route metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- provider/model routing runtime: not added
+- provider/model calls: not added
+- secret access: not added
+- static acceptance tests: added under `tests/`
+- `lima/` changes in proof lane: not allowed
+- `tests/support` changes in proof lane: not allowed
+- shell repo modifications in proof lane: not allowed
+- runtime `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G6 haptic intent metadata contract and shell fixture proof
