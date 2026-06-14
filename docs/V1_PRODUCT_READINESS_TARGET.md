@@ -95,6 +95,8 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether the Phase 48.2 design still points at the right first implementation target after this V1 product direction.
 
+`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order and recommends closing Sparkbot_shell `thinking` / progress-state proof first.
+
 The likely next implementation design question is:
 
 Should the next concrete lane stay limited to typed bridge acceptance-test proof, or should the next design lane expand into a V1 product-readiness implementation sequence that separately scopes live approval, real GuardianDecision, provider/model routing, haptic intent metadata, and destructive-action operator approval?

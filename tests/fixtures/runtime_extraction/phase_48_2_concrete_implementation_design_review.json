@@ -8,6 +8,7 @@
   "actual_acceptance_tests_created": false,
   "executable_acceptance_tests_created": false,
   "v1_product_target_ref": "docs/V1_PRODUCT_READINESS_TARGET.md",
+  "v1_readiness_gap_matrix_ref": "docs/V1_READINESS_GAP_MATRIX.md",
   "v1_product_direction_captured": true,
   "v1_product_runtime_surfaces_accepted_for_future_scoped_implementation": [
     "live_actual_approval_flow",

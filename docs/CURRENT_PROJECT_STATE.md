@@ -851,9 +851,11 @@ Do not merge or tag from a routine implementation thread.
 - branch: `phase-48-2-concrete-implementation-design-review`
 - status: docs/tests/fixtures-only concrete implementation design review in progress
 - V1 product target captured: `docs/V1_PRODUCT_READINESS_TARGET.md`
+- V1 readiness gap matrix captured: `docs/V1_READINESS_GAP_MATRIX.md`
 - V1 target first shells: `Sparkbot_shell`, `Sparkbot`, `Arc-Bot-shell`
 - V1 future capability direction: live approval, real `GuardianDecision`, provider/model routing, shell-owned haptic intent support, first-shell response-state parity
 - destructive edit/delete policy: operator approval required in LIMA-AI-OS and shells
+- next smallest safe V1 gap: Sparkbot_shell source-backed `thinking` / progress-state proof
 - runtime implementation: blocked
 - implementation approval: not granted
 - runtime test harness: not created

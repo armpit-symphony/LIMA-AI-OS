@@ -1102,6 +1102,7 @@ Result:
 - Phase 48.2 is docs/tests/fixtures-only concrete implementation design-review metadata.
 - It proposes `first_concrete_typed_bridge_acceptance_test_design` as a design-only future candidate lane.
 - It records `docs/V1_PRODUCT_READINESS_TARGET.md` as product-direction evidence for first-shell V1 readiness: `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`; future live approval, real `GuardianDecision`, provider/model routing, shell-owned haptic intent support, and operator approval for destructive edits/deletes.
+- It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence, with Sparkbot_shell source-backed `thinking` / progress-state proof as the next smallest safe gap to close.
 - Candidate future files are named but not created.
 - Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 

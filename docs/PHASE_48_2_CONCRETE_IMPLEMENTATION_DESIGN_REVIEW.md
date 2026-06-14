@@ -26,6 +26,8 @@ That target clarifies:
 
 This does not approve implementation in Phase 48.2. It gives the next design/readiness lane a clearer V1 target.
 
+`docs/V1_READINESS_GAP_MATRIX.md` turns that target into a gap sequence and recommends closing Sparkbot_shell `thinking` / progress-state proof before moving toward runtime implementation.
+
 ## Reviewed Phase
 
 - Phase 48.1 implementation gate readiness review.

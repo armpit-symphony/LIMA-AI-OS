@@ -1,0 +1,124 @@
+{
+  "document": "docs/V1_READINESS_GAP_MATRIX.md",
+  "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
+  "current_branch": "phase-48-2-concrete-implementation-design-review",
+  "docs_tests_fixtures_only": true,
+  "implementation_approved": false,
+  "v1_product_ready": false,
+  "source_commit_before_matrix": "57a403cb7ad4aa6f352a3c361a71db575d3de5a1",
+  "first_shell_consumers": [
+    "Sparkbot_shell",
+    "Sparkbot",
+    "Arc-Bot-shell"
+  ],
+  "gaps": [
+    {
+      "id": "V1-G0",
+      "name": "v1_target_clarity",
+      "status": "complete_current_branch",
+      "recommended_lane": "complete_in_current_branch",
+      "runtime_approval_needed": false
+    },
+    {
+      "id": "V1-G1",
+      "name": "sparkbot_shell_thinking_progress_proof",
+      "status": "missing_source_backed_evidence",
+      "recommended_lane": "sparkbot_shell_follow_up_proof_packet_and_lima_intake_audit",
+      "runtime_approval_needed": false
+    },
+    {
+      "id": "V1-G2",
+      "name": "typed_bridge_acceptance_proof",
+      "status": "designed_not_implemented",
+      "recommended_lane": "separately_approved_typed_bridge_acceptance_test_implementation_lane",
+      "runtime_approval_needed": false
+    },
+    {
+      "id": "V1-G3",
+      "name": "destructive_edit_delete_approval_contract",
+      "status": "target_recorded_contract_not_designed",
+      "recommended_lane": "destructive_action_approval_contract_design_and_static_acceptance_tests",
+      "runtime_approval_needed": true
+    },
+    {
+      "id": "V1-G4",
+      "name": "real_guardian_decision_and_live_approval_path",
+      "status": "not_implemented",
+      "recommended_lane": "guardian_decision_runtime_design_gate_then_narrow_runtime_slice",
+      "runtime_approval_needed": true
+    },
+    {
+      "id": "V1-G5",
+      "name": "provider_model_routing",
+      "status": "not_implemented",
+      "recommended_lane": "provider_model_routing_contract_and_acceptance_test_design",
+      "runtime_approval_needed": true
+    },
+    {
+      "id": "V1-G6",
+      "name": "haptic_intent_metadata",
+      "status": "not_designed",
+      "recommended_lane": "haptic_intent_contract_design_and_shell_fixture_proof",
+      "runtime_approval_needed": false
+    },
+    {
+      "id": "V1-G7",
+      "name": "first_shell_integration_proof",
+      "status": "not_complete",
+      "recommended_lane": "per_shell_proof_packets_and_lima_intake_audits",
+      "runtime_approval_needed": true
+    },
+    {
+      "id": "V1-G8",
+      "name": "audit_evidence_persistence",
+      "status": "not_implemented",
+      "recommended_lane": "audit_persistence_design_storage_contract_threat_model_then_runtime_gate",
+      "runtime_approval_needed": true
+    },
+    {
+      "id": "V1-G9",
+      "name": "product_release_boundary",
+      "status": "blocked_until_prior_gaps_close",
+      "recommended_lane": "v1_release_readiness_audit_after_blockers_close",
+      "runtime_approval_needed": false
+    }
+  ],
+  "recommended_order": [
+    "V1-G1",
+    "V1-G2",
+    "V1-G3",
+    "V1-G4",
+    "V1-G5",
+    "V1-G6",
+    "V1-G7",
+    "V1-G8",
+    "V1-G9"
+  ],
+  "next_smallest_safe_step": "V1-G1",
+  "next_smallest_safe_step_reason": "sparkbot_style_shell_ux_parity_still_lacks_source_backed_thinking_progress_evidence",
+  "stop_conditions": [
+    "lima_runtime_change",
+    "tests_support_runtime_or_harness_helper",
+    "shell_repo_modification",
+    "provider_model_call",
+    "guardian_decision_runtime_creation",
+    "approval_enforcement",
+    "execution_dispatch_persistence",
+    "external_call",
+    "shell_browser_network_file_mutation",
+    "robotics_or_physical_world_behavior",
+    "haptic_device_behavior"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "shell_repos_changed": false,
+    "provider_model_routing_added": false,
+    "guardian_decision_runtime_added": false,
+    "approval_enforcement_added": false,
+    "audit_persistence_added": false,
+    "haptic_device_behavior_added": false,
+    "v1_release_claimed": false
+  }
+}
