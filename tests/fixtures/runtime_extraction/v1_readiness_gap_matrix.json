@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g3-destructive-edit-delete-approval-contract",
+  "current_branch": "v1-g4-real-guardian-decision-live-approval-path-gate",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -54,9 +54,13 @@
     {
       "id": "V1-G4",
       "name": "real_guardian_decision_and_live_approval_path",
-      "status": "not_implemented",
-      "recommended_lane": "guardian_decision_runtime_design_gate_then_narrow_runtime_slice",
-      "runtime_approval_needed": true
+      "status": "complete_static_docs_tests_fixtures_design_gate",
+      "gate_document": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md",
+      "audit_document": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_AUDIT.md",
+      "closeout_document": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_CLOSEOUT.md",
+      "recommended_lane": "complete_static_docs_tests_fixtures_design_gate_runtime_authority_out_of_scope",
+      "runtime_approval_needed": false,
+      "runtime_authority_approval_needed": true
     },
     {
       "id": "V1-G5",
@@ -105,9 +109,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G4",
-  "next_smallest_safe_step_reason": "real_guardian_decision_and_live_approval_path_design_gate_is_next_after_static_destructive_approval_contract",
-  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_design_gate_before_runtime_enforcement",
+  "next_smallest_safe_step": "V1-G5",
+  "next_smallest_safe_step_reason": "provider_model_routing_contract_and_acceptance_test_design_is_next_after_static_guardian_decision_approval_path_gate",
+  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_provider_model_routing_contract_and_acceptance_test_design",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -130,6 +134,7 @@
     "guardian_decision_runtime_added": false,
     "approval_enforcement_added": false,
     "operator_approval_contract_added": true,
+    "guardian_decision_design_gate_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

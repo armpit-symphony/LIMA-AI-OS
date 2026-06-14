@@ -67,6 +67,11 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
     )
     assert gaps["V1-G3"]["name"] == "destructive_edit_delete_approval_contract"
     assert gaps["V1-G4"]["name"] == "real_guardian_decision_and_live_approval_path"
+    assert gaps["V1-G4"]["status"] == "complete_static_docs_tests_fixtures_design_gate"
+    assert (
+        gaps["V1-G4"]["gate_document"]
+        == "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md"
+    )
     assert gaps["V1-G5"]["name"] == "provider_model_routing"
     assert gaps["V1-G6"]["name"] == "haptic_intent_metadata"
     assert gaps["V1-G7"]["name"] == "first_shell_integration_proof"
@@ -80,7 +85,8 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G2"]["runtime_approval_needed"] is False
     assert gaps["V1-G3"]["runtime_approval_needed"] is False
     assert gaps["V1-G3"]["runtime_enforcement_approval_needed"] is True
-    assert gaps["V1-G4"]["runtime_approval_needed"] is True
+    assert gaps["V1-G4"]["runtime_approval_needed"] is False
+    assert gaps["V1-G4"]["runtime_authority_approval_needed"] is True
     assert gaps["V1-G5"]["runtime_approval_needed"] is True
     assert gaps["V1-G6"]["runtime_approval_needed"] is False
     assert gaps["V1-G7"]["runtime_approval_needed"] is True
@@ -88,17 +94,17 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G9"]["runtime_approval_needed"] is False
 
 
-def test_v1_gap_matrix_recommends_guardian_decision_after_static_approval_contract() -> None:
+def test_v1_gap_matrix_recommends_provider_model_after_guardian_design_gate() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G4"
+    assert fixture["next_smallest_safe_step"] == "V1-G5"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_docs_tests_fixtures_only_design_gate_before_runtime_enforcement"
+        == "pending_docs_tests_fixtures_only_provider_model_routing_contract_and_acceptance_test_design"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "real_guardian_decision_and_live_approval_path_design_gate_is_next_after_static_destructive_approval_contract"
+        == "provider_model_routing_contract_and_acceptance_test_design_is_next_after_static_guardian_decision_approval_path_gate"
     )
 
 
@@ -120,6 +126,7 @@ def test_v1_gap_matrix_stop_conditions_cover_forbidden_surfaces() -> None:
 def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     boundary = _load_fixture()["boundary_results"]
     assert boundary["operator_approval_contract_added"] is True
+    assert boundary["guardian_decision_design_gate_added"] is True
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -141,7 +148,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G1` is accepted as source-backed local shell evidence." in text
     assert "`V1-G2` is complete as static docs/tests/fixtures-only typed bridge acceptance proof." in text
     assert "`V1-G3` is complete as static docs/tests/fixtures-only destructive edit/delete" in text
-    assert "The next smallest safe step is `V1-G4`" in text
+    assert "`V1-G4` is complete as static docs/tests/fixtures-only real `GuardianDecision`" in text
+    assert "The next smallest safe step is `V1-G5`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

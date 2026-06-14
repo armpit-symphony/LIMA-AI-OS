@@ -1,0 +1,69 @@
+{
+  "case_id": "v1_g4_privileged_breakglass_requires_scope",
+  "case_family": "privileged_required_static_only",
+  "docs_tests_fixtures_only": true,
+  "future_decision_outcome_family": "privileged",
+  "guardian_status": "needs_breakglass",
+  "action": {
+    "action_type": "terminal_command",
+    "target_class": "terminal",
+    "target_ref": "fixture://terminal/service-control",
+    "risk_class": "critical",
+    "consequential": true,
+    "destructive": true
+  },
+  "decision_scope_design": {
+    "decision_id_required_in_future_runtime": true,
+    "decision_id_issued_in_fixture": false,
+    "scope_matches_action": true,
+    "allowed_tool_packs": [
+      "terminal",
+      "system"
+    ],
+    "approval_level": "breakglass"
+  },
+  "approval_path_design": {
+    "approval_metadata_required": true,
+    "approval_id_issued_in_fixture": false,
+    "approval_granted": false,
+    "approval_token_issued": false,
+    "requires_operator_pin_or_breakglass": true
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_runtime_authority": false,
+    "result": "privileged_approval_required_before_execution"
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "privileged_action_without_breakglass",
+    "terminal_execution_claim",
+    "approval_bypass_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "decision_id_created": false,
+    "approval_granted": false,
+    "approval_token_issued": false,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "audit_persistence_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false
+  }
+}

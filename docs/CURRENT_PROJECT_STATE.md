@@ -909,4 +909,27 @@ Do not merge or tag from a routine implementation thread.
 - `tests/support` changes in proof lane: not allowed
 - shell repo modifications in proof lane: not allowed
 - provider/model routing, real `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
-- recommended next lane: V1-G4 real `GuardianDecision` and live approval path design gate
+- recommended next lane at V1-G3 closeout: V1-G4 real `GuardianDecision` and live approval path design gate; current V1-G4 status is tracked below
+
+## V1-G4 - Real GuardianDecision And Live Approval Path Gate
+
+- branch: `v1-g4-real-guardian-decision-live-approval-path-gate`
+- status: docs/tests/fixtures-only static design gate complete
+- base branch: `v1-g3-destructive-edit-delete-approval-contract`
+- base commit: `76dbfa861d31e098d905237d9b68a20532c7b428`
+- gate document: `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md`
+- audit document: `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_AUDIT.md`
+- closeout document: `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_CLOSEOUT.md`
+- V1-G4 status: complete as static docs/tests/fixtures-only real `GuardianDecision` and live approval path design-gate proof
+- accepted evidence: future decision outcome families, GuardianDecision status mappings, decision-scope requirements, approval-decision dependency, and fail-closed authority cases
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- real `GuardianDecision` authority: not added
+- approval enforcement or approval token issuance: not added
+- static acceptance tests: added under `tests/`
+- `lima/` changes in proof lane: not allowed
+- `tests/support` changes in proof lane: not allowed
+- shell repo modifications in proof lane: not allowed
+- provider/model routing, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G5 provider/model routing contract and acceptance-test design

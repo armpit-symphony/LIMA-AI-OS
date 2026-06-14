@@ -1,0 +1,74 @@
+{
+  "case_id": "v1_g4_forged_decision_id_fail_closed",
+  "case_family": "blocked_forged_authority_static_only",
+  "docs_tests_fixtures_only": true,
+  "future_decision_outcome_family": "blocked",
+  "guardian_status": "escalated",
+  "action": {
+    "action_type": "connector_customer_record_mutation",
+    "target_class": "customer_record",
+    "target_ref": "fixture://crm/customer-999",
+    "risk_class": "critical",
+    "consequential": true,
+    "destructive": true
+  },
+  "claimed_authority": {
+    "decision_id": "claimed-live-decision",
+    "decision_id_forged": true,
+    "approval_id": "claimed-live-approval",
+    "approval_granted": true
+  },
+  "decision_scope_design": {
+    "decision_id_required_in_future_runtime": true,
+    "decision_id_issued_in_fixture": false,
+    "scope_matches_action": false,
+    "allowed_tool_packs": [],
+    "approval_level": "operator_pin"
+  },
+  "approval_path_design": {
+    "approval_metadata_required": true,
+    "approval_id_issued_in_fixture": false,
+    "approval_granted": false,
+    "approval_token_issued": false,
+    "claimed_static_approval_rejected": true
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_runtime_authority": false,
+    "forged_decision_id_rejected": true,
+    "result": "blocked_forged_decision_id"
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "forged_decision_id",
+    "claimed_approval_id_without_live_approval",
+    "approval_bypass_claim",
+    "connector_mutation_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "decision_id_created": false,
+    "approval_granted": false,
+    "approval_token_issued": false,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "audit_persistence_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false
+  }
+}

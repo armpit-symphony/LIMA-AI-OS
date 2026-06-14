@@ -6,7 +6,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 ## Current Anchor
 
-- Current branch: `v1-g3-destructive-edit-delete-approval-contract`
+- Current branch: `v1-g4-real-guardian-decision-live-approval-path-gate`
 - Source target: `docs/V1_PRODUCT_READINESS_TARGET.md`
 - Current product status: not V1-ready
 - Current implementation approval: not granted
@@ -19,8 +19,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | `V1-G1` | Sparkbot_shell `thinking` / progress proof | LIMA accepted Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627` in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as source-backed local shell evidence | Source-backed shell evidence for in-band thinking/progress state | Complete as source-backed local shell evidence; live streaming parity remains out of scope | No LIMA runtime approval |
 | `V1-G2` | Typed bridge acceptance proof | `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` and static fixtures/tests prove source request metadata, typed IntentEnvelope candidate metadata, Guardian request metadata, GuardianDecision absent/pending/blocked boundaries, status mappings, and fail-closed cases | Executable acceptance tests proving source request metadata, typed IntentEnvelope candidate metadata, and Guardian request metadata fail closed without authority | Complete as static docs/tests/fixtures-only proof; runtime bridge remains out of scope | No runtime approval |
 | `V1-G3` | Destructive edit/delete approval contract | `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` and static fixtures/tests prove destructive action classes require operator approval metadata and approval-bypass claims fail closed | Contract and tests proving destructive action classes cannot be marked approved without explicit operator approval metadata | Complete as static docs/tests/fixtures-only contract; runtime enforcement remains out of scope | No for static contract; later runtime approval required for enforcement |
-| `V1-G4` | Real GuardianDecision and live approval path | Existing fake/test-only GuardianDecision artifacts are not production authority; V1-G3 now defines destructive approval metadata requirements | Runtime GuardianDecision path that distinguishes allow, confirm, deny, privileged, expired, revoked, and blocked outcomes before consequential action | GuardianDecision runtime design gate, then separately approved narrow runtime slice | Yes |
-| `V1-G5` | Provider/model routing | Sparkbot docs prove reference behavior; LIMA has no provider/model runtime routing | Model routing constrained by Guardian, shell tool-pack scope, secret policy, and audit/evidence rules | Provider/model routing contract and acceptance-test design before implementation | Yes for runtime routing |
+| `V1-G4` | Real GuardianDecision and live approval path | `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` and static fixtures/tests define future decision outcomes, status mappings, approval-decision dependency, and fail-closed authority cases | Runtime GuardianDecision path that distinguishes allow, confirm, deny, privileged, expired, revoked, and blocked outcomes before consequential action | Complete as static docs/tests/fixtures-only design gate; runtime authority remains out of scope | No for static gate; later runtime approval required for implementation |
+| `V1-G5` | Provider/model routing | Sparkbot docs prove reference behavior; LIMA has no provider/model runtime routing; V1-G4 now defines the decision/approval gate model routing must obey | Model routing constrained by Guardian, shell tool-pack scope, secret policy, and audit/evidence rules | Provider/model routing contract and acceptance-test design before implementation | Yes for runtime routing |
 | `V1-G6` | Haptic intent metadata | Haptics are accepted as shell-owned future UX requirement; no LIMA haptic intent contract exists | LIMA may emit non-device-specific haptic intent metadata while shells own rendering/device feedback | Haptic intent contract design and shell fixture proof | No device implementation in LIMA |
 | `V1-G7` | First-shell integration proof | No shell runtime wiring is approved; Sparkbot is reference only | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` each prove they can consume LIMA contract outputs safely | Per-shell proof packets and LIMA intake audits | Runtime wiring requires later approval |
 | `V1-G8` | Audit/evidence persistence | Static audit/evidence lineage exists; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Audit persistence design, storage contract, threat model, then runtime gate | Yes |
@@ -31,10 +31,11 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 1. Treat `V1-G1` as accepted for source-backed local shell `thinking` evidence, while rejecting live runtime parity claims.
 2. Treat `V1-G2` as complete for static typed bridge acceptance proof, while rejecting runtime parity claims.
 3. Treat `V1-G3` as complete for static destructive edit/delete approval contract evidence, while rejecting runtime enforcement claims.
-4. Move into `V1-G4` and `V1-G5` only after file scope, rollback proof, and acceptance tests are explicit.
-5. Add `V1-G6` haptic intent metadata as a shell-contract lane, not device implementation.
-6. Require `V1-G7` shell proof packets before compatibility freeze.
-7. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
+4. Treat `V1-G4` as complete for static GuardianDecision/live approval path design-gate evidence, while rejecting runtime authority claims.
+5. Move into `V1-G5` only after file scope, rollback proof, and acceptance tests are explicit.
+6. Add `V1-G6` haptic intent metadata as a shell-contract lane, not device implementation.
+7. Require `V1-G7` shell proof packets before compatibility freeze.
+8. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
 
 ## Stop Conditions
 
@@ -58,4 +59,6 @@ LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
 `V1-G3` is complete as static docs/tests/fixtures-only destructive edit/delete operator-approval contract proof.
 
-The next smallest safe step is `V1-G4`: real `GuardianDecision` and live approval path design gate, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.
+`V1-G4` is complete as static docs/tests/fixtures-only real `GuardianDecision` and live approval path design-gate proof.
+
+The next smallest safe step is `V1-G5`: provider/model routing contract and acceptance-test design, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.

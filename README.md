@@ -1108,9 +1108,11 @@ Result:
 - It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as LIMA intake for Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`, accepting `thinking` as source-backed local shell evidence only.
 - It adds `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` as the static V1-G2 typed bridge acceptance proof.
 - It adds `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` as the static V1-G3 destructive edit/delete operator-approval contract proof.
-- The next smallest safe V1 gap is `V1-G4` real `GuardianDecision` and live approval path design gate.
+- It adds `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` as the static V1-G4 real `GuardianDecision` and live approval path design gate.
+- The next smallest safe V1 gap is `V1-G5` provider/model routing contract and acceptance-test design.
 - V1-G2 proof fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G3 contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G4 design-gate fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - Runtime implementation, runtime harness creation, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
 Status:

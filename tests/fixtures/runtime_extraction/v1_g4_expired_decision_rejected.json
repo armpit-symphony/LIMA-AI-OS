@@ -1,0 +1,68 @@
+{
+  "case_id": "v1_g4_expired_decision_rejected",
+  "case_family": "expired_rejected_static_only",
+  "docs_tests_fixtures_only": true,
+  "future_decision_outcome_family": "expired",
+  "guardian_status": "expired",
+  "action": {
+    "action_type": "external_send",
+    "target_class": "communication",
+    "target_ref": "fixture://comms/customer-email",
+    "risk_class": "high",
+    "consequential": true,
+    "destructive": false
+  },
+  "decision_scope_design": {
+    "decision_id_required_in_future_runtime": true,
+    "decision_id_issued_in_fixture": false,
+    "scope_matches_action": true,
+    "allowed_tool_packs": [
+      "comms"
+    ],
+    "approval_level": "confirm",
+    "expired": true
+  },
+  "approval_path_design": {
+    "approval_metadata_required": true,
+    "approval_id_issued_in_fixture": false,
+    "approval_granted": false,
+    "approval_token_issued": false
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_runtime_authority": false,
+    "result": "expired_decision_rejected"
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "expired_decision_execution_claim",
+    "external_send_claim",
+    "stale_authority_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "decision_id_created": false,
+    "approval_granted": false,
+    "approval_token_issued": false,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "audit_persistence_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false
+  }
+}

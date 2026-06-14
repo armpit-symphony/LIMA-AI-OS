@@ -1,0 +1,204 @@
+{
+  "gap_id": "V1-G4",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g4-real-guardian-decision-live-approval-path-gate",
+  "source_branch": "v1-g3-destructive-edit-delete-approval-contract",
+  "base_commit": "76dbfa861d31e098d905237d9b68a20532c7b428",
+  "docs_tests_fixtures_only": true,
+  "design_gate_completed": true,
+  "design_gate_accepted_as_static_evidence": true,
+  "design_gate_accepted_as_runtime_authority": false,
+  "v1_product_ready": false,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_exports_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_shell_wiring_added": false,
+  "sparkbot_import_added": false,
+  "sparkbot_code_copied": false,
+  "arc_bot_shell_wiring_added": false,
+  "provider_model_routing_added": false,
+  "guardian_decision_runtime_added": false,
+  "approval_enforcement_added": false,
+  "approval_token_issuance_added": false,
+  "approval_granted_by_gate": false,
+  "execution_dispatch_persistence_added": false,
+  "browser_file_network_device_robotics_behavior_added": false,
+  "haptic_device_behavior_added": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "documents": {
+    "gate": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md",
+    "audit": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_AUDIT.md",
+    "closeout": "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_CLOSEOUT.md"
+  },
+  "source_documents": [
+    "docs/GUARDIAN_DECISION_CONTRACT.md",
+    "docs/APPROVAL_METADATA_CONTRACT.md",
+    "docs/TOOL_PACK_RISK_POLICY.md",
+    "docs/SPINE_AUDIT_LINEAGE_CONTRACT.md",
+    "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md",
+    "docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md",
+    "docs/V1_READINESS_GAP_MATRIX.md"
+  ],
+  "case_fixture_files": [
+    "tests/fixtures/runtime_extraction/v1_g4_allow_readonly_decision_shape.json",
+    "tests/fixtures/runtime_extraction/v1_g4_confirm_destructive_edit_requires_approval.json",
+    "tests/fixtures/runtime_extraction/v1_g4_deny_unknown_tool_pack.json",
+    "tests/fixtures/runtime_extraction/v1_g4_privileged_breakglass_requires_scope.json",
+    "tests/fixtures/runtime_extraction/v1_g4_expired_decision_rejected.json",
+    "tests/fixtures/runtime_extraction/v1_g4_revoked_approval_rejected.json",
+    "tests/fixtures/runtime_extraction/v1_g4_block_missing_decision_id.json",
+    "tests/fixtures/runtime_extraction/v1_g4_forged_decision_id_fail_closed.json"
+  ],
+  "future_decision_outcome_families": [
+    "allow",
+    "confirm",
+    "deny",
+    "privileged",
+    "expired",
+    "revoked",
+    "blocked"
+  ],
+  "existing_guardian_status_mapping": [
+    {
+      "guardian_status": "approved",
+      "v1_outcome_family": "allow"
+    },
+    {
+      "guardian_status": "needs_human_confirmation",
+      "v1_outcome_family": "confirm"
+    },
+    {
+      "guardian_status": "needs_operator_pin",
+      "v1_outcome_family": "privileged"
+    },
+    {
+      "guardian_status": "needs_breakglass",
+      "v1_outcome_family": "privileged"
+    },
+    {
+      "guardian_status": "denied",
+      "v1_outcome_family": "deny"
+    },
+    {
+      "guardian_status": "expired",
+      "v1_outcome_family": "expired"
+    },
+    {
+      "guardian_status": "revoked",
+      "v1_outcome_family": "revoked"
+    },
+    {
+      "guardian_status": "superseded",
+      "v1_outcome_family": "blocked"
+    },
+    {
+      "guardian_status": "needs_clarification",
+      "v1_outcome_family": "blocked"
+    },
+    {
+      "guardian_status": "escalated",
+      "v1_outcome_family": "blocked"
+    }
+  ],
+  "required_future_decision_scope_fields": [
+    "decision_id",
+    "actor_id",
+    "shell_id",
+    "input_id",
+    "intent_id",
+    "action_type",
+    "target_ref",
+    "allowed_tool_packs",
+    "risk_class",
+    "approval_level",
+    "expires_at",
+    "constraints",
+    "policy_version"
+  ],
+  "required_future_runtime_rules": [
+    "decision_id_required_before_consequential_execution",
+    "approval_metadata_required_for_high_critical_or_destructive_actions",
+    "approval_metadata_never_replaces_guardian_decision",
+    "decision_scope_must_match_action_scope",
+    "expired_revoked_superseded_or_denied_decisions_do_not_execute",
+    "missing_forged_reused_or_scope_mismatched_decision_ids_fail_closed",
+    "downstream_events_must_carry_decision_id_when_runtime_exists"
+  ],
+  "packet_statuses": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "v1_outcome_to_packet_status": [
+    {
+      "v1_outcome_family": "allow",
+      "packet_status": "preview_only",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "confirm",
+      "packet_status": "explain_plan",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "privileged",
+      "packet_status": "blocked",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "deny",
+      "packet_status": "blocked",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "expired",
+      "packet_status": "blocked",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "revoked",
+      "packet_status": "blocked",
+      "runtime_execute_ready_packet_added": false
+    },
+    {
+      "v1_outcome_family": "blocked",
+      "packet_status": "blocked",
+      "runtime_execute_ready_packet_added": false
+    }
+  ],
+  "accepted_evidence": [
+    "future_decision_outcome_families_defined",
+    "existing_guardian_statuses_mapped_to_v1_outcomes",
+    "decision_scope_fields_defined",
+    "approval_metadata_dependency_preserved",
+    "allow_confirm_deny_privileged_expired_revoked_blocked_cases_covered",
+    "missing_or_forged_authority_claims_fail_closed",
+    "runtime_boundary_flags_remain_false"
+  ],
+  "rejected_claims": [
+    "runtime_guardian_decision_authority",
+    "live_approval_enforcement",
+    "approval_token_issuance",
+    "execution_dispatch_persistence",
+    "provider_model_routing",
+    "connector_tool_browser_file_network_device_robotics_behavior",
+    "shell_runtime_wiring",
+    "haptic_device_behavior",
+    "production_readiness",
+    "v1_product_readiness"
+  ],
+  "blockers": [
+    "provider_model_routing_contract_not_designed",
+    "provider_model_routing_not_implemented",
+    "haptic_intent_metadata_contract_not_designed",
+    "first_shell_integration_proof_not_complete",
+    "audit_persistence_not_implemented",
+    "production_behavior_not_approved"
+  ],
+  "recommended_next_gap": "V1-G5",
+  "recommended_next_step": "design_provider_model_routing_contract_and_acceptance_tests"
+}
