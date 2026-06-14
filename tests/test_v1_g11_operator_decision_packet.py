@@ -144,6 +144,46 @@ def test_v1_g11_operator_decision_record_validation_rules_are_fail_closed() -> N
     assert "extra_choice_value_treated_as_no_approval" in invalid_results
 
 
+def test_v1_g11_operator_decision_record_templates_are_exact() -> None:
+    fixture = _load_fixture()
+    templates = fixture["decision_record_templates"]
+    assert set(templates) == {"none", "Approve-V1-G11", "Revise-V1-G11", "Pause"}
+
+    none_template = templates["none"]
+    assert none_template == {
+        "recorded_choice": "none",
+        "recorded_approval_wording": "none",
+        "recorded_revision_request": "none",
+        "recorded_pause_reason": "none",
+        "approved_implementation_branch": "none",
+        "runtime_implementation_approved": "no",
+    }
+
+    approve_template = templates["Approve-V1-G11"]
+    assert approve_template["recorded_choice"] == "Approve-V1-G11"
+    assert approve_template["recorded_approval_wording"] == fixture["required_approval_wording"]
+    assert approve_template["recorded_revision_request"] == "none"
+    assert approve_template["recorded_pause_reason"] == "none"
+    assert approve_template["approved_implementation_branch"] == fixture["if_approved_next_branch"]
+    assert approve_template["runtime_implementation_approved"] == "yes"
+
+    revise_template = templates["Revise-V1-G11"]
+    assert revise_template["recorded_choice"] == "Revise-V1-G11"
+    assert revise_template["recorded_approval_wording"] == "none"
+    assert revise_template["recorded_revision_request"] == "<required revision request>"
+    assert revise_template["recorded_pause_reason"] == "none"
+    assert revise_template["approved_implementation_branch"] == "none"
+    assert revise_template["runtime_implementation_approved"] == "no"
+
+    pause_template = templates["Pause"]
+    assert pause_template["recorded_choice"] == "Pause"
+    assert pause_template["recorded_approval_wording"] == "none"
+    assert pause_template["recorded_revision_request"] == "none"
+    assert pause_template["recorded_pause_reason"] == "<required pause reason>"
+    assert pause_template["approved_implementation_branch"] == "none"
+    assert pause_template["runtime_implementation_approved"] == "no"
+
+
 def test_v1_g11_operator_decision_packet_rejects_implicit_approval_inputs() -> None:
     non_approval_inputs = set(_load_fixture()["non_approval_inputs"])
     assert "general_v1_product_direction" in non_approval_inputs
@@ -205,6 +245,14 @@ def test_v1_g11_operator_decision_packet_doc_matches_fixture() -> None:
     assert "`Pause`: valid only with a non-empty pause reason" in text
     assert "Any mixed state is invalid and must be treated as no approval." in text
     assert "Runtime implementation may start only from the valid `Approve-V1-G11` state." in text
+    assert "## Decision Record Templates" in text
+    assert "Template for no recorded choice:" in text
+    assert "Template for `Approve-V1-G11`:" in text
+    assert "Template for `Revise-V1-G11`:" in text
+    assert "Template for `Pause`:" in text
+    assert "Recorded choice: Approve-V1-G11" in text
+    assert "Approved implementation branch: v1-g11-runtime-request-decision-gate" in text
+    assert "Runtime implementation approved: yes" in text
     assert "does not approve runtime implementation" in text
     assert "General V1 product direction" in text
     assert "do not count as implementation approval" in text

@@ -87,6 +87,40 @@
     "misspelled_choice_treated_as_no_approval",
     "extra_choice_value_treated_as_no_approval"
   ],
+  "decision_record_templates": {
+    "none": {
+      "recorded_choice": "none",
+      "recorded_approval_wording": "none",
+      "recorded_revision_request": "none",
+      "recorded_pause_reason": "none",
+      "approved_implementation_branch": "none",
+      "runtime_implementation_approved": "no"
+    },
+    "Approve-V1-G11": {
+      "recorded_choice": "Approve-V1-G11",
+      "recorded_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
+      "recorded_revision_request": "none",
+      "recorded_pause_reason": "none",
+      "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+      "runtime_implementation_approved": "yes"
+    },
+    "Revise-V1-G11": {
+      "recorded_choice": "Revise-V1-G11",
+      "recorded_approval_wording": "none",
+      "recorded_revision_request": "<required revision request>",
+      "recorded_pause_reason": "none",
+      "approved_implementation_branch": "none",
+      "runtime_implementation_approved": "no"
+    },
+    "Pause": {
+      "recorded_choice": "Pause",
+      "recorded_approval_wording": "none",
+      "recorded_revision_request": "none",
+      "recorded_pause_reason": "<required pause reason>",
+      "approved_implementation_branch": "none",
+      "runtime_implementation_approved": "no"
+    }
+  },
   "required_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
   "non_approval_inputs": [
     "general_v1_product_direction",

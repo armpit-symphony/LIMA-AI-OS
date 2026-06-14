@@ -56,6 +56,54 @@ Only `Approve-V1-G11`, `Revise-V1-G11`, or `Pause` is valid here. Any other text
 - Missing, misspelled, or extra choice values are invalid and must be treated as no approval.
 - Runtime implementation may start only from the valid `Approve-V1-G11` state.
 
+## Decision Record Templates
+
+Use one template only.
+
+Template for no recorded choice:
+
+```text
+Recorded choice: none
+Recorded approval wording: none
+Recorded revision request: none
+Recorded pause reason: none
+Approved implementation branch: none
+Runtime implementation approved: no
+```
+
+Template for `Approve-V1-G11`:
+
+```text
+Recorded choice: Approve-V1-G11
+Recorded approval wording: I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.
+Recorded revision request: none
+Recorded pause reason: none
+Approved implementation branch: v1-g11-runtime-request-decision-gate
+Runtime implementation approved: yes
+```
+
+Template for `Revise-V1-G11`:
+
+```text
+Recorded choice: Revise-V1-G11
+Recorded approval wording: none
+Recorded revision request: <required revision request>
+Recorded pause reason: none
+Approved implementation branch: none
+Runtime implementation approved: no
+```
+
+Template for `Pause`:
+
+```text
+Recorded choice: Pause
+Recorded approval wording: none
+Recorded revision request: none
+Recorded pause reason: <required pause reason>
+Approved implementation branch: none
+Runtime implementation approved: no
+```
+
 ## Valid Operator Choices
 
 ### `Approve-V1-G11`
