@@ -1111,12 +1111,14 @@ Result:
 - It adds `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` as the static V1-G4 real `GuardianDecision` and live approval path design gate.
 - It adds `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` as the static V1-G5 provider/model routing contract and acceptance-test design.
 - It adds `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` as the static V1-G6 haptic intent metadata contract and shell fixture proof.
-- The next smallest safe V1 gap is `V1-G7` first-shell integration proof packets and LIMA intake audits.
+- It adds `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md` as the V1-G7 first-shell integration proof request gate.
+- The next smallest safe V1 action is `V1-G7D`: request all three first-shell proof packets in parallel, then perform one LIMA intake audit per returned packet.
 - V1-G2 proof fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G3 contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G4 design-gate fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G5 routing contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - V1-G6 haptic intent metadata fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G7 request-gate fixture and static test are created under `tests/fixtures/runtime_extraction/` and `tests/`.
 - Runtime implementation, runtime harness creation, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
 Status:

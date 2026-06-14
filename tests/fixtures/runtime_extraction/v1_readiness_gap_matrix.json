@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g6-haptic-intent-metadata-contract",
+  "current_branch": "v1-g7-first-shell-integration-proof-request-gate",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -88,8 +88,13 @@
     {
       "id": "V1-G7",
       "name": "first_shell_integration_proof",
-      "status": "not_complete",
-      "recommended_lane": "per_shell_proof_packets_and_lima_intake_audits",
+      "status": "request_gate_complete_awaiting_shell_packets",
+      "request_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md",
+      "audit_criteria_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_AUDIT_CRITERIA.md",
+      "closeout_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST_CLOSEOUT.md",
+      "proof_packets_received": false,
+      "lima_intake_audits_complete": false,
+      "recommended_lane": "request_all_three_shell_proof_packets_then_lima_intake_audits",
       "runtime_approval_needed": true
     },
     {
@@ -119,8 +124,8 @@
     "V1-G9"
   ],
   "next_smallest_safe_step": "V1-G7",
-  "next_smallest_safe_step_reason": "first_shell_integration_proof_is_next_after_static_haptic_intent_metadata_contract",
-  "next_smallest_safe_step_status": "pending_per_shell_proof_packets_and_lima_intake_audits",
+  "next_smallest_safe_step_reason": "v1_g7_request_gate_complete_but_shell_proof_packets_are_not_delivered",
+  "next_smallest_safe_step_status": "pending_request_all_three_shell_proof_packets_then_intake_each_packet",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -146,6 +151,8 @@
     "guardian_decision_design_gate_added": true,
     "provider_model_routing_contract_added": true,
     "haptic_intent_metadata_contract_added": true,
+    "first_shell_integration_proof_request_gate_added": true,
+    "first_shell_integration_proof_complete": false,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

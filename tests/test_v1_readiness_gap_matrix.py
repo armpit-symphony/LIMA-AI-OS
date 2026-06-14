@@ -85,6 +85,13 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
         == "docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md"
     )
     assert gaps["V1-G7"]["name"] == "first_shell_integration_proof"
+    assert gaps["V1-G7"]["status"] == "request_gate_complete_awaiting_shell_packets"
+    assert (
+        gaps["V1-G7"]["request_document"]
+        == "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md"
+    )
+    assert gaps["V1-G7"]["proof_packets_received"] is False
+    assert gaps["V1-G7"]["lima_intake_audits_complete"] is False
     assert gaps["V1-G8"]["name"] == "audit_evidence_persistence"
     assert gaps["V1-G9"]["name"] == "product_release_boundary"
 
@@ -113,11 +120,11 @@ def test_v1_gap_matrix_recommends_haptics_after_provider_model_contract() -> Non
     assert fixture["next_smallest_safe_step"] == "V1-G7"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_per_shell_proof_packets_and_lima_intake_audits"
+        == "pending_request_all_three_shell_proof_packets_then_intake_each_packet"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "first_shell_integration_proof_is_next_after_static_haptic_intent_metadata_contract"
+        == "v1_g7_request_gate_complete_but_shell_proof_packets_are_not_delivered"
     )
 
 
@@ -142,6 +149,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["guardian_decision_design_gate_added"] is True
     assert boundary["provider_model_routing_contract_added"] is True
     assert boundary["haptic_intent_metadata_contract_added"] is True
+    assert boundary["first_shell_integration_proof_request_gate_added"] is True
+    assert boundary["first_shell_integration_proof_complete"] is False
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -166,7 +175,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G4` is complete as static docs/tests/fixtures-only real `GuardianDecision`" in text
     assert "`V1-G5` is complete as static docs/tests/fixtures-only provider/model routing" in text
     assert "`V1-G6` is complete as static docs/tests/fixtures-only haptic intent metadata" in text
-    assert "The next smallest safe step is `V1-G7`" in text
+    assert "`V1-G7` request gate is complete as docs/tests/fixtures-only proof request" in text
+    assert "The next smallest safe step is `V1-G7D`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

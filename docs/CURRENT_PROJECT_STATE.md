@@ -981,3 +981,25 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in proof lane: not allowed
 - provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G7 first-shell integration proof packets and LIMA intake audits
+
+## V1-G7 - First-Shell Integration Proof Request Gate
+
+- branch: `v1-g7-first-shell-integration-proof-request-gate`
+- status: docs/tests/fixtures-only request gate complete; V1-G7 proof itself remains open
+- base branch: `v1-g6-haptic-intent-metadata-contract`
+- base commit: `5953e8179e7a24a28ac47be1c50eb0778a5d1d86`
+- request document: `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md`
+- audit criteria document: `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_AUDIT_CRITERIA.md`
+- closeout document: `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST_CLOSEOUT.md`
+- requested shells: `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`
+- V1-G7 status: request gate complete only; shell proof packets not yet delivered or accepted
+- accepted evidence: requested shell branches, required proof files, machine-readable fields, required state/status coverage, audit criteria, and fail-closed rejection criteria are defined
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- first-shell integration proof: not complete
+- `lima/` changes in request lane: not allowed
+- `tests/support` changes in request lane: not allowed
+- shell repo modifications in request lane: not allowed
+- provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: request all three shell proof packets in parallel, then intake each returned packet in LIMA
