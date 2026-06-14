@@ -1030,3 +1030,30 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in request lane: not allowed
 - provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence implementation, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G8A static audit/evidence persistence contract and threat model with fixtures/tests
+
+## V1-G8A - Audit/Evidence Persistence Static Contract And Threat Model
+
+- branch: `v1-g8a-audit-evidence-persistence-contract-threat-model`
+- status: complete as docs/tests/fixtures-only static contract and threat-model evidence
+- base branch: `v1-g8-audit-evidence-persistence-request-gate`
+- base commit: `b24eecec638db72a46a5c3eec9a9cc3b915380d1`
+- contract document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md`
+- threat model document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md`
+- closeout document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md`
+- V1-G8 static status: required record families, redaction/retention envelopes, query contract, destructive edit/delete approval evidence rules, provider/model route evidence rules, shell consumption boundaries, positive cases, negative cases, and threat mitigations are defined
+- V1-G8 runtime status: durable audit persistence not implemented
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- durable audit persistence: not added
+- storage adapter: not added
+- query API: not added
+- external database writes: not added
+- live redaction enforcement: not added
+- evidence hash verification runtime: not added
+- export/delete review workflow: not added
+- `lima/` changes in V1-G8A lane: not allowed
+- `tests/support` changes in V1-G8A lane: not allowed
+- shell repo modifications in V1-G8A lane: not allowed
+- provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence implementation, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G9 product release boundary audit, still docs/tests/fixtures-only

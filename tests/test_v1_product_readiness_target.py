@@ -86,8 +86,20 @@ def test_v1_target_document_and_fixture_exist() -> None:
         == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md"
     )
     assert (
-        fixture["v1_g8_closeout_document"]
+        fixture["v1_g8_request_closeout_document"]
         == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md"
+    )
+    assert (
+        fixture["v1_g8_contract_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md"
+    )
+    assert (
+        fixture["v1_g8_threat_model_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md"
+    )
+    assert (
+        fixture["v1_g8_closeout_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md"
     )
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
@@ -175,6 +187,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["first_shell_integration_proof_complete"] is True
     assert current["first_shell_integration_proof_static_only"] is True
     assert current["audit_evidence_persistence_request_gate_added"] is True
+    assert current["audit_evidence_persistence_static_contract_added"] is True
+    assert current["audit_evidence_persistence_threat_model_added"] is True
     assert current["durable_audit_persistence_implemented"] is False
     accepted = fixture["accepted_shell_evidence"]
     assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
@@ -220,8 +234,10 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert static_evidence["v1_g7_live_runtime_parity_proven"] is False
     assert static_evidence["v1_g8_audit_evidence_persistence_request_gate_completed"] is True
+    assert static_evidence["v1_g8_audit_evidence_persistence_static_contract_completed"] is True
+    assert static_evidence["v1_g8_audit_evidence_persistence_threat_model_completed"] is True
     assert static_evidence["v1_g8_audit_evidence_persistence_scope"] == (
-        "request_gate_only_no_runtime_persistence"
+        "static_docs_tests_fixtures_only_no_runtime_persistence"
     )
     assert static_evidence["v1_g8_durable_audit_persistence_proven"] is False
     blockers = set(fixture["remaining_blockers"])
@@ -241,7 +257,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "create_v1_g8a_static_audit_evidence_persistence_contract_and_threat_model"
+        == "create_v1_g9_product_release_boundary_audit"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -272,8 +288,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_eighth_gap_request_gate"]
         == "audit_evidence_persistence_request_gate_complete"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G8A"
     assert (
-        fixture["recommended_next_gap_to_close"]
+        fixture["recommended_eighth_gap_closed"]
         == "audit_evidence_persistence_static_contract_and_threat_model"
     )
+    assert fixture["recommended_next_gap_id"] == "V1-G9"
+    assert fixture["recommended_next_gap_to_close"] == "product_release_boundary_audit"

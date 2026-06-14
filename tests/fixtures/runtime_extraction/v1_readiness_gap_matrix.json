@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g8-audit-evidence-persistence-request-gate",
+  "current_branch": "v1-g8a-audit-evidence-persistence-contract-threat-model",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -103,11 +103,14 @@
     {
       "id": "V1-G8",
       "name": "audit_evidence_persistence",
-      "status": "request_gate_complete_static_contract_pending",
+      "status": "complete_static_contract_and_threat_model",
       "request_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md",
       "audit_criteria_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md",
-      "closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md",
-      "recommended_lane": "static_persistence_contract_and_threat_model_then_runtime_gate",
+      "request_closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md",
+      "contract_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md",
+      "threat_model_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md",
+      "closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
+      "recommended_lane": "complete_static_contract_threat_model_runtime_persistence_out_of_scope",
       "runtime_approval_needed": false,
       "runtime_persistence_approval_needed": true
     },
@@ -130,9 +133,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G8A",
-  "next_smallest_safe_step_reason": "v1_g8_request_gate_complete_but_static_persistence_contract_and_threat_model_are_missing",
-  "next_smallest_safe_step_status": "pending_static_audit_evidence_persistence_contract_and_threat_model",
+  "next_smallest_safe_step": "V1-G9",
+  "next_smallest_safe_step_reason": "v1_g8_static_contract_complete_but_release_boundary_audit_is_missing",
+  "next_smallest_safe_step_status": "pending_v1_product_release_boundary_audit",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -162,6 +165,8 @@
     "first_shell_integration_proof_complete": true,
     "first_shell_integration_proof_closeout_added": true,
     "audit_evidence_persistence_request_gate_added": true,
+    "audit_evidence_persistence_static_contract_added": true,
+    "audit_evidence_persistence_threat_model_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

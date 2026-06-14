@@ -24,7 +24,10 @@
   "v1_g7_request_closeout_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST_CLOSEOUT.md",
   "v1_g8_request_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md",
   "v1_g8_audit_criteria_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md",
-  "v1_g8_closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md",
+  "v1_g8_request_closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md",
+  "v1_g8_contract_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md",
+  "v1_g8_threat_model_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md",
+  "v1_g8_closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
   "phase_48_2_implementation_approved": false,
@@ -104,6 +107,8 @@
     "first_shell_integration_proof_complete": true,
     "first_shell_integration_proof_static_only": true,
     "audit_evidence_persistence_request_gate_added": true,
+    "audit_evidence_persistence_static_contract_added": true,
+    "audit_evidence_persistence_threat_model_added": true,
     "durable_audit_persistence_implemented": false,
     "guardian_decision_runtime_added": false,
     "approval_enforcement_added": false
@@ -140,7 +145,9 @@
     "v1_g7_first_shell_integration_proof_scope": "static_docs_tests_fixtures_only",
     "v1_g7_live_runtime_parity_proven": false,
     "v1_g8_audit_evidence_persistence_request_gate_completed": true,
-    "v1_g8_audit_evidence_persistence_scope": "request_gate_only_no_runtime_persistence",
+    "v1_g8_audit_evidence_persistence_static_contract_completed": true,
+    "v1_g8_audit_evidence_persistence_threat_model_completed": true,
+    "v1_g8_audit_evidence_persistence_scope": "static_docs_tests_fixtures_only_no_runtime_persistence",
     "v1_g8_durable_audit_persistence_proven": false
   },
   "remaining_blockers": [
@@ -156,7 +163,7 @@
     "destructive_edit_delete_approval_enforcement_not_implemented",
     "production_behavior_not_approved"
   ],
-  "recommended_next_step": "create_v1_g8a_static_audit_evidence_persistence_contract_and_threat_model",
+  "recommended_next_step": "create_v1_g9_product_release_boundary_audit",
   "recommended_first_gap_closed": "sparkbot_shell_source_backed_thinking_progress_state",
   "recommended_second_gap_closed": "typed_bridge_acceptance_proof_static_evidence",
   "recommended_third_gap_closed": "destructive_edit_delete_operator_approval_contract_static_evidence",
@@ -166,6 +173,7 @@
   "recommended_seventh_gap_request_gate": "first_shell_integration_proof_request_gate_complete",
   "recommended_seventh_gap_closed": "first_shell_integration_proof_static_evidence",
   "recommended_eighth_gap_request_gate": "audit_evidence_persistence_request_gate_complete",
-  "recommended_next_gap_to_close": "audit_evidence_persistence_static_contract_and_threat_model",
-  "recommended_next_gap_id": "V1-G8A"
+  "recommended_eighth_gap_closed": "audit_evidence_persistence_static_contract_and_threat_model",
+  "recommended_next_gap_to_close": "product_release_boundary_audit",
+  "recommended_next_gap_id": "V1-G9"
 }
