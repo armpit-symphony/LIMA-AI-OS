@@ -1,0 +1,89 @@
+{
+  "gap_id": "V1-G12",
+  "guard_id": "v1_g12_operator_decision_readiness_guard",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g12-durable-audit-evidence-persistence-approval-request",
+  "source_commit_before_guard": "d47414ef55be46c66112b658467737ab59d35250",
+  "docs_tests_fixtures_only": true,
+  "documents": {
+    "readiness_closeout": "docs/V1_G12_OPERATOR_DECISION_READINESS_CLOSEOUT.md",
+    "no_implicit_approval_guard": "docs/V1_G12_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md",
+    "operator_decision_packet": "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_OPERATOR_DECISION_PACKET.md",
+    "approval_request": "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_APPROVAL_REQUEST.md"
+  },
+  "closeout_verdict": "ready_for_one_valid_operator_choice_no_choice_recorded",
+  "guard_status": "active_until_approve_v1_g12_recorded",
+  "decision_record": {
+    "recorded_choice": null,
+    "recorded_approval_wording": null,
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": null,
+    "runtime_implementation_approved": false
+  },
+  "valid_operator_choices": [
+    "Approve-V1-G12",
+    "Revise-V1-G12",
+    "Pause"
+  ],
+  "authoritative_approval_record": {
+    "file": "tests/fixtures/runtime_extraction/v1_g12_durable_audit_evidence_persistence_approval_request.json",
+    "path": "decision_record",
+    "required_recorded_choice": "Approve-V1-G12",
+    "required_approved_implementation_branch": "v1-g12-durable-audit-evidence-persistence",
+    "required_runtime_implementation_approved": true
+  },
+  "non_approval_inputs": [
+    "persistent_broad_goal_to_finish_lima",
+    "v1_g11_audit_pass",
+    "v1_g12_approval_request",
+    "v1_g12_preflight_audit",
+    "v1_g12_work_order",
+    "v1_g12_operator_decision_packet_with_none_record",
+    "v1_g8_v1_g8a_static_persistence_contract_evidence",
+    "successful_validation_on_request_branch"
+  ],
+  "rejected_claims": [
+    "runtime_implementation_approved",
+    "operator_approval_recorded",
+    "durable_persistence_implemented",
+    "storage_adapter_added",
+    "query_api_added",
+    "external_database_writes_added",
+    "v1_product_readiness_approved",
+    "production_readiness_approved",
+    "runtime_export_cleanup_approved",
+    "final_api_freeze_approved",
+    "implicit_approval_from_v1_g11_audit",
+    "implicit_approval_from_broad_goal"
+  ],
+  "boundary_results": {
+    "runtime_behavior_added": false,
+    "durable_persistence_added": false,
+    "storage_adapter_added": false,
+    "query_api_added": false,
+    "external_database_writes_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "shell_repos_changed": false,
+    "sparkbot_code_copied": false,
+    "sparkbot_import_added": false,
+    "provider_model_routing_added": false,
+    "shell_wiring_added": false,
+    "haptic_device_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_freeze_approved": false,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "doc_required_phrases": [
+    "V1-G12 is ready for exactly one valid operator choice",
+    "Recorded choice: `none`",
+    "Runtime implementation approved: no",
+    "The V1-G11 audit `PASS` does not approve V1-G12 implementation.",
+    "Result: no approval recorded.",
+    "Until that choice is recorded, keep LIMA at `CANDIDATE_ONLY`"
+  ],
+  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_v1_g12_decision_record"
+}

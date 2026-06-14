@@ -1179,7 +1179,11 @@ Do not merge or tag from a routine implementation thread.
 - preflight audit document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_PREFLIGHT_AUDIT.md`
 - work order document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_WORK_ORDER.md`
 - operator decision packet document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_OPERATOR_DECISION_PACKET.md`
+- V1-G12 operator decision readiness closeout document: `docs/V1_G12_OPERATOR_DECISION_READINESS_CLOSEOUT.md`
+- V1-G12 no implicit runtime approval guard document: `docs/V1_G12_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md`
 - V1-G12 request status: ready for operator decision, not approved
+- V1-G12 decision readiness status: ready for exactly one valid operator choice
+- V1-G12 no implicit approval guard status: active until `Approve-V1-G12` is recorded
 - operator approval recorded: no
 - API status: `CANDIDATE_ONLY`
 - proposed future runtime file map if approved: `lima/spine/v1_audit_evidence.py`, `lima/spine/__init__.py`, `lima/persistence/v1_audit_store.py`, and `lima/persistence/__init__.py`
