@@ -46,10 +46,14 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
     gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
     assert set(gaps) == {f"V1-G{index}" for index in range(10)}
     assert gaps["V1-G1"]["name"] == "sparkbot_shell_thinking_progress_proof"
-    assert gaps["V1-G1"]["status"] == "request_created_waiting_on_source_backed_evidence"
+    assert gaps["V1-G1"]["status"] == "accepted_source_backed_local_shell_evidence"
     assert (
         gaps["V1-G1"]["request_document"]
         == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
+    )
+    assert (
+        gaps["V1-G1"]["intake_document"]
+        == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
     )
     assert gaps["V1-G2"]["name"] == "typed_bridge_acceptance_proof"
     assert gaps["V1-G3"]["name"] == "destructive_edit_delete_approval_contract"
@@ -74,14 +78,14 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G9"]["runtime_approval_needed"] is False
 
 
-def test_v1_gap_matrix_recommends_thinking_proof_first() -> None:
+def test_v1_gap_matrix_recommends_typed_bridge_after_thinking_proof() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G1"
-    assert fixture["next_smallest_safe_step_status"] == "request_created_waiting_on_sparkbot_shell_packet"
+    assert fixture["next_smallest_safe_step"] == "V1-G2"
+    assert fixture["next_smallest_safe_step_status"] == "pending_separate_approval_tests_fixtures_only"
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "sparkbot_style_shell_ux_parity_still_lacks_source_backed_thinking_progress_evidence"
+        == "typed_bridge_acceptance_proof_is_next_after_source_backed_thinking_evidence"
     )
 
 
@@ -120,7 +124,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
 def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     text = DOC_PATH.read_text(encoding="utf-8")
     assert "This matrix turns the V1 product target into an implementation-readiness sequence." in text
-    assert "The next smallest safe step remains `V1-G1`" in text
+    assert "`V1-G1` is accepted as source-backed local shell evidence." in text
+    assert "The next smallest safe step is `V1-G2`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

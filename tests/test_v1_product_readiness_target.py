@@ -31,6 +31,7 @@ def test_v1_target_document_and_fixture_exist() -> None:
     assert fixture["document"] == "docs/V1_PRODUCT_READINESS_TARGET.md"
     assert fixture["readiness_gap_matrix"] == "docs/V1_READINESS_GAP_MATRIX.md"
     assert fixture["v1_g1_request_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
+    assert fixture["v1_g1_intake_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -110,15 +111,21 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["shell_repos_changed"] is False
     assert current["sparkbot_code_copied"] is False
     assert current["sparkbot_import_added"] is False
+    accepted = fixture["accepted_shell_evidence"]
+    assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
+    assert accepted["sparkbot_shell_thinking_proof_scope"] == "source_backed_local_shell_evidence_only"
+    assert accepted["sparkbot_shell_live_streaming_parity_proven"] is False
     blockers = set(fixture["remaining_blockers"])
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
     assert "provider_model_routing_not_implemented" in blockers
-    assert "sparkbot_shell_real_thinking_state_proof_missing" in blockers
+    assert "sparkbot_shell_real_thinking_state_proof_missing" not in blockers
+    assert "live_model_streaming_parity_not_proven" in blockers
     assert "destructive_edit_delete_approval_enforcement_not_implemented" in blockers
     assert "production_behavior_not_approved" in blockers
     assert (
-        fixture["recommended_first_gap_to_close"]
+        fixture["recommended_first_gap_closed"]
         == "sparkbot_shell_source_backed_thinking_progress_state"
     )
-    assert fixture["recommended_first_gap_request_created"] is True
+    assert fixture["recommended_next_gap_id"] == "V1-G2"
+    assert fixture["recommended_next_gap_to_close"] == "typed_bridge_acceptance_proof"

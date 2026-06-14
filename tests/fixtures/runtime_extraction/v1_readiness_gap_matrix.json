@@ -22,9 +22,11 @@
     {
       "id": "V1-G1",
       "name": "sparkbot_shell_thinking_progress_proof",
-      "status": "request_created_waiting_on_source_backed_evidence",
+      "status": "accepted_source_backed_local_shell_evidence",
       "request_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md",
-      "recommended_lane": "sparkbot_shell_follow_up_proof_packet_and_lima_intake_audit",
+      "intake_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md",
+      "sparkbot_shell_commit": "36d697bf875a44dbafa41fc841ded86437917627",
+      "recommended_lane": "complete_source_backed_local_shell_evidence_only",
       "runtime_approval_needed": false
     },
     {
@@ -95,9 +97,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G1",
-  "next_smallest_safe_step_reason": "sparkbot_style_shell_ux_parity_still_lacks_source_backed_thinking_progress_evidence",
-  "next_smallest_safe_step_status": "request_created_waiting_on_sparkbot_shell_packet",
+  "next_smallest_safe_step": "V1-G2",
+  "next_smallest_safe_step_reason": "typed_bridge_acceptance_proof_is_next_after_source_backed_thinking_evidence",
+  "next_smallest_safe_step_status": "pending_separate_approval_tests_fixtures_only",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",

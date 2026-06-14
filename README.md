@@ -1102,8 +1102,10 @@ Result:
 - Phase 48.2 is docs/tests/fixtures-only concrete implementation design-review metadata.
 - It proposes `first_concrete_typed_bridge_acceptance_test_design` as a design-only future candidate lane.
 - It records `docs/V1_PRODUCT_READINESS_TARGET.md` as product-direction evidence for first-shell V1 readiness: `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`; future live approval, real `GuardianDecision`, provider/model routing, shell-owned haptic intent support, and operator approval for destructive edits/deletes.
-- It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence, with Sparkbot_shell source-backed `thinking` / progress-state proof as the next smallest safe gap to close.
-- It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` as the narrow Sparkbot_shell request for that missing source-backed `thinking` / progress-state proof.
+- It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence.
+- It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` as the narrow Sparkbot_shell request for source-backed `thinking` / progress-state proof.
+- It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as LIMA intake for Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`, accepting `thinking` as source-backed local shell evidence only.
+- The next smallest safe V1 gap is `V1-G2` typed bridge acceptance proof, still requiring separate approval and still docs/tests/fixtures-only unless explicitly expanded.
 - Candidate future files are named but not created.
 - Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 

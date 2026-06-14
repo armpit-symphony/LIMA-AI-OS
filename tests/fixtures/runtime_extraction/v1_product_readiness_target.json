@@ -3,6 +3,7 @@
   "document": "docs/V1_PRODUCT_READINESS_TARGET.md",
   "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
   "v1_g1_request_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md",
+  "v1_g1_intake_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md",
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
   "phase_48_2_implementation_approved": false,
@@ -78,19 +79,26 @@
     "guardian_decision_runtime_added": false,
     "approval_enforcement_added": false
   },
+  "accepted_shell_evidence": {
+    "sparkbot_shell_thinking_proof_accepted": true,
+    "sparkbot_shell_thinking_proof_commit": "36d697bf875a44dbafa41fc841ded86437917627",
+    "sparkbot_shell_thinking_proof_scope": "source_backed_local_shell_evidence_only",
+    "sparkbot_shell_live_streaming_parity_proven": false
+  },
   "remaining_blockers": [
     "real_guardian_decision_runtime_path_not_implemented",
     "live_approval_enforcement_not_implemented",
     "provider_model_routing_not_implemented",
     "typed_bridge_runtime_behavior_not_implemented",
     "shell_runtime_wiring_not_implemented",
-    "sparkbot_shell_real_thinking_state_proof_missing",
+    "live_model_streaming_parity_not_proven",
     "haptics_proof_and_implementation_not_added_here",
     "audit_persistence_not_implemented",
     "destructive_edit_delete_approval_enforcement_not_implemented",
     "production_behavior_not_approved"
   ],
   "recommended_next_step": "phase_48_3_or_next_docs_tests_fixtures_lane_should_reassess_first_concrete_implementation_target_against_v1_product_readiness",
-  "recommended_first_gap_to_close": "sparkbot_shell_source_backed_thinking_progress_state",
-  "recommended_first_gap_request_created": true
+  "recommended_first_gap_closed": "sparkbot_shell_source_backed_thinking_progress_state",
+  "recommended_next_gap_to_close": "typed_bridge_acceptance_proof",
+  "recommended_next_gap_id": "V1-G2"
 }

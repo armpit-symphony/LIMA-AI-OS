@@ -78,6 +78,8 @@ Current status remains not V1 product-ready.
 
 The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementation design review. It does not implement runtime behavior and does not approve a runtime implementation lane.
 
+`V1-G1` source-backed Sparkbot_shell `thinking` evidence has now been accepted in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` from Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`. This proves local shell-owned `received -> thinking -> completed` behavior only. It does not prove live model streaming parity, provider/model response pacing, LIMA runtime integration, approval enforcement, GuardianDecision authority, haptics, persistence, or production behavior.
+
 ## Remaining Blockers
 
 - real `GuardianDecision` runtime path is not implemented
@@ -85,7 +87,7 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 - provider/model routing is not implemented
 - typed bridge runtime behavior is not implemented
 - shell runtime wiring is not implemented
-- Sparkbot_shell real `thinking` proof remains missing as live/source-backed behavior
+- live model streaming parity remains unproven
 - haptics proof and implementation remain shell-owned and not implemented here
 - audit persistence is not implemented
 - destructive edit/delete approval enforcement is not implemented
@@ -95,7 +97,9 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether the Phase 48.2 design still points at the right first implementation target after this V1 product direction.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order and recommends closing Sparkbot_shell `thinking` / progress-state proof first. The request packet for that gap is `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md`.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is now accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
+
+The next smallest safe step is `V1-G2`: typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane.
 
 The likely next implementation design question is:
 

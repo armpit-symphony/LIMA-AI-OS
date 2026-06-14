@@ -26,7 +26,9 @@ That target clarifies:
 
 This does not approve implementation in Phase 48.2. It gives the next design/readiness lane a clearer V1 target.
 
-`docs/V1_READINESS_GAP_MATRIX.md` turns that target into a gap sequence and recommends closing Sparkbot_shell `thinking` / progress-state proof before moving toward runtime implementation.
+`docs/V1_READINESS_GAP_MATRIX.md` turns that target into a gap sequence.
+
+`docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` accepts Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627` as source-backed local `thinking` / progress-state evidence only. It does not prove live streaming parity or runtime integration.
 
 ## Reviewed Phase
 

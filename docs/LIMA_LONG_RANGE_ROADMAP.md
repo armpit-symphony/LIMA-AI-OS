@@ -398,6 +398,8 @@ V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, `Sparkbot`, and `Ar
 
 The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, and shell haptic intent support. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` requests Sparkbot_shell source-backed `thinking` / progress-state proof before runtime implementation.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` accepts Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627` as source-backed local `thinking` / progress-state evidence only.
+
+The next smallest safe V1 gap is `V1-G2`: typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
