@@ -9,6 +9,7 @@ from .candidate_status import (
 from .candidate_preview import CandidatePreview, preview_candidate
 from .intake_candidate import IntakeCandidateError, build_intake_candidate
 from .runtime_state import RuntimeStateSnapshot, inspect_runtime_state
+from .v1_runtime_request import V1RuntimeRequestError, build_v1_runtime_request
 
 __all__ = [
     "ALLOWED_CANDIDATE_STATUSES",
@@ -16,7 +17,9 @@ __all__ = [
     "CandidateStatusError",
     "IntakeCandidateError",
     "RuntimeStateSnapshot",
+    "V1RuntimeRequestError",
     "build_intake_candidate",
+    "build_v1_runtime_request",
     "inspect_runtime_state",
     "normalize_candidate_status",
     "preview_candidate",

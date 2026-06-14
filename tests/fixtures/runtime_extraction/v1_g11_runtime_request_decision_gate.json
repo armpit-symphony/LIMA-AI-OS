@@ -1,0 +1,80 @@
+{
+  "gate_id": "v1_g11_runtime_request_decision_gate",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-request-decision-gate",
+  "operator_decision": "Approve-V1-G11",
+  "operator": "Phil Lima",
+  "approval_date": "2026-06-14",
+  "approved_scope": "typed_request_guardian_decision_preflight_runtime_slice",
+  "approved_file_map": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/kernel/__init__.py",
+    "lima/guardian/v1_decision_gate.py",
+    "lima/guardian/__init__.py",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate.json",
+    "tests/test_v1_g11_runtime_request_decision_gate.py"
+  ],
+  "runtime_symbols": [
+    "V1RuntimeRequestError",
+    "build_v1_runtime_request",
+    "V1GuardianDecisionGateError",
+    "review_v1_runtime_request"
+  ],
+  "safe_categories": [
+    "informational",
+    "planning",
+    "drafting"
+  ],
+  "operator_approval_required_categories": [
+    "admin",
+    "file_mutation",
+    "shell"
+  ],
+  "future_policy_blocked_categories": [
+    "browser_network",
+    "model_call",
+    "robotics_physical_world",
+    "tool_call"
+  ],
+  "negative_cases": [
+    "raw_natural_language_payload",
+    "caller_supplied_approval",
+    "caller_supplied_guardian_decision",
+    "stale_candidate",
+    "replayed_candidate",
+    "missing_provenance",
+    "unknown_action_category",
+    "provider_model_request",
+    "browser_network_request",
+    "robotics_physical_world_request"
+  ],
+  "output_boundaries": {
+    "non_executing": true,
+    "non_persistent": true,
+    "approval_token_issued": false,
+    "provider_model_routed": false,
+    "shell_wired": false,
+    "raw_secret_emitted": false,
+    "raw_prompt_emitted": false,
+    "raw_file_contents_emitted": false,
+    "approval_pin_emitted": false
+  },
+  "forbidden_behavior": {
+    "consumer_integration_added": false,
+    "provider_model_routing_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_file_network_action_behavior_added": false,
+    "external_sends_added": false,
+    "device_robotics_physical_world_behavior_added": false,
+    "haptic_device_behavior_added": false,
+    "durable_persistence_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_readiness_claimed": false,
+    "production_readiness_claimed": false
+  },
+  "current_readiness_verdict": "candidate_only_v1_g11_runtime_preflight_complete_release_boundary_not_passed"
+}
