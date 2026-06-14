@@ -39,10 +39,22 @@ def test_v1_g11_operator_decision_packet_exists_without_recording_approval() -> 
         fixture["decision_packet_status"]
         == "ready_for_operator_decision_no_decision_recorded"
     )
+    assert fixture["decision_record_slot_added"] is True
     assert fixture["operator_approval_recorded"] is False
     assert fixture["runtime_implementation_approved"] is False
     assert fixture["v1_product_ready"] is False
     assert fixture["production_ready"] is False
+
+
+def test_v1_g11_operator_decision_packet_has_empty_decision_record_slot() -> None:
+    fixture = _load_fixture()
+    decision_record = fixture["decision_record"]
+    assert decision_record["recorded_choice"] is None
+    assert decision_record["recorded_approval_wording"] is None
+    assert decision_record["recorded_revision_request"] is None
+    assert decision_record["recorded_pause_reason"] is None
+    assert decision_record["approved_implementation_branch"] is None
+    assert decision_record["runtime_implementation_approved"] is False
 
 
 def test_v1_g11_operator_decision_packet_keeps_all_runtime_boundaries_false() -> None:
@@ -134,6 +146,13 @@ def test_v1_g11_operator_decision_packet_doc_matches_fixture() -> None:
     text = DOC_PATH.read_text(encoding="utf-8")
     assert "Decision packet status: `ready_for_operator_decision_no_decision_recorded`" in text
     assert "This packet exists to record the operator decision" in text
+    assert "## Decision Record" in text
+    assert "No operator choice is recorded yet." in text
+    assert "Recorded choice: `none`" in text
+    assert "Recorded approval wording: `none`" in text
+    assert "Recorded revision request: `none`" in text
+    assert "Recorded pause reason: `none`" in text
+    assert "Any other text is commentary, not a decision." in text
     assert "does not approve runtime implementation" in text
     assert "General V1 product direction" in text
     assert "do not count as implementation approval" in text
@@ -144,3 +163,4 @@ def test_v1_g11_operator_decision_packet_doc_matches_fixture() -> None:
     assert fixture["if_approved_next_branch"] in text
     assert fixture["if_approved_scope"] in text
     assert "Record one valid operator choice" in text
+    assert fixture["recommended_next_step"] == "record_one_valid_operator_choice_in_decision_record"

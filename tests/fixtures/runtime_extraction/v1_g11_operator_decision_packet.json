@@ -6,6 +6,15 @@
   "source_commit_before_packet": "d8e0d3bfce77535a0e9cb20e465a015b896e2db1",
   "document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
   "decision_packet_status": "ready_for_operator_decision_no_decision_recorded",
+  "decision_record_slot_added": true,
+  "decision_record": {
+    "recorded_choice": null,
+    "recorded_approval_wording": null,
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": null,
+    "runtime_implementation_approved": false
+  },
   "operator_approval_recorded": false,
   "runtime_implementation_approved": false,
   "runtime_behavior_added": false,
@@ -71,5 +80,5 @@
     "runtime_exports_cleaned_up_or_frozen",
     "validation_fails"
   ],
-  "recommended_next_step": "record_one_valid_operator_choice"
+  "recommended_next_step": "record_one_valid_operator_choice_in_decision_record"
 }

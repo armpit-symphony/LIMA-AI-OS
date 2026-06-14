@@ -29,7 +29,22 @@ General V1 product direction, the active product goal, prior static gates, this 
 - Operator approval recorded: no.
 - Runtime implementation approved: no.
 - Approved next implementation branch: none yet.
-- Current next action: operator decision on the exact V1-G11 approval question.
+- Current next action: record one valid operator choice in this packet.
+
+## Decision Record
+
+No operator choice is recorded yet.
+
+Record exactly one of the following when the operator decides:
+
+- Recorded choice: `none`
+- Recorded approval wording: `none`
+- Recorded revision request: `none`
+- Recorded pause reason: `none`
+- Approved implementation branch: `none`
+- Runtime implementation approved: no
+
+Only `Approve-V1-G11`, `Revise-V1-G11`, or `Pause` is valid here. Any other text is commentary, not a decision.
 
 ## Valid Operator Choices
 
