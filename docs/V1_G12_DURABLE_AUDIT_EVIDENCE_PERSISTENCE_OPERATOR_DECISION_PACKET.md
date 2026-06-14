@@ -4,7 +4,7 @@ Date: 2026-06-14
 Branch: `v1-g12-durable-audit-evidence-persistence-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `Approve-V1-G12_recorded`
 
 This packet records the valid operator choices for the exact V1-G12 durable audit/evidence persistence approval request. It does not change runtime behavior, modify `lima/`, approve persistence implementation, or approve product readiness by itself.
 
@@ -25,20 +25,28 @@ General V1 product direction, prior static gates, the V1-G11 audit, this packet,
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Runtime implementation approved: no.
-- Approved next implementation branch: none.
-- Current next action: operator decision, request revision, or pause.
+- Operator approval recorded: yes.
+- Runtime implementation approved: yes.
+- Approved next implementation branch: `v1-g12-durable-audit-evidence-persistence`.
+- Current next action: implement the approved V1-G12 runtime slice and stop before any next lane.
 
 ## Decision Record
 
-One operator choice must be recorded before implementation.
+One operator choice has been recorded for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G12`
+- Recorded approval wording: `I explicitly approve V1-G12 implementation of the durable audit/evidence persistence runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
+- Approved implementation branch: `v1-g12-durable-audit-evidence-persistence`
+- Runtime implementation approved: yes
+
+## Historical Pre-Approval State
+
+Before the operator recorded `Approve-V1-G12`, this packet was in the following request-branch state:
+
+- Decision packet status: `awaiting_operator_decision`
+- Recorded choice: `none`
 - Runtime implementation approved: no
 
 Only `Approve-V1-G12`, `Revise-V1-G12`, or `Pause` is valid here. Any other text is commentary, not a decision.
@@ -151,10 +159,10 @@ Implementation must stay inside the already named V1-G12 scope:
 
 Any different file requires a new gate update before implementation.
 
-## Boundaries While Awaiting Decision
+## Boundaries Before Approved Implementation
 
-- Runtime implementation approved: no.
-- Operator approval recorded: no.
+- Runtime implementation approved: yes, only for the V1-G12 file map and behavior scope.
+- Operator approval recorded: yes.
 - Runtime behavior added: no.
 - Durable persistence added: no.
 - Storage adapter added: no.
@@ -195,6 +203,6 @@ Stop before implementation or revert if any of the following appear without a ne
 
 ## Recommended Next Step
 
-Record one valid operator choice.
+Implement the approved V1-G12 durable audit/evidence persistence slice on branch `v1-g12-durable-audit-evidence-persistence`.
 
-Keep LIMA at `CANDIDATE_ONLY` and stop before implementation until `Approve-V1-G12` is explicitly recorded.
+Keep LIMA at `CANDIDATE_ONLY` and stop after implementation closeout.
