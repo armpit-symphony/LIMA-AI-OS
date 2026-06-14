@@ -6,7 +6,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 ## Current Anchor
 
-- Current branch: `v1-g8a-audit-evidence-persistence-contract-threat-model`
+- Current branch: `v1-g9-product-release-boundary-audit`
 - Source target: `docs/V1_PRODUCT_READINESS_TARGET.md`
 - Current product status: not V1-ready
 - Current implementation approval: not granted
@@ -24,7 +24,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | `V1-G6` | Haptic intent metadata | `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` and static fixtures/tests define shell state to haptic intent mapping, metadata fields, forbidden device fields, shell ownership, and fail-closed forged device claims | LIMA may emit non-device-specific haptic intent metadata while shells own rendering/device feedback | Complete as static docs/tests/fixtures-only contract; device behavior remains out of scope | No device implementation in LIMA |
 | `V1-G7` | First-shell integration proof | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have LIMA intake audits and consolidated closeout in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` each prove they can consume or align with LIMA contract outputs safely as static evidence | Complete as static first-shell integration evidence; runtime parity remains out of scope | No for static closeout; runtime wiring requires later approval |
 | `V1-G8` | Audit/evidence persistence | `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md` define static record families, lineage fields, query needs, redaction/retention envelopes, threat mitigations, and negative cases; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Complete as static contract/threat model; runtime persistence remains out of scope | No for static contract; later runtime persistence approval required |
-| `V1-G9` | Product release boundary | Current package remains candidate/proof-stage | V1 release gates, compatibility freeze, shell compatibility evidence, and rollback proof all pass | V1 release readiness audit after blockers close | No implementation by audit alone |
+| `V1-G9` | Product release boundary | `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` and `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md` record that the release boundary audit is complete but not passed | V1 release gates, compatibility freeze, shell compatibility evidence, rollback proof, and runtime blockers all pass | Complete as static release-boundary audit; release boundary remains blocked | No implementation by audit alone |
+| `V1-G10` | Minimum runtime implementation gate | Current package remains static evidence only | Exact file-touch map, rollback plan, stop conditions, and first runtime-slice scope exist before any `lima/` runtime change | Create V1-G10 gate before runtime implementation | No for gate; later runtime approval required |
 
 ## Recommended Order
 
@@ -36,7 +37,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 6. Treat `V1-G6` as complete for static haptic intent metadata contract and shell fixture evidence, while rejecting device haptic behavior claims.
 7. Treat `V1-G7` as complete for static first-shell integration evidence, while rejecting runtime parity claims.
 8. Treat `V1-G8` as complete for static audit/evidence persistence contract and threat-model evidence, while rejecting durable runtime persistence claims.
-9. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
+9. Treat `V1-G9` as complete for static product release-boundary audit evidence, while rejecting V1 readiness, final freeze, and runtime export cleanup claims.
+10. Create `V1-G10` before any runtime implementation.
 
 ## Stop Conditions
 
@@ -70,4 +72,6 @@ LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
 `V1-G8` is complete as static docs/tests/fixtures-only audit/evidence persistence contract and threat-model evidence. Durable runtime audit persistence remains unimplemented and unapproved.
 
-The next smallest safe step is `V1-G9`: create the V1 product release boundary audit, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence implementation, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.
+`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit evidence. The release boundary is not passed. Runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
+
+The next smallest safe step is `V1-G10`: create a minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change, still without shell wiring, provider/model calls, approval enforcement, persistence implementation, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.

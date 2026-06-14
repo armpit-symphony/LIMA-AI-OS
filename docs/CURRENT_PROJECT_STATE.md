@@ -1057,3 +1057,33 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in V1-G8A lane: not allowed
 - provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence implementation, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G9 product release boundary audit, still docs/tests/fixtures-only
+
+## V1-G9 - Product Release Boundary Audit
+
+- branch: `v1-g9-product-release-boundary-audit`
+- status: complete as docs/tests/fixtures-only static release-boundary audit
+- base branch: `v1-g8a-audit-evidence-persistence-contract-threat-model`
+- base commit: `6009038c28aaae31171c3004424ab7124426437a`
+- audit document: `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md`
+- closeout document: `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md`
+- V1-G9 audit status: release-boundary audit complete
+- V1 release boundary status: not passed
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- typed bridge runtime behavior: not added
+- real runtime `GuardianDecision`: not added
+- live approval enforcement: not added
+- provider/model runtime routing: not added
+- durable audit/evidence persistence: not added
+- shell runtime wiring: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- `lima/` changes in V1-G9 lane: not allowed
+- `tests/support` changes in V1-G9 lane: not allowed
+- shell repo modifications in V1-G9 lane: not allowed
+- provider/model calls, connector/file/browser/network/device/robotics behavior, haptic device behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G10 minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change

@@ -76,7 +76,7 @@ For V1, LIMA must prove compatibility with the first shells before product readi
 
 Current status remains not V1 product-ready.
 
-The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementation design review. It does not implement runtime behavior and does not approve a runtime implementation lane.
+The current V1 lane remains docs/tests/fixtures-only. It does not implement runtime behavior and does not approve a runtime implementation lane.
 
 `V1-G1` source-backed Sparkbot_shell `thinking` evidence has now been accepted in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` from Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`. This proves local shell-owned `received -> thinking -> completed` behavior only. It does not prove live model streaming parity, provider/model response pacing, LIMA runtime integration, approval enforcement, GuardianDecision authority, haptics, persistence, or production behavior.
 
@@ -96,8 +96,11 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G8` static audit/evidence persistence contract and threat model are now recorded in `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md`. They define static record families, query rules, redaction/retention envelopes, destructive edit/delete approval evidence requirements, provider/model route evidence requirements, export/delete review refs, and threat mitigations only. They do not implement durable runtime persistence.
 
+`V1-G9` product release boundary audit is now recorded in `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md`. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
+
 ## Remaining Blockers
 
+- runtime implementation scope gate is missing
 - real `GuardianDecision` runtime path is not implemented
 - live approval enforcement is not implemented
 - provider/model routing is not implemented
@@ -108,13 +111,16 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 - haptic device rendering proof remains shell-owned and not implemented here
 - audit persistence request gate exists, but durable audit persistence is not implemented
 - destructive edit/delete approval enforcement is not implemented
+- product release boundary audit is complete, but release boundary is not passed
+- runtime export cleanup remains unapproved
+- final API freeze remains unapproved
 - production behavior is not approved
 
 ## Recommended Next Step
 
-Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether the Phase 48.2 design still points at the right first implementation target after this V1 product direction.
+Use `V1-G10` to create a minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is now accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
 
 `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mapping, and fail-closed case coverage only. It does not prove runtime bridge behavior.
 
@@ -128,12 +134,10 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. It accepts `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` as static first-shell evidence only. It does not approve shell runtime wiring or live parity.
 
-The next smallest safe step is `V1-G8`: create an audit/evidence persistence design/request gate.
-
 `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md` records the V1-G8 audit/evidence persistence request gate. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md` records the audit criteria. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md` records the request closeout. These do not complete durable persistence.
 
-The next smallest safe step is `V1-G9`: create the V1 product release boundary audit.
+`docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. It confirms that static evidence is not enough for V1 readiness, runtime export cleanup, final freeze, or production claims.
 
-The likely next implementation design question is:
+The next implementation design question is:
 
-Which V1 release boundary conditions remain unmet, and what implementation gates must exist before final API freeze or production readiness can be claimed?
+What is the smallest explicitly gated runtime implementation slice that can move LIMA from static V1 evidence toward usable V1 behavior without bypassing Guardian, approval, audit/evidence, shell, or rollback boundaries?

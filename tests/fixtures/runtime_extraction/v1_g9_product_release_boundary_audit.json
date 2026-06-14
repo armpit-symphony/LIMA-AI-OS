@@ -1,0 +1,158 @@
+{
+  "gap_id": "V1-G9",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g9-product-release-boundary-audit",
+  "source_branch": "v1-g8a-audit-evidence-persistence-contract-threat-model",
+  "base_commit": "6009038c28aaae31171c3004424ab7124426437a",
+  "docs_tests_fixtures_only": true,
+  "release_boundary_audit_completed": true,
+  "release_boundary_passed": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_code_copied": false,
+  "sparkbot_import_added": false,
+  "runtime_exports_changed": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "documents": {
+    "audit": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md",
+    "closeout": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md"
+  },
+  "accepted_static_evidence": [
+    "v1_target_explicit",
+    "first_shell_target_explicit",
+    "sparkbot_shell_thinking_source_backed_local_evidence",
+    "typed_bridge_static_proof",
+    "destructive_edit_delete_operator_approval_static_contract",
+    "guardian_decision_live_approval_static_design_gate",
+    "provider_model_routing_static_contract",
+    "haptic_intent_metadata_static_contract_shell_owned",
+    "first_shell_integration_static_evidence",
+    "audit_evidence_persistence_static_contract_and_threat_model"
+  ],
+  "first_shell_consumers": [
+    "Sparkbot_shell",
+    "Sparkbot",
+    "Arc-Bot-shell"
+  ],
+  "release_gates": [
+    {
+      "id": "api_status_release_candidate",
+      "current": "CANDIDATE_ONLY",
+      "required": "explicit_release_candidate_or_v1_approval_after_runtime_gates",
+      "passed": false
+    },
+    {
+      "id": "runtime_typed_bridge",
+      "current": "static_proof_only",
+      "required": "runtime_bridge_behavior_with_fail_closed_typed_handoff",
+      "passed": false
+    },
+    {
+      "id": "guardian_decision_runtime_authority",
+      "current": "static_design_gate_only",
+      "required": "live_runtime_authority_before_consequential_action",
+      "passed": false
+    },
+    {
+      "id": "live_approval_enforcement",
+      "current": "static_contract_only",
+      "required": "operator_approval_enforcement_for_destructive_edit_delete_and_policy_required_actions",
+      "passed": false
+    },
+    {
+      "id": "provider_model_runtime_routing",
+      "current": "static_contract_only",
+      "required": "guardian_and_shell_scoped_runtime_model_routing",
+      "passed": false
+    },
+    {
+      "id": "durable_audit_evidence_persistence",
+      "current": "static_contract_and_threat_model_only",
+      "required": "durable_redacted_queryable_evidence_lineage",
+      "passed": false
+    },
+    {
+      "id": "first_shell_runtime_wiring",
+      "current": "static_proof_packets_only",
+      "required": "runtime_wiring_and_parity_evidence_for_first_shells",
+      "passed": false
+    },
+    {
+      "id": "haptic_shell_rendering_proof_if_claimed",
+      "current": "static_non_device_haptic_intent_metadata_only",
+      "required": "shell_owned_rendering_proof_if_haptic_ux_is_claimed",
+      "passed": false
+    },
+    {
+      "id": "runtime_export_cleanup",
+      "current": "unapproved",
+      "required": "review_after_runtime_boundaries_are_stable",
+      "passed": false
+    },
+    {
+      "id": "final_api_freeze",
+      "current": "unapproved",
+      "required": "freeze_after_release_gates_pass",
+      "passed": false
+    },
+    {
+      "id": "production_readiness",
+      "current": "unapproved",
+      "required": "production_behavior_verified_rollback_ready_and_explicitly_approved",
+      "passed": false
+    }
+  ],
+  "rejected_claims": [
+    "v1_product_readiness",
+    "production_readiness",
+    "runtime_parity",
+    "shell_runtime_wiring",
+    "runtime_typed_bridge_behavior",
+    "real_runtime_guardian_decision",
+    "live_approval_enforcement",
+    "provider_model_runtime_routing",
+    "durable_audit_evidence_persistence",
+    "haptic_device_behavior",
+    "runtime_export_cleanup_approval",
+    "final_api_freeze"
+  ],
+  "remaining_release_blockers": [
+    "runtime_implementation_scope_gate_missing",
+    "typed_bridge_runtime_behavior_not_implemented",
+    "real_lima_guardian_decision_runtime_authority_missing",
+    "live_approval_enforcement_missing",
+    "destructive_edit_delete_enforcement_not_implemented",
+    "provider_model_runtime_routing_missing",
+    "durable_lima_audit_evidence_persistence_not_implemented",
+    "live_query_read_authorization_not_implemented",
+    "real_redaction_enforcement_not_implemented",
+    "evidence_hash_verification_runtime_not_implemented",
+    "export_delete_review_workflow_not_implemented",
+    "shell_runtime_wiring_missing",
+    "first_shell_live_runtime_parity_missing",
+    "haptic_device_rendering_remains_shell_owned_and_unproven_by_lima",
+    "runtime_export_cleanup_unapproved",
+    "final_api_freeze_unapproved",
+    "production_behavior_unapproved"
+  ],
+  "required_future_release_gates": [
+    "runtime_implementation_scope_gate_with_exact_file_touch_map",
+    "runtime_typed_bridge_or_approved_equivalent",
+    "real_guardian_decision_runtime_path",
+    "live_approval_enforcement_for_destructive_edit_delete",
+    "provider_model_runtime_routing",
+    "durable_audit_evidence_persistence",
+    "first_shell_runtime_wiring_and_parity_proof",
+    "shell_owned_haptic_rendering_proof_if_claimed",
+    "runtime_export_cleanup_review_after_runtime_surface_stable",
+    "final_api_freeze_after_release_candidate_evidence"
+  ],
+  "recommended_next_gap_id": "V1-G10",
+  "recommended_next_step": "create_minimum_runtime_implementation_gate_and_exact_file_touch_rollback_plan",
+  "recommended_next_step_scope": "docs_tests_fixtures_only_gate_before_any_lima_runtime_change"
+}

@@ -414,6 +414,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md` record the V1-G8 audit/evidence persistence static contract and threat model. They define durable record family, lineage, query, redaction, shell evidence, and negative-case requirements without implementing persistence.
 
-The next smallest safe V1 action is `V1-G9`: create the V1 product release boundary audit before any runtime export cleanup, final freeze, or runtime wiring proposal.
+`docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
+
+The next smallest safe V1 action is `V1-G10`: create a minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change. That gate should prioritize typed bridge behavior, real `GuardianDecision`, live approval enforcement for destructive edit/delete, and audit/evidence linkage.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

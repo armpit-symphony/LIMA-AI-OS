@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g8a-audit-evidence-persistence-contract-threat-model",
+  "current_branch": "v1-g9-product-release-boundary-audit",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -117,9 +117,22 @@
     {
       "id": "V1-G9",
       "name": "product_release_boundary",
-      "status": "blocked_until_prior_gaps_close",
-      "recommended_lane": "v1_release_readiness_audit_after_blockers_close",
-      "runtime_approval_needed": false
+      "status": "complete_static_release_boundary_audit_boundary_not_passed",
+      "audit_document": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md",
+      "closeout_document": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md",
+      "recommended_lane": "complete_static_release_boundary_audit_no_release_claim",
+      "runtime_approval_needed": false,
+      "release_boundary_passed": false,
+      "runtime_export_cleanup_approved": false,
+      "final_freeze_approved": false
+    },
+    {
+      "id": "V1-G10",
+      "name": "minimum_runtime_implementation_gate",
+      "status": "pending_explicit_implementation_gate",
+      "recommended_lane": "exact_file_touch_map_rollback_plan_and_runtime_scope_gate",
+      "runtime_approval_needed": false,
+      "later_runtime_implementation_approval_needed": true
     }
   ],
   "recommended_order": [
@@ -131,11 +144,12 @@
     "V1-G6",
     "V1-G7",
     "V1-G8",
-    "V1-G9"
+    "V1-G9",
+    "V1-G10"
   ],
-  "next_smallest_safe_step": "V1-G9",
-  "next_smallest_safe_step_reason": "v1_g8_static_contract_complete_but_release_boundary_audit_is_missing",
-  "next_smallest_safe_step_status": "pending_v1_product_release_boundary_audit",
+  "next_smallest_safe_step": "V1-G10",
+  "next_smallest_safe_step_reason": "v1_g9_release_boundary_audit_complete_but_boundary_not_passed",
+  "next_smallest_safe_step_status": "pending_minimum_runtime_implementation_gate",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -167,8 +181,12 @@
     "audit_evidence_persistence_request_gate_added": true,
     "audit_evidence_persistence_static_contract_added": true,
     "audit_evidence_persistence_threat_model_added": true,
+    "product_release_boundary_audit_added": true,
+    "product_release_boundary_passed": false,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_freeze_approved": false,
     "v1_release_claimed": false
   }
 }

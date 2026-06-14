@@ -44,7 +44,7 @@ def test_v1_gap_matrix_names_first_shell_consumers() -> None:
 
 def test_v1_gap_matrix_covers_expected_gaps() -> None:
     gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
-    assert set(gaps) == {f"V1-G{index}" for index in range(10)}
+    assert set(gaps) == {f"V1-G{index}" for index in range(11)}
     assert gaps["V1-G1"]["name"] == "sparkbot_shell_thinking_progress_proof"
     assert gaps["V1-G1"]["status"] == "accepted_source_backed_local_shell_evidence"
     assert (
@@ -124,6 +124,15 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
         == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md"
     )
     assert gaps["V1-G9"]["name"] == "product_release_boundary"
+    assert gaps["V1-G9"]["status"] == "complete_static_release_boundary_audit_boundary_not_passed"
+    assert gaps["V1-G9"]["audit_document"] == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md"
+    assert (
+        gaps["V1-G9"]["closeout_document"]
+        == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md"
+    )
+    assert gaps["V1-G9"]["release_boundary_passed"] is False
+    assert gaps["V1-G10"]["name"] == "minimum_runtime_implementation_gate"
+    assert gaps["V1-G10"]["status"] == "pending_explicit_implementation_gate"
 
 
 def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
@@ -144,19 +153,24 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G8"]["runtime_approval_needed"] is False
     assert gaps["V1-G8"]["runtime_persistence_approval_needed"] is True
     assert gaps["V1-G9"]["runtime_approval_needed"] is False
+    assert gaps["V1-G9"]["runtime_export_cleanup_approved"] is False
+    assert gaps["V1-G9"]["final_freeze_approved"] is False
+    assert gaps["V1-G10"]["runtime_approval_needed"] is False
+    assert gaps["V1-G10"]["later_runtime_implementation_approval_needed"] is True
 
 
-def test_v1_gap_matrix_recommends_haptics_after_provider_model_contract() -> None:
+def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G9"
+    assert fixture["recommended_order"][-1] == "V1-G10"
+    assert fixture["next_smallest_safe_step"] == "V1-G10"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_v1_product_release_boundary_audit"
+        == "pending_minimum_runtime_implementation_gate"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g8_static_contract_complete_but_release_boundary_audit_is_missing"
+        == "v1_g9_release_boundary_audit_complete_but_boundary_not_passed"
     )
 
 
@@ -187,6 +201,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["audit_evidence_persistence_request_gate_added"] is True
     assert boundary["audit_evidence_persistence_static_contract_added"] is True
     assert boundary["audit_evidence_persistence_threat_model_added"] is True
+    assert boundary["product_release_boundary_audit_added"] is True
+    assert boundary["product_release_boundary_passed"] is False
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -197,6 +213,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
         "approval_enforcement_added",
         "audit_persistence_added",
         "haptic_device_behavior_added",
+        "runtime_export_cleanup_approved",
+        "final_freeze_approved",
         "v1_release_claimed",
     ):
         assert boundary[key] is False
@@ -213,7 +231,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G6` is complete as static docs/tests/fixtures-only haptic intent metadata" in text
     assert "`V1-G7` is complete as static docs/tests/fixtures-only first-shell integration evidence." in text
     assert "`V1-G8` is complete as static docs/tests/fixtures-only audit/evidence persistence contract" in text
-    assert "The next smallest safe step is `V1-G9`" in text
+    assert "`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit" in text
+    assert "The next smallest safe step is `V1-G10`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

@@ -101,6 +101,8 @@ def test_v1_target_document_and_fixture_exist() -> None:
         fixture["v1_g8_closeout_document"]
         == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md"
     )
+    assert fixture["v1_g9_audit_document"] == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md"
+    assert fixture["v1_g9_closeout_document"] == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -189,6 +191,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["audit_evidence_persistence_request_gate_added"] is True
     assert current["audit_evidence_persistence_static_contract_added"] is True
     assert current["audit_evidence_persistence_threat_model_added"] is True
+    assert current["product_release_boundary_audit_added"] is True
+    assert current["product_release_boundary_passed"] is False
     assert current["durable_audit_persistence_implemented"] is False
     accepted = fixture["accepted_shell_evidence"]
     assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
@@ -240,7 +244,13 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         "static_docs_tests_fixtures_only_no_runtime_persistence"
     )
     assert static_evidence["v1_g8_durable_audit_persistence_proven"] is False
+    assert static_evidence["v1_g9_product_release_boundary_audit_completed"] is True
+    assert static_evidence["v1_g9_product_release_boundary_scope"] == (
+        "static_docs_tests_fixtures_only_no_release_approval"
+    )
+    assert static_evidence["v1_g9_product_release_boundary_passed"] is False
     blockers = set(fixture["remaining_blockers"])
+    assert "runtime_implementation_scope_gate_missing" in blockers
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
     assert "provider_model_routing_not_implemented" in blockers
@@ -250,6 +260,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert "haptic_device_rendering_proof_remains_shell_owned" in blockers
     assert "audit_persistence_request_gate_exists_but_durable_persistence_not_implemented" in blockers
     assert "destructive_edit_delete_approval_enforcement_not_implemented" in blockers
+    assert "product_release_boundary_audit_complete_but_not_passed" in blockers
+    assert "runtime_export_cleanup_unapproved" in blockers
+    assert "final_api_freeze_unapproved" in blockers
     assert "production_behavior_not_approved" in blockers
     assert (
         fixture["recommended_first_gap_closed"]
@@ -257,7 +270,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "create_v1_g9_product_release_boundary_audit"
+        == "create_v1_g10_minimum_runtime_implementation_gate"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -292,5 +305,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_eighth_gap_closed"]
         == "audit_evidence_persistence_static_contract_and_threat_model"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G9"
-    assert fixture["recommended_next_gap_to_close"] == "product_release_boundary_audit"
+    assert (
+        fixture["recommended_ninth_gap_closed"]
+        == "product_release_boundary_audit_complete_boundary_not_passed"
+    )
+    assert fixture["recommended_next_gap_id"] == "V1-G10"
+    assert fixture["recommended_next_gap_to_close"] == "minimum_runtime_implementation_gate"
