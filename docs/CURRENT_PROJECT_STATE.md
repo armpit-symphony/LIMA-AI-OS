@@ -1196,3 +1196,22 @@ Do not merge or tag from a routine implementation thread.
 - `lima/` runtime files changed in request lane: no
 - provider/model routing, approval enforcement, HumanInput bridge activation, connector behavior, shell wiring, arbitrary file/browser/network/device/robotics/physical-world behavior, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, and production readiness: not added or approved
 - recommended next step: operator decision on `Approve-V1-G12`, `Revise-V1-G12`, or `Pause`
+
+## V1-G12 - Durable Audit/Evidence Persistence Implementation And Audit
+
+- implementation branch: `v1-g12-durable-audit-evidence-persistence`
+- implementation commit: `457b654a50e100ef7c000de25bb6d2c7493b9fc6`
+- audit branch: `audit-v1-g12-durable-audit-evidence-persistence`
+- implementation document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE.md`
+- implementation closeout document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md`
+- independent audit document: `docs/audits/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_AUDIT.md`
+- V1-G12 implementation and audit status: complete as the approved narrow local durable audit/evidence persistence slice
+- audit status: `PASS WITH WARNINGS`
+- warning: operator decision packet was updated by explicit operator instruction outside the implementation file list, with no runtime behavior added by that update
+- V1-G12 runtime behavior: redacted audit/evidence event and lineage builders plus explicit local append-only JSONL audit store only
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- provider/model routing, provider/model calls, tool execution, shell runtime wiring, HumanInput bridge activation, connector behavior, browser/file/network/device/robotics/physical-world behavior, external database writes, migrations, queues, workers, daemons, subprocesses, threads, approval-token issuance, runtime export cleanup, and final API freeze: not added or approved
+- remaining blockers: V1 readiness docs need a post-V1-G12 refresh, release boundary still not passed, live approval enforcement is not implemented, provider/model routing is not implemented, shell/runtime integration is not implemented, runtime export cleanup is not approved, and final API freeze is not approved
+- recommended next lane: separate docs/tests/fixtures-only V1-G13 readiness-gap refresh and next-lane decision gate before any next runtime implementation
