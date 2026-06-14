@@ -1,0 +1,92 @@
+{
+  "target_version": "1.0",
+  "document": "docs/V1_PRODUCT_READINESS_TARGET.md",
+  "product_direction_only": true,
+  "runtime_implementation_approved_by_this_fixture": false,
+  "phase_48_2_implementation_approved": false,
+  "first_shell_consumers": [
+    "Sparkbot_shell",
+    "Sparkbot",
+    "Arc-Bot-shell"
+  ],
+  "shell_behavior_reference": {
+    "reference_repo": "Sparkbot",
+    "reference_role": "r_and_d_shell_behavior_source",
+    "local_checkout_present": true,
+    "git_revision_recorded": false,
+    "git_revision_unavailable_reason": "git_safe_directory_ownership_check_blocked_revision_read",
+    "read_only_reference_docs_checked": [
+      "Sparkbot/AGENTS.md",
+      "Sparkbot/docs/capabilities.md",
+      "Sparkbot/docs/PUBLIC_RELEASE_CAPABILITY_MODEL.md"
+    ],
+    "copy_sparkbot_code": false,
+    "import_sparkbot_runtime": false,
+    "wire_sparkbot_routes": false
+  },
+  "accepted_future_v1_runtime_capabilities": [
+    "live_actual_approval_flow",
+    "real_guardian_decision_runtime_path",
+    "provider_model_routing",
+    "shell_haptic_intent_support",
+    "first_shell_response_state_parity"
+  ],
+  "operator_approval_policy": {
+    "delete_requires_operator_approval": true,
+    "edit_requires_operator_approval": true,
+    "overwrite_requires_operator_approval": true,
+    "destructive_admin_or_connector_action_requires_operator_approval": true,
+    "applies_to_lima_ai_os": true,
+    "applies_to_shells": true
+  },
+  "destructive_action_classes": [
+    "delete_file_or_record",
+    "delete_memory_message_task_event_or_customer_data",
+    "edit_or_mutate_file_or_record",
+    "edit_or_mutate_memory_message_task_event_or_customer_data",
+    "overwrite_existing_content",
+    "destructive_admin_or_connector_action"
+  ],
+  "haptics_ownership": {
+    "haptics_acceptable_as_v1_shell_experience_requirement": true,
+    "shells_own_haptic_rendering": true,
+    "lima_owns_haptic_device_implementation": false,
+    "lima_may_define_future_haptic_intent_metadata": true,
+    "haptic_implementation_added_here": false
+  },
+  "first_shell_readiness_requirements": [
+    "sparkbot_shell_source_backed_thinking_state",
+    "sparkbot_behavior_reference_alignment",
+    "arc_bot_shell_task_approval_audit_connector_boundary_proof",
+    "no_raw_natural_language_to_tool_execution_shortcut",
+    "guardian_constrained_provider_model_routing",
+    "operator_approval_for_destructive_edit_delete_operations",
+    "audit_evidence_lineage_for_consequential_actions"
+  ],
+  "current_status": {
+    "v1_product_ready": false,
+    "phase_48_2_docs_tests_fixtures_only": true,
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "shell_repos_changed": false,
+    "sparkbot_code_copied": false,
+    "sparkbot_import_added": false,
+    "provider_model_routing_added": false,
+    "guardian_decision_runtime_added": false,
+    "approval_enforcement_added": false
+  },
+  "remaining_blockers": [
+    "real_guardian_decision_runtime_path_not_implemented",
+    "live_approval_enforcement_not_implemented",
+    "provider_model_routing_not_implemented",
+    "typed_bridge_runtime_behavior_not_implemented",
+    "shell_runtime_wiring_not_implemented",
+    "sparkbot_shell_real_thinking_state_proof_missing",
+    "haptics_proof_and_implementation_not_added_here",
+    "audit_persistence_not_implemented",
+    "destructive_edit_delete_approval_enforcement_not_implemented",
+    "production_behavior_not_approved"
+  ],
+  "recommended_next_step": "phase_48_3_or_next_docs_tests_fixtures_lane_should_reassess_first_concrete_implementation_target_against_v1_product_readiness"
+}

@@ -7,6 +7,17 @@
   "runtime_test_harness_created": false,
   "actual_acceptance_tests_created": false,
   "executable_acceptance_tests_created": false,
+  "v1_product_target_ref": "docs/V1_PRODUCT_READINESS_TARGET.md",
+  "v1_product_direction_captured": true,
+  "v1_product_runtime_surfaces_accepted_for_future_scoped_implementation": [
+    "live_actual_approval_flow",
+    "real_guardian_decision_runtime_path",
+    "provider_model_routing",
+    "shell_haptic_intent_support",
+    "first_shell_response_state_parity"
+  ],
+  "v1_destructive_operator_approval_required": true,
+  "v1_haptics_shell_owned": true,
   "phase_48_1_anchor": "616a692c6dba59b2d43953582251747aeb39396f",
   "phase_48_1_tag": "phase-48.1-implementation-gate-readiness-review",
   "reviewed_phase": "48.1",

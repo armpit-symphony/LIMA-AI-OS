@@ -389,3 +389,13 @@ Sparkbot is the spec.
 Extract, do not rewrite.
 Robo-OS is a gated driver.
 LIMA Runtime is the kernel.
+
+## V1 Product Readiness Target
+
+The V1 target is now recorded in `docs/V1_PRODUCT_READINESS_TARGET.md`.
+
+V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`.
+
+The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, and shell haptic intent support. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
+
+This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

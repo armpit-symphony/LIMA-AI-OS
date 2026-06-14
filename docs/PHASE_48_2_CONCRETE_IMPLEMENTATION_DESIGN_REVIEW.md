@@ -12,6 +12,20 @@ This phase does not modify `lima/`.
 This phase does not modify `tests/support/`.
 This phase does not modify Sparkbot Shell.
 
+## V1 Product Direction Captured
+
+Phase 48.2 now also records the current V1 product-readiness target in `docs/V1_PRODUCT_READINESS_TARGET.md`.
+
+That target clarifies:
+
+- first shell consumers are `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`
+- Sparkbot remains the R&D shell behavior reference
+- live/actual approval, real `GuardianDecision`, provider/model routing, haptic intent support, and first-shell response-state parity are acceptable future V1 product capabilities
+- deleting or editing anything must require operator approval in LIMA-AI-OS and shells
+- haptic rendering remains shell-owned; LIMA may define future haptic intent metadata only
+
+This does not approve implementation in Phase 48.2. It gives the next design/readiness lane a clearer V1 target.
+
 ## Reviewed Phase
 
 - Phase 48.1 implementation gate readiness review.

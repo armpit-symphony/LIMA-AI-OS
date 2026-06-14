@@ -55,6 +55,22 @@ def test_phase_48_2_fixture_exists_and_is_design_only() -> None:
     assert fixture["reviewed_phase"] == "48.1"
 
 
+def test_phase_48_2_captures_v1_target_without_approving_implementation() -> None:
+    fixture = _load_json(PHASE_FIXTURE_PATH)
+    assert fixture["v1_product_target_ref"] == "docs/V1_PRODUCT_READINESS_TARGET.md"
+    assert fixture["v1_product_direction_captured"] is True
+    accepted = set(fixture["v1_product_runtime_surfaces_accepted_for_future_scoped_implementation"])
+    assert "live_actual_approval_flow" in accepted
+    assert "real_guardian_decision_runtime_path" in accepted
+    assert "provider_model_routing" in accepted
+    assert "shell_haptic_intent_support" in accepted
+    assert "first_shell_response_state_parity" in accepted
+    assert fixture["v1_destructive_operator_approval_required"] is True
+    assert fixture["v1_haptics_shell_owned"] is True
+    assert fixture["implementation_approved"] is False
+    assert fixture["runtime_implementation_recommended"] is False
+
+
 def test_phase_48_2_proposed_first_lane_is_design_only_and_unapproved() -> None:
     lane = _load_json(PHASE_FIXTURE_PATH)["proposed_first_implementation_lane"]
     assert lane["name"] == "first_concrete_typed_bridge_acceptance_test_design"
@@ -237,5 +253,7 @@ def test_phase_48_2_doc_declares_design_only_and_runtime_block() -> None:
     assert "This phase does not modify `lima/`." in text
     assert "This phase does not modify `tests/support/`." in text
     assert "This phase does not modify Sparkbot Shell." in text
+    assert "V1 product-readiness target" in text
+    assert "deleting or editing anything must require operator approval" in text
     assert "Phase 48.2 does not create them" in text
     assert "Runtime implementation remains blocked" in text
