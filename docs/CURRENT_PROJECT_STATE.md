@@ -1148,3 +1148,45 @@ Do not merge or tag from a routine implementation thread.
 - exact approval question: approved for V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
 - implementation work order status: ready to execute on `v1-g11-runtime-request-decision-gate`
 - recommended next step: create `v1-g11-runtime-request-decision-gate` and implement only the approved V1-G11 runtime request decision gate file map; stop before any consumer integration, provider/model routing, runtime export cleanup, final freeze, or product-readiness claim
+
+## V1-G11 - Runtime Request Decision Gate Implementation And Audit
+
+- implementation branch: `v1-g11-runtime-request-decision-gate`
+- implementation commit: `50425b41bb64cca8174c6fc21983cf44f8c41e6b`
+- audit branch: `audit-v1-g11-runtime-request-decision-gate`
+- audit commit: `5ff60a0536485cc3b87792c7ffb93c7e92a59520`
+- implementation status: complete as the approved narrow local runtime preflight slice
+- audit status: `PASS`
+- implementation document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md`
+- implementation closeout document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md`
+- independent audit document: `docs/audits/V1_G11_RUNTIME_REQUEST_DECISION_GATE_AUDIT.md`
+- V1-G11 runtime behavior: local deterministic typed request builder and GuardianDecision preflight gate only
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- consumer integration, provider/model routing, HumanInput bridge activation, connector behavior, browser/file/network action behavior, live discovery, scanning, pairing, credential use, device control, robot control, drone control, IoT control, and physical-world behavior: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- recommended next lane: separate V1-G12 operator approval request for durable audit/evidence persistence; do not start V1-G12 implementation without explicit approval
+
+## V1-G12 - Durable Audit/Evidence Persistence Approval Request
+
+- branch: `v1-g12-durable-audit-evidence-persistence-approval-request`
+- status: docs/tests/fixtures-only approval request prepared; runtime implementation not approved
+- source branch: `audit-v1-g11-runtime-request-decision-gate`
+- source commit: `5ff60a0536485cc3b87792c7ffb93c7e92a59520`
+- approval request document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_APPROVAL_REQUEST.md`
+- preflight audit document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_PREFLIGHT_AUDIT.md`
+- work order document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_WORK_ORDER.md`
+- operator decision packet document: `docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_OPERATOR_DECISION_PACKET.md`
+- V1-G12 request status: ready for operator decision, not approved
+- operator approval recorded: no
+- API status: `CANDIDATE_ONLY`
+- proposed future runtime file map if approved: `lima/spine/v1_audit_evidence.py`, `lima/spine/__init__.py`, `lima/persistence/v1_audit_store.py`, and `lima/persistence/__init__.py`
+- runtime behavior added in request lane: no
+- durable persistence added in request lane: no
+- storage adapter or query API added in request lane: no
+- external database writes added: no
+- `lima/` runtime files changed in request lane: no
+- provider/model routing, approval enforcement, HumanInput bridge activation, connector behavior, shell wiring, arbitrary file/browser/network/device/robotics/physical-world behavior, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, and production readiness: not added or approved
+- recommended next step: operator decision on `Approve-V1-G12`, `Revise-V1-G12`, or `Pause`
