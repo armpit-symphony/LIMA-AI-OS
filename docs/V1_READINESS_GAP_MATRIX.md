@@ -6,7 +6,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 ## Current Anchor
 
-- Current branch: `v1-g10-minimum-runtime-implementation-gate`
+- Current branch: `v1-g11-runtime-slice-approval-request`
 - Source target: `docs/V1_PRODUCT_READINESS_TARGET.md`
 - Current product status: not V1-ready
 - Current implementation approval: not granted
@@ -26,7 +26,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | `V1-G8` | Audit/evidence persistence | `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md` define static record families, lineage fields, query needs, redaction/retention envelopes, threat mitigations, and negative cases; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Complete as static contract/threat model; runtime persistence remains out of scope | No for static contract; later runtime persistence approval required |
 | `V1-G9` | Product release boundary | `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` and `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md` record that the release boundary audit is complete but not passed | V1 release gates, compatibility freeze, shell compatibility evidence, rollback proof, and runtime blockers all pass | Complete as static release-boundary audit; release boundary remains blocked | No implementation by audit alone |
 | `V1-G10` | Minimum runtime implementation gate | `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` and `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_CLOSEOUT.md` define exact file-touch map, rollback plan, acceptance-test obligations, stop conditions, and first runtime-slice scope | Exact file-touch map, rollback plan, stop conditions, and first runtime-slice scope exist before any `lima/` runtime change | Complete as static implementation gate; runtime remains unapproved | No for gate; later runtime approval required |
-| `V1-G11` | Typed request GuardianDecision preflight runtime slice | V1-G10 defines eligible files and acceptance-test obligations only; no runtime implementation is approved yet | Local deterministic runtime slice converts validated candidate metadata into typed request metadata, produces fail-closed GuardianDecision preflight metadata, and emits non-persistent audit/evidence linkage without execution | Implement V1-G11 only after explicit runtime approval and only inside the V1-G10 file-touch map | Yes |
+| `V1-G11` | Typed request GuardianDecision preflight runtime slice | `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` and `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` record the exact approval question and preflight audit; operator approval is not recorded | Local deterministic runtime slice converts validated candidate metadata into typed request metadata, produces fail-closed GuardianDecision preflight metadata, and emits non-persistent audit/evidence linkage without execution | Operator decision on the V1-G11 approval request; implement only after explicit approval and only inside the approved file-touch map | Yes |
 
 ## Recommended Order
 
@@ -40,7 +40,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 8. Treat `V1-G8` as complete for static audit/evidence persistence contract and threat-model evidence, while rejecting durable runtime persistence claims.
 9. Treat `V1-G9` as complete for static product release-boundary audit evidence, while rejecting V1 readiness, final freeze, and runtime export cleanup claims.
 10. Treat `V1-G10` as complete for static implementation-gate evidence, while rejecting runtime implementation approval claims.
-11. Use `V1-G11`, after explicit approval, as the first runtime slice limited to typed request and GuardianDecision preflight behavior.
+11. Treat the V1-G11 approval request as ready for operator decision, while rejecting runtime implementation approval until explicitly recorded.
 
 ## Stop Conditions
 
@@ -78,4 +78,6 @@ LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
 `V1-G10` is complete as static docs/tests/fixtures-only minimum runtime implementation gate evidence. It defines the V1-G11 eligible files, rollback plan, acceptance-test obligations, and stop conditions. Runtime implementation remains unapproved.
 
-The next smallest safe step is `V1-G11`, after explicit approval: implement the typed request GuardianDecision preflight runtime slice exactly inside the V1-G10 file-touch map, still without shell wiring, provider/model calls, durable persistence, haptic device behavior, robotics, runtime export cleanup, final freeze, or physical-world behavior.
+The V1-G11 approval request is ready for operator decision. It records the exact implementation scope for the typed request GuardianDecision preflight runtime slice, but approval is not recorded and runtime implementation remains unapproved.
+
+The next smallest safe step is operator decision on the exact V1-G11 approval question. If approved, implement only the typed request GuardianDecision preflight runtime slice exactly inside the approved file-touch map, still without shell wiring, provider/model calls, durable persistence, haptic device behavior, robotics, runtime export cleanup, final freeze, or physical-world behavior.

@@ -1113,3 +1113,28 @@ Do not merge or tag from a routine implementation thread.
 - final API freeze: not approved
 - future V1-G11 runtime file-touch map: limited to `lima/kernel/v1_runtime_request.py`, `lima/kernel/__init__.py`, `lima/guardian/v1_decision_gate.py`, and `lima/guardian/__init__.py` only if a later explicit approval authorizes implementation
 - recommended next lane: V1-G11 typed request GuardianDecision preflight runtime slice after explicit runtime approval
+
+## V1-G11 - Runtime Request Decision Gate Approval Request
+
+- branch: `v1-g11-runtime-slice-approval-request`
+- status: docs/tests/fixtures-only approval request packet complete; runtime implementation still not approved
+- base branch: `v1-g10-minimum-runtime-implementation-gate`
+- base commit: `39b866a3be3756d10287e3cefbd674ace7d2d469`
+- approval request document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`
+- preflight audit document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md`
+- V1-G11 request status: ready for operator decision
+- V1-G11 runtime approval status: not granted
+- operator approval recorded: no
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- runtime behavior: not added
+- `lima/` changes in V1-G11 approval-request lane: not allowed and not made
+- `tests/support` changes in V1-G11 approval-request lane: not allowed and not made
+- shell repo modifications in V1-G11 approval-request lane: not allowed and not made
+- Sparkbot code copied or imported: not added
+- provider/model calls, connector/file/browser/network/device/robotics behavior, haptic device behavior, file mutation, connector mutation, and physical-world behavior: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- exact approval question: approve V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
+- recommended next step: operator decision on the exact V1-G11 approval question; if approved, create the V1-G11 implementation branch inside the approved scope
