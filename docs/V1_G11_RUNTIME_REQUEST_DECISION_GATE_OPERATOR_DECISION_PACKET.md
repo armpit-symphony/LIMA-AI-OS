@@ -46,6 +46,16 @@ Record exactly one of the following when the operator decides:
 
 Only `Approve-V1-G11`, `Revise-V1-G11`, or `Pause` is valid here. Any other text is commentary, not a decision.
 
+## Decision Record Validation Rules
+
+- `none`: valid only while every Decision Record field remains `none` and runtime implementation approved remains `no`.
+- `Approve-V1-G11`: valid only with the exact required approval wording, approved branch `v1-g11-runtime-request-decision-gate`, no revision request, no pause reason, and runtime implementation approved set to `yes`.
+- `Revise-V1-G11`: valid only with a non-empty revision request, no approval wording, no approved implementation branch, no pause reason, and runtime implementation approved set to `no`.
+- `Pause`: valid only with a non-empty pause reason, no approval wording, no approved implementation branch, no revision request, and runtime implementation approved set to `no`.
+- Any mixed state is invalid and must be treated as no approval.
+- Missing, misspelled, or extra choice values are invalid and must be treated as no approval.
+- Runtime implementation may start only from the valid `Approve-V1-G11` state.
+
 ## Valid Operator Choices
 
 ### `Approve-V1-G11`

@@ -45,6 +45,48 @@
     "Revise-V1-G11",
     "Pause"
   ],
+  "decision_record_validation_rules": {
+    "none": {
+      "recorded_choice": null,
+      "recorded_approval_wording_required": false,
+      "recorded_revision_request_required": false,
+      "recorded_pause_reason_required": false,
+      "approved_implementation_branch_required": false,
+      "runtime_implementation_approved": false
+    },
+    "Approve-V1-G11": {
+      "recorded_choice": "Approve-V1-G11",
+      "recorded_approval_wording_required": true,
+      "recorded_approval_wording_must_equal_required_wording": true,
+      "recorded_revision_request_required": false,
+      "recorded_pause_reason_required": false,
+      "approved_implementation_branch_required": true,
+      "approved_implementation_branch_must_equal_if_approved_next_branch": true,
+      "runtime_implementation_approved": true
+    },
+    "Revise-V1-G11": {
+      "recorded_choice": "Revise-V1-G11",
+      "recorded_approval_wording_required": false,
+      "recorded_revision_request_required": true,
+      "recorded_pause_reason_required": false,
+      "approved_implementation_branch_required": false,
+      "runtime_implementation_approved": false
+    },
+    "Pause": {
+      "recorded_choice": "Pause",
+      "recorded_approval_wording_required": false,
+      "recorded_revision_request_required": false,
+      "recorded_pause_reason_required": true,
+      "approved_implementation_branch_required": false,
+      "runtime_implementation_approved": false
+    }
+  },
+  "invalid_decision_record_results": [
+    "mixed_state_treated_as_no_approval",
+    "missing_choice_treated_as_no_approval",
+    "misspelled_choice_treated_as_no_approval",
+    "extra_choice_value_treated_as_no_approval"
+  ],
   "required_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
   "non_approval_inputs": [
     "general_v1_product_direction",

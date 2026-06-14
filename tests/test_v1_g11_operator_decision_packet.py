@@ -98,6 +98,52 @@ def test_v1_g11_operator_decision_packet_names_only_valid_choices() -> None:
     )
 
 
+def test_v1_g11_operator_decision_record_validation_rules_are_fail_closed() -> None:
+    fixture = _load_fixture()
+    rules = fixture["decision_record_validation_rules"]
+    assert set(rules) == {"none", "Approve-V1-G11", "Revise-V1-G11", "Pause"}
+
+    none_rule = rules["none"]
+    assert none_rule["recorded_choice"] is None
+    assert none_rule["recorded_approval_wording_required"] is False
+    assert none_rule["recorded_revision_request_required"] is False
+    assert none_rule["recorded_pause_reason_required"] is False
+    assert none_rule["approved_implementation_branch_required"] is False
+    assert none_rule["runtime_implementation_approved"] is False
+
+    approve_rule = rules["Approve-V1-G11"]
+    assert approve_rule["recorded_choice"] == "Approve-V1-G11"
+    assert approve_rule["recorded_approval_wording_required"] is True
+    assert approve_rule["recorded_approval_wording_must_equal_required_wording"] is True
+    assert approve_rule["approved_implementation_branch_required"] is True
+    assert approve_rule["approved_implementation_branch_must_equal_if_approved_next_branch"] is True
+    assert approve_rule["recorded_revision_request_required"] is False
+    assert approve_rule["recorded_pause_reason_required"] is False
+    assert approve_rule["runtime_implementation_approved"] is True
+
+    revise_rule = rules["Revise-V1-G11"]
+    assert revise_rule["recorded_choice"] == "Revise-V1-G11"
+    assert revise_rule["recorded_revision_request_required"] is True
+    assert revise_rule["recorded_approval_wording_required"] is False
+    assert revise_rule["recorded_pause_reason_required"] is False
+    assert revise_rule["approved_implementation_branch_required"] is False
+    assert revise_rule["runtime_implementation_approved"] is False
+
+    pause_rule = rules["Pause"]
+    assert pause_rule["recorded_choice"] == "Pause"
+    assert pause_rule["recorded_pause_reason_required"] is True
+    assert pause_rule["recorded_approval_wording_required"] is False
+    assert pause_rule["recorded_revision_request_required"] is False
+    assert pause_rule["approved_implementation_branch_required"] is False
+    assert pause_rule["runtime_implementation_approved"] is False
+
+    invalid_results = set(fixture["invalid_decision_record_results"])
+    assert "mixed_state_treated_as_no_approval" in invalid_results
+    assert "missing_choice_treated_as_no_approval" in invalid_results
+    assert "misspelled_choice_treated_as_no_approval" in invalid_results
+    assert "extra_choice_value_treated_as_no_approval" in invalid_results
+
+
 def test_v1_g11_operator_decision_packet_rejects_implicit_approval_inputs() -> None:
     non_approval_inputs = set(_load_fixture()["non_approval_inputs"])
     assert "general_v1_product_direction" in non_approval_inputs
@@ -153,6 +199,12 @@ def test_v1_g11_operator_decision_packet_doc_matches_fixture() -> None:
     assert "Recorded revision request: `none`" in text
     assert "Recorded pause reason: `none`" in text
     assert "Any other text is commentary, not a decision." in text
+    assert "## Decision Record Validation Rules" in text
+    assert "`Approve-V1-G11`: valid only with the exact required approval wording" in text
+    assert "`Revise-V1-G11`: valid only with a non-empty revision request" in text
+    assert "`Pause`: valid only with a non-empty pause reason" in text
+    assert "Any mixed state is invalid and must be treated as no approval." in text
+    assert "Runtime implementation may start only from the valid `Approve-V1-G11` state." in text
     assert "does not approve runtime implementation" in text
     assert "General V1 product direction" in text
     assert "do not count as implementation approval" in text
