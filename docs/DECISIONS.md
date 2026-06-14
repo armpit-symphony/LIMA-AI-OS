@@ -6493,3 +6493,22 @@ Consequences:
 - The only future implementation scope, if approved, is the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
 - Destructive edit/delete must map to approval-required status and must not execute or become approved without operator approval evidence.
 - Provider/model calls, shell wiring, durable persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, and physical-world behavior remain unapproved.
+
+## ADR-0337: V1-G11 Operator Decision Packet Records Choices But Not Approval
+
+Status: Accepted
+
+Decision:
+
+The V1-G11 operator decision packet is the authoritative place to record `Approve-V1-G11`, `Revise-V1-G11`, or `Pause`, but the packet itself does not record approval or authorize runtime implementation.
+
+Context:
+
+The active V1 objective makes live approval, GuardianDecision, haptics, and provider/model routing acceptable product directions, but broad product direction must not be confused with exact V1-G11 runtime approval. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` now records the exact approval wording and rejects implicit approval from general V1 direction, prior static gates, or the packet itself.
+
+Consequences:
+
+- Operator approval remains unrecorded until one valid choice is explicitly recorded.
+- Runtime implementation remains unapproved.
+- The only future implementation scope, if approved, remains the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
+- No `lima/` files, tests/support helpers, shell repositories, Sparkbot imports/code copy, provider/model routing, persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, or physical-world behavior are added by the decision packet.

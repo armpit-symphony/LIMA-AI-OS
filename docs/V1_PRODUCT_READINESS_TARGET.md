@@ -100,7 +100,7 @@ The current V1 lane remains docs/tests/fixtures-only. It does not implement runt
 
 `V1-G10` minimum runtime implementation gate is now recorded in `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md`. It defines the future V1-G11 file-touch map, rollback plan, acceptance-test expectations, stop conditions, and runtime-slice boundaries. It does not approve runtime implementation or change runtime behavior.
 
-`V1-G11` runtime request decision gate approval request is now recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`. It asks the exact operator approval question for the typed request and GuardianDecision preflight runtime slice. It does not record approval, implement runtime behavior, or change `lima/`.
+`V1-G11` runtime request decision gate approval request is now recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`. The operator decision packet is recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md`. It asks the exact operator approval question for the typed request and GuardianDecision preflight runtime slice and records valid choices without recording approval, implementing runtime behavior, or changing `lima/`.
 
 ## Remaining Blockers
 
@@ -123,7 +123,7 @@ The current V1 lane remains docs/tests/fixtures-only. It does not implement runt
 
 ## Recommended Next Step
 
-Use the V1-G11 approval request for operator decision. If approved, implement the typed request and GuardianDecision preflight runtime slice exactly inside the V1-G10/V1-G11 file-touch map.
+Use the V1-G11 operator decision packet to record one valid operator choice. If explicitly approved with the required wording, implement the typed request and GuardianDecision preflight runtime slice exactly inside the V1-G10/V1-G11 file-touch map.
 
 `docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
 
@@ -145,7 +145,7 @@ Use the V1-G11 approval request for operator decision. If approved, implement th
 
 `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` records the V1-G10 minimum runtime implementation gate. It confirms that the first future runtime slice should be typed request plus GuardianDecision preflight behavior only, with no execution, no provider/model calls, no durable persistence, no shell wiring, no runtime export cleanup, and no final freeze.
 
-`docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the exact approval request for that runtime slice. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` confirms the request is ready for operator decision while runtime implementation remains unapproved.
+`docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the exact approval request for that runtime slice. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` confirms the request is ready for operator decision while runtime implementation remains unapproved. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` records valid operator choices and required approval wording without recording approval.
 
 The next implementation design question is:
 

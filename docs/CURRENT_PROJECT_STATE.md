@@ -1123,7 +1123,9 @@ Do not merge or tag from a routine implementation thread.
 - approval request document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`
 - preflight audit document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md`
 - work order document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md`
+- operator decision packet document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md`
 - V1-G11 request status: ready for operator decision
+- V1-G11 operator decision packet status: ready for one valid operator choice; no decision recorded
 - V1-G11 runtime approval status: not granted
 - operator approval recorded: no
 - API status: `CANDIDATE_ONLY`
@@ -1139,4 +1141,4 @@ Do not merge or tag from a routine implementation thread.
 - final API freeze: not approved
 - exact approval question: approve V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
 - implementation work order status: ready if the exact V1-G11 runtime request is approved
-- recommended next step: operator decision on the exact V1-G11 approval question; if approved, create the V1-G11 implementation branch inside the approved scope
+- recommended next step: record one valid operator choice in the V1-G11 operator decision packet; if explicitly approved, create the V1-G11 implementation branch inside the approved scope

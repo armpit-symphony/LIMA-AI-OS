@@ -17,6 +17,11 @@ FIXTURE_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "docs" / "ROADMAP.md"
 DECISIONS_PATH = REPO_ROOT / "docs" / "DECISIONS.md"
+OPERATOR_DECISION_PATH = (
+    REPO_ROOT
+    / "docs"
+    / "V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
+)
 
 
 def _load_fixture() -> dict[str, Any]:
@@ -30,6 +35,7 @@ def test_v1_g11_alignment_fixture_and_docs_exist() -> None:
     assert FIXTURE_PATH.exists()
     assert ROADMAP_PATH.exists()
     assert DECISIONS_PATH.exists()
+    assert OPERATOR_DECISION_PATH.exists()
     assert fixture["alignment_id"] == "v1_g11_roadmap_decision_alignment"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["branch"] == "v1-g11-runtime-slice-approval-request"
@@ -39,6 +45,9 @@ def test_v1_g11_alignment_fixture_and_docs_exist() -> None:
     assert fixture["documents"]["approval_request"] == (
         "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md"
     )
+    assert fixture["documents"]["operator_decision_packet"] == (
+        "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
+    )
 
 
 def test_v1_g11_alignment_preserves_unapproved_runtime_boundary() -> None:
@@ -46,6 +55,10 @@ def test_v1_g11_alignment_preserves_unapproved_runtime_boundary() -> None:
     assert fixture["roadmap_alignment_added"] is True
     assert fixture["decision_record_added"] is True
     assert fixture["decision_id"] == "ADR-0336"
+    assert fixture["decision_ids"] == ["ADR-0336", "ADR-0337"]
+    assert fixture["operator_decision_packet_added"] is True
+    assert fixture["operator_decision_packet_ready"] is True
+    assert fixture["operator_decision_packet_records_approval"] is False
     assert fixture["approval_request_ready"] is True
     assert fixture["operator_approval_recorded"] is False
     assert fixture["runtime_implementation_approved"] is False
@@ -67,10 +80,12 @@ def test_v1_g11_alignment_accepts_request_readiness_only() -> None:
     accepted = set(fixture["accepted_alignment"])
     assert "v1_g11_approval_request_is_ready_for_operator_decision" in accepted
     assert "v1_g11_request_packet_does_not_record_operator_approval" in accepted
+    assert "v1_g11_operator_decision_packet_records_valid_choices_without_approval" in accepted
     assert "runtime_remains_unapproved" in accepted
     assert "approved_future_scope_must_match_v1_g11_request_exactly" in accepted
 
     rejected = set(fixture["rejected_claims"])
+    assert "implicit_runtime_approval_from_broad_product_goal" in rejected
     assert "runtime_implementation_approved" in rejected
     assert "real_guardian_decision_runtime_added" in rejected
     assert "live_approval_enforcement_added" in rejected
@@ -80,7 +95,10 @@ def test_v1_g11_alignment_accepts_request_readiness_only() -> None:
     assert "final_api_freeze_approved" in rejected
     assert "v1_product_readiness_approved" in rejected
     assert "production_readiness_approved" in rejected
-    assert fixture["recommended_next_step"] == "operator_decision_on_exact_v1_g11_approval_question"
+    assert (
+        fixture["recommended_next_step"]
+        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
+    )
 
 
 def test_v1_g11_roadmap_and_decision_text_match_fixture() -> None:
@@ -88,13 +106,17 @@ def test_v1_g11_roadmap_and_decision_text_match_fixture() -> None:
     decisions = DECISIONS_PATH.read_text(encoding="utf-8")
 
     assert "## V1-G11 - Runtime Request Decision Gate Approval Request" in roadmap
-    assert "next step is operator decision on the exact V1-G11 approval question" in roadmap
-    assert "The request does not approve runtime implementation." in roadmap
+    assert "next step is to record one valid operator choice in the V1-G11 operator decision packet" in roadmap
+    assert "The request and operator decision packet do not approve runtime implementation." in roadmap
     assert "No `lima/` files" in roadmap
 
     assert "## ADR-0336: V1-G11 Approval Request Is Ready But Runtime Remains Unapproved" in (
         decisions
     )
+    assert "## ADR-0337: V1-G11 Operator Decision Packet Records Choices But Not Approval" in (
+        decisions
+    )
     assert "runtime implementation remains unapproved" in decisions
+    assert "does not record approval or authorize runtime implementation" in decisions
     assert "Operator approval is not recorded by the request packet." in decisions
     assert "Destructive edit/delete must map to approval-required status" in decisions

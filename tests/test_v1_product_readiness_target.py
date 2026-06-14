@@ -119,6 +119,10 @@ def test_v1_target_document_and_fixture_exist() -> None:
         fixture["v1_g11_preflight_audit_document"]
         == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md"
     )
+    assert (
+        fixture["v1_g11_operator_decision_packet_document"]
+        == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
+    )
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -213,6 +217,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["minimum_runtime_implementation_gate_approved_runtime"] is False
     assert current["v1_g11_approval_request_added"] is True
     assert current["v1_g11_preflight_audit_added"] is True
+    assert current["v1_g11_operator_decision_packet_added"] is True
+    assert current["v1_g11_operator_decision_packet_records_approval"] is False
     assert current["v1_g11_operator_approval_recorded"] is False
     assert current["v1_g11_runtime_implementation_approved"] is False
     assert current["durable_audit_persistence_implemented"] is False
@@ -280,6 +286,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert static_evidence["v1_g11_approval_request_scope"] == (
         "docs_tests_fixtures_only_operator_decision_packet"
     )
+    assert static_evidence["v1_g11_operator_decision_packet_ready"] is True
+    assert static_evidence["v1_g11_operator_decision_packet_records_approval"] is False
     assert static_evidence["v1_g11_operator_approval_recorded"] is False
     assert static_evidence["v1_g11_runtime_implementation_added"] is False
     blockers = set(fixture["remaining_blockers"])
@@ -304,7 +312,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "operator_decision_on_exact_v1_g11_approval_question"
+        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -349,7 +357,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_eleventh_gap_request_ready"]
-        == "v1_g11_approval_request_ready_runtime_not_approved"
+        == "v1_g11_operator_decision_packet_ready_runtime_not_approved"
     )
     assert fixture["recommended_next_gap_id"] == "V1-G11"
     assert (

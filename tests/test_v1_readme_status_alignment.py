@@ -38,6 +38,8 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
     assert fixture["v1_g11_approval_request_ready"] is True
     assert fixture["v1_g11_preflight_audit_ready"] is True
     assert fixture["v1_g11_work_order_ready"] is True
+    assert fixture["v1_g11_operator_decision_packet_ready"] is True
+    assert fixture["v1_g11_operator_decision_packet_records_approval"] is False
     assert fixture["operator_approval_recorded"] is False
     assert fixture["runtime_implementation_approved"] is False
     assert fixture["v1_product_ready"] is False
@@ -79,7 +81,7 @@ def test_v1_readme_status_fixture_points_to_exact_next_step() -> None:
     )
     assert (
         fixture["next_step"]
-        == "operator_decision_on_exact_v1_g11_approval_question"
+        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
     )
 
 
@@ -100,4 +102,4 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "runtime export cleanup" in text
     assert "final API freeze" in text
     assert "production readiness" in text
-    assert "operator decision on the exact `V1-G11` approval question" in text
+    assert "record one valid operator choice in the `V1-G11` operator decision packet" in text

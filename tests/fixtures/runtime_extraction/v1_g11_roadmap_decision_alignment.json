@@ -7,11 +7,20 @@
     "roadmap": "docs/ROADMAP.md",
     "decisions": "docs/DECISIONS.md",
     "approval_request": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md",
-    "preflight_audit": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md"
+    "preflight_audit": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md",
+    "work_order": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
   },
   "roadmap_alignment_added": true,
   "decision_record_added": true,
   "decision_id": "ADR-0336",
+  "decision_ids": [
+    "ADR-0336",
+    "ADR-0337"
+  ],
+  "operator_decision_packet_added": true,
+  "operator_decision_packet_ready": true,
+  "operator_decision_packet_records_approval": false,
   "approval_request_ready": true,
   "operator_approval_recorded": false,
   "runtime_implementation_approved": false,
@@ -29,10 +38,12 @@
   "accepted_alignment": [
     "v1_g11_approval_request_is_ready_for_operator_decision",
     "v1_g11_request_packet_does_not_record_operator_approval",
+    "v1_g11_operator_decision_packet_records_valid_choices_without_approval",
     "runtime_remains_unapproved",
     "approved_future_scope_must_match_v1_g11_request_exactly"
   ],
   "rejected_claims": [
+    "implicit_runtime_approval_from_broad_product_goal",
     "runtime_implementation_approved",
     "real_guardian_decision_runtime_added",
     "live_approval_enforcement_added",
@@ -43,5 +54,5 @@
     "v1_product_readiness_approved",
     "production_readiness_approved"
   ],
-  "recommended_next_step": "operator_decision_on_exact_v1_g11_approval_question"
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
 }

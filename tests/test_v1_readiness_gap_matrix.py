@@ -155,7 +155,13 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
         gaps["V1-G11"]["preflight_audit_document"]
         == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md"
     )
+    assert (
+        gaps["V1-G11"]["operator_decision_packet_document"]
+        == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
+    )
     assert gaps["V1-G11"]["approval_request_ready"] is True
+    assert gaps["V1-G11"]["operator_decision_packet_ready"] is True
+    assert gaps["V1-G11"]["operator_decision_packet_records_approval"] is False
     assert gaps["V1-G11"]["operator_approval_recorded"] is False
 
 
@@ -191,14 +197,17 @@ def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() ->
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
     assert fixture["recommended_order"][-1] == "V1-G11"
-    assert fixture["next_smallest_safe_step"] == "operator_decision_on_v1_g11_approval_request"
+    assert (
+        fixture["next_smallest_safe_step"]
+        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
+    )
     assert (
         fixture["next_smallest_safe_step_status"]
         == "pending_operator_decision"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g11_approval_request_ready_runtime_not_approved"
+        == "v1_g11_operator_decision_packet_ready_no_decision_recorded"
     )
 
 
@@ -235,6 +244,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["minimum_runtime_implementation_gate_runtime_approved"] is False
     assert boundary["v1_g11_approval_request_added"] is True
     assert boundary["v1_g11_preflight_audit_added"] is True
+    assert boundary["v1_g11_operator_decision_packet_added"] is True
+    assert boundary["v1_g11_operator_decision_packet_records_approval"] is False
     assert boundary["v1_g11_operator_approval_recorded"] is False
     assert boundary["v1_g11_runtime_implementation_added"] is False
     for key in (
@@ -267,8 +278,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G8` is complete as static docs/tests/fixtures-only audit/evidence persistence contract" in text
     assert "`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit" in text
     assert "`V1-G10` is complete as static docs/tests/fixtures-only minimum runtime implementation gate" in text
-    assert "The V1-G11 approval request is ready for operator decision." in text
-    assert "The next smallest safe step is operator decision on the exact V1-G11 approval question." in text
+    assert "The V1-G11 approval request and operator decision packet are ready for operator decision." in text
+    assert "The next smallest safe step is to record one valid operator choice in the V1-G11 operator decision packet." in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text
