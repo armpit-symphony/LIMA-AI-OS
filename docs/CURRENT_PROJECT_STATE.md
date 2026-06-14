@@ -1232,3 +1232,26 @@ Do not merge or tag from a routine implementation thread.
 - `lima/` runtime files changed in V1-G13: no
 - provider/model routing, shell runtime wiring, HumanInput bridge activation, connector behavior, browser/file/network/device/robotics/physical-world behavior, external database writes, migrations, queues, workers, daemons, subprocesses, threads, approval-token issuance, runtime export cleanup, final API freeze, V1 product readiness, and production readiness: not added or approved
 - recommended next lane: separate V1-G14 operator approval request for live destructive edit/delete approval enforcement; do not implement V1-G14 runtime behavior without explicit operator approval
+
+## V1-G14 - Destructive Approval Enforcement Approval Request
+
+- branch: `v1-g14-destructive-approval-enforcement-approval-request`
+- status: docs/tests/fixtures-only approval request prepared; runtime implementation not approved
+- source branch: `v1-g13-readiness-gap-refresh-next-lane-decision-gate`
+- source commit: `7d2b736ef522595c23bfc6aa6a1f2787bf6fb203`
+- approval request document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_APPROVAL_REQUEST.md`
+- preflight audit document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_PREFLIGHT_AUDIT.md`
+- work order document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_WORK_ORDER.md`
+- operator decision packet document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_OPERATOR_DECISION_PACKET.md`
+- V1-G14 request status: ready for operator decision, not approved
+- V1-G14 decision readiness status: ready for exactly one valid operator choice
+- operator approval recorded: no
+- API status: `CANDIDATE_ONLY`
+- proposed future runtime file map if approved: `lima/guardian/v1_approval_enforcement.py` and `lima/guardian/__init__.py`
+- proposed future docs/tests/fixtures if approved: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT.md`, `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_CLOSEOUT.md`, `tests/fixtures/runtime_extraction/v1_g14_destructive_approval_enforcement.json`, and `tests/test_v1_g14_destructive_approval_enforcement.py`
+- runtime behavior added in request lane: no
+- approval enforcement added in request lane: no
+- file mutation behavior added: no
+- `lima/` runtime files changed in request lane: no
+- provider/model routing, shell runtime wiring, HumanInput bridge activation, connector behavior, browser/file/network/device/robotics/physical-world behavior, external database writes, migrations, queues, workers, daemons, subprocesses, threads, approval-token issuance, raw PIN verification or persistence, runtime export cleanup, final API freeze, V1 product readiness, and production readiness: not added or approved
+- recommended next step: operator decision on `Approve-V1-G14`, `Revise-V1-G14`, or `Pause`
