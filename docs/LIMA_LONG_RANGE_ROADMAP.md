@@ -412,6 +412,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` are accepted as static first-shell evidence only; live runtime parity remains unproven.
 
-The next smallest safe V1 action is `V1-G8`: create an audit/evidence persistence design/request gate before any runtime export cleanup, final freeze, or runtime wiring proposal.
+`docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md` records the V1-G8 audit/evidence persistence request gate. It defines durable record family, lineage, query, redaction, shell evidence, and negative-case requirements without implementing persistence.
+
+The next smallest safe V1 action is `V1-G8A`: create the static audit/evidence persistence contract and threat model before any runtime export cleanup, final freeze, or runtime wiring proposal.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

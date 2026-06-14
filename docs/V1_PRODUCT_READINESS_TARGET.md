@@ -92,6 +92,8 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G7` first-shell integration proof is now closed as static evidence in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md`. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have been delivered and intaken by LIMA. This proves static first-shell compatibility evidence only. It does not prove live runtime parity, shell wiring, or V1 product readiness.
 
+`V1-G8` audit/evidence persistence request gate is now recorded in `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md`. It defines required durable record families, lineage fields, query capabilities, shell evidence needs, and fail-closed negative cases only. It does not implement durable audit persistence, storage adapters, query APIs, export/delete review behavior, live approval, real `GuardianDecision`, provider/model routing, shell wiring, or V1 product readiness.
+
 ## Remaining Blockers
 
 - real `GuardianDecision` runtime path is not implemented
@@ -102,7 +104,7 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 - first-shell integration proof is static-only and does not prove live runtime parity
 - live model streaming parity remains unproven
 - haptic device rendering proof remains shell-owned and not implemented here
-- audit persistence is not implemented
+- audit persistence request gate exists, but durable audit persistence is not implemented
 - destructive edit/delete approval enforcement is not implemented
 - production behavior is not approved
 
@@ -126,6 +128,10 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 The next smallest safe step is `V1-G8`: create an audit/evidence persistence design/request gate.
 
+`docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md` records the V1-G8 audit/evidence persistence request gate. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md` records the audit criteria. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md` records the request closeout. These do not complete durable persistence.
+
+The next smallest safe step is `V1-G8A`: create the static audit/evidence persistence contract and threat model with fixtures/tests.
+
 The likely next implementation design question is:
 
-What durable audit/evidence persistence contract is required before live approval, real `GuardianDecision`, provider/model routing, destructive edit/delete enforcement, or shell runtime wiring can be safely proposed?
+Which exact durable audit/evidence record shapes, query rules, threat mitigations, and negative-case fixtures should be accepted before any runtime persistence implementation is proposed?

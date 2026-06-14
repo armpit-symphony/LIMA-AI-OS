@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g7-first-shell-integration-proof-closeout",
+  "current_branch": "v1-g8-audit-evidence-persistence-request-gate",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -103,9 +103,13 @@
     {
       "id": "V1-G8",
       "name": "audit_evidence_persistence",
-      "status": "not_implemented",
-      "recommended_lane": "audit_persistence_design_storage_contract_threat_model_then_runtime_gate",
-      "runtime_approval_needed": true
+      "status": "request_gate_complete_static_contract_pending",
+      "request_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md",
+      "audit_criteria_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md",
+      "closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md",
+      "recommended_lane": "static_persistence_contract_and_threat_model_then_runtime_gate",
+      "runtime_approval_needed": false,
+      "runtime_persistence_approval_needed": true
     },
     {
       "id": "V1-G9",
@@ -126,9 +130,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G8",
-  "next_smallest_safe_step_reason": "v1_g7_static_first_shell_evidence_complete_but_audit_persistence_is_missing",
-  "next_smallest_safe_step_status": "pending_audit_evidence_persistence_design_request_gate",
+  "next_smallest_safe_step": "V1-G8A",
+  "next_smallest_safe_step_reason": "v1_g8_request_gate_complete_but_static_persistence_contract_and_threat_model_are_missing",
+  "next_smallest_safe_step_status": "pending_static_audit_evidence_persistence_contract_and_threat_model",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -157,6 +161,7 @@
     "first_shell_integration_proof_request_gate_added": true,
     "first_shell_integration_proof_complete": true,
     "first_shell_integration_proof_closeout_added": true,
+    "audit_evidence_persistence_request_gate_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

@@ -98,6 +98,19 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
     assert gaps["V1-G7"]["lima_intake_audits_complete"] is True
     assert gaps["V1-G7"]["consolidated_closeout_complete"] is True
     assert gaps["V1-G8"]["name"] == "audit_evidence_persistence"
+    assert gaps["V1-G8"]["status"] == "request_gate_complete_static_contract_pending"
+    assert (
+        gaps["V1-G8"]["request_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md"
+    )
+    assert (
+        gaps["V1-G8"]["audit_criteria_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md"
+    )
+    assert (
+        gaps["V1-G8"]["closeout_document"]
+        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md"
+    )
     assert gaps["V1-G9"]["name"] == "product_release_boundary"
 
 
@@ -116,21 +129,22 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G6"]["shell_device_behavior_remains_shell_owned"] is True
     assert gaps["V1-G7"]["runtime_approval_needed"] is False
     assert gaps["V1-G7"]["runtime_wiring_approval_needed"] is True
-    assert gaps["V1-G8"]["runtime_approval_needed"] is True
+    assert gaps["V1-G8"]["runtime_approval_needed"] is False
+    assert gaps["V1-G8"]["runtime_persistence_approval_needed"] is True
     assert gaps["V1-G9"]["runtime_approval_needed"] is False
 
 
 def test_v1_gap_matrix_recommends_haptics_after_provider_model_contract() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G8"
+    assert fixture["next_smallest_safe_step"] == "V1-G8A"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_audit_evidence_persistence_design_request_gate"
+        == "pending_static_audit_evidence_persistence_contract_and_threat_model"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g7_static_first_shell_evidence_complete_but_audit_persistence_is_missing"
+        == "v1_g8_request_gate_complete_but_static_persistence_contract_and_threat_model_are_missing"
     )
 
 
@@ -158,6 +172,7 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["first_shell_integration_proof_request_gate_added"] is True
     assert boundary["first_shell_integration_proof_complete"] is True
     assert boundary["first_shell_integration_proof_closeout_added"] is True
+    assert boundary["audit_evidence_persistence_request_gate_added"] is True
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -183,7 +198,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G5` is complete as static docs/tests/fixtures-only provider/model routing" in text
     assert "`V1-G6` is complete as static docs/tests/fixtures-only haptic intent metadata" in text
     assert "`V1-G7` is complete as static docs/tests/fixtures-only first-shell integration evidence." in text
-    assert "The next smallest safe step is `V1-G8`" in text
+    assert "`V1-G8` request gate is complete as docs/tests/fixtures-only audit/evidence persistence request" in text
+    assert "The next smallest safe step is `V1-G8A`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

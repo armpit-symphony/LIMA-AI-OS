@@ -6,7 +6,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 ## Current Anchor
 
-- Current branch: `v1-g7-first-shell-integration-proof-closeout`
+- Current branch: `v1-g8-audit-evidence-persistence-request-gate`
 - Source target: `docs/V1_PRODUCT_READINESS_TARGET.md`
 - Current product status: not V1-ready
 - Current implementation approval: not granted
@@ -23,7 +23,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | `V1-G5` | Provider/model routing | `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` and static fixtures/tests define route families, metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases | Model routing constrained by Guardian, shell tool-pack scope, secret policy, and audit/evidence rules | Complete as static docs/tests/fixtures-only contract and acceptance-test design; runtime routing remains out of scope | No for static contract; later runtime approval required for routing |
 | `V1-G6` | Haptic intent metadata | `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` and static fixtures/tests define shell state to haptic intent mapping, metadata fields, forbidden device fields, shell ownership, and fail-closed forged device claims | LIMA may emit non-device-specific haptic intent metadata while shells own rendering/device feedback | Complete as static docs/tests/fixtures-only contract; device behavior remains out of scope | No device implementation in LIMA |
 | `V1-G7` | First-shell integration proof | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have LIMA intake audits and consolidated closeout in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` | `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` each prove they can consume or align with LIMA contract outputs safely as static evidence | Complete as static first-shell integration evidence; runtime parity remains out of scope | No for static closeout; runtime wiring requires later approval |
-| `V1-G8` | Audit/evidence persistence | Static audit/evidence lineage exists; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Audit persistence design, storage contract, threat model, then runtime gate | Yes |
+| `V1-G8` | Audit/evidence persistence | `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md` and audit criteria define durable record families, lineage fields, query needs, and negative cases; durable audit persistence is not implemented | Consequential actions produce durable, redacted, queryable evidence lineage | Create static persistence contract and threat model, then future runtime gate | No for request gate; later runtime persistence approval required |
 | `V1-G9` | Product release boundary | Current package remains candidate/proof-stage | V1 release gates, compatibility freeze, shell compatibility evidence, and rollback proof all pass | V1 release readiness audit after blockers close | No implementation by audit alone |
 
 ## Recommended Order
@@ -35,7 +35,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 5. Treat `V1-G5` as complete for static provider/model routing contract and acceptance-test design evidence, while rejecting runtime routing claims.
 6. Treat `V1-G6` as complete for static haptic intent metadata contract and shell fixture evidence, while rejecting device haptic behavior claims.
 7. Treat `V1-G7` as complete for static first-shell integration evidence, while rejecting runtime parity claims.
-8. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
+8. Treat `V1-G8` request gate as complete, then create the static persistence contract and threat model before any runtime persistence proposal.
+9. Finish `V1-G8` and `V1-G9` before claiming V1 product readiness.
 
 ## Stop Conditions
 
@@ -67,4 +68,6 @@ LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
 `V1-G7` is complete as static docs/tests/fixtures-only first-shell integration evidence. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have been delivered, audited, intaken by LIMA, and consolidated in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md`.
 
-The next smallest safe step is `V1-G8`: create an audit/evidence persistence design/request gate, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence implementation, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.
+`V1-G8` request gate is complete as docs/tests/fixtures-only audit/evidence persistence request and audit criteria. V1-G8 itself remains open until the static persistence contract, threat model, fixtures, and negative-case tests are delivered.
+
+The next smallest safe step is `V1-G8A`: create the static audit/evidence persistence contract and threat model, still without LIMA runtime behavior, shell wiring, provider/model calls, approval enforcement, persistence implementation, haptic device behavior, robotics, or physical-world behavior until a later explicit implementation approval.

@@ -1005,3 +1005,28 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in request lane: not allowed
 - provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G8 audit/evidence persistence design/request gate, still docs/tests/fixtures-only
+
+## V1-G8 - Audit/Evidence Persistence Request Gate
+
+- branch: `v1-g8-audit-evidence-persistence-request-gate`
+- status: docs/tests/fixtures-only request gate complete; durable audit/evidence persistence itself remains open
+- base branch: `v1-g7-first-shell-integration-proof-closeout`
+- base commit: `ea5122c89c8cf9953a74d4829227102f3e07aea8`
+- request document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md`
+- audit criteria document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md`
+- closeout document: `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md`
+- V1-G8 request status: required durable record families, lineage chain, minimum durable fields, query capabilities, shell relevance, acceptance criteria, rejection criteria, and negative cases are defined
+- V1-G8 persistence status: not implemented
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime test harness: not created
+- durable audit persistence: not added
+- storage adapter: not added
+- external database writes: not added
+- query/read API behavior: not added
+- export/delete review behavior: not added
+- `lima/` changes in request lane: not allowed
+- `tests/support` changes in request lane: not allowed
+- shell repo modifications in request lane: not allowed
+- provider/model routing, provider/model calls, runtime `GuardianDecision`, approval enforcement, persistence implementation, haptic device behavior, browser/file/network/device/robotics behavior, file mutation, connector mutation, and physical-world behavior: not added
+- recommended next lane: V1-G8A static audit/evidence persistence contract and threat model with fixtures/tests
