@@ -1215,3 +1215,20 @@ Do not merge or tag from a routine implementation thread.
 - provider/model routing, provider/model calls, tool execution, shell runtime wiring, HumanInput bridge activation, connector behavior, browser/file/network/device/robotics/physical-world behavior, external database writes, migrations, queues, workers, daemons, subprocesses, threads, approval-token issuance, runtime export cleanup, and final API freeze: not added or approved
 - remaining blockers: V1 readiness docs need a post-V1-G12 refresh, release boundary still not passed, live approval enforcement is not implemented, provider/model routing is not implemented, shell/runtime integration is not implemented, runtime export cleanup is not approved, and final API freeze is not approved
 - recommended next lane: separate docs/tests/fixtures-only V1-G13 readiness-gap refresh and next-lane decision gate before any next runtime implementation
+
+## V1-G13 - Readiness Gap Refresh And Next-Lane Decision Gate
+
+- branch: `v1-g13-readiness-gap-refresh-next-lane-decision-gate`
+- source branch: `audit-v1-g12-durable-audit-evidence-persistence`
+- source commit: `ba9f1483e49d8a4e11106f3074d2ced2becd155b`
+- gate document: `docs/V1_G13_READINESS_GAP_REFRESH_AND_NEXT_LANE_DECISION_GATE.md`
+- closeout document: `docs/V1_G13_READINESS_GAP_REFRESH_CLOSEOUT.md`
+- V1-G13 status: complete as docs/tests/fixtures-only post-V1-G12 readiness refresh and next-lane decision gate
+- accepted evidence: V1-G11 runtime slice implemented and audited, V1-G12 runtime slice implemented and audited, V1-G12 local JSONL audit store accepted as candidate-only local persistence
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- runtime behavior added in V1-G13: no
+- `lima/` runtime files changed in V1-G13: no
+- provider/model routing, shell runtime wiring, HumanInput bridge activation, connector behavior, browser/file/network/device/robotics/physical-world behavior, external database writes, migrations, queues, workers, daemons, subprocesses, threads, approval-token issuance, runtime export cleanup, final API freeze, V1 product readiness, and production readiness: not added or approved
+- recommended next lane: separate V1-G14 operator approval request for live destructive edit/delete approval enforcement; do not implement V1-G14 runtime behavior without explicit operator approval
