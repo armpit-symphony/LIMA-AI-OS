@@ -10,9 +10,9 @@ It does not record operator approval, approve runtime implementation, change run
 
 ## Current Start Verdict
 
-V1-G11 implementation is not currently allowed.
+V1-G11 implementation is now approved only for the approved implementation branch.
 
-The current operator decision record is empty, so this checklist must remain in `not_allowed_until_approve_v1_g11_recorded` state.
+The operator decision packet records `Approve-V1-G11`. Implementation must occur only on `v1-g11-runtime-request-decision-gate`.
 
 ## Required Approval Record
 
@@ -35,7 +35,7 @@ If and only if the valid approval record exists, the implementation branch must 
 
 - `v1-g11-runtime-request-decision-gate`
 
-The current branch, `v1-g11-runtime-slice-approval-request`, is the approval-request branch and must not carry implementation work.
+The approval-request branch, `v1-g11-runtime-slice-approval-request`, must not carry implementation work.
 
 ## Approved File Scope If Approved
 
@@ -96,9 +96,9 @@ The implementation branch must run at minimum:
 ## Current Boundary Results
 
 - Checklist only: yes.
-- Runtime implementation allowed now: no.
-- Operator approval recorded: no.
-- Runtime implementation approved: no.
+- Runtime implementation allowed now: yes, only on `v1-g11-runtime-request-decision-gate`.
+- Operator approval recorded: yes.
+- Runtime implementation approved: yes, limited to the exact V1-G11 request scope.
 - Runtime behavior added: no.
 - `lima/` runtime files changed: no.
 - `tests/support` changed: no.

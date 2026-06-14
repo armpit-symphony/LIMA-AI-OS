@@ -33,16 +33,19 @@ def test_v1_g11_implementation_start_checklist_fixture_and_doc_exist() -> None:
     assert fixture["gap_id"] == "V1-G11"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["branch"] == "v1-g11-runtime-slice-approval-request"
-    assert fixture["checklist_status"] == "not_allowed_until_approve_v1_g11_recorded"
+    assert (
+        fixture["checklist_status"]
+        == "approve_v1_g11_recorded_start_allowed_on_approved_branch_only"
+    )
     assert fixture["docs_tests_fixtures_only"] is True
 
 
-def test_v1_g11_implementation_start_is_not_allowed_today() -> None:
+def test_v1_g11_implementation_start_is_allowed_only_on_approved_branch() -> None:
     fixture = _load_fixture()
 
-    assert fixture["runtime_implementation_allowed_now"] is False
-    assert fixture["operator_approval_recorded"] is False
-    assert fixture["runtime_implementation_approved"] is False
+    assert fixture["runtime_implementation_allowed_now"] is True
+    assert fixture["operator_approval_recorded"] is True
+    assert fixture["runtime_implementation_approved"] is True
     assert fixture["current_branch_may_implement"] is False
 
 
@@ -64,18 +67,23 @@ def test_v1_g11_required_approval_record_is_exact() -> None:
     }
 
 
-def test_v1_g11_current_decision_record_is_not_approval() -> None:
+def test_v1_g11_current_decision_record_is_approval() -> None:
     fixture = _load_fixture()
 
     assert fixture["current_decision_record"] == {
-        "recorded_choice": None,
-        "recorded_approval_wording": None,
+        "recorded_choice": "Approve-V1-G11",
+        "recorded_approval_wording": (
+            "I explicitly approve V1-G11 implementation of the typed request and "
+            "GuardianDecision preflight runtime slice, limited to the file scope, "
+            "behavior scope, tests, rollback plan, and stop conditions in "
+            "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md."
+        ),
         "recorded_revision_request": None,
         "recorded_pause_reason": None,
-        "approved_implementation_branch": None,
-        "runtime_implementation_approved": False,
+        "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+        "runtime_implementation_approved": True,
     }
-    assert fixture["current_decision_record"] != fixture["required_approval_record"]
+    assert fixture["current_decision_record"] == fixture["required_approval_record"]
 
 
 def test_v1_g11_allowed_branch_and_scope_are_fixed_if_approved() -> None:
@@ -167,10 +175,10 @@ def test_v1_g11_implementation_start_doc_and_state_match_fixture() -> None:
         assert phrase in doc_text
 
     assert fixture["state_required_phrase"] in state_text
-    assert "Runtime implementation allowed now: no." in doc_text
+    assert "Runtime implementation allowed now: yes" in doc_text
     assert "Runtime export cleanup approved: no." in doc_text
     assert "Final API freeze approved: no." in doc_text
     assert (
         fixture["recommended_next_step"]
-        == "record_exactly_one_valid_operator_choice_in_decision_record"
+        == "create_approved_v1_g11_implementation_branch"
     )

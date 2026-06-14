@@ -10,18 +10,18 @@
     "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md",
     "docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md"
   ],
-  "checklist_status": "not_allowed_until_approve_v1_g11_recorded",
+  "checklist_status": "approve_v1_g11_recorded_start_allowed_on_approved_branch_only",
   "docs_tests_fixtures_only": true,
-  "runtime_implementation_allowed_now": false,
-  "operator_approval_recorded": false,
-  "runtime_implementation_approved": false,
+  "runtime_implementation_allowed_now": true,
+  "operator_approval_recorded": true,
+  "runtime_implementation_approved": true,
   "current_decision_record": {
-    "recorded_choice": null,
-    "recorded_approval_wording": null,
+    "recorded_choice": "Approve-V1-G11",
+    "recorded_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
     "recorded_revision_request": null,
     "recorded_pause_reason": null,
-    "approved_implementation_branch": null,
-    "runtime_implementation_approved": false
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": true
   },
   "required_approval_record": {
     "recorded_choice": "Approve-V1-G11",
@@ -99,10 +99,10 @@
     "production_ready": false
   },
   "doc_required_phrases": [
-    "V1-G11 implementation is not currently allowed",
+    "V1-G11 implementation is now approved only for the approved implementation branch",
     "Any missing, mixed, misspelled, or extra decision state must be treated as no approval",
-    "The current branch, `v1-g11-runtime-slice-approval-request`, is the approval-request branch and must not carry implementation work"
+    "The approval-request branch, `v1-g11-runtime-slice-approval-request`, must not carry implementation work"
   ],
   "state_required_phrase": "V1-G11 implementation start checklist document",
-  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_decision_record"
+  "recommended_next_step": "create_approved_v1_g11_implementation_branch"
 }

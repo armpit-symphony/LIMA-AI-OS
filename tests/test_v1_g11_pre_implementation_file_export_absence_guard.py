@@ -6,10 +6,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-import lima.guardian as guardian
-import lima.kernel as kernel
-
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DOC_PATH = (
     REPO_ROOT / "docs" / "V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md"
@@ -38,16 +34,23 @@ def test_v1_g11_pre_implementation_guard_fixture_and_doc_exist() -> None:
     assert fixture["gap_id"] == "V1-G11"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["branch"] == "v1-g11-runtime-slice-approval-request"
-    assert fixture["guard_status"] == "active_static_file_export_absence_scan"
+    assert fixture["guard_status"] == "retired_after_approve_v1_g11_recorded"
     assert fixture["docs_tests_fixtures_only"] is True
 
 
-def test_v1_g11_pre_implementation_approval_boundaries_are_false() -> None:
+def test_v1_g11_pre_implementation_approval_record_is_present() -> None:
+    fixture = _load_fixture()
+
+    assert fixture["runtime_implementation_approved"] is True
+    assert fixture["operator_approval_recorded"] is True
+    assert fixture["current_decision_record_empty"] is False
+    assert fixture["approved_implementation_branch"] == "v1-g11-runtime-request-decision-gate"
+
+
+def test_v1_g11_pre_implementation_runtime_boundaries_are_false() -> None:
     fixture = _load_fixture()
 
     for key in (
-        "runtime_implementation_approved",
-        "operator_approval_recorded",
         "runtime_behavior_added",
         "lima_runtime_files_changed",
         "tests_support_changed",
@@ -70,46 +73,84 @@ def test_v1_g11_pre_implementation_approval_boundaries_are_false() -> None:
         assert fixture[key] is False
 
 
-def test_v1_g11_current_decision_record_is_empty() -> None:
+def test_v1_g11_current_decision_record_is_approval() -> None:
     fixture = _load_fixture()
 
-    assert fixture["current_decision_record_empty"] is True
-    assert fixture["approved_implementation_branch"] is None
+    assert fixture["current_decision_record_empty"] is False
     assert fixture["current_decision_record"] == {
-        "recorded_choice": None,
-        "recorded_approval_wording": None,
+        "recorded_choice": "Approve-V1-G11",
+        "recorded_approval_wording": (
+            "I explicitly approve V1-G11 implementation of the typed request and "
+            "GuardianDecision preflight runtime slice, limited to the file scope, "
+            "behavior scope, tests, rollback plan, and stop conditions in "
+            "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md."
+        ),
         "recorded_revision_request": None,
         "recorded_pause_reason": None,
-        "approved_implementation_branch": None,
-        "runtime_implementation_approved": False,
+        "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+        "runtime_implementation_approved": True,
     }
 
 
-def test_v1_g11_forbidden_pre_approval_files_are_absent() -> None:
+def test_v1_g11_previously_forbidden_files_are_approved_file_map() -> None:
     fixture = _load_fixture()
 
-    for relative_path in fixture["currently_forbidden_pre_approval_files"]:
-        assert not (REPO_ROOT / relative_path).exists(), relative_path
+    assert fixture["previously_forbidden_pre_approval_files"] == [
+        "lima/kernel/v1_runtime_request.py",
+        "lima/guardian/v1_decision_gate.py",
+        "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md",
+        "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md",
+        "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate.json",
+        "tests/test_v1_g11_runtime_request_decision_gate.py",
+    ]
 
 
-def test_v1_g11_current_kernel_exports_remain_unchanged() -> None:
+def test_v1_g11_previous_kernel_exports_are_recorded_as_historical_boundary() -> None:
     fixture = _load_fixture()
 
-    assert list(kernel.__all__) == fixture["current_kernel_exports"]
+    assert fixture["current_kernel_exports"] == [
+        "ALLOWED_CANDIDATE_STATUSES",
+        "CandidatePreview",
+        "CandidateStatusError",
+        "IntakeCandidateError",
+        "RuntimeStateSnapshot",
+        "build_intake_candidate",
+        "inspect_runtime_state",
+        "normalize_candidate_status",
+        "preview_candidate",
+        "validate_candidate",
+    ]
 
 
-def test_v1_g11_current_guardian_exports_remain_unchanged() -> None:
+def test_v1_g11_previous_guardian_exports_are_recorded_as_historical_boundary() -> None:
     fixture = _load_fixture()
 
-    assert list(guardian.__all__) == fixture["current_guardian_exports"]
+    assert fixture["current_guardian_exports"] == [
+        "FakeApprovalRecorder",
+        "FakeAuthProvider",
+        "FakeBreakglassProvider",
+        "FakeGuardianDecisionEvaluator",
+        "FakeGuardianPipeline",
+        "FakeGuardianPipelineResult",
+        "FakePolicyRiskEvaluator",
+        "FakeSpineAuditRecorder",
+        "FakeVaultProvider",
+        "AdapterFixtureHarness",
+        "AdapterFixtureHarnessResult",
+        "HumanInputFakePipelineBridge",
+        "HumanInputPipelineBridgeConfig",
+    ]
 
 
-def test_v1_g11_future_symbols_are_not_exported_before_approval() -> None:
+def test_v1_g11_future_symbols_are_recorded_as_now_eligible_if_approved() -> None:
     fixture = _load_fixture()
-    exported_symbols = set(kernel.__all__) | set(guardian.__all__)
 
-    for symbol in fixture["proposed_future_symbols_if_approved"]:
-        assert symbol not in exported_symbols
+    assert fixture["proposed_future_symbols_if_approved"] == [
+        "V1RuntimeRequestError",
+        "build_v1_runtime_request",
+        "V1GuardianDecisionGateError",
+        "review_v1_runtime_request",
+    ]
 
 
 def test_v1_g11_pre_implementation_guard_doc_and_state_match_fixture() -> None:
@@ -125,5 +166,5 @@ def test_v1_g11_pre_implementation_guard_doc_and_state_match_fixture() -> None:
     assert "Final API freeze approved: no." in doc_text
     assert (
         fixture["recommended_next_step"]
-        == "record_exactly_one_valid_operator_choice_in_decision_record"
+        == "create_approved_v1_g11_implementation_branch"
     )

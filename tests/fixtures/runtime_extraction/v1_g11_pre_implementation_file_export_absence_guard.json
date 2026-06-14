@@ -6,12 +6,12 @@
   "current_branch": "v1-g11-runtime-slice-approval-request",
   "document": "docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md",
   "source_document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
-  "guard_status": "active_static_file_export_absence_scan",
+  "guard_status": "retired_after_approve_v1_g11_recorded",
   "docs_tests_fixtures_only": true,
-  "runtime_implementation_approved": false,
-  "operator_approval_recorded": false,
-  "current_decision_record_empty": true,
-  "approved_implementation_branch": null,
+  "runtime_implementation_approved": true,
+  "operator_approval_recorded": true,
+  "current_decision_record_empty": false,
+  "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
   "approved_implementation_branch_if_approved": "v1-g11-runtime-request-decision-gate",
   "runtime_behavior_added": false,
   "lima_runtime_files_changed": false,
@@ -32,12 +32,12 @@
   "v1_product_ready": false,
   "production_ready": false,
   "current_decision_record": {
-    "recorded_choice": null,
-    "recorded_approval_wording": null,
+    "recorded_choice": "Approve-V1-G11",
+    "recorded_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
     "recorded_revision_request": null,
     "recorded_pause_reason": null,
-    "approved_implementation_branch": null,
-    "runtime_implementation_approved": false
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": true
   },
   "proposed_future_runtime_files": [
     "lima/kernel/v1_runtime_request.py",
@@ -47,7 +47,7 @@
     "lima/kernel/__init__.py",
     "lima/guardian/__init__.py"
   ],
-  "currently_forbidden_pre_approval_files": [
+  "previously_forbidden_pre_approval_files": [
     "lima/kernel/v1_runtime_request.py",
     "lima/guardian/v1_decision_gate.py",
     "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md",
@@ -89,10 +89,11 @@
     "review_v1_runtime_request"
   ],
   "doc_required_phrases": [
-    "V1-G11 runtime files must remain absent before approval",
-    "Current lima.kernel exports must remain unchanged before approval",
-    "Current lima.guardian exports must remain unchanged before approval"
+    "The valid `Approve-V1-G11` decision is now recorded",
+    "V1-G11 runtime files were required to remain absent before approval",
+    "Current lima.kernel exports were required to remain unchanged before approval",
+    "Current lima.guardian exports were required to remain unchanged before approval"
   ],
   "state_required_phrase": "V1-G11 pre-implementation file/export absence guard document",
-  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_decision_record"
+  "recommended_next_step": "create_approved_v1_g11_implementation_branch"
 }

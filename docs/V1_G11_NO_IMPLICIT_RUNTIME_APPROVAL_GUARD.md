@@ -4,17 +4,27 @@ Date: 2026-06-14
 Branch: `v1-g11-runtime-slice-approval-request`
 API status: `CANDIDATE_ONLY`
 
-This guard records a static fixture scan rule for the V1-G11 approval-request lane.
+This guard recorded a static fixture scan rule for the V1-G11 approval-request lane before approval was recorded.
 
-No V1-G11 fixture may record current runtime approval unless a valid operator decision is recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md`.
+The valid `Approve-V1-G11` decision is now recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md`, so this guard is retired. It should no longer fail merely because the operator decision packet records the approved V1-G11 runtime implementation scope.
 
 ## Guard Purpose
 
-The current V1 objective is accepted as product direction only. It does not approve the V1-G11 runtime slice.
+The current V1 objective remains product direction only. The V1-G11 runtime slice is approved only because the exact `Approve-V1-G11` decision record is now present.
 
 The only current path that can authorize V1-G11 runtime implementation is a valid `Approve-V1-G11` Decision Record in the operator decision packet, with the exact approval wording, approved implementation branch, and runtime implementation approved set to `yes`.
 
-Until that record exists, aggregate fixture evidence must keep current approval and release flags false.
+The guard now preserves the distinction between approved V1-G11 implementation scope and still-unapproved product readiness, final freeze, runtime export cleanup, consumer integration, provider/model routing, persistence, haptic device behavior, and physical-world behavior.
+
+## Retirement Result
+
+- Guard status: retired after valid `Approve-V1-G11` decision recorded.
+- Operator approval recorded: yes.
+- Runtime implementation approved: yes, limited to the exact V1-G11 request scope.
+- Product readiness approved: no.
+- Production readiness approved: no.
+- Runtime export cleanup approved: no.
+- Final API freeze approved: no.
 
 ## Guarded Fixture Set
 
@@ -32,28 +42,25 @@ The guard scans the current V1 status and V1-G11 fixtures:
 
 ## Forbidden Current Approval Flags
 
-The guard fails closed if any guarded fixture records current approval, release, export cleanup, runtime wiring, runtime behavior, shell wiring, persistence, haptic device behavior, provider/model routing, or physical-world behavior as true.
+The retired guard no longer scans guarded fixtures for current V1-G11 approval booleans. The operator decision packet is now the authoritative approval record.
 
-The only allowed true runtime-approval value is the hypothetical Approve-V1-G11 validation rule in `tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json`.
-
-That rule is not a current Decision Record. It only describes what a future valid approval record would require.
+Runtime behavior, release, export cleanup, runtime wiring, shell wiring, persistence, haptic device behavior, provider/model routing, and physical-world behavior must still remain false unless separately approved and implemented within an approved gate.
 
 ## Decision Record Requirement
 
-Current Decision Records must remain empty until an operator records one valid choice.
+The current valid approval record is:
 
-The guarded current records must keep:
-
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G11`
+- Recorded approval wording: exact required wording from the operator decision packet
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Runtime implementation approved: no
+- Approved implementation branch: `v1-g11-runtime-request-decision-gate`
+- Runtime implementation approved: yes
 
 ## Boundary Results
 
 - Docs/tests/fixtures-only: yes.
+- Runtime implementation approved: yes, limited to the exact V1-G11 request scope.
 - Runtime behavior added: no.
 - `lima/` runtime files changed: no.
 - `tests/support` changed: no.
@@ -71,6 +78,4 @@ The guarded current records must keep:
 
 ## Recommended Next Step
 
-Record exactly one valid operator choice in the V1-G11 operator decision packet.
-
-Until that happens, keep LIMA at `CANDIDATE_ONLY` and do not start runtime implementation.
+Create `v1-g11-runtime-request-decision-gate` and implement only the approved V1-G11 typed request and GuardianDecision preflight runtime slice.

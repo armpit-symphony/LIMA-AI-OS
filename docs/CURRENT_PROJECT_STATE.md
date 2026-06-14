@@ -1117,7 +1117,7 @@ Do not merge or tag from a routine implementation thread.
 ## V1-G11 - Runtime Request Decision Gate Approval Request
 
 - branch: `v1-g11-runtime-slice-approval-request`
-- status: docs/tests/fixtures-only approval request packet complete; runtime implementation still not approved
+- status: operator approval recorded for the narrow V1-G11 runtime request decision gate implementation; implementation branch authorized
 - base branch: `v1-g10-minimum-runtime-implementation-gate`
 - base commit: `39b866a3be3756d10287e3cefbd674ace7d2d469`
 - approval request document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`
@@ -1129,22 +1129,22 @@ Do not merge or tag from a routine implementation thread.
 - V1-G11 no implicit runtime approval guard document: `docs/V1_G11_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md`
 - V1-G11 pre-implementation file/export absence guard document: `docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md`
 - V1-G11 implementation start checklist document: `docs/V1_G11_IMPLEMENTATION_START_CHECKLIST.md`
-- V1-G11 request status: ready for operator decision
-- V1-G11 operator decision packet status: ready for one valid operator choice; no decision recorded
-- V1-G11 decision record slot: present and empty
-- V1-G11 runtime approval status: not granted
-- operator approval recorded: no
+- V1-G11 request status: approved for the exact typed request and GuardianDecision preflight runtime slice only
+- V1-G11 operator decision packet status: `Approve-V1-G11` recorded
+- V1-G11 decision record slot: present and records exactly one valid approval choice
+- V1-G11 runtime approval status: granted only for the approved V1-G11 file map and behavior scope
+- operator approval recorded: yes
 - API status: `CANDIDATE_ONLY`
 - V1 product readiness: not approved
 - production readiness: not approved
-- runtime behavior: not added
-- `lima/` changes in V1-G11 approval-request lane: not allowed and not made
+- runtime behavior: not added yet
+- `lima/` changes in V1-G11 approval-request lane: not made; approved implementation must occur on `v1-g11-runtime-request-decision-gate`
 - `tests/support` changes in V1-G11 approval-request lane: not allowed and not made
 - shell repo modifications in V1-G11 approval-request lane: not allowed and not made
 - Sparkbot code copied or imported: not added
 - provider/model calls, connector/file/browser/network/device/robotics behavior, haptic device behavior, file mutation, connector mutation, and physical-world behavior: not added
 - runtime export cleanup: not approved
 - final API freeze: not approved
-- exact approval question: approve V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
-- implementation work order status: ready if the exact V1-G11 runtime request is approved
-- recommended next step: record one valid operator choice in the V1-G11 operator decision packet's Decision Record section; if explicitly approved, create the V1-G11 implementation branch inside the approved scope
+- exact approval question: approved for V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
+- implementation work order status: ready to execute on `v1-g11-runtime-request-decision-gate`
+- recommended next step: create `v1-g11-runtime-request-decision-gate` and implement only the approved V1-G11 runtime request decision gate file map; stop before any consumer integration, provider/model routing, runtime export cleanup, final freeze, or product-readiness claim

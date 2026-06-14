@@ -5,9 +5,9 @@ Branch: `v1-g11-runtime-slice-approval-request`
 Source commit before packet: `d8e0d3bfce77535a0e9cb20e465a015b896e2db1`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `ready_for_operator_decision_no_decision_recorded`
+Decision packet status: `approve_v1_g11_recorded`
 
-This packet exists to record the operator decision for the exact V1-G11 approval request. It does not approve runtime implementation, change runtime behavior, modify `lima/`, or record operator approval by itself.
+This packet records the operator decision for the exact V1-G11 approval request. It does not change runtime behavior, modify `lima/`, approve product integration, or approve live execution by itself.
 
 ## Decision Source
 
@@ -26,23 +26,21 @@ General V1 product direction, the active product goal, prior static gates, this 
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Runtime implementation approved: no.
-- Approved next implementation branch: none yet.
-- Current next action: record one valid operator choice in this packet.
+- Operator approval recorded: yes.
+- Runtime implementation approved: yes.
+- Approved next implementation branch: `v1-g11-runtime-request-decision-gate`.
+- Current next action: create the approved implementation branch and execute only the V1-G11 work order.
 
 ## Decision Record
 
-No operator choice is recorded yet.
+One operator choice is recorded.
 
-Record exactly one of the following when the operator decides:
-
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G11`
+- Recorded approval wording: `I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Runtime implementation approved: no
+- Approved implementation branch: `v1-g11-runtime-request-decision-gate`
+- Runtime implementation approved: yes
 
 Only `Approve-V1-G11`, `Revise-V1-G11`, or `Pause` is valid here. Any other text is commentary, not a decision.
 
@@ -153,10 +151,10 @@ Implementation must stay inside the already named V1-G11 scope:
 
 Any different file requires a new gate update before implementation.
 
-## Boundaries That Remain False Today
+## Boundaries After Approval Record
 
-- Runtime implementation approved: no.
-- Operator approval recorded: no.
+- Runtime implementation approved: yes, limited to the exact V1-G11 request scope.
+- Operator approval recorded: yes.
 - Runtime behavior added: no.
 - `lima/` runtime files changed: no.
 - `tests/support` changed: no.
@@ -192,6 +190,6 @@ Stop before implementation or revert if any of the following appear without a ne
 
 ## Recommended Next Step
 
-Record one valid operator choice: `Approve-V1-G11`, `Revise-V1-G11`, or `Pause`.
+Create `v1-g11-runtime-request-decision-gate` and execute only the approved V1-G11 work order.
 
-Until that decision is recorded, keep LIMA at `CANDIDATE_ONLY` and do not start runtime implementation.
+Keep LIMA at `CANDIDATE_ONLY` and stop before any consumer integration, provider/model routing, runtime export cleanup, final freeze, product-readiness claim, or production-readiness claim.
