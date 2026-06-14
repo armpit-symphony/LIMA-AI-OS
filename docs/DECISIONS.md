@@ -6472,3 +6472,24 @@ Consequences:
 - Implementation approval remains false.
 - Runtime implementation remains not recommended.
 - Any future implementation lane remains blocked pending separate explicit Phil approval.
+
+## ADR-0336: V1-G11 Approval Request Is Ready But Runtime Remains Unapproved
+
+Status: Accepted
+
+Decision:
+
+The V1-G11 typed request and GuardianDecision preflight runtime-slice approval request is ready for operator decision, but runtime implementation remains unapproved until the exact request is explicitly approved.
+
+Context:
+
+V1-G10 defined the minimum runtime implementation gate and exact file-touch map. V1-G11 now records the exact approval question in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` and audits that request in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md`.
+
+Consequences:
+
+- V1-G11 approval-request work is docs/tests/fixtures-only.
+- Operator approval is not recorded by the request packet.
+- No `lima/` runtime files are changed by the request packet.
+- The only future implementation scope, if approved, is the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
+- Destructive edit/delete must map to approval-required status and must not execute or become approved without operator approval evidence.
+- Provider/model calls, shell wiring, durable persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, and physical-world behavior remain unapproved.

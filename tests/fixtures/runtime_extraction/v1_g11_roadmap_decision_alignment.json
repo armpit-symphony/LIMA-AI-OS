@@ -1,0 +1,47 @@
+{
+  "alignment_id": "v1_g11_roadmap_decision_alignment",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "base_commit": "a1dfc5e4952b099e7a083382a9429a84831bc8d7",
+  "documents": {
+    "roadmap": "docs/ROADMAP.md",
+    "decisions": "docs/DECISIONS.md",
+    "approval_request": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md",
+    "preflight_audit": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md"
+  },
+  "roadmap_alignment_added": true,
+  "decision_record_added": true,
+  "decision_id": "ADR-0336",
+  "approval_request_ready": true,
+  "operator_approval_recorded": false,
+  "runtime_implementation_approved": false,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_code_copied": false,
+  "sparkbot_import_added": false,
+  "provider_model_routing_added": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "accepted_alignment": [
+    "v1_g11_approval_request_is_ready_for_operator_decision",
+    "v1_g11_request_packet_does_not_record_operator_approval",
+    "runtime_remains_unapproved",
+    "approved_future_scope_must_match_v1_g11_request_exactly"
+  ],
+  "rejected_claims": [
+    "runtime_implementation_approved",
+    "real_guardian_decision_runtime_added",
+    "live_approval_enforcement_added",
+    "provider_model_routing_added",
+    "shell_runtime_wiring_added",
+    "runtime_export_cleanup_approved",
+    "final_api_freeze_approved",
+    "v1_product_readiness_approved",
+    "production_readiness_approved"
+  ],
+  "recommended_next_step": "operator_decision_on_exact_v1_g11_approval_question"
+}
