@@ -1243,8 +1243,12 @@ Do not merge or tag from a routine implementation thread.
 - preflight audit document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_PREFLIGHT_AUDIT.md`
 - work order document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_WORK_ORDER.md`
 - operator decision packet document: `docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_OPERATOR_DECISION_PACKET.md`
+- V1-G14 no implicit runtime approval guard document: `docs/V1_G14_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md`
+- V1-G14 implementation blocker audit document: `docs/audits/V1_G14_IMPLEMENTATION_BLOCKER_AUDIT.md`
 - V1-G14 request status: ready for operator decision, not approved
 - V1-G14 decision readiness status: ready for exactly one valid operator choice
+- V1-G14 no implicit approval guard status: active until `Approve-V1-G14` is recorded
+- V1-G14 implementation blocker status: active until `Approve-V1-G14` is recorded
 - operator approval recorded: no
 - API status: `CANDIDATE_ONLY`
 - proposed future runtime file map if approved: `lima/guardian/v1_approval_enforcement.py` and `lima/guardian/__init__.py`
