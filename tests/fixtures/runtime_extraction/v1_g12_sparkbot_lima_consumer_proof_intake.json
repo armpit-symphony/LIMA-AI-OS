@@ -1,0 +1,162 @@
+{
+  "gap_id": "V1-G12",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g12-sparkbot-lima-consumer-proof-intake",
+  "source_branch": "v1-g11-runtime-request-decision-gate",
+  "base_commit": "50425b41bb64cca8174c6fc21983cf44f8c41e6b",
+  "sparkbot_repo": "https://github.com/sparkpit-labs/Sparkbot",
+  "sparkbot_local_path": "C:\\Users\\limap\\Sparkbot",
+  "sparkbot_branch": "proof-sparkbot-shell-lima-consumer-packet",
+  "sparkbot_commit": "842a6757a2fbdc87451042eec465eb76be5bea80",
+  "docs_tests_fixtures_only": true,
+  "proof_packet_received": true,
+  "proof_audit_received": true,
+  "machine_readable_fixture_received": true,
+  "proof_accepted_as_static_evidence": true,
+  "proof_accepted_as_live_parity": false,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "runtime_exports_changed": false,
+  "consumer_integration_added": false,
+  "live_adapter_added": false,
+  "sparkbot_touched": false,
+  "sparkbot_shell_touched": false,
+  "arc_bot_shell_touched": false,
+  "sparkbot_wiring_added": false,
+  "sparkbot_shell_wiring_added": false,
+  "sparkbot_import_added": false,
+  "sparkbot_code_copied": false,
+  "provider_model_routing_added": false,
+  "provider_model_calls_added": false,
+  "guardian_authority_expanded": false,
+  "lima_guardian_decision_authority_added": false,
+  "approval_enforcement_added": false,
+  "humaninput_bridge_activated": false,
+  "connector_behavior_added": false,
+  "browser_file_network_action_behavior_added": false,
+  "external_sends_added": false,
+  "device_robotics_physical_world_behavior_added": false,
+  "haptic_device_behavior_added": false,
+  "durable_persistence_added": false,
+  "product_readiness_claimed": false,
+  "production_readiness_claimed": false,
+  "final_freeze_approved": false,
+  "runtime_export_cleanup_approved": false,
+  "sparkbot_proof_files_reviewed": [
+    "docs/proof_packets/SPARKBOT_SHELL_LIMA_CONSUMER_PROOF_PACKET.md",
+    "docs/audits/SPARKBOT_SHELL_LIMA_CONSUMER_PACKET_AUDIT.md",
+    "docs/proof_packets/sparkbot_shell_lima_consumer_packet.json"
+  ],
+  "lima_intake_documents": {
+    "intake": "docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_INTAKE.md",
+    "audit": "docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_AUDIT.md",
+    "closeout": "docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_CLOSEOUT.md"
+  },
+  "sparkbot_validation_reported": [
+    {
+      "command": "python3 --version",
+      "result": "failed: Python 3 shim not available"
+    },
+    {
+      "command": "python --version",
+      "result": "passed: Python 3.12.10"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed: clean"
+    },
+    {
+      "command": "npm run lint",
+      "result": "failed: bun not installed"
+    },
+    {
+      "command": "python -m pytest -q tests/test_sparkbot_lima_v1_g7_integration_proof_packet.py",
+      "result": "passed: 9 passed in 0.04s"
+    }
+  ],
+  "consumer_statuses": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "proposed_contract_surfaces": [
+    "workstation_overview",
+    "chat_surface",
+    "round_table_meeting",
+    "model_seat_configuration",
+    "memory_and_history",
+    "guardian_approval",
+    "tools_connectors"
+  ],
+  "mapped_lima_concepts": [
+    "ConsumerRequest",
+    "HumanInput",
+    "TaskIntent",
+    "TypedIntentEnvelope",
+    "CandidatePreview",
+    "RuntimeStateSnapshot",
+    "GuardianDecision",
+    "audit_spine"
+  ],
+  "candidate_preview_embodiment_profile_present": true,
+  "blocked_surfaces": [
+    "unmediated_model_routing_dispatch",
+    "unmediated_tool_calls",
+    "file_write_delete",
+    "network_connector_send",
+    "robotics_motion",
+    "secret_capture",
+    "browser_write_automation",
+    "runtime_audit_persistence_without_lima"
+  ],
+  "top_blockers": [
+    "no_live_consumer_request_intake_contract_in_shell",
+    "no_shared_intent_adapter_for_taskintent_typedintentenvelope",
+    "no_canonical_shell_to_lima_runtime_state_snapshot_event_contract",
+    "no_lima_native_guardian_decision_authority_in_current_paths",
+    "high_risk_actions_still_route_through_sparkbot_native_runtime_paths"
+  ],
+  "accepted_evidence": [
+    "Sparkbot proof packet delivered",
+    "Sparkbot audit delivered",
+    "Sparkbot machine-readable summary delivered",
+    "Sparkbot validation reported",
+    "Sparkbot static/reference consumer surfaces documented",
+    "candidate mappings documented",
+    "CandidatePreview embodiment_profile documented",
+    "preview_only explain_plan blocked deferred statuses documented",
+    "protected categories identified as Guardian-gated or blocked",
+    "Sparkbot accepted as substantial behavior-reference evidence"
+  ],
+  "rejected_claims": [
+    "live_lima_runtime_consumer_parity",
+    "sparkbot_on_lima_runtime_parity",
+    "live_consumer_request_intake_in_sparkbot",
+    "live_shared_intent_adapter",
+    "canonical_live_runtime_state_snapshot_export",
+    "lima_guardian_decision_authority",
+    "lima_approval_enforcement",
+    "lima_provider_model_routing",
+    "lima_provider_model_calls",
+    "lima_connector_tool_file_browser_network_device_robotics_physical_world_behavior",
+    "lima_audit_persistence",
+    "runtime_export_cleanup_approval",
+    "final_api_freeze",
+    "v1_product_readiness",
+    "production_readiness"
+  ],
+  "blockers": [
+    "no_live_consumer_request_intake_contract_in_shell",
+    "no_shared_intent_adapter_for_taskintent_typedintentenvelope",
+    "no_canonical_shell_to_lima_runtime_state_snapshot_event_contract",
+    "no_lima_native_guardian_decision_authority_in_current_paths",
+    "high_risk_actions_still_route_through_sparkbot_native_runtime_paths",
+    "no_live_lima_approval_enforcement",
+    "no_lima_provider_model_connector_runtime",
+    "no_lima_audit_persistence",
+    "no_production_behavior"
+  ],
+  "recommended_option": "V1-G13",
+  "recommended_next_step": "Open a separate approval gate for a strict non-execution Sparkbot LIMA Intake Adapter before any implementation."
+}

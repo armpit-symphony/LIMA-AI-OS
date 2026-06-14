@@ -1148,3 +1148,49 @@ Do not merge or tag from a routine implementation thread.
 - exact approval question: approved for V1-G11 typed request and GuardianDecision preflight runtime slice limited to the request's file scope, behavior scope, tests, rollback plan, and stop conditions
 - implementation work order status: ready to execute on `v1-g11-runtime-request-decision-gate`
 - recommended next step: create `v1-g11-runtime-request-decision-gate` and implement only the approved V1-G11 runtime request decision gate file map; stop before any consumer integration, provider/model routing, runtime export cleanup, final freeze, or product-readiness claim
+
+## V1-G11 - Runtime Request Decision Gate Implementation
+
+- branch: `v1-g11-runtime-request-decision-gate`
+- status: complete as the approved narrow local runtime preflight slice
+- base branch: `v1-g11-runtime-slice-approval-request`
+- base commit: `305a373a`
+- implementation commit: `50425b41bb64cca8174c6fc21983cf44f8c41e6b`
+- implementation document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md`
+- closeout document: `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md`
+- V1-G11 runtime status: local deterministic typed request builder and GuardianDecision preflight gate implemented within the approved file map
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- consumer integration: not added
+- provider/model routing: not added
+- HumanInput bridge activation: not added
+- connector behavior: not added
+- browser/file/network action behavior: not added
+- live discovery, scanning, pairing, credential use, device control, robot control, drone control, IoT control, or physical-world behavior: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- recommended next step: stop before consumer integration and use a separate approval gate for any live approval enforcement, durable audit/evidence persistence, provider/model routing, or first-shell runtime wiring
+
+## V1-G12 - Sparkbot LIMA Consumer Proof Intake
+
+- branch: `v1-g12-sparkbot-lima-consumer-proof-intake`
+- status: complete as docs/tests/fixtures-only static intake of the Sparkbot consumer proof packet
+- source branch: `v1-g11-runtime-request-decision-gate`
+- source commit: `50425b41bb64cca8174c6fc21983cf44f8c41e6b`
+- Sparkbot proof branch: `proof-sparkbot-shell-lima-consumer-packet`
+- Sparkbot proof commit: `842a6757a2fbdc87451042eec465eb76be5bea80`
+- intake document: `docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_INTAKE.md`
+- audit document: `docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_AUDIT.md`
+- closeout document: `docs/V1_G12_SPARKBOT_LIMA_CONSUMER_PROOF_CLOSEOUT.md`
+- V1-G12 intake status: accepts Sparkbot as static consumer-reference evidence only
+- live Sparkbot-on-LIMA runtime parity: not accepted
+- API status: `CANDIDATE_ONLY`
+- runtime behavior added in this intake: no
+- `lima/` runtime files changed in this intake: no
+- runtime exports changed in this intake: no
+- Sparkbot, Sparkbot_shell, Arc-Bot-shell, LIMA Robo OS, LIMA Office, and consumer repos changed in this intake: no
+- provider/model routing, connector behavior, browser/file/network/device/robotics behavior, haptic device behavior, physical-world behavior, consumer integration, approval enforcement, durable persistence, and product readiness: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- recommended next lane: V1-G13 separate approval gate for a strict non-execution Sparkbot LIMA Intake Adapter; do not implement that adapter from the V1-G12 intake packet alone
