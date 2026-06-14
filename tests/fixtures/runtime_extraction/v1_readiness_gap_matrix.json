@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "v1-g7-first-shell-integration-proof-request-gate",
+  "current_branch": "v1-g7-first-shell-integration-proof-closeout",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -88,14 +88,17 @@
     {
       "id": "V1-G7",
       "name": "first_shell_integration_proof",
-      "status": "request_gate_complete_awaiting_shell_packets",
+      "status": "complete_static_first_shell_integration_evidence",
       "request_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md",
       "audit_criteria_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_AUDIT_CRITERIA.md",
       "closeout_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST_CLOSEOUT.md",
-      "proof_packets_received": false,
-      "lima_intake_audits_complete": false,
-      "recommended_lane": "request_all_three_shell_proof_packets_then_lima_intake_audits",
-      "runtime_approval_needed": true
+      "consolidated_closeout_document": "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md",
+      "proof_packets_received": true,
+      "lima_intake_audits_complete": true,
+      "consolidated_closeout_complete": true,
+      "recommended_lane": "complete_static_first_shell_evidence_runtime_parity_out_of_scope",
+      "runtime_approval_needed": false,
+      "runtime_wiring_approval_needed": true
     },
     {
       "id": "V1-G8",
@@ -123,9 +126,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G7",
-  "next_smallest_safe_step_reason": "v1_g7_request_gate_complete_but_shell_proof_packets_are_not_delivered",
-  "next_smallest_safe_step_status": "pending_request_all_three_shell_proof_packets_then_intake_each_packet",
+  "next_smallest_safe_step": "V1-G8",
+  "next_smallest_safe_step_reason": "v1_g7_static_first_shell_evidence_complete_but_audit_persistence_is_missing",
+  "next_smallest_safe_step_status": "pending_audit_evidence_persistence_design_request_gate",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",
@@ -152,7 +155,8 @@
     "provider_model_routing_contract_added": true,
     "haptic_intent_metadata_contract_added": true,
     "first_shell_integration_proof_request_gate_added": true,
-    "first_shell_integration_proof_complete": false,
+    "first_shell_integration_proof_complete": true,
+    "first_shell_integration_proof_closeout_added": true,
     "audit_persistence_added": false,
     "haptic_device_behavior_added": false,
     "v1_release_claimed": false

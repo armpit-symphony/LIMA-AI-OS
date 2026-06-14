@@ -71,6 +71,10 @@ def test_v1_target_document_and_fixture_exist() -> None:
     )
     assert (
         fixture["v1_g7_closeout_document"]
+        == "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md"
+    )
+    assert (
+        fixture["v1_g7_request_closeout_document"]
         == "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST_CLOSEOUT.md"
     )
     assert fixture["product_direction_only"] is True
@@ -156,7 +160,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["haptic_intent_metadata_contract_added"] is True
     assert current["haptic_device_behavior_added"] is False
     assert current["first_shell_integration_proof_request_gate_added"] is True
-    assert current["first_shell_integration_proof_complete"] is False
+    assert current["first_shell_integration_proof_complete"] is True
+    assert current["first_shell_integration_proof_static_only"] is True
     accepted = fixture["accepted_shell_evidence"]
     assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
     assert accepted["sparkbot_shell_thinking_proof_scope"] == "source_backed_local_shell_evidence_only"
@@ -191,14 +196,21 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert static_evidence["v1_g6_haptic_device_behavior_proven"] is False
     assert static_evidence["v1_g6_shell_rendering_parity_proven"] is False
     assert static_evidence["v1_g7_first_shell_integration_proof_request_gate_completed"] is True
-    assert static_evidence["v1_g7_first_shell_integration_proof_packets_received"] is False
-    assert static_evidence["v1_g7_first_shell_integration_proof_accepted"] is False
+    assert static_evidence["v1_g7_first_shell_integration_proof_packets_received"] is True
+    assert static_evidence["v1_g7_sparkbot_shell_intake_accepted"] is True
+    assert static_evidence["v1_g7_sparkbot_intake_accepted"] is True
+    assert static_evidence["v1_g7_arc_bot_shell_intake_accepted"] is True
+    assert static_evidence["v1_g7_first_shell_integration_proof_accepted"] is True
+    assert static_evidence["v1_g7_first_shell_integration_proof_scope"] == (
+        "static_docs_tests_fixtures_only"
+    )
+    assert static_evidence["v1_g7_live_runtime_parity_proven"] is False
     blockers = set(fixture["remaining_blockers"])
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
     assert "provider_model_routing_not_implemented" in blockers
     assert "sparkbot_shell_real_thinking_state_proof_missing" not in blockers
-    assert "first_shell_integration_proof_packets_not_delivered" in blockers
+    assert "first_shell_integration_proof_static_only_live_runtime_parity_not_proven" in blockers
     assert "live_model_streaming_parity_not_proven" in blockers
     assert "haptic_device_rendering_proof_remains_shell_owned" in blockers
     assert "destructive_edit_delete_approval_enforcement_not_implemented" in blockers
@@ -209,7 +221,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "request_all_three_v1_g7_shell_proof_packets_in_parallel_then_intake_each_packet"
+        == "create_v1_g8_audit_evidence_persistence_design_request_gate"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -232,5 +244,9 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_seventh_gap_request_gate"]
         == "first_shell_integration_proof_request_gate_complete"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G7"
-    assert fixture["recommended_next_gap_to_close"] == "first_shell_integration_proof"
+    assert (
+        fixture["recommended_seventh_gap_closed"]
+        == "first_shell_integration_proof_static_evidence"
+    )
+    assert fixture["recommended_next_gap_id"] == "V1-G8"
+    assert fixture["recommended_next_gap_to_close"] == "audit_evidence_persistence"

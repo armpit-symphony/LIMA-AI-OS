@@ -90,7 +90,7 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 
 `V1-G6` static haptic intent metadata contract proof has been accepted in `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md`. It proves shell response state to haptic intent family mapping, required non-device metadata, forbidden device fields, shell-owned haptic boundaries, accessibility/fallback metadata, and fail-closed forged device haptic claims only. It does not prove device haptic behavior, shell rendering, LIMA runtime integration, or live UX parity.
 
-`V1-G7` first-shell integration proof request gate is now recorded in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md`. It defines required proof packets and audit criteria for `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` only. It does not prove first-shell integration, live runtime parity, shell wiring, or V1 product readiness.
+`V1-G7` first-shell integration proof is now closed as static evidence in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md`. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have been delivered and intaken by LIMA. This proves static first-shell compatibility evidence only. It does not prove live runtime parity, shell wiring, or V1 product readiness.
 
 ## Remaining Blockers
 
@@ -99,7 +99,7 @@ The current Phase 48.2 branch is a docs/tests/fixtures-only concrete implementat
 - provider/model routing is not implemented
 - typed bridge runtime behavior is not implemented
 - shell runtime wiring is not implemented
-- first-shell integration proof packets are not delivered and audited
+- first-shell integration proof is static-only and does not prove live runtime parity
 - live model streaming parity remains unproven
 - haptic device rendering proof remains shell-owned and not implemented here
 - audit persistence is not implemented
@@ -122,10 +122,10 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves non-device haptic intent metadata shape and fail-closed device haptic claim handling only. It does not prove device behavior or shell rendering.
 
-`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md` records the V1-G7 first-shell integration proof request gate. It defines packet requirements and audit criteria only. It does not accept any shell as integrated yet.
+`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. It accepts `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` as static first-shell evidence only. It does not approve shell runtime wiring or live parity.
 
-The next smallest safe step is `V1-G7D`: request all three first-shell proof packets in parallel, then intake each returned packet in LIMA.
+The next smallest safe step is `V1-G8`: create an audit/evidence persistence design/request gate.
 
 The likely next implementation design question is:
 
-Should the next concrete lane intake one shell packet at a time, or should LIMA wait for all three shell proof packets before beginning intake audits?
+What durable audit/evidence persistence contract is required before live approval, real `GuardianDecision`, provider/model routing, destructive edit/delete enforcement, or shell runtime wiring can be safely proposed?

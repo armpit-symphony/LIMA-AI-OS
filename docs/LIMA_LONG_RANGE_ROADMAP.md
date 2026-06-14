@@ -410,8 +410,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves response-state to haptic-intent mapping, required metadata, forbidden device fields, shell ownership, and fail-closed forged device claims.
 
-`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md` records the V1-G7 first-shell integration proof request gate. It defines the proof packet and audit criteria for `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`, but it does not complete V1-G7.
+`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` are accepted as static first-shell evidence only; live runtime parity remains unproven.
 
-The next smallest safe V1 action is `V1-G7D`: request all three first-shell proof packets in parallel, then perform one LIMA intake audit per returned packet.
+The next smallest safe V1 action is `V1-G8`: create an audit/evidence persistence design/request gate before any runtime export cleanup, final freeze, or runtime wiring proposal.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
