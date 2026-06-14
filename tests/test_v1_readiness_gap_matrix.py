@@ -56,10 +56,14 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
         == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
     )
     assert gaps["V1-G2"]["name"] == "typed_bridge_acceptance_proof"
-    assert gaps["V1-G2"]["status"] == "approval_gate_created_implementation_not_started"
+    assert gaps["V1-G2"]["status"] == "complete_static_docs_tests_fixtures_proof"
     assert (
         gaps["V1-G2"]["gate_document"]
         == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md"
+    )
+    assert (
+        gaps["V1-G2"]["proof_document"]
+        == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md"
     )
     assert gaps["V1-G3"]["name"] == "destructive_edit_delete_approval_contract"
     assert gaps["V1-G4"]["name"] == "real_guardian_decision_and_live_approval_path"
@@ -86,14 +90,14 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
 def test_v1_gap_matrix_recommends_typed_bridge_after_thinking_proof() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["next_smallest_safe_step"] == "V1-G2"
+    assert fixture["next_smallest_safe_step"] == "V1-G3"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "approval_gate_created_pending_docs_tests_fixtures_only_implementation_approval"
+        == "pending_docs_tests_fixtures_only_contract_design_and_static_acceptance_tests"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "typed_bridge_acceptance_proof_gate_created_after_source_backed_thinking_evidence"
+        == "destructive_edit_delete_operator_approval_contract_is_next_after_static_typed_bridge_acceptance_proof"
     )
 
 
@@ -133,7 +137,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     text = DOC_PATH.read_text(encoding="utf-8")
     assert "This matrix turns the V1 product target into an implementation-readiness sequence." in text
     assert "`V1-G1` is accepted as source-backed local shell evidence." in text
-    assert "The next smallest safe step is to approve and implement the `V1-G2`" in text
+    assert "`V1-G2` is complete as static docs/tests/fixtures-only typed bridge acceptance proof." in text
+    assert "The next smallest safe step is `V1-G3`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

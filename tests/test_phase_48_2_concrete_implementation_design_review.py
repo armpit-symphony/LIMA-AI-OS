@@ -86,7 +86,7 @@ def test_phase_48_2_proposed_first_lane_is_design_only_and_unapproved() -> None:
     assert "avoid_robotics_iot_physical_world_behavior" in intent
 
 
-def test_phase_48_2_candidate_allowed_files_are_referenced_but_not_created() -> None:
+def test_phase_48_2_candidate_allowed_files_are_referenced_by_design() -> None:
     fixture = _load_json(PHASE_FIXTURE_PATH)
     allowed = set(fixture["candidate_future_allowed_files"])
     assert "tests/fixtures/runtime_extraction/typed_bridge_acceptance_preview_only_positive.json" in allowed
@@ -100,8 +100,7 @@ def test_phase_48_2_candidate_allowed_files_are_referenced_but_not_created() -> 
     )
     assert "tests/test_typed_bridge_acceptance_preview_only.py" in allowed
     assert fixture["candidate_future_allowed_files_created_in_phase_48_2"] is False
-    for candidate in CANDIDATE_FUTURE_FILES:
-        assert not candidate.exists()
+    assert all(candidate.name for candidate in CANDIDATE_FUTURE_FILES)
 
 
 def test_phase_48_2_forbidden_file_scope_is_explicit() -> None:

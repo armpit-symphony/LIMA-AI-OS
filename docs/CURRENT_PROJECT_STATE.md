@@ -858,7 +858,7 @@ Do not merge or tag from a routine implementation thread.
 - V1 future capability direction: live approval, real `GuardianDecision`, provider/model routing, shell-owned haptic intent support, first-shell response-state parity
 - destructive edit/delete policy: operator approval required in LIMA-AI-OS and shells
 - V1-G1 status: accepted as source-backed local Sparkbot_shell `thinking` evidence only
-- next smallest safe V1 gap: V1-G2 typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane
+- next smallest safe V1 gap at Phase 48.2 time: V1-G2 typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane; current V1-G2 status is tracked below
 - runtime implementation: blocked
 - implementation approval: not granted
 - runtime test harness: not created
@@ -868,21 +868,24 @@ Do not merge or tag from a routine implementation thread.
 - Sparkbot Shell modifications in phase lane: not allowed
 - recommended next lane (post-approval): pause/preserve or Phase 48.3 docs/tests/fixtures-only design readiness review; no implementation lane without separate explicit Phil approval
 
-## V1-G2 - Typed Bridge Acceptance Proof Gate
+## V1-G2 - Typed Bridge Acceptance Proof
 
-- branch: `v1-g2-typed-bridge-acceptance-proof-gate`
-- status: docs/tests/fixtures-only approval gate in progress
-- source branch: `intake-sparkbot-shell-thinking-state-proof-packet`
-- source commit: `5f6472becee8c409b0a330053cf9a619e2be4d74`
+- branch: `v1-g2-typed-bridge-acceptance-proof`
+- status: docs/tests/fixtures-only static proof complete
+- gate branch: `v1-g2-typed-bridge-acceptance-proof-gate`
+- gate commit: `d8956f0838b6d1183ab625928e37c1c978af1d78`
 - gate document: `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md`
+- proof document: `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md`
+- audit document: `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_AUDIT.md`
+- closeout document: `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_CLOSEOUT.md`
 - V1-G1 prerequisite: accepted as source-backed local Sparkbot_shell `thinking` evidence only
-- V1-G2 status: approval gate created; typed bridge acceptance proof implementation not started
+- V1-G2 status: complete as static docs/tests/fixtures-only typed bridge acceptance proof
 - runtime implementation: blocked
-- implementation approval: not granted by this gate
+- runtime implementation approval: not granted
 - runtime test harness: not created
-- executable acceptance tests: not added by this gate
-- `lima/` changes in gate lane: not allowed
-- `tests/support/` changes in gate lane: not allowed
-- shell repo modifications in gate lane: not allowed
+- static acceptance tests: added under `tests/`
+- `lima/` changes in proof lane: not allowed
+- `tests/support/` changes in proof lane: not allowed
+- shell repo modifications in proof lane: not allowed
 - provider/model routing, real `GuardianDecision`, approval enforcement, persistence, haptic device behavior, browser/file/network/device/robotics behavior, and physical-world behavior: not added
-- recommended next lane: approve and implement V1-G2 docs/tests/fixtures-only typed bridge acceptance proof, then move to V1-G3 destructive edit/delete operator-approval contract
+- recommended next lane: V1-G3 destructive edit/delete operator-approval contract design and static acceptance tests

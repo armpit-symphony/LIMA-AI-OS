@@ -120,7 +120,7 @@ def test_v1_g2_gate_defines_required_metadata_chain_and_cases() -> None:
     assert "browser_file_network_device_robotics_claim" in fail_closed
 
 
-def test_v1_g2_gate_names_candidate_allowed_files_but_does_not_create_them() -> None:
+def test_v1_g2_gate_names_candidate_allowed_files() -> None:
     fixture = _load_fixture()
     allowed = set(fixture["candidate_future_allowed_files"])
     expected = {
@@ -142,8 +142,6 @@ def test_v1_g2_gate_names_candidate_allowed_files_but_does_not_create_them() -> 
     }
     assert expected.issubset(allowed)
     assert fixture["candidate_future_allowed_files_created_by_this_gate"] is False
-    for relative_path in expected:
-        assert not (REPO_ROOT / relative_path).exists()
 
 
 def test_v1_g2_gate_forbidden_scope_blocks_runtime_support_and_shell_repos() -> None:

@@ -1106,10 +1106,10 @@ Result:
 - It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence.
 - It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` as the narrow Sparkbot_shell request for source-backed `thinking` / progress-state proof.
 - It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as LIMA intake for Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`, accepting `thinking` as source-backed local shell evidence only.
-- It adds `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md` as the approval gate for the V1-G2 typed bridge acceptance proof.
-- The next smallest safe V1 gap is approval and implementation of `V1-G2` typed bridge acceptance proof, still docs/tests/fixtures-only unless explicitly expanded.
-- Candidate future files are named but not created.
-- Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
+- It adds `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` as the static V1-G2 typed bridge acceptance proof.
+- The next smallest safe V1 gap is `V1-G3` destructive edit/delete operator-approval contract design and static acceptance tests.
+- V1-G2 proof fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- Runtime implementation, runtime harness creation, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
 Status:
 

@@ -32,9 +32,12 @@
     {
       "id": "V1-G2",
       "name": "typed_bridge_acceptance_proof",
-      "status": "approval_gate_created_implementation_not_started",
+      "status": "complete_static_docs_tests_fixtures_proof",
       "gate_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md",
-      "recommended_lane": "implement_v1_g2_docs_tests_fixtures_acceptance_proof_if_approved",
+      "proof_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md",
+      "audit_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_AUDIT.md",
+      "closeout_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_CLOSEOUT.md",
+      "recommended_lane": "complete_static_docs_tests_fixtures_proof_runtime_bridge_out_of_scope",
       "runtime_approval_needed": false
     },
     {
@@ -98,9 +101,9 @@
     "V1-G8",
     "V1-G9"
   ],
-  "next_smallest_safe_step": "V1-G2",
-  "next_smallest_safe_step_reason": "typed_bridge_acceptance_proof_gate_created_after_source_backed_thinking_evidence",
-  "next_smallest_safe_step_status": "approval_gate_created_pending_docs_tests_fixtures_only_implementation_approval",
+  "next_smallest_safe_step": "V1-G3",
+  "next_smallest_safe_step_reason": "destructive_edit_delete_operator_approval_contract_is_next_after_static_typed_bridge_acceptance_proof",
+  "next_smallest_safe_step_status": "pending_docs_tests_fixtures_only_contract_design_and_static_acceptance_tests",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",

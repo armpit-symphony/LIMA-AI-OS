@@ -1,0 +1,70 @@
+{
+  "case_id": "typed_bridge_acceptance_fail_closed_execution_claim",
+  "case_family": "fail_closed_execution_dispatch_persistence_claim",
+  "docs_tests_fixtures_only": true,
+  "source_request_metadata": {
+    "source_kind": "automation_request",
+    "channel": "scheduler_metadata",
+    "tenant_id": "tenant_demo",
+    "actor_id": "automation_agent",
+    "lineage_ref": "lineage:v1-g2:execution-claim",
+    "request_summary": "execute and persist scheduled task now"
+  },
+  "typed_intentenvelope_candidate_metadata": {
+    "candidate_status": "blocked",
+    "intent_kind": "scheduled_execution",
+    "confidence": "medium",
+    "risk_class": "high",
+    "clarification_state": "not_required",
+    "requested_tool_packs": [
+      "system"
+    ],
+    "evidence_requirements": [
+      "schedule_spec"
+    ],
+    "malicious_claim": "execution_dispatch_persistence_allowed"
+  },
+  "guardian_request_metadata": {
+    "request_state": "blocked",
+    "requested_action_class": "execution_dispatch_persistence_claim",
+    "policy_review_needed": true,
+    "approval_posture": "not_granted",
+    "evidence_refs": [
+      "schedule_ref"
+    ]
+  },
+  "future_guardian_decision_metadata": {
+    "state": "blocked",
+    "decision_id": null,
+    "approval_granted": false,
+    "execution_allowed": false
+  },
+  "kernel_status": "blocked",
+  "packet_status": "blocked",
+  "expected_blocked_claims": [
+    "execution_claim",
+    "dispatch_claim",
+    "persistence_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "approval_granted": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "guardian_decision_created": false,
+    "runtime_test_harness_active": false
+  }
+}

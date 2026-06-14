@@ -33,6 +33,7 @@ def test_v1_target_document_and_fixture_exist() -> None:
     assert fixture["v1_g1_request_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
     assert fixture["v1_g1_intake_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
     assert fixture["v1_g2_gate_document"] == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md"
+    assert fixture["v1_g2_proof_document"] == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -116,6 +117,10 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert accepted["sparkbot_shell_thinking_proof_accepted"] is True
     assert accepted["sparkbot_shell_thinking_proof_scope"] == "source_backed_local_shell_evidence_only"
     assert accepted["sparkbot_shell_live_streaming_parity_proven"] is False
+    static_evidence = fixture["accepted_static_lima_evidence"]
+    assert static_evidence["v1_g2_typed_bridge_acceptance_proof_accepted"] is True
+    assert static_evidence["v1_g2_typed_bridge_acceptance_proof_scope"] == "static_docs_tests_fixtures_only"
+    assert static_evidence["v1_g2_runtime_bridge_behavior_proven"] is False
     blockers = set(fixture["remaining_blockers"])
     assert "real_guardian_decision_runtime_path_not_implemented" in blockers
     assert "live_approval_enforcement_not_implemented" in blockers
@@ -130,7 +135,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "approve_and_implement_v1_g2_docs_tests_fixtures_only_typed_bridge_acceptance_proof"
+        == "design_v1_g3_destructive_edit_delete_operator_approval_contract"
     )
-    assert fixture["recommended_next_gap_id"] == "V1-G2"
-    assert fixture["recommended_next_gap_to_close"] == "typed_bridge_acceptance_proof"
+    assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
+    assert fixture["recommended_next_gap_id"] == "V1-G3"
+    assert fixture["recommended_next_gap_to_close"] == "destructive_edit_delete_approval_contract"
