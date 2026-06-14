@@ -44,7 +44,7 @@ def test_v1_gap_matrix_names_first_shell_consumers() -> None:
 
 def test_v1_gap_matrix_covers_expected_gaps() -> None:
     gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
-    assert set(gaps) == {f"V1-G{index}" for index in range(11)}
+    assert set(gaps) == {f"V1-G{index}" for index in range(12)}
     assert gaps["V1-G1"]["name"] == "sparkbot_shell_thinking_progress_proof"
     assert gaps["V1-G1"]["status"] == "accepted_source_backed_local_shell_evidence"
     assert (
@@ -132,7 +132,21 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
     )
     assert gaps["V1-G9"]["release_boundary_passed"] is False
     assert gaps["V1-G10"]["name"] == "minimum_runtime_implementation_gate"
-    assert gaps["V1-G10"]["status"] == "pending_explicit_implementation_gate"
+    assert gaps["V1-G10"]["status"] == "complete_static_implementation_gate_runtime_not_approved"
+    assert (
+        gaps["V1-G10"]["gate_document"]
+        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md"
+    )
+    assert (
+        gaps["V1-G10"]["closeout_document"]
+        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_CLOSEOUT.md"
+    )
+    assert gaps["V1-G11"]["name"] == "typed_request_guardian_decision_preflight_runtime_slice"
+    assert gaps["V1-G11"]["status"] == "pending_explicit_runtime_implementation_approval"
+    assert (
+        gaps["V1-G11"]["gate_source_document"]
+        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md"
+    )
 
 
 def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
@@ -157,20 +171,24 @@ def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
     assert gaps["V1-G9"]["final_freeze_approved"] is False
     assert gaps["V1-G10"]["runtime_approval_needed"] is False
     assert gaps["V1-G10"]["later_runtime_implementation_approval_needed"] is True
+    assert gaps["V1-G11"]["runtime_approval_needed"] is True
+    assert gaps["V1-G11"]["runtime_implementation_added"] is False
+    assert gaps["V1-G11"]["runtime_export_cleanup_approved"] is False
+    assert gaps["V1-G11"]["final_freeze_approved"] is False
 
 
 def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() -> None:
     fixture = _load_fixture()
     assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["recommended_order"][-1] == "V1-G10"
-    assert fixture["next_smallest_safe_step"] == "V1-G10"
+    assert fixture["recommended_order"][-1] == "V1-G11"
+    assert fixture["next_smallest_safe_step"] == "V1-G11"
     assert (
         fixture["next_smallest_safe_step_status"]
-        == "pending_minimum_runtime_implementation_gate"
+        == "pending_explicit_runtime_implementation_approval"
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g9_release_boundary_audit_complete_but_boundary_not_passed"
+        == "v1_g10_minimum_runtime_implementation_gate_complete_runtime_not_approved"
     )
 
 
@@ -203,6 +221,9 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["audit_evidence_persistence_threat_model_added"] is True
     assert boundary["product_release_boundary_audit_added"] is True
     assert boundary["product_release_boundary_passed"] is False
+    assert boundary["minimum_runtime_implementation_gate_added"] is True
+    assert boundary["minimum_runtime_implementation_gate_runtime_approved"] is False
+    assert boundary["v1_g11_runtime_implementation_added"] is False
     for key in (
         "runtime_behavior_added",
         "lima_runtime_files_changed",
@@ -232,7 +253,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G7` is complete as static docs/tests/fixtures-only first-shell integration evidence." in text
     assert "`V1-G8` is complete as static docs/tests/fixtures-only audit/evidence persistence contract" in text
     assert "`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit" in text
-    assert "The next smallest safe step is `V1-G10`" in text
+    assert "`V1-G10` is complete as static docs/tests/fixtures-only minimum runtime implementation gate" in text
+    assert "The next smallest safe step is `V1-G11`" in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

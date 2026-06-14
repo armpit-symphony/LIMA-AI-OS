@@ -416,6 +416,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
 
-The next smallest safe V1 action is `V1-G10`: create a minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change. That gate should prioritize typed bridge behavior, real `GuardianDecision`, live approval enforcement for destructive edit/delete, and audit/evidence linkage.
+`docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` records the V1-G10 minimum runtime implementation gate. The gate is complete as docs/tests/fixtures-only evidence. It defines the V1-G11 file-touch map, rollback plan, acceptance-test expectations, and stop conditions, but it does not approve runtime implementation.
+
+The next smallest safe V1 action is `V1-G11`, after explicit approval: implement the typed request and GuardianDecision preflight runtime slice limited to the V1-G10 file-touch map. It must remain local, deterministic, non-executing, non-persistent, and fail-closed. It must not add provider/model calls, shell wiring, haptic device behavior, runtime export cleanup, final freeze, browser/file/network/device/robotics behavior, or physical-world behavior.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

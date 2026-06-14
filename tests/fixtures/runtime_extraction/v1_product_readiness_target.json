@@ -30,6 +30,8 @@
   "v1_g8_closeout_document": "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
   "v1_g9_audit_document": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md",
   "v1_g9_closeout_document": "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md",
+  "v1_g10_gate_document": "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md",
+  "v1_g10_closeout_document": "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_CLOSEOUT.md",
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
   "phase_48_2_implementation_approved": false,
@@ -113,6 +115,9 @@
     "audit_evidence_persistence_threat_model_added": true,
     "product_release_boundary_audit_added": true,
     "product_release_boundary_passed": false,
+    "minimum_runtime_implementation_gate_added": true,
+    "minimum_runtime_implementation_gate_approved_runtime": false,
+    "v1_g11_runtime_implementation_approved": false,
     "durable_audit_persistence_implemented": false,
     "guardian_decision_runtime_added": false,
     "approval_enforcement_added": false,
@@ -157,10 +162,14 @@
     "v1_g8_durable_audit_persistence_proven": false,
     "v1_g9_product_release_boundary_audit_completed": true,
     "v1_g9_product_release_boundary_scope": "static_docs_tests_fixtures_only_no_release_approval",
-    "v1_g9_product_release_boundary_passed": false
+    "v1_g9_product_release_boundary_passed": false,
+    "v1_g10_minimum_runtime_implementation_gate_completed": true,
+    "v1_g10_minimum_runtime_implementation_gate_scope": "docs_tests_fixtures_only_no_runtime_approval",
+    "v1_g10_runtime_implementation_approved": false
   },
   "remaining_blockers": [
-    "runtime_implementation_scope_gate_missing",
+    "v1_g11_implementation_approval_required",
+    "runtime_implementation_scope_gate_defined_but_runtime_unapproved",
     "real_guardian_decision_runtime_path_not_implemented",
     "live_approval_enforcement_not_implemented",
     "provider_model_routing_not_implemented",
@@ -176,7 +185,7 @@
     "final_api_freeze_unapproved",
     "production_behavior_not_approved"
   ],
-  "recommended_next_step": "create_v1_g10_minimum_runtime_implementation_gate",
+  "recommended_next_step": "implement_v1_g11_typed_request_guardian_decision_preflight_after_explicit_approval",
   "recommended_first_gap_closed": "sparkbot_shell_source_backed_thinking_progress_state",
   "recommended_second_gap_closed": "typed_bridge_acceptance_proof_static_evidence",
   "recommended_third_gap_closed": "destructive_edit_delete_operator_approval_contract_static_evidence",
@@ -188,6 +197,7 @@
   "recommended_eighth_gap_request_gate": "audit_evidence_persistence_request_gate_complete",
   "recommended_eighth_gap_closed": "audit_evidence_persistence_static_contract_and_threat_model",
   "recommended_ninth_gap_closed": "product_release_boundary_audit_complete_boundary_not_passed",
-  "recommended_next_gap_to_close": "minimum_runtime_implementation_gate",
-  "recommended_next_gap_id": "V1-G10"
+  "recommended_tenth_gap_closed": "minimum_runtime_implementation_gate_defined_runtime_not_approved",
+  "recommended_next_gap_to_close": "typed_request_guardian_decision_preflight_runtime_slice",
+  "recommended_next_gap_id": "V1-G11"
 }

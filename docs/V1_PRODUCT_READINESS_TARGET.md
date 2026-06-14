@@ -98,9 +98,12 @@ The current V1 lane remains docs/tests/fixtures-only. It does not implement runt
 
 `V1-G9` product release boundary audit is now recorded in `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md`. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
 
+`V1-G10` minimum runtime implementation gate is now recorded in `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md`. It defines the future V1-G11 file-touch map, rollback plan, acceptance-test expectations, stop conditions, and runtime-slice boundaries. It does not approve runtime implementation or change runtime behavior.
+
 ## Remaining Blockers
 
-- runtime implementation scope gate is missing
+- V1-G11 implementation approval is still required
+- runtime implementation scope gate is defined, but runtime implementation is not approved
 - real `GuardianDecision` runtime path is not implemented
 - live approval enforcement is not implemented
 - provider/model routing is not implemented
@@ -118,7 +121,7 @@ The current V1 lane remains docs/tests/fixtures-only. It does not implement runt
 
 ## Recommended Next Step
 
-Use `V1-G10` to create a minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change.
+Use `V1-G11`, after explicit approval, to implement the typed request and GuardianDecision preflight runtime slice exactly inside the V1-G10 file-touch map.
 
 `docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
 
@@ -138,6 +141,8 @@ Use `V1-G10` to create a minimum runtime implementation gate and exact file-touc
 
 `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. It confirms that static evidence is not enough for V1 readiness, runtime export cleanup, final freeze, or production claims.
 
+`docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` records the V1-G10 minimum runtime implementation gate. It confirms that the first future runtime slice should be typed request plus GuardianDecision preflight behavior only, with no execution, no provider/model calls, no durable persistence, no shell wiring, no runtime export cleanup, and no final freeze.
+
 The next implementation design question is:
 
-What is the smallest explicitly gated runtime implementation slice that can move LIMA from static V1 evidence toward usable V1 behavior without bypassing Guardian, approval, audit/evidence, shell, or rollback boundaries?
+Should V1-G11 be explicitly approved as the smallest runtime implementation slice that moves LIMA from static V1 evidence toward usable V1 behavior without bypassing Guardian, approval, audit/evidence, shell, or rollback boundaries?

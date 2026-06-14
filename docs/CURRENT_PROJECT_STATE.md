@@ -1087,3 +1087,29 @@ Do not merge or tag from a routine implementation thread.
 - shell repo modifications in V1-G9 lane: not allowed
 - provider/model calls, connector/file/browser/network/device/robotics behavior, haptic device behavior, file mutation, connector mutation, and physical-world behavior: not added
 - recommended next lane: V1-G10 minimum runtime implementation gate and exact file-touch/rollback plan before any `lima/` runtime change
+
+## V1-G10 - Minimum Runtime Implementation Gate
+
+- branch: `v1-g10-minimum-runtime-implementation-gate`
+- status: complete as docs/tests/fixtures-only minimum runtime implementation gate
+- base branch: `v1-g9-product-release-boundary-audit`
+- base commit: `f6cf8dc9de0f1f50828a614e0b5cbd6830e7314f`
+- gate document: `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md`
+- closeout document: `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_CLOSEOUT.md`
+- V1-G10 gate status: implementation gate defined
+- V1-G10 runtime approval status: not granted
+- API status: `CANDIDATE_ONLY`
+- V1 product readiness: not approved
+- production readiness: not approved
+- runtime implementation: blocked
+- runtime implementation approval: not granted
+- runtime behavior: not added
+- `lima/` changes in V1-G10 lane: not allowed and not made
+- `tests/support` changes in V1-G10 lane: not allowed and not made
+- shell repo modifications in V1-G10 lane: not allowed and not made
+- Sparkbot code copied or imported: not added
+- provider/model calls, connector/file/browser/network/device/robotics behavior, haptic device behavior, file mutation, connector mutation, and physical-world behavior: not added
+- runtime export cleanup: not approved
+- final API freeze: not approved
+- future V1-G11 runtime file-touch map: limited to `lima/kernel/v1_runtime_request.py`, `lima/kernel/__init__.py`, `lima/guardian/v1_decision_gate.py`, and `lima/guardian/__init__.py` only if a later explicit approval authorizes implementation
+- recommended next lane: V1-G11 typed request GuardianDecision preflight runtime slice after explicit runtime approval
