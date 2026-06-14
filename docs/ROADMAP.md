@@ -1361,7 +1361,9 @@ The runtime is credible only if the trust boundary is real:
 
 ## Current Status
 
-Phase 0 only. No runtime implementation yet.
+Candidate-only, non-production safety work. No live/executing runtime behavior is approved.
+
+The repository now contains narrow non-executing candidate, preview, status-normalization, and read-only runtime-state helpers. Those helpers do not approve live tool execution, production deployment wiring, credentials, real model calls, approval enforcement, persistence, or robotics control paths.
 
 ## Phase 2.28 — Fake GuardianDecision Test Design Review
 

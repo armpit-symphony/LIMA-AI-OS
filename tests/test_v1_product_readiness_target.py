@@ -32,6 +32,7 @@ def test_v1_target_document_and_fixture_exist() -> None:
     assert fixture["readiness_gap_matrix"] == "docs/V1_READINESS_GAP_MATRIX.md"
     assert fixture["v1_g1_request_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
     assert fixture["v1_g1_intake_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
+    assert fixture["v1_g2_gate_document"] == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -126,6 +127,10 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert (
         fixture["recommended_first_gap_closed"]
         == "sparkbot_shell_source_backed_thinking_progress_state"
+    )
+    assert (
+        fixture["recommended_next_step"]
+        == "approve_and_implement_v1_g2_docs_tests_fixtures_only_typed_bridge_acceptance_proof"
     )
     assert fixture["recommended_next_gap_id"] == "V1-G2"
     assert fixture["recommended_next_gap_to_close"] == "typed_bridge_acceptance_proof"

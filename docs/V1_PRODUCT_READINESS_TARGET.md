@@ -99,7 +99,9 @@ Use Phase 48.3 or the next approved docs/tests/fixtures lane to review whether t
 
 `docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is now accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
 
-The next smallest safe step is `V1-G2`: typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane.
+`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md` now records the V1-G2 approval gate. It does not implement the typed bridge acceptance proof. It names the candidate docs/tests/fixtures-only proof lane that should be approved before creating the proof fixtures and static tests.
+
+The next smallest safe step is to approve and implement `V1-G2`: typed bridge acceptance proof as a docs/tests/fixtures-only lane.
 
 The likely next implementation design question is:
 

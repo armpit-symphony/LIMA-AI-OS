@@ -1,7 +1,7 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "phase-48-2-concrete-implementation-design-review",
+  "current_branch": "v1-g2-typed-bridge-acceptance-proof-gate",
   "docs_tests_fixtures_only": true,
   "implementation_approved": false,
   "v1_product_ready": false,
@@ -32,8 +32,9 @@
     {
       "id": "V1-G2",
       "name": "typed_bridge_acceptance_proof",
-      "status": "designed_not_implemented",
-      "recommended_lane": "separately_approved_typed_bridge_acceptance_test_implementation_lane",
+      "status": "approval_gate_created_implementation_not_started",
+      "gate_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md",
+      "recommended_lane": "implement_v1_g2_docs_tests_fixtures_acceptance_proof_if_approved",
       "runtime_approval_needed": false
     },
     {
@@ -98,8 +99,8 @@
     "V1-G9"
   ],
   "next_smallest_safe_step": "V1-G2",
-  "next_smallest_safe_step_reason": "typed_bridge_acceptance_proof_is_next_after_source_backed_thinking_evidence",
-  "next_smallest_safe_step_status": "pending_separate_approval_tests_fixtures_only",
+  "next_smallest_safe_step_reason": "typed_bridge_acceptance_proof_gate_created_after_source_backed_thinking_evidence",
+  "next_smallest_safe_step_status": "approval_gate_created_pending_docs_tests_fixtures_only_implementation_approval",
   "stop_conditions": [
     "lima_runtime_change",
     "tests_support_runtime_or_harness_helper",

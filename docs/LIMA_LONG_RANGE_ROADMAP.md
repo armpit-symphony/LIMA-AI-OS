@@ -400,6 +400,8 @@ The V1 direction allows future scoped implementation of live/actual approval, re
 
 `docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` accepts Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627` as source-backed local `thinking` / progress-state evidence only.
 
-The next smallest safe V1 gap is `V1-G2`: typed bridge acceptance proof as a separately approved docs/tests/fixtures-only lane.
+`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md` records the V1-G2 approval gate. It does not implement proof cases or runtime behavior.
+
+The next smallest safe V1 gap is to approve and implement `V1-G2`: typed bridge acceptance proof as a docs/tests/fixtures-only lane.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

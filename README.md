@@ -32,9 +32,9 @@ LIMA Runtime is the trust-gated operating layer that should eventually sit under
 
 The long-term vision can be called an AI OS. The engineering surface is more concrete: runtime, kernel, contracts, trust gate, model harness, spine, drivers, shells, tool packs, and persistence interface.
 
-## Phase 0 Status
+## Current Safety Status
 
-**Phase 0 only. No runtime implementation yet.**
+**Candidate-only, non-production safety work. No live/executing runtime behavior is approved.**
 
 This repository currently contains:
 
@@ -43,6 +43,7 @@ This repository currently contains:
 - Public contract definitions
 - Package skeleton
 - Import-only tests
+- Narrow non-executing candidate, preview, status-normalization, and read-only runtime-state helpers
 
 It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
 
@@ -1105,7 +1106,8 @@ Result:
 - It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence.
 - It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` as the narrow Sparkbot_shell request for source-backed `thinking` / progress-state proof.
 - It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as LIMA intake for Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`, accepting `thinking` as source-backed local shell evidence only.
-- The next smallest safe V1 gap is `V1-G2` typed bridge acceptance proof, still requiring separate approval and still docs/tests/fixtures-only unless explicitly expanded.
+- It adds `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md` as the approval gate for the V1-G2 typed bridge acceptance proof.
+- The next smallest safe V1 gap is approval and implementation of `V1-G2` typed bridge acceptance proof, still docs/tests/fixtures-only unless explicitly expanded.
 - Candidate future files are named but not created.
 - Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
