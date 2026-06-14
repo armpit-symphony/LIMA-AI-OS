@@ -30,6 +30,7 @@ def test_v1_target_document_and_fixture_exist() -> None:
     assert fixture["target_version"] == "1.0"
     assert fixture["document"] == "docs/V1_PRODUCT_READINESS_TARGET.md"
     assert fixture["readiness_gap_matrix"] == "docs/V1_READINESS_GAP_MATRIX.md"
+    assert fixture["v1_g1_request_document"] == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
     assert fixture["product_direction_only"] is True
     assert fixture["runtime_implementation_approved_by_this_fixture"] is False
     assert fixture["phase_48_2_implementation_approved"] is False
@@ -120,3 +121,4 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         fixture["recommended_first_gap_to_close"]
         == "sparkbot_shell_source_backed_thinking_progress_state"
     )
+    assert fixture["recommended_first_gap_request_created"] is True

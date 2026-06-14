@@ -16,7 +16,7 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 | ID | Gap | Current evidence | V1-ready requirement | Recommended lane | Runtime approval needed |
 | --- | --- | --- | --- | --- | --- |
 | `V1-G0` | V1 target clarity | `docs/V1_PRODUCT_READINESS_TARGET.md` exists and is static-tested | Keep first-shell target, operator approval rule, haptics ownership, and future runtime capabilities explicit | Complete in current branch | No |
-| `V1-G1` | Sparkbot_shell `thinking` / progress proof | Sparkbot_shell static packet was accepted as static evidence only; real source-backed `thinking` remains missing | Source-backed shell evidence for in-band thinking/progress/streaming state | Sparkbot_shell follow-up proof packet and LIMA intake audit | No LIMA runtime approval |
+| `V1-G1` | Sparkbot_shell `thinking` / progress proof | LIMA request now exists in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md`; source-backed `thinking` evidence is still not received | Source-backed shell evidence for in-band thinking/progress/streaming state | Sparkbot_shell follow-up proof packet and LIMA intake audit | No LIMA runtime approval |
 | `V1-G2` | Typed bridge acceptance proof | Phase 44-48 design artifacts exist; Phase 48.2 names candidate future tests but does not create them | Executable acceptance tests proving source request metadata, typed IntentEnvelope candidate metadata, and Guardian request metadata fail closed without authority | Separately approved typed bridge acceptance-test implementation lane | No runtime approval if kept tests/fixtures-only |
 | `V1-G3` | Destructive edit/delete approval contract | V1 target records that edits/deletes/overwrites require operator approval | Contract and tests proving destructive action classes cannot be marked approved without explicit operator approval metadata | Destructive-action approval contract design and static acceptance tests | Later runtime approval required for enforcement |
 | `V1-G4` | Real GuardianDecision and live approval path | Existing fake/test-only GuardianDecision artifacts are not production authority | Runtime GuardianDecision path that distinguishes allow, confirm, deny, privileged, expired, revoked, and blocked outcomes before consequential action | GuardianDecision runtime design gate, then separately approved narrow runtime slice | Yes |
@@ -52,4 +52,4 @@ Stop and request a new approval gate before any work that adds:
 
 LIMA-AI-OS has a clearer V1 target, but it is not V1 product-ready.
 
-The next smallest safe step is `V1-G1`: request and intake source-backed Sparkbot_shell `thinking` / progress-state proof, still without LIMA runtime changes.
+The next smallest safe step remains `V1-G1`: deliver and intake source-backed Sparkbot_shell `thinking` / progress-state proof, still without LIMA runtime changes.
