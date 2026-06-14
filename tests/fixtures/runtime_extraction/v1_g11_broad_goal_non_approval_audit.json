@@ -1,0 +1,74 @@
+{
+  "gap_id": "V1-G11",
+  "audit_id": "v1_g11_broad_goal_non_approval_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "source_commit_before_audit": "27291969071307f837c44bfa375f4e36add58aa3",
+  "document": "docs/V1_G11_BROAD_GOAL_NON_APPROVAL_AUDIT.md",
+  "operator_decision_packet": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
+  "audited_input_class": "broad_v1_product_objective_continuation",
+  "accepted_as_product_direction": true,
+  "accepted_as_v1_g11_runtime_approval": false,
+  "decision_record_required_for_approval": true,
+  "required_approve_record": {
+    "recorded_choice": "Approve-V1-G11",
+    "recorded_approval_wording_must_match_packet": true,
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": "yes"
+  },
+  "current_decision_record": {
+    "recorded_choice": null,
+    "recorded_approval_wording": null,
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": null,
+    "runtime_implementation_approved": false
+  },
+  "approval_evidence_failures": [
+    "not_recorded_in_decision_record",
+    "recorded_choice_not_approve_v1_g11",
+    "exact_required_approval_wording_not_recorded",
+    "approved_implementation_branch_not_recorded",
+    "runtime_implementation_approved_not_yes",
+    "decision_record_remains_empty"
+  ],
+  "accepted_direction": [
+    "first_consumers_sparkbot_shell_sparkbot_arc_bot_shell",
+    "shell_haptics_acceptable_future_shell_experience",
+    "live_approval_and_real_guardian_decision_acceptable_future_v1_runtime_requirement",
+    "provider_model_routing_acceptable_future_v1_runtime_requirement",
+    "destructive_edit_delete_requires_operator_approval_in_lima_and_shells",
+    "sparkbot_remains_r_and_d_behavior_reference"
+  ],
+  "rejected_claims": [
+    "v1_g11_runtime_implementation_approved",
+    "runtime_export_cleanup_approved",
+    "final_api_freeze_approved",
+    "provider_model_runtime_routing_approved",
+    "shell_wiring_approved",
+    "haptic_device_behavior_in_lima_approved",
+    "production_readiness_approved"
+  ],
+  "boundary_results": {
+    "runtime_implementation_approved": false,
+    "operator_approval_recorded": false,
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "shell_repos_changed": false,
+    "sparkbot_code_copied": false,
+    "sparkbot_import_added": false,
+    "provider_model_routing_added": false,
+    "shell_wiring_added": false,
+    "persistence_added": false,
+    "haptic_device_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_freeze_approved": false,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_decision_record"
+}
