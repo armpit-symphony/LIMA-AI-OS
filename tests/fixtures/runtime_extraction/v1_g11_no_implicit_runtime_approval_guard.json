@@ -1,0 +1,99 @@
+{
+  "guard_id": "v1_g11_no_implicit_runtime_approval_guard",
+  "gap_id": "V1-G11",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "document": "docs/V1_G11_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md",
+  "guard_status": "active_static_fixture_scan",
+  "docs_tests_fixtures_only": true,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "runtime_exports_changed": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "guarded_fixture_files": [
+    "tests/fixtures/runtime_extraction/v1_readme_status_alignment.json",
+    "tests/fixtures/runtime_extraction/v1_readiness_gap_matrix.json",
+    "tests/fixtures/runtime_extraction/v1_product_readiness_target.json",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate_work_order.json",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate_approval_request.json",
+    "tests/fixtures/runtime_extraction/v1_g11_roadmap_decision_alignment.json",
+    "tests/fixtures/runtime_extraction/v1_g11_operator_decision_readiness_closeout.json",
+    "tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json",
+    "tests/fixtures/runtime_extraction/v1_g11_broad_goal_non_approval_audit.json"
+  ],
+  "forbidden_true_boolean_keys": [
+    "runtime_implementation_approved",
+    "operator_approval_recorded",
+    "operator_decision_packet_records_approval",
+    "runtime_behavior_added",
+    "lima_runtime_files_changed",
+    "tests_support_changed",
+    "shell_repos_changed",
+    "sparkbot_import_added",
+    "sparkbot_shell_import_added",
+    "arc_bot_shell_import_added",
+    "sparkbot_code_copied",
+    "provider_model_routing_added",
+    "shell_wiring_added",
+    "persistence_added",
+    "haptic_device_behavior_added",
+    "browser_file_network_device_robotics_physical_world_added",
+    "runtime_exports_changed",
+    "runtime_export_cleanup_approved",
+    "final_freeze_approved",
+    "v1_product_ready",
+    "v1_release_claimed",
+    "production_ready",
+    "production_readiness_approved",
+    "product_release_boundary_passed",
+    "implementation_approved",
+    "runtime_implementation_approved_by_this_fixture",
+    "phase_48_2_implementation_approved",
+    "minimum_runtime_implementation_gate_approved_runtime",
+    "minimum_runtime_implementation_gate_runtime_approved",
+    "v1_g11_operator_decision_packet_records_approval",
+    "v1_g11_operator_approval_recorded",
+    "v1_g11_runtime_implementation_approved",
+    "v1_g11_runtime_implementation_added"
+  ],
+  "allowed_true_boolean_paths": [
+    {
+      "file": "tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json",
+      "path": "decision_record_validation_rules.Approve-V1-G11.runtime_implementation_approved",
+      "reason": "hypothetical_valid_approve_rule_not_current_decision_record"
+    }
+  ],
+  "required_empty_decision_records": [
+    {
+      "file": "tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json",
+      "path": "decision_record"
+    },
+    {
+      "file": "tests/fixtures/runtime_extraction/v1_g11_operator_decision_readiness_closeout.json",
+      "path": "decision_record"
+    },
+    {
+      "file": "tests/fixtures/runtime_extraction/v1_g11_broad_goal_non_approval_audit.json",
+      "path": "current_decision_record"
+    }
+  ],
+  "expected_empty_decision_record": {
+    "recorded_choice": null,
+    "recorded_approval_wording": null,
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": null,
+    "runtime_implementation_approved": false
+  },
+  "doc_required_phrases": [
+    "No V1-G11 fixture may record current runtime approval",
+    "The only allowed true runtime-approval value is the hypothetical Approve-V1-G11 validation rule",
+    "Current Decision Records must remain empty until an operator records one valid choice"
+  ],
+  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_decision_record"
+}
