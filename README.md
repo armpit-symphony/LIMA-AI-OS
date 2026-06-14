@@ -47,6 +47,14 @@ This repository currently contains:
 
 It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
 
+## Current V1 Status
+
+LIMA remains `CANDIDATE_ONLY`.
+
+The V1 target is to make LIMA usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`. `V1-G10` is complete as a docs/tests/fixtures-only minimum runtime implementation gate. The `V1-G11` approval request, preflight audit, and work order are ready for operator decision, but operator approval is not recorded and the request does not approve runtime implementation.
+
+No `lima/` runtime change, provider/model routing, shell wiring, persistence, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, or production readiness is approved by the `V1-G11` request. The next smallest safe step is an operator decision on the exact `V1-G11` approval question.
+
 ## Core Invariant
 
 Every external action, tool execution, privileged operation, model call, robotics or physical-world action, file/network/browser action, and approval-requiring operation must pass through Guardian.
