@@ -1,0 +1,98 @@
+{
+  "guard_id": "v1_g11_pre_implementation_file_export_absence_guard",
+  "gap_id": "V1-G11",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "current_branch": "v1-g11-runtime-slice-approval-request",
+  "document": "docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md",
+  "source_document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
+  "guard_status": "active_static_file_export_absence_scan",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_approved": false,
+  "operator_approval_recorded": false,
+  "current_decision_record_empty": true,
+  "approved_implementation_branch": null,
+  "approved_implementation_branch_if_approved": "v1-g11-runtime-request-decision-gate",
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_import_added": false,
+  "sparkbot_shell_import_added": false,
+  "arc_bot_shell_import_added": false,
+  "sparkbot_code_copied": false,
+  "provider_model_routing_added": false,
+  "shell_wiring_added": false,
+  "persistence_added": false,
+  "haptic_device_behavior_added": false,
+  "browser_file_network_device_robotics_physical_world_added": false,
+  "runtime_exports_changed": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "current_decision_record": {
+    "recorded_choice": null,
+    "recorded_approval_wording": null,
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": null,
+    "runtime_implementation_approved": false
+  },
+  "proposed_future_runtime_files": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/guardian/v1_decision_gate.py"
+  ],
+  "proposed_future_export_files": [
+    "lima/kernel/__init__.py",
+    "lima/guardian/__init__.py"
+  ],
+  "currently_forbidden_pre_approval_files": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/guardian/v1_decision_gate.py",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate.json",
+    "tests/test_v1_g11_runtime_request_decision_gate.py"
+  ],
+  "current_kernel_exports": [
+    "ALLOWED_CANDIDATE_STATUSES",
+    "CandidatePreview",
+    "CandidateStatusError",
+    "IntakeCandidateError",
+    "RuntimeStateSnapshot",
+    "build_intake_candidate",
+    "inspect_runtime_state",
+    "normalize_candidate_status",
+    "preview_candidate",
+    "validate_candidate"
+  ],
+  "current_guardian_exports": [
+    "FakeApprovalRecorder",
+    "FakeAuthProvider",
+    "FakeBreakglassProvider",
+    "FakeGuardianDecisionEvaluator",
+    "FakeGuardianPipeline",
+    "FakeGuardianPipelineResult",
+    "FakePolicyRiskEvaluator",
+    "FakeSpineAuditRecorder",
+    "FakeVaultProvider",
+    "AdapterFixtureHarness",
+    "AdapterFixtureHarnessResult",
+    "HumanInputFakePipelineBridge",
+    "HumanInputPipelineBridgeConfig"
+  ],
+  "proposed_future_symbols_if_approved": [
+    "V1RuntimeRequestError",
+    "build_v1_runtime_request",
+    "V1GuardianDecisionGateError",
+    "review_v1_runtime_request"
+  ],
+  "doc_required_phrases": [
+    "V1-G11 runtime files must remain absent before approval",
+    "Current lima.kernel exports must remain unchanged before approval",
+    "Current lima.guardian exports must remain unchanged before approval"
+  ],
+  "state_required_phrase": "V1-G11 pre-implementation file/export absence guard document",
+  "recommended_next_step": "record_exactly_one_valid_operator_choice_in_decision_record"
+}

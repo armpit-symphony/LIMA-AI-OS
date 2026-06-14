@@ -1127,6 +1127,7 @@ Do not merge or tag from a routine implementation thread.
 - V1-G11 operator decision readiness closeout document: `docs/V1_G11_OPERATOR_DECISION_READINESS_CLOSEOUT.md`
 - V1-G11 broad goal non-approval audit document: `docs/V1_G11_BROAD_GOAL_NON_APPROVAL_AUDIT.md`
 - V1-G11 no implicit runtime approval guard document: `docs/V1_G11_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md`
+- V1-G11 pre-implementation file/export absence guard document: `docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md`
 - V1-G11 request status: ready for operator decision
 - V1-G11 operator decision packet status: ready for one valid operator choice; no decision recorded
 - V1-G11 decision record slot: present and empty
