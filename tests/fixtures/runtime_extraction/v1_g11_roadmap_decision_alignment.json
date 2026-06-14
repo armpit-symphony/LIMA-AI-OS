@@ -20,6 +20,8 @@
   ],
   "operator_decision_packet_added": true,
   "operator_decision_packet_ready": true,
+  "operator_decision_record_slot_added": true,
+  "operator_decision_recorded_choice": null,
   "operator_decision_packet_records_approval": false,
   "approval_request_ready": true,
   "operator_approval_recorded": false,
@@ -39,6 +41,7 @@
     "v1_g11_approval_request_is_ready_for_operator_decision",
     "v1_g11_request_packet_does_not_record_operator_approval",
     "v1_g11_operator_decision_packet_records_valid_choices_without_approval",
+    "v1_g11_operator_decision_packet_has_empty_decision_record_slot",
     "runtime_remains_unapproved",
     "approved_future_scope_must_match_v1_g11_request_exactly"
   ],
@@ -54,5 +57,5 @@
     "v1_product_readiness_approved",
     "production_readiness_approved"
   ],
-  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g11_decision_record"
 }

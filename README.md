@@ -51,9 +51,9 @@ It does not contain migrated Sparkbot runtime behavior, live tool execution, pro
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The V1 target is to make LIMA usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`. `V1-G10` is complete as a docs/tests/fixtures-only minimum runtime implementation gate. The `V1-G11` approval request, preflight audit, work order, and operator decision packet are ready for operator decision, but operator approval is not recorded and the packet does not approve runtime implementation.
+The V1 target is to make LIMA usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`. `V1-G10` is complete as a docs/tests/fixtures-only minimum runtime implementation gate. The `V1-G11` approval request, preflight audit, work order, and operator decision packet are ready for operator decision. The packet now has an empty Decision Record section, but operator approval is not recorded and the packet does not approve runtime implementation.
 
-No `lima/` runtime change, provider/model routing, shell wiring, persistence, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, or production readiness is approved by the `V1-G11` request or operator decision packet. The next smallest safe step is to record one valid operator choice in the `V1-G11` operator decision packet.
+No `lima/` runtime change, provider/model routing, shell wiring, persistence, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, or production readiness is approved by the `V1-G11` request or operator decision packet. The next smallest safe step is to record one valid operator choice in the packet's Decision Record section.
 
 ## Core Invariant
 

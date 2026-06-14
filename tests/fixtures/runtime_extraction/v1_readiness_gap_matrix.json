@@ -146,6 +146,8 @@
       "operator_decision_packet_document": "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
       "approval_request_ready": true,
       "operator_decision_packet_ready": true,
+      "operator_decision_record_slot_added": true,
+      "operator_decision_recorded_choice": null,
       "operator_decision_packet_records_approval": false,
       "operator_approval_recorded": false,
       "recommended_lane": "operator_decision_then_implementation_only_after_explicit_approval",
@@ -168,8 +170,8 @@
     "V1-G10",
     "V1-G11"
   ],
-  "next_smallest_safe_step": "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet",
-  "next_smallest_safe_step_reason": "v1_g11_operator_decision_packet_ready_no_decision_recorded",
+  "next_smallest_safe_step": "record_one_valid_operator_choice_in_v1_g11_decision_record",
+  "next_smallest_safe_step_reason": "v1_g11_decision_record_slot_present_no_choice_recorded",
   "next_smallest_safe_step_status": "pending_operator_decision",
   "stop_conditions": [
     "lima_runtime_change",
@@ -209,6 +211,8 @@
     "v1_g11_approval_request_added": true,
     "v1_g11_preflight_audit_added": true,
     "v1_g11_operator_decision_packet_added": true,
+    "v1_g11_operator_decision_record_slot_added": true,
+    "v1_g11_operator_decision_recorded_choice": null,
     "v1_g11_operator_decision_packet_records_approval": false,
     "v1_g11_operator_approval_recorded": false,
     "v1_g11_runtime_implementation_added": false,

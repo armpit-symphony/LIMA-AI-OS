@@ -123,6 +123,8 @@
     "v1_g11_approval_request_added": true,
     "v1_g11_preflight_audit_added": true,
     "v1_g11_operator_decision_packet_added": true,
+    "v1_g11_operator_decision_record_slot_added": true,
+    "v1_g11_operator_decision_recorded_choice": null,
     "v1_g11_operator_decision_packet_records_approval": false,
     "v1_g11_operator_approval_recorded": false,
     "v1_g11_runtime_implementation_approved": false,
@@ -177,6 +179,8 @@
     "v1_g11_approval_request_ready": true,
     "v1_g11_approval_request_scope": "docs_tests_fixtures_only_operator_decision_packet",
     "v1_g11_operator_decision_packet_ready": true,
+    "v1_g11_operator_decision_record_slot_added": true,
+    "v1_g11_operator_decision_recorded_choice": null,
     "v1_g11_operator_decision_packet_records_approval": false,
     "v1_g11_operator_approval_recorded": false,
     "v1_g11_runtime_implementation_added": false
@@ -199,7 +203,7 @@
     "final_api_freeze_unapproved",
     "production_behavior_not_approved"
   ],
-  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet",
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g11_decision_record",
   "recommended_first_gap_closed": "sparkbot_shell_source_backed_thinking_progress_state",
   "recommended_second_gap_closed": "typed_bridge_acceptance_proof_static_evidence",
   "recommended_third_gap_closed": "destructive_edit_delete_operator_approval_contract_static_evidence",
@@ -212,7 +216,7 @@
   "recommended_eighth_gap_closed": "audit_evidence_persistence_static_contract_and_threat_model",
   "recommended_ninth_gap_closed": "product_release_boundary_audit_complete_boundary_not_passed",
   "recommended_tenth_gap_closed": "minimum_runtime_implementation_gate_defined_runtime_not_approved",
-  "recommended_eleventh_gap_request_ready": "v1_g11_operator_decision_packet_ready_runtime_not_approved",
+  "recommended_eleventh_gap_request_ready": "v1_g11_decision_record_slot_present_runtime_not_approved",
   "recommended_next_gap_to_close": "typed_request_guardian_decision_preflight_runtime_slice",
   "recommended_next_gap_id": "V1-G11"
 }

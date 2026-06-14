@@ -218,6 +218,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     assert current["v1_g11_approval_request_added"] is True
     assert current["v1_g11_preflight_audit_added"] is True
     assert current["v1_g11_operator_decision_packet_added"] is True
+    assert current["v1_g11_operator_decision_record_slot_added"] is True
+    assert current["v1_g11_operator_decision_recorded_choice"] is None
     assert current["v1_g11_operator_decision_packet_records_approval"] is False
     assert current["v1_g11_operator_approval_recorded"] is False
     assert current["v1_g11_runtime_implementation_approved"] is False
@@ -287,6 +289,8 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
         "docs_tests_fixtures_only_operator_decision_packet"
     )
     assert static_evidence["v1_g11_operator_decision_packet_ready"] is True
+    assert static_evidence["v1_g11_operator_decision_record_slot_added"] is True
+    assert static_evidence["v1_g11_operator_decision_recorded_choice"] is None
     assert static_evidence["v1_g11_operator_decision_packet_records_approval"] is False
     assert static_evidence["v1_g11_operator_approval_recorded"] is False
     assert static_evidence["v1_g11_runtime_implementation_added"] is False
@@ -312,7 +316,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_next_step"]
-        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
+        == "record_one_valid_operator_choice_in_v1_g11_decision_record"
     )
     assert fixture["recommended_second_gap_closed"] == "typed_bridge_acceptance_proof_static_evidence"
     assert (
@@ -357,7 +361,7 @@ def test_v1_current_status_and_blockers_stay_honest() -> None:
     )
     assert (
         fixture["recommended_eleventh_gap_request_ready"]
-        == "v1_g11_operator_decision_packet_ready_runtime_not_approved"
+        == "v1_g11_decision_record_slot_present_runtime_not_approved"
     )
     assert fixture["recommended_next_gap_id"] == "V1-G11"
     assert (

@@ -161,6 +161,8 @@ def test_v1_gap_matrix_covers_expected_gaps() -> None:
     )
     assert gaps["V1-G11"]["approval_request_ready"] is True
     assert gaps["V1-G11"]["operator_decision_packet_ready"] is True
+    assert gaps["V1-G11"]["operator_decision_record_slot_added"] is True
+    assert gaps["V1-G11"]["operator_decision_recorded_choice"] is None
     assert gaps["V1-G11"]["operator_decision_packet_records_approval"] is False
     assert gaps["V1-G11"]["operator_approval_recorded"] is False
 
@@ -199,7 +201,7 @@ def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() ->
     assert fixture["recommended_order"][-1] == "V1-G11"
     assert (
         fixture["next_smallest_safe_step"]
-        == "record_one_valid_operator_choice_in_v1_g11_operator_decision_packet"
+        == "record_one_valid_operator_choice_in_v1_g11_decision_record"
     )
     assert (
         fixture["next_smallest_safe_step_status"]
@@ -207,7 +209,7 @@ def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() ->
     )
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g11_operator_decision_packet_ready_no_decision_recorded"
+        == "v1_g11_decision_record_slot_present_no_choice_recorded"
     )
 
 
@@ -245,6 +247,8 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     assert boundary["v1_g11_approval_request_added"] is True
     assert boundary["v1_g11_preflight_audit_added"] is True
     assert boundary["v1_g11_operator_decision_packet_added"] is True
+    assert boundary["v1_g11_operator_decision_record_slot_added"] is True
+    assert boundary["v1_g11_operator_decision_recorded_choice"] is None
     assert boundary["v1_g11_operator_decision_packet_records_approval"] is False
     assert boundary["v1_g11_operator_approval_recorded"] is False
     assert boundary["v1_g11_runtime_implementation_added"] is False
@@ -279,7 +283,8 @@ def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
     assert "`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit" in text
     assert "`V1-G10` is complete as static docs/tests/fixtures-only minimum runtime implementation gate" in text
     assert "The V1-G11 approval request and operator decision packet are ready for operator decision." in text
-    assert "The next smallest safe step is to record one valid operator choice in the V1-G11 operator decision packet." in text
+    assert "an empty Decision Record section" in text
+    assert "The next smallest safe step is to record one valid operator choice in the V1-G11 operator decision packet's Decision Record section." in text
     assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "runtime behavior" in text
     assert "haptic device behavior" in text

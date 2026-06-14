@@ -6500,7 +6500,7 @@ Status: Accepted
 
 Decision:
 
-The V1-G11 operator decision packet is the authoritative place to record `Approve-V1-G11`, `Revise-V1-G11`, or `Pause`, but the packet itself does not record approval or authorize runtime implementation.
+The V1-G11 operator decision packet is the authoritative place to record `Approve-V1-G11`, `Revise-V1-G11`, or `Pause`. It includes an empty Decision Record section, but the packet itself does not record approval or authorize runtime implementation.
 
 Context:
 
@@ -6508,7 +6508,7 @@ The active V1 objective makes live approval, GuardianDecision, haptics, and prov
 
 Consequences:
 
-- Operator approval remains unrecorded until one valid choice is explicitly recorded.
+- Operator approval remains unrecorded until one valid choice is explicitly recorded in the packet's Decision Record section.
 - Runtime implementation remains unapproved.
 - The only future implementation scope, if approved, remains the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
 - No `lima/` files, tests/support helpers, shell repositories, Sparkbot imports/code copy, provider/model routing, persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, or physical-world behavior are added by the decision packet.
