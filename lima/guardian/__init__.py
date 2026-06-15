@@ -11,6 +11,10 @@ from .fixture_harness import AdapterFixtureHarness, AdapterFixtureHarnessResult
 from .pipeline_fakes import FakeGuardianPipeline, FakeGuardianPipelineResult
 from .policy_fakes import FakePolicyRiskEvaluator
 from .spine_fakes import FakeSpineAuditRecorder
+from .v1_approval_enforcement import (
+    V1ApprovalEnforcementError,
+    enforce_v1_destructive_approval,
+)
 from .v1_decision_gate import V1GuardianDecisionGateError, review_v1_runtime_request
 
 __all__ = [
@@ -27,6 +31,8 @@ __all__ = [
     "AdapterFixtureHarnessResult",
     "HumanInputFakePipelineBridge",
     "HumanInputPipelineBridgeConfig",
+    "V1ApprovalEnforcementError",
     "V1GuardianDecisionGateError",
+    "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
 ]

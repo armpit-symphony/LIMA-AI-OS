@@ -4,7 +4,7 @@ Date: 2026-06-14
 Branch: `v1-g14-destructive-approval-enforcement-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `Approve-V1-G14_recorded`
 
 This packet records the valid operator choices for the exact V1-G14 destructive edit/delete approval-enforcement approval request. It does not change runtime behavior, modify `lima/`, approve implementation, enforce approvals, or approve product readiness by itself.
 
@@ -25,21 +25,31 @@ General V1 product direction, prior static gates, the V1-G13 recommendation, thi
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Runtime implementation approved: no.
-- Approved next implementation branch: `none`.
-- Current next action: operator chooses exactly one valid option below.
+- Operator approval recorded: yes.
+- Runtime implementation approved: yes.
+- Approved next implementation branch: `v1-g14-destructive-approval-enforcement`.
+- Current next action: implement the approved V1-G14 runtime slice and stop before any consumer integration.
 
 ## Decision Record
 
-No operator choice has been recorded for implementation.
+One operator choice has been recorded for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G14`
+- Recorded approval wording: `I explicitly approve V1-G14 implementation of the destructive edit/delete approval-enforcement runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
+- Approved implementation branch: `v1-g14-destructive-approval-enforcement`
+- Runtime implementation approved: yes
+
+## Historical Pre-Approval State
+
+Before the operator recorded `Approve-V1-G14`, this packet was in the following request-branch state:
+
+- Decision packet status: `awaiting_operator_decision`
+- Recorded choice: `none`
 - Runtime implementation approved: no
+
+Only `Approve-V1-G14`, `Revise-V1-G14`, or `Pause` is valid here. Any other text is commentary, not a decision.
 
 ## Decision Record Validation Rules
 
@@ -149,8 +159,8 @@ Any different file requires a new gate update before implementation.
 
 ## Boundaries Before Approved Implementation
 
-- Runtime implementation approved: no.
-- Operator approval recorded: no.
+- Runtime implementation approved: yes, only for the V1-G14 file map and behavior scope.
+- Operator approval recorded: yes.
 - Runtime behavior added: no.
 - Approval enforcement added: no.
 - File mutation behavior added: no.

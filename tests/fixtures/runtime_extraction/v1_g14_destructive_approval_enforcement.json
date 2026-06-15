@@ -1,0 +1,79 @@
+{
+  "gate_id": "v1_g14_destructive_approval_enforcement",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g14-destructive-approval-enforcement",
+  "operator_decision": "Approve-V1-G14",
+  "approved_scope": "destructive_edit_delete_approval_enforcement_runtime_slice",
+  "approved_runtime_file_map": [
+    "lima/guardian/v1_approval_enforcement.py",
+    "lima/guardian/__init__.py"
+  ],
+  "docs_tests_fixtures_file_map": [
+    "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT.md",
+    "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g14_destructive_approval_enforcement.json",
+    "tests/test_v1_g14_destructive_approval_enforcement.py"
+  ],
+  "runtime_symbols": [
+    "V1ApprovalEnforcementError",
+    "enforce_v1_destructive_approval"
+  ],
+  "runtime_behavior_added": true,
+  "approval_enforcement_added": true,
+  "runtime_behavior_scope": "local_non_executing_destructive_approval_evidence_validation",
+  "required_approval_metadata": [
+    "approval_id",
+    "approval_evidence_ref",
+    "approving_actor_ref",
+    "approval_recorded_at",
+    "approval_scope",
+    "tenant_ref",
+    "shell_id",
+    "request_id",
+    "decision_id",
+    "actor_id",
+    "target_ref",
+    "approval_state",
+    "approval_freshness",
+    "approval_replay_status"
+  ],
+  "required_approval_scope": "destructive_edit_delete_file_mutation",
+  "allowed_approval_state": "granted",
+  "allowed_approval_freshness": "fresh",
+  "allowed_approval_replay_status": "not_replayed",
+  "positive_case": "complete_sanitized_approval_evidence_returns_non_executing_record",
+  "fail_closed_cases": [
+    "destructive_requests_without_approval_metadata_fail_closed",
+    "safe_requests_are_not_upgraded",
+    "request_decision_identity_mismatch_fails_closed",
+    "tenant_actor_shell_decision_request_target_evidence_mismatch_fails_closed",
+    "missing_approval_id_fails_closed",
+    "missing_approval_evidence_ref_fails_closed",
+    "missing_approving_actor_ref_fails_closed",
+    "missing_approval_recorded_at_fails_closed",
+    "expired_revoked_denied_superseded_stale_replayed_approval_fails_closed",
+    "raw_pin_token_secret_prompt_file_customer_data_fails_closed",
+    "forged_approval_decision_metadata_fails_closed",
+    "forbidden_surface_claims_fail_closed"
+  ],
+  "forbidden_behavior": {
+    "file_mutation_behavior_added": false,
+    "approval_token_issuance_added": false,
+    "raw_pin_verification_added": false,
+    "persistence_added": false,
+    "external_database_writes_added": false,
+    "provider_model_calls_or_routing_added": false,
+    "tool_execution_added": false,
+    "shell_runtime_wiring_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_network_device_robotics_physical_world_behavior_added": false,
+    "consumer_integration_added": false,
+    "sparkbot_code_imported_or_copied": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_ready": false,
+    "production_ready": false
+  },
+  "recommended_next_step": "separate_v1_g14_audit_branch_before_consumer_integration"
+}
