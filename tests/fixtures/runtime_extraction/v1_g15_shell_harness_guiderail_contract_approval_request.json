@@ -1,0 +1,68 @@
+{
+  "gate_id": "v1_g15_shell_harness_guiderail_contract_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-shell-harness-guiderail-contract-approval-request",
+  "docs_tests_fixtures_only": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "runtime_behavior_added": false,
+  "consumer_integration_added": false,
+  "provider_model_routing_added": false,
+  "shell_runtime_wiring_added": false,
+  "humaninput_bridge_activated": false,
+  "connector_behavior_added": false,
+  "browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "final_api_freeze_approved": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G15",
+    "Revise-V1-G15",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G15 implementation of the shell/harness guiderail input contract slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g15-shell-harness-guiderail-contract",
+  "proposed_file_map": [
+    "lima/shells/contracts/v1_guiderail_input.py",
+    "lima/shells/contracts/__init__.py",
+    "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT.md",
+    "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g15_shell_harness_guiderail_contract.json",
+    "tests/test_v1_g15_shell_harness_guiderail_contract.py"
+  ],
+  "required_contract_fields": [
+    "capability_profile",
+    "guardrail_mode",
+    "approval_policy",
+    "actor_scope",
+    "session_scope",
+    "tenant_scope",
+    "shell_scope",
+    "allowed_capability_lanes",
+    "destructive_edit_delete_policy",
+    "file_mutation_policy",
+    "provider_model_policy",
+    "connector_policy",
+    "browser_network_policy",
+    "physical_world_policy",
+    "emergency_stop_expectations",
+    "rollback_expectations",
+    "dry_run_vs_execution_authorized_posture",
+    "operator_approval_evidence_expectations",
+    "audit_evidence_linkage_expectations"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g15_revise_v1_g15_or_pause"
+}
