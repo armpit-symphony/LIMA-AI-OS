@@ -1,0 +1,71 @@
+{
+  "gate_id": "v1_g18_consumer_proof_packet_audit_intake_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-consumer-proof-packet-audit-intake-approval-request",
+  "docs_tests_fixtures_only": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "runtime_behavior_added": false,
+  "consumer_repo_mutation_added": false,
+  "consumer_integration_added": false,
+  "consumer_runtime_calls_added": false,
+  "provider_model_routing_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "final_api_freeze_approved": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G18",
+    "Revise-V1-G18",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G18 implementation of the LIMA-side consumer proof packet audit intake slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g18-consumer-proof-packet-audit-intake",
+  "consumer_packet_families": [
+    "sparkbot",
+    "arc_bot",
+    "lima_robo_os",
+    "lima_office",
+    "future_shell"
+  ],
+  "required_artifact_fields": [
+    "consumer_name",
+    "consumer_repository",
+    "consumer_branch_ref",
+    "consumer_commit_sha",
+    "proof_packet_path",
+    "audit_packet_path",
+    "machine_readable_summary_path",
+    "validation_commands",
+    "proposed_import_call_shape_evidence",
+    "normalized_metadata_examples",
+    "capability_profile_expectations",
+    "guardian_approval_boundary_expectations",
+    "dry_run_non_execution_confirmation",
+    "no_live_consumer_runtime_path_calls_lima",
+    "no_bypass_claims",
+    "independent_audit_required",
+    "packet_status"
+  ],
+  "normalized_packet_statuses": [
+    "received",
+    "missing",
+    "blocked",
+    "rejected",
+    "accepted_static_evidence"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g18_revise_v1_g18_or_pause"
+}
