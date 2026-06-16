@@ -1,0 +1,59 @@
+{
+  "gate_id": "v1_g16_guarded_file_mutation_policy_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-guarded-file-mutation-policy-approval-request",
+  "docs_tests_fixtures_only": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "actual_file_mutation_execution_approved": false,
+  "runtime_behavior_added": false,
+  "consumer_integration_added": false,
+  "provider_model_routing_added": false,
+  "connector_browser_network_device_robotics_physical_world_behavior_added": false,
+  "final_api_freeze_approved": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G16",
+    "Revise-V1-G16",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G16 implementation of the guarded file mutation policy contract slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g16-guarded-file-mutation-policy",
+  "distinctions": [
+    "policy_authority_contract",
+    "preview_dry_run_behavior",
+    "actual_file_mutation_execution"
+  ],
+  "required_policy_topics": [
+    "file_edit_delete_request_classification",
+    "file_mutation_intent_scope",
+    "shell_harness_provided_file_authority",
+    "user_operator_approval_evidence",
+    "workspace_root_boundary",
+    "path_traversal_rejection",
+    "destructive_delete_confirmation",
+    "rollback_expectations",
+    "dry_run_preview_expectations",
+    "diff_patch_preview_expectations",
+    "audit_evidence_linkage",
+    "no_raw_secret_file_content_persistence",
+    "no_mutation_without_approval",
+    "no_mutation_outside_approved_scope",
+    "no_consumer_integration"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g16_revise_v1_g16_or_pause"
+}
