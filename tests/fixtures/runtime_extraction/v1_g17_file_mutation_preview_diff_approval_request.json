@@ -1,0 +1,59 @@
+{
+  "gate_id": "v1_g17_file_mutation_preview_diff_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-file-mutation-preview-diff-approval-request",
+  "docs_tests_fixtures_only": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "preview_diff_runtime_behavior_added": false,
+  "actual_file_mutation_execution_approved": false,
+  "actual_file_mutation_execution_added": false,
+  "runtime_behavior_added": false,
+  "consumer_integration_added": false,
+  "provider_model_routing_added": false,
+  "connector_browser_network_device_robotics_physical_world_behavior_added": false,
+  "final_api_freeze_approved": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G17",
+    "Revise-V1-G17",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G17 implementation of the file mutation preview/diff runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g17-file-mutation-preview-diff",
+  "distinctions": [
+    "v1_g16_guarded_file_mutation_policy",
+    "preview_dry_run_metadata_behavior",
+    "actual_file_mutation_execution"
+  ],
+  "required_preview_diff_topics": [
+    "dry_run_file_mutation_preview",
+    "redacted_diff_patch_preview_metadata",
+    "no_raw_file_content_persistence",
+    "no_actual_file_write_delete",
+    "path_scope_workspace_root_validation",
+    "path_traversal_rejection",
+    "rollback_plan_metadata",
+    "approval_evidence_linkage",
+    "user_operator_confirmation_linkage",
+    "shell_harness_policy_linkage",
+    "audit_evidence_linkage",
+    "test_coverage_expectations",
+    "stop_conditions"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g17_revise_v1_g17_or_pause"
+}
