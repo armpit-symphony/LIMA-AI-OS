@@ -16,6 +16,10 @@ from .v1_approval_enforcement import (
     enforce_v1_destructive_approval,
 )
 from .v1_decision_gate import V1GuardianDecisionGateError, review_v1_runtime_request
+from .v1_file_mutation_policy import (
+    V1FileMutationPolicyError,
+    validate_v1_guarded_file_mutation_policy,
+)
 
 __all__ = [
     "FakeApprovalRecorder",
@@ -32,7 +36,9 @@ __all__ = [
     "HumanInputFakePipelineBridge",
     "HumanInputPipelineBridgeConfig",
     "V1ApprovalEnforcementError",
+    "V1FileMutationPolicyError",
     "V1GuardianDecisionGateError",
     "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
+    "validate_v1_guarded_file_mutation_policy",
 ]
