@@ -15,6 +15,10 @@ from .v1_approval_enforcement import (
     V1ApprovalEnforcementError,
     enforce_v1_destructive_approval,
 )
+from .v1_consumer_proof_packet_intake import (
+    V1ConsumerProofPacketIntakeError,
+    validate_v1_consumer_proof_packet_intake,
+)
 from .v1_decision_gate import V1GuardianDecisionGateError, review_v1_runtime_request
 from .v1_file_mutation_policy import (
     V1FileMutationPolicyError,
@@ -40,11 +44,13 @@ __all__ = [
     "HumanInputFakePipelineBridge",
     "HumanInputPipelineBridgeConfig",
     "V1ApprovalEnforcementError",
+    "V1ConsumerProofPacketIntakeError",
     "V1FileMutationPolicyError",
     "V1FileMutationPreviewError",
     "V1GuardianDecisionGateError",
     "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
+    "validate_v1_consumer_proof_packet_intake",
     "validate_v1_file_mutation_preview_diff",
     "validate_v1_guarded_file_mutation_policy",
 ]
