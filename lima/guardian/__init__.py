@@ -28,6 +28,10 @@ from .v1_file_mutation_preview import (
     V1FileMutationPreviewError,
     validate_v1_file_mutation_preview_diff,
 )
+from .v1_live_approval_evidence import (
+    V1LiveApprovalEvidenceError,
+    validate_v1_live_approval_evidence_capture,
+)
 
 __all__ = [
     "FakeApprovalRecorder",
@@ -48,9 +52,11 @@ __all__ = [
     "V1FileMutationPolicyError",
     "V1FileMutationPreviewError",
     "V1GuardianDecisionGateError",
+    "V1LiveApprovalEvidenceError",
     "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
     "validate_v1_consumer_proof_packet_intake",
     "validate_v1_file_mutation_preview_diff",
     "validate_v1_guarded_file_mutation_policy",
+    "validate_v1_live_approval_evidence_capture",
 ]

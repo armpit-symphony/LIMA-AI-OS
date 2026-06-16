@@ -1,0 +1,83 @@
+{
+  "gate_id": "v1_g19_live_approval_evidence_capture",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g19-live-approval-evidence-capture",
+  "operator_decision": "Approve-V1-G19",
+  "approved_scope": "live_approval_evidence_capture_metadata_slice",
+  "approved_runtime_file_map": [
+    "lima/guardian/v1_live_approval_evidence.py",
+    "lima/guardian/__init__.py"
+  ],
+  "docs_tests_fixtures_file_map": [
+    "docs/V1_G19_LIVE_APPROVAL_EVIDENCE_CAPTURE.md",
+    "docs/V1_G19_LIVE_APPROVAL_EVIDENCE_CAPTURE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g19_live_approval_evidence_capture.json",
+    "tests/test_v1_g19_live_approval_evidence_capture.py"
+  ],
+  "runtime_symbols": [
+    "V1LiveApprovalEvidenceError",
+    "validate_v1_live_approval_evidence_capture"
+  ],
+  "runtime_behavior_added": true,
+  "runtime_behavior_scope": "candidate_local_non_executing_live_approval_evidence_capture_validation",
+  "live_approval_evidence_capture_runtime_behavior_added": true,
+  "normalized_approval_outcomes": [
+    "approved",
+    "denied",
+    "revoked",
+    "stale",
+    "expired",
+    "superseded",
+    "blocked"
+  ],
+  "required_approval_evidence_fields": [
+    "approval_evidence_id",
+    "approval_challenge_id",
+    "request_or_guardian_decision_linkage",
+    "tenant_scope",
+    "shell_scope",
+    "actor_scope",
+    "session_scope",
+    "approver_actor_ref",
+    "approval_intent_scope",
+    "action_risk_class",
+    "action_family",
+    "approval_outcome",
+    "approval_freshness_status",
+    "approval_expiration_metadata",
+    "replay_prevention_metadata",
+    "factor_evidence_summary",
+    "capture_source_metadata",
+    "audit_evidence_linkage",
+    "proof_not_authority_confirmation",
+    "no_raw_pin_token_secret_customer_data_confirmation",
+    "no_approval_token_issuance_confirmation",
+    "no_execution_authority_confirmation"
+  ],
+  "forbidden_behavior": {
+    "raw_pin_verification_added": false,
+    "raw_pin_persistence_added": false,
+    "approval_token_persistence_added": false,
+    "approval_token_issuance_added": false,
+    "execution_authority_added": false,
+    "action_execution_added": false,
+    "file_mutation_execution_added": false,
+    "consumer_repo_mutation_added": false,
+    "consumer_code_import_added": false,
+    "consumer_runtime_call_added": false,
+    "consumer_integration_added": false,
+    "shell_runtime_wiring_added": false,
+    "provider_model_routing_added": false,
+    "tool_execution_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "scheduled_task_execution_added": false,
+    "external_sends_added": false,
+    "external_database_writes_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_ready": false
+  },
+  "recommended_next_step": "separate_v1_g19_audit_branch_before_execution_or_provider_model_lanes"
+}
