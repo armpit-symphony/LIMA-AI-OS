@@ -20,6 +20,10 @@ from .v1_file_mutation_policy import (
     V1FileMutationPolicyError,
     validate_v1_guarded_file_mutation_policy,
 )
+from .v1_file_mutation_preview import (
+    V1FileMutationPreviewError,
+    validate_v1_file_mutation_preview_diff,
+)
 
 __all__ = [
     "FakeApprovalRecorder",
@@ -37,8 +41,10 @@ __all__ = [
     "HumanInputPipelineBridgeConfig",
     "V1ApprovalEnforcementError",
     "V1FileMutationPolicyError",
+    "V1FileMutationPreviewError",
     "V1GuardianDecisionGateError",
     "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
+    "validate_v1_file_mutation_preview_diff",
     "validate_v1_guarded_file_mutation_policy",
 ]

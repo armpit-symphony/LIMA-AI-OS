@@ -4,7 +4,7 @@ Date: 2026-06-16
 Branch: `prepare-v1-file-mutation-preview-diff-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved_for_v1_g17_implementation`
 
 This packet records the valid operator choices for the exact V1-G17 file mutation preview/diff approval request. It does not approve implementation, generate previews, compute diffs, mutate files, wire consumers, or approve product readiness by itself.
 
@@ -24,21 +24,21 @@ The approval request asks:
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Implementation approved: no.
-- Approved next implementation branch: `none`.
-- Current next action: operator chooses exactly one valid option below.
+- Operator approval recorded: yes.
+- Implementation approved: yes.
+- Approved next implementation branch: `v1-g17-file-mutation-preview-diff`.
+- Current next action: implement only the approved V1-G17 file mutation preview/diff runtime slice.
 
 ## Decision Record
 
-No operator choice has been recorded for implementation.
+The operator recorded exactly one valid choice for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G17`
+- Recorded approval wording: `I explicitly approve V1-G17 implementation of the file mutation preview/diff runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G17_FILE_MUTATION_PREVIEW_DIFF_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Implementation approved: no
+- Approved implementation branch: `v1-g17-file-mutation-preview-diff`
+- Implementation approved: yes
 
 ## Decision Record Templates
 
