@@ -22,6 +22,8 @@ __all__ = [
     "SparkbotMeetingInputPayload",
     "SparkbotOperatorInputPayload",
     "SparkbotVoiceInputPayload",
+    "V1ConsumerImportDryRunError",
     "V1ConsumerIntegrationCompatibilityError",
+    "validate_v1_consumer_integration_proof_to_import_dry_run",
     "validate_v1_consumer_integration_compatibility_freeze",
 ]

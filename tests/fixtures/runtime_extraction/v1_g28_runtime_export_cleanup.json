@@ -1,0 +1,111 @@
+{
+  "packet_set_id": "v1_g28_runtime_export_cleanup",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g28-runtime-export-cleanup",
+  "operator_decision": "Approve-V1-G28",
+  "approved_scope": "runtime_export_cleanup_slice",
+  "runtime_export_cleanup_approved": true,
+  "runtime_export_cleanup_added": true,
+  "lima_runtime_files_changed": true,
+  "approved_runtime_files_changed": [
+    "lima/adapters/__init__.py"
+  ],
+  "approved_docs_tests_fixtures_changed": [
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g28_runtime_export_cleanup.json",
+    "tests/test_v1_g28_runtime_export_cleanup.py",
+    "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json"
+  ],
+  "cleanup_target": {
+    "package": "lima.adapters",
+    "runtime_file": "lima/adapters/__init__.py",
+    "export_surface": "lima.adapters.__all__"
+  },
+  "previous_frozen_adapter_exports": [
+    "SparkbotChatInputPayload",
+    "SparkbotHumanInputAdapter",
+    "SparkbotMeetingInputPayload",
+    "SparkbotOperatorInputPayload",
+    "SparkbotVoiceInputPayload",
+    "V1ConsumerIntegrationCompatibilityError",
+    "validate_v1_consumer_integration_compatibility_freeze"
+  ],
+  "added_adapter_exports": [
+    "V1ConsumerImportDryRunError",
+    "validate_v1_consumer_integration_proof_to_import_dry_run"
+  ],
+  "post_cleanup_adapter_all_exports": [
+    "SparkbotChatInputPayload",
+    "SparkbotHumanInputAdapter",
+    "SparkbotMeetingInputPayload",
+    "SparkbotOperatorInputPayload",
+    "SparkbotVoiceInputPayload",
+    "V1ConsumerImportDryRunError",
+    "V1ConsumerIntegrationCompatibilityError",
+    "validate_v1_consumer_integration_proof_to_import_dry_run",
+    "validate_v1_consumer_integration_compatibility_freeze"
+  ],
+  "existing_frozen_adapter_exports_preserved": true,
+  "existing_frozen_adapter_exports_removed": false,
+  "existing_frozen_adapter_exports_renamed": false,
+  "validator_behavior_changed": false,
+  "new_validator_added": false,
+  "g22_final_public_api_freeze_fixture_refreshed": true,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "model_request_dispatch_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "accepted_evidence_refs": [
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G23_CONSUMER_INTEGRATION_PROOF_TO_IMPORT_DRY_RUN.md",
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/audits/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G27_AUDIT.md"
+  ],
+  "consumer_validation_metadata": {
+    "sparkbot_command_ref": "python -B -m pytest -q tests/test_sparkbot_lima_v1_g27_frozen_api_import_smoke.py -p no:cacheprovider",
+    "sparkbot_result": "7 passed",
+    "arc_bot_shell_command_ref": "python -B -m pytest -q tests/test_arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.py -p no:cacheprovider",
+    "arc_bot_shell_result": "7 passed",
+    "consumer_repo_edits_required": false,
+    "live_runtime_required": false,
+    "external_services_required": false
+  },
+  "rollback_metadata": {
+    "rollback_ref": "rollback:v1-g28:runtime-export-cleanup",
+    "rollback_runtime_file_refs": [
+      "lima/adapters/__init__.py"
+    ],
+    "rollback_fixture_refs": [
+      "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json"
+    ],
+    "remove_docs_tests_fixtures_refs": [
+      "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+      "docs/V1_G28_RUNTIME_EXPORT_CLEANUP_CLOSEOUT.md",
+      "tests/fixtures/runtime_extraction/v1_g28_runtime_export_cleanup.json",
+      "tests/test_v1_g28_runtime_export_cleanup.py"
+    ],
+    "consumer_repo_changes_required": false,
+    "external_service_changes_required": false
+  },
+  "required_confirmations": {
+    "no_validator_behavior_change_confirmation": true,
+    "no_consumer_repo_mutation_confirmation": true,
+    "no_live_import_call_confirmation": true,
+    "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+    "proof_not_authority_confirmation": true
+  }
+}
