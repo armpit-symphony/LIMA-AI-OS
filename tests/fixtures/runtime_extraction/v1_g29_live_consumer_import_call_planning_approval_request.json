@@ -1,0 +1,82 @@
+{
+  "gate_id": "v1_g29_live_consumer_import_call_planning_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g29-live-consumer-import-call-planning-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "live_consumer_import_call_planning_approved": false,
+  "live_consumer_import_call_planning_added": false,
+  "lima_runtime_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "planned_adapter_symbols_called": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G29",
+    "Revise-V1-G29",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G29 implementation of the live consumer import/call planning slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g29-live-consumer-import-call-planning",
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "planned_candidate_adapter_symbols_if_operator_says_yes": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+  ],
+  "planning_scope_if_operator_says_yes": {
+    "metadata_only": true,
+    "fake_runtime_only": true,
+    "no_network_required": true,
+    "no_secret_required": true,
+    "provider_model_calls_allowed": false,
+    "consumer_repo_edits_allowed": false,
+    "lima_runtime_file_edits_allowed": false,
+    "live_runtime_calls_allowed": false,
+    "planned_adapter_symbol_calls_allowed": false
+  },
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING.md",
+    "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g29_live_consumer_import_call_planning.json",
+    "tests/test_v1_g29_live_consumer_import_call_planning.py"
+  ],
+  "approved_consumer_files_if_operator_says_yes": [],
+  "required_prior_evidence_refs": [
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/audits/V1_G28_RUNTIME_EXPORT_CLEANUP_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G28_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G28.md",
+    "docs/readiness/V1_POST_G28_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g29_revise_v1_g29_or_pause"
+}
