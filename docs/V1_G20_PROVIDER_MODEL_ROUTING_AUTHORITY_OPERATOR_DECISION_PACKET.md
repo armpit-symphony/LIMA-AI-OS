@@ -4,7 +4,7 @@ Date: 2026-06-16
 Branch: `prepare-v1-g20-provider-model-routing-authority-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `waiting_for_operator_decision`
+Decision packet status: `approved_for_v1_g20_implementation`
 
 This packet records the valid operator choices for the exact V1-G20 provider/model routing authority approval request. It does not approve implementation, route providers/models, call model providers, read secrets, execute tools, touch consumer repos, import consumer code, wire consumers, or approve product readiness by itself.
 
@@ -26,21 +26,21 @@ The approval request asks:
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Implementation approved: no.
-- Approved next implementation branch: none.
-- Current next action: wait for exactly one valid operator choice.
+- Operator approval recorded: yes.
+- Implementation approved: yes.
+- Approved next implementation branch: `v1-g20-provider-model-routing-authority`.
+- Current next action: implement only the approved V1-G20 provider/model routing authority metadata slice.
 
 ## Decision Record
 
-The operator has not recorded a valid choice yet.
+The operator recorded exactly one valid choice for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G20`
+- Recorded approval wording: `I explicitly approve V1-G20 implementation of the LIMA-side provider/model routing authority metadata slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G20_PROVIDER_MODEL_ROUTING_AUTHORITY_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Implementation approved: no
+- Approved implementation branch: `v1-g20-provider-model-routing-authority`
+- Implementation approved: yes
 
 ## Decision Record Templates
 
