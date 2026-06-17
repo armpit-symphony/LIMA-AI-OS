@@ -1,0 +1,106 @@
+{
+  "gate_id": "v1_g31_fake_runtime_consumer_repo_test_preview_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g31-fake-runtime-consumer-repo-test-preview-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "fake_runtime_consumer_repo_test_preview_approved": false,
+  "fake_runtime_consumer_repo_test_preview_added": false,
+  "future_consumer_test_files_previewed": false,
+  "consumer_test_files_created": false,
+  "lima_runtime_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "live_consumer_import_calls_added": false,
+  "planned_adapter_symbols_called": false,
+  "fake_call_envelopes_executed": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "raw_test_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G31",
+    "Revise-V1-G31",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G31 implementation of the fake-runtime consumer repository test preview slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g31-fake-runtime-consumer-repo-test-preview",
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "fake_runtime_candidate_adapter_symbols_if_operator_says_yes": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+  ],
+  "repo_test_preview_scope_if_operator_says_yes": {
+    "metadata_only": true,
+    "fake_runtime_only": true,
+    "sanitized_test_preview_metadata_allowed": true,
+    "future_consumer_test_paths_allowed": true,
+    "raw_test_content_allowed": false,
+    "raw_patch_content_allowed": false,
+    "raw_diff_content_allowed": false,
+    "consumer_test_file_creation_allowed": false,
+    "adapter_symbol_calls_allowed": false,
+    "fake_call_envelope_execution_allowed": false,
+    "no_network_required": true,
+    "no_secret_required": true,
+    "provider_model_calls_allowed": false,
+    "consumer_repo_edits_allowed": false,
+    "lima_runtime_file_edits_allowed": false,
+    "live_runtime_calls_allowed": false
+  },
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW.md",
+    "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g31_fake_runtime_consumer_repo_test_preview.json",
+    "tests/test_v1_g31_fake_runtime_consumer_repo_test_preview.py"
+  ],
+  "approved_consumer_files_if_operator_says_yes": [],
+  "future_consumer_test_file_paths_if_operator_says_yes": {
+    "sparkbot": [
+      "tests/fixtures/sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+      "tests/test_sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+    ],
+    "arc_bot": [
+      "tests/fixtures/arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+      "tests/test_arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+    ]
+  },
+  "required_prior_evidence_refs": [
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING.md",
+    "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE.md",
+    "docs/audits/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G30_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G30.md",
+    "docs/readiness/V1_POST_G30_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g31_revise_v1_g31_or_pause"
+}
