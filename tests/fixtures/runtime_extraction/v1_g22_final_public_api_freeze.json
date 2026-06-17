@@ -1,0 +1,380 @@
+{
+  "freeze_packet_id": "v1_g22_final_public_api_freeze",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g22-final-public-api-freeze",
+  "approved_scope": "final_public_api_freeze_docs_tests_fixtures_slice",
+  "final_public_api_freeze_docs_tests_fixtures_added": true,
+  "lima_runtime_files_changed": false,
+  "runtime_export_cleanup_approved": false,
+  "runtime_export_cleanup_added": false,
+  "runtime_behavior_changed": false,
+  "consumer_repo_mutation_added": false,
+  "consumer_integration_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_code_imports_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "product_ready": false,
+  "freeze_scope": {
+    "status": "candidate_public_import_surface_freeze",
+    "scope_type": "docs_tests_fixtures_only",
+    "consumer_targets": [
+      "sparkbot",
+      "arc_bot",
+      "lima_robo_os",
+      "lima_office",
+      "future_shell"
+    ]
+  },
+  "public_package_surfaces": {
+    "lima": [
+      "contracts"
+    ]
+  },
+  "public_subpackage_export_surfaces": {
+    "lima.adapters": [
+      "SparkbotChatInputPayload",
+      "SparkbotHumanInputAdapter",
+      "SparkbotMeetingInputPayload",
+      "SparkbotOperatorInputPayload",
+      "SparkbotVoiceInputPayload",
+      "V1ConsumerIntegrationCompatibilityError",
+      "validate_v1_consumer_integration_compatibility_freeze"
+    ],
+    "lima.contracts": [
+      "AdapterDesignProtocol",
+      "ApprovalAuditEvent",
+      "ApprovalEvent",
+      "ApprovalLevel",
+      "ApprovalMetadata",
+      "ApprovalMethod",
+      "ApprovalProtocol",
+      "ApprovalScope",
+      "ApprovalStatus",
+      "AuditEvent",
+      "AuditEventType",
+      "AuditLineageRecord",
+      "AuditStatus",
+      "AuthActor",
+      "AuthActorType",
+      "AuthContext",
+      "AuthDecision",
+      "AuthLevel",
+      "AuthProviderProtocol",
+      "AuthRequirement",
+      "AutonomyAuthority",
+      "BoundaryClassification",
+      "BoundaryMapProtocol",
+      "BreakglassProviderProtocol",
+      "BreakglassSessionRef",
+      "ConsequentialActionRequest",
+      "ConsequentialActionType",
+      "DataReference",
+      "DecisionAuditEvent",
+      "DriverCapability",
+      "DriverCommand",
+      "DriverEvent",
+      "DriverProtocol",
+      "DriverResult",
+      "DriftDecision",
+      "DriftStatus",
+      "EvidenceRequirement",
+      "ExtractionReadinessRecord",
+      "ExtractionStatus",
+      "GuardianContext",
+      "GuardianDecision",
+      "GuardianDecisionRef",
+      "GuardianDecisionStatus",
+      "GuardianProtocol",
+      "HarnessProtocol",
+      "HumanInputAdapterDesign",
+      "HumanInputAdapterMapping",
+      "HumanInputAdapterSurface",
+      "HumanInput",
+      "HumanInputSource",
+      "ClarificationRequest",
+      "IntentCompilationResult",
+      "IntentCompilerProtocol",
+      "IntentEnvelope",
+      "IntentStatus",
+      "IntentType",
+      "IdentityConfidence",
+      "IdentityFactor",
+      "ModelCallEvent",
+      "ModelRequest",
+      "ModelResponse",
+      "OwnerAutonomyContext",
+      "PayloadDriftReview",
+      "PayloadDriftReviewProtocol",
+      "PayloadFixtureDriftRecord",
+      "PolicyDecision",
+      "PolicyEvaluationContext",
+      "PolicyExposure",
+      "PolicyProtocol",
+      "PrivacyClass",
+      "PrivacyProtocol",
+      "RedactionClass",
+      "RedactionMetadata",
+      "RetentionClass",
+      "ReadinessArea",
+      "ReadinessStatus",
+      "RiskClass",
+      "RuntimeBoundaryRecord",
+      "SessionContext",
+      "SessionStatus",
+      "ShellManifest",
+      "ShellProtocol",
+      "SpineAuditEvent",
+      "SpineEvent",
+      "SpineProtocol",
+      "StorageProtocol",
+      "TaskRecord",
+      "TerminalEvent",
+      "ToolCallEvent",
+      "ToolDefinition",
+      "ToolExposureAuditEvent",
+      "ToolExposureDecision",
+      "ToolExposureRequest",
+      "ToolPackManifest",
+      "ToolPackName",
+      "ToolPackProtocol",
+      "ToolPackRiskPolicy",
+      "ToolPackRiskRule",
+      "TrustContextProtocol",
+      "TrustLevel",
+      "TrustedDeviceContext",
+      "VaultAccessDecision",
+      "VaultAccessRequest",
+      "VaultProviderProtocol",
+      "VaultSecretRef",
+      "VisibilityClass",
+      "ShellToolScope"
+    ],
+    "lima.guardian": [
+      "FakeApprovalRecorder",
+      "FakeAuthProvider",
+      "FakeBreakglassProvider",
+      "FakeGuardianDecisionEvaluator",
+      "FakeGuardianPipeline",
+      "FakeGuardianPipelineResult",
+      "FakePolicyRiskEvaluator",
+      "FakeSpineAuditRecorder",
+      "FakeVaultProvider",
+      "AdapterFixtureHarness",
+      "AdapterFixtureHarnessResult",
+      "HumanInputFakePipelineBridge",
+      "HumanInputPipelineBridgeConfig",
+      "V1ApprovalEnforcementError",
+      "V1ConsumerProofPacketIntakeError",
+      "V1FileMutationPolicyError",
+      "V1FileMutationPreviewError",
+      "V1GuardianDecisionGateError",
+      "V1LiveApprovalEvidenceError",
+      "enforce_v1_destructive_approval",
+      "review_v1_runtime_request",
+      "validate_v1_consumer_proof_packet_intake",
+      "validate_v1_file_mutation_preview_diff",
+      "validate_v1_guarded_file_mutation_policy",
+      "validate_v1_live_approval_evidence_capture"
+    ],
+    "lima.harness": [
+      "V1ProviderModelRoutingAuthorityError",
+      "validate_v1_provider_model_routing_authority"
+    ],
+    "lima.kernel": [
+      "ALLOWED_CANDIDATE_STATUSES",
+      "CandidatePreview",
+      "CandidateStatusError",
+      "IntakeCandidateError",
+      "RuntimeStateSnapshot",
+      "V1RuntimeRequestError",
+      "build_intake_candidate",
+      "build_v1_runtime_request",
+      "inspect_runtime_state",
+      "normalize_candidate_status",
+      "preview_candidate",
+      "validate_candidate"
+    ],
+    "lima.persistence": [
+      "V1AuditStoreError",
+      "V1LocalAuditStore"
+    ],
+    "lima.shells.contracts": [
+      "V1GuiderailInputError",
+      "validate_v1_shell_harness_guiderail_input"
+    ],
+    "lima.spine": [
+      "V1AuditEvidenceError",
+      "build_v1_audit_event_record",
+      "build_v1_audit_lineage_record"
+    ]
+  },
+  "v1_runtime_symbol_surfaces": [
+    {
+      "gate": "V1-G11",
+      "module": "lima.kernel",
+      "symbols": [
+        "V1RuntimeRequestError",
+        "build_v1_runtime_request"
+      ]
+    },
+    {
+      "gate": "V1-G11",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1GuardianDecisionGateError",
+        "review_v1_runtime_request"
+      ]
+    },
+    {
+      "gate": "V1-G12",
+      "module": "lima.spine",
+      "symbols": [
+        "V1AuditEvidenceError",
+        "build_v1_audit_event_record",
+        "build_v1_audit_lineage_record"
+      ]
+    },
+    {
+      "gate": "V1-G12",
+      "module": "lima.persistence",
+      "symbols": [
+        "V1AuditStoreError",
+        "V1LocalAuditStore"
+      ]
+    },
+    {
+      "gate": "V1-G14",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1ApprovalEnforcementError",
+        "enforce_v1_destructive_approval"
+      ]
+    },
+    {
+      "gate": "V1-G15",
+      "module": "lima.shells.contracts",
+      "symbols": [
+        "V1GuiderailInputError",
+        "validate_v1_shell_harness_guiderail_input"
+      ]
+    },
+    {
+      "gate": "V1-G16",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1FileMutationPolicyError",
+        "validate_v1_guarded_file_mutation_policy"
+      ]
+    },
+    {
+      "gate": "V1-G17",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1FileMutationPreviewError",
+        "validate_v1_file_mutation_preview_diff"
+      ]
+    },
+    {
+      "gate": "V1-G18",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1ConsumerProofPacketIntakeError",
+        "validate_v1_consumer_proof_packet_intake"
+      ]
+    },
+    {
+      "gate": "V1-G19",
+      "module": "lima.guardian",
+      "symbols": [
+        "V1LiveApprovalEvidenceError",
+        "validate_v1_live_approval_evidence_capture"
+      ]
+    },
+    {
+      "gate": "V1-G20",
+      "module": "lima.harness",
+      "symbols": [
+        "V1ProviderModelRoutingAuthorityError",
+        "validate_v1_provider_model_routing_authority"
+      ]
+    },
+    {
+      "gate": "V1-G21",
+      "module": "lima.adapters",
+      "symbols": [
+        "V1ConsumerIntegrationCompatibilityError",
+        "validate_v1_consumer_integration_compatibility_freeze"
+      ]
+    }
+  ],
+  "candidate_export_inventory_refs": [
+    "lima/__init__.py",
+    "lima/contracts/__init__.py",
+    "lima/kernel/__init__.py",
+    "lima/guardian/__init__.py",
+    "lima/spine/__init__.py",
+    "lima/persistence/__init__.py",
+    "lima/shells/contracts/__init__.py",
+    "lima/harness/__init__.py",
+    "lima/adapters/__init__.py"
+  ],
+  "consumer_compatibility_refs": [
+    "docs/V1_G21_CONSUMER_INTEGRATION_COMPATIBILITY_FREEZE.md",
+    "docs/audits/V1_G21_CONSUMER_INTEGRATION_COMPATIBILITY_FREEZE_AUDIT.md",
+    "tests/fixtures/runtime_extraction/v1_g21_consumer_integration_compatibility_freeze.json"
+  ],
+  "import_surface_expectation_refs": [
+    "tests/test_contract_imports.py",
+    "tests/test_v1_g21_consumer_integration_compatibility_freeze.py",
+    "tests/test_v1_g22_final_public_api_freeze.py"
+  ],
+  "backward_compatibility_policy": {
+    "current_exports_frozen": true,
+    "symbol_removal_requires_future_gate": true,
+    "symbol_rename_requires_future_gate": true,
+    "consumer_breakage_requires_stop": true
+  },
+  "future_change_gate_policy": {
+    "future_public_api_change_requires_approval": true,
+    "runtime_export_cleanup_requires_separate_approval": true,
+    "consumer_repo_edits_require_separate_approval": true,
+    "live_import_calls_require_separate_approval": true
+  },
+  "runtime_export_cleanup_policy": {
+    "approved": false,
+    "implemented": false,
+    "requires_future_gate": true
+  },
+  "guardian_boundary_confirmation": {
+    "compatible": true,
+    "grants_authority": false,
+    "execution_authority_added": false
+  },
+  "approval_boundary_confirmation": {
+    "compatible": true,
+    "approval_token_issued": false,
+    "raw_factor_verified": false
+  },
+  "provider_model_route_boundary_confirmation": {
+    "compatible": true,
+    "provider_model_calls_added": false,
+    "secret_lookup_added": false,
+    "model_dispatch_added": false
+  },
+  "no_consumer_repo_mutation_confirmation": true,
+  "no_live_import_call_confirmation": true,
+  "no_runtime_behavior_change_confirmation": true,
+  "no_secret_credential_customer_data_confirmation": true,
+  "proof_not_authority_confirmation": true,
+  "audit_evidence_linkage": {
+    "approval_request": "docs/V1_G22_FINAL_PUBLIC_API_FREEZE_APPROVAL_REQUEST.md",
+    "operator_decision_packet": "docs/V1_G22_FINAL_PUBLIC_API_FREEZE_OPERATOR_DECISION_PACKET.md",
+    "authority_chain_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G21_AUDIT.md",
+    "readiness_rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G21.md"
+  }
+}
