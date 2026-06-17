@@ -1,0 +1,218 @@
+{
+  "packet_set_id": "v1_g32_consumer_repository_test_edit",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g32-consumer-repository-test-edit",
+  "operator_decision": "Approve-V1-G32",
+  "approved_scope": "consumer_repository_test_edit_slice",
+  "consumer_repository_test_edit_added": true,
+  "approved_consumer_repo_test_files_added": true,
+  "consumer_test_files_created": true,
+  "unapproved_consumer_repo_mutation_added": false,
+  "consumer_runtime_source_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "live_consumer_import_calls_added": false,
+  "planned_adapter_symbols_called": false,
+  "fake_call_envelopes_executed": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "model_request_dispatch_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_outside_local_tests_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted_in_lima_evidence": false,
+  "raw_file_content_persisted_in_lima_evidence": false,
+  "product_ready": false,
+  "approved_lima_files_changed": [
+    "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT.md",
+    "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g32_consumer_repository_test_edit.json",
+    "tests/test_v1_g32_consumer_repository_test_edit.py"
+  ],
+  "approved_consumer_files_changed": {
+    "sparkbot": [
+      "tests/fixtures/sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+      "tests/test_sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+    ],
+    "arc_bot": [
+      "tests/fixtures/arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+      "tests/test_arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+    ]
+  },
+  "approved_import_symbols": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+  ],
+  "accepted_evidence_refs": [
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING.md",
+    "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE.md",
+    "docs/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW.md",
+    "docs/audits/V1_G31_FAKE_RUNTIME_CONSUMER_REPO_TEST_PREVIEW_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G31_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G31.md",
+    "docs/readiness/V1_POST_G31_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "consumer_repository_test_edit_records": [
+    {
+      "consumer_edit_record_id": "consumer-repository-test-edit:v1-g32:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "consumer_branch": "v1-g32-consumer-repository-test-edit",
+      "consumer_commit_sha": "ebef6ae816f9ae4e43cc1ac57c13ce04a20a04f1",
+      "source_preview_record_ref": "fake-runtime-consumer-repo-test-preview:v1-g31:sparkbot:001",
+      "source_fake_runtime_evidence_record_ref": "fake-runtime-consumer-call-evidence:v1-g30:sparkbot:001",
+      "planning_record_ref": "live-consumer-import-call-plan:v1-g29:sparkbot:001",
+      "approved_consumer_files_changed": [
+        "tests/fixtures/sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+        "tests/test_sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+      ],
+      "approved_consumer_test_fixture_files_added": true,
+      "consumer_runtime_source_files_changed": false,
+      "files_outside_approved_scope_changed": false,
+      "approved_import_symbols": [
+        "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+        "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+      ],
+      "imported_symbols_called": false,
+      "planned_adapter_symbols_called": false,
+      "fake_call_envelope_ref": "fake-call-envelope:v1-g30:sparkbot:001",
+      "fake_call_envelope_executed": false,
+      "consumer_runtime_calls_added": false,
+      "live_consumer_import_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted_in_lima_evidence": false,
+      "raw_file_content_persisted_in_lima_evidence": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "focused_consumer_test_result": "8 passed",
+        "g27_import_smoke_result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "evidence_refs": [
+        "frozen-api-import-smoke:v1-g27:sparkbot:001",
+        "runtime-export-cleanup:v1-g28",
+        "live-consumer-import-call-plan:v1-g29:sparkbot:001",
+        "fake-runtime-consumer-call-evidence:v1-g30:sparkbot:001",
+        "fake-runtime-consumer-repo-test-preview:v1-g31:sparkbot:001"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g32:sparkbot-consumer-repository-test-edit",
+        "rollback_lima_file_refs": [
+          "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT.md",
+          "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g32_consumer_repository_test_edit.json",
+          "tests/test_v1_g32_consumer_repository_test_edit.py"
+        ],
+        "rollback_consumer_file_refs": [
+          "tests/fixtures/sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+          "tests/test_sparkbot_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_runtime_file_change_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_files_outside_approved_scope_confirmation": true,
+        "no_live_import_call_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_diff_patch_file_content_in_lima_evidence_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    },
+    {
+      "consumer_edit_record_id": "consumer-repository-test-edit:v1-g32:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "consumer_branch": "v1-g32-consumer-repository-test-edit",
+      "consumer_commit_sha": "2dfb3673ffbd5c044e586a9fe2f714d941318be8",
+      "source_preview_record_ref": "fake-runtime-consumer-repo-test-preview:v1-g31:arc-bot-shell:001",
+      "source_fake_runtime_evidence_record_ref": "fake-runtime-consumer-call-evidence:v1-g30:arc-bot-shell:001",
+      "planning_record_ref": "live-consumer-import-call-plan:v1-g29:arc-bot-shell:001",
+      "approved_consumer_files_changed": [
+        "tests/fixtures/arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+        "tests/test_arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+      ],
+      "approved_consumer_test_fixture_files_added": true,
+      "consumer_runtime_source_files_changed": false,
+      "files_outside_approved_scope_changed": false,
+      "approved_import_symbols": [
+        "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+        "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+      ],
+      "imported_symbols_called": false,
+      "planned_adapter_symbols_called": false,
+      "fake_call_envelope_ref": "fake-call-envelope:v1-g30:arc-bot-shell:001",
+      "fake_call_envelope_executed": false,
+      "consumer_runtime_calls_added": false,
+      "live_consumer_import_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted_in_lima_evidence": false,
+      "raw_file_content_persisted_in_lima_evidence": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "focused_consumer_test_result": "8 passed",
+        "g27_import_smoke_result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "evidence_refs": [
+        "frozen-api-import-smoke:v1-g27:arc-bot-shell:001",
+        "runtime-export-cleanup:v1-g28",
+        "live-consumer-import-call-plan:v1-g29:arc-bot-shell:001",
+        "fake-runtime-consumer-call-evidence:v1-g30:arc-bot-shell:001",
+        "fake-runtime-consumer-repo-test-preview:v1-g31:arc-bot-shell:001"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g32:arc-bot-shell-consumer-repository-test-edit",
+        "rollback_lima_file_refs": [
+          "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT.md",
+          "docs/V1_G32_CONSUMER_REPOSITORY_TEST_EDIT_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g32_consumer_repository_test_edit.json",
+          "tests/test_v1_g32_consumer_repository_test_edit.py"
+        ],
+        "rollback_consumer_file_refs": [
+          "tests/fixtures/arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.json",
+          "tests/test_arc_bot_shell_lima_v1_g31_fake_runtime_consumer_call_preview.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_runtime_file_change_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_files_outside_approved_scope_confirmation": true,
+        "no_live_import_call_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_diff_patch_file_content_in_lima_evidence_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    }
+  ]
+}
