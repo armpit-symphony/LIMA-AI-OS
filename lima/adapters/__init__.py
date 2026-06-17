@@ -7,6 +7,10 @@ from .sparkbot_humaninput import (
     SparkbotOperatorInputPayload,
     SparkbotVoiceInputPayload,
 )
+from .v1_consumer_integration_compatibility import (
+    V1ConsumerIntegrationCompatibilityError,
+    validate_v1_consumer_integration_compatibility_freeze,
+)
 
 __all__ = [
     "SparkbotChatInputPayload",
@@ -14,4 +18,6 @@ __all__ = [
     "SparkbotMeetingInputPayload",
     "SparkbotOperatorInputPayload",
     "SparkbotVoiceInputPayload",
+    "V1ConsumerIntegrationCompatibilityError",
+    "validate_v1_consumer_integration_compatibility_freeze",
 ]
