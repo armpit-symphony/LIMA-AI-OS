@@ -4,7 +4,7 @@ Date: 2026-06-17
 Branch: `prepare-v1-g22-final-public-api-freeze-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved_for_v1_g22_implementation`
 
 This packet records the valid operator choices for the exact V1-G22 final public API freeze approval request. It does not approve implementation, freeze the final public API, clean up runtime exports, edit consumer repositories, import consumer code, call consumer runtimes, wire consumers, or approve product readiness by itself.
 
@@ -25,21 +25,21 @@ The approval request asks:
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Implementation approved: no.
-- Approved next implementation branch: none.
-- Current next action: wait for operator decision.
+- Operator approval recorded: yes.
+- Implementation approved: yes.
+- Approved next implementation branch: `v1-g22-final-public-api-freeze`.
+- Current next action: implement only the approved V1-G22 final public API freeze docs/tests/fixtures slice.
 
 ## Decision Record
 
-No operator approval is recorded yet.
+The operator recorded exactly one valid choice for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G22`
+- Recorded approval wording: `I explicitly approve V1-G22 implementation of the LIMA-side final public API freeze docs/tests/fixtures slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G22_FINAL_PUBLIC_API_FREEZE_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Implementation approved: no
+- Approved implementation branch: `v1-g22-final-public-api-freeze`
+- Implementation approved: yes
 
 ## Decision Record Templates
 
