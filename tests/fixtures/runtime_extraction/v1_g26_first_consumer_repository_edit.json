@@ -1,0 +1,154 @@
+{
+  "packet_set_id": "v1_g26_first_consumer_repository_edit",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g26-first-consumer-repository-edit",
+  "operator_decision": "Approve-V1-G26",
+  "approved_scope": "first_consumer_repository_edit_static_docs_tests_fixtures_slice",
+  "consumer_repository_edit_implementation_added": true,
+  "lima_runtime_files_changed": false,
+  "sparkbot_runtime_source_mutation_added": false,
+  "arc_bot_shell_runtime_source_mutation_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_code_imports_added": false,
+  "live_lima_imports_from_consumers_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "runtime_export_cleanup_approved": false,
+  "runtime_export_cleanup_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "accepted_evidence_refs": [
+    "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE.md",
+    "docs/V1_G21_CONSUMER_INTEGRATION_COMPATIBILITY_FREEZE.md",
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G23_CONSUMER_INTEGRATION_PROOF_TO_IMPORT_DRY_RUN.md",
+    "docs/V1_G24_FIRST_CONSUMER_IMPORT_PLAN_EVIDENCE_PACKETS.md",
+    "docs/V1_G25_FIRST_CONSUMER_REPO_PATCH_PREVIEW_EVIDENCE.md"
+  ],
+  "consumer_records": [
+    {
+      "consumer_record_id": "static-consumer-edit:v1-g26:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "consumer_branch": "v1-g26-first-consumer-repository-edit",
+      "consumer_commit_sha": "a3fa3af26bf3346a2dddd0051cab4b0fe00cd84f",
+      "consumer_files_added": [
+        "docs/proof_packets/SPARKBOT_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+        "tests/fixtures/sparkbot_lima_v1_g26_static_consumer_edit_packet.json",
+        "tests/test_sparkbot_lima_v1_g26_static_consumer_edit_packet.py"
+      ],
+      "proof_packet_ref": "proof-packet:v1-g18:sparkbot",
+      "compatibility_packet_ref": "compatibility:v1-g21:sparkbot",
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "v1_g23_import_plan_ref": "import-plan:v1-g23",
+      "v1_g24_import_plan_id": "import-plan:v1-g24:sparkbot:001",
+      "v1_g25_patch_preview_id": "patch-preview:v1-g25:sparkbot:001",
+      "docs_tests_fixtures_only": true,
+      "runtime_source_files_changed": false,
+      "consumer_code_imports_added": false,
+      "live_lima_imports_added": false,
+      "consumer_runtime_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "runtime_export_cleanup_approved": false,
+      "provider_model_calls_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted": false,
+      "raw_file_content_persisted": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "command_ref": "python -m pytest -q tests/test_sparkbot_lima_v1_g26_static_consumer_edit_packet.py -p no:cacheprovider",
+        "passed": true,
+        "result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g26:sparkbot-static-consumer-edit",
+        "rollback_file_refs": [
+          "docs/proof_packets/SPARKBOT_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+          "tests/fixtures/sparkbot_lima_v1_g26_static_consumer_edit_packet.json",
+          "tests/test_sparkbot_lima_v1_g26_static_consumer_edit_packet.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_live_import_call_confirmation": true,
+        "no_runtime_wiring_confirmation": true,
+        "no_runtime_export_cleanup_confirmation": true,
+        "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    },
+    {
+      "consumer_record_id": "static-consumer-edit:v1-g26:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "consumer_branch": "v1-g26-first-consumer-repository-edit",
+      "consumer_commit_sha": "f2a0a2c96829c83bc6dc24c201df6d18476a21d3",
+      "consumer_files_added": [
+        "docs/proof_packets/ARC_BOT_SHELL_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+        "tests/fixtures/arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.json",
+        "tests/test_arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.py"
+      ],
+      "proof_packet_ref": "proof-packet:v1-g18:arc-bot-shell",
+      "compatibility_packet_ref": "compatibility:v1-g21:arc-bot-shell",
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "v1_g23_import_plan_ref": "import-plan:v1-g23",
+      "v1_g24_import_plan_id": "import-plan:v1-g24:arc-bot-shell:001",
+      "v1_g25_patch_preview_id": "patch-preview:v1-g25:arc-bot-shell:001",
+      "docs_tests_fixtures_only": true,
+      "runtime_source_files_changed": false,
+      "consumer_code_imports_added": false,
+      "live_lima_imports_added": false,
+      "consumer_runtime_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "runtime_export_cleanup_approved": false,
+      "provider_model_calls_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted": false,
+      "raw_file_content_persisted": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "command_ref": "python -m pytest -q tests/test_arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.py -p no:cacheprovider",
+        "passed": true,
+        "result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g26:arc-bot-shell-static-consumer-edit",
+        "rollback_file_refs": [
+          "docs/proof_packets/ARC_BOT_SHELL_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+          "tests/fixtures/arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.json",
+          "tests/test_arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_live_import_call_confirmation": true,
+        "no_runtime_wiring_confirmation": true,
+        "no_runtime_export_cleanup_confirmation": true,
+        "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    }
+  ]
+}
