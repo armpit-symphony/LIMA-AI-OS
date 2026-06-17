@@ -1,0 +1,270 @@
+{
+  "packet_set_id": "v1_g24_first_consumer_import_plan_evidence_packets",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g24-first-consumer-import-plan-evidence-packets",
+  "operator_decision": "Approve-V1-G24",
+  "approved_scope": "first_consumer_import_plan_evidence_packets_docs_tests_fixtures_slice",
+  "first_consumer_import_plan_evidence_packets_added": true,
+  "lima_runtime_files_changed": false,
+  "sparkbot_repo_mutation_added": false,
+  "arc_bot_shell_repo_mutation_added": false,
+  "consumer_repo_mutation_added": false,
+  "consumer_integration_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_code_imports_added": false,
+  "shell_runtime_wiring_added": false,
+  "runtime_export_cleanup_approved": false,
+  "runtime_export_cleanup_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "product_ready": false,
+  "accepted_evidence_refs": [
+    "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE.md",
+    "docs/V1_G21_CONSUMER_INTEGRATION_COMPATIBILITY_FREEZE.md",
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G23_CONSUMER_INTEGRATION_PROOF_TO_IMPORT_DRY_RUN.md"
+  ],
+  "evidence_packets": [
+    {
+      "import_plan_id": "import-plan:v1-g24:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "consumer_branch_ref": "origin/main",
+      "consumer_commit_sha": "abc123def4567890",
+      "proof_packet_ref": "proof-packet:v1-g18:sparkbot",
+      "compatibility_packet_ref": "compatibility:v1-g21:sparkbot",
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "proposed_import_metadata": {
+        "import_refs": [
+          "from lima.adapters import validate_v1_consumer_integration_proof_to_import_dry_run"
+        ],
+        "import_target_refs": [
+          "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+        ],
+        "metadata_only": true,
+        "consumer_code_imported": false,
+        "live_import_performed": false,
+        "consumer_repo_mutation_added": false,
+        "grants_runtime_authority": false
+      },
+      "proposed_call_site_metadata": {
+        "call_site_refs": [
+          "sparkbot.lima_import_plan.static_review"
+        ],
+        "call_shape_refs": [
+          "validate_v1_consumer_integration_proof_to_import_dry_run(metadata)"
+        ],
+        "metadata_only": true,
+        "live_call_performed": false,
+        "consumer_runtime_calls_added": false,
+        "consumer_runtime_invoked": false,
+        "grants_runtime_authority": false
+      },
+      "adapter_boundary_mapping": {
+        "boundary_ref": "adapter-boundary:v1-g24:sparkbot",
+        "mapped_refs": [
+          "lima.adapters",
+          "sparkbot.adapter.static-plan"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "guardian_boundary_mapping": {
+        "boundary_ref": "guardian-boundary:v1-g24:sparkbot",
+        "mapped_refs": [
+          "guardian.syscall-gate"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "approval_boundary_mapping": {
+        "boundary_ref": "approval-boundary:v1-g24:sparkbot",
+        "mapped_refs": [
+          "approval.evidence"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "provider_model_route_boundary_mapping": {
+        "boundary_ref": "provider-model-boundary:v1-g24:sparkbot",
+        "mapped_refs": [
+          "model.route.metadata"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "expected_test_command_metadata": {
+        "command_refs": [
+          "python -m pytest tests/test_v1_g24_first_consumer_import_plan_evidence_packets.py"
+        ],
+        "expected_result_refs": [
+          "sparkbot packet validates through V1-G23 dry-run validator"
+        ],
+        "metadata_only": true,
+        "dry_run_only": true,
+        "consumer_runtime_invoked": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g24:sparkbot-evidence-packet",
+        "rollback_step_refs": [
+          "remove sparkbot evidence packet fixture entry"
+        ],
+        "consumer_repo_changes_required": false,
+        "runtime_export_cleanup_required": false,
+        "external_service_changes_required": false
+      },
+      "no_consumer_repo_mutation_confirmation": true,
+      "no_live_import_call_confirmation": true,
+      "no_runtime_export_cleanup_confirmation": true,
+      "no_raw_content_secret_credential_customer_data_confirmation": true,
+      "proof_not_authority_confirmation": true,
+      "audit_evidence_linkage": {
+        "audit_record_ref": "audit:v1-g24:sparkbot-import-plan-evidence",
+        "evidence_refs": [
+          "proof-packet:v1-g18:sparkbot",
+          "compatibility:v1-g21:sparkbot",
+          "api-freeze:v1-g22",
+          "import-plan:v1-g23"
+        ],
+        "required": true,
+        "proof_not_authority": true
+      }
+    },
+    {
+      "import_plan_id": "import-plan:v1-g24:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "consumer_branch_ref": "origin/main",
+      "consumer_commit_sha": "def456abc1237890",
+      "proof_packet_ref": "proof-packet:v1-g18:arc-bot-shell",
+      "compatibility_packet_ref": "compatibility:v1-g21:arc-bot-shell",
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "proposed_import_metadata": {
+        "import_refs": [
+          "from lima.adapters import validate_v1_consumer_integration_proof_to_import_dry_run"
+        ],
+        "import_target_refs": [
+          "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+        ],
+        "metadata_only": true,
+        "consumer_code_imported": false,
+        "live_import_performed": false,
+        "consumer_repo_mutation_added": false,
+        "grants_runtime_authority": false
+      },
+      "proposed_call_site_metadata": {
+        "call_site_refs": [
+          "arc_bot_shell.lima_import_plan.static_review"
+        ],
+        "call_shape_refs": [
+          "validate_v1_consumer_integration_proof_to_import_dry_run(metadata)"
+        ],
+        "metadata_only": true,
+        "live_call_performed": false,
+        "consumer_runtime_calls_added": false,
+        "consumer_runtime_invoked": false,
+        "grants_runtime_authority": false
+      },
+      "adapter_boundary_mapping": {
+        "boundary_ref": "adapter-boundary:v1-g24:arc-bot-shell",
+        "mapped_refs": [
+          "lima.adapters",
+          "arc-bot-shell.adapter.static-plan"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "guardian_boundary_mapping": {
+        "boundary_ref": "guardian-boundary:v1-g24:arc-bot-shell",
+        "mapped_refs": [
+          "guardian.syscall-gate"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "approval_boundary_mapping": {
+        "boundary_ref": "approval-boundary:v1-g24:arc-bot-shell",
+        "mapped_refs": [
+          "approval.evidence"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "provider_model_route_boundary_mapping": {
+        "boundary_ref": "provider-model-boundary:v1-g24:arc-bot-shell",
+        "mapped_refs": [
+          "model.route.metadata"
+        ],
+        "compatible": true,
+        "metadata_only": true,
+        "proof_not_authority": true,
+        "grants_execution_authority": false,
+        "future_integration_requires_approval": true
+      },
+      "expected_test_command_metadata": {
+        "command_refs": [
+          "python -m pytest tests/test_v1_g24_first_consumer_import_plan_evidence_packets.py"
+        ],
+        "expected_result_refs": [
+          "arc-bot-shell packet validates through V1-G23 dry-run validator"
+        ],
+        "metadata_only": true,
+        "dry_run_only": true,
+        "consumer_runtime_invoked": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g24:arc-bot-shell-evidence-packet",
+        "rollback_step_refs": [
+          "remove arc-bot-shell evidence packet fixture entry"
+        ],
+        "consumer_repo_changes_required": false,
+        "runtime_export_cleanup_required": false,
+        "external_service_changes_required": false
+      },
+      "no_consumer_repo_mutation_confirmation": true,
+      "no_live_import_call_confirmation": true,
+      "no_runtime_export_cleanup_confirmation": true,
+      "no_raw_content_secret_credential_customer_data_confirmation": true,
+      "proof_not_authority_confirmation": true,
+      "audit_evidence_linkage": {
+        "audit_record_ref": "audit:v1-g24:arc-bot-shell-import-plan-evidence",
+        "evidence_refs": [
+          "proof-packet:v1-g18:arc-bot-shell",
+          "compatibility:v1-g21:arc-bot-shell",
+          "api-freeze:v1-g22",
+          "import-plan:v1-g23"
+        ],
+        "required": true,
+        "proof_not_authority": true
+      }
+    }
+  ]
+}
