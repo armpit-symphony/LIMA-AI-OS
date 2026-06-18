@@ -3,7 +3,7 @@
 Date: 2026-06-17
 Branch: `audit-v1-runtime-authority-chain-through-g45`
 G45 implementation commit: `d94413c8e1a026ef9923074ade4c24ee56e24875`
-G45 audit commit: `c2ebec4a6cf7f0c9987aef1f0703b5c10ab80209`
+G45 audit commit: `c2ebec48b80d02a815352ad87951a39f2cc5e9bf`
 API status: `CANDIDATE_ONLY`
 
 Audit verdict: `PASS`
