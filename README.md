@@ -51,9 +51,13 @@ It does not contain migrated Sparkbot runtime behavior, live tool execution, pro
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The V1 target is to make LIMA usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`. `V1-G10` is complete as a docs/tests/fixtures-only minimum runtime implementation gate. The `V1-G11` approval request, preflight audit, work order, and operator decision packet are ready for operator decision. The packet now has an empty Decision Record section, but operator approval is not recorded and the packet does not approve runtime implementation.
+The V1 target is to make LIMA usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`. The V1 authority chain is audited through `V1-G54`, and the post-G54 readiness rollup selects `V1-G55` as the next provider SDK/network egress authority gate.
 
-No `lima/` runtime change, provider/model routing, shell wiring, persistence, haptic device behavior, runtime export cleanup, final API freeze, V1 product readiness, or production readiness is approved by the `V1-G11` request or operator decision packet. The next smallest safe step is to record one valid operator choice in the packet's Decision Record section.
+`V1-G55` is currently prepared as an approval request only. The request, work order, preflight audit, operator decision packet, and implementation blocker audit are ready, but no operator approval is recorded and no `V1-G55` runtime implementation is approved.
+
+The active V1 gate is `Approve-V1-G55`, `Revise-V1-G55`, or `Pause` in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`. Until `Approve-V1-G55` is explicitly recorded, do not add the G55 wrapper, change public API exports for G55, invoke provider SDK/network egress, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned network calls, read secrets, access credential values, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
+
+Existing V1 candidate slices remain non-production evidence only. The current G55 request does not edit Sparkbot or Arc-Bot-shell and does not authorize real SDK, network, credential, connector, browser, file, device, robotics, or physical-world behavior.
 
 ## Core Invariant
 

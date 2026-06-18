@@ -6,6 +6,27 @@ For long-range product direction, Phase 3 continuation assumptions, and operator
 
 ## Current State
 
+### Current V1 Gate Snapshot
+
+LIMA remains `CANDIDATE_ONLY`.
+
+The V1 target remains first testing with `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`.
+
+Latest V1 checkpoint:
+
+- V1 runtime authority chain audit through G54: complete.
+- V1 readiness rollup through G54: complete.
+- V1-G55 real provider SDK/network egress approval request: prepared, not approved.
+- V1-G55 implementation blocker audit: active.
+- Operator approval recorded for G55: no.
+- G55 runtime implementation approved: no.
+- Product readiness: not approved.
+- Production readiness: not approved.
+
+The current required operator decision is exactly one of `Approve-V1-G55`, `Revise-V1-G55`, or `Pause` in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`.
+
+Until `Approve-V1-G55` is explicitly recorded, do not implement the G55 wrapper, change G55 public API exports, invoke provider SDK/network egress, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, edit Sparkbot or Arc-Bot-shell for G55, wire consumer production runtime behavior, or claim V1/product/production readiness.
+
 Phase 3.5 is complete and tagged on `main`.
 
 Phase 3.6 is complete, merged to `main`, and tagged.
