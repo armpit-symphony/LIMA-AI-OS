@@ -394,32 +394,34 @@ LIMA Runtime is the kernel.
 
 The V1 target is now recorded in `docs/V1_PRODUCT_READINESS_TARGET.md`.
 
-V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`.
+V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`.
 
-The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, and shell haptic intent support. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
+The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, shell haptic intent support, and bounded real provider SDK/network egress authority. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` accepts Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627` as source-backed local `thinking` / progress-state evidence only.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. The active V1 gate is now `V1-G55`.
 
-`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mappings, and fail-closed fixture cases only.
+The V1 authority chain is audited through `V1-G54`, and the readiness rollup through G54 selects `V1-G55` as the next provider SDK/network egress authority gate.
 
-`docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` records the V1-G3 static destructive edit/delete operator-approval contract proof. It proves destructive action classes require operator approval metadata and static approval-bypass claims fail closed.
+Completed candidate-only V1 evidence includes:
 
-`docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` records the V1-G4 static real `GuardianDecision` and live approval path design gate. It proves future decision outcome families, GuardianDecision status mappings, decision-scope requirements, approval-decision dependency, and fail-closed authority cases.
+- V1-G1 through V1-G10 static target, first-shell proof, contract, release-boundary, and implementation-gate evidence
+- V1-G11 through V1-G17 local non-executing request, GuardianDecision preflight, audit/evidence, approval-enforcement, guarded file mutation, and preview/diff slices
+- V1-G18 through V1-G28 consumer proof intake, approval metadata, provider/model routing authority, compatibility/freeze, import-plan, patch-preview, repository edit, import-smoke, and runtime export cleanup evidence
+- V1-G29 through V1-G42 consumer import/call planning, fake-runtime tests, compatibility review, bounded integration design, consumer repository edits, shell wiring, and integration evidence
+- V1-G43 through V1-G54 provider/model dispatch, provider/model call authority/execution metadata, fake-executor smoke, credential/network hardening, real provider executor metadata, provider SDK/network/credential authority, and fake SDK/fake-egress harness evidence
 
-`docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` records the V1-G5 static provider/model routing contract and acceptance-test design. It proves route families, route metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases.
+This evidence remains `CANDIDATE_ONLY`. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, direct provider egress, secret access, or real SDK/network execution by LIMA.
 
-`docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves response-state to haptic-intent mapping, required metadata, forbidden device fields, shell ownership, and fail-closed forged device claims.
+Current V1-G55 authority documents:
 
-`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` are accepted as static first-shell evidence only; live runtime parity remains unproven.
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`
+- `docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md`
 
-`docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md` record the V1-G8 audit/evidence persistence static contract and threat model. They define durable record family, lineage, query, redaction, shell evidence, and negative-case requirements without implementing persistence.
+The next smallest safe V1 action is to record exactly one valid operator choice in the V1-G55 operator decision packet: `Approve-V1-G55`, `Revise-V1-G55`, or `Pause`.
 
-`docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
+If `Approve-V1-G55` is explicitly recorded with the exact required wording, the next implementation branch may add only the bounded LIMA-side real provider SDK/network egress authority wrapper limited to the G55 file-touch map. It must still not add built-in provider SDK clients, SDK dependencies, vendor SDK imports, direct provider SDK implementation, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration changes, fallback, consumer production runtime integration, connector/browser/file/device/robotics/physical-world behavior, or product-readiness claims.
 
-`docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` records the V1-G10 minimum runtime implementation gate. The gate is complete as docs/tests/fixtures-only evidence. It defines the V1-G11 file-touch map, rollback plan, acceptance-test expectations, and stop conditions, but it does not approve runtime implementation.
-
-`docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the exact V1-G11 operator approval question. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` records the valid operator decision choices, required approval wording, and an empty Decision Record section. The request and decision packet are complete as docs/tests/fixtures-only evidence and are ready for operator decision, but neither approves implementation.
-
-The next smallest safe V1 action is to record one valid operator choice in the V1-G11 operator decision packet's Decision Record section. If approved with the exact required wording, the next implementation branch may add only the typed request and GuardianDecision preflight runtime slice limited to the V1-G10/V1-G11 file-touch map. It must remain local, deterministic, non-executing, non-persistent, and fail-closed. It must not add provider/model calls, shell wiring, haptic device behavior, runtime export cleanup, final freeze, browser/file/network/device/robotics behavior, or physical-world behavior.
-
-This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, GuardianDecision creation, approval enforcement, persistence, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
+This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, provider SDK/network egress, GuardianDecision execution authority, approval enforcement expansion, persistence expansion, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

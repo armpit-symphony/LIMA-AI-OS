@@ -1,0 +1,45 @@
+{
+  "status_id": "v1_long_range_roadmap_g55_status",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-long-range-roadmap-through-g55",
+  "source_commit_before_refresh": "1966c7336e5af982895e724029426578df7949ab",
+  "documents": {
+    "long_range_roadmap": "docs/LIMA_LONG_RANGE_ROADMAP.md",
+    "product_readiness_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
+    "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
+    "v1_g55_approval_request": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md",
+    "v1_g55_operator_decision_packet": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md",
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+  },
+  "current_gate": "V1-G55",
+  "latest_completed_gate": "V1-G54",
+  "operator_approval_recorded": false,
+  "runtime_implementation_approved": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G55",
+    "Revise-V1-G55",
+    "Pause"
+  ],
+  "next_smallest_safe_step": "record_one_valid_operator_choice_in_v1_g55_operator_decision_packet",
+  "forbidden_by_refresh": {
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "public_api_exports_changed": false,
+    "sparkbot_or_arc_bot_shell_changed": false,
+    "provider_sdk_network_egress_invocation_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependency_added": false,
+    "vendor_sdk_import_added": false,
+    "provider_endpoint_resolution_by_lima_added": false,
+    "network_call_performed_by_lima": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false
+  }
+}
