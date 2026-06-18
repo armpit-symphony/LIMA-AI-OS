@@ -6512,3 +6512,29 @@ Consequences:
 - Runtime implementation remains unapproved.
 - The only future implementation scope, if approved, remains the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
 - No `lima/` files, tests/support helpers, shell repositories, Sparkbot imports/code copy, provider/model routing, persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, or physical-world behavior are added by the decision packet.
+
+## ADR-0338: V1-G55 Is The Active Provider SDK Network Egress Decision Gate
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records V1-G55 as the active operator decision gate for the bounded real provider SDK/network egress authority slice. The prepared V1-G55 approval request, operator decision packet, preflight audit, and implementation blocker audit govern the next step until exactly one valid operator choice is recorded.
+
+Context:
+
+Previous V1 decision-log entries stopped at V1-G11, while the current V1 readiness chain has advanced through V1-G54 and prepared the V1-G55 approval request. V1-G54 fake SDK/fake-egress harness evidence and the runtime authority chain audit through G54 are complete. V1-G55 is prepared as request-only metadata, and the implementation blocker audit records that implementation remains blocked pending explicit `Approve-V1-G55`.
+
+Consequences:
+
+- Valid V1-G55 operator choices are `Approve-V1-G55`, `Revise-V1-G55`, or `Pause`.
+- Operator approval is not recorded by this ADR.
+- Runtime implementation remains unapproved.
+- The proposed V1-G55 implementation branch remains `v1-g55-real-provider-sdk-network-egress` and must not be used for implementation unless `Approve-V1-G55` is explicitly recorded.
+- Without `Approve-V1-G55`, only docs/tests/fixtures review, guard docs, audit docs, request revision work, and decision-recording work may continue.
+- If approved later, implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`.
+- No runtime behavior is added by this decision-log refresh.
+- No `lima/` runtime files are changed by this decision-log refresh.
+- No public API exports are changed by this decision-log refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
+- No provider SDK/network egress invocation, caller-injected provider SDK network executor invocation, built-in provider SDK client, SDK dependency, vendor SDK import, direct provider SDK implementation, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector behavior, browser/file/network/device/robotics/physical-world behavior, raw sensitive payload persistence, product-readiness claim, or production-readiness claim is authorized by this ADR.
