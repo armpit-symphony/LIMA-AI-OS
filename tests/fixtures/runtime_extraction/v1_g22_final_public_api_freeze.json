@@ -185,7 +185,9 @@
     ],
     "lima.harness": [
       "V1ProviderModelRoutingAuthorityError",
-      "validate_v1_provider_model_routing_authority"
+      "validate_v1_provider_model_routing_authority",
+      "V1LiveProviderModelCallAuthorityError",
+      "validate_v1_live_provider_model_call_authority"
     ],
     "lima.kernel": [
       "ALLOWED_CANDIDATE_STATUSES",
