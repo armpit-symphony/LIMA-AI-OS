@@ -187,7 +187,9 @@
       "V1ProviderModelRoutingAuthorityError",
       "validate_v1_provider_model_routing_authority",
       "V1LiveProviderModelCallAuthorityError",
-      "validate_v1_live_provider_model_call_authority"
+      "validate_v1_live_provider_model_call_authority",
+      "V1LiveProviderModelCallExecutionError",
+      "execute_v1_live_provider_model_call"
     ],
     "lima.kernel": [
       "ALLOWED_CANDIDATE_STATUSES",
