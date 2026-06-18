@@ -2,41 +2,62 @@
 
 This document records the current V1 product target for LIMA-AI-OS.
 
-It is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider calls, model routing, GuardianDecision creation, approval enforcement, persistence, adapter calls, file mutation, browser/network activity, robotics, or physical-world behavior in the current branch.
+It is product-direction and readiness evidence only. It does not approve runtime implementation, shell wiring, provider calls, model routing, provider SDK/network egress, GuardianDecision execution authority, approval enforcement expansion, persistence expansion, adapter calls, file mutation, browser/network activity, robotics, or physical-world behavior in the current branch.
 
 ## V1 Objective
 
 LIMA-AI-OS V1 should become a usable Guardian-gated runtime for the first shell consumers:
 
 - `Sparkbot_shell`
-- `Sparkbot`
+- public `Sparkbot`
 - `Arc-Bot-shell`
 
-Sparkbot remains the R&D reference for how shells should behave. LIMA should use Sparkbot as reference evidence and extract compatible contracts deliberately. LIMA must not copy Sparkbot code, import Sparkbot runtime modules, or wire Sparkbot routes unless a future implementation approval explicitly names that scope.
+Sparkbot remains the R&D reference for how shells should behave. LIMA should use Sparkbot as reference evidence and extract compatible contracts deliberately. LIMA must not copy Sparkbot code, import Sparkbot runtime modules, wire Sparkbot routes, or mutate consumer repositories unless a future implementation approval explicitly names that scope.
 
-## Sparkbot Reference Evidence Checked
+## Current Gate
 
-The local `C:\Users\limap\Sparkbot` checkout is present. Git revision reads were blocked by Git ownership safety for this sandbox user, so no Sparkbot commit is recorded here.
+LIMA remains `CANDIDATE_ONLY`.
 
-Read-only document references checked:
+The current V1 authority chain is audited through `V1-G54`. The post-G54 readiness rollup selects `V1-G55` as the next narrow authority gate.
 
-- `Sparkbot/AGENTS.md`: identifies Sparkbot as the public/R&D assistant app with model/provider switching and Guardian approvals.
-- `Sparkbot/docs/capabilities.md`: documents owner-local operation, provider/model setup and routing, persistent approvals, operator controls, and confirmation for dangerous/destructive actions.
-- `Sparkbot/docs/PUBLIC_RELEASE_CAPABILITY_MODEL.md`: documents public capability tiers where file edits/deletes, writes, sends, credential access, service control, and critical changes require confirmation or elevated approval.
+`V1-G55` is an approval request for a bounded real provider SDK/network egress authority wrapper. The request is prepared, but implementation is not approved.
 
-These references support using Sparkbot as behavior guidance for V1 shell policy. They do not authorize copying Sparkbot implementation into LIMA.
+Authoritative G55 files:
 
-## Accepted Future V1 Runtime Capabilities
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`
+- `docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md`
 
-The following capabilities are acceptable as future V1 product requirements after separately approved implementation gates:
+The current operator choices are exactly:
 
-- live/actual approval flow
-- real `GuardianDecision` runtime path
-- provider/model routing
-- shell haptic intent support
-- shell response-state parity for first shell consumers
+- `Approve-V1-G55`
+- `Revise-V1-G55`
+- `Pause`
 
-These are not implemented by this document and are not approved by Phase 48.2.
+Runtime implementation may start only after the exact `Approve-V1-G55` state is recorded in the G55 operator decision packet.
+
+## Accepted Evidence Through G54
+
+The V1 evidence chain now includes:
+
+- first-shell proof intake for `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`
+- typed request and GuardianDecision preflight metadata
+- local redacted audit/evidence persistence
+- destructive approval enforcement metadata
+- guarded file mutation policy and preview evidence
+- consumer import, patch preview, repository edit, and import-smoke evidence
+- shell wiring and consumer integration evidence
+- provider/model dispatch, live-call authority, live-call execution metadata, and fake-executor smoke evidence
+- provider credential/network hardening metadata
+- real provider executor design, invocation metadata, and executable caller-injected wrapper metadata
+- provider SDK/network/credential authority metadata
+- fake SDK/fake-egress harness evidence
+- runtime authority-chain audit through G54
+- readiness rollup through G54
+
+This evidence is still candidate-only. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, direct provider egress, secret access, or real SDK/network execution by LIMA.
 
 ## Operator Approval Rule
 
@@ -65,88 +86,54 @@ Haptics are acceptable as a V1 shell experience requirement, but ownership remai
 For V1, LIMA must prove compatibility with the first shells before product readiness can be claimed:
 
 - `Sparkbot_shell` UX-state proof, including real source-backed `thinking` / streaming or progress state
-- `Sparkbot` behavior-reference alignment for approvals, Guardian posture, provider/model routing, and shell response states
+- public `Sparkbot` behavior-reference alignment for approvals, Guardian posture, provider/model routing, and shell response states
 - `Arc-Bot-shell` task-oriented approval, audit/evidence, connector, and office-work boundary proof
 - no raw natural-language-to-tool execution shortcut
 - provider/model routing constrained by Guardian and shell tool-pack scope
 - destructive edit/delete operations requiring operator approval
 - audit/evidence lineage for consequential actions
+- consumer import/call smoke evidence remains fake-runtime or bounded by explicit approvals until a later gate authorizes more
 
 ## Current Status
 
 Current status remains not V1 product-ready.
 
-The current V1 lane remains docs/tests/fixtures-only. It does not implement runtime behavior and does not approve a runtime implementation lane.
+The active gate is `V1-G55`. The approval request, work order, preflight audit, operator decision packet, and implementation blocker audit are ready. Operator approval is not recorded. Runtime implementation is not approved.
 
-`V1-G1` source-backed Sparkbot_shell `thinking` evidence has now been accepted in `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` from Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`. This proves local shell-owned `received -> thinking -> completed` behavior only. It does not prove live model streaming parity, provider/model response pacing, LIMA runtime integration, approval enforcement, GuardianDecision authority, haptics, persistence, or production behavior.
+Until `Approve-V1-G55` is explicitly recorded, the following remain blocked:
 
-`V1-G2` static typed bridge acceptance proof has been accepted in `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md`. It proves metadata shape, status mapping, and fail-closed case coverage only.
-
-`V1-G3` static destructive edit/delete operator-approval contract proof has been accepted in `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md`. It proves destructive action classes require operator approval metadata and static approval-bypass claims fail closed. It does not prove live approval enforcement or runtime mutation blocking.
-
-`V1-G4` static real `GuardianDecision` and live approval path design-gate proof has been accepted in `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md`. It proves future decision outcome families, status mappings, decision-scope requirements, and fail-closed authority cases only. It does not prove runtime `GuardianDecision` authority or live approval enforcement.
-
-`V1-G5` static provider/model routing contract proof has been accepted in `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md`. It proves route families, metadata, Guardian/shell/tool-pack/secret/budget/privacy/audit gates, fallback inheritance, and fail-closed routing cases only. It does not prove runtime provider/model routing or model calls.
-
-`V1-G6` static haptic intent metadata contract proof has been accepted in `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md`. It proves shell response state to haptic intent family mapping, required non-device metadata, forbidden device fields, shell-owned haptic boundaries, accessibility/fallback metadata, and fail-closed forged device haptic claims only. It does not prove device haptic behavior, shell rendering, LIMA runtime integration, or live UX parity.
-
-`V1-G7` first-shell integration proof is now closed as static evidence in `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md`. `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` proof packets have been delivered and intaken by LIMA. This proves static first-shell compatibility evidence only. It does not prove live runtime parity, shell wiring, or V1 product readiness.
-
-`V1-G8` audit/evidence persistence request gate is now recorded in `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md`. It defines required durable record families, lineage fields, query capabilities, shell evidence needs, and fail-closed negative cases only. It does not implement durable audit persistence, storage adapters, query APIs, export/delete review behavior, live approval, real `GuardianDecision`, provider/model routing, shell wiring, or V1 product readiness.
-
-`V1-G8` static audit/evidence persistence contract and threat model are now recorded in `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md` and `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md`. They define static record families, query rules, redaction/retention envelopes, destructive edit/delete approval evidence requirements, provider/model route evidence requirements, export/delete review refs, and threat mitigations only. They do not implement durable runtime persistence.
-
-`V1-G9` product release boundary audit is now recorded in `docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md`. The audit is complete, but the release boundary is not passed. LIMA remains `CANDIDATE_ONLY`; runtime export cleanup, final API freeze, V1 product readiness, and production readiness remain unapproved.
-
-`V1-G10` minimum runtime implementation gate is now recorded in `docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md`. It defines the future V1-G11 file-touch map, rollback plan, acceptance-test expectations, stop conditions, and runtime-slice boundaries. It does not approve runtime implementation or change runtime behavior.
-
-`V1-G11` runtime request decision gate approval request is now recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md`. The operator decision packet is recorded in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md`. It asks the exact operator approval question for the typed request and GuardianDecision preflight runtime slice and records valid choices plus an empty Decision Record section without recording approval, implementing runtime behavior, or changing `lima/`.
+- G55 runtime implementation
+- G55 public API export changes
+- provider SDK/network egress invocation
+- built-in provider SDK clients
+- SDK dependencies
+- vendor SDK imports
+- direct provider SDK implementation
+- provider endpoint resolution by LIMA
+- LIMA-owned DNS, HTTP, socket, network calls, or direct provider egress
+- secret lookup, credential value access, provider token access, or API key access
+- provider configuration changes
+- fallback execution
+- Sparkbot or Arc-Bot-shell edits for G55
+- consumer production runtime integration
+- connector, browser, network, file, device, robotics, or physical-world behavior
+- V1 product readiness or production readiness claims
 
 ## Remaining Blockers
 
-- V1-G11 implementation approval is still required
-- runtime implementation scope gate is defined, but runtime implementation is not approved
-- real `GuardianDecision` runtime path is not implemented
-- live approval enforcement is not implemented
-- provider/model routing is not implemented
-- typed bridge runtime behavior is not implemented
-- shell runtime wiring is not implemented
-- first-shell integration proof is static-only and does not prove live runtime parity
-- live model streaming parity remains unproven
-- haptic device rendering proof remains shell-owned and not implemented here
-- audit persistence request gate exists, but durable audit persistence is not implemented
-- destructive edit/delete approval enforcement is not implemented
-- product release boundary audit is complete, but release boundary is not passed
-- runtime export cleanup remains unapproved
-- final API freeze remains unapproved
+- `Approve-V1-G55` is not recorded
+- bounded real provider SDK/network egress wrapper is not implemented
+- direct provider SDK/network egress by LIMA is still forbidden
+- real provider SDK client ownership remains outside LIMA
+- provider secrets and credential values remain inaccessible to LIMA
+- consumer production runtime integration remains unapproved
+- live runtime parity across first shells is not proven as product readiness
+- release boundary remains not passed
+- V1 product readiness is not approved
 - production behavior is not approved
 
 ## Recommended Next Step
 
-Use the V1-G11 operator decision packet's Decision Record section to record one valid operator choice. If explicitly approved with the required wording, implement the typed request and GuardianDecision preflight runtime slice exactly inside the V1-G10/V1-G11 file-touch map.
+Use `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md` to record exactly one valid operator choice: `Approve-V1-G55`, `Revise-V1-G55`, or `Pause`.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current gap order. Sparkbot_shell `thinking` / progress-state proof is accepted as source-backed local shell evidence by `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md`.
-
-`docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` records the V1-G2 static typed bridge acceptance proof. It proves metadata shape, status mapping, and fail-closed case coverage only. It does not prove runtime bridge behavior.
-
-`docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` records the V1-G3 static destructive edit/delete approval contract proof. It proves destructive approval metadata requirements and approval-bypass fail-closed behavior only. It does not prove runtime approval enforcement.
-
-`docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` records the V1-G4 static real `GuardianDecision` and live approval path design gate. It proves decision outcome families, GuardianDecision status mapping, decision-scope requirements, and fail-closed authority cases only. It does not prove runtime authority.
-
-`docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` records the V1-G5 static provider/model routing contract and acceptance-test design. It proves route constraints and fail-closed model-routing cases only. It does not prove runtime routing.
-
-`docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` records the V1-G6 static haptic intent metadata contract and shell fixture proof. It proves non-device haptic intent metadata shape and fail-closed device haptic claim handling only. It does not prove device behavior or shell rendering.
-
-`docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md` records the V1-G7 first-shell integration proof closeout. It accepts `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell` as static first-shell evidence only. It does not approve shell runtime wiring or live parity.
-
-`docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md` records the V1-G8 audit/evidence persistence request gate. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md` records the audit criteria. `docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md` records the request closeout. These do not complete durable persistence.
-
-`docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md` records the V1-G9 product release boundary audit. It confirms that static evidence is not enough for V1 readiness, runtime export cleanup, final freeze, or production claims.
-
-`docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md` records the V1-G10 minimum runtime implementation gate. It confirms that the first future runtime slice should be typed request plus GuardianDecision preflight behavior only, with no execution, no provider/model calls, no durable persistence, no shell wiring, no runtime export cleanup, and no final freeze.
-
-`docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the exact approval request for that runtime slice. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` confirms the request is ready for operator decision while runtime implementation remains unapproved. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` records valid operator choices, required approval wording, and an empty Decision Record section without recording approval.
-
-The next implementation design question is:
-
-Should V1-G11 be explicitly approved as the smallest runtime implementation slice that moves LIMA from static V1 evidence toward usable V1 behavior without bypassing Guardian, approval, audit/evidence, shell, or rollback boundaries?
+If `Approve-V1-G55` is explicitly recorded with the exact required wording, implement only the bounded LIMA-side real provider SDK/network egress authority wrapper named in the G55 request. Stop before SDK dependencies, built-in provider SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.

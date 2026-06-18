@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DOC_PATH = REPO_ROOT / "docs" / "V1_READINESS_GAP_MATRIX.md"
 FIXTURE_PATH = (
@@ -25,13 +26,18 @@ def _load_fixture() -> dict[str, Any]:
 
 def test_v1_gap_matrix_exists_and_preserves_non_implementation_scope() -> None:
     fixture = _load_fixture()
+
     assert DOC_PATH.exists()
     assert fixture["document"] == "docs/V1_READINESS_GAP_MATRIX.md"
     assert fixture["source_target"] == "docs/V1_PRODUCT_READINESS_TARGET.md"
+    assert fixture["current_branch"] == "docs-v1-product-readiness-through-g55"
+    assert fixture["source_commit_before_matrix_refresh"] == (
+        "ddd93607504fa9b432948e819e65b68dfefc9a9f"
+    )
     assert fixture["docs_tests_fixtures_only"] is True
+    assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["implementation_approved"] is False
     assert fixture["v1_product_ready"] is False
-    assert fixture["source_commit_before_matrix"] == "57a403cb7ad4aa6f352a3c361a71db575d3de5a1"
 
 
 def test_v1_gap_matrix_names_first_shell_consumers() -> None:
@@ -42,249 +48,144 @@ def test_v1_gap_matrix_names_first_shell_consumers() -> None:
     }
 
 
-def test_v1_gap_matrix_covers_expected_gaps() -> None:
-    gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
-    assert set(gaps) == {f"V1-G{index}" for index in range(12)}
-    assert gaps["V1-G1"]["name"] == "sparkbot_shell_thinking_progress_proof"
-    assert gaps["V1-G1"]["status"] == "accepted_source_backed_local_shell_evidence"
-    assert (
-        gaps["V1-G1"]["request_document"]
-        == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md"
-    )
-    assert (
-        gaps["V1-G1"]["intake_document"]
-        == "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md"
-    )
-    assert gaps["V1-G2"]["name"] == "typed_bridge_acceptance_proof"
-    assert gaps["V1-G2"]["status"] == "complete_static_docs_tests_fixtures_proof"
-    assert (
-        gaps["V1-G2"]["gate_document"]
-        == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md"
-    )
-    assert (
-        gaps["V1-G2"]["proof_document"]
-        == "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md"
-    )
-    assert gaps["V1-G3"]["name"] == "destructive_edit_delete_approval_contract"
-    assert gaps["V1-G4"]["name"] == "real_guardian_decision_and_live_approval_path"
-    assert gaps["V1-G4"]["status"] == "complete_static_docs_tests_fixtures_design_gate"
-    assert (
-        gaps["V1-G4"]["gate_document"]
-        == "docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md"
-    )
-    assert gaps["V1-G5"]["name"] == "provider_model_routing"
-    assert (
-        gaps["V1-G5"]["status"]
-        == "complete_static_docs_tests_fixtures_contract_and_acceptance_test_design"
-    )
-    assert gaps["V1-G5"]["contract_document"] == "docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md"
-    assert gaps["V1-G6"]["name"] == "haptic_intent_metadata"
-    assert gaps["V1-G6"]["status"] == "complete_static_docs_tests_fixtures_contract"
-    assert (
-        gaps["V1-G6"]["contract_document"]
-        == "docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md"
-    )
-    assert gaps["V1-G7"]["name"] == "first_shell_integration_proof"
-    assert gaps["V1-G7"]["status"] == "complete_static_first_shell_integration_evidence"
-    assert (
-        gaps["V1-G7"]["request_document"]
-        == "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md"
-    )
-    assert (
-        gaps["V1-G7"]["consolidated_closeout_document"]
-        == "docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_CLOSEOUT.md"
-    )
-    assert gaps["V1-G7"]["proof_packets_received"] is True
-    assert gaps["V1-G7"]["lima_intake_audits_complete"] is True
-    assert gaps["V1-G7"]["consolidated_closeout_complete"] is True
-    assert gaps["V1-G8"]["name"] == "audit_evidence_persistence"
-    assert gaps["V1-G8"]["status"] == "complete_static_contract_and_threat_model"
-    assert (
-        gaps["V1-G8"]["request_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_GATE.md"
-    )
-    assert (
-        gaps["V1-G8"]["audit_criteria_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_AUDIT_CRITERIA.md"
-    )
-    assert (
-        gaps["V1-G8"]["request_closeout_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_REQUEST_CLOSEOUT.md"
-    )
-    assert (
-        gaps["V1-G8"]["contract_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CONTRACT.md"
-    )
-    assert (
-        gaps["V1-G8"]["threat_model_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_THREAT_MODEL.md"
-    )
-    assert (
-        gaps["V1-G8"]["closeout_document"]
-        == "docs/V1_G8_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md"
-    )
-    assert gaps["V1-G9"]["name"] == "product_release_boundary"
-    assert gaps["V1-G9"]["status"] == "complete_static_release_boundary_audit_boundary_not_passed"
-    assert gaps["V1-G9"]["audit_document"] == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_AUDIT.md"
-    assert (
-        gaps["V1-G9"]["closeout_document"]
-        == "docs/V1_G9_PRODUCT_RELEASE_BOUNDARY_CLOSEOUT.md"
-    )
-    assert gaps["V1-G9"]["release_boundary_passed"] is False
-    assert gaps["V1-G10"]["name"] == "minimum_runtime_implementation_gate"
-    assert gaps["V1-G10"]["status"] == "complete_static_implementation_gate_runtime_not_approved"
-    assert (
-        gaps["V1-G10"]["gate_document"]
-        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md"
-    )
-    assert (
-        gaps["V1-G10"]["closeout_document"]
-        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_CLOSEOUT.md"
-    )
-    assert gaps["V1-G11"]["name"] == "typed_request_guardian_decision_preflight_runtime_slice"
-    assert gaps["V1-G11"]["status"] == "approval_request_ready_runtime_not_approved"
-    assert (
-        gaps["V1-G11"]["gate_source_document"]
-        == "docs/V1_G10_MINIMUM_RUNTIME_IMPLEMENTATION_GATE.md"
-    )
-    assert (
-        gaps["V1-G11"]["approval_request_document"]
-        == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md"
-    )
-    assert (
-        gaps["V1-G11"]["preflight_audit_document"]
-        == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md"
-    )
-    assert (
-        gaps["V1-G11"]["operator_decision_packet_document"]
-        == "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md"
-    )
-    assert gaps["V1-G11"]["approval_request_ready"] is True
-    assert gaps["V1-G11"]["operator_decision_packet_ready"] is True
-    assert gaps["V1-G11"]["operator_decision_record_slot_added"] is True
-    assert gaps["V1-G11"]["operator_decision_recorded_choice"] is None
-    assert gaps["V1-G11"]["operator_decision_packet_records_approval"] is False
-    assert gaps["V1-G11"]["operator_approval_recorded"] is False
+def test_v1_gap_matrix_current_anchor_is_g55() -> None:
+    anchor = _load_fixture()["current_anchor"]
+
+    assert anchor["latest_completed_gate"] == "V1-G54"
+    assert anchor["current_gate"] == "V1-G55"
+    assert anchor["operator_approval_recorded"] is False
+    assert anchor["runtime_implementation_approved"] is False
+    assert anchor["valid_operator_choices"] == [
+        "Approve-V1-G55",
+        "Revise-V1-G55",
+        "Pause",
+    ]
 
 
-def test_v1_gap_matrix_keeps_runtime_approval_flags_honest() -> None:
-    gaps = {gap["id"]: gap for gap in _load_fixture()["gaps"]}
-    assert gaps["V1-G1"]["runtime_approval_needed"] is False
-    assert gaps["V1-G2"]["runtime_approval_needed"] is False
-    assert gaps["V1-G3"]["runtime_approval_needed"] is False
-    assert gaps["V1-G3"]["runtime_enforcement_approval_needed"] is True
-    assert gaps["V1-G4"]["runtime_approval_needed"] is False
-    assert gaps["V1-G4"]["runtime_authority_approval_needed"] is True
-    assert gaps["V1-G5"]["runtime_approval_needed"] is False
-    assert gaps["V1-G5"]["runtime_routing_approval_needed"] is True
-    assert gaps["V1-G6"]["runtime_approval_needed"] is False
-    assert gaps["V1-G6"]["device_behavior_approval_needed_in_lima"] is False
-    assert gaps["V1-G6"]["shell_device_behavior_remains_shell_owned"] is True
-    assert gaps["V1-G7"]["runtime_approval_needed"] is False
-    assert gaps["V1-G7"]["runtime_wiring_approval_needed"] is True
-    assert gaps["V1-G8"]["runtime_approval_needed"] is False
-    assert gaps["V1-G8"]["runtime_persistence_approval_needed"] is True
-    assert gaps["V1-G9"]["runtime_approval_needed"] is False
-    assert gaps["V1-G9"]["runtime_export_cleanup_approved"] is False
-    assert gaps["V1-G9"]["final_freeze_approved"] is False
-    assert gaps["V1-G10"]["runtime_approval_needed"] is False
-    assert gaps["V1-G10"]["later_runtime_implementation_approval_needed"] is True
-    assert gaps["V1-G11"]["runtime_approval_needed"] is True
-    assert gaps["V1-G11"]["runtime_implementation_added"] is False
-    assert gaps["V1-G11"]["runtime_export_cleanup_approved"] is False
-    assert gaps["V1-G11"]["final_freeze_approved"] is False
+def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
+    groups = {group["ids"]: group for group in _load_fixture()["gap_groups"]}
+
+    assert set(groups) == {
+        "V1-G1..V1-G10",
+        "V1-G11..V1-G17",
+        "V1-G18..V1-G28",
+        "V1-G29..V1-G42",
+        "V1-G43..V1-G54",
+        "V1-G55",
+    }
+    assert groups["V1-G1..V1-G10"]["status"] == (
+        "complete_historical_candidate_only_evidence"
+    )
+    assert groups["V1-G43..V1-G54"]["status"] == (
+        "complete_prior_approved_provider_authority_and_fake_egress_evidence"
+    )
+    g55 = groups["V1-G55"]
+    assert g55["status"] == "approval_request_ready_runtime_not_approved"
+    assert (
+        g55["approval_request_document"]
+        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md"
+    )
+    assert (
+        g55["preflight_audit_document"]
+        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md"
+    )
+    assert (
+        g55["operator_decision_packet_document"]
+        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md"
+    )
+    assert (
+        g55["implementation_blocker_audit_document"]
+        == "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+    )
+    assert g55["operator_approval_recorded"] is False
+    assert g55["runtime_implementation_added"] is False
+    assert g55["runtime_approval_needed"] is True
 
 
-def test_v1_gap_matrix_recommends_runtime_gate_after_release_boundary_audit() -> None:
+def test_v1_gap_matrix_recommends_g55_operator_decision() -> None:
     fixture = _load_fixture()
-    assert fixture["recommended_order"][0] == "V1-G1"
-    assert fixture["recommended_order"][-1] == "V1-G11"
+
     assert (
         fixture["next_smallest_safe_step"]
-        == "record_one_valid_operator_choice_in_v1_g11_decision_record"
+        == "record_one_valid_operator_choice_in_v1_g55_decision_record"
     )
-    assert (
-        fixture["next_smallest_safe_step_status"]
-        == "pending_operator_decision"
-    )
+    assert fixture["next_smallest_safe_step_status"] == "pending_operator_decision"
     assert (
         fixture["next_smallest_safe_step_reason"]
-        == "v1_g11_decision_record_slot_present_no_choice_recorded"
+        == "v1_g55_decision_record_has_no_approve_choice_recorded"
     )
 
 
-def test_v1_gap_matrix_stop_conditions_cover_forbidden_surfaces() -> None:
+def test_v1_gap_matrix_stop_conditions_cover_forbidden_g55_surfaces() -> None:
     stop_conditions = set(_load_fixture()["stop_conditions"])
-    assert "lima_runtime_change" in stop_conditions
-    assert "tests_support_runtime_or_harness_helper" in stop_conditions
-    assert "shell_repo_modification" in stop_conditions
-    assert "provider_model_call" in stop_conditions
-    assert "guardian_decision_runtime_creation" in stop_conditions
-    assert "approval_enforcement" in stop_conditions
-    assert "execution_dispatch_persistence" in stop_conditions
-    assert "external_call" in stop_conditions
-    assert "shell_browser_network_file_mutation" in stop_conditions
-    assert "robotics_or_physical_world_behavior" in stop_conditions
-    assert "haptic_device_behavior" in stop_conditions
+
+    assert "g55_implementation_without_approve_v1_g55" in stop_conditions
+    assert "file_scope_outside_g55_request" in stop_conditions
+    assert "sparkbot_or_arc_bot_shell_modification_for_g55" in stop_conditions
+    assert "provider_sdk_network_egress_invocation" in stop_conditions
+    assert "built_in_provider_sdk_client" in stop_conditions
+    assert "sdk_dependency" in stop_conditions
+    assert "vendor_sdk_import" in stop_conditions
+    assert "endpoint_resolution_by_lima" in stop_conditions
+    assert "dns_http_socket_network_calls_by_lima" in stop_conditions
+    assert "direct_provider_egress_by_lima" in stop_conditions
+    assert "secret_lookup_or_credential_value_access" in stop_conditions
+    assert "provider_configuration_change" in stop_conditions
+    assert "fallback_execution" in stop_conditions
+    assert "consumer_production_runtime_integration" in stop_conditions
+    assert (
+        "connector_browser_network_file_device_robotics_physical_world_behavior"
+        in stop_conditions
+    )
+    assert "v1_product_or_production_readiness_claim" in stop_conditions
 
 
 def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
     boundary = _load_fixture()["boundary_results"]
-    assert boundary["operator_approval_contract_added"] is True
-    assert boundary["guardian_decision_design_gate_added"] is True
-    assert boundary["provider_model_routing_contract_added"] is True
-    assert boundary["haptic_intent_metadata_contract_added"] is True
-    assert boundary["first_shell_integration_proof_request_gate_added"] is True
-    assert boundary["first_shell_integration_proof_complete"] is True
-    assert boundary["first_shell_integration_proof_closeout_added"] is True
-    assert boundary["audit_evidence_persistence_request_gate_added"] is True
-    assert boundary["audit_evidence_persistence_static_contract_added"] is True
-    assert boundary["audit_evidence_persistence_threat_model_added"] is True
-    assert boundary["product_release_boundary_audit_added"] is True
-    assert boundary["product_release_boundary_passed"] is False
-    assert boundary["minimum_runtime_implementation_gate_added"] is True
-    assert boundary["minimum_runtime_implementation_gate_runtime_approved"] is False
-    assert boundary["v1_g11_approval_request_added"] is True
-    assert boundary["v1_g11_preflight_audit_added"] is True
-    assert boundary["v1_g11_operator_decision_packet_added"] is True
-    assert boundary["v1_g11_operator_decision_record_slot_added"] is True
-    assert boundary["v1_g11_operator_decision_recorded_choice"] is None
-    assert boundary["v1_g11_operator_decision_packet_records_approval"] is False
-    assert boundary["v1_g11_operator_approval_recorded"] is False
-    assert boundary["v1_g11_runtime_implementation_added"] is False
+
+    assert boundary["v1_g55_approval_request_added"] is True
+    assert boundary["v1_g55_preflight_audit_added"] is True
+    assert boundary["v1_g55_operator_decision_packet_added"] is True
+    assert boundary["v1_g55_implementation_blocker_audit_added"] is True
+    assert boundary["v1_g55_operator_approval_recorded"] is False
+    assert boundary["v1_g55_runtime_implementation_added"] is False
+
     for key in (
-        "runtime_behavior_added",
-        "lima_runtime_files_changed",
+        "runtime_behavior_added_by_refresh",
+        "lima_runtime_files_changed_by_refresh",
         "tests_support_changed",
-        "shell_repos_changed",
-        "provider_model_routing_added",
-        "guardian_decision_runtime_added",
-        "approval_enforcement_added",
-        "audit_persistence_added",
-        "haptic_device_behavior_added",
-        "runtime_export_cleanup_approved",
-        "final_freeze_approved",
+        "shell_repos_changed_by_refresh",
+        "provider_sdk_network_egress_invocation_added",
+        "built_in_provider_sdk_client_added",
+        "sdk_dependency_added",
+        "vendor_sdk_import_added",
+        "provider_endpoint_resolution_by_lima_added",
+        "network_call_performed_by_lima",
+        "secret_lookup_added",
+        "credential_value_access_added",
+        "provider_token_or_api_key_access_added",
+        "provider_configuration_changes_added",
+        "fallback_execution_added",
+        "consumer_production_runtime_integration_added",
+        "connector_browser_network_file_device_robotics_physical_world_behavior_added",
         "v1_release_claimed",
     ):
         assert boundary[key] is False
 
 
-def test_v1_gap_matrix_doc_matches_next_step_and_boundaries() -> None:
+def test_v1_gap_matrix_doc_matches_g55_next_step_and_boundaries() -> None:
     text = DOC_PATH.read_text(encoding="utf-8")
-    assert "This matrix turns the V1 product target into an implementation-readiness sequence." in text
-    assert "`V1-G1` is accepted as source-backed local shell evidence." in text
-    assert "`V1-G2` is complete as static docs/tests/fixtures-only typed bridge acceptance proof." in text
-    assert "`V1-G3` is complete as static docs/tests/fixtures-only destructive edit/delete" in text
-    assert "`V1-G4` is complete as static docs/tests/fixtures-only real `GuardianDecision`" in text
-    assert "`V1-G5` is complete as static docs/tests/fixtures-only provider/model routing" in text
-    assert "`V1-G6` is complete as static docs/tests/fixtures-only haptic intent metadata" in text
-    assert "`V1-G7` is complete as static docs/tests/fixtures-only first-shell integration evidence." in text
-    assert "`V1-G8` is complete as static docs/tests/fixtures-only audit/evidence persistence contract" in text
-    assert "`V1-G9` is complete as static docs/tests/fixtures-only product release-boundary audit" in text
-    assert "`V1-G10` is complete as static docs/tests/fixtures-only minimum runtime implementation gate" in text
-    assert "The V1-G11 approval request and operator decision packet are ready for operator decision." in text
-    assert "an empty Decision Record section" in text
-    assert "The next smallest safe step is to record one valid operator choice in the V1-G11 operator decision packet's Decision Record section." in text
-    assert "`Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`" in text
-    assert "runtime behavior" in text
-    assert "haptic device behavior" in text
+
+    assert "This matrix turns the V1 product target into the current implementation-readiness sequence." in text
+    assert "Current active gate: `V1-G55`" in text
+    assert "`V1-G43` through `V1-G54`" in text
+    assert "`V1-G55`" in text
+    assert "approval request ready_runtime_not_approved" not in text
+    assert "Pending operator decision" in text
+    assert "G55 implementation without `Approve-V1-G55`" in text
+    assert "provider SDK/network egress invocation" in text
+    assert "built-in provider SDK clients" in text
+    assert "LIMA-owned DNS, HTTP, socket, network calls" in text
+    assert "secret lookup, credential value access" in text
+    assert "V1 product readiness, production readiness" in text
+    assert "The next smallest safe step is to record one valid operator choice in the V1-G55 operator decision packet." in text
