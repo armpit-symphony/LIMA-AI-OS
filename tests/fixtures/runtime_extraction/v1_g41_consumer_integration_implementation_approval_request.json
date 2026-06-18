@@ -1,0 +1,97 @@
+{
+  "gate_id": "v1_g41_consumer_integration_implementation_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g41-consumer-integration-implementation-approval-request",
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "consumer_integration_implementation_approved": false,
+  "consumer_integration_implementation_added": false,
+  "shell_wiring_design_evidence_exists": true,
+  "shell_wiring_implementation_approved": false,
+  "lima_runtime_files_changed": false,
+  "consumer_repo_mutation_added_by_request": false,
+  "sparkbot_files_changed_by_request": false,
+  "arc_bot_shell_files_changed_by_request": false,
+  "consumer_runtime_source_files_changed_by_request": false,
+  "raw_patch_bodies_persisted": false,
+  "patches_applied": false,
+  "adapter_symbols_called": false,
+  "consumer_runtime_modules_imported": false,
+  "runtime_consumer_integration_added": false,
+  "shell_runtime_wiring_implementation_added": false,
+  "provider_model_calls_added": false,
+  "model_request_dispatch_added": false,
+  "fallback_execution_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_sensitive_content_persisted_in_lima_evidence": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G41",
+    "Revise-V1-G41",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G41 implementation of the consumer integration implementation slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g41-consumer-integration-implementation",
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "edit_scope_if_operator_says_yes": {
+    "lima_docs_tests_fixtures_only": true,
+    "exact_consumer_test_fixture_edits_allowed": true,
+    "consumer_repo_edits_limited_to_exact_paths": true,
+    "bounded_consumer_integration_implementation_evidence_allowed": true,
+    "consumer_runtime_source_edits_allowed": false,
+    "runtime_consumer_integration_allowed": false,
+    "raw_patch_body_persistence_allowed": false,
+    "adapter_symbol_calls_allowed": false,
+    "consumer_runtime_module_import_allowed": false,
+    "shell_runtime_wiring_implementation_allowed": false,
+    "provider_model_calls_allowed": false,
+    "secret_required": false,
+    "network_required": false,
+    "physical_world_behavior_allowed": false,
+    "product_readiness_claim_allowed": false
+  },
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION.md",
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g41_consumer_integration_implementation.json",
+    "tests/test_v1_g41_consumer_integration_implementation.py"
+  ],
+  "approved_consumer_files_if_operator_says_yes": {
+    "sparkbot": [
+      "tests/fixtures/sparkbot_lima_v1_g41_consumer_integration_implementation.json",
+      "tests/test_sparkbot_lima_v1_g41_consumer_integration_implementation.py"
+    ],
+    "arc_bot": [
+      "tests/fixtures/arc_bot_shell_lima_v1_g41_consumer_integration_implementation.json",
+      "tests/test_arc_bot_shell_lima_v1_g41_consumer_integration_implementation.py"
+    ]
+  },
+  "required_prior_evidence_refs": [
+    "docs/V1_G40_SHELL_WIRING_DESIGN.md",
+    "docs/V1_G40_SHELL_WIRING_DESIGN_CLOSEOUT.md",
+    "docs/audits/V1_G40_SHELL_WIRING_DESIGN_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G40_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G40.md",
+    "docs/readiness/V1_POST_G40_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g41_revise_v1_g41_or_pause"
+}
