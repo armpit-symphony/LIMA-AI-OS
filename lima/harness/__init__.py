@@ -8,6 +8,10 @@ from .v1_live_provider_model_call_execution import (
     V1LiveProviderModelCallExecutionError,
     execute_v1_live_provider_model_call,
 )
+from .v1_executable_real_provider_executor_invocation import (
+    V1ExecutableRealProviderExecutorInvocationError,
+    execute_v1_executable_real_provider_executor_invocation,
+)
 from .v1_provider_model_routing_authority import (
     V1ProviderModelRoutingAuthorityError,
     validate_v1_provider_model_routing_authority,
@@ -20,4 +24,6 @@ __all__ = [
     "validate_v1_live_provider_model_call_authority",
     "V1LiveProviderModelCallExecutionError",
     "execute_v1_live_provider_model_call",
+    "V1ExecutableRealProviderExecutorInvocationError",
+    "execute_v1_executable_real_provider_executor_invocation",
 ]
