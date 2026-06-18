@@ -4,7 +4,7 @@ Date: 2026-06-17
 Branch: `prepare-v1-g44-live-provider-model-call-authority-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved_for_v1_g44_implementation`
 
 This packet records the valid operator choices for the exact V1-G44 live provider/model call authority approval request. It does not approve implementation, edit runtime files, call providers/models, execute live model requests, make network calls, read secrets, access credential values, execute fallback, or approve product readiness by itself.
 
@@ -29,21 +29,21 @@ The approval request asks:
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Implementation approved: no.
-- Approved next implementation branch: none.
-- Current next action: wait for operator decision.
+- Operator approval recorded: yes.
+- Implementation approved: yes.
+- Approved next implementation branch: `v1-g44-live-provider-model-call-authority`.
+- Current next action: implement only the approved V1-G44 live provider/model call authority metadata/preflight slice.
 
 ## Decision Record
 
-No operator choice has been recorded.
+The operator recorded exactly one valid choice for implementation.
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G44`
+- Recorded approval wording: `I explicitly approve V1-G44 implementation of the live provider/model call authority metadata/preflight slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G44_LIVE_PROVIDER_MODEL_CALL_AUTHORITY_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Implementation approved: no
+- Approved implementation branch: `v1-g44-live-provider-model-call-authority`
+- Implementation approved: yes
 
 ## Decision Record Templates
 
