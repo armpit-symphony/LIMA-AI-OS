@@ -1,0 +1,156 @@
+{
+  "audit_id": "v1_consumer_work_settings_test_runbook_execution_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-19",
+  "audit_branch": "audit-v1-consumer-work-settings-test-runbook-execution",
+  "source_lima_commit_before_audit": "7f90c83946d7974e5f60294b1a602a1de3be4e51",
+  "documents": {
+    "execution_audit": "docs/audits/V1_CONSUMER_WORK_SETTINGS_TEST_RUNBOOK_EXECUTION_AUDIT.md",
+    "test_runbook": "docs/runbooks/V1_CONSUMER_WORK_SETTINGS_TEST_RUNBOOK.md",
+    "consumer_testability_matrix": "docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md",
+    "consumer_work_settings_readiness_audit": "docs/audits/V1_CONSUMER_WORK_SETTINGS_READINESS_AUDIT.md",
+    "public_sparkbot_publication_audit": "docs/audits/V1_PUBLIC_SPARKBOT_PREVIEW_PUBLICATION_AUDIT.md",
+    "v1_g54_fake_sdk_egress_harness_audit": "docs/audits/V1_G54_FAKE_SDK_EGRESS_HARNESS_AUDIT.md",
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+  },
+  "branch_commits": {
+    "lima_ai_os": {
+      "repository": "armpit-symphony/LIMA-AI-OS",
+      "branch": "docs-v1-consumer-work-settings-test-runbook",
+      "commit": "7f90c83946d7974e5f60294b1a602a1de3be4e51",
+      "clean_before_audit_branch": true
+    },
+    "public_sparkbot": {
+      "repository": "armpit-symphony/Sparkbot",
+      "target_repository": "sparkpit-labs/Sparkbot",
+      "branch": "public-work-settings-preview",
+      "commit": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+      "clean": true,
+      "target_pr_created": false,
+      "manual_compare_url": "https://github.com/sparkpit-labs/Sparkbot/compare/main...armpit-symphony:public-work-settings-preview?expand=1"
+    },
+    "sparkbot_shell": {
+      "repository": "armpit-symphony/Sparkbot_shell",
+      "branch": "sparkbot-shell-work-settings-runtime-preview",
+      "commit": "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc",
+      "clean": true
+    },
+    "arc_bot_shell": {
+      "repository": "armpit-symphony/Arc-Bot-shell",
+      "branch": "arc-work-queue-runtime-settings-docs",
+      "commit": "a05faea14ab24341b4b4567967911e33e51ce88a",
+      "clean": true,
+      "known_status_warning": "could not open directory '.pytest_cache/': Permission denied"
+    }
+  },
+  "validation_commands": [
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "result": "93 passed in 0.24s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "result": "13 passed in 0.04s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "npm run build",
+      "result": "passed: tsc --noEmit && vite build; Vite built 61 modules"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": ".\\.venv-public-test\\Scripts\\python.exe -B -m pytest -q backend\\tests\\test_capabilities.py -p no:cacheprovider",
+      "result": "4 passed, 1 StarletteDeprecationWarning in 0.27s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run test -- --run",
+      "result": "1 test file passed, 4 tests passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run build",
+      "result": "passed: vite build; Vite built 32 modules"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python --version",
+      "result": "Python 3.12.10"
+    },
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python -m compileall lima",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "result": "4709 passed in 4.04s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "scope_audit": {
+    "docs_tests_fixtures_only": true,
+    "lima_runtime_files_changed": false,
+    "public_api_exports_changed": false,
+    "consumer_repository_files_changed": false,
+    "public_sparkbot_target_repository_state_changed": false,
+    "public_sparkbot_target_pr_created": false,
+    "v1_g55_implementation_approved_or_started": false
+  },
+  "boundary_results": {
+    "g55_runtime_wrapper_added": false,
+    "provider_sdk_network_egress_runtime_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependencies_or_vendor_sdk_imports_added": false,
+    "endpoint_resolution_execution_added": false,
+    "lima_owned_dns_http_socket_network_calls_or_direct_provider_egress_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_change_or_fallback_execution_added": false,
+    "non_local_endpoint_checks_allowed": false,
+    "lima_connector_browser_network_file_device_robotics_physical_world_authority_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "product_ready": false,
+    "production_ready": false,
+    "v1_0_complete": false
+  },
+  "sanitization": {
+    "command_status_metadata_only": true,
+    "raw_prompts_stored": false,
+    "raw_model_responses_stored": false,
+    "raw_customer_data_stored": false,
+    "secrets_or_credential_values_stored": false,
+    "provider_tokens_or_api_keys_stored": false,
+    "raw_file_contents_diffs_or_patch_bodies_stored": false,
+    "public_sparkbot_warning": "StarletteDeprecationWarning"
+  },
+  "known_blockers": {
+    "public_sparkbot_target_pr_requires_auth_or_cross_repo_pr_path": true,
+    "v1_g55_requires_exact_operator_choice": true,
+    "v1_product_readiness_not_established": true
+  },
+  "audit_decision": "pass_current_consumer_work_settings_stack",
+  "recommended_next_step": "keep_consumer_preview_branches_testable_and_block_v1_g55_until_exact_approval"
+}
