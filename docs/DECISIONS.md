@@ -6538,3 +6538,27 @@ Consequences:
 - No public API exports are changed by this decision-log refresh.
 - No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
 - No provider SDK/network egress invocation, caller-injected provider SDK network executor invocation, built-in provider SDK client, SDK dependency, vendor SDK import, direct provider SDK implementation, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector behavior, browser/file/network/device/robotics/physical-world behavior, raw sensitive payload persistence, product-readiness claim, or production-readiness claim is authorized by this ADR.
+
+## ADR-0339: V1 Consumer Target Refresh Tracks Arc Readiness Without Unblocking G55
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records a docs/tests/fixtures-only consumer target state refresh after the Arc-Bot-shell runtime gating readiness integration audit. The refresh accepts Arc-Bot-shell readiness integration as consumer-side testing evidence and records the public Sparkbot publication permission blocker, while preserving V1-G55 as the active unapproved implementation gate.
+
+Context:
+
+After V1-G54 and the G55 request/blocker chain, Arc-Bot-shell gained a pushed readiness integration checkpoint at `3004367aa7aa96b4b2518c0e3783cf5afba979c0`, audited by `docs/audits/V1_ARC_RUNTIME_GATING_READINESS_INTEGRATION_AUDIT.md`. Public Sparkbot has a clean local preview branch at `81eed8c4067b1a73885bbc79003ea5870b1604a2`, but pushing to `sparkpit-labs/Sparkbot` remains blocked by GitHub 403 for the current `armpit-symphony` credential.
+
+Consequences:
+
+- The refresh is docs/tests/fixtures-only.
+- V1-G55 remains the active implementation decision gate.
+- Operator approval for G55 remains unrecorded.
+- Runtime implementation remains unapproved.
+- No `lima/` runtime files are changed by this refresh.
+- No public API exports are changed by this refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this refresh.
+- Public Sparkbot remote publication remains an external permission blocker, not a LIMA runtime blocker.
+- No provider SDK/network egress invocation, built-in provider SDK client, SDK dependency, vendor SDK import, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, fallback execution, consumer production integration, connector/browser/network/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this refresh.

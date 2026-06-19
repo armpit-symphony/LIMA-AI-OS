@@ -1,0 +1,95 @@
+{
+  "document": "docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-consumer-target-state-after-arc-readiness-integration",
+  "source_commit_before_refresh": "a1a0c95565982fb9c2e4e2a4d6240f09f2348b67",
+  "current_gate": "V1-G55",
+  "valid_operator_choices": [
+    "Approve-V1-G55",
+    "Revise-V1-G55",
+    "Pause"
+  ],
+  "v1_g55_operator_approval_recorded": false,
+  "v1_g55_runtime_implementation_approved": false,
+  "documents": {
+    "current_project_state": "docs/CURRENT_PROJECT_STATE.md",
+    "readme": "README.md",
+    "product_readiness_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
+    "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
+    "g55_operator_decision_packet": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md",
+    "g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "arc_readiness_bundle_audit": "docs/audits/V1_ARC_PHASE1_READINESS_BUNDLE_AUDIT.md",
+    "arc_runtime_authority_gating_audit": "docs/audits/V1_ARC_PHASE1_RUNTIME_AUTHORITY_GATING_AUDIT.md",
+    "arc_runtime_gating_readiness_integration_audit": "docs/audits/V1_ARC_RUNTIME_GATING_READINESS_INTEGRATION_AUDIT.md"
+  },
+  "consumer_targets": {
+    "sparkbot_shell": {
+      "repository": "armpit-symphony/Sparkbot_shell",
+      "local_path": "C:\\Users\\limap\\Sparkbot_shell",
+      "branch": "sparkbot-shell-work-settings-runtime-preview",
+      "commit": "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc",
+      "clean": true,
+      "tracks_origin": true
+    },
+    "public_sparkbot": {
+      "repository": "sparkpit-labs/Sparkbot",
+      "local_path": "C:\\Users\\limap\\Sparkbot-public",
+      "branch": "public-work-settings-preview",
+      "commit": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+      "clean": true,
+      "remote_push_blocked": true,
+      "remote_push_blocker": "github_403_permission_denied_to_armpit_symphony"
+    },
+    "arc_bot_shell": {
+      "repository": "armpit-symphony/Arc-Bot-shell",
+      "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
+      "branch": "arc-bot-runtime-ui-scaffold-foundation-phase-chain",
+      "commit": "3004367aa7aa96b4b2518c0e3783cf5afba979c0",
+      "clean": true,
+      "tracks_origin": true,
+      "pushed_to_origin": true
+    }
+  },
+  "accepted_arc_consumer_evidence": [
+    "V1_ARC_PHASE1_READINESS_BUNDLE_AUDIT",
+    "V1_ARC_PHASE1_RUNTIME_AUTHORITY_GATING_AUDIT",
+    "V1_ARC_RUNTIME_GATING_READINESS_INTEGRATION_AUDIT"
+  ],
+  "arc_runtime_authority_gating_state": {
+    "projection_in_default_readiness_bundle": true,
+    "required_future_gates_unresolved": true,
+    "runtime_authority_blocked": true,
+    "runtime_execution_blocked": true,
+    "connector_behavior_blocked": true,
+    "worker_dispatch_blocked": true,
+    "customer_system_mutation_blocked": true,
+    "product_readiness_claimed": false
+  },
+  "boundary_results": {
+    "runtime_behavior_added_by_refresh": false,
+    "lima_runtime_files_changed_by_refresh": false,
+    "lima_public_api_exports_changed_by_refresh": false,
+    "tests_support_changed": false,
+    "consumer_repositories_changed_by_refresh": false,
+    "v1_g55_operator_approval_recorded_by_refresh": false,
+    "v1_g55_runtime_implementation_approved_by_refresh": false,
+    "g55_wrapper_added": false,
+    "provider_sdk_network_egress_invocation_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependency_added": false,
+    "vendor_sdk_import_added": false,
+    "endpoint_resolution_by_lima_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "v1_product_readiness_claimed": false,
+    "production_readiness_claimed": false
+  },
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g55_decision_record"
+}

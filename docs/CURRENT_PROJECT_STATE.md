@@ -16,6 +16,12 @@ Latest V1 checkpoint:
 
 - V1 runtime authority chain audit through G54: complete.
 - V1 readiness rollup through G54: complete.
+- V1 consumer target state after Arc readiness integration: complete as
+  docs/tests/fixtures-only evidence in
+  `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`.
+- Arc-Bot-shell runtime gating readiness integration audit: complete.
+- Public Sparkbot remote publication remains blocked by GitHub 403 for the
+  current credential.
 - V1-G55 real provider SDK/network egress approval request: prepared, not approved.
 - V1-G55 implementation blocker audit: active.
 - Operator approval recorded for G55: no.

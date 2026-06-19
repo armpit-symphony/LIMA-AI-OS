@@ -56,6 +56,9 @@ The V1 evidence chain now includes:
 - fake SDK/fake-egress harness evidence
 - runtime authority-chain audit through G54
 - readiness rollup through G54
+- V1 consumer target state after Arc readiness integration, including
+  Arc-Bot-shell runtime gating readiness integration evidence and the public
+  Sparkbot GitHub 403 publication blocker
 
 This evidence is still candidate-only. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, direct provider egress, secret access, or real SDK/network execution by LIMA.
 

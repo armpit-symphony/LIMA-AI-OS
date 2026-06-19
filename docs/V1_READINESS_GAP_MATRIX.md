@@ -29,8 +29,9 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 
 1. Treat V1-G1 through V1-G54 as accepted candidate-only evidence inside their original approved scopes.
 2. Treat the G54 fake SDK/fake-egress harness and runtime authority-chain audit as the latest completed provider SDK/network safety evidence.
-3. Treat V1-G55 as the active approval gate.
-4. Reject any claim that the broad V1 goal, the G54 audit, the readiness rollup, this matrix, or successful tests approve G55 implementation.
+3. Treat the V1 consumer target state after Arc readiness integration as consumer-side testing evidence only, not runtime authority.
+4. Treat V1-G55 as the active approval gate.
+5. Reject any claim that the broad V1 goal, the G54 audit, the readiness rollup, the consumer target refresh, this matrix, or successful tests approve G55 implementation.
 
 ## Stop Conditions
 
