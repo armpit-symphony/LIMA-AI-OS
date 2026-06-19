@@ -12,6 +12,10 @@ from .v1_executable_real_provider_executor_invocation import (
     V1ExecutableRealProviderExecutorInvocationError,
     execute_v1_executable_real_provider_executor_invocation,
 )
+from .v1_real_provider_sdk_network_egress import (
+    V1RealProviderSdkNetworkEgressError,
+    execute_v1_real_provider_sdk_network_egress,
+)
 from .v1_provider_model_routing_authority import (
     V1ProviderModelRoutingAuthorityError,
     validate_v1_provider_model_routing_authority,
@@ -26,4 +30,6 @@ __all__ = [
     "execute_v1_live_provider_model_call",
     "V1ExecutableRealProviderExecutorInvocationError",
     "execute_v1_executable_real_provider_executor_invocation",
+    "V1RealProviderSdkNetworkEgressError",
+    "execute_v1_real_provider_sdk_network_egress",
 ]

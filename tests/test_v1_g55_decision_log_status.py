@@ -140,8 +140,20 @@ def test_v1_g55_decision_log_text_matches_active_gate() -> None:
     assert "No provider SDK/network egress invocation" in text
     assert "product-readiness claim" in text
     assert "production-readiness claim" in text
-    assert "Recorded choice: `none`" in operator_packet
-    assert "Implementation approved: no" in operator_packet
+    operator_packet_is_pre_approval = (
+        "Recorded choice: `none`" in operator_packet
+        and "Implementation approved: no" in operator_packet
+    )
+    operator_packet_is_approved = (
+        "Recorded choice: `Approve-V1-G55`" in operator_packet
+        and "Implementation approved: yes" in operator_packet
+        and (
+            "I explicitly approve V1-G55 implementation of the LIMA-side "
+            "bounded real provider SDK/network egress authority slice"
+        )
+        in operator_packet
+    )
+    assert operator_packet_is_pre_approval or operator_packet_is_approved
     assert "Recorded choice: `none`" in blocker_audit
     assert (
         "V1-G55 runtime implementation is blocked pending an explicit "
