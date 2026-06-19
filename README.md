@@ -51,15 +51,15 @@ It does not contain migrated Sparkbot runtime behavior, live tool execution, pro
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The V1 target is to make LIMA usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`. The V1 authority chain is audited through `V1-G54`, and the post-G54 readiness rollup selects `V1-G55` as the next provider SDK/network egress authority gate.
+The V1 target is to make LIMA usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`. The V1 authority chain is audited through `V1-G55`, and the post-G55 readiness rollup selects `V1-G56` as the next request-only consumer fake-executor provider SDK/network egress smoke gate.
 
 The V1 consumer target state after Arc readiness integration is recorded in `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`. It accepts Arc-Bot-shell runtime gating readiness integration as consumer-side testing evidence, records the saved `Sparkbot_shell` preview state, and records that public Sparkbot remote publication remains blocked by GitHub 403 for the current credential.
 
-`V1-G55` is currently prepared as an approval request only. The request, work order, preflight audit, operator decision packet, and implementation blocker audit are ready, but no operator approval is recorded and no `V1-G55` runtime implementation is approved.
+`V1-G55` is complete as a bounded LIMA-side real provider SDK/network egress authority wrapper. It validates prior authority evidence and calls only a caller-injected provider SDK/network executor. The G55 wrapper is `CANDIDATE_ONLY`; it does not add built-in provider SDK clients, SDK dependencies, vendor SDK imports, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, or product readiness.
 
-The active V1 gate is `Approve-V1-G55`, `Revise-V1-G55`, or `Pause` in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`. Until `Approve-V1-G55` is explicitly recorded, do not add the G55 wrapper, change public API exports for G55, invoke provider SDK/network egress, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned network calls, read secrets, access credential values, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
+The active next V1 lane is request-only preparation of `V1-G56 consumer fake-executor provider SDK/network egress smoke`. Until a future exact approval exists, do not implement G56 consumer smoke tests, edit consumer repositories for G56, add credential handling, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned network calls, read secrets, access credential values, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
 
-Existing V1 candidate slices remain non-production evidence only. The current G55 request does not edit Sparkbot or Arc-Bot-shell and does not authorize real SDK, network, credential, connector, browser, file, device, robotics, or physical-world behavior.
+Existing V1 candidate slices remain non-production evidence only. The completed G55 wrapper does not edit Sparkbot or Arc-Bot-shell and does not authorize built-in SDK, LIMA-owned network, credential, connector, browser, file, device, robotics, or physical-world behavior.
 
 ## Core Invariant
 

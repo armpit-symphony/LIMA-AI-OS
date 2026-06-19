@@ -1,0 +1,103 @@
+{
+  "audit_id": "v1_runtime_authority_chain_through_g55_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "audit-v1-g55-real-provider-sdk-network-egress",
+  "source_commit_before_refresh": "1d252a2976fb49ab540fc76fffbd43183917eca6",
+  "audit_verdict": "pass_candidate_only_authority_chain_preserved_after_g55",
+  "latest_gate": "V1-G55",
+  "documents": {
+    "chain_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
+    "g55_audit": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
+    "g55_implementation": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md",
+    "g55_closeout": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md",
+    "g54_chain_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G54_AUDIT.md",
+    "g54_audit": "docs/audits/V1_G54_FAKE_SDK_EGRESS_HARNESS_AUDIT.md",
+    "g53_implementation": "docs/V1_G53_PROVIDER_SDK_NETWORK_CREDENTIAL_AUTHORITY.md",
+    "g52_implementation": "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE.md",
+    "g51_implementation": "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "g50_implementation": "docs/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "g48_implementation": "docs/V1_G48_PROVIDER_CREDENTIAL_NETWORK_HARDENING.md"
+  },
+  "accepted_chain": [
+    "V1-G43",
+    "V1-G44",
+    "V1-G45",
+    "V1-G46",
+    "V1-G47",
+    "V1-G48",
+    "V1-G49",
+    "V1-G50",
+    "V1-G51",
+    "V1-G52",
+    "V1-G53",
+    "V1-G54",
+    "V1-G55"
+  ],
+  "g55_authority_boundary": {
+    "real_provider_sdk_network_egress_wrapper_added": true,
+    "caller_injected_provider_sdk_network_executor_only": true,
+    "local_tests_use_fake_injected_executors_only": true,
+    "requires_v1_g48_credential_network_hardening": true,
+    "requires_v1_g50_invocation_envelope": true,
+    "requires_v1_g51_caller_injected_executor_boundary": true,
+    "requires_v1_g53_provider_sdk_network_credential_authority": true,
+    "requires_v1_g54_fake_sdk_egress_harness_evidence": true,
+    "sanitized_evidence_only": true,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependency_added": false,
+    "vendor_provider_sdk_import_added": false,
+    "direct_provider_sdk_implementation_added": false,
+    "lima_owned_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_call_added": false,
+    "lima_owned_network_call_performed": false,
+    "lima_owned_direct_provider_egress_performed": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_device_physical_world_behavior_added": false,
+    "product_ready": false,
+    "production_ready": false
+  },
+  "still_blocked_authorities": {
+    "built_in_provider_sdk_client_approved": false,
+    "sdk_dependency_approved": false,
+    "lima_owned_endpoint_resolution_approved": false,
+    "lima_owned_dns_http_socket_network_call_approved": false,
+    "lima_owned_direct_provider_egress_approved": false,
+    "provider_secret_lookup_approved": false,
+    "provider_credential_value_access_approved": false,
+    "provider_token_or_api_key_access_approved": false,
+    "provider_configuration_change_approved": false,
+    "fallback_execution_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "consumer_production_runtime_integration_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false
+  },
+  "validation_evidence": {
+    "focused_v1_g55_validation": {
+      "passed": true,
+      "tests_passed": 84
+    },
+    "focused_v1_g55_chain_validation": {
+      "passed": true,
+      "tests_passed": 371
+    },
+    "focused_v1_g55_audit_validation": {
+      "passed": true,
+      "tests_passed": 93
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 4881
+    }
+  },
+  "next_recommended_steps": [
+    "v1_runtime_readiness_rollup_through_g55",
+    "v1_post_g55_next_lane_decision_matrix",
+    "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
+  ]
+}

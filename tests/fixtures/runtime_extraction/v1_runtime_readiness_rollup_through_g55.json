@@ -1,0 +1,83 @@
+{
+  "rollup_id": "v1_runtime_readiness_rollup_through_g55",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "audit-v1-g55-real-provider-sdk-network-egress",
+  "source_commit_before_refresh": "1d252a2976fb49ab540fc76fffbd43183917eca6",
+  "documents": {
+    "rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md",
+    "chain_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
+    "post_g55_next_lane_matrix": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md",
+    "g55_audit": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
+    "g55_implementation": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md",
+    "g55_closeout": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md"
+  },
+  "required_verdicts": {
+    "v1_runtime_authority_chain": "CANDIDATE_ONLY",
+    "provider_model_routing_authority_metadata": "CANDIDATE_ONLY",
+    "fake_sdk_fake_egress_harness_evidence": "CANDIDATE_ONLY",
+    "real_provider_sdk_network_egress_wrapper_with_caller_injected_executor_only": "CANDIDATE_ONLY",
+    "built_in_provider_sdk_clients": "NOT_APPROVED",
+    "lima_owned_provider_endpoint_resolution_execution": "NOT_APPROVED",
+    "lima_owned_direct_provider_network_egress": "NOT_APPROVED",
+    "secret_lookup_and_credential_value_access": "NOT_APPROVED",
+    "fallback_execution": "NOT_APPROVED",
+    "connector_browser_network_authority": "NOT_APPROVED",
+    "consumer_production_runtime_integration": "NOT_APPROVED",
+    "physical_world_readiness": "BLOCKED",
+    "product_readiness": "NOT_READY"
+  },
+  "current_status": {
+    "latest_completed_gate": "V1-G55",
+    "latest_authority_chain_audit": "V1-G55",
+    "latest_readiness_rollup": "V1-G55",
+    "current_gate": "V1-G56",
+    "next_recommended_lane": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+    "next_lane_request_only": true,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "g55_status": {
+    "operator_approval_recorded": true,
+    "runtime_implementation_approved": true,
+    "runtime_wrapper_added": true,
+    "public_api_exports_changed": true,
+    "public_api_change_limited_to_approved_harness_exports": true,
+    "independent_audit_complete": true,
+    "caller_injected_provider_sdk_network_executor_only": true,
+    "local_tests_use_fake_injected_executors_only": true
+  },
+  "blocked_authorities": {
+    "built_in_provider_sdk_client_approved": false,
+    "sdk_dependency_approved": false,
+    "lima_owned_endpoint_resolution_approved": false,
+    "lima_owned_dns_http_socket_network_call_approved": false,
+    "lima_owned_direct_provider_egress_approved": false,
+    "provider_secret_lookup_approved": false,
+    "provider_credential_value_access_approved": false,
+    "provider_token_or_api_key_access_approved": false,
+    "provider_configuration_change_approved": false,
+    "fallback_execution_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "consumer_production_runtime_integration_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false
+  },
+  "validation_evidence": {
+    "focused_v1_g55_validation": {
+      "passed": true,
+      "tests_passed": 84
+    },
+    "focused_v1_g55_chain_validation": {
+      "passed": true,
+      "tests_passed": 371
+    },
+    "focused_v1_g55_audit_validation": {
+      "passed": true,
+      "tests_passed": 93
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 4881
+    }
+  }
+}

@@ -18,9 +18,9 @@ Sparkbot remains the R&D reference for how shells should behave. LIMA should use
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The current V1 authority chain is audited through `V1-G54`. The post-G54 readiness rollup selects `V1-G55` as the next narrow authority gate.
+The current V1 authority chain is audited through `V1-G55`. The post-G55 readiness rollup selects `V1-G56` as the next narrow request-only authority gate.
 
-`V1-G55` is an approval request for a bounded real provider SDK/network egress authority wrapper. The request is prepared, but implementation is not approved.
+`V1-G55` is complete as a bounded real provider SDK/network egress authority wrapper. It validates prior authority evidence and calls only a caller-injected provider SDK/network executor. It remains `CANDIDATE_ONLY`.
 
 Authoritative G55 files:
 
@@ -28,17 +28,20 @@ Authoritative G55 files:
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md`
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md`
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`
-- `docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md`
+- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md`
+- `docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md`
+- `docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md`
+- `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md`
+- `docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`
 
-The current operator choices are exactly:
+The next recommended request-only lane is:
 
-- `Approve-V1-G55`
-- `Revise-V1-G55`
-- `Pause`
+- `prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request`
 
-Runtime implementation may start only after the exact `Approve-V1-G55` state is recorded in the G55 operator decision packet.
+No V1-G56 implementation is approved by this document.
 
-## Accepted Evidence Through G54
+## Accepted Evidence Through G55
 
 The V1 evidence chain now includes:
 
@@ -54,13 +57,15 @@ The V1 evidence chain now includes:
 - real provider executor design, invocation metadata, and executable caller-injected wrapper metadata
 - provider SDK/network/credential authority metadata
 - fake SDK/fake-egress harness evidence
-- runtime authority-chain audit through G54
-- readiness rollup through G54
+- bounded caller-injected real provider SDK/network egress wrapper evidence
+- runtime authority-chain audit through G55
+- readiness rollup through G55
+- post-G55 next-lane decision matrix
 - V1 consumer target state after Arc readiness integration, including
   Arc-Bot-shell runtime gating readiness integration evidence and the public
   Sparkbot GitHub 403 publication blocker
 
-This evidence is still candidate-only. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, direct provider egress, secret access, or real SDK/network execution by LIMA.
+This evidence is still candidate-only. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, built-in provider SDK clients, direct provider egress by LIMA, secret access, credential value access, fallback, connector authority, or physical-world authority.
 
 ## Operator Approval Rule
 
@@ -101,13 +106,12 @@ For V1, LIMA must prove compatibility with the first shells before product readi
 
 Current status remains not V1 product-ready.
 
-The active gate is `V1-G55`. The approval request, work order, preflight audit, operator decision packet, and implementation blocker audit are ready. Operator approval is not recorded. Runtime implementation is not approved.
+The latest completed gate is `V1-G55`. The active next lane is request-only preparation of `V1-G56` consumer fake-executor provider SDK/network egress smoke evidence. No V1-G56 implementation is approved.
 
-Until `Approve-V1-G55` is explicitly recorded, the following remain blocked:
+Until a future exact approval exists, the following remain blocked:
 
-- G55 runtime implementation
-- G55 public API export changes
-- provider SDK/network egress invocation
+- V1-G56 consumer fake-executor smoke implementation
+- consumer repository edits for V1-G56
 - built-in provider SDK clients
 - SDK dependencies
 - vendor SDK imports
@@ -117,18 +121,18 @@ Until `Approve-V1-G55` is explicitly recorded, the following remain blocked:
 - secret lookup, credential value access, provider token access, or API key access
 - provider configuration changes
 - fallback execution
-- Sparkbot or Arc-Bot-shell edits for G55
 - consumer production runtime integration
 - connector, browser, network, file, device, robotics, or physical-world behavior
 - V1 product readiness or production readiness claims
 
 ## Remaining Blockers
 
-- `Approve-V1-G55` is not recorded
-- bounded real provider SDK/network egress wrapper is not implemented
+- V1-G56 request packet is not prepared or approved
+- consumer fake-executor provider SDK/network egress smoke evidence against the G55 wrapper is not implemented
 - direct provider SDK/network egress by LIMA is still forbidden
 - real provider SDK client ownership remains outside LIMA
 - provider secrets and credential values remain inaccessible to LIMA
+- fallback execution remains unapproved
 - consumer production runtime integration remains unapproved
 - live runtime parity across first shells is not proven as product readiness
 - release boundary remains not passed
@@ -137,6 +141,6 @@ Until `Approve-V1-G55` is explicitly recorded, the following remain blocked:
 
 ## Recommended Next Step
 
-Use `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md` to record exactly one valid operator choice: `Approve-V1-G55`, `Revise-V1-G55`, or `Pause`.
+Prepare a V1-G56 consumer fake-executor provider SDK/network egress smoke approval request.
 
-If `Approve-V1-G55` is explicitly recorded with the exact required wording, implement only the bounded LIMA-side real provider SDK/network egress authority wrapper named in the G55 request. Stop before SDK dependencies, built-in provider SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.
+The request should ask only whether first-shell consumers may prove import/call compatibility with the approved G55 public wrapper using fake in-process caller-injected provider SDK/network executors. Stop before implementation, credentials, built-in SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.

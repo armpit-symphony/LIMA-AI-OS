@@ -30,9 +30,9 @@ def test_v1_gap_matrix_exists_and_preserves_non_implementation_scope() -> None:
     assert DOC_PATH.exists()
     assert fixture["document"] == "docs/V1_READINESS_GAP_MATRIX.md"
     assert fixture["source_target"] == "docs/V1_PRODUCT_READINESS_TARGET.md"
-    assert fixture["current_branch"] == "docs-v1-product-readiness-through-g55"
+    assert fixture["current_branch"] == "audit-v1-g55-real-provider-sdk-network-egress"
     assert fixture["source_commit_before_matrix_refresh"] == (
-        "ddd93607504fa9b432948e819e65b68dfefc9a9f"
+        "1d252a2976fb49ab540fc76fffbd43183917eca6"
     )
     assert fixture["docs_tests_fixtures_only"] is True
     assert fixture["api_status"] == "CANDIDATE_ONLY"
@@ -48,18 +48,19 @@ def test_v1_gap_matrix_names_first_shell_consumers() -> None:
     }
 
 
-def test_v1_gap_matrix_current_anchor_is_g55() -> None:
+def test_v1_gap_matrix_current_anchor_is_g56_request_prep() -> None:
     anchor = _load_fixture()["current_anchor"]
 
-    assert anchor["latest_completed_gate"] == "V1-G54"
-    assert anchor["current_gate"] == "V1-G55"
-    assert anchor["operator_approval_recorded"] is False
-    assert anchor["runtime_implementation_approved"] is False
-    assert anchor["valid_operator_choices"] == [
-        "Approve-V1-G55",
-        "Revise-V1-G55",
-        "Pause",
-    ]
+    assert anchor["latest_completed_gate"] == "V1-G55"
+    assert anchor["current_gate"] == "V1-G56"
+    assert anchor["g55_operator_approval_recorded"] is True
+    assert anchor["g55_runtime_implementation_approved"] is True
+    assert anchor["g55_independent_audit_complete"] is True
+    assert anchor["g56_request_packet_prepared"] is False
+    assert anchor["g56_runtime_implementation_approved"] is False
+    assert anchor["next_required_artifact"] == (
+        "v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
+    )
 
 
 def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
@@ -70,59 +71,53 @@ def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
         "V1-G11..V1-G17",
         "V1-G18..V1-G28",
         "V1-G29..V1-G42",
-        "V1-G43..V1-G54",
-        "V1-G55",
+        "V1-G43..V1-G55",
+        "V1-G56",
     }
     assert groups["V1-G1..V1-G10"]["status"] == (
         "complete_historical_candidate_only_evidence"
     )
-    assert groups["V1-G43..V1-G54"]["status"] == (
-        "complete_prior_approved_provider_authority_and_fake_egress_evidence"
+    assert groups["V1-G43..V1-G55"]["status"] == (
+        "complete_prior_approved_provider_authority_fake_egress_and_g55_wrapper_evidence"
     )
-    g55 = groups["V1-G55"]
-    assert g55["status"] == "approval_request_ready_runtime_not_approved"
+    g56 = groups["V1-G56"]
+    assert g56["status"] == "request_preparation_pending_implementation_not_approved"
     assert (
-        g55["approval_request_document"]
-        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md"
-    )
-    assert (
-        g55["preflight_audit_document"]
-        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md"
+        g56["next_lane_matrix_document"]
+        == "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md"
     )
     assert (
-        g55["operator_decision_packet_document"]
-        == "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md"
+        g56["g55_wrapper_audit_document"]
+        == "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md"
     )
     assert (
-        g55["implementation_blocker_audit_document"]
-        == "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+        g56["g55_chain_audit_document"]
+        == "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md"
     )
-    assert g55["operator_approval_recorded"] is False
-    assert g55["runtime_implementation_added"] is False
-    assert g55["runtime_approval_needed"] is True
+    assert g56["g56_request_packet_prepared"] is False
+    assert g56["runtime_implementation_added"] is False
+    assert g56["runtime_approval_needed"] is True
 
 
-def test_v1_gap_matrix_recommends_g55_operator_decision() -> None:
+def test_v1_gap_matrix_recommends_g56_request_preparation() -> None:
     fixture = _load_fixture()
 
-    assert (
-        fixture["next_smallest_safe_step"]
-        == "record_one_valid_operator_choice_in_v1_g55_decision_record"
+    assert fixture["next_smallest_safe_step"] == (
+        "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
     )
-    assert fixture["next_smallest_safe_step_status"] == "pending_operator_decision"
-    assert (
-        fixture["next_smallest_safe_step_reason"]
-        == "v1_g55_decision_record_has_no_approve_choice_recorded"
+    assert fixture["next_smallest_safe_step_status"] == "pending_request_preparation"
+    assert fixture["next_smallest_safe_step_reason"] == (
+        "g55_wrapper_public_candidate_api_is_audited_and_next_consumer_proof_should_remain_fake_executor_request_only"
     )
 
 
-def test_v1_gap_matrix_stop_conditions_cover_forbidden_g55_surfaces() -> None:
+def test_v1_gap_matrix_stop_conditions_cover_forbidden_g56_surfaces() -> None:
     stop_conditions = set(_load_fixture()["stop_conditions"])
 
-    assert "g55_implementation_without_approve_v1_g55" in stop_conditions
-    assert "file_scope_outside_g55_request" in stop_conditions
-    assert "sparkbot_or_arc_bot_shell_modification_for_g55" in stop_conditions
-    assert "provider_sdk_network_egress_invocation" in stop_conditions
+    assert "g56_consumer_fake_executor_smoke_implementation_without_exact_approval" in stop_conditions
+    assert "file_scope_outside_future_g56_request" in stop_conditions
+    assert "sparkbot_or_arc_bot_shell_modification_for_g56_without_exact_approval" in stop_conditions
+    assert "credential_handling_or_real_provider_sdk_network_egress_in_consumer_smoke_lane" in stop_conditions
     assert "built_in_provider_sdk_client" in stop_conditions
     assert "sdk_dependency" in stop_conditions
     assert "vendor_sdk_import" in stop_conditions
@@ -140,22 +135,17 @@ def test_v1_gap_matrix_stop_conditions_cover_forbidden_g55_surfaces() -> None:
     assert "v1_product_or_production_readiness_claim" in stop_conditions
 
 
-def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
+def test_v1_gap_matrix_boundary_results_add_no_new_runtime_behavior() -> None:
     boundary = _load_fixture()["boundary_results"]
 
-    assert boundary["v1_g55_approval_request_added"] is True
-    assert boundary["v1_g55_preflight_audit_added"] is True
-    assert boundary["v1_g55_operator_decision_packet_added"] is True
-    assert boundary["v1_g55_implementation_blocker_audit_added"] is True
-    assert boundary["v1_g55_operator_approval_recorded"] is False
-    assert boundary["v1_g55_runtime_implementation_added"] is False
+    assert boundary["v1_g56_request_packet_added"] is False
+    assert boundary["v1_g56_runtime_implementation_added"] is False
 
     for key in (
         "runtime_behavior_added_by_refresh",
         "lima_runtime_files_changed_by_refresh",
         "tests_support_changed",
         "shell_repos_changed_by_refresh",
-        "provider_sdk_network_egress_invocation_added",
         "built_in_provider_sdk_client_added",
         "sdk_dependency_added",
         "vendor_sdk_import_added",
@@ -170,22 +160,21 @@ def test_v1_gap_matrix_boundary_results_add_no_runtime_behavior() -> None:
         "connector_browser_network_file_device_robotics_physical_world_behavior_added",
         "v1_release_claimed",
     ):
-        assert boundary[key] is False
+        assert boundary[key] is False, key
 
 
-def test_v1_gap_matrix_doc_matches_g55_next_step_and_boundaries() -> None:
+def test_v1_gap_matrix_doc_matches_g56_next_step_and_boundaries() -> None:
     text = DOC_PATH.read_text(encoding="utf-8")
 
     assert "This matrix turns the V1 product target into the current implementation-readiness sequence." in text
-    assert "Current active gate: `V1-G55`" in text
-    assert "`V1-G43` through `V1-G54`" in text
-    assert "`V1-G55`" in text
-    assert "approval request ready_runtime_not_approved" not in text
-    assert "Pending operator decision" in text
-    assert "G55 implementation without `Approve-V1-G55`" in text
-    assert "provider SDK/network egress invocation" in text
+    assert "Current active gate: `V1-G56`" in text
+    assert "`V1-G43` through `V1-G55`" in text
+    assert "`V1-G56`" in text
+    assert "Request preparation pending" in text
+    assert "V1-G56 consumer fake-executor smoke implementation without exact approval" in text
+    assert "credential handling or real provider SDK/network egress in a consumer smoke lane" in text
     assert "built-in provider SDK clients" in text
     assert "LIMA-owned DNS, HTTP, socket, network calls" in text
     assert "secret lookup, credential value access" in text
     assert "V1 product readiness, production readiness" in text
-    assert "The next smallest safe step is to record one valid operator choice in the V1-G55 operator decision packet." in text
+    assert "The next smallest safe step is to prepare a V1-G56 consumer fake-executor provider SDK/network egress smoke approval request." in text

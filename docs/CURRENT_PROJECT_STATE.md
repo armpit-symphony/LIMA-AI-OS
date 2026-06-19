@@ -14,8 +14,9 @@ The V1 target remains first testing with `Sparkbot_shell`, public `Sparkbot`, an
 
 Latest V1 checkpoint:
 
-- V1 runtime authority chain audit through G54: complete.
-- V1 readiness rollup through G54: complete.
+- V1 runtime authority chain audit through G55: complete.
+- V1 readiness rollup through G55: complete.
+- V1 post-G55 next-lane decision matrix: complete.
 - V1 consumer target state after Arc readiness integration: complete as
   docs/tests/fixtures-only evidence in
   `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`.
@@ -23,16 +24,15 @@ Latest V1 checkpoint:
 - Public Sparkbot remote publication remains blocked by GitHub 403 for the
   current credential.
 - V1-G55 blocker after consumer target refresh audit: complete.
-- V1-G55 real provider SDK/network egress approval request: prepared, not approved.
-- V1-G55 implementation blocker audit: active.
-- Operator approval recorded for G55: no.
-- G55 runtime implementation approved: no.
+- V1-G55 real provider SDK/network egress wrapper: implemented and independently audited as `CANDIDATE_ONLY`.
+- V1-G55 public API changes: limited to the approved `lima.harness` wrapper exports.
+- V1-G56 consumer fake-executor provider SDK/network egress smoke lane: next recommended request-only lane, not approved.
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The current required operator decision is exactly one of `Approve-V1-G55`, `Revise-V1-G55`, or `Pause` in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`.
+The next smallest safe V1 step is to prepare a request-only V1-G56 consumer fake-executor provider SDK/network egress smoke approval packet. That packet is not yet an implementation approval.
 
-Until `Approve-V1-G55` is explicitly recorded, do not implement the G55 wrapper, change G55 public API exports, invoke provider SDK/network egress, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, edit Sparkbot or Arc-Bot-shell for G55, wire consumer production runtime behavior, or claim V1/product/production readiness.
+Until a future exact approval exists, do not implement G56 consumer smoke tests, edit Sparkbot or Arc-Bot-shell for G56, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
 
 Phase 3.5 is complete and tagged on `main`.
 

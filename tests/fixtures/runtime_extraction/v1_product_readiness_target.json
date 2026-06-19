@@ -1,21 +1,18 @@
 {
   "target_version": "1.0",
   "api_status": "CANDIDATE_ONLY",
-  "branch": "docs-v1-product-readiness-through-g55",
-  "source_commit_before_refresh": "ddd93607504fa9b432948e819e65b68dfefc9a9f",
+  "branch": "audit-v1-g55-real-provider-sdk-network-egress",
+  "source_commit_before_refresh": "1d252a2976fb49ab540fc76fffbd43183917eca6",
   "documents": {
     "target": "docs/V1_PRODUCT_READINESS_TARGET.md",
     "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
     "current_project_state": "docs/CURRENT_PROJECT_STATE.md",
-    "v1_g55_approval_request": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md",
-    "v1_g55_work_order": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md",
-    "v1_g55_preflight_audit": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md",
-    "v1_g55_operator_decision_packet": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md",
-    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
-    "v1_g54_audit": "docs/audits/V1_G54_FAKE_SDK_EGRESS_HARNESS_AUDIT.md",
-    "v1_runtime_authority_chain_through_g54_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G54_AUDIT.md",
-    "v1_readiness_rollup_through_g54": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G54.md",
-    "v1_post_g54_next_lane_matrix": "docs/readiness/V1_POST_G54_NEXT_LANE_DECISION_MATRIX.md"
+    "v1_g55_implementation": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md",
+    "v1_g55_closeout": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md",
+    "v1_g55_audit": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
+    "v1_runtime_authority_chain_through_g55_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
+    "v1_readiness_rollup_through_g55": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md",
+    "v1_post_g55_next_lane_matrix": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md"
   },
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
@@ -32,7 +29,7 @@
     "copy_sparkbot_code": false,
     "import_sparkbot_runtime": false,
     "wire_sparkbot_routes": false,
-    "mutate_consumer_repo_for_g55": false
+    "mutate_consumer_repo_for_g56": false
   },
   "accepted_future_v1_runtime_capabilities": [
     "live_actual_approval_flow",
@@ -40,7 +37,8 @@
     "provider_model_routing",
     "shell_haptic_intent_support",
     "first_shell_response_state_parity",
-    "bounded_real_provider_sdk_network_egress_authority"
+    "bounded_real_provider_sdk_network_egress_authority",
+    "consumer_fake_executor_provider_sdk_network_egress_smoke_evidence"
   ],
   "operator_approval_policy": {
     "delete_requires_operator_approval": true,
@@ -58,25 +56,23 @@
     "haptic_implementation_added_here": false
   },
   "current_status": {
-    "latest_completed_gate": "V1-G54",
-    "latest_authority_chain_audit": "V1-G54",
-    "latest_readiness_rollup": "V1-G54",
-    "current_gate": "V1-G55",
-    "v1_g55_approval_request_ready": true,
-    "v1_g55_work_order_ready": true,
-    "v1_g55_preflight_audit_ready": true,
-    "v1_g55_operator_decision_packet_ready": true,
-    "v1_g55_implementation_blocker_audit_active": true,
-    "v1_g55_operator_decision_recorded_choice": null,
-    "v1_g55_operator_approval_recorded": false,
-    "v1_g55_runtime_implementation_approved": false,
-    "v1_g55_wrapper_added": false,
-    "v1_g55_public_api_exports_changed": false,
+    "latest_completed_gate": "V1-G55",
+    "latest_authority_chain_audit": "V1-G55",
+    "latest_readiness_rollup": "V1-G55",
+    "current_gate": "V1-G56",
+    "v1_g55_operator_approval_recorded": true,
+    "v1_g55_runtime_implementation_approved": true,
+    "v1_g55_wrapper_added": true,
+    "v1_g55_public_api_exports_changed": true,
+    "v1_g55_public_api_change_limited_to_approved_harness_exports": true,
+    "v1_g55_independent_audit_complete": true,
+    "v1_g56_request_packet_prepared": false,
+    "v1_g56_runtime_implementation_approved": false,
     "runtime_behavior_added_by_refresh": false,
     "lima_runtime_files_changed_by_refresh": false,
     "tests_support_changed": false,
     "shell_repos_changed_by_refresh": false,
-    "provider_sdk_network_egress_invocation_added": false,
+    "g56_consumer_fake_executor_smoke_implementation_added": false,
     "built_in_provider_sdk_client_added": false,
     "sdk_dependency_added": false,
     "vendor_sdk_import_added": false,
@@ -91,22 +87,18 @@
     "connector_browser_network_file_device_robotics_physical_world_behavior_added": false
   },
   "remaining_blockers": [
-    "approve_v1_g55_not_recorded",
-    "bounded_real_provider_sdk_network_egress_wrapper_not_implemented",
+    "v1_g56_request_packet_not_prepared",
+    "consumer_fake_executor_provider_sdk_network_egress_smoke_not_implemented",
     "direct_provider_sdk_network_egress_by_lima_forbidden",
     "provider_secrets_and_credential_values_inaccessible_to_lima",
+    "fallback_execution_unapproved",
     "consumer_production_runtime_integration_unapproved",
     "live_runtime_parity_across_first_shells_not_product_ready",
     "release_boundary_not_passed",
     "v1_product_readiness_not_approved",
     "production_behavior_not_approved"
   ],
-  "valid_operator_choices": [
-    "Approve-V1-G55",
-    "Revise-V1-G55",
-    "Pause"
-  ],
-  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g55_decision_record",
-  "recommended_next_gap_id": "V1-G55",
-  "recommended_next_gap_to_close": "bounded_real_provider_sdk_network_egress_authority_wrapper"
+  "recommended_next_step": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+  "recommended_next_gap_id": "V1-G56",
+  "recommended_next_gap_to_close": "consumer_fake_executor_provider_sdk_network_egress_smoke_request"
 }

@@ -1,4 +1,4 @@
-"""Static checks for the V1 long-range roadmap G55 status."""
+"""Static checks for the V1 long-range roadmap post-G55 status."""
 
 from __future__ import annotations
 
@@ -26,33 +26,28 @@ def _load_fixture() -> dict[str, Any]:
 def test_v1_long_range_roadmap_fixture_and_docs_exist() -> None:
     fixture = _load_fixture()
 
-    assert fixture["status_id"] == "v1_long_range_roadmap_g55_status"
+    assert fixture["status_id"] == "v1_long_range_roadmap_g56_status"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
-    assert fixture["branch"] == "docs-v1-long-range-roadmap-through-g55"
+    assert fixture["branch"] == "audit-v1-g55-real-provider-sdk-network-egress"
     assert fixture["source_commit_before_refresh"] == (
-        "1966c7336e5af982895e724029426578df7949ab"
+        "1d252a2976fb49ab540fc76fffbd43183917eca6"
     )
 
     for relative_path in fixture["documents"].values():
         assert (REPO_ROOT / relative_path).exists()
 
 
-def test_v1_long_range_roadmap_current_gate_is_g55() -> None:
+def test_v1_long_range_roadmap_current_gate_is_g56_request_prep() -> None:
     fixture = _load_fixture()
 
-    assert fixture["current_gate"] == "V1-G55"
-    assert fixture["latest_completed_gate"] == "V1-G54"
+    assert fixture["current_gate"] == "V1-G56"
+    assert fixture["latest_completed_gate"] == "V1-G55"
     assert fixture["operator_approval_recorded"] is False
     assert fixture["runtime_implementation_approved"] is False
     assert fixture["v1_product_ready"] is False
     assert fixture["production_ready"] is False
-    assert fixture["valid_operator_choices"] == [
-        "Approve-V1-G55",
-        "Revise-V1-G55",
-        "Pause",
-    ]
     assert fixture["next_smallest_safe_step"] == (
-        "record_one_valid_operator_choice_in_v1_g55_operator_decision_packet"
+        "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
     )
 
 
@@ -64,7 +59,7 @@ def test_v1_long_range_roadmap_refresh_adds_no_forbidden_behavior() -> None:
         "lima_runtime_files_changed",
         "public_api_exports_changed",
         "sparkbot_or_arc_bot_shell_changed",
-        "provider_sdk_network_egress_invocation_added",
+        "g56_consumer_fake_executor_smoke_implementation_added",
         "built_in_provider_sdk_client_added",
         "sdk_dependency_added",
         "vendor_sdk_import_added",
@@ -78,10 +73,10 @@ def test_v1_long_range_roadmap_refresh_adds_no_forbidden_behavior() -> None:
         "consumer_production_runtime_integration_added",
         "connector_browser_network_file_device_robotics_physical_world_behavior_added",
     ):
-        assert forbidden[key] is False
+        assert forbidden[key] is False, key
 
 
-def test_v1_long_range_roadmap_text_points_to_g55_gate() -> None:
+def test_v1_long_range_roadmap_text_points_to_g56_request_prep() -> None:
     fixture = _load_fixture()
     text = (
         REPO_ROOT / fixture["documents"]["long_range_roadmap"]
@@ -89,16 +84,17 @@ def test_v1_long_range_roadmap_text_points_to_g55_gate() -> None:
 
     assert "## V1 Product Readiness Target" in text
     assert "public `Sparkbot`" in text
-    assert "The active V1 gate is now `V1-G55`." in text
-    assert "audited through `V1-G54`" in text
+    assert "The active V1 gate is now request preparation for `V1-G56`." in text
+    assert "audited through `V1-G55`" in text
+    assert "readiness rollup through G55 selects `V1-G56`" in text
     assert "Current V1-G55 authority documents:" in text
-    assert "`docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`" in text
-    assert "`docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md`" in text
+    assert "`docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md`" in text
+    assert "`docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`" in text
     assert (
-        "The next smallest safe V1 action is to record exactly one valid "
-        "operator choice in the V1-G55 operator decision packet"
+        "The next smallest safe V1 action is to prepare a V1-G56 consumer "
+        "fake-executor provider SDK/network egress smoke approval request."
     ) in text
-    assert "`Approve-V1-G55`, `Revise-V1-G55`, or `Pause`" in text
+    assert "fake in-process caller-injected provider SDK/network executors" in text
     assert "built-in provider SDK clients" in text
     assert "LIMA-owned DNS/HTTP/socket/network calls" in text
     assert "secret lookup, credential value access" in text

@@ -159,6 +159,8 @@ def test_current_state_and_readme_reference_consumer_target_refresh() -> None:
             in text
         )
         assert "Sparkbot remote publication remains blocked by GitHub 403" in text
-        assert "G55 runtime implementation approved: no" in text or (
-            "no `V1-G55` runtime implementation is approved" in text
+        assert "audited through `V1-G55`" in text or (
+            "V1 runtime authority chain audit through G55: complete." in text
         )
+        assert "V1-G56" in text
+        assert "product readiness" in text

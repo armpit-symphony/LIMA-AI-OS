@@ -1,8 +1,8 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "docs-v1-product-readiness-through-g55",
-  "source_commit_before_matrix_refresh": "ddd93607504fa9b432948e819e65b68dfefc9a9f",
+  "current_branch": "audit-v1-g55-real-provider-sdk-network-egress",
+  "source_commit_before_matrix_refresh": "1d252a2976fb49ab540fc76fffbd43183917eca6",
   "docs_tests_fixtures_only": true,
   "api_status": "CANDIDATE_ONLY",
   "implementation_approved": false,
@@ -13,15 +13,14 @@
     "Arc-Bot-shell"
   ],
   "current_anchor": {
-    "latest_completed_gate": "V1-G54",
-    "current_gate": "V1-G55",
-    "operator_approval_recorded": false,
-    "runtime_implementation_approved": false,
-    "valid_operator_choices": [
-      "Approve-V1-G55",
-      "Revise-V1-G55",
-      "Pause"
-    ]
+    "latest_completed_gate": "V1-G55",
+    "current_gate": "V1-G56",
+    "g55_operator_approval_recorded": true,
+    "g55_runtime_implementation_approved": true,
+    "g55_independent_audit_complete": true,
+    "g56_request_packet_prepared": false,
+    "g56_runtime_implementation_approved": false,
+    "next_required_artifact": "v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
   },
   "gap_groups": [
     {
@@ -45,30 +44,29 @@
       "runtime_approval_needed": false
     },
     {
-      "ids": "V1-G43..V1-G54",
-      "status": "complete_prior_approved_provider_authority_and_fake_egress_evidence",
+      "ids": "V1-G43..V1-G55",
+      "status": "complete_prior_approved_provider_authority_fake_egress_and_g55_wrapper_evidence",
       "runtime_approval_needed": false
     },
     {
-      "ids": "V1-G55",
-      "status": "approval_request_ready_runtime_not_approved",
-      "approval_request_document": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md",
-      "preflight_audit_document": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md",
-      "operator_decision_packet_document": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md",
-      "implementation_blocker_audit_document": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
-      "operator_approval_recorded": false,
+      "ids": "V1-G56",
+      "status": "request_preparation_pending_implementation_not_approved",
+      "next_lane_matrix_document": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md",
+      "g55_wrapper_audit_document": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
+      "g55_chain_audit_document": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
+      "g56_request_packet_prepared": false,
       "runtime_implementation_added": false,
       "runtime_approval_needed": true
     }
   ],
-  "next_smallest_safe_step": "record_one_valid_operator_choice_in_v1_g55_decision_record",
-  "next_smallest_safe_step_reason": "v1_g55_decision_record_has_no_approve_choice_recorded",
-  "next_smallest_safe_step_status": "pending_operator_decision",
+  "next_smallest_safe_step": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+  "next_smallest_safe_step_reason": "g55_wrapper_public_candidate_api_is_audited_and_next_consumer_proof_should_remain_fake_executor_request_only",
+  "next_smallest_safe_step_status": "pending_request_preparation",
   "stop_conditions": [
-    "g55_implementation_without_approve_v1_g55",
-    "file_scope_outside_g55_request",
-    "sparkbot_or_arc_bot_shell_modification_for_g55",
-    "provider_sdk_network_egress_invocation",
+    "g56_consumer_fake_executor_smoke_implementation_without_exact_approval",
+    "file_scope_outside_future_g56_request",
+    "sparkbot_or_arc_bot_shell_modification_for_g56_without_exact_approval",
+    "credential_handling_or_real_provider_sdk_network_egress_in_consumer_smoke_lane",
     "built_in_provider_sdk_client",
     "sdk_dependency",
     "vendor_sdk_import",
@@ -89,13 +87,8 @@
     "lima_runtime_files_changed_by_refresh": false,
     "tests_support_changed": false,
     "shell_repos_changed_by_refresh": false,
-    "v1_g55_approval_request_added": true,
-    "v1_g55_preflight_audit_added": true,
-    "v1_g55_operator_decision_packet_added": true,
-    "v1_g55_implementation_blocker_audit_added": true,
-    "v1_g55_operator_approval_recorded": false,
-    "v1_g55_runtime_implementation_added": false,
-    "provider_sdk_network_egress_invocation_added": false,
+    "v1_g56_request_packet_added": false,
+    "v1_g56_runtime_implementation_added": false,
     "built_in_provider_sdk_client_added": false,
     "sdk_dependency_added": false,
     "vendor_sdk_import_added": false,
