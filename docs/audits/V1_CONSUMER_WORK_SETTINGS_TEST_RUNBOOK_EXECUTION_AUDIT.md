@@ -30,7 +30,7 @@ This proves the current preview branches are locally testable. It does not prove
 | LIMA-AI-OS | `docs-v1-consumer-work-settings-test-runbook` source checkpoint | `7f90c83946d7974e5f60294b1a602a1de3be4e51` | clean before audit branch |
 | Public Sparkbot preview | `public-work-settings-preview` | `81eed8c4067b1a73885bbc79003ea5870b1604a2` | clean |
 | Sparkbot Shell | `sparkbot-shell-work-settings-runtime-preview` | `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | clean |
-| Arc-Bot-shell | `arc-work-queue-runtime-settings-docs` | `a05faea14ab24341b4b4567967911e33e51ce88a` | clean; git status emitted the known `.pytest_cache/` permission warning |
+| Arc-Bot-shell | `arc-work-queue-runtime-settings-docs` | `a05faea14ab24341b4b4567967911e33e51ce88a` | clean during initial branch/commit check; final post-validation status later showed local uncommitted Arc changes outside this LIMA audit branch |
 
 ## Executed Validation
 
@@ -59,6 +59,17 @@ This proves the current preview branches are locally testable. It does not prove
 - Public Sparkbot target repository state changed by this audit: no.
 - Public Sparkbot target PR created by this audit: no.
 - V1-G55 implementation approved or started by this audit: no.
+
+## Post-validation Consumer Status Note
+
+After the LIMA audit branch was pushed, a final status check showed local Arc-Bot-shell changes in:
+
+- `README.md`
+- `docs/OPERATOR_CONSOLE_FOUNDATION.md`
+- `docs/ROADMAP.md`
+- `tests/test_arc_bot_phase0_scope_lock_runtime_ui.py`
+
+Those Arc-Bot-shell files are not part of this LIMA audit branch, were not staged or committed by this audit, and are not used as proof of LIMA V1 readiness. The recorded Arc validation result remains the executed `pytest` result and the `git diff --check` result from this runbook execution. Treat the later Arc working-tree drift as a separate consumer-repo status item before any future Arc checkpoint.
 
 ## Boundary Results
 

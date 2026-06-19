@@ -39,8 +39,16 @@
       "repository": "armpit-symphony/Arc-Bot-shell",
       "branch": "arc-work-queue-runtime-settings-docs",
       "commit": "a05faea14ab24341b4b4567967911e33e51ce88a",
-      "clean": true,
-      "known_status_warning": "could not open directory '.pytest_cache/': Permission denied"
+      "clean_during_initial_branch_commit_check": true,
+      "post_validation_dirty_observed": true,
+      "post_validation_dirty_paths": [
+        "README.md",
+        "docs/OPERATOR_CONSOLE_FOUNDATION.md",
+        "docs/ROADMAP.md",
+        "tests/test_arc_bot_phase0_scope_lock_runtime_ui.py"
+      ],
+      "known_status_warning": "could not open directory '.pytest_cache/': Permission denied",
+      "dirty_paths_staged_or_committed_by_lima_audit": false
     }
   },
   "validation_commands": [
@@ -117,7 +125,8 @@
     "consumer_repository_files_changed": false,
     "public_sparkbot_target_repository_state_changed": false,
     "public_sparkbot_target_pr_created": false,
-    "v1_g55_implementation_approved_or_started": false
+    "v1_g55_implementation_approved_or_started": false,
+    "post_validation_arc_bot_shell_dirty_observed": true
   },
   "boundary_results": {
     "g55_runtime_wrapper_added": false,

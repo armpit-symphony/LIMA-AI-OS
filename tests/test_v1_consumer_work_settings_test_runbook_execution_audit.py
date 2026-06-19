@@ -73,10 +73,18 @@ def test_consumer_work_settings_runbook_execution_records_branch_commits() -> No
         "repository": "armpit-symphony/Arc-Bot-shell",
         "branch": "arc-work-queue-runtime-settings-docs",
         "commit": "a05faea14ab24341b4b4567967911e33e51ce88a",
-        "clean": True,
+        "clean_during_initial_branch_commit_check": True,
+        "post_validation_dirty_observed": True,
+        "post_validation_dirty_paths": [
+            "README.md",
+            "docs/OPERATOR_CONSOLE_FOUNDATION.md",
+            "docs/ROADMAP.md",
+            "tests/test_arc_bot_phase0_scope_lock_runtime_ui.py",
+        ],
         "known_status_warning": (
             "could not open directory '.pytest_cache/': Permission denied"
         ),
+        "dirty_paths_staged_or_committed_by_lima_audit": False,
     }
 
 
@@ -137,6 +145,7 @@ def test_consumer_work_settings_runbook_execution_scope_stays_docs_only() -> Non
     scope = _load_fixture()["scope_audit"]
 
     assert scope["docs_tests_fixtures_only"] is True
+    assert scope["post_validation_arc_bot_shell_dirty_observed"] is True
     for key in (
         "lima_runtime_files_changed",
         "public_api_exports_changed",
@@ -213,5 +222,7 @@ def test_consumer_work_settings_runbook_execution_text_matches_fixture() -> None
     assert "1 test file passed, 4 tests passed" in text
     assert "4709 passed in 4.04s" in text
     assert "Runbook execution status: `pass_current_consumer_work_settings_stack`." in text
+    assert "Post-validation Consumer Status Note" in text
+    assert "tests/test_arc_bot_phase0_scope_lock_runtime_ui.py" in text
     assert "No V1-G55 implementation approval" not in text
     assert "V1-G55 remains blocked" in text
