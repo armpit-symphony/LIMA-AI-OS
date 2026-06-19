@@ -3,9 +3,9 @@
   "api_status": "CANDIDATE_ONLY",
   "branch": "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request",
   "docs_tests_fixtures_only_request": true,
-  "implementation_approved": false,
-  "operator_approval_recorded": false,
-  "consumer_fake_executor_provider_sdk_network_egress_smoke_approved": false,
+  "implementation_approved": true,
+  "operator_approval_recorded": true,
+  "consumer_fake_executor_provider_sdk_network_egress_smoke_approved": true,
   "consumer_fake_executor_provider_sdk_network_egress_smoke_added": false,
   "lima_runtime_files_changed": false,
   "lima_public_api_changed": false,
@@ -59,12 +59,12 @@
   ],
   "required_approval_wording": "I explicitly approve V1-G56 implementation of the consumer fake-executor provider SDK/network egress smoke slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md.",
   "decision_record": {
-    "recorded_choice": "none",
-    "recorded_approval_wording": "none",
+    "recorded_choice": "Approve-V1-G56",
+    "recorded_approval_wording": "I explicitly approve V1-G56 implementation of the consumer fake-executor provider SDK/network egress smoke slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md.",
     "recorded_revision_request": "none",
     "recorded_pause_reason": "none",
-    "approved_implementation_branch": "none",
-    "implementation_approved": false
+    "approved_implementation_branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+    "implementation_approved": true
   },
   "proposed_implementation_branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
   "consumer_fake_executor_target_if_operator_says_yes": {

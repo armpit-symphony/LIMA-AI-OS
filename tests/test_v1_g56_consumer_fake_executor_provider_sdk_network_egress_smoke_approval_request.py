@@ -39,15 +39,15 @@ def test_v1_g56_request_docs_and_fixture_exist() -> None:
         assert (REPO_ROOT / relative_path).exists()
 
 
-def test_v1_g56_has_no_implementation_approval_yet() -> None:
+def test_v1_g56_records_approval_without_implementation_yet() -> None:
     fixture = _load_fixture()
     decision = fixture["decision_record"]
 
-    assert fixture["implementation_approved"] is False
-    assert fixture["operator_approval_recorded"] is False
+    assert fixture["implementation_approved"] is True
+    assert fixture["operator_approval_recorded"] is True
     assert (
         fixture["consumer_fake_executor_provider_sdk_network_egress_smoke_approved"]
-        is False
+        is True
     )
     assert (
         fixture["consumer_fake_executor_provider_sdk_network_egress_smoke_added"]
@@ -59,9 +59,12 @@ def test_v1_g56_has_no_implementation_approval_yet() -> None:
     assert fixture["arc_bot_shell_files_changed"] is False
     assert fixture["v1_g55_wrapper_invoked"] is False
     assert fixture["fake_provider_sdk_network_executor_invoked"] is False
-    assert decision["recorded_choice"] == "none"
-    assert decision["approved_implementation_branch"] == "none"
-    assert decision["implementation_approved"] is False
+    assert decision["recorded_choice"] == "Approve-V1-G56"
+    assert decision["recorded_approval_wording"] == fixture["required_approval_wording"]
+    assert decision["approved_implementation_branch"] == (
+        "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke"
+    )
+    assert decision["implementation_approved"] is True
 
 
 def test_v1_g56_exact_decision_options_are_locked() -> None:
@@ -222,7 +225,8 @@ def test_v1_g56_docs_contain_request_only_boundary_language() -> None:
     assert "Built-in provider SDK client added: no" in approval_text
     assert "Network calls performed by LIMA: no" in approval_text
     assert "Direct provider egress performed by LIMA: no" in approval_text
-    assert "Recorded choice: none" in decision_text
+    assert "Recorded choice: `Approve-V1-G56`" in decision_text
+    assert "Implementation approved: yes" in decision_text
     assert "Template for `Approve-V1-G56`" in decision_text
     assert "Implementation must not start until `Approve-V1-G56`" in preflight_text
     assert "No `lima/` runtime files may be changed." in work_order_text
