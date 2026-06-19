@@ -1,7 +1,7 @@
 {
   "api_status": "CANDIDATE_ONLY",
-  "branch": "audit-v1-g55-real-provider-sdk-network-egress",
-  "source_commit_before_alignment": "1d252a2976fb49ab540fc76fffbd43183917eca6",
+  "branch": "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request",
+  "source_commit_before_alignment": "146f8a7d934567b7c551af2c5db775215b47cf88",
   "documents": {
     "readme": "README.md",
     "current_project_state": "docs/CURRENT_PROJECT_STATE.md",
@@ -9,7 +9,11 @@
     "v1_g55_audit": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
     "v1_runtime_authority_chain_through_g55_audit": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
     "v1_readiness_rollup_through_g55": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md",
-    "v1_post_g55_next_lane_matrix": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md"
+    "v1_post_g55_next_lane_matrix": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md",
+    "v1_g56_approval_request": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md",
+    "v1_g56_work_order": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md",
+    "v1_g56_preflight_audit": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md",
+    "v1_g56_operator_decision_packet": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md"
   },
   "readme_section": "Current V1 Status",
   "current_project_state_section": "Current V1 Gate Snapshot",
@@ -22,8 +26,16 @@
   "latest_authority_chain_audit": "V1-G55",
   "latest_readiness_rollup": "V1-G55",
   "current_gate": "V1-G56",
-  "next_recommended_lane": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+  "next_recommended_lane": "operator_decision_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke",
   "next_lane_request_only": true,
+  "g56_request_packet_prepared": true,
+  "g56_operator_approval_recorded": false,
+  "g56_runtime_implementation_approved": false,
+  "g56_valid_operator_choices": [
+    "Approve-V1-G56",
+    "Revise-V1-G56",
+    "Pause"
+  ],
   "v1_g55_operator_approval_recorded": true,
   "v1_g55_runtime_implementation_approved": true,
   "v1_g55_independent_audit_complete": true,
@@ -52,5 +64,5 @@
   "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
   "v1_product_ready": false,
   "production_ready": false,
-  "next_step": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
+  "next_step": "record_v1_g56_operator_decision"
 }

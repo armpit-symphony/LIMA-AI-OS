@@ -28,9 +28,11 @@ def test_v1_long_range_roadmap_fixture_and_docs_exist() -> None:
 
     assert fixture["status_id"] == "v1_long_range_roadmap_g56_status"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
-    assert fixture["branch"] == "audit-v1-g55-real-provider-sdk-network-egress"
+    assert fixture["branch"] == (
+        "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request"
+    )
     assert fixture["source_commit_before_refresh"] == (
-        "1d252a2976fb49ab540fc76fffbd43183917eca6"
+        "146f8a7d934567b7c551af2c5db775215b47cf88"
     )
 
     for relative_path in fixture["documents"].values():
@@ -42,13 +44,17 @@ def test_v1_long_range_roadmap_current_gate_is_g56_request_prep() -> None:
 
     assert fixture["current_gate"] == "V1-G56"
     assert fixture["latest_completed_gate"] == "V1-G55"
+    assert fixture["request_packet_prepared"] is True
     assert fixture["operator_approval_recorded"] is False
     assert fixture["runtime_implementation_approved"] is False
+    assert fixture["valid_operator_choices"] == [
+        "Approve-V1-G56",
+        "Revise-V1-G56",
+        "Pause",
+    ]
     assert fixture["v1_product_ready"] is False
     assert fixture["production_ready"] is False
-    assert fixture["next_smallest_safe_step"] == (
-        "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
-    )
+    assert fixture["next_smallest_safe_step"] == "record_v1_g56_operator_decision"
 
 
 def test_v1_long_range_roadmap_refresh_adds_no_forbidden_behavior() -> None:
@@ -84,16 +90,19 @@ def test_v1_long_range_roadmap_text_points_to_g56_request_prep() -> None:
 
     assert "## V1 Product Readiness Target" in text
     assert "public `Sparkbot`" in text
-    assert "The active V1 gate is now request preparation for `V1-G56`." in text
+    assert "The active V1 gate is now operator decision for the prepared `V1-G56` request." in text
     assert "audited through `V1-G55`" in text
-    assert "readiness rollup through G55 selects `V1-G56`" in text
+    assert "V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared" in text
     assert "Current V1-G55 authority documents:" in text
     assert "`docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md`" in text
     assert "`docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`" in text
+    assert "Current V1-G56 authority request documents:" in text
+    assert "`docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`" in text
     assert (
-        "The next smallest safe V1 action is to prepare a V1-G56 consumer "
-        "fake-executor provider SDK/network egress smoke approval request."
+        "The next smallest safe V1 action is to record exactly one operator choice "
+        "in the V1-G56 consumer fake-executor provider SDK/network egress smoke operator decision packet"
     ) in text
+    assert "`Approve-V1-G56`, `Revise-V1-G56`, or `Pause`" in text
     assert "fake in-process caller-injected provider SDK/network executors" in text
     assert "built-in provider SDK clients" in text
     assert "LIMA-owned DNS/HTTP/socket/network calls" in text

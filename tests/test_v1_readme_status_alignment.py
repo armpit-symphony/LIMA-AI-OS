@@ -28,9 +28,11 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
     fixture = _load_fixture()
 
     assert fixture["api_status"] == "CANDIDATE_ONLY"
-    assert fixture["branch"] == "audit-v1-g55-real-provider-sdk-network-egress"
+    assert fixture["branch"] == (
+        "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request"
+    )
     assert fixture["source_commit_before_alignment"] == (
-        "1d252a2976fb49ab540fc76fffbd43183917eca6"
+        "146f8a7d934567b7c551af2c5db775215b47cf88"
     )
     assert fixture["documents"]["readme"] == "README.md"
     assert fixture["documents"]["current_project_state"] == "docs/CURRENT_PROJECT_STATE.md"
@@ -41,6 +43,14 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
     assert fixture["latest_readiness_rollup"] == "V1-G55"
     assert fixture["current_gate"] == "V1-G56"
     assert fixture["next_lane_request_only"] is True
+    assert fixture["g56_request_packet_prepared"] is True
+    assert fixture["g56_operator_approval_recorded"] is False
+    assert fixture["g56_runtime_implementation_approved"] is False
+    assert fixture["g56_valid_operator_choices"] == [
+        "Approve-V1-G56",
+        "Revise-V1-G56",
+        "Pause",
+    ]
     assert fixture["v1_g55_operator_approval_recorded"] is True
     assert fixture["v1_g55_runtime_implementation_approved"] is True
     assert fixture["v1_g55_independent_audit_complete"] is True
@@ -94,11 +104,9 @@ def test_v1_readme_status_fixture_points_to_exact_next_step() -> None:
     fixture = _load_fixture()
 
     assert fixture["next_recommended_lane"] == (
-        "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
+        "operator_decision_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke"
     )
-    assert fixture["next_step"] == (
-        "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
-    )
+    assert fixture["next_step"] == "record_v1_g56_operator_decision"
 
 
 def test_readme_contains_current_v1_status_and_boundaries() -> None:
@@ -108,10 +116,11 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "LIMA remains `CANDIDATE_ONLY`." in text
     assert "`Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`" in text
     assert "audited through `V1-G55`" in text
-    assert "post-G55 readiness rollup selects `V1-G56`" in text
+    assert "V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared" in text
     assert "`V1-G55` is complete as a bounded LIMA-side real provider SDK/network egress authority wrapper" in text
     assert "calls only a caller-injected provider SDK/network executor" in text
-    assert "The active next V1 lane is request-only preparation of `V1-G56" in text
+    assert "The active next V1 lane is operator decision on the request-only `V1-G56" in text
+    assert "`Approve-V1-G56`, `Revise-V1-G56`, or `Pause`" in text
     assert "do not implement G56 consumer smoke tests" in text
     assert "edit consumer repositories for G56" in text
     assert "add built-in provider SDK clients" in text
@@ -139,8 +148,10 @@ def test_current_project_state_contains_post_g55_gate_snapshot() -> None:
     assert "V1 readiness rollup through G55: complete." in state_text
     assert "V1 post-G55 next-lane decision matrix: complete." in state_text
     assert "V1-G55 real provider SDK/network egress wrapper: implemented and independently audited" in state_text
-    assert "V1-G56 consumer fake-executor provider SDK/network egress smoke lane: next recommended request-only lane, not approved." in state_text
-    assert "The next smallest safe V1 step is to prepare a request-only V1-G56" in state_text
+    assert "V1-G56 consumer fake-executor provider SDK/network egress smoke approval packet: prepared for operator decision, not approved." in state_text
+    assert "V1-G56 valid operator choices: `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`." in state_text
+    assert "V1-G56 implementation approval recorded: no." in state_text
+    assert "The next smallest safe V1 step is to record exactly one operator choice" in state_text
     assert "do not implement G56 consumer smoke tests" in state_text
     assert "make LIMA-owned DNS/HTTP/socket/network calls" in state_text
     assert "read secrets" in state_text

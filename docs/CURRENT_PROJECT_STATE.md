@@ -26,13 +26,15 @@ Latest V1 checkpoint:
 - V1-G55 blocker after consumer target refresh audit: complete.
 - V1-G55 real provider SDK/network egress wrapper: implemented and independently audited as `CANDIDATE_ONLY`.
 - V1-G55 public API changes: limited to the approved `lima.harness` wrapper exports.
-- V1-G56 consumer fake-executor provider SDK/network egress smoke lane: next recommended request-only lane, not approved.
+- V1-G56 consumer fake-executor provider SDK/network egress smoke approval packet: prepared for operator decision, not approved.
+- V1-G56 valid operator choices: `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
+- V1-G56 implementation approval recorded: no.
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The next smallest safe V1 step is to prepare a request-only V1-G56 consumer fake-executor provider SDK/network egress smoke approval packet. That packet is not yet an implementation approval.
+The next smallest safe V1 step is to record exactly one operator choice in `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`. The prepared packet is not an implementation approval.
 
-Until a future exact approval exists, do not implement G56 consumer smoke tests, edit Sparkbot or Arc-Bot-shell for G56, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
+Until `Approve-V1-G56` is explicitly recorded, do not implement G56 consumer smoke tests, edit Sparkbot or Arc-Bot-shell for G56, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
 
 Phase 3.5 is complete and tagged on `main`.
 

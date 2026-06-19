@@ -18,7 +18,7 @@ Sparkbot remains the R&D reference for how shells should behave. LIMA should use
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The current V1 authority chain is audited through `V1-G55`. The post-G55 readiness rollup selects `V1-G56` as the next narrow request-only authority gate.
+The current V1 authority chain is audited through `V1-G55`. The V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared as the next narrow request-only authority gate.
 
 `V1-G55` is complete as a bounded real provider SDK/network egress authority wrapper. It validates prior authority evidence and calls only a caller-injected provider SDK/network executor. It remains `CANDIDATE_ONLY`.
 
@@ -35,9 +35,18 @@ Authoritative G55 files:
 - `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md`
 - `docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`
 
-The next recommended request-only lane is:
+The current request-only approval lane is:
 
 - `prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request`
+
+Authoritative G56 request files:
+
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`
+
+Valid G56 operator choices are `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
 
 No V1-G56 implementation is approved by this document.
 
@@ -106,9 +115,9 @@ For V1, LIMA must prove compatibility with the first shells before product readi
 
 Current status remains not V1 product-ready.
 
-The latest completed gate is `V1-G55`. The active next lane is request-only preparation of `V1-G56` consumer fake-executor provider SDK/network egress smoke evidence. No V1-G56 implementation is approved.
+The latest completed gate is `V1-G55`. The active next lane is operator decision on the prepared request-only `V1-G56` consumer fake-executor provider SDK/network egress smoke evidence packet. No V1-G56 implementation is approved.
 
-Until a future exact approval exists, the following remain blocked:
+Until `Approve-V1-G56` is explicitly recorded, the following remain blocked:
 
 - V1-G56 consumer fake-executor smoke implementation
 - consumer repository edits for V1-G56
@@ -127,7 +136,7 @@ Until a future exact approval exists, the following remain blocked:
 
 ## Remaining Blockers
 
-- V1-G56 request packet is not prepared or approved
+- V1-G56 operator approval is not recorded
 - consumer fake-executor provider SDK/network egress smoke evidence against the G55 wrapper is not implemented
 - direct provider SDK/network egress by LIMA is still forbidden
 - real provider SDK client ownership remains outside LIMA
@@ -141,6 +150,6 @@ Until a future exact approval exists, the following remain blocked:
 
 ## Recommended Next Step
 
-Prepare a V1-G56 consumer fake-executor provider SDK/network egress smoke approval request.
+Record exactly one operator choice for the prepared V1-G56 consumer fake-executor provider SDK/network egress smoke approval request.
 
-The request should ask only whether first-shell consumers may prove import/call compatibility with the approved G55 public wrapper using fake in-process caller-injected provider SDK/network executors. Stop before implementation, credentials, built-in SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.
+The request asks only whether first-shell consumers may prove import/call compatibility with the approved G55 public wrapper using fake in-process caller-injected provider SDK/network executors. Stop before implementation unless `Approve-V1-G56` is recorded. Stop before credentials, built-in SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.

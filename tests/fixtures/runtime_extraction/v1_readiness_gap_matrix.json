@@ -1,8 +1,8 @@
 {
   "document": "docs/V1_READINESS_GAP_MATRIX.md",
   "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
-  "current_branch": "audit-v1-g55-real-provider-sdk-network-egress",
-  "source_commit_before_matrix_refresh": "1d252a2976fb49ab540fc76fffbd43183917eca6",
+  "current_branch": "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request",
+  "source_commit_before_matrix_refresh": "146f8a7d934567b7c551af2c5db775215b47cf88",
   "docs_tests_fixtures_only": true,
   "api_status": "CANDIDATE_ONLY",
   "implementation_approved": false,
@@ -18,9 +18,16 @@
     "g55_operator_approval_recorded": true,
     "g55_runtime_implementation_approved": true,
     "g55_independent_audit_complete": true,
-    "g56_request_packet_prepared": false,
+    "g56_request_packet_prepared": true,
+    "g56_operator_approval_recorded": false,
     "g56_runtime_implementation_approved": false,
-    "next_required_artifact": "v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request"
+    "next_required_artifact": "v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+    "next_required_action": "record_v1_g56_operator_decision",
+    "valid_operator_choices": [
+      "Approve-V1-G56",
+      "Revise-V1-G56",
+      "Pause"
+    ]
   },
   "gap_groups": [
     {
@@ -50,18 +57,23 @@
     },
     {
       "ids": "V1-G56",
-      "status": "request_preparation_pending_implementation_not_approved",
+      "status": "approval_request_prepared_awaiting_operator_decision_implementation_not_approved",
+      "approval_request_document": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md",
+      "work_order_document": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md",
+      "preflight_audit_document": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md",
+      "operator_decision_packet_document": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md",
       "next_lane_matrix_document": "docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md",
       "g55_wrapper_audit_document": "docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md",
       "g55_chain_audit_document": "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md",
-      "g56_request_packet_prepared": false,
+      "g56_request_packet_prepared": true,
+      "g56_operator_approval_recorded": false,
       "runtime_implementation_added": false,
       "runtime_approval_needed": true
     }
   ],
-  "next_smallest_safe_step": "prepare_v1_g56_consumer_fake_executor_provider_sdk_network_egress_smoke_approval_request",
+  "next_smallest_safe_step": "record_v1_g56_operator_decision",
   "next_smallest_safe_step_reason": "g55_wrapper_public_candidate_api_is_audited_and_next_consumer_proof_should_remain_fake_executor_request_only",
-  "next_smallest_safe_step_status": "pending_request_preparation",
+  "next_smallest_safe_step_status": "pending_operator_decision",
   "stop_conditions": [
     "g56_consumer_fake_executor_smoke_implementation_without_exact_approval",
     "file_scope_outside_future_g56_request",
@@ -87,7 +99,8 @@
     "lima_runtime_files_changed_by_refresh": false,
     "tests_support_changed": false,
     "shell_repos_changed_by_refresh": false,
-    "v1_g56_request_packet_added": false,
+    "v1_g56_request_packet_added": true,
+    "v1_g56_operator_approval_recorded": false,
     "v1_g56_runtime_implementation_added": false,
     "built_in_provider_sdk_client_added": false,
     "sdk_dependency_added": false,

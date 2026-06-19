@@ -398,9 +398,9 @@ V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, public `Sparkbot`, 
 
 The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, shell haptic intent support, and bounded real provider SDK/network egress authority. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. The active V1 gate is now request preparation for `V1-G56`.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. The active V1 gate is now operator decision for the prepared `V1-G56` request.
 
-The V1 authority chain is audited through `V1-G55`, and the readiness rollup through G55 selects `V1-G56` as the next request-only consumer fake-executor provider SDK/network egress smoke gate.
+The V1 authority chain is audited through `V1-G55`, and the V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared for operator decision.
 
 Completed candidate-only V1 evidence includes:
 
@@ -425,8 +425,15 @@ Current V1-G55 authority documents:
 - `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md`
 - `docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`
 
-The next smallest safe V1 action is to prepare a V1-G56 consumer fake-executor provider SDK/network egress smoke approval request.
+Current V1-G56 authority request documents:
 
-That request should ask only whether first-shell consumers may prove import/call compatibility with the G55 public wrapper using fake in-process caller-injected provider SDK/network executors. It must still not add implementation, built-in provider SDK clients, SDK dependencies, vendor SDK imports, direct provider SDK implementation, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration changes, fallback, consumer production runtime integration, connector/browser/file/device/robotics/physical-world behavior, or product-readiness claims.
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md`
+- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`
+
+The next smallest safe V1 action is to record exactly one operator choice in the V1-G56 consumer fake-executor provider SDK/network egress smoke operator decision packet: `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
+
+That request asks only whether first-shell consumers may prove import/call compatibility with the G55 public wrapper using fake in-process caller-injected provider SDK/network executors. It must still not add implementation unless `Approve-V1-G56` is recorded. It must still not add built-in provider SDK clients, SDK dependencies, vendor SDK imports, direct provider SDK implementation, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration changes, fallback, consumer production runtime integration, connector/browser/file/device/robotics/physical-world behavior, or product-readiness claims.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, provider SDK/network egress, GuardianDecision execution authority, approval enforcement expansion, persistence expansion, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.
