@@ -1,0 +1,84 @@
+{
+  "audit_id": "v1_arc_runtime_ui_scope_lock_packet_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-19",
+  "audit_branch": "audit-v1-arc-runtime-ui-scope-lock-packet",
+  "source_lima_commit_before_audit": "2d169f3571aa846f39b2191c3949091950664577",
+  "documents": {
+    "audit": "docs/audits/V1_ARC_RUNTIME_UI_SCOPE_LOCK_PACKET_AUDIT.md",
+    "prior_arc_guardian_suite_read_seam_audit": "docs/audits/V1_ARC_GUARDIAN_SUITE_READ_SEAM_AUDIT.md",
+    "prior_arc_contract_pack_audit": "docs/audits/V1_ARC_RUNTIME_UI_SCAFFOLD_CONTRACT_PACK_AUDIT.md"
+  },
+  "consumer_checkpoint": {
+    "repository": "armpit-symphony/Arc-Bot-shell",
+    "branch": "arc-bot-runtime-ui-scaffold-foundation-phase-chain",
+    "commit": "2c14a9bfa892bb7b1ed5043fb3e92044274a6501",
+    "source_commit_before_checkpoint": "b714bda6ddfff30750c9522bc706a592f7e43bb9",
+    "pr_url": "https://github.com/armpit-symphony/Arc-Bot-shell/pull/new/arc-bot-runtime-ui-scaffold-foundation-phase-chain"
+  },
+  "accepted_evidence": [
+    "README.md",
+    "docs/ROADMAP_SCOPE_LOCK_PUNCH_LIST.md",
+    "tests/fixtures/arc_bot_runtime_ui_scaffold_phase0_scope_lock_chain_packet.json",
+    "tests/test_arc_bot_runtime_ui_scaffold_phase_chain.py"
+  ],
+  "validation_commands": [
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -m json.tool tests\\fixtures\\arc_bot_runtime_ui_scaffold_phase0_scope_lock_chain_packet.json",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests\\test_arc_bot_runtime_ui_scaffold_phase_chain.py -p no:cacheprovider",
+      "result": "5 passed in 0.04s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --cached --check",
+      "result": "passed before commit"
+    }
+  ],
+  "scope_audit": {
+    "arc_branch_saved_and_pushed": true,
+    "arc_docs_tests_fixtures_and_existing_test_only": true,
+    "lima_docs_tests_fixtures_only": true,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_exports_changed": false,
+    "public_sparkbot_files_changed": false,
+    "sparkbot_shell_files_changed": false,
+    "arc_consumer_production_runtime_integration_approved": false,
+    "v1_g55_implementation_approved_or_started": false
+  },
+  "boundary_results": {
+    "live_model_calls_added": false,
+    "provider_sdk_network_egress_added": false,
+    "built_in_provider_sdk_clients_added": false,
+    "sdk_dependencies_or_vendor_sdk_imports_added": false,
+    "endpoint_resolution_execution_added": false,
+    "lima_owned_dns_http_socket_network_calls_or_direct_provider_egress_added": false,
+    "credential_storage_or_lookup_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "connector_reads_or_writes_added": false,
+    "browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "tool_execution_added": false,
+    "worker_dispatch_or_task_execution_added": false,
+    "runtime_route_mutation_added": false,
+    "customer_system_mutation_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "product_ready": false,
+    "production_ready": false,
+    "v1_0_complete": false
+  },
+  "known_status_warnings": [
+    "Arc-Bot-shell git status emits: could not open directory '.pytest_cache/': Permission denied",
+    "Arc-Bot-shell git status emits: could not open directory '.pytest-tmp/': Permission denied after local pytest --basetemp execution"
+  ],
+  "audit_decision": "accept_arc_runtime_ui_scope_lock_packet_as_consumer_testing_evidence",
+  "recommended_next_step": "keep_arc_branch_separate_for_review_and_keep_v1_g55_blocked_until_exact_approval"
+}
