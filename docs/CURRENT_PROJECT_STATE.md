@@ -22,6 +22,7 @@ Latest V1 checkpoint:
 - Arc-Bot-shell runtime gating readiness integration audit: complete.
 - Public Sparkbot remote publication remains blocked by GitHub 403 for the
   current credential.
+- V1-G55 blocker after consumer target refresh audit: complete.
 - V1-G55 real provider SDK/network egress approval request: prepared, not approved.
 - V1-G55 implementation blocker audit: active.
 - Operator approval recorded for G55: no.
