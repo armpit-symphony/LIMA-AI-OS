@@ -34,19 +34,19 @@ The approval request asks:
 
 ## Current Decision State
 
-- Operator approval recorded: no.
-- Implementation approved: no.
-- Approved next implementation branch: none.
-- Current next action: record exactly one valid operator choice.
+- Operator approval recorded: yes.
+- Implementation approved: yes.
+- Approved next implementation branch: `v1-g55-real-provider-sdk-network-egress`.
+- Current next action: implement only the approved V1-G55 file scope.
 
 ## Decision Record
 
-- Recorded choice: `none`
-- Recorded approval wording: `none`
+- Recorded choice: `Approve-V1-G55`
+- Recorded approval wording: `I explicitly approve V1-G55 implementation of the LIMA-side bounded real provider SDK/network egress authority slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md.`
 - Recorded revision request: `none`
 - Recorded pause reason: `none`
-- Approved implementation branch: `none`
-- Implementation approved: no
+- Approved implementation branch: `v1-g55-real-provider-sdk-network-egress`
+- Implementation approved: yes
 
 ## Decision Record Templates
 
