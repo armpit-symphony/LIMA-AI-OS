@@ -1,0 +1,94 @@
+{
+  "audit_id": "v1_public_sparkbot_preview_publication_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "audit_branch": "audit-v1-public-sparkbot-preview-publication",
+  "source_lima_commit_before_audit": "2e5d5285059ef4f18c08c6959b191332b8122e5d",
+  "public_sparkbot_local_repository": "C:\\Users\\limap\\Sparkbot-public",
+  "public_sparkbot_local_branch": "public-work-settings-preview",
+  "public_sparkbot_local_commit": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+  "fork_repository": "https://github.com/armpit-symphony/Sparkbot",
+  "fork_branch": "public-work-settings-preview",
+  "fork_branch_sha": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+  "target_repository": "https://github.com/sparkpit-labs/Sparkbot",
+  "target_branch_present": false,
+  "target_pull_request_created": false,
+  "manual_pull_request_compare_url": "https://github.com/sparkpit-labs/Sparkbot/compare/main...armpit-symphony:public-work-settings-preview?expand=1",
+  "publication_blockers": {
+    "direct_push_blocked_by_403": true,
+    "direct_push_error": "Permission to sparkpit-labs/Sparkbot.git denied to armpit-symphony",
+    "github_connector_pr_create_blocked_by_tool_mismatch": true,
+    "github_cli_pr_create_blocked_by_missing_auth": true,
+    "github_cli_missing_auth_message": "To get started with GitHub CLI, please run: gh auth login"
+  },
+  "documents": {
+    "publication_audit": "docs/audits/V1_PUBLIC_SPARKBOT_PREVIEW_PUBLICATION_AUDIT.md",
+    "v1_g55_decision_log_status_fixture": "tests/fixtures/runtime_extraction/v1_g55_decision_log_status.json",
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "v1_g55_approval_request": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md"
+  },
+  "sparkbot_preview_scope": {
+    "work_page_shell_preview": true,
+    "local_ai_settings_shell_preview": true,
+    "public_capability_contract_additions": true,
+    "documentation_alignment": true,
+    "backend_capability_tests": true,
+    "frontend_static_ui_tests": true
+  },
+  "sparkbot_forbidden_by_preview": {
+    "file_reads_added": false,
+    "file_writes_added": false,
+    "connector_calls_added": false,
+    "credential_fields_added": false,
+    "credential_storage_added": false,
+    "endpoint_checks_added": false,
+    "provider_calls_added": false,
+    "model_routing_added": false,
+    "model_calls_added": false,
+    "tool_execution_added": false,
+    "terminal_execution_added": false,
+    "external_sends_added": false,
+    "live_guardian_policy_enforcement_added": false,
+    "lima_runtime_calls_added": false,
+    "production_readiness_claim_added": false
+  },
+  "validation": {
+    "backend_capabilities_pytest": {
+      "command": ".\\.venv-public-test\\Scripts\\python.exe -m pytest -q backend\\tests\\test_capabilities.py -p no:cacheprovider",
+      "result": "4 passed, 1 Starlette/httpx deprecation warning"
+    },
+    "frontend_vitest": {
+      "command": "npm run test -- --run",
+      "result": "1 test file passed, 4 tests passed"
+    },
+    "frontend_build": {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    "sparkbot_diff_check": {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  },
+  "lima_boundaries": {
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_changed": false,
+    "v1_g55_implementation_approved": false,
+    "provider_sdk_network_egress_invocation_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependency_added": false,
+    "vendor_provider_sdk_import_added": false,
+    "dns_http_socket_network_call_added": false,
+    "direct_provider_egress_added": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_change_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "browser_file_network_device_robotics_physical_world_behavior_added": false,
+    "product_readiness_claim_added": false,
+    "production_readiness_claim_added": false
+  },
+  "recommended_next_step": "create_public_release_pr_after_github_auth_or_permission_is_available"
+}
