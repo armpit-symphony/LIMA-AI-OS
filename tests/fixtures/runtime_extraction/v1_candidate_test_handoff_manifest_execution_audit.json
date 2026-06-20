@@ -1,0 +1,128 @@
+{
+  "audit_id": "v1_candidate_test_handoff_manifest_execution_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-20",
+  "audit_branch": "audit-v1-candidate-test-handoff-manifest-execution",
+  "source_lima_commit_before_audit": "3b21251e2c6dff8b9df7906eb2da708dc809a26a",
+  "audit_verdict": "PASS_WITH_BLOCKERS",
+  "documents": {
+    "execution_audit": "docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md",
+    "handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "through_g57_runbook": "docs/runbooks/V1_THROUGH_G57_CANDIDATE_TEST_RUNBOOK.md",
+    "g56_public_sparkbot_publication_audit": "docs/audits/V1_G56_PUBLIC_SPARKBOT_TARGET_PUBLICATION_AUDIT.md",
+    "g57_approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md"
+  },
+  "executed_checkpoints": {
+    "lima_ai_os": {
+      "local_path": "C:\\Users\\limap\\LIMA-AI-OS",
+      "source_branch": "docs-v1-candidate-test-handoff-manifest",
+      "source_commit": "3b21251e2c6dff8b9df7906eb2da708dc809a26a",
+      "clean_before_audit_branch": true
+    },
+    "public_sparkbot": {
+      "local_path": "C:\\Users\\limap\\Sparkbot-public",
+      "branch": "v1-g56-runtime-authority-chain-audit",
+      "commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
+      "clean": true,
+      "target_repository": "sparkpit-labs/Sparkbot",
+      "target_branch_published": false
+    },
+    "accessible_sparkbot": {
+      "local_path": "C:\\Users\\limap\\Sparkbot",
+      "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+      "commit": "ddaa4ccaacd328ddcc1f00a040c2c140abee428e",
+      "clean": true,
+      "pushed": true
+    },
+    "arc_bot_shell": {
+      "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
+      "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+      "commit": "ec06e7670f18eeae192fc0f995b6ffd07481d8c9",
+      "pushed": true,
+      "unrelated_dirty_worktree_files_present": true
+    }
+  },
+  "validation_results": {
+    "public_sparkbot_g56_smoke": {
+      "command": "python -m pytest -q tests\\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "accessible_sparkbot_g56_smoke": {
+      "command": "python -m pytest -q tests\\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "arc_bot_shell_g56_smoke": {
+      "command": "python -m pytest -q tests\\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "lima_manifest_static_test": {
+      "command": "python -m pytest -q tests/test_v1_candidate_test_handoff_manifest.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 7
+    },
+    "lima_focused_manifest_g56_g57_readiness_status_set": {
+      "passed": true,
+      "tests_passed": 81
+    },
+    "compileall_lima": {
+      "command": "python -m compileall lima",
+      "passed": true
+    },
+    "full_lima_suite": {
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 5001
+    },
+    "lima_diff_check": {
+      "command": "git diff --check",
+      "passed": true
+    }
+  },
+  "evidence_accepted": [
+    "public_sparkbot_local_g56_fake_executor_smoke_passed",
+    "accessible_sparkbot_g56_fake_executor_smoke_passed",
+    "arc_bot_shell_g56_fake_executor_smoke_passed",
+    "lima_manifest_g56_g57_authority_readiness_assertions_aligned",
+    "full_lima_suite_passed_at_manifest_checkpoint"
+  ],
+  "boundaries_preserved": {
+    "v1_g57_implementation_approval_recorded": false,
+    "v1_g57_provider_execution_hardening_authorization_implemented": false,
+    "public_sparkbot_g56_branch_pushed_to_target": false,
+    "lima_runtime_files_changed_by_audit": false,
+    "lima_public_api_exports_changed_by_audit": false,
+    "sparkbot_files_changed_by_audit": false,
+    "arc_bot_shell_files_changed_by_audit": false,
+    "provider_sdk_clients_added": false,
+    "sdk_dependencies_added": false,
+    "vendor_provider_sdk_imports_added": false,
+    "lima_owned_provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "current_blockers": {
+    "public_sparkbot_publication": "missing_write_credentials_for_sparkpit_labs_sparkbot",
+    "v1_g57_implementation": "requires_exact_operator_choice",
+    "arc_bot_shell_local_worktree": "unrelated_dirty_files_outside_pushed_g56_evidence"
+  },
+  "stop_conditions_preserved": [
+    "public_sparkbot_push_without_write_credentials",
+    "v1_g57_implementation_without_exact_approval",
+    "consumer_repo_edit_from_execution_audit_lane",
+    "runtime_or_public_api_change_from_execution_audit_lane",
+    "secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "raw_sensitive_or_patch_content_persistence",
+    "v1_product_production_or_completion_claim"
+  ],
+  "recommended_next_step": "provide_public_sparkbot_write_credentials_or_record_exactly_one_v1_g57_operator_choice"
+}
