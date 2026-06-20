@@ -1,0 +1,86 @@
+{
+  "refresh_id": "v1_post_g60_request_readiness_refresh",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-post-g60-request-readiness-refresh",
+  "source_branch": "audit-v1-g60-sdk-dependency-vendor-provider-sdk-import-approval-request",
+  "source_commit_before_refresh": "bab82507d4694751904ea1c9a3729169c82e01e4",
+  "readiness_verdict": "READY_FOR_OPERATOR_DECISION_BLOCKED_FOR_IMPLEMENTATION",
+  "implementation_blocker": "Approve-V1-G60 has not been recorded",
+  "required_operator_choice_to_unblock_implementation": "Approve-V1-G60",
+  "required_approval_wording": "I explicitly approve V1-G60 implementation of the LIMA-side SDK dependency addition and vendor provider SDK import approval slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_APPROVAL_REQUEST.md.",
+  "documents": {
+    "refresh": "docs/readiness/V1_POST_G60_REQUEST_READINESS_REFRESH.md",
+    "g60_approval_request": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_APPROVAL_REQUEST.md",
+    "g60_work_order": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_WORK_ORDER.md",
+    "g60_operator_decision_packet": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_OPERATOR_DECISION_PACKET.md",
+    "g60_preflight_audit": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_PREFLIGHT_AUDIT.md",
+    "g60_request_audit": "docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_APPROVAL_REQUEST_AUDIT.md",
+    "post_g59_readiness_rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G59.md",
+    "post_g59_next_lane_matrix": "docs/readiness/V1_POST_G59_NEXT_LANE_DECISION_MATRIX.md",
+    "g59_audit": "docs/audits/V1_G59_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUTHORITY_AUDIT.md"
+  },
+  "required_verdicts": {
+    "v1_runtime_authority_chain": "CANDIDATE_ONLY",
+    "v1_g60_approval_request": "READY_FOR_OPERATOR_DECISION",
+    "v1_g60_implementation": "NOT_APPROVED",
+    "sdk_dependency_additions": "NOT_APPROVED",
+    "dependency_manifest_edits": "NOT_APPROVED",
+    "lockfile_edits": "NOT_APPROVED",
+    "vendor_provider_sdk_imports": "NOT_APPROVED",
+    "built_in_provider_sdk_client_implementation": "NOT_APPROVED",
+    "provider_client_construction": "NOT_APPROVED",
+    "direct_provider_sdk_call_implementation_by_lima": "NOT_APPROVED",
+    "lima_owned_provider_endpoint_resolution_execution": "NOT_APPROVED",
+    "lima_owned_direct_provider_network_egress": "NOT_APPROVED",
+    "secret_lookup_and_credential_value_access": "NOT_APPROVED",
+    "fallback_execution": "NOT_APPROVED",
+    "consumer_production_runtime_integration": "NOT_APPROVED",
+    "physical_world_readiness": "BLOCKED",
+    "product_readiness": "NOT_READY",
+    "final_public_api_freeze": "NOT_APPROVED"
+  },
+  "boundary_confirmation": {
+    "docs_tests_fixtures_only": true,
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_changed": false,
+    "sdk_dependency_added": false,
+    "pyproject_toml_edited": false,
+    "lockfile_edited": false,
+    "vendor_provider_sdk_import_added": false,
+    "provider_client_construction_added": false,
+    "provider_endpoint_resolution_added": false,
+    "network_calls_by_lima_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "product_readiness_claimed": false,
+    "final_public_api_freeze_claimed": false
+  },
+  "validation_evidence": {
+    "focused_v1_g60_request_audit_validation": {
+      "passed": true,
+      "tests_passed": 10
+    },
+    "focused_v1_g60_request_audit_chain_validation": {
+      "passed": true,
+      "tests_passed": 53
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 5209
+    }
+  },
+  "next_valid_operator_choices": [
+    "Approve-V1-G60",
+    "Revise-V1-G60",
+    "Pause"
+  ]
+}
