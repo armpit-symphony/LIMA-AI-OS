@@ -1,0 +1,71 @@
+{
+  "audit_id": "v1_handoff_artifacts_custody_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-20",
+  "branch": "docs-v1-handoff-artifacts-custody",
+  "source_lima_commit_before_audit": "81102ed39eccc6781c2d3c74d2b54ab757ea20ac",
+  "audit_verdict": "LOCAL_HANDOFF_PAYLOAD_EXCLUDED_FROM_REPOSITORY_PROOF",
+  "documents": {
+    "handoff_artifacts_custody_audit": "docs/audits/V1_HANDOFF_ARTIFACTS_CUSTODY_AUDIT.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
+    "operator_unblock_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
+    "gitignore": ".gitignore"
+  },
+  "local_payload_inventory": {
+    "directory": "handoff_artifacts/",
+    "archive_count": 1,
+    "patch_file_count": 2,
+    "bundle_count": 1,
+    "raw_payload_contents_committed": false
+  },
+  "repository_hygiene_decision": {
+    "ignore_rule_added": "handoff_artifacts/",
+    "purpose": "exclude_generated_local_transfer_payloads_from_lima_source_proof",
+    "public_sparkbot_publication_proven_by_artifacts": false,
+    "v1_g57_decision_recorded_by_artifacts": false
+  },
+  "evidence_interpretation": [
+    "directory_is_local_operator_transfer_material_only",
+    "directory_does_not_prove_publication_to_sparkpit_labs_sparkbot",
+    "directory_does_not_replace_public_sparkbot_write_credential_gate",
+    "directory_does_not_record_v1_g57_operator_decision",
+    "directory_excluded_from_final_v1_readiness_proof_without_later_artifact_publication_gate"
+  ],
+  "boundaries_preserved": {
+    "handoff_payload_raw_contents_committed_by_audit": false,
+    "v1_g57_implementation_approval_recorded_by_audit": false,
+    "v1_g57_provider_execution_hardening_authorization_implemented_by_audit": false,
+    "public_sparkbot_g56_branch_pushed_to_sparkpit_labs_by_audit": false,
+    "public_sparkbot_write_credential_provided_by_audit": false,
+    "lima_runtime_files_changed_by_audit": false,
+    "lima_public_api_exports_changed_by_audit": false,
+    "consumer_repositories_changed_by_audit": false,
+    "arc_bot_shell_dirty_files_accepted_as_v1_proof_by_audit": false,
+    "provider_sdk_clients_added": false,
+    "sdk_dependencies_added": false,
+    "vendor_provider_sdk_imports_added": false,
+    "lima_owned_provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "stop_conditions": [
+    "raw_handoff_payload_commit_without_artifact_publication_approval",
+    "treat_local_handoff_artifacts_as_public_sparkbot_publication_proof",
+    "public_sparkbot_push_without_write_credentials",
+    "v1_g57_implementation_without_exact_approval",
+    "treat_this_audit_as_g57_approval",
+    "consumer_repo_edit_from_audit_lane",
+    "runtime_or_public_api_change_from_audit_lane",
+    "secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "raw_sensitive_or_patch_content_persistence",
+    "v1_product_production_or_completion_claim"
+  ]
+}
