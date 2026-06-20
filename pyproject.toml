@@ -8,6 +8,9 @@ version = "0.0.1"
 description = "Phase 0 contracts for the LIMA Runtime / LIMA Kernel."
 readme = "README.md"
 requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.0.0,<3.0.0",
+]
 license = { file = "LICENSE" }
 authors = [
   { name = "SparkPit Labs" }
