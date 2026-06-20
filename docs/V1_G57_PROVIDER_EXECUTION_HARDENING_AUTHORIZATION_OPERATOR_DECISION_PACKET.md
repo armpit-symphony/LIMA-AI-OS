@@ -4,11 +4,11 @@ Date: 2026-06-20
 Branch: `prepare-v1-g57-provider-execution-hardening-authorization-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved`
 
 ## Decision Needed
 
-Choose one:
+Original decision options:
 
 - Recorded choice: none
 - Recorded choice: Approve-V1-G57
@@ -39,9 +39,9 @@ Reason:
 
 ## Current State
 
-- Implementation approved: no.
-- Provider execution hardening authorization approved: no.
-- Provider execution hardening authorization evidence added: no.
+- Implementation approved: yes.
+- Provider execution hardening authorization approved: yes.
+- Provider execution hardening authorization evidence added: pending implementation on `v1-g57-provider-execution-hardening-authorization`.
 - LIMA runtime files changed: no.
 - Sparkbot files changed: no.
 - Arc-Bot-shell files changed: no.
@@ -59,6 +59,20 @@ Reason:
 - Connector/browser/network/file/device/robotics/physical-world behavior added: no.
 - Product readiness claimed: no.
 
+## Recorded Operator Decision
+
+Recorded choice: Approve-V1-G57
+
+Recorded approval wording: I explicitly approve V1-G57 implementation of the LIMA-side provider execution hardening authorization metadata slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md.
+
+Recorded revision request: none
+
+Recorded pause reason: none
+
+Approved implementation branch: `v1-g57-provider-execution-hardening-authorization`
+
+Implementation approved: yes.
+
 ## Decision Rule
 
-Implementation must not start until `Approve-V1-G57` is recorded with the exact approval wording above.
+Implementation may proceed only on `v1-g57-provider-execution-hardening-authorization` and only within the approved file map in `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md`.
