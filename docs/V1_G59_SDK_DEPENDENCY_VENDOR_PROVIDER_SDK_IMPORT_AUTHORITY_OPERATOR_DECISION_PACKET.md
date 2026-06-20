@@ -4,11 +4,11 @@ Date: 2026-06-20
 Branch: `prepare-v1-g59-sdk-dependency-vendor-provider-sdk-import-authority-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved`
 
 ## Decision Needed
 
-Choose one:
+Original decision options:
 
 - Recorded choice: none
 - Recorded choice: Approve-V1-G59
@@ -39,9 +39,9 @@ Reason:
 
 ## Current State
 
-- Implementation approved: no.
-- SDK dependency and vendor provider SDK import authority approved: no.
-- SDK dependency and vendor provider SDK import authority evidence added: no.
+- Implementation approved: yes.
+- SDK dependency and vendor provider SDK import authority approved: yes.
+- SDK dependency and vendor provider SDK import authority evidence added: pending implementation on `v1-g59-sdk-dependency-vendor-provider-sdk-import-authority`.
 - SDK dependency addition approved: no.
 - SDK dependency added: no.
 - Dependency manifest edited: no.
@@ -67,6 +67,20 @@ Reason:
 - Product readiness claimed: no.
 - Final public API freeze claimed: no.
 
+## Recorded Operator Decision
+
+Recorded choice: Approve-V1-G59
+
+Recorded approval wording: I explicitly approve V1-G59 implementation of the LIMA-side SDK dependency and vendor provider SDK import authority metadata slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G59_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUTHORITY_APPROVAL_REQUEST.md.
+
+Recorded revision request: none
+
+Recorded pause reason: none
+
+Approved implementation branch: `v1-g59-sdk-dependency-vendor-provider-sdk-import-authority`
+
+Implementation approved: yes.
+
 ## Decision Rule
 
-Implementation must not start until `Approve-V1-G59` is recorded with the exact approval wording above.
+Implementation may proceed only on `v1-g59-sdk-dependency-vendor-provider-sdk-import-authority` and only within the approved file map in `docs/V1_G59_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUTHORITY_APPROVAL_REQUEST.md`.
