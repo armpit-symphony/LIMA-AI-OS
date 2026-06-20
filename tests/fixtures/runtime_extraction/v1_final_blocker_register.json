@@ -2,28 +2,29 @@
   "register_id": "v1_final_blocker_register",
   "api_status": "CANDIDATE_ONLY",
   "date": "2026-06-20",
-  "branch": "docs-v1-final-blocker-register-after-arc-drift-audit",
-  "source_lima_commit_before_register_refresh": "6876378",
-  "register_verdict": "STOPPED_AT_REAL_BLOCKERS",
+  "branch": "docs-v1-public-sparkbot-g56-publication-resolved",
+  "source_lima_commit_before_register_refresh": "cbc16dc",
+  "register_verdict": "STOPPED_AT_V1_G57_OPERATOR_DECISION",
   "documents": {
     "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
     "handoff_execution_audit": "docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md",
     "arc_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
+    "public_sparkbot_g56_publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
     "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
     "g57_approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md"
   },
-  "verified_blockers": {
+  "resolved_blockers": {
     "public_sparkbot_publication": {
       "target_repository": "sparkpit-labs/Sparkbot",
-      "local_path": "C:\\Users\\limap\\Sparkbot-public",
-      "local_branch": "v1-g56-runtime-authority-chain-audit",
-      "local_commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
-      "verification_command": "git -C C:\\Users\\limap\\Sparkbot-public -c safe.directory='C:/Users/limap/Sparkbot-public' push origin v1-g56-runtime-authority-chain-audit",
-      "blocked": true,
-      "blocker_type": "github_http_403",
-      "sanitized_error": "Permission to sparkpit-labs/Sparkbot.git denied to armpit-symphony.",
-      "required_unblock": "credential_with_write_permission_to_sparkpit_labs_sparkbot"
-    },
+      "branch": "v1-g56-runtime-authority-chain-audit",
+      "commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
+      "verification_command": "git ls-remote https://github.com/sparkpit-labs/Sparkbot.git refs/heads/v1-g56-runtime-authority-chain-audit refs/heads/main",
+      "verified_remote_ref": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2 refs/heads/v1-g56-runtime-authority-chain-audit",
+      "main_head": "ddaa019272ad11bb56d4660be7d44e81810814a7",
+      "resolved": true
+    }
+  },
+  "verified_blockers": {
     "v1_g57_implementation": {
       "gate_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
       "implementation_approval_recorded": false,
@@ -43,7 +44,9 @@
   "current_verified_evidence": [
     "v1_candidate_handoff_execution_audit_exists",
     "v1_arc_bot_shell_local_drift_exclusion_audit_exists",
+    "v1_public_sparkbot_g56_publication_resolution_audit_exists",
     "public_sparkbot_local_g56_fake_executor_smoke_passed",
+    "public_sparkbot_remote_g56_branch_visible_at_expected_commit",
     "accessible_sparkbot_g56_fake_executor_smoke_passed",
     "arc_bot_shell_g56_fake_executor_smoke_passed",
     "arc_bot_shell_approved_g56_test_and_fixture_clean",
@@ -54,7 +57,7 @@
   "boundaries_preserved": {
     "v1_g57_implementation_approval_recorded": false,
     "v1_g57_provider_execution_hardening_authorization_implemented": false,
-    "public_sparkbot_g56_branch_pushed_to_target": false,
+    "public_sparkbot_branch_merge_to_main_claimed": false,
     "lima_runtime_files_changed_by_register": false,
     "lima_public_api_exports_changed_by_register": false,
     "consumer_repositories_changed_by_register": false,
@@ -74,7 +77,6 @@
     "v1_product_or_production_readiness_claimed": false
   },
   "next_unblock_actions": [
-    "provide_or_switch_to_public_sparkbot_write_credentials",
     "record_exactly_one_v1_g57_operator_choice",
     "if_approve_v1_g57_is_recorded_implement_only_metadata_scope"
   ]

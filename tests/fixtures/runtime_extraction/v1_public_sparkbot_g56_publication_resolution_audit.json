@@ -1,0 +1,69 @@
+{
+  "audit_id": "v1_public_sparkbot_g56_publication_resolution_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-20",
+  "branch": "docs-v1-public-sparkbot-g56-publication-resolved",
+  "source_lima_commit_before_audit": "cbc16dc",
+  "audit_verdict": "PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLVED",
+  "documents": {
+    "publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
+    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md"
+  },
+  "remote_verification": {
+    "repository": "https://github.com/sparkpit-labs/Sparkbot",
+    "branch": "v1-g56-runtime-authority-chain-audit",
+    "expected_commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
+    "verified_remote_ref": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2 refs/heads/v1-g56-runtime-authority-chain-audit",
+    "main_head": "ddaa019272ad11bb56d4660be7d44e81810814a7",
+    "verification_command": "git ls-remote https://github.com/sparkpit-labs/Sparkbot.git refs/heads/v1-g56-runtime-authority-chain-audit refs/heads/main",
+    "branch_visible": true,
+    "main_changed": false,
+    "merged": false,
+    "tagged": false
+  },
+  "sparkbot_team_report": {
+    "bundle_sha256_matched": true,
+    "bundle_sha256": "3B366845D4EE78EE43B9F787ECAB2CF7CF4C7848154A49ED4805ED9292A9B69F",
+    "git_bundle_verify": "pass",
+    "python_exact_command_runnable": false,
+    "python3_pytest_result": "8 passed",
+    "git_diff_check": "pass",
+    "git_status": "clean_on_inspected_branch"
+  },
+  "sparkbot_boundary_confirmation": {
+    "provider_sdk_clients_added": false,
+    "sdk_dependencies_added": false,
+    "real_provider_model_calls": false,
+    "network_calls": false,
+    "secret_or_credential_value_access": false,
+    "provider_token_or_api_key_access": false,
+    "consumer_production_runtime_wiring": false,
+    "product_or_production_readiness_claim": false
+  },
+  "remaining_blockers": {
+    "public_sparkbot_publication": false,
+    "v1_g57_operator_decision": true
+  },
+  "boundaries_preserved": {
+    "v1_g57_implementation_approval_recorded": false,
+    "v1_g57_provider_execution_hardening_authorization_implemented": false,
+    "lima_runtime_files_changed_by_audit": false,
+    "lima_public_api_exports_changed_by_audit": false,
+    "consumer_repositories_changed_by_audit": false,
+    "provider_sdk_clients_added_by_lima": false,
+    "sdk_dependencies_added_by_lima": false,
+    "vendor_provider_sdk_imports_added_by_lima": false,
+    "lima_owned_provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "recommended_next_step": "record_exactly_one_v1_g57_operator_choice"
+}

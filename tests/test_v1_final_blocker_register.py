@@ -30,10 +30,10 @@ def test_v1_final_blocker_register_fixture_and_docs_exist() -> None:
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["date"] == "2026-06-20"
     assert fixture["branch"] == (
-        "docs-v1-final-blocker-register-after-arc-drift-audit"
+        "docs-v1-public-sparkbot-g56-publication-resolved"
     )
-    assert fixture["source_lima_commit_before_register_refresh"] == "6876378"
-    assert fixture["register_verdict"] == "STOPPED_AT_REAL_BLOCKERS"
+    assert fixture["source_lima_commit_before_register_refresh"] == "cbc16dc"
+    assert fixture["register_verdict"] == "STOPPED_AT_V1_G57_OPERATOR_DECISION"
 
     for relative_path in fixture["documents"].values():
         assert (REPO_ROOT / relative_path).exists(), relative_path
@@ -41,19 +41,7 @@ def test_v1_final_blocker_register_fixture_and_docs_exist() -> None:
 
 def test_v1_final_blocker_register_records_verified_blockers() -> None:
     blockers = _load_fixture()["verified_blockers"]
-    public_sparkbot = blockers["public_sparkbot_publication"]
     g57 = blockers["v1_g57_implementation"]
-
-    assert public_sparkbot["target_repository"] == "sparkpit-labs/Sparkbot"
-    assert public_sparkbot["local_branch"] == "v1-g56-runtime-authority-chain-audit"
-    assert public_sparkbot["blocked"] is True
-    assert public_sparkbot["blocker_type"] == "github_http_403"
-    assert public_sparkbot["sanitized_error"] == (
-        "Permission to sparkpit-labs/Sparkbot.git denied to armpit-symphony."
-    )
-    assert public_sparkbot["required_unblock"] == (
-        "credential_with_write_permission_to_sparkpit_labs_sparkbot"
-    )
 
     assert g57["implementation_approval_recorded"] is False
     assert g57["valid_operator_choices"] == [
@@ -64,6 +52,20 @@ def test_v1_final_blocker_register_records_verified_blockers() -> None:
     assert g57["required_unblock"] == (
         "record_exactly_one_valid_v1_g57_operator_choice"
     )
+
+
+def test_v1_final_blocker_register_records_resolved_public_sparkbot() -> None:
+    resolved = _load_fixture()["resolved_blockers"]["public_sparkbot_publication"]
+
+    assert resolved["target_repository"] == "sparkpit-labs/Sparkbot"
+    assert resolved["branch"] == "v1-g56-runtime-authority-chain-audit"
+    assert resolved["commit"] == "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2"
+    assert resolved["verified_remote_ref"] == (
+        "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2 "
+        "refs/heads/v1-g56-runtime-authority-chain-audit"
+    )
+    assert resolved["main_head"] == "ddaa019272ad11bb56d4660be7d44e81810814a7"
+    assert resolved["resolved"] is True
 
 
 def test_v1_final_blocker_register_preserves_all_boundaries() -> None:
@@ -79,7 +81,9 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
     assert fixture["current_verified_evidence"] == [
         "v1_candidate_handoff_execution_audit_exists",
         "v1_arc_bot_shell_local_drift_exclusion_audit_exists",
+        "v1_public_sparkbot_g56_publication_resolution_audit_exists",
         "public_sparkbot_local_g56_fake_executor_smoke_passed",
+        "public_sparkbot_remote_g56_branch_visible_at_expected_commit",
         "accessible_sparkbot_g56_fake_executor_smoke_passed",
         "arc_bot_shell_g56_fake_executor_smoke_passed",
         "arc_bot_shell_approved_g56_test_and_fixture_clean",
@@ -95,7 +99,6 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
         "dirty_files_accepted_as_v1_proof": False,
     }
     assert fixture["next_unblock_actions"] == [
-        "provide_or_switch_to_public_sparkbot_write_credentials",
         "record_exactly_one_v1_g57_operator_choice",
         "if_approve_v1_g57_is_recorded_implement_only_metadata_scope",
     ]
@@ -108,9 +111,10 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     )
 
     assert "# V1 Final Blocker Register" in text
-    assert "STOPPED_AT_REAL_BLOCKERS" in text
+    assert "STOPPED_AT_V1_G57_OPERATOR_DECISION" in text
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
-    assert "Permission to sparkpit-labs/Sparkbot.git denied to armpit-symphony." in text
+    assert "V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md" in text
+    assert "Public Sparkbot G56 branch pushed to `sparkpit-labs/Sparkbot`: yes." in text
     assert "Approve-V1-G57" in text
     assert "Arc-Bot-shell dirty files accepted as V1 proof by this register: no." in text
     assert "V1-G57 implementation approval recorded: no." in text
