@@ -1,17 +1,17 @@
 # V1 Final Blocker Register
 
 Date: 2026-06-20
-Branch: `docs-v1-final-blocker-register`
-Source LIMA commit before register: `51d7f35`
+Branch: `docs-v1-final-blocker-register-after-arc-drift-audit`
+Source LIMA commit before register refresh: `6876378`
 API status: `CANDIDATE_ONLY`
 
-This register records the current real blockers after the V1 candidate test handoff execution audit. It is docs/tests/fixtures-only readiness evidence. It does not approve V1-G57 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
+This register records the current real blockers after the V1 candidate test handoff execution audit and the Arc-Bot-shell local drift exclusion audit. It is docs/tests/fixtures-only readiness evidence. It does not approve V1-G57 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
 ## Register Verdict
 
 Verdict: `STOPPED_AT_REAL_BLOCKERS`
 
-The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. The next state-changing steps require external operator action or external credential state.
+The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Arc-Bot-shell local drift is now explicitly excluded from the pushed G56 evidence. The remaining state-changing steps require external operator action or external credential state.
 
 ## Verified Blockers
 
@@ -34,16 +34,20 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - Required unblock: exactly one valid operator choice recorded in the G57 decision packet.
 - If approved later, implementation must stay inside the file scope in `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md`.
 
-## Non-Blocking Warning
+## Excluded Non-Blocking Drift
 
-Arc-Bot-shell has unrelated local dirty files outside the pushed G56 evidence. They were not touched by this LIMA register and must not be used as V1 proof until separately audited.
+Arc-Bot-shell has unrelated local dirty files outside the pushed G56 evidence. `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` records that the approved G56 Arc smoke test and fixture are clean and that the dirty files are excluded from current V1 proof.
+
+The dirty files are still not product-readiness evidence and were not cleaned, reverted, committed, or accepted by this register.
 
 ## Current Verified Evidence
 
 - V1 candidate handoff manifest execution audit: `docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md`
+- Arc-Bot-shell local drift exclusion audit: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
 - Public Sparkbot local G56 fake-executor smoke: passed.
 - Accessible Sparkbot G56 fake-executor smoke: passed.
 - Arc-Bot-shell G56 fake-executor smoke: passed.
+- Arc-Bot-shell approved G56 smoke test and fixture: clean and excluded from local drift.
 - LIMA focused G56/G57/readiness/status tests: passed.
 - LIMA full test suite: passed.
 - LIMA diff hygiene: passed.
@@ -56,6 +60,7 @@ Arc-Bot-shell has unrelated local dirty files outside the pushed G56 evidence. T
 - `lima/` runtime files changed by this register: no.
 - LIMA public API exports changed by this register: no.
 - Consumer repositories changed by this register: no.
+- Arc-Bot-shell dirty files accepted as V1 proof by this register: no.
 - Provider SDK clients added: no.
 - SDK dependencies added: no.
 - Vendor provider SDK imports added: no.

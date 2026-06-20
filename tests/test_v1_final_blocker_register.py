@@ -29,8 +29,10 @@ def test_v1_final_blocker_register_fixture_and_docs_exist() -> None:
     assert fixture["register_id"] == "v1_final_blocker_register"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["date"] == "2026-06-20"
-    assert fixture["branch"] == "docs-v1-final-blocker-register"
-    assert fixture["source_lima_commit_before_register"] == "51d7f35"
+    assert fixture["branch"] == (
+        "docs-v1-final-blocker-register-after-arc-drift-audit"
+    )
+    assert fixture["source_lima_commit_before_register_refresh"] == "6876378"
     assert fixture["register_verdict"] == "STOPPED_AT_REAL_BLOCKERS"
 
     for relative_path in fixture["documents"].values():
@@ -76,17 +78,21 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
 
     assert fixture["current_verified_evidence"] == [
         "v1_candidate_handoff_execution_audit_exists",
+        "v1_arc_bot_shell_local_drift_exclusion_audit_exists",
         "public_sparkbot_local_g56_fake_executor_smoke_passed",
         "accessible_sparkbot_g56_fake_executor_smoke_passed",
         "arc_bot_shell_g56_fake_executor_smoke_passed",
+        "arc_bot_shell_approved_g56_test_and_fixture_clean",
         "lima_focused_g56_g57_readiness_status_tests_passed",
         "lima_full_suite_passed",
         "lima_diff_hygiene_passed",
     ]
-    assert fixture["non_blocking_warnings"] == {
+    assert fixture["excluded_non_blocking_drift"] == {
         "arc_bot_shell_local_worktree": (
-            "unrelated_dirty_files_outside_pushed_g56_evidence"
-        )
+            "audited_excluded_from_pushed_g56_evidence"
+        ),
+        "dirty_files_cleaned_or_reverted": False,
+        "dirty_files_accepted_as_v1_proof": False,
     }
     assert fixture["next_unblock_actions"] == [
         "provide_or_switch_to_public_sparkbot_write_credentials",
@@ -103,8 +109,10 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
 
     assert "# V1 Final Blocker Register" in text
     assert "STOPPED_AT_REAL_BLOCKERS" in text
+    assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "Permission to sparkpit-labs/Sparkbot.git denied to armpit-symphony." in text
     assert "Approve-V1-G57" in text
+    assert "Arc-Bot-shell dirty files accepted as V1 proof by this register: no." in text
     assert "V1-G57 implementation approval recorded: no." in text
     assert "Provider SDK clients added: no." in text
     assert "V1.0 completion, product readiness, or production readiness claimed: no." in text
