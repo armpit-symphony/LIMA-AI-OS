@@ -1,0 +1,111 @@
+{
+  "index_id": "v1_final_candidate_branch_index",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-20",
+  "branch": "docs-v1-final-candidate-branch-index",
+  "source_lima_commit_before_index": "a10a81fb0ff0096911ab3e62d69463b590520055",
+  "index_verdict": "CANDIDATE_INDEX_READY_WITH_EXTERNAL_UNBLOCKS",
+  "documents": {
+    "final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
+    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
+    "operator_unblock_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
+    "candidate_handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
+    "g57_approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md"
+  },
+  "lima_branch_checkpoints": [
+    {
+      "branch": "docs-v1-final-readiness-audit-template",
+      "commit": "a10a81fb0ff0096911ab3e62d69463b590520055",
+      "purpose": "future_final_readiness_audit_shape_after_unblocks"
+    },
+    {
+      "branch": "docs-v1-operator-unblock-action-packet",
+      "commit": "8270cb1b01be3798d2b974b85ca14d851e4aedeb",
+      "purpose": "exact_operator_actions_for_public_sparkbot_and_g57"
+    },
+    {
+      "branch": "docs-v1-final-blocker-register-after-arc-drift-audit",
+      "commit": "d1b3d5a87739cfbc0a1e54a57951ab8cc975c502",
+      "purpose": "real_blockers_after_arc_drift_exclusion"
+    },
+    {
+      "branch": "audit-v1-arc-bot-shell-local-drift-exclusion",
+      "commit": "687637829ed652a341f94f0696cf8ba1afb7993c",
+      "purpose": "exclude_unrelated_arc_bot_shell_local_drift_from_g56_proof"
+    },
+    {
+      "branch": "audit-v1-g56-public-sparkbot-target-publication",
+      "commit": "992c1714eab6d74a0a67de322942e4c9d1adb55e",
+      "purpose": "public_sparkbot_target_publication_blocker"
+    }
+  ],
+  "consumer_checkpoints": {
+    "public_sparkbot_target_checkout": {
+      "local_path": "C:\\Users\\limap\\Sparkbot-public",
+      "branch": "v1-g56-runtime-authority-chain-audit",
+      "commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
+      "status": "clean_local_branch_push_to_sparkpit_labs_sparkbot_blocked_by_write_credentials"
+    },
+    "accessible_sparkbot_checkpoint": {
+      "local_path": "C:\\Users\\limap\\Sparkbot",
+      "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+      "commit": "ddaa4ccaacd328ddcc1f00a040c2c140abee428e",
+      "status": "clean_pushed_branch"
+    },
+    "arc_bot_shell_checkpoint": {
+      "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
+      "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+      "commit": "ec06e7670f18eeae192fc0f995b6ffd07481d8c9",
+      "status": "pushed_g56_branch_unrelated_local_drift_excluded_from_proof"
+    }
+  },
+  "required_external_unblocks": [
+    "public_sparkbot_write_credential_and_branch_publication",
+    "exactly_one_valid_v1_g57_operator_choice_recorded",
+    "if_approve_v1_g57_then_metadata_only_g57_implementation_complete"
+  ],
+  "valid_v1_g57_choices": ["Approve-V1-G57", "Revise-V1-G57", "Pause"],
+  "post_unblock_sequence": [
+    "rerun_public_sparkbot_g56_smoke_and_diff_check",
+    "rerun_accessible_sparkbot_g56_smoke_and_diff_check",
+    "rerun_arc_bot_shell_g56_smoke_and_drift_state_check",
+    "rerun_lima_compileall_full_suite_and_diff_check",
+    "if_g57_approved_include_focused_g57_implementation_test_and_closeout",
+    "run_final_readiness_audit_on_separate_branch"
+  ],
+  "boundaries_preserved": {
+    "v1_g57_implementation_approval_recorded_by_index": false,
+    "v1_g57_provider_execution_hardening_authorization_implemented_by_index": false,
+    "public_sparkbot_g56_branch_pushed_to_sparkpit_labs_by_index": false,
+    "public_sparkbot_write_credential_provided_by_index": false,
+    "lima_runtime_files_changed_by_index": false,
+    "lima_public_api_exports_changed_by_index": false,
+    "consumer_repositories_changed_by_index": false,
+    "arc_bot_shell_dirty_files_accepted_as_v1_proof_by_index": false,
+    "provider_sdk_clients_added": false,
+    "sdk_dependencies_added": false,
+    "vendor_provider_sdk_imports_added": false,
+    "lima_owned_provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "stop_conditions": [
+    "public_sparkbot_push_without_write_credentials",
+    "v1_g57_implementation_without_exact_approval",
+    "treat_this_index_as_g57_approval",
+    "consumer_repo_edit_from_index_lane",
+    "runtime_or_public_api_change_from_index_lane",
+    "secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "raw_sensitive_or_patch_content_persistence",
+    "v1_product_production_or_completion_claim"
+  ]
+}
