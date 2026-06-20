@@ -98,7 +98,7 @@ def test_v1_candidate_handoff_execution_audit_records_validation_results() -> No
     }
     assert validation["lima_focused_manifest_g56_g57_readiness_status_set"] == {
         "passed": True,
-        "tests_passed": 81,
+        "tests_passed": 89,
     }
     assert validation["compileall_lima"] == {
         "command": "python -m compileall lima",
@@ -107,7 +107,7 @@ def test_v1_candidate_handoff_execution_audit_records_validation_results() -> No
     assert validation["full_lima_suite"] == {
         "command": "python -m pytest -q tests -p no:cacheprovider",
         "passed": True,
-        "tests_passed": 5001,
+        "tests_passed": 5009,
     }
     assert validation["lima_diff_check"] == {
         "command": "git diff --check",
@@ -169,7 +169,7 @@ def test_v1_candidate_handoff_execution_audit_text_matches_fixture() -> None:
     assert "# V1 Candidate Test Handoff Manifest Execution Audit" in text
     assert fixture["source_lima_commit_before_audit"] in text
     assert "PASS_WITH_BLOCKERS" in text
-    assert "5001 passed" in text
+    assert "5009 passed" in text
     assert "Public Sparkbot remote publication remains blocked" in text
     assert "V1-G57 remains unapproved" in text
     assert "V1-G57 implementation approval recorded: no." in text

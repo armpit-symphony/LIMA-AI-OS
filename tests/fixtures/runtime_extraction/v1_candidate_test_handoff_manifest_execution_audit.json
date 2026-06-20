@@ -65,7 +65,7 @@
     },
     "lima_focused_manifest_g56_g57_readiness_status_set": {
       "passed": true,
-      "tests_passed": 81
+      "tests_passed": 89
     },
     "compileall_lima": {
       "command": "python -m compileall lima",
@@ -74,7 +74,7 @@
     "full_lima_suite": {
       "command": "python -m pytest -q tests -p no:cacheprovider",
       "passed": true,
-      "tests_passed": 5001
+      "tests_passed": 5009
     },
     "lima_diff_check": {
       "command": "git diff --check",

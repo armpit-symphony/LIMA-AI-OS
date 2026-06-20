@@ -32,9 +32,9 @@ The manifest validation path passed locally for the fake-executor consumer smoke
 | `C:\Users\limap\Sparkbot` | `python -m pytest -q tests\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | 8 passed |
 | `C:\Users\limap\Arc-Bot-shell` | `python -m pytest -q tests\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | 8 passed |
 | `C:\Users\limap\LIMA-AI-OS` | `python -m pytest -q tests/test_v1_candidate_test_handoff_manifest.py -p no:cacheprovider` | 7 passed |
-| `C:\Users\limap\LIMA-AI-OS` | focused manifest/G56/G57/readiness/status pytest set | 81 passed |
+| `C:\Users\limap\LIMA-AI-OS` | focused manifest/G56/G57/readiness/status pytest set | 89 passed |
 | `C:\Users\limap\LIMA-AI-OS` | `python -m compileall lima` | passed |
-| `C:\Users\limap\LIMA-AI-OS` | `python -m pytest -q tests -p no:cacheprovider` | 5001 passed |
+| `C:\Users\limap\LIMA-AI-OS` | `python -m pytest -q tests -p no:cacheprovider` | 5009 passed |
 | `C:\Users\limap\LIMA-AI-OS` | `git diff --check` | passed |
 
 ## Evidence Accepted
