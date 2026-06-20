@@ -4,11 +4,11 @@ Date: 2026-06-20
 Branch: `prepare-v1-g58-built-in-provider-sdk-client-authority-contract-approval-request`
 API status: `CANDIDATE_ONLY`
 
-Decision packet status: `awaiting_operator_decision`
+Decision packet status: `approved`
 
 ## Decision Needed
 
-Choose one:
+Original decision options:
 
 - Recorded choice: none
 - Recorded choice: Approve-V1-G58
@@ -39,9 +39,9 @@ Reason:
 
 ## Current State
 
-- Implementation approved: no.
-- Built-in provider SDK client authority contract approved: no.
-- Built-in provider SDK client authority contract evidence added: no.
+- Implementation approved: yes.
+- Built-in provider SDK client authority contract approved: yes.
+- Built-in provider SDK client authority contract evidence added: pending implementation on `v1-g58-built-in-provider-sdk-client-authority-contract`.
 - Built-in provider SDK client implementation approved: no.
 - Built-in provider SDK client implementation added: no.
 - LIMA runtime files changed: no.
@@ -63,6 +63,20 @@ Reason:
 - Product readiness claimed: no.
 - Final public API freeze claimed: no.
 
+## Recorded Operator Decision
+
+Recorded choice: Approve-V1-G58
+
+Recorded approval wording: I explicitly approve V1-G58 implementation of the LIMA-side built-in provider SDK client authority contract metadata slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT_APPROVAL_REQUEST.md.
+
+Recorded revision request: none
+
+Recorded pause reason: none
+
+Approved implementation branch: `v1-g58-built-in-provider-sdk-client-authority-contract`
+
+Implementation approved: yes.
+
 ## Decision Rule
 
-Implementation must not start until `Approve-V1-G58` is recorded with the exact approval wording above.
+Implementation may proceed only on `v1-g58-built-in-provider-sdk-client-authority-contract` and only within the approved file map in `docs/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT_APPROVAL_REQUEST.md`.
