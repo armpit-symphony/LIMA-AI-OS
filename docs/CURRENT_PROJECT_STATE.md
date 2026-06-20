@@ -14,9 +14,9 @@ The V1 target remains first testing with `Sparkbot_shell`, public `Sparkbot`, an
 
 Latest V1 checkpoint:
 
-- V1 runtime authority chain audit through G55: complete.
-- V1 readiness rollup through G55: complete.
-- V1 post-G55 next-lane decision matrix: complete.
+- V1 runtime authority chain audit through G56: complete.
+- V1 readiness rollup through G56: complete.
+- V1 post-G56 next-lane decision matrix: complete.
 - V1 consumer target state after Arc readiness integration: complete as
   docs/tests/fixtures-only evidence in
   `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`.
@@ -26,15 +26,16 @@ Latest V1 checkpoint:
 - V1-G55 blocker after consumer target refresh audit: complete.
 - V1-G55 real provider SDK/network egress wrapper: implemented and independently audited as `CANDIDATE_ONLY`.
 - V1-G55 public API changes: limited to the approved `lima.harness` wrapper exports.
-- V1-G56 consumer fake-executor provider SDK/network egress smoke approval packet: prepared for operator decision, not approved.
-- V1-G56 valid operator choices: `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
-- V1-G56 implementation approval recorded: no.
+- V1-G56 consumer fake-executor provider SDK/network egress smoke: implemented and audited as `CANDIDATE_ONLY`.
+- V1-G57 provider execution hardening authorization approval packet: prepared for operator decision, not approved.
+- V1-G57 valid operator choices: `Approve-V1-G57`, `Revise-V1-G57`, or `Pause`.
+- V1-G57 implementation approval recorded: no.
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The next smallest safe V1 step is to record exactly one operator choice in `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`. The prepared packet is not an implementation approval.
+The next smallest safe V1 step is to record exactly one operator choice in `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`. The prepared packet is not an implementation approval.
 
-Until `Approve-V1-G56` is explicitly recorded, do not implement G56 consumer smoke tests, edit Sparkbot or Arc-Bot-shell for G56, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
+Until `Approve-V1-G57` is explicitly recorded, do not implement G57 authorization evidence, edit Sparkbot or Arc-Bot-shell for G57, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
 
 Phase 3.5 is complete and tagged on `main`.
 

@@ -29,10 +29,10 @@ def test_v1_target_documents_and_fixture_exist() -> None:
     assert fixture["target_version"] == "1.0"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["branch"] == (
-        "prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request"
+        "prepare-v1-g57-provider-execution-hardening-authorization-approval-request"
     )
     assert fixture["source_commit_before_refresh"] == (
-        "146f8a7d934567b7c551af2c5db775215b47cf88"
+        "7c7f7ee6f566cbbc1d6eac5b3bd9e6a0ad2dba16"
     )
 
     for relative_path in fixture["documents"].values():
@@ -53,7 +53,7 @@ def test_v1_first_shell_consumers_and_sparkbot_reference_are_explicit() -> None:
     assert reference["copy_sparkbot_code"] is False
     assert reference["import_sparkbot_runtime"] is False
     assert reference["wire_sparkbot_routes"] is False
-    assert reference["mutate_consumer_repo_for_g56"] is False
+    assert reference["mutate_consumer_repo_for_g57"] is False
 
 
 def test_v1_accepts_future_capabilities_without_approving_them_here() -> None:
@@ -94,13 +94,13 @@ def test_v1_haptics_remain_shell_owned() -> None:
     assert haptics["haptic_implementation_added_here"] is False
 
 
-def test_v1_current_status_tracks_post_g55_next_lane() -> None:
+def test_v1_current_status_tracks_post_g56_next_lane() -> None:
     current = _load_fixture()["current_status"]
 
-    assert current["latest_completed_gate"] == "V1-G55"
-    assert current["latest_authority_chain_audit"] == "V1-G55"
-    assert current["latest_readiness_rollup"] == "V1-G55"
-    assert current["current_gate"] == "V1-G56"
+    assert current["latest_completed_gate"] == "V1-G56"
+    assert current["latest_authority_chain_audit"] == "V1-G56"
+    assert current["latest_readiness_rollup"] == "V1-G56"
+    assert current["current_gate"] == "V1-G57"
     assert current["v1_g55_operator_approval_recorded"] is True
     assert current["v1_g55_runtime_implementation_approved"] is True
     assert current["v1_g55_wrapper_added"] is True
@@ -108,11 +108,16 @@ def test_v1_current_status_tracks_post_g55_next_lane() -> None:
     assert current["v1_g55_public_api_change_limited_to_approved_harness_exports"] is True
     assert current["v1_g55_independent_audit_complete"] is True
     assert current["v1_g56_request_packet_prepared"] is True
-    assert current["v1_g56_operator_approval_recorded"] is False
-    assert current["v1_g56_runtime_implementation_approved"] is False
-    assert current["v1_g56_valid_operator_choices"] == [
-        "Approve-V1-G56",
-        "Revise-V1-G56",
+    assert current["v1_g56_operator_approval_recorded"] is True
+    assert current["v1_g56_runtime_implementation_approved"] is True
+    assert current["v1_g56_consumer_smoke_added"] is True
+    assert current["v1_g56_independent_audit_complete"] is True
+    assert current["v1_g57_request_packet_prepared"] is True
+    assert current["v1_g57_operator_approval_recorded"] is False
+    assert current["v1_g57_runtime_implementation_approved"] is False
+    assert current["v1_g57_valid_operator_choices"] == [
+        "Approve-V1-G57",
+        "Revise-V1-G57",
         "Pause",
     ]
 
@@ -125,7 +130,7 @@ def test_v1_current_status_adds_no_new_runtime_sdk_network_or_secret_behavior() 
         "lima_runtime_files_changed_by_refresh",
         "tests_support_changed",
         "shell_repos_changed_by_refresh",
-        "g56_consumer_fake_executor_smoke_implementation_added",
+        "g57_provider_execution_hardening_authorization_added",
         "built_in_provider_sdk_client_added",
         "sdk_dependency_added",
         "vendor_sdk_import_added",
@@ -142,42 +147,44 @@ def test_v1_current_status_adds_no_new_runtime_sdk_network_or_secret_behavior() 
         assert current[key] is False, key
 
 
-def test_v1_remaining_blockers_and_next_step_are_g56() -> None:
+def test_v1_remaining_blockers_and_next_step_are_g57() -> None:
     fixture = _load_fixture()
     blockers = set(fixture["remaining_blockers"])
 
-    assert "v1_g56_operator_approval_not_recorded" in blockers
-    assert "consumer_fake_executor_provider_sdk_network_egress_smoke_not_implemented" in blockers
+    assert "v1_g57_operator_approval_not_recorded" in blockers
+    assert "provider_execution_hardening_authorization_metadata_not_implemented" in blockers
     assert "provider_secrets_and_credential_values_inaccessible_to_lima" in blockers
     assert "fallback_execution_unapproved" in blockers
     assert "consumer_production_runtime_integration_unapproved" in blockers
     assert "release_boundary_not_passed" in blockers
     assert "v1_product_readiness_not_approved" in blockers
     assert "production_behavior_not_approved" in blockers
-    assert fixture["recommended_next_step"] == "record_v1_g56_operator_decision"
-    assert fixture["recommended_next_gap_id"] == "V1-G56"
+    assert fixture["recommended_next_step"] == "record_v1_g57_operator_decision"
+    assert fixture["recommended_next_gap_id"] == "V1-G57"
     assert (
         fixture["recommended_next_gap_to_close"]
-        == "consumer_fake_executor_provider_sdk_network_egress_smoke_request"
+        == "provider_execution_hardening_authorization_request"
     )
 
 
-def test_v1_product_readiness_doc_matches_post_g55_gate() -> None:
+def test_v1_product_readiness_doc_matches_post_g56_gate() -> None:
     fixture = _load_fixture()
     text = (REPO_ROOT / fixture["documents"]["target"]).read_text(encoding="utf-8")
 
     assert "LIMA remains `CANDIDATE_ONLY`." in text
     assert "first shell consumers" in text
     assert "public `Sparkbot`" in text
-    assert "audited through `V1-G55`" in text
-    assert "`V1-G55` is complete as a bounded real provider SDK/network egress authority wrapper" in text
-    assert "`prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request`" in text
-    assert "Authoritative G56 request files:" in text
-    assert "`docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`" in text
-    assert "Valid G56 operator choices are `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`." in text
+    assert "audited through `V1-G56`" in text
+    assert "`V1-G56` is complete as consumer fake-executor provider SDK/network egress smoke evidence." in text
+    assert "Authoritative completed provider SDK/network evidence files:" in text
+    assert "## Accepted Evidence Through G56" in text
+    assert "`prepare-v1-g57-provider-execution-hardening-authorization-approval-request`" in text
+    assert "Authoritative G57 request files:" in text
+    assert "`docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`" in text
+    assert "Valid G57 operator choices are `Approve-V1-G57`, `Revise-V1-G57`, or `Pause`." in text
     assert "Current status remains not V1 product-ready." in text
-    assert "No V1-G56 implementation is approved" in text
+    assert "No V1-G57 implementation is approved" in text
     assert "built-in provider SDK clients" in text
     assert "secret lookup, credential value access" in text
-    assert "consumer repository edits for V1-G56" in text
+    assert "consumer repository edits for V1-G57" in text
     assert "V1 product readiness or production readiness claims" in text

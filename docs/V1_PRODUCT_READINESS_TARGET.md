@@ -18,11 +18,11 @@ Sparkbot remains the R&D reference for how shells should behave. LIMA should use
 
 LIMA remains `CANDIDATE_ONLY`.
 
-The current V1 authority chain is audited through `V1-G55`. The V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared as the next narrow request-only authority gate.
+The current V1 authority chain is audited through `V1-G56`. The V1-G57 provider execution hardening authorization approval request is prepared as the next narrow request-only authority gate.
 
-`V1-G55` is complete as a bounded real provider SDK/network egress authority wrapper. It validates prior authority evidence and calls only a caller-injected provider SDK/network executor. It remains `CANDIDATE_ONLY`.
+`V1-G56` is complete as consumer fake-executor provider SDK/network egress smoke evidence. It proves Sparkbot and Arc-Bot-shell can call the G55 public wrapper with fake in-process provider SDK/network executors only. It remains `CANDIDATE_ONLY`.
 
-Authoritative G55 files:
+Authoritative completed provider SDK/network evidence files:
 
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md`
@@ -31,26 +31,26 @@ Authoritative G55 files:
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md`
 - `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md`
 - `docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md`
-- `docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md`
-- `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md`
-- `docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`
+- `docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G56_AUDIT.md`
+- `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G56.md`
+- `docs/readiness/V1_POST_G56_NEXT_LANE_DECISION_MATRIX.md`
 
 The current request-only approval lane is:
 
-- `prepare-v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke-approval-request`
+- `prepare-v1-g57-provider-execution-hardening-authorization-approval-request`
 
-Authoritative G56 request files:
+Authoritative G57 request files:
 
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`
+- `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md`
+- `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_WORK_ORDER.md`
+- `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_PREFLIGHT_AUDIT.md`
+- `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`
 
-Valid G56 operator choices are `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
+Valid G57 operator choices are `Approve-V1-G57`, `Revise-V1-G57`, or `Pause`.
 
-No V1-G56 implementation is approved by this document.
+No V1-G57 implementation is approved by this document.
 
-## Accepted Evidence Through G55
+## Accepted Evidence Through G56
 
 The V1 evidence chain now includes:
 
@@ -67,9 +67,10 @@ The V1 evidence chain now includes:
 - provider SDK/network/credential authority metadata
 - fake SDK/fake-egress harness evidence
 - bounded caller-injected real provider SDK/network egress wrapper evidence
-- runtime authority-chain audit through G55
-- readiness rollup through G55
-- post-G55 next-lane decision matrix
+- consumer fake-executor provider SDK/network egress smoke evidence for Sparkbot and Arc-Bot-shell
+- runtime authority-chain audit through G56
+- readiness rollup through G56
+- post-G56 next-lane decision matrix
 - V1 consumer target state after Arc readiness integration, including
   Arc-Bot-shell runtime gating readiness integration evidence and the public
   Sparkbot GitHub 403 publication blocker
@@ -115,12 +116,12 @@ For V1, LIMA must prove compatibility with the first shells before product readi
 
 Current status remains not V1 product-ready.
 
-The latest completed gate is `V1-G55`. The active next lane is operator decision on the prepared request-only `V1-G56` consumer fake-executor provider SDK/network egress smoke evidence packet. No V1-G56 implementation is approved.
+The latest completed gate is `V1-G56`. The active next lane is operator decision on the prepared request-only `V1-G57` provider execution hardening authorization evidence packet. No V1-G57 implementation is approved.
 
-Until `Approve-V1-G56` is explicitly recorded, the following remain blocked:
+Until `Approve-V1-G57` is explicitly recorded, the following remain blocked:
 
-- V1-G56 consumer fake-executor smoke implementation
-- consumer repository edits for V1-G56
+- V1-G57 provider execution hardening authorization implementation
+- consumer repository edits for V1-G57
 - built-in provider SDK clients
 - SDK dependencies
 - vendor SDK imports
@@ -136,8 +137,8 @@ Until `Approve-V1-G56` is explicitly recorded, the following remain blocked:
 
 ## Remaining Blockers
 
-- V1-G56 operator approval is not recorded
-- consumer fake-executor provider SDK/network egress smoke evidence against the G55 wrapper is not implemented
+- V1-G57 operator approval is not recorded
+- provider execution hardening authorization metadata evidence is not implemented
 - direct provider SDK/network egress by LIMA is still forbidden
 - real provider SDK client ownership remains outside LIMA
 - provider secrets and credential values remain inaccessible to LIMA
@@ -150,6 +151,6 @@ Until `Approve-V1-G56` is explicitly recorded, the following remain blocked:
 
 ## Recommended Next Step
 
-Record exactly one operator choice for the prepared V1-G56 consumer fake-executor provider SDK/network egress smoke approval request.
+Record exactly one operator choice for the prepared V1-G57 provider execution hardening authorization approval request.
 
-The request asks only whether first-shell consumers may prove import/call compatibility with the approved G55 public wrapper using fake in-process caller-injected provider SDK/network executors. Stop before implementation unless `Approve-V1-G56` is recorded. Stop before credentials, built-in SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.
+The request asks only whether LIMA may record metadata-only provider execution hardening authorization evidence after the G56 consumer smoke proof. Stop before implementation unless `Approve-V1-G57` is recorded. Stop before credentials, built-in SDK clients, LIMA-owned endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, provider configuration changes, fallback, consumer production runtime integration, physical-world behavior, or product-readiness claims.
