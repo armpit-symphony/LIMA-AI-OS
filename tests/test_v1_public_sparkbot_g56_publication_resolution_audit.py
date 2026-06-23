@@ -75,23 +75,42 @@ def test_v1_public_sparkbot_g56_resolution_records_sparkbot_report() -> None:
         assert value is False, key
 
 
-def test_v1_public_sparkbot_g56_resolution_remaining_blocker_is_g57_only() -> None:
+def test_v1_public_sparkbot_g56_resolution_records_historical_and_current_blockers() -> None:
     fixture = _load_fixture()
 
-    assert fixture["remaining_blockers"] == {
+    assert fixture["original_remaining_blockers_at_audit_time"] == {
         "public_sparkbot_publication": False,
         "v1_g57_operator_decision": True,
     }
+    assert fixture["current_status_refresh"] == {
+        "public_sparkbot_publication": False,
+        "v1_g57_through_v1_g60_candidate_gates_completed": True,
+        "candidate_harness_quickstart_execution_audit_current": True,
+        "active_blocker": (
+            "v1_g61_runtime_vendor_sdk_import_execution_proof_operator_decision"
+        ),
+        "current_quickstart_audit": (
+            "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md"
+        ),
+        "required_exact_approval_phrase": "Approve-V1-G61",
+        "runtime_implementation_approved": False,
+    }
     assert fixture["recommended_next_step"] == (
-        "record_exactly_one_v1_g57_operator_choice"
+        "record_exactly_one_v1_g61_operator_choice"
     )
 
 
 def test_v1_public_sparkbot_g56_resolution_preserves_lima_boundaries() -> None:
-    boundaries = _load_fixture()["boundaries_preserved"]
+    boundaries = _load_fixture()["audit_time_boundaries_preserved"]
 
     for key, value in boundaries.items():
         assert value is False, key
+
+    current = _load_fixture()["current_boundaries_preserved"]
+    assert current["v1_g57_through_v1_g60_completed_candidate_only"] is True
+    for key, value in current.items():
+        if key != "v1_g57_through_v1_g60_completed_candidate_only":
+            assert value is False, key
 
 
 def test_v1_public_sparkbot_g56_resolution_text_matches_fixture() -> None:
@@ -104,8 +123,14 @@ def test_v1_public_sparkbot_g56_resolution_text_matches_fixture() -> None:
     assert "PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLVED" in text
     assert "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2" in text
     assert "ddaa019272ad11bb56d4660be7d44e81810814a7" in text
-    assert "public Sparkbot publication blocker is resolved" in text
+    assert "Public Sparkbot G56 publication blocker: resolved." in text
+    assert "Current status refresh" in text
+    assert "V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md" in text
+    assert "Audit-Time Boundaries Preserved" in text
+    assert "Current Boundary Refresh" in text
+    assert "Active blocker: V1-G61 runtime vendor SDK import execution proof operator decision." in text
     assert "V1-G57 implementation approval recorded: no." in text
+    assert "V1-G61 implementation approval recorded: no." in text
     assert "Provider SDK clients added by LIMA: no." in text
     assert "V1.0 completion, product readiness, or production readiness claimed: no." in text
 

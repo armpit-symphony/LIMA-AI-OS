@@ -7,7 +7,36 @@
     "consumer_testability_matrix": "docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md",
     "consumer_work_settings_readiness_audit": "docs/audits/V1_CONSUMER_WORK_SETTINGS_READINESS_AUDIT.md",
     "public_sparkbot_publication_audit": "docs/audits/V1_PUBLIC_SPARKBOT_PREVIEW_PUBLICATION_AUDIT.md",
-    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "candidate_test_handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md"
+  },
+  "current_status_refresh": {
+    "current_gate": "V1-G61",
+    "latest_completed_gate": "V1-G60",
+    "latest_authority_chain_audit": "V1-G56",
+    "required_next_action": "record_exactly_one_v1_g61_operator_choice",
+    "valid_operator_choices": [
+      "Approve-V1-G61",
+      "Revise-V1-G61",
+      "Pause"
+    ],
+    "v1_g61_operator_approval_recorded": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented": false,
+    "g61_operator_decision_packet_status_audit": "awaiting_exactly_one_valid_operator_choice",
+    "historical_g55_gate_superseded_for_current_action": true,
+    "latest_post_g61_request_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_refresh_full_lima_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
+    "latest_handoff_freshness_authority_created": false
   },
   "consumer_branches": {
     "public_sparkbot": {
@@ -93,5 +122,6 @@
     "production_ready": false,
     "v1_0_complete": false
   },
-  "recommended_next_step": "keep_consumer_branches_separate_and_testable_while_v1_g55_is_pending"
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g61_operator_decision_packet",
+  "historical_recommended_next_step": "keep_consumer_branches_separate_and_testable_while_v1_g55_is_pending"
 }

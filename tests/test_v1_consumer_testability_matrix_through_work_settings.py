@@ -116,6 +116,34 @@ def test_consumer_testability_matrix_records_validation_commands() -> None:
     } == expected
 
 
+def test_consumer_testability_matrix_records_current_g61_refresh() -> None:
+    refresh = _load_fixture()["current_status_refresh"]
+
+    assert refresh["current_gate"] == "V1-G61"
+    assert refresh["latest_completed_gate"] == "V1-G60"
+    assert refresh["latest_authority_chain_audit"] == "V1-G56"
+    assert refresh["required_next_action"] == "record_exactly_one_v1_g61_operator_choice"
+    assert refresh["valid_operator_choices"] == [
+        "Approve-V1-G61",
+        "Revise-V1-G61",
+        "Pause",
+    ]
+    assert refresh["v1_g61_operator_approval_recorded"] is False
+    assert refresh["v1_g61_runtime_vendor_sdk_import_execution_proof_implemented"] is False
+    assert refresh["g61_operator_decision_packet_status_audit"] == (
+        "awaiting_exactly_one_valid_operator_choice"
+    )
+    assert refresh["historical_g55_gate_superseded_for_current_action"] is True
+    assert refresh["latest_post_g61_request_refresh_focused_tests_passed"] == 8
+    assert refresh["latest_post_g61_request_refresh_broader_tests_passed"] == 117
+    assert refresh["latest_post_g61_request_refresh_full_lima_suite_tests_passed"] == 5362
+    assert refresh["latest_quickstart_artifact_refresh_focused_tests_passed"] == 7
+    assert refresh["latest_quickstart_artifact_refresh_adjacent_tests_passed"] == 64
+    assert refresh["latest_quickstart_artifact_refresh_broader_tests_passed"] == 133
+    assert refresh["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
+    assert refresh["latest_handoff_freshness_authority_created"] is False
+
+
 def test_consumer_testability_matrix_is_not_readiness_completion() -> None:
     not_proven = _load_fixture()["does_not_prove"]
 
@@ -145,6 +173,17 @@ def test_consumer_testability_matrix_text_matches_fixture() -> None:
 
     assert "# V1 Consumer Testability Matrix Through Work/Settings" in text
     assert "`docs-v1-consumer-testability-through-work-settings`" in text
+    assert "## Current Status Refresh" in text
+    assert "This matrix is historical Work/Settings testability evidence." in text
+    assert "Current active gate: `V1-G61`." in text
+    assert "Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
+    assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
+    assert "awaiting exactly one valid operator choice" in text
+    assert "V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md" in text
+    assert "latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests" in text
+    assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in text
+    assert "latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
+    assert "does not override the current G61 operator-decision blocker" in text
     assert "81eed8c4067b1a73885bbc79003ea5870b1604a2" in text
     assert "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc" in text
     assert "a05faea14ab24341b4b4567967911e33e51ce88a" in text
@@ -156,3 +195,8 @@ def test_consumer_testability_matrix_text_matches_fixture() -> None:
     assert "No V1-G55 implementation approval." in text
     assert "No product readiness, production readiness, or V1.0 completion." in text
     assert fixture["consumer_branches"]["public_sparkbot"]["manual_compare_url"] in text
+    assert (
+        "Current next step is to record exactly one V1-G61 operator choice in "
+        "`docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+        in text
+    )

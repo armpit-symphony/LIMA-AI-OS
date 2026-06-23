@@ -12,30 +12,86 @@ LIMA remains `CANDIDATE_ONLY`.
 
 The V1 target remains first testing with `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`.
 
+Current post-approval update: `Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence. The proof imports only the approved `openai` module in tests, records sanitized version evidence `2.43.0`, and does not edit `lima/`, dependency manifests, lockfiles, Sparkbot, Arc-Bot-shell, provider clients, endpoint resolution, network egress, credentials, fallback, consumer production integration, product readiness, or final public API freeze.
+
 Latest V1 checkpoint:
 
 - V1 runtime authority chain audit through G56: complete.
-- V1 readiness rollup through G56: complete.
-- V1 post-G56 next-lane decision matrix: complete.
+- V1 readiness rollup through G60: complete.
+- V1 post-G60 next-lane decision matrix: complete.
 - V1 consumer target state after Arc readiness integration: complete as
   docs/tests/fixtures-only evidence in
   `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`.
 - Arc-Bot-shell runtime gating readiness integration audit: complete.
-- Public Sparkbot remote publication remains blocked by GitHub 403 for the
-  current credential.
+- Public Sparkbot G56 publication blocker: resolved and recorded in
+  `docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md`.
 - V1-G55 blocker after consumer target refresh audit: complete.
 - V1-G55 real provider SDK/network egress wrapper: implemented and independently audited as `CANDIDATE_ONLY`.
 - V1-G55 public API changes: limited to the approved `lima.harness` wrapper exports.
 - V1-G56 consumer fake-executor provider SDK/network egress smoke: implemented and audited as `CANDIDATE_ONLY`.
-- V1-G57 provider execution hardening authorization approval packet: prepared for operator decision, not approved.
-- V1-G57 valid operator choices: `Approve-V1-G57`, `Revise-V1-G57`, or `Pause`.
-- V1-G57 implementation approval recorded: no.
+- V1-G57 provider execution hardening authorization evidence: complete and audited as `CANDIDATE_ONLY`.
+- V1-G58 built-in provider SDK client authority contract evidence: complete and audited as `CANDIDATE_ONLY`.
+- V1-G59 SDK dependency and vendor provider SDK import authority evidence: complete and audited as `CANDIDATE_ONLY`.
+- V1-G60 SDK dependency declaration and vendor provider SDK import-boundary evidence: implemented and audited as `CANDIDATE_ONLY`.
+- V1-G60 approved dependency declaration: `openai>=1.0.0,<3.0.0`.
+- V1-G60 lockfile edit: not approved and not performed.
+- V1-G60 runtime vendor SDK import in `lima/`: not approved and not added.
+- V1-G61 runtime vendor SDK import execution proof approval packet: approved and completed as bounded local import proof.
+- V1-G61 request-gate audit: complete as request-only evidence in
+  `docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md`.
+- V1-G61 preapproval runtime-tree guard audit: complete as request-only evidence in
+  `docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`.
+- V1-G61 operator decision packet status audit: complete as request-only evidence in
+  `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`.
+- V1 post-G61 request readiness refresh: complete as request-only evidence in
+  `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`.
+- V1 current gate consistency audit: complete as docs/tests/fixtures-only evidence in
+  `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`.
+- V1 candidate test handoff manifest: refreshed for current Sparkbot and Arc-Bot-shell G56 smoke validation in
+  `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`.
+- Arc-Bot-shell local checkpoint caveat: current smoke evidence validates compatibility, but unrelated local Arc worktree drift is excluded from V1 proof and is not clean-checkpoint evidence. The current drift exclusion audit records 7 tracked modified files and 64 untracked files as excluded from V1 release-candidate/final-readiness proof in `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`, with same-day recheck evidence that approved G56 smoke proof paths remain clean. A clean Arc-Bot-shell checkpoint proof is required before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- V1 candidate harness quickstart: added as the shortest safe local Sparkbot and Arc-Bot-shell smoke command path with verdict
+  `QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER` in
+  `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`.
+- V1 candidate harness quickstart execution audit: complete with verdict
+  `PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER` in
+  `docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`.
+- V1 candidate harness quickstart same-turn consumer smoke refresh: recorded on 2026-06-21 with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 smoke tests, plus post-refresh LIMA validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests. Arc-Bot-shell remains compatibility evidence only while unrelated local drift is excluded from V1 proof.
+- V1 consumer harness usability matrix: refreshed for Sparkbot and Arc-Bot-shell local candidate smoke criteria in
+  `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`.
+- V1 consumer checkpoint manifest: added with exact Sparkbot, Sparkbot_shell, and Arc-Bot-shell checkpoint commits in
+  `docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md`; Arc-Bot-shell remains compatibility-only evidence until clean checkpoint proof is recorded.
+- V1 current candidate validation refresh audit: complete with latest focused current-gate/release-readiness validation passing 153 tests and full LIMA suite passing 5350 tests in
+  `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`.
+- V1 current candidate validation refresh LIMA-only supplement: recorded on 2026-06-21 with 37 focused G61 guard/operator/freshness tests, 147 focused V1 readiness regression tests, full LIMA suite validation with 5359 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate or G61 implementation authority.
+- V1 current candidate validation refresh latest LIMA readiness freshness supplement: recorded on 2026-06-21 with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, full LIMA suite validation with 5361 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, or G61 implementation authority.
+- V1 current candidate validation refresh latest handoff freshness supplement: recorded on 2026-06-21 with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5362 and 5364 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, Arc-Bot-shell clean-checkpoint, consumer production integration, or G61 implementation authority.
+- V1 post-validation readiness-change freshness audit: added to record same-turn focused, full-suite, and diff-check evidence requirements for readiness docs, fixtures, or tests changed after the current validation refresh, with current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, and latest final blocker/index refresh evidence passing 15 focused final blocker/index tests, 89 broader affected readiness tests, and 5361 full-suite tests, in
+  `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`.
+- V1 post-validation readiness-change latest post-G61 request supplement: recorded on 2026-06-21 with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, full LIMA suite validation with 5362 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement keeps request-stage handoff freshness visible; it does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, production, or G61 implementation authority.
+- V1 post-validation readiness-change latest quickstart artifact refresh supplement: recorded on 2026-06-21 with 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5364 tests, compile validation, diff hygiene, and protected runtime/dependency/support path status clean. This supplement keeps the quickstart doc/fixture/test evidence-to-preserve assertions current; it does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, production, Arc-Bot-shell clean-checkpoint, or G61 implementation authority.
+- V1 release-candidate acceptance checklist: added with verdict `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS` in
+  `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`.
+- V1 release-candidate cutover runbook: added with verdict `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS` in
+  `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
+- V1 final readiness audit template: refreshed to require current validation refresh evidence through latest LIMA readiness freshness 15/89/5361 validation and latest handoff freshness 8/117/5362 plus 7/64/133/5364 validation, post-validation readiness-change freshness evidence, and clean Arc-Bot-shell checkpoint proof before any future pass in
+  `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`.
+- V1 final blocker register: refreshed with active G61 operator-decision blocker in
+  `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`.
+- V1 operator unblock action packet: added as the current operator handoff packet for the exact G61 decision in
+  `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`.
+- V1 final candidate branch index: refreshed as the saved branch/checkpoint map and future branch/tag guard in
+  `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`.
+- V1-G61 valid operator choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
+- V1-G61 implementation approval recorded: yes, limited to bounded local import proof.
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The next smallest safe V1 step is to record exactly one operator choice in `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`. The prepared packet is not an implementation approval.
+The next smallest safe V1 step is post-G61 release-candidate readiness refresh. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`, clean Arc-Bot-shell checkpoint proof, and the future final readiness audit are refreshed and pass after G61 closeout.
 
-Until `Approve-V1-G57` is explicitly recorded, do not implement G57 authorization evidence, edit Sparkbot or Arc-Bot-shell for G57, add built-in provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness.
+After the bounded V1-G61 import proof, do not edit Sparkbot or Arc-Bot-shell for G61, edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients, construct provider clients, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness without a new explicit gate.
+
+Current snapshot authority note: for this branch, the `Current V1 Gate Snapshot` above is the controlling V1 state. Later appended historical lane notes in this file, including any V1-G11, V1-G12, V1-G13, V1-G14, or later approval/implementation records, are not current authorization for this branch and do not override the post-G61 release-readiness gate.
 
 Phase 3.5 is complete and tagged on `main`.
 

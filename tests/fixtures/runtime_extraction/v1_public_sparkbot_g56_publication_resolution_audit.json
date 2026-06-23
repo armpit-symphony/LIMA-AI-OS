@@ -8,7 +8,9 @@
   "documents": {
     "publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
     "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
-    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md"
+    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md"
   },
   "remote_verification": {
     "repository": "https://github.com/sparkpit-labs/Sparkbot",
@@ -41,11 +43,20 @@
     "consumer_production_runtime_wiring": false,
     "product_or_production_readiness_claim": false
   },
-  "remaining_blockers": {
+  "original_remaining_blockers_at_audit_time": {
     "public_sparkbot_publication": false,
     "v1_g57_operator_decision": true
   },
-  "boundaries_preserved": {
+  "current_status_refresh": {
+    "public_sparkbot_publication": false,
+    "v1_g57_through_v1_g60_candidate_gates_completed": true,
+    "candidate_harness_quickstart_execution_audit_current": true,
+    "active_blocker": "v1_g61_runtime_vendor_sdk_import_execution_proof_operator_decision",
+    "current_quickstart_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
+    "required_exact_approval_phrase": "Approve-V1-G61",
+    "runtime_implementation_approved": false
+  },
+  "audit_time_boundaries_preserved": {
     "v1_g57_implementation_approval_recorded": false,
     "v1_g57_provider_execution_hardening_authorization_implemented": false,
     "lima_runtime_files_changed_by_audit": false,
@@ -65,5 +76,17 @@
     "consumer_production_runtime_integration_added": false,
     "v1_product_or_production_readiness_claimed": false
   },
-  "recommended_next_step": "record_exactly_one_v1_g57_operator_choice"
+  "current_boundaries_preserved": {
+    "v1_g57_through_v1_g60_completed_candidate_only": true,
+    "v1_g61_implementation_approval_recorded": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "dependency_or_lockfile_changes_authorized_by_audit": false,
+    "provider_client_construction_authorized_by_audit": false,
+    "lima_owned_endpoint_resolution_or_network_egress_authorized_by_audit": false,
+    "credential_secret_provider_token_or_api_key_access_authorized_by_audit": false,
+    "consumer_production_runtime_integration_authorized_by_audit": false,
+    "v1_product_or_production_readiness_claimed_by_audit": false
+  },
+  "recommended_next_step": "record_exactly_one_v1_g61_operator_choice"
 }

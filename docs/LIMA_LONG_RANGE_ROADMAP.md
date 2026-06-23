@@ -398,9 +398,9 @@ V1 aims to make LIMA-AI-OS usable first by `Sparkbot_shell`, public `Sparkbot`, 
 
 The V1 direction allows future scoped implementation of live/actual approval, real `GuardianDecision`, provider/model routing, shell haptic intent support, and bounded real provider SDK/network egress authority. Destructive edit/delete behavior must require operator approval in LIMA-AI-OS and shells.
 
-`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. The active V1 gate is now operator decision for the prepared `V1-G56` request.
+`docs/V1_READINESS_GAP_MATRIX.md` records the current V1 gap order. The active V1 gate is operator decision for the prepared request-only `V1-G61` runtime vendor SDK import execution proof packet.
 
-The V1 authority chain is audited through `V1-G55`, and the V1-G56 consumer fake-executor provider SDK/network egress smoke approval request is prepared for operator decision.
+The V1 runtime authority chain is audited through `V1-G56`. Completed implementation evidence is refreshed through `V1-G60`, and request-stage readiness is refreshed through the post-G61 request readiness refresh. No V1-G61 implementation is approved.
 
 Completed candidate-only V1 evidence includes:
 
@@ -408,32 +408,47 @@ Completed candidate-only V1 evidence includes:
 - V1-G11 through V1-G17 local non-executing request, GuardianDecision preflight, audit/evidence, approval-enforcement, guarded file mutation, and preview/diff slices
 - V1-G18 through V1-G28 consumer proof intake, approval metadata, provider/model routing authority, compatibility/freeze, import-plan, patch-preview, repository edit, import-smoke, and runtime export cleanup evidence
 - V1-G29 through V1-G42 consumer import/call planning, fake-runtime tests, compatibility review, bounded integration design, consumer repository edits, shell wiring, and integration evidence
-- V1-G43 through V1-G55 provider/model dispatch, provider/model call authority/execution metadata, fake-executor smoke, credential/network hardening, real provider executor metadata, provider SDK/network/credential authority, fake SDK/fake-egress harness evidence, and bounded caller-injected provider SDK/network egress wrapper evidence
+- V1-G43 through V1-G56 provider/model dispatch, provider/model call authority/execution metadata, fake-executor smoke, credential/network hardening, real provider executor metadata, provider SDK/network/credential authority, fake SDK/fake-egress harness evidence, bounded caller-injected provider SDK/network egress wrapper evidence, and consumer fake-executor provider SDK/network egress smoke evidence
+- V1-G57 through V1-G60 provider execution hardening authorization metadata, built-in provider SDK client authority metadata, SDK dependency/vendor import authority metadata, and approved SDK dependency declaration/import-boundary evidence
+- V1-G61 request-gate, preapproval runtime-tree guard, operator decision packet status audit, post-request readiness refresh, current-gate consistency, current validation refresh, release-candidate checklist, cutover runbook, and final readiness audit template evidence
 
-This evidence remains `CANDIDATE_ONLY`. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, built-in provider SDK clients, direct provider egress by LIMA, secret access, credential value access, fallback, connector/browser/network authority, or physical-world authority.
+This evidence remains `CANDIDATE_ONLY`. It does not prove V1 product readiness, production readiness, live customer use, consumer production runtime integration, runtime vendor SDK import execution, built-in provider SDK clients, direct provider egress by LIMA, secret access, credential value access, fallback, connector/browser/network authority, or physical-world authority.
 
-Current V1-G55 authority documents:
+Current V1-G60 completed dependency/import-boundary documents:
 
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_WORK_ORDER.md`
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_PREFLIGHT_AUDIT.md`
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md`
-- `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_CLOSEOUT.md`
-- `docs/audits/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_AUDIT.md`
-- `docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G55_AUDIT.md`
-- `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G55.md`
-- `docs/readiness/V1_POST_G55_NEXT_LANE_DECISION_MATRIX.md`
+- `docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT.md`
+- `docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_CLOSEOUT.md`
+- `docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUDIT.md`
+- `docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G60.md`
+- `docs/readiness/V1_POST_G60_NEXT_LANE_DECISION_MATRIX.md`
 
-Current V1-G56 authority request documents:
+Current V1-G61 request-only authority documents:
 
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_APPROVAL_REQUEST.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_WORK_ORDER.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_PREFLIGHT_AUDIT.md`
-- `docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_OPERATOR_DECISION_PACKET.md`
+- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`
+- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_WORK_ORDER.md`
+- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_PREFLIGHT_AUDIT.md`
+- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`
+- `docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md`
+- `docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`
+- `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`
+- `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`
 
-The next smallest safe V1 action is to record exactly one operator choice in the V1-G56 consumer fake-executor provider SDK/network egress smoke operator decision packet: `Approve-V1-G56`, `Revise-V1-G56`, or `Pause`.
+Current V1.0.0 candidate-readiness control documents:
 
-That request asks only whether first-shell consumers may prove import/call compatibility with the G55 public wrapper using fake in-process caller-injected provider SDK/network executors. It must still not add implementation unless `Approve-V1-G56` is recorded. It must still not add built-in provider SDK clients, SDK dependencies, vendor SDK imports, direct provider SDK implementation, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration changes, fallback, consumer production runtime integration, connector/browser/file/device/robotics/physical-world behavior, or product-readiness claims.
+- `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`
+- `docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`
+- `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`
+- `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`
+- `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`
+- `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
+- `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
+- `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
+- `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`
+
+The G61 operator decision packet status audit confirms the decision packet exists, no approval is recorded, and exactly one valid operator choice is still required. The current validation refresh records focused current-gate/release-readiness validation passing 153 tests and the full LIMA suite passing 5350 tests, latest LIMA readiness freshness evidence passing 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests. That evidence and clean Arc-Bot-shell checkpoint proof are required before any future release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim, but successful tests do not approve G61 implementation or V1 product readiness.
+
+The next smallest safe V1 action is to record exactly one operator choice in the V1-G61 runtime vendor SDK import execution proof operator decision packet: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
+
+That request asks only whether LIMA may later prove the approved vendor SDK module can be imported in a controlled local test context. It must still not add implementation unless `Approve-V1-G61` is recorded. It must still not add lockfile edits, runtime imports in `lima/`, built-in provider SDK clients, client construction, LIMA-owned endpoint resolution, LIMA-owned DNS/HTTP/socket/network calls, LIMA-owned direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration changes, fallback, consumer production runtime integration, connector/browser/file/device/robotics/physical-world behavior, or product-readiness claims.
 
 This roadmap update is product-direction evidence only. It does not approve runtime implementation, shell wiring, provider/model calls, provider SDK/network egress, GuardianDecision execution authority, approval enforcement expansion, persistence expansion, haptic device implementation, file mutation, browser/network behavior, robotics, or physical-world behavior.

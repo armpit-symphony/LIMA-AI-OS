@@ -62,6 +62,34 @@ def test_consumer_target_state_keeps_g55_as_unapproved_gate() -> None:
     assert fixture["v1_g55_runtime_implementation_approved"] is False
 
 
+def test_consumer_target_state_records_current_g61_refresh() -> None:
+    refresh = _load_fixture()["current_status_refresh"]
+
+    assert refresh["current_gate"] == "V1-G61"
+    assert refresh["latest_completed_gate"] == "V1-G60"
+    assert refresh["latest_authority_chain_audit"] == "V1-G56"
+    assert refresh["required_next_action"] == "record_exactly_one_v1_g61_operator_choice"
+    assert refresh["valid_operator_choices"] == [
+        "Approve-V1-G61",
+        "Revise-V1-G61",
+        "Pause",
+    ]
+    assert refresh["v1_g61_operator_approval_recorded"] is False
+    assert refresh["v1_g61_runtime_vendor_sdk_import_execution_proof_implemented"] is False
+    assert refresh["g61_operator_decision_packet_status_audit"] == (
+        "awaiting_exactly_one_valid_operator_choice"
+    )
+    assert refresh["historical_g55_gate_superseded_for_current_action"] is True
+    assert refresh["latest_post_g61_request_refresh_focused_tests_passed"] == 8
+    assert refresh["latest_post_g61_request_refresh_broader_tests_passed"] == 117
+    assert refresh["latest_post_g61_request_refresh_full_lima_suite_tests_passed"] == 5362
+    assert refresh["latest_quickstart_artifact_refresh_focused_tests_passed"] == 7
+    assert refresh["latest_quickstart_artifact_refresh_adjacent_tests_passed"] == 64
+    assert refresh["latest_quickstart_artifact_refresh_broader_tests_passed"] == 133
+    assert refresh["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
+    assert refresh["latest_handoff_freshness_authority_created"] is False
+
+
 def test_consumer_target_state_records_first_consumer_targets() -> None:
     targets = _load_fixture()["consumer_targets"]
 
@@ -125,6 +153,17 @@ def test_consumer_target_state_text_matches_fixture() -> None:
     assert "# V1 Consumer Target State After Arc Readiness Integration" in text
     assert "API status: `CANDIDATE_ONLY`" in text
     assert "The active implementation gate remains `V1-G55`." in text
+    assert "## Current Status Refresh" in text
+    assert "This document's original runtime-gate section is historical audit-time evidence" in text
+    assert "Current active gate: `V1-G61`." in text
+    assert "Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
+    assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
+    assert "awaiting exactly one valid operator choice" in text
+    assert "V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md" in text
+    assert "latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests" in text
+    assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in text
+    assert "latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
+    assert "does not override the current G61 operator-decision blocker" in text
     assert "`Approve-V1-G55`" in text
     assert "`Revise-V1-G55`" in text
     assert "`Pause`" in text
@@ -137,8 +176,13 @@ def test_consumer_target_state_text_matches_fixture() -> None:
     assert "Provider SDK/network egress invocation added: no." in text
     assert "V1 product readiness claimed: no." in text
     assert (
-        "Record exactly one valid operator choice in "
+        "Historical audit-time next step was to record exactly one valid operator choice in "
         "`docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`"
+        in text
+    )
+    assert (
+        "Current next step is to record exactly one V1-G61 operator choice in "
+        "`docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
         in text
     )
 
@@ -158,7 +202,8 @@ def test_current_state_and_readme_reference_consumer_target_refresh() -> None:
             "docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md"
             in text
         )
-        assert "Sparkbot remote publication remains blocked by GitHub 403" in text
+        assert "V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md" in text
+        assert "Sparkbot remote publication remains blocked by GitHub 403" not in text
         assert "audited through `V1-G56`" in text or (
             "V1 runtime authority chain audit through G56: complete." in text
         )

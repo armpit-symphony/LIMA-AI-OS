@@ -1,0 +1,241 @@
+{
+  "refresh_id": "v1_post_g61_request_readiness_refresh",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "readiness_refresh_lane_label": "docs-v1-post-g61-request-readiness-refresh",
+  "source_audit_lane_label": "audit-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request",
+  "source_commit_before_refresh": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "readiness_verdict": "READY_FOR_OPERATOR_DECISION_BLOCKED_FOR_IMPLEMENTATION",
+  "implementation_blocker": "Approve-V1-G61 has not been recorded",
+  "required_operator_choice_to_unblock_implementation": "Approve-V1-G61",
+  "required_approval_wording": "I explicitly approve V1-G61 implementation of the runtime vendor SDK import execution proof slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md.",
+  "documents": {
+    "refresh": "docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md",
+    "g61_approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
+    "g61_work_order": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_WORK_ORDER.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_preflight_audit": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_PREFLIGHT_AUDIT.md",
+    "g61_request_audit": "docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md",
+    "g61_preapproval_runtime_tree_guard_audit": "docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md",
+    "post_g60_readiness_rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G60.md",
+    "post_g60_next_lane_matrix": "docs/readiness/V1_POST_G60_NEXT_LANE_DECISION_MATRIX.md",
+    "g60_audit": "docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUDIT.md",
+    "g60_implementation": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT.md"
+  },
+  "required_verdicts": {
+    "v1_runtime_authority_chain": "CANDIDATE_ONLY",
+    "v1_g61_approval_request": "READY_FOR_OPERATOR_DECISION",
+    "v1_g61_implementation": "NOT_APPROVED",
+    "runtime_vendor_sdk_import_execution_proof": "NOT_APPROVED",
+    "runtime_vendor_sdk_imports_in_lima": "NOT_APPROVED",
+    "dependency_manifest_edits": "NOT_APPROVED",
+    "lockfile_edits": "NOT_APPROVED",
+    "built_in_provider_sdk_client_implementation": "NOT_APPROVED",
+    "provider_client_construction": "NOT_APPROVED",
+    "direct_provider_sdk_call_implementation_by_lima": "NOT_APPROVED",
+    "lima_owned_provider_endpoint_resolution_execution": "NOT_APPROVED",
+    "lima_owned_direct_provider_network_egress": "NOT_APPROVED",
+    "secret_lookup_and_credential_value_access": "NOT_APPROVED",
+    "provider_token_api_key_access": "NOT_APPROVED",
+    "provider_configuration_changes": "NOT_APPROVED",
+    "fallback_execution": "NOT_APPROVED",
+    "connector_browser_network_authority": "NOT_APPROVED",
+    "consumer_production_runtime_integration": "NOT_APPROVED",
+    "physical_world_readiness": "BLOCKED",
+    "product_readiness": "NOT_READY",
+    "final_public_api_freeze": "NOT_APPROVED"
+  },
+  "boundary_confirmation": {
+    "docs_tests_fixtures_only": true,
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_changed": false,
+    "runtime_vendor_sdk_import_execution_proof_added": false,
+    "runtime_vendor_sdk_import_added_to_lima": false,
+    "preapproval_runtime_tree_guard_added_to_request_stage_tests": true,
+    "dependency_manifest_edited": false,
+    "lockfile_edited": false,
+    "provider_client_construction_added": false,
+    "provider_endpoint_resolution_added": false,
+    "network_calls_by_lima_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "product_readiness_claimed": false,
+    "final_public_api_freeze_claimed": false
+  },
+  "validation_evidence": {
+    "focused_v1_g61_request_audit_validation": {
+      "passed": true,
+      "tests_passed": 11
+    },
+    "focused_v1_g61_request_audit_chain_validation": {
+      "passed": true,
+      "tests_passed": 42
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 5273
+    },
+    "current_g61_decision_packet_hardening_validation": {
+      "passed": true,
+      "tests_passed": 35
+    },
+    "full_lima_suite_after_decision_packet_hardening": {
+      "passed": true,
+      "tests_passed": 5280
+    },
+    "diff_check_after_decision_packet_hardening": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "cached_diff_check_after_decision_packet_hardening": {
+      "passed": true
+    },
+    "current_g61_branch_metadata_hardening_validation": {
+      "passed": true,
+      "tests_passed": 51
+    },
+    "full_lima_suite_after_branch_metadata_hardening": {
+      "passed": true,
+      "tests_passed": 5280
+    },
+    "compileall_after_branch_metadata_hardening": {
+      "passed": true
+    },
+    "diff_check_after_branch_metadata_hardening": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "cached_diff_check_after_branch_metadata_hardening": {
+      "passed": true
+    },
+    "current_g61_preapproval_runtime_tree_guard_validation": {
+      "passed": true,
+      "tests_passed": 32
+    },
+    "full_lima_suite_after_preapproval_runtime_tree_guard_audit": {
+      "passed": true,
+      "tests_passed": 5289
+    },
+    "compileall_after_preapproval_runtime_tree_guard_audit": {
+      "passed": true
+    },
+    "diff_check_after_preapproval_runtime_tree_guard_audit": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "cached_diff_check_after_preapproval_runtime_tree_guard_audit": {
+      "passed": true
+    },
+    "current_consumer_harness_usability_matrix_validation": {
+      "passed": true,
+      "tests_passed": 39
+    },
+    "full_lima_suite_after_consumer_harness_usability_matrix": {
+      "passed": true,
+      "tests_passed": 5297
+    },
+    "compileall_after_consumer_harness_usability_matrix": {
+      "passed": true
+    },
+    "current_release_candidate_acceptance_checklist_validation": {
+      "passed": true,
+      "tests_passed": 47
+    },
+    "full_lima_suite_after_release_candidate_acceptance_checklist": {
+      "passed": true,
+      "tests_passed": 5305
+    },
+    "compileall_after_release_candidate_acceptance_checklist": {
+      "passed": true
+    },
+    "current_release_candidate_cutover_runbook_validation": {
+      "passed": true,
+      "tests_passed": 56
+    },
+    "full_lima_suite_after_release_candidate_cutover_runbook": {
+      "passed": true,
+      "tests_passed": 5313
+    },
+    "compileall_after_release_candidate_cutover_runbook": {
+      "passed": true
+    },
+    "current_candidate_harness_quickstart_validation": {
+      "passed": true,
+      "tests_passed": 61
+    },
+    "full_lima_suite_after_candidate_harness_quickstart": {
+      "passed": true,
+      "tests_passed": 5319
+    },
+    "compileall_after_candidate_harness_quickstart": {
+      "passed": true
+    },
+    "current_candidate_harness_quickstart_execution_audit_validation": {
+      "passed": true,
+      "tests_passed": 83
+    },
+    "full_lima_suite_after_candidate_harness_quickstart_execution_audit": {
+      "passed": true,
+      "tests_passed": 5326
+    },
+    "compileall_after_candidate_harness_quickstart_execution_audit": {
+      "passed": true
+    },
+    "current_gate_consistency_validation_refresh": {
+      "passed": true,
+      "tests_passed": 31
+    },
+    "full_lima_suite_after_current_gate_consistency_validation_refresh": {
+      "passed": true,
+      "tests_passed": 5350
+    },
+    "compileall_after_current_gate_consistency_validation_refresh": {
+      "passed": true
+    },
+    "diff_check_after_current_gate_consistency_validation_refresh": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "cached_diff_check_after_current_gate_consistency_validation_refresh": {
+      "passed": true
+    }
+  },
+  "later_readiness_freshness_supplements": {
+    "current_candidate_validation_refresh_latest_final_blocker_index_focused_tests_passed": 15,
+    "current_candidate_validation_refresh_latest_final_blocker_index_broader_tests_passed": 89,
+    "current_candidate_validation_refresh_latest_final_blocker_index_full_lima_suite_tests_passed": 5361,
+    "post_validation_readiness_change_freshness_full_suite_tests_passed": 5359,
+    "latest_quickstart_post_refresh_full_lima_suite_tests_passed": 5360,
+    "latest_final_blocker_index_refresh_focused_tests_passed": 15,
+    "latest_final_blocker_index_refresh_broader_tests_passed": 89,
+    "latest_final_blocker_index_refresh_full_lima_suite_tests_passed": 5361,
+    "latest_post_g61_request_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_refresh_full_lima_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
+    "implementation_authority_created": false,
+    "release_candidate_authority_created": false,
+    "cutover_authority_created": false,
+    "final_readiness_pass_created": false,
+    "production_use_authority_created": false
+  },
+  "next_valid_operator_choices": [
+    "Approve-V1-G61",
+    "Revise-V1-G61",
+    "Pause"
+  ]
+}

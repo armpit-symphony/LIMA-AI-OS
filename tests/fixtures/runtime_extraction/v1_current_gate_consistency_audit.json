@@ -1,0 +1,229 @@
+{
+  "audit_id": "v1_current_gate_consistency_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-22",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "audit_verdict": "PASS_CURRENT_GATE_POST_G61_RELEASE_READINESS",
+  "documents": {
+    "audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "readme": "README.md",
+    "current_project_state": "docs/CURRENT_PROJECT_STATE.md",
+    "long_range_roadmap": "docs/LIMA_LONG_RANGE_ROADMAP.md",
+    "decisions": "docs/DECISIONS.md",
+    "product_readiness_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
+    "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
+    "operator_unblock_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
+    "final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
+    "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
+    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
+    "consumer_target_state_after_arc_readiness_integration": "docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md",
+    "consumer_testability_matrix_through_work_settings": "docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "post_validation_readiness_change_freshness_audit": "docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
+    "public_sparkbot_g56_publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
+    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md"
+  },
+  "required_current_state": {
+    "current_gate": "V1-G61",
+    "required_next_action": "record_clean_arc_bot_shell_checkpoint_proof_then_execute_future_final_readiness_audit",
+    "valid_operator_choices": [
+      "Approve-V1-G61",
+      "Revise-V1-G61",
+      "Pause"
+    ],
+    "implementation_approval_recorded": true,
+    "runtime_vendor_sdk_import_execution_proof_implemented": true,
+    "public_sparkbot_g56_publication_blocker_resolved": true,
+    "candidate_harness_quickstart_execution_audit_current": true,
+    "g61_operator_decision_packet_status_audit_current": true,
+    "g61_operator_decision_packet_approved": true,
+    "release_candidate_acceptance_checklist_blocked_pending_arc_checkpoint_and_final_readiness": true,
+    "release_candidate_cutover_runbook_blocked_pending_checklist_final_readiness_and_arc_checkpoint": true,
+    "final_readiness_audit_template_waits_for_arc_clean_checkpoint": true,
+    "post_validation_readiness_change_freshness_audit_current": true,
+    "arc_bot_shell_local_drift_gate_current": true,
+    "arc_bot_shell_local_drift_exclusion_audit_current": true,
+    "arc_bot_shell_local_drift_exclusion_audit_tracked_modified_file_count": 7,
+    "arc_bot_shell_local_drift_exclusion_audit_untracked_file_count": 64,
+    "arc_bot_shell_clean_checkpoint_required_before_release_final_branch_tag_cutover_or_readiness_claim": true,
+    "long_range_roadmap_v1_section_current": true,
+    "decision_log_v1_current_gate_current": true,
+    "historical_consumer_docs_current_status_refresh_current": true,
+    "current_validation_refresh_full_lima_suite_tests_passed": 5350,
+    "current_validation_latest_handoff_freshness_post_g61_request_focused_tests_passed": 8,
+    "current_validation_latest_handoff_freshness_post_g61_request_broader_tests_passed": 117,
+    "current_validation_latest_handoff_freshness_post_g61_request_full_lima_suite_tests_passed": 5362,
+    "current_validation_latest_handoff_freshness_quickstart_focused_tests_passed": 7,
+    "current_validation_latest_handoff_freshness_quickstart_adjacent_tests_passed": 64,
+    "current_validation_latest_handoff_freshness_quickstart_broader_tests_passed": 133,
+    "current_validation_latest_handoff_freshness_quickstart_full_lima_suite_tests_passed": 5364,
+    "post_validation_same_turn_full_lima_suite_tests_passed": 5359,
+    "latest_quickstart_post_refresh_full_lima_suite_tests_passed": 5360,
+    "latest_final_blocker_index_refresh_focused_tests_passed": 15,
+    "latest_final_blocker_index_refresh_broader_tests_passed": 89,
+    "latest_final_blocker_index_refresh_full_lima_suite_tests_passed": 5361,
+    "latest_post_g61_request_readiness_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_readiness_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_readiness_refresh_full_lima_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364
+  },
+  "required_snippets_by_document": {
+    "readme": [
+      "LIMA remains `CANDIDATE_ONLY`.",
+      "The active next V1 lane is post-G61 release-candidate readiness refresh.",
+      "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md"
+    ],
+    "current_project_state": [
+      "V1-G61 implementation approval recorded: yes, limited to bounded local import proof.",
+      "V1 current gate consistency audit: complete",
+      "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md"
+    ],
+    "long_range_roadmap": [
+      "The active V1 gate is operator decision for the prepared request-only `V1-G61` runtime vendor SDK import execution proof packet.",
+      "Completed implementation evidence is refreshed through `V1-G60`",
+      "Current V1-G61 request-only authority documents:",
+      "The next smallest safe V1 action is to record exactly one operator choice in the V1-G61 runtime vendor SDK import execution proof operator decision packet"
+    ],
+    "decisions": [
+      "## ADR-0340: V1-G61 Supersedes Earlier V1 Decision-Log Gates As Current Blocker",
+      "The V1 decision log records `V1-G61` as the current operator-decision gate",
+      "Earlier V1 ADRs, including the V1-G55 decision-log status and consumer target refresh, remain historical evidence only",
+      "Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`."
+    ],
+    "product_readiness_target": [
+      "The latest completed gate is `V1-G60`.",
+      "The active next lane is operator decision on the prepared request-only `V1-G61`"
+    ],
+    "readiness_gap_matrix": [
+      "Current active gate: `V1-G61`",
+      "Current request-stage readiness refresh: `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`"
+    ],
+    "final_blocker_register": [
+      "STOPPED_AT_V1_G61_OPERATOR_DECISION",
+      "V1-G61 implementation approval recorded: no."
+    ],
+    "operator_unblock_packet": [
+      "AWAITING_OPERATOR_G61_DECISION",
+      "Required operator action: record exactly one V1-G61 operator choice."
+    ],
+    "final_candidate_branch_index": [
+      "CANDIDATE_INDEX_READY_WITH_G61_OPERATOR_BLOCKER",
+      "Record exactly one V1-G61 operator choice"
+    ],
+    "release_candidate_acceptance_checklist": [
+      "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS",
+      "Arc-Bot-shell local worktree drift is either absent or explicitly excluded by `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` from V1 proof as compatibility evidence, not clean-checkpoint evidence; the current audit records 7 tracked modified files and 64 untracked files as excluded from release proof.",
+      "Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim."
+    ],
+    "release_candidate_cutover_runbook": [
+      "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS",
+      "Confirm `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` is current before treating the Arc smoke as compatibility evidence; the current audit records 7 tracked modified files and 64 untracked files excluded from release proof.",
+      "Confirm Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated before treating Arc evidence as release-candidate, final-readiness, branch, tag, cutover, or readiness evidence."
+    ],
+    "final_readiness_audit_template": [
+      "READY_TO_RUN_POST_G61_AFTER_ARC_CLEAN_CHECKPOINT",
+      "Arc-Bot-shell local drift exclusion audit state, including the current `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` finding of 7 tracked modified files and 64 untracked files excluded from release proof",
+      "Arc-Bot-shell has a clean-checkpoint proof recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim"
+    ],
+    "arc_bot_shell_local_drift_exclusion_audit": [
+      "PASS_CURRENT_ARC_DRIFT_EXCLUDED_FROM_V1_RELEASE_PROOF",
+      "Tracked modified file count: 7",
+      "Untracked file count: 49",
+      "not accepted as clean-checkpoint evidence"
+    ],
+    "consumer_target_state_after_arc_readiness_integration": [
+      "## Current Status Refresh",
+      "This document's original runtime-gate section is historical audit-time evidence",
+      "Current active gate: `V1-G61`.",
+      "Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+    ],
+    "consumer_testability_matrix_through_work_settings": [
+      "## Current Status Refresh",
+      "This matrix is historical Work/Settings testability evidence.",
+      "Current active gate: `V1-G61`.",
+      "Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+    ],
+    "current_candidate_validation_refresh_audit": [
+      "LOCAL_CANDIDATE_VALIDATION_REFRESH_PASS_WITH_G61_OPERATOR_BLOCKER",
+      "83 passed",
+      "153 passed",
+      "5350 passed",
+      "Latest LIMA Readiness Freshness Supplement",
+      "5361 passed"
+    ],
+    "post_validation_readiness_change_freshness_audit": [
+      "POST_VALIDATION_READINESS_CHANGES_REQUIRE_SAME_TURN_VALIDATION",
+      "same-turn focused validation, full-suite validation, and diff-check evidence",
+      "5359",
+      "5360",
+      "15 focused final blocker/index tests, 89 broader affected readiness tests, and 5361 full-suite tests",
+      "8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests",
+      "7 focused quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and the full LIMA suite passing 5364 tests"
+    ],
+    "g61_operator_decision_packet_status_audit": [
+      "PASS_G61_OPERATOR_DECISION_PACKET_APPROVED",
+      "Current recorded choice: Approve-V1-G61",
+      "Use the approved decision packet as authority only for the bounded V1-G61 import execution proof"
+    ],
+    "public_sparkbot_g56_publication_resolution_audit": [
+      "Public Sparkbot G56 publication blocker: resolved.",
+      "Active blocker: V1-G61 runtime vendor SDK import execution proof operator decision."
+    ],
+    "candidate_harness_quickstart": [
+      "QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER"
+    ],
+    "candidate_harness_quickstart_execution_audit": [
+      "PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER"
+    ]
+  },
+  "forbidden_current_state_phrases": [
+    "public Sparkbot remote publication remains blocked by GitHub 403",
+    "public Sparkbot publication blocker is unresolved",
+    "public Sparkbot publication blocker is still unresolved",
+    "public Sparkbot write-credential gate",
+    "missing_write_credentials",
+    "target_push_still_blocked",
+    "The remaining V1 blocker is the V1-G57 operator decision",
+    "remaining V1 blocker is the V1-G57 operator decision",
+    "V1-G57 still requires exactly one valid operator decision",
+    "record exactly one V1-G57 operator choice",
+    "Do not implement V1-G57 unless",
+    "AWAITING_OPERATOR_UNBLOCK_ACTIONS",
+    "STOPPED_AT_V1_G57_OPERATOR_DECISION",
+    "CANDIDATE_INDEX_READY_WITH_EXTERNAL_UNBLOCKS",
+    "V1.0.0 release-candidate branch is created",
+    "V1.0.0 release-candidate tag is created",
+    "release-candidate branch, tag, cutover, or readiness action before checklist satisfaction, clean Arc-Bot-shell checkpoint proof, and final-readiness audit pass",
+    "Arc-Bot-shell smoke evidence is clean-checkpoint evidence",
+    "Arc-Bot-shell local drift resolved",
+    "Recorded choice: Revise-V1-G61",
+    "Recorded choice: Pause"
+  ],
+  "boundaries_preserved": {
+    "v1_g61_operator_approval_recorded_by_audit": true,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented_by_audit": true,
+    "lima_runtime_files_changed_by_audit": false,
+    "lima_public_api_exports_changed_by_audit": false,
+    "consumer_repositories_changed_by_audit": false,
+    "dependency_manifest_edited_by_audit": false,
+    "lockfile_edited_by_audit": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "provider_sdk_clients_added": false,
+    "provider_client_construction_added": false,
+    "lima_owned_endpoint_resolution_or_network_egress_added": false,
+    "secret_credential_provider_token_or_api_key_access_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "next_recommended_step": "record_clean_arc_bot_shell_checkpoint_proof_then_execute_future_final_readiness_audit"
+}

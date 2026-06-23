@@ -156,9 +156,9 @@ def test_v1_g57_request_audit_status_docs_match_current_gate() -> None:
     assert "audited through `V1-G56`" in readme
     assert "V1-G57 provider execution hardening authorization approval request" in readme
     assert "V1 runtime authority chain audit through G56: complete." in state
-    assert "V1-G57 implementation approval recorded: no." in state
-    assert "No V1-G57 implementation is approved" in target
-    assert "Current active gate: `V1-G57`" in gap
+    assert "V1-G57 provider execution hardening authorization evidence: complete and audited" in state
+    assert "No V1-G61 implementation is approved" in target
+    assert "Current active gate: `V1-G61`" in gap
 
 
 def test_v1_g57_request_audit_outputs_do_not_include_sensitive_markers() -> None:

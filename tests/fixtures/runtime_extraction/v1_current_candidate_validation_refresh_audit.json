@@ -2,42 +2,53 @@
   "audit_id": "v1_current_candidate_validation_refresh_audit",
   "api_status": "CANDIDATE_ONLY",
   "date": "2026-06-20",
-  "branch": "audit-v1-current-candidate-validation-refresh",
-  "source_lima_commit_before_audit": "7666ef3c25fd4a95b6bb7ce94937185ed0bc54ed",
-  "audit_verdict": "LOCAL_CANDIDATE_VALIDATION_REFRESH_PASS_WITH_EXTERNAL_BLOCKERS",
+  "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_lima_commit_before_audit": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "audit_verdict": "LOCAL_CANDIDATE_VALIDATION_REFRESH_PASS_WITH_G61_OPERATOR_BLOCKER",
   "documents": {
     "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "candidate_handoff_execution_audit": "docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
+    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
+    "consumer_harness_usability_matrix": "docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
     "final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
     "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
     "operator_unblock_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
     "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
-    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
-    "g57_approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md"
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "g61_approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
+    "g61_request_audit": "docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md",
+    "post_g61_request_readiness_refresh": "docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md",
+    "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md"
   },
   "repository_state_under_refresh": {
     "lima_ai_os": {
       "local_path": "C:\\Users\\limap\\LIMA-AI-OS",
-      "branch_before_audit": "docs-v1-final-candidate-branch-index",
-      "commit": "7666ef3c25fd4a95b6bb7ce94937185ed0bc54ed",
-      "state": "clean_before_audit"
+      "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+      "commit": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+      "state": "current_readiness_g61_request_package_present"
     },
     "public_sparkbot_target_checkout": {
       "local_path": "C:\\Users\\limap\\Sparkbot-public",
       "branch": "v1-g56-runtime-authority-chain-audit",
       "commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
-      "state": "clean_local_branch_target_push_still_blocked"
+      "state": "clean_local_branch_public_g56_target_publication_resolved_by_audit"
     },
     "accessible_sparkbot_checkpoint": {
       "local_path": "C:\\Users\\limap\\Sparkbot",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
       "commit": "ddaa4ccaacd328ddcc1f00a040c2c140abee428e",
-      "state": "clean_pushed_branch"
+      "state": "clean_local_branch_tracking_origin"
     },
     "arc_bot_shell_checkpoint": {
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-      "commit": "ec06e7670f18eeae192fc0f995b6ffd07481d8c9",
-      "state": "pushed_g56_branch_unrelated_local_drift_excluded_from_proof"
+      "commit": "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0",
+      "state": "checkpoint_commit_tracks_origin_unrelated_local_worktree_drift_excluded_from_v1_proof"
     }
   },
   "consumer_validation_results": {
@@ -54,33 +65,177 @@
     "arc_bot_shell_checkpoint": {
       "smoke_command": "python -m pytest -q tests\\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
       "smoke_result": "8 passed",
-      "diff_check_result": "completed_with_crlf_warnings_from_unrelated_dirty_tracked_files"
+      "diff_check_result": "passed_with_lf_crlf_warnings_only_not_clean_checkpoint_evidence"
     }
   },
-  "external_blockers_remaining": [
-    "public_sparkbot_write_credential_and_branch_publication",
-    "exactly_one_valid_v1_g57_operator_choice_recorded"
+  "lima_validation_results": {
+    "focused_current_candidate_g61_readiness_set": {
+      "passed": true,
+      "tests_passed": 83
+    },
+    "focused_current_gate_consistency_readiness_set": {
+      "passed": true,
+      "tests_passed": 153
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "full_lima_suite": {
+      "passed": true,
+      "tests_passed": 5350
+    },
+    "lima_diff_check": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "lima_cached_diff_check": {
+      "passed": true
+    }
+  },
+  "later_lima_validation_supplement": {
+    "date": "2026-06-21",
+    "scope": "lima_only_after_later_readiness_docs_fixtures_tests_changes",
+    "consumer_checkpoints_rerun_by_supplement": false,
+    "release_candidate_or_g61_implementation_authority_created": false,
+    "focused_g61_guard_operator_freshness_set": {
+      "passed": true,
+      "tests_passed": 37
+    },
+    "focused_v1_readiness_regression_set": {
+      "passed": true,
+      "tests_passed": 147
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "full_lima_suite": {
+      "passed": true,
+      "tests_passed": 5359
+    },
+    "lima_diff_check": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "lima_cached_diff_check": {
+      "passed": true
+    },
+    "protected_runtime_dependency_support_paths_status": "clean"
+  },
+  "latest_lima_readiness_freshness_supplement": {
+    "date": "2026-06-21",
+    "scope": "lima_only_after_final_blocker_register_and_branch_index_refresh",
+    "consumer_checkpoints_rerun_by_supplement": false,
+    "release_candidate_cutover_final_readiness_or_g61_implementation_authority_created": false,
+    "focused_final_blocker_index_set": {
+      "passed": true,
+      "tests_passed": 15
+    },
+    "broader_affected_v1_readiness_set": {
+      "passed": true,
+      "tests_passed": 89
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "full_lima_suite": {
+      "passed": true,
+      "tests_passed": 5361
+    },
+    "lima_diff_check": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "lima_cached_diff_check": {
+      "passed": true
+    },
+    "protected_runtime_dependency_support_paths_status": "clean"
+  },
+  "latest_handoff_freshness_supplement": {
+    "date": "2026-06-21",
+    "scope": "lima_only_after_post_g61_request_refresh_and_quickstart_artifact_refresh",
+    "consumer_checkpoints_rerun_by_supplement": false,
+    "release_candidate_cutover_final_readiness_arc_clean_checkpoint_consumer_production_or_g61_implementation_authority_created": false,
+    "focused_post_g61_request_refresh_set": {
+      "passed": true,
+      "tests_passed": 8
+    },
+    "broader_g61_readiness_after_request_refresh_set": {
+      "passed": true,
+      "tests_passed": 117
+    },
+    "focused_candidate_harness_quickstart_set": {
+      "passed": true,
+      "tests_passed": 7
+    },
+    "adjacent_harness_readiness_after_quickstart_artifact_refresh_set": {
+      "passed": true,
+      "tests_passed": 64
+    },
+    "broader_g61_readiness_after_quickstart_artifact_refresh_set": {
+      "passed": true,
+      "tests_passed": 133
+    },
+    "compileall_lima": {
+      "passed": true
+    },
+    "post_g61_request_refresh_full_lima_suite": {
+      "passed": true,
+      "tests_passed": 5362
+    },
+    "quickstart_artifact_refresh_full_lima_suite": {
+      "passed": true,
+      "tests_passed": 5364
+    },
+    "lima_diff_check": {
+      "passed": true,
+      "warnings": "LF-to-CRLF warnings only"
+    },
+    "lima_cached_diff_check": {
+      "passed": true
+    },
+    "protected_runtime_dependency_support_paths_status": "clean"
+  },
+  "active_blockers_remaining": [
+    "exactly_one_valid_v1_g61_operator_choice_recorded",
+    "release_candidate_acceptance_checklist_not_passed",
+    "release_candidate_cutover_not_authorized",
+    "final_readiness_audit_not_executed_or_passed",
+    "arc_bot_shell_clean_checkpoint_proof_not_recorded"
   ],
   "evidence_interpretation": [
     "public_sparkbot_local_checkout_still_validates_fake_executor_path",
-    "accessible_sparkbot_pushed_checkpoint_still_validates_fake_executor_path",
-    "arc_bot_shell_pushed_checkpoint_still_validates_fake_executor_path",
-    "arc_bot_shell_local_dirty_files_remain_excluded_from_v1_proof",
-    "public_sparkbot_target_publication_gate_unchanged",
-    "v1_g57_gate_unchanged"
+    "public_sparkbot_target_publication_resolved",
+    "accessible_sparkbot_checkpoint_still_validates_fake_executor_path",
+    "arc_bot_shell_checkpoint_still_validates_fake_executor_path_with_local_drift_excluded",
+    "v1_candidate_harness_quickstart_execution_audit_current",
+    "v1_current_gate_consistency_audit_current",
+    "v1_current_gate_consistency_audit_committed_stale_claim_rejection_proof",
+    "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice",
+    "v1_release_candidate_acceptance_checklist_blocked_not_passed",
+    "v1_release_candidate_cutover_runbook_blocked_not_authority",
+    "v1_final_readiness_audit_template_future_scaffolding_not_executed",
+    "arc_bot_shell_candidate_smoke_not_clean_checkpoint_proof",
+    "v1_g57_through_v1_g60_candidate_only_evidence_complete",
+    "later_lima_validation_supplement_current_37_147_5359_with_protected_paths_clean",
+    "latest_lima_readiness_freshness_supplement_current_15_89_5361_with_protected_paths_clean",
+    "latest_handoff_freshness_supplement_current_8_117_5362_and_7_64_133_5364_with_protected_paths_clean",
+    "v1_g61_gate_unchanged"
   ],
   "boundaries_preserved": {
-    "v1_g57_implementation_approval_recorded_by_audit": false,
-    "v1_g57_provider_execution_hardening_authorization_implemented_by_audit": false,
-    "public_sparkbot_g56_branch_pushed_to_sparkpit_labs_by_audit": false,
-    "public_sparkbot_write_credential_provided_by_audit": false,
+    "v1_g61_implementation_approval_recorded_by_audit": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented_by_audit": false,
+    "public_sparkbot_branch_merge_to_main_claimed_by_audit": false,
+    "release_candidate_branch_or_tag_authority_created_by_audit": false,
+    "release_candidate_acceptance_checklist_passed_by_audit": false,
+    "release_candidate_cutover_authorized_by_audit": false,
+    "final_readiness_audit_executed_or_passed_by_audit": false,
+    "arc_bot_shell_clean_checkpoint_proof_claimed_by_audit": false,
     "lima_runtime_files_changed_by_audit": false,
     "lima_public_api_exports_changed_by_audit": false,
     "consumer_repositories_changed_by_audit": false,
-    "arc_bot_shell_dirty_files_accepted_as_v1_proof_by_audit": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
     "provider_sdk_clients_added": false,
-    "sdk_dependencies_added": false,
-    "vendor_provider_sdk_imports_added": false,
+    "lockfile_edits_added": false,
     "lima_owned_provider_endpoint_resolution_added": false,
     "lima_owned_dns_http_socket_network_calls_added": false,
     "direct_provider_egress_by_lima_added": false,
@@ -93,12 +248,14 @@
     "v1_product_or_production_readiness_claimed": false
   },
   "stop_conditions": [
-    "public_sparkbot_push_without_write_credentials",
-    "v1_g57_implementation_without_exact_approval",
-    "treat_this_audit_as_g57_approval",
+    "v1_g61_implementation_without_exact_approval",
+    "treat_this_audit_as_g61_approval",
+    "treat_this_audit_as_release_candidate_branch_or_tag_authority",
+    "treat_this_audit_as_passed_release_candidate_checklist_cutover_or_final_readiness_audit",
+    "treat_arc_candidate_smoke_as_clean_checkpoint_proof_while_local_drift_excluded",
     "consumer_repo_edit_from_audit_lane",
     "runtime_or_public_api_change_from_audit_lane",
-    "secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",
     "raw_sensitive_or_patch_content_persistence",
     "v1_product_production_or_completion_claim"
   ]

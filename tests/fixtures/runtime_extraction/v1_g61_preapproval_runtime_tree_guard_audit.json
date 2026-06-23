@@ -1,0 +1,77 @@
+{
+  "audit_id": "v1_g61_preapproval_runtime_tree_guard_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-22",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_commit_before_guard_audit": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "audit_verdict": "PASS_POST_APPROVAL_RUNTIME_TREE_GUARD",
+  "reviewed_gate": "V1-G61",
+  "operator_decision_status": "approved",
+  "implementation_approved": true,
+  "documents": {
+    "audit": "docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md",
+    "approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
+    "operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "post_validation_readiness_change_freshness_audit": "docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md",
+    "request_fixture": "tests/fixtures/runtime_extraction/v1_g61_runtime_vendor_sdk_import_execution_proof_approval_request.json",
+    "request_test": "tests/test_v1_g61_runtime_vendor_sdk_import_execution_proof_approval_request.py"
+  },
+  "current_gate_inputs": {
+    "operator_decision_packet_date": "2026-06-22",
+    "operator_decision_packet_status_audit_date": "2026-06-22",
+    "current_gate_consistency_audit_date": "2026-06-21",
+    "post_validation_readiness_change_freshness_full_suite_tests_passed": 5359,
+    "latest_quickstart_post_refresh_full_lima_suite_tests_passed": 5360,
+    "latest_final_blocker_index_refresh_focused_tests_passed": 15,
+    "latest_final_blocker_index_refresh_broader_tests_passed": 89,
+    "latest_final_blocker_index_refresh_full_lima_suite_tests_passed": 5361
+  },
+  "guarded_conditions": {
+    "lima_runtime_vendor_sdk_import_present": false,
+    "provider_sdk_client_constructor_present_in_lima": false,
+    "approved_g61_implementation_files_present_after_approval": true,
+    "request_fixture_records_runtime_tree_scan": true
+  },
+  "future_g61_implementation_files": [
+    "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
+    "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g61_runtime_vendor_sdk_import_execution_proof.json",
+    "tests/test_v1_g61_runtime_vendor_sdk_import_execution_proof.py"
+  ],
+  "boundaries_preserved": {
+    "v1_g61_operator_approval_recorded": true,
+    "runtime_vendor_sdk_import_execution_proof_implemented": true,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_changed": false,
+    "dependency_manifest_edited": false,
+    "lockfile_edited": false,
+    "sparkbot_files_changed": false,
+    "arc_bot_shell_files_changed": false,
+    "runtime_vendor_sdk_import_added_to_lima": false,
+    "provider_sdk_client_constructor_added": false,
+    "provider_endpoint_resolution_added": false,
+    "network_call_performed_by_lima": false,
+    "secret_lookup_added": false,
+    "credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "stop_conditions": [
+    "treat_guard_audit_as_broader_v1_g61_authority",
+    "runtime_vendor_sdk_import_in_lima_after_import_proof",
+    "provider_sdk_client_construction_after_import_proof_without_new_gate",
+    "endpoint_dns_http_socket_network_or_provider_egress_after_import_proof_without_new_gate",
+    "secret_credential_provider_token_or_api_key_access_after_import_proof_without_new_gate",
+    "dependency_manifest_or_lockfile_edit_from_guard_audit_lane",
+    "consumer_repo_edit_from_guard_audit_lane",
+    "approved_g61_implementation_file_scope_expanded",
+    "v1_product_production_or_completion_claim"
+  ],
+  "next_recommended_step": "complete_post_g61_release_candidate_readiness_refresh"
+}

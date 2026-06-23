@@ -1,78 +1,128 @@
 {
   "packet_id": "v1_operator_unblock_action_packet",
   "api_status": "CANDIDATE_ONLY",
-  "date": "2026-06-20",
-  "branch": "docs-v1-operator-unblock-action-packet",
-  "source_lima_commit_before_packet": "d1b3d5ae02d6d363876eaf6369dbdba6f1cb7f48",
-  "packet_verdict": "AWAITING_OPERATOR_UNBLOCK_ACTIONS",
+  "date": "2026-06-21",
+  "branch": "docs-v1-g61-operator-unblock-action-packet-refresh",
+  "source_lima_commit_before_packet_refresh": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "packet_verdict": "AWAITING_OPERATOR_G61_DECISION",
   "documents": {
     "operator_unblock_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
-    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
-    "arc_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
-    "candidate_handoff_execution_audit": "docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md",
-    "g57_request_audit": "docs/audits/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_REQUEST_AUDIT.md",
-    "g57_operator_decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
-    "g57_approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md"
+    "public_sparkbot_g56_publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
+    "g57_audit": "docs/audits/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_AUDIT.md",
+    "g60_audit": "docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUDIT.md",
+    "g61_request_audit": "docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md",
+    "g61_preapproval_runtime_tree_guard_audit": "docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
+    "post_g61_request_readiness_refresh": "docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
+    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
+    "consumer_harness_usability_matrix": "docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "post_validation_readiness_change_freshness_audit": "docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md",
+    "arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
+    "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
+    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md"
   },
-  "required_operator_actions": {
+  "resolved_prior_actions": {
     "public_sparkbot_publication": {
-      "required_action": "provide_or_switch_to_write_credential_then_publish_branch",
-      "local_path": "C:\\Users\\limap\\Sparkbot-public",
       "target_repository": "sparkpit-labs/Sparkbot",
       "branch": "v1-g56-runtime-authority-chain-audit",
       "commit": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2",
-      "current_blocker": "github_http_403_current_credential",
-      "branch_pushed_to_target_by_packet": false,
-      "validation_before_retry": [
-        "python -m pytest -q tests\\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
-        "git diff --check"
-      ],
-      "publication_command_after_credentials": "git -C C:\\Users\\limap\\Sparkbot-public -c safe.directory='C:/Users/limap/Sparkbot-public' push origin v1-g56-runtime-authority-chain-audit",
-      "close_evidence_required": [
-        "branch_pushed_to_sparkpit_labs_sparkbot_or_authorized_pr_compare_evidence",
-        "public_sparkbot_g56_smoke_still_passing",
-        "no_secret_credential_token_raw_diff_or_raw_file_content_persisted"
-      ]
+      "verified_remote_ref": "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2 refs/heads/v1-g56-runtime-authority-chain-audit",
+      "resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
+      "resolved": true
     },
-    "v1_g57_operator_decision": {
-      "required_action": "record_exactly_one_valid_v1_g57_operator_choice",
-      "valid_choices": ["Approve-V1-G57", "Revise-V1-G57", "Pause"],
-      "operator_choice_recorded_by_packet": false,
-      "exact_approve_text": "Approve-V1-G57\n\nI explicitly approve V1-G57 implementation of the LIMA-side provider execution hardening authorization metadata slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md.",
+    "v1_g57_decision_and_implementation": {
       "decision_packet": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md",
-      "approval_request": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_APPROVAL_REQUEST.md",
+      "implementation_evidence": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION.md",
+      "independent_audit": "docs/audits/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_AUDIT.md",
+      "completed_and_audited_as_candidate_only": true
+    }
+  },
+  "required_operator_actions": {
+    "v1_g61_operator_decision": {
+      "required_action": "record_exactly_one_valid_v1_g61_operator_choice",
+      "valid_choices": [
+        "Approve-V1-G61",
+        "Revise-V1-G61",
+        "Pause"
+      ],
+      "operator_choice_recorded_by_packet": false,
+      "exact_approve_text": "Approve-V1-G61\n\nI explicitly approve V1-G61 implementation of the runtime vendor SDK import execution proof slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md.",
+      "decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+      "decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+      "approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
       "approved_future_file_scope_if_approved": [
-        "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION.md",
-        "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_CLOSEOUT.md",
-        "tests/fixtures/runtime_extraction/v1_g57_provider_execution_hardening_authorization.json",
-        "tests/test_v1_g57_provider_execution_hardening_authorization.py"
+        "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
+        "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
+        "tests/fixtures/runtime_extraction/v1_g61_runtime_vendor_sdk_import_execution_proof.json",
+        "tests/test_v1_g61_runtime_vendor_sdk_import_execution_proof.py"
       ],
       "close_evidence_required": [
+        "g61_operator_decision_packet_status_audit_current_and_consistent_with_recorded_decision_state",
+        "candidate_harness_quickstart_execution_audit_current_consumers_8_8_8_lima_17_108_5360",
+        "post_validation_readiness_change_freshness_current_5359_latest_quickstart_5360_final_blocker_index_15_89_5361_post_g61_request_8_117_5362_and_quickstart_artifact_7_64_133_5364_full_suite_evidence",
+        "arc_bot_shell_local_drift_exclusion_audit_current_same_day_recheck_proof_paths_clean_dirty_arc_compatibility_only",
         "exactly_one_valid_operator_choice_recorded",
-        "if_approve_v1_g57_then_implementation_stays_in_approved_metadata_scope",
-        "if_revise_or_pause_then_implementation_does_not_begin"
+        "if_approve_v1_g61_then_implementation_stays_in_approved_test_scoped_import_proof_scope",
+        "if_revise_or_pause_then_implementation_does_not_begin",
+        "post_validation_readiness_change_freshness_evidence_remains_current_before_release_final_branch_tag_cutover_or_readiness_claim",
+        "g61_decision_does_not_pass_release_checklist_authorize_cutover_execute_final_readiness_or_prove_arc_clean_checkpoint"
       ]
     }
   },
   "current_evidence_to_preserve": [
-    "v1_final_blocker_register_after_arc_drift_audit",
-    "v1_arc_bot_shell_local_drift_exclusion_audit",
-    "v1_candidate_handoff_manifest_execution_audit",
-    "v1_g57_request_audit",
-    "v1_g57_approval_request"
+    "v1_public_sparkbot_g56_publication_resolution_audit",
+    "v1_g57_provider_execution_hardening_authorization_audit",
+    "v1_g60_sdk_dependency_vendor_provider_sdk_import_audit",
+    "v1_g61_request_gate_audit",
+    "v1_g61_preapproval_runtime_tree_guard_audit",
+    "v1_g61_preapproval_runtime_tree_guard_audit_current_2026_06_21_no_openai_import_no_provider_client_no_future_files",
+    "v1_g61_operator_decision_packet_status_audit",
+    "v1_post_g61_request_readiness_refresh",
+    "v1_candidate_harness_quickstart",
+    "v1_candidate_harness_quickstart_execution_audit",
+    "v1_candidate_harness_quickstart_post_refresh_consumers_8_8_8_lima_17_108_5360",
+    "v1_consumer_harness_usability_matrix",
+    "v1_current_gate_consistency_audit",
+    "v1_current_candidate_validation_refresh_audit",
+    "v1_post_validation_readiness_change_freshness_audit",
+    "v1_post_validation_readiness_change_freshness_full_suite_passed_same_turn_5359",
+    "v1_latest_quickstart_post_refresh_full_suite_passed_5360",
+    "v1_latest_final_blocker_index_refresh_15_89_5361_passed",
+    "v1_latest_post_g61_request_readiness_refresh_8_117_5362_passed",
+    "v1_latest_quickstart_artifact_refresh_7_64_133_5364_passed",
+    "v1_latest_handoff_freshness_8_117_5362_plus_7_64_133_5364_passed",
+    "v1_arc_bot_shell_local_drift_exclusion_audit_current_7_modified_49_untracked_excluded_from_release_proof",
+    "v1_arc_bot_shell_same_day_drift_recheck_g56_proof_paths_clean_dirty_arc_compatibility_only",
+    "v1_release_candidate_acceptance_checklist_not_release_candidate_g61_operator_blocker",
+    "v1_release_candidate_cutover_runbook_cutover_blocked_at_g61_operator_decision",
+    "v1_final_readiness_audit_template_future_scaffolding_only",
+    "arc_bot_shell_local_drift_caveat_preserved_as_compatibility_only_until_clean_checkpoint_proof_recorded"
   ],
   "boundaries_preserved": {
+    "v1_g61_operator_decision_recorded_by_packet": false,
+    "v1_g61_implementation_approval_inferred_by_packet": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented_by_packet": false,
+    "release_candidate_branch_or_tag_authority_created_by_packet": false,
+    "release_candidate_acceptance_checklist_passed_by_packet": false,
+    "release_candidate_cutover_authorized_by_packet": false,
+    "final_readiness_audit_executed_or_passed_by_packet": false,
+    "arc_bot_shell_clean_checkpoint_proof_claimed_by_packet": false,
     "public_sparkbot_branch_pushed_by_packet": false,
     "public_sparkbot_write_credential_provided_by_packet": false,
-    "v1_g57_operator_decision_recorded_by_packet": false,
-    "v1_g57_implementation_approval_inferred_by_packet": false,
-    "v1_g57_provider_execution_hardening_authorization_implemented_by_packet": false,
     "lima_runtime_files_changed_by_packet": false,
     "lima_public_api_exports_changed_by_packet": false,
     "consumer_repositories_changed_by_packet": false,
+    "dependency_manifest_edited_by_packet": false,
+    "lockfile_edited_by_packet": false,
+    "runtime_vendor_sdk_import_added_to_lima": false,
     "provider_sdk_clients_added": false,
-    "sdk_dependencies_added": false,
-    "vendor_provider_sdk_imports_added": false,
+    "provider_client_construction_added": false,
     "lima_owned_provider_endpoint_resolution_added": false,
     "lima_owned_dns_http_socket_network_calls_added": false,
     "direct_provider_egress_by_lima_added": false,
@@ -85,14 +135,17 @@
     "v1_product_or_production_readiness_claimed": false
   },
   "stop_conditions": [
-    "public_sparkbot_push_without_write_credentials",
-    "v1_g57_implementation_without_exact_approval",
-    "treat_this_packet_as_g57_approval",
+    "v1_g61_implementation_without_exact_approval",
+    "treat_this_packet_as_g61_approval",
+    "treat_this_packet_as_release_candidate_branch_or_tag_authority",
+    "treat_this_packet_as_passed_release_candidate_checklist_cutover_or_final_readiness_audit",
     "consumer_repo_edit_from_packet_lane",
+    "arc_bot_shell_smoke_used_as_clean_checkpoint_while_local_drift_unresolved_or_only_excluded",
+    "dependency_manifest_or_lockfile_edit_from_packet_lane",
     "runtime_or_public_api_change_from_packet_lane",
-    "secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "runtime_vendor_sdk_import_provider_client_secret_credential_token_endpoint_network_or_fallback_required",
     "raw_sensitive_or_patch_content_persistence",
     "v1_product_production_or_completion_claim"
   ],
-  "next_step_after_both_actions": "run_final_v1_readiness_audit_after_public_sparkbot_publication_and_v1_g57_decision_are_resolved"
+  "next_step_after_action": "resolve_v1_g61_operator_decision_then_implement_only_approved_g61_scope_or_preserve_pause_revision_outcome_then_refresh_validation_preserve_post_validation_freshness_release_checklist_final_readiness_cutover_and_recorded_arc_clean_checkpoint_proof"
 }

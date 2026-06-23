@@ -18,6 +18,27 @@ The only valid operator choices remain:
 
 No valid `Approve-V1-G55` decision is recorded. Until that exact approval is recorded in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`, G55 runtime implementation, public API export changes, provider SDK/network egress, SDK clients, endpoint resolution, LIMA-owned network calls, secret lookup, credential value access, fallback, consumer production runtime integration, and product-readiness claims remain blocked.
 
+## Current Status Refresh
+
+This document's original runtime-gate section is historical audit-time evidence from the Arc readiness integration refresh. It is superseded for current V1 operator action by the current G61 readiness packet.
+
+Current controlling V1 state:
+
+- Current active gate: `V1-G61`.
+- Latest completed implementation evidence: `V1-G60`.
+- Latest runtime authority-chain audit: `V1-G56`.
+- Current required action: record exactly one V1-G61 operator choice.
+- Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
+- Current V1-G61 implementation approval recorded: no.
+- Current V1-G61 runtime vendor SDK import execution proof implemented: no.
+- Current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`.
+- Current candidate validation refresh: `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`.
+- Current G61 operator decision packet status audit: `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, awaiting exactly one valid operator choice.
+- Current candidate handoff manifest: `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`, with latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests.
+- Current quickstart artifact freshness: `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`, with latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
+
+The consumer target evidence below remains useful for historical first-shell traceability only. It does not override the current G61 operator-decision blocker, does not approve G61 implementation, and does not prove V1 product readiness.
+
 ## First Consumer Targets
 
 | Consumer target | Current evidence | State |
@@ -82,6 +103,8 @@ This is an external repository-permission blocker only. It does not change LIMA 
 
 ## Recommended Next Step
 
-Record exactly one valid operator choice in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`.
+Historical audit-time next step was to record exactly one valid operator choice in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md`.
 
 If the intended path is implementation, the choice must be `Approve-V1-G55` using the exact required wording from `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`. Otherwise, keep LIMA at `CANDIDATE_ONLY` and continue only docs/tests/fixtures review, guard, audit, request-revision, or decision-recording work.
+
+Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`. Stop before implementation unless `Approve-V1-G61` is recorded with the exact approval wording.

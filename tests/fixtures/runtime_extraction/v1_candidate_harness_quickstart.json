@@ -1,0 +1,120 @@
+{
+  "quickstart_id": "v1_candidate_harness_quickstart",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-21",
+  "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_lima_commit_before_quickstart": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "quickstart_verdict": "QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER",
+  "documents": {
+    "quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
+    "quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
+    "candidate_handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "consumer_harness_usability_matrix": "docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "post_validation_readiness_change_freshness_audit": "docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
+    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md"
+  },
+  "commands": {
+    "public_sparkbot": [
+      "Set-Location C:\\Users\\limap\\Sparkbot-public",
+      "python -m pytest -q tests\\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "git diff --check"
+    ],
+    "accessible_sparkbot": [
+      "Set-Location C:\\Users\\limap\\Sparkbot",
+      "python -m pytest -q tests\\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "git diff --check"
+    ],
+    "arc_bot_shell": [
+      "Set-Location C:\\Users\\limap\\Arc-Bot-shell",
+      "python -m pytest -q tests\\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "git diff --check"
+    ],
+    "lima_ai_os": [
+      "Set-Location C:\\Users\\limap\\LIMA-AI-OS",
+      "python -m compileall lima",
+      "python -m pytest -q tests -p no:cacheprovider",
+      "git diff --check",
+      "git diff --cached --check"
+    ]
+  },
+  "expected_results": {
+    "public_sparkbot": "8 passed and diff check passes",
+    "accessible_sparkbot": "8 passed and diff check passes",
+    "arc_bot_shell": "8 passed and diff check passes",
+    "lima_ai_os": "compileall passes full suite passes and diff checks pass"
+  },
+  "pass_means": [
+    "public_sparkbot_fake_executor_smoke_passes",
+    "accessible_sparkbot_fake_executor_smoke_passes",
+    "arc_bot_shell_fake_executor_smoke_passes",
+    "lima_compile_full_suite_and_diff_hygiene_pass",
+    "g61_operator_decision_packet_status_audit_awaiting_choice",
+    "current_gate_consistency_audit_rejects_release_candidate_claims_before_final_readiness_pass_and_clean_arc_checkpoint_proof",
+    "candidate_remains_local_harness_smoke_only"
+  ],
+  "current_evidence_to_preserve": {
+    "public_sparkbot_smoke_tests_passed": 8,
+    "accessible_sparkbot_smoke_tests_passed": 8,
+    "arc_bot_shell_smoke_tests_passed": 8,
+    "lima_quickstart_focused_tests_passed": 17,
+    "lima_quickstart_broader_v1_harness_readiness_tests_passed": 108,
+    "lima_quickstart_full_suite_tests_passed": 5360,
+    "latest_final_blocker_index_focused_tests_passed": 15,
+    "latest_final_blocker_index_broader_tests_passed": 89,
+    "latest_final_blocker_index_full_suite_tests_passed": 5361,
+    "latest_post_g61_request_readiness_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_readiness_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_readiness_refresh_full_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_suite_tests_passed": 5364,
+    "release_cutover_final_readiness_production_or_g61_authority_created": false,
+    "arc_bot_shell_clean_checkpoint_authority_created": false
+  },
+  "pass_does_not_mean": [
+    "v1_g61_approved",
+    "runtime_vendor_sdk_import_execution_proven",
+    "runtime_vendor_sdk_imports_in_lima_approved",
+    "future_final_readiness_audit_executed_or_passed",
+    "release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim_authorized",
+    "arc_bot_shell_clean_checkpoint_proven_for_release_claims_while_local_drift_excluded",
+    "built_in_provider_sdk_clients_approved",
+    "provider_client_construction_approved",
+    "endpoint_resolution_network_credential_fallback_connector_or_consumer_production_behavior_approved",
+    "physical_world_v1_product_or_production_readiness_approved"
+  ],
+  "required_false_boundaries": {
+    "v1_g61_implementation_approval_recorded_by_quickstart": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented_by_quickstart": false,
+    "v1_0_0_release_candidate_branch_or_tag_created_by_quickstart": false,
+    "v1_release_candidate_pass_final_readiness_pass_branch_tag_cutover_or_readiness_claim_authorized_by_quickstart": false,
+    "future_final_readiness_audit_executed_by_quickstart": false,
+    "arc_bot_shell_clean_checkpoint_evidence_claimed_by_quickstart": false,
+    "lima_runtime_files_changed_by_quickstart": false,
+    "lima_public_api_exports_changed_by_quickstart": false,
+    "consumer_repositories_changed_by_quickstart": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "provider_sdk_clients_added": false,
+    "provider_client_construction_added": false,
+    "lockfile_edits_added": false,
+    "lima_owned_provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "direct_provider_egress_by_lima_added": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "provider_configuration_changes_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "v1_product_or_production_readiness_claimed": false
+  },
+  "next_action": "record_exactly_one_v1_g61_operator_choice"
+}

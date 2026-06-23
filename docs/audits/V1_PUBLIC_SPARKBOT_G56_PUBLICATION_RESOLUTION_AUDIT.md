@@ -5,7 +5,9 @@ Branch: `docs-v1-public-sparkbot-g56-publication-resolved`
 Source LIMA commit before audit: `cbc16dc`
 API status: `CANDIDATE_ONLY`
 
-This audit records the resolution of the public Sparkbot V1-G56 publication blocker. It is LIMA-side docs/tests/fixtures-only evidence. It does not approve V1-G57 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
+This audit records the resolution of the public Sparkbot V1-G56 publication blocker. It is LIMA-side docs/tests/fixtures-only evidence. At audit time, it did not approve V1-G57 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add SDK dependencies, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
+
+Current status refresh: later candidate evidence records V1-G57 through V1-G60 as completed candidate-only gates. The active blocker is now V1-G61, which requires an exact `Approve-V1-G61` operator decision before any runtime vendor SDK import execution proof implementation.
 
 ## Audit Verdict
 
@@ -52,15 +54,27 @@ Sparkbot reported boundary confirmation:
 
 Sparkbot noted that this is a temporary evidence branch, not a merge candidate for current main as-is. Candidate branch public safety scan flags robotics text inside false-valued boundary-test fields; current main safety scan still passes.
 
-## Remaining Blocker
+## Original Residual Blocker At Audit Time
 
-The public Sparkbot publication blocker is resolved. The remaining V1 blocker is the V1-G57 operator decision:
+The public Sparkbot publication blocker was resolved by this audit. At audit time, the remaining V1 blocker was the V1-G57 operator decision:
 
 - Gate packet: `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`
 - Current state: no valid implementation approval recorded.
 - Valid operator choices: `Approve-V1-G57`, `Revise-V1-G57`, or `Pause`.
 
-## Boundaries Preserved
+## Current Status Refresh
+
+As of the current candidate evidence refresh:
+
+- Public Sparkbot G56 publication blocker: resolved.
+- V1-G57 through V1-G60 candidate-only gates: completed.
+- V1 candidate harness quickstart execution audit: current local public Sparkbot, accessible Sparkbot, and Arc-Bot-shell smoke pass evidence only.
+- Active blocker: V1-G61 runtime vendor SDK import execution proof operator decision.
+- Required decision packet: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`.
+- Current quickstart audit: `docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`.
+- Required exact approval phrase before implementation: `Approve-V1-G61`.
+
+## Audit-Time Boundaries Preserved
 
 - V1-G57 implementation approval recorded: no.
 - V1-G57 provider execution hardening authorization implemented: no.
@@ -81,6 +95,19 @@ The public Sparkbot publication blocker is resolved. The remaining V1 blocker is
 - Consumer production runtime integration added: no.
 - V1.0 completion, product readiness, or production readiness claimed: no.
 
+## Current Boundary Refresh
+
+- V1-G57 through V1-G60 are now completed candidate-only evidence.
+- V1-G61 implementation approval recorded: no.
+- V1-G61 runtime vendor SDK import execution proof implemented: no.
+- Runtime vendor SDK imports added to `lima/`: no.
+- Dependency or lockfile changes authorized by this audit: no.
+- Provider client construction authorized by this audit: no.
+- LIMA-owned endpoint resolution or network egress authorized by this audit: no.
+- Credential, secret, provider token, or API key access authorized by this audit: no.
+- Consumer production runtime integration authorized by this audit: no.
+- V1.0 completion, product readiness, or production readiness claimed by this audit: no.
+
 ## Recommended Next Step
 
-Record exactly one V1-G57 operator choice in `docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_OPERATOR_DECISION_PACKET.md`. Do not implement V1-G57 unless `Approve-V1-G57` is recorded with the exact required wording.
+Record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`. Do not implement V1-G61 unless `Approve-V1-G61` is recorded with the exact required wording.

@@ -6562,3 +6562,32 @@ Consequences:
 - No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this refresh.
 - Public Sparkbot remote publication remains an external permission blocker, not a LIMA runtime blocker.
 - No provider SDK/network egress invocation, built-in provider SDK client, SDK dependency, vendor SDK import, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, fallback execution, consumer production integration, connector/browser/network/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this refresh.
+
+## ADR-0340: V1-G61 Supersedes Earlier V1 Decision-Log Gates As Current Blocker
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records `V1-G61` as the current operator-decision gate for the runtime vendor SDK import execution proof request. Earlier V1 ADRs, including the V1-G55 decision-log status and consumer target refresh, remain historical evidence only and do not describe the current active blocker.
+
+Context:
+
+The current V1 evidence chain has advanced beyond the V1-G55 and V1-G56 provider SDK/network lanes. The runtime authority chain is audited through `V1-G56`; completed implementation evidence is refreshed through `V1-G60`; the request-only V1-G61 approval packet, request-gate audit, preapproval runtime-tree guard audit, operator decision packet status audit, post-G61 request readiness refresh, current gate consistency audit, current validation refresh including latest LIMA readiness freshness 15/89/5361 evidence and latest handoff freshness 8/117/5362 plus 7/64/133/5364 evidence, release-candidate checklist, cutover runbook, and final readiness audit template now define the current candidate boundary.
+
+Consequences:
+
+- Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
+- The V1-G61 operator decision packet status audit proves the packet is present, no approval is recorded, and exactly one valid operator choice is still required.
+- Operator approval is not recorded by this ADR.
+- V1-G61 runtime implementation remains unapproved.
+- The next smallest safe action is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`.
+- If `Approve-V1-G61` is recorded later, implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`.
+- If `Revise-V1-G61` or `Pause` is recorded, implementation must not begin and the candidate readiness packet must be refreshed around that outcome.
+- The current validation refresh records 153 focused current-gate/release-readiness tests, 5350 full LIMA suite tests, latest LIMA readiness freshness evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passing, but successful tests do not approve G61 implementation or V1 product readiness.
+- No runtime behavior is added by this decision-log refresh.
+- No `lima/` runtime files are changed by this decision-log refresh.
+- No public API exports are changed by this decision-log refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
+- No dependency manifest or lockfile is changed by this decision-log refresh.
+- No runtime vendor SDK import execution proof, runtime vendor SDK import in `lima/`, built-in provider SDK client, provider client construction, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector/browser/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this ADR.

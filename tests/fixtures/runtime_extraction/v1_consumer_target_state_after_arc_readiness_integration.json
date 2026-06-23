@@ -11,6 +11,29 @@
   ],
   "v1_g55_operator_approval_recorded": false,
   "v1_g55_runtime_implementation_approved": false,
+  "current_status_refresh": {
+    "current_gate": "V1-G61",
+    "latest_completed_gate": "V1-G60",
+    "latest_authority_chain_audit": "V1-G56",
+    "required_next_action": "record_exactly_one_v1_g61_operator_choice",
+    "valid_operator_choices": [
+      "Approve-V1-G61",
+      "Revise-V1-G61",
+      "Pause"
+    ],
+    "v1_g61_operator_approval_recorded": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented": false,
+    "g61_operator_decision_packet_status_audit": "awaiting_exactly_one_valid_operator_choice",
+    "historical_g55_gate_superseded_for_current_action": true,
+    "latest_post_g61_request_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_refresh_full_lima_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
+    "latest_handoff_freshness_authority_created": false
+  },
   "documents": {
     "current_project_state": "docs/CURRENT_PROJECT_STATE.md",
     "readme": "README.md",
@@ -18,6 +41,12 @@
     "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
     "g55_operator_decision_packet": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_OPERATOR_DECISION_PACKET.md",
     "g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "candidate_test_handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
     "arc_readiness_bundle_audit": "docs/audits/V1_ARC_PHASE1_READINESS_BUNDLE_AUDIT.md",
     "arc_runtime_authority_gating_audit": "docs/audits/V1_ARC_PHASE1_RUNTIME_AUTHORITY_GATING_AUDIT.md",
     "arc_runtime_gating_readiness_integration_audit": "docs/audits/V1_ARC_RUNTIME_GATING_READINESS_INTEGRATION_AUDIT.md"
@@ -91,5 +120,6 @@
     "v1_product_readiness_claimed": false,
     "production_readiness_claimed": false
   },
-  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g55_decision_record"
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g61_operator_decision_packet",
+  "historical_recommended_next_step": "record_one_valid_operator_choice_in_v1_g55_decision_record"
 }
