@@ -33,6 +33,9 @@ def test_v1_consumer_checkpoint_manifest_fixture_and_docs_exist() -> None:
     assert fixture["source_lima_commit_before_manifest"] == (
         "37626bf236bf96c8a57a3ca351668e90eeb0e651"
     )
+    assert fixture["lima_commit_under_audit"] == (
+        "c0a758a6aae802669f2d023f83206d7f1efd236c"
+    )
     assert fixture["manifest_verdict"] == "CONSUMER_CHECKPOINTS_PARTIAL_ARC_DIRTY"
 
     for relative_path in fixture["documents"].values():
@@ -104,6 +107,7 @@ def test_v1_consumer_checkpoint_manifest_text_matches_fixture() -> None:
 
     assert "# V1 Consumer Checkpoint Manifest" in text
     assert fixture["source_lima_commit_before_manifest"] in text
+    assert fixture["lima_commit_under_audit"] in text
     assert "CONSUMER_CHECKPOINTS_PARTIAL_ARC_DIRTY" in text
     assert "sparkpit-labs/Sparkbot" in text
     assert "armpit-symphony/Sparkbot_shell" in text

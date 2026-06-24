@@ -5,6 +5,7 @@
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
   "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
   "source_lima_commit_before_manifest": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "lima_commit_under_audit": "c0a758a6aae802669f2d023f83206d7f1efd236c",
   "manifest_verdict": "CONSUMER_CHECKPOINTS_PARTIAL_ARC_DIRTY",
   "documents": {
     "manifest": "docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md",

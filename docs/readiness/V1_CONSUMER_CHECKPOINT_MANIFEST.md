@@ -3,6 +3,7 @@
 Date: 2026-06-22
 Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
 Source LIMA commit before manifest: `37626bf236bf96c8a57a3ca351668e90eeb0e651`
+LIMA commit under audit: `c0a758a6aae802669f2d023f83206d7f1efd236c`
 API status: `CANDIDATE_ONLY`
 
 This manifest records the consumer repository checkpoints that can feed a future V1 final readiness audit for Sparkbot and Arc-Bot-shell harness use.
