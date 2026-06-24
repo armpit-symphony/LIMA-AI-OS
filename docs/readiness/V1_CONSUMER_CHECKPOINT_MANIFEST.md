@@ -23,7 +23,7 @@ Public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell are curr
 | Public Sparkbot | `sparkpit-labs/Sparkbot` | `C:\Users\limap\Sparkbot-public` | `v1-g56-runtime-authority-chain-audit` | `ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2` | clean | candidate smoke checkpoint only |
 | Accessible Sparkbot | `armpit-symphony/Sparkbot` | `C:\Users\limap\Sparkbot` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | clean | candidate smoke checkpoint only |
 | Sparkbot shell | `armpit-symphony/Sparkbot_shell` | `C:\Users\limap\Sparkbot_shell` | `sparkbot-shell-work-settings-runtime-preview` | `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | clean | shell checkpoint only |
-| Arc-Bot-shell | `armpit-symphony/Arc-Bot-shell` | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `5932c579b75ebb85980f1a40cf1bf0306fe22c6a` | clean | clean checkpoint proof recorded |
+| Arc-Bot-shell | `armpit-symphony/Arc-Bot-shell` | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `e4dbcf6ff81384be874c1c8f7272dd44dde34945` | clean | clean checkpoint proof recorded |
 
 ## Required Consumer Smoke Commands
 

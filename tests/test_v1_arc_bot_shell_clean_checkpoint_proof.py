@@ -39,15 +39,15 @@ def test_v1_arc_bot_shell_clean_checkpoint_records_commit_and_validation() -> No
     assert arc["repository"] == "armpit-symphony/Arc-Bot-shell"
     assert arc["branch"] == "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke"
     assert arc["previous_dirty_checkpoint"] == "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0"
-    assert arc["clean_checkpoint_commit"] == "5932c579b75ebb85980f1a40cf1bf0306fe22c6a"
+    assert arc["clean_checkpoint_commit"] == "e4dbcf6ff81384be874c1c8f7272dd44dde34945"
     assert arc["local_status_clean_after_push"] is True
     assert arc["pushed_to_origin"] is True
     assert fixture["validation"] == {
-        "full_pytest": "326 passed",
+        "full_pytest": "327 passed",
         "compileall": "passed",
         "git_diff_check": "passed_with_line_ending_warnings_only",
         "git_diff_cached_check": "passed",
-        "arc_worker_smoke": "27 passed",
+        "arc_worker_smoke": "31 passed",
     }
 
 
@@ -68,8 +68,8 @@ def test_v1_arc_bot_shell_clean_checkpoint_text_matches_fixture() -> None:
     assert "# V1 Arc-Bot-shell Clean Checkpoint Proof" in text
     assert fixture["verdict"] in text
     assert fixture["arc_bot_shell"]["clean_checkpoint_commit"] in text
-    assert "326 passed" in text
-    assert "27 passed" in text
+    assert "327 passed" in text
+    assert "31 passed" in text
     assert "LIMA remains `CANDIDATE_ONLY`" in text
     assert "V1.0.0 branch or tag authorized by this proof: no." in text
 

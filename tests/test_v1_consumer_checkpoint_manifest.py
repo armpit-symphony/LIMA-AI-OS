@@ -73,7 +73,7 @@ def test_v1_consumer_checkpoint_manifest_records_consumer_commits() -> None:
         "repository": "armpit-symphony/Arc-Bot-shell",
         "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
         "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-        "commit": "5932c579b75ebb85980f1a40cf1bf0306fe22c6a",
+        "commit": "e4dbcf6ff81384be874c1c8f7272dd44dde34945",
         "local_status_clean": True,
         "clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
         "release_proof_use": "clean_checkpoint_proof_recorded_candidate_only",
@@ -119,7 +119,7 @@ def test_v1_consumer_checkpoint_manifest_text_matches_fixture() -> None:
     assert "ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2" in text
     assert "ddaa4ccaacd328ddcc1f00a040c2c140abee428e" in text
     assert "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc" in text
-    assert "5932c579b75ebb85980f1a40cf1bf0306fe22c6a" in text
+    assert "e4dbcf6ff81384be874c1c8f7272dd44dde34945" in text
     assert "clean checkpoint proof recorded" in text
     assert "Final readiness audit executed by this manifest: false." in text
     assert "Arc-Bot-shell clean-checkpoint proof recorded by referenced audit: true." in text

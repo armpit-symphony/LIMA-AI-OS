@@ -10,16 +10,16 @@
     "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
     "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
     "previous_dirty_checkpoint": "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0",
-    "clean_checkpoint_commit": "5932c579b75ebb85980f1a40cf1bf0306fe22c6a",
+    "clean_checkpoint_commit": "e4dbcf6ff81384be874c1c8f7272dd44dde34945",
     "local_status_clean_after_push": true,
     "pushed_to_origin": true
   },
   "validation": {
-    "full_pytest": "326 passed",
+    "full_pytest": "327 passed",
     "compileall": "passed",
     "git_diff_check": "passed_with_line_ending_warnings_only",
     "git_diff_cached_check": "passed",
-    "arc_worker_smoke": "27 passed"
+    "arc_worker_smoke": "31 passed"
   },
   "boundaries": {
     "arc_bot_shell_clean_checkpoint_proof_recorded": true,

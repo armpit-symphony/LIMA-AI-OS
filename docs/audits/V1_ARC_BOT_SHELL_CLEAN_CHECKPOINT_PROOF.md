@@ -22,7 +22,7 @@ Verdict: `PASS_ARC_BOT_SHELL_CLEAN_CHECKPOINT_RECORDED`
 
 Arc-Bot-shell now has a clean, pushed checkpoint on
 `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at
-`5932c579b75ebb85980f1a40cf1bf0306fe22c6a`.
+`e4dbcf6ff81384be874c1c8f7272dd44dde34945`.
 
 ## Arc Checkpoint
 
@@ -30,17 +30,17 @@ Arc-Bot-shell now has a clean, pushed checkpoint on
 - Local path: `C:\Users\limap\Arc-Bot-shell`
 - Branch: `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke`
 - Previous dirty checkpoint: `2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0`
-- Clean checkpoint commit: `5932c579b75ebb85980f1a40cf1bf0306fe22c6a`
+- Clean checkpoint commit: `e4dbcf6ff81384be874c1c8f7272dd44dde34945`
 - Local status after push: clean and tracking origin with no ahead/behind marker
 - Pushed to origin: yes
 
 ## Validation Evidence
 
-- `python -m pytest -q -p no:cacheprovider`: `326 passed`
+- `python -m pytest -q -p no:cacheprovider`: `327 passed`
 - `python -m compileall arc_guardian_spine phase0_runtime_ui_scaffold phase1_business_shell_inventory phase6_lima_office_integration phase7_approval_evidence phase10_field_deployment phase11_pilot_readiness phase12_mvp_completion`: passed
 - `git diff --check`: passed with line-ending conversion warnings only
 - `git diff --cached --check`: passed
-- `.\scripts\arc_worker_smoke.ps1`: compact projections emitted and focused smoke tests `27 passed`
+- `.\scripts\arc_worker_smoke.ps1`: compact projections emitted and focused smoke tests `31 passed`
 
 The Arc smoke script preserves read-only boundaries: it emits projections and
 runs local tests only. It does not install software, start services, attach to a
