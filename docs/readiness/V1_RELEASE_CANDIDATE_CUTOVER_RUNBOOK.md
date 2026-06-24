@@ -17,6 +17,11 @@ Verdict: `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`
 
 The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` is recorded and the bounded G61 proof/closeout exists, but this runbook may be used only as a future procedure after the release-candidate acceptance checklist is satisfied, the final readiness audit passes, and Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated.
 
+## 2026-06-24 Arc Clean Checkpoint Supplement
+
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `5932c579b75ebb85980f1a40cf1bf0306fe22c6a`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+
+This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final readiness, release-candidate acceptance, and cutover remain blocked until their own audits and operator-controlled runbook steps pass.
 ## Required Inputs Before Cutover
 
 - V1 final blocker register: `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`
@@ -30,6 +35,7 @@ The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` 
 - V1 current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`
 - V1-G61 operator decision packet status audit: `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`
 - V1 Arc-Bot-shell local drift exclusion audit: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
+- V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 operator unblock action packet: `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`
 - V1 final candidate branch index: `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`
 - Future V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`

@@ -1,0 +1,40 @@
+{
+  "proof_id": "v1_arc_bot_shell_clean_checkpoint_proof",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-24",
+  "lima_commit_before_proof_refresh": "2f46248ea90fef5efcb49f3892c275dc64621f87",
+  "verdict": "PASS_ARC_BOT_SHELL_CLEAN_CHECKPOINT_RECORDED",
+  "document": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
+  "arc_bot_shell": {
+    "repository": "armpit-symphony/Arc-Bot-shell",
+    "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
+    "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+    "previous_dirty_checkpoint": "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0",
+    "clean_checkpoint_commit": "5932c579b75ebb85980f1a40cf1bf0306fe22c6a",
+    "local_status_clean_after_push": true,
+    "pushed_to_origin": true
+  },
+  "validation": {
+    "full_pytest": "326 passed",
+    "compileall": "passed",
+    "git_diff_check": "passed_with_line_ending_warnings_only",
+    "git_diff_cached_check": "passed",
+    "arc_worker_smoke": "27 passed"
+  },
+  "boundaries": {
+    "arc_bot_shell_clean_checkpoint_proof_recorded": true,
+    "final_readiness_audit_executed": false,
+    "release_candidate_checklist_passed": false,
+    "release_candidate_cutover_authorized": false,
+    "v1_0_0_branch_or_tag_authorized": false,
+    "consumer_production_runtime_integration_approved": false,
+    "lima_runtime_files_changed": false,
+    "provider_sdk_clients_added": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "secret_lookup_or_credential_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "product_or_production_readiness_claimed": false
+  },
+  "release_gate_effect": "arc_dirty_worktree_checkpoint_blocker_closed_current_blocker_final_audit_and_cutover_still_required"
+}

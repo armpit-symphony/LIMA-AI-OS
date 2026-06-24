@@ -93,6 +93,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`
 - V1 post-validation readiness-change freshness audit: `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`
 - V1 Arc-Bot-shell local drift exclusion audit: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
+- V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
@@ -152,3 +153,9 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 2. If `Approve-V1-G61` is recorded later, implement only the exact runtime vendor SDK import execution proof scope approved by the G61 request packet.
 3. Re-run current candidate validation after any approved G61 work.
 4. Pass the release-candidate acceptance checklist, final readiness audit, and clean Arc-Bot-shell checkpoint proof before any branch, tag, cutover, or readiness action.
+
+## 2026-06-24 Arc Clean Checkpoint Supplement
+
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `5932c579b75ebb85980f1a40cf1bf0306fe22c6a`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+
+This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final readiness, release-candidate acceptance, and cutover remain blocked until their own audits and operator-controlled runbook steps pass.

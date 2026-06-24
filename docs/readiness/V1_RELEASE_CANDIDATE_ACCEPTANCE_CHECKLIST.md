@@ -17,6 +17,11 @@ Verdict: `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKER
 
 LIMA-AI-OS is not a V1.0.0 release candidate yet. The current candidate is locally testable by Sparkbot and Arc-Bot-shell harnesses only as fake-executor, sanitized-fixture, no-network smoke evidence. The V1-G61 operator blocker is resolved by `Approve-V1-G61` and bounded proof closeout, but the release-candidate gate remains blocked until the final readiness audit passes, release-candidate cutover is authorized through the runbook, and Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated.
 
+## 2026-06-24 Arc Clean Checkpoint Supplement
+
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `5932c579b75ebb85980f1a40cf1bf0306fe22c6a`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+
+This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final readiness, release-candidate acceptance, and cutover remain blocked until their own audits and operator-controlled runbook steps pass.
 ## Required Release-Candidate Inputs
 
 - V1 final blocker register: `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`
@@ -32,6 +37,7 @@ LIMA-AI-OS is not a V1.0.0 release candidate yet. The current candidate is local
 - V1 current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`
 - V1-G61 operator decision packet status audit: `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`
 - V1 Arc-Bot-shell local drift exclusion audit: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
+- V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 post-G61 request readiness refresh: `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`
 - V1-G61 operator decision packet: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`
 - V1-G61 approval request: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`
