@@ -39,7 +39,7 @@ def test_v1_arc_bot_shell_clean_checkpoint_records_commit_and_validation() -> No
     assert arc["repository"] == "armpit-symphony/Arc-Bot-shell"
     assert arc["branch"] == "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke"
     assert arc["previous_dirty_checkpoint"] == "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0"
-    assert arc["clean_checkpoint_commit"] == "e4dbcf6ff81384be874c1c8f7272dd44dde34945"
+    assert arc["clean_checkpoint_commit"] == "dc004bac05787999402a1b7233430d259f0c4000"
     assert arc["local_status_clean_after_push"] is True
     assert arc["pushed_to_origin"] is True
     assert fixture["validation"] == {

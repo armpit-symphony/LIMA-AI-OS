@@ -22,7 +22,7 @@ Verdict: `PASS_ARC_BOT_SHELL_CLEAN_CHECKPOINT_RECORDED`
 
 Arc-Bot-shell now has a clean, pushed checkpoint on
 `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at
-`e4dbcf6ff81384be874c1c8f7272dd44dde34945`.
+`dc004bac05787999402a1b7233430d259f0c4000`.
 
 ## Arc Checkpoint
 
@@ -30,7 +30,7 @@ Arc-Bot-shell now has a clean, pushed checkpoint on
 - Local path: `C:\Users\limap\Arc-Bot-shell`
 - Branch: `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke`
 - Previous dirty checkpoint: `2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0`
-- Clean checkpoint commit: `e4dbcf6ff81384be874c1c8f7272dd44dde34945`
+- Clean checkpoint commit: `dc004bac05787999402a1b7233430d259f0c4000`
 - Local status after push: clean and tracking origin with no ahead/behind marker
 - Pushed to origin: yes
 

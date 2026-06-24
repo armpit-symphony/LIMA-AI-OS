@@ -19,7 +19,7 @@ LIMA-AI-OS is not a V1.0.0 release candidate yet. The current candidate is local
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
-Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `e4dbcf6ff81384be874c1c8f7272dd44dde34945`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `dc004bac05787999402a1b7233430d259f0c4000`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
 
 This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final readiness, release-candidate acceptance, and cutover remain blocked until their own audits and operator-controlled runbook steps pass.
 ## Required Release-Candidate Inputs
