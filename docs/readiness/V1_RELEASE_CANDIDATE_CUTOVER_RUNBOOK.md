@@ -19,7 +19,7 @@ The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` 
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
-Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `529ac5177531a6d926186807ba8a0a9776ad7fbe`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
 
 This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final readiness, release-candidate acceptance, and cutover remain blocked until their own audits and operator-controlled runbook steps pass.
 ## Required Inputs Before Cutover

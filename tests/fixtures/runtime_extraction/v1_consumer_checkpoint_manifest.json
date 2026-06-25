@@ -44,7 +44,7 @@
       "repository": "armpit-symphony/Arc-Bot-shell",
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-      "commit": "529ac5177531a6d926186807ba8a0a9776ad7fbe",
+      "commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
       "local_status_clean": true,
       "clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
       "release_proof_use": "clean_checkpoint_proof_recorded_candidate_only"
