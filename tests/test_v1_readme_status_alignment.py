@@ -554,13 +554,14 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "current validation refresh evidence, post-validation freshness evidence, and recorded clean Arc-Bot-shell checkpoint proof before any future V1.0.0 release-candidate branch, tag, cutover, or readiness claim" in text
     assert "consumer smoke path testable with fake in-process executors and sanitized fixtures" in text
     assert "The V1.0.0 release-candidate acceptance checklist and cutover runbook remain blocked by final readiness and explicit cutover authorization." in text
-    assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until the release checklist and cutover runbook pass after G61 closeout, the future final readiness audit passes, and explicit cutover authorization is recorded." in text
+    assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until the release checklist and cutover runbook pass after G61 closeout, a final readiness pass is recorded, and explicit cutover authorization is recorded." in text
     assert "former public Sparkbot G56 GitHub 403 publication blocker is resolved" in text
     assert "V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md" in text
     assert "public Sparkbot remote publication remains blocked by GitHub 403" not in text
     assert "`V1-G60` is complete as approved dependency declaration" in text
     assert "`openai>=1.0.0,<3.0.0`" in text
-    assert "The active next V1 lane is final readiness: execute the final readiness audit and require explicit cutover authorization before any branch, tag, cutover, or readiness claim." in text
+    assert "The latest V1 final readiness audit execution is recorded in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`." in text
+    assert "release-candidate checklist refresh and explicit cutover authorization remain required before any branch, tag, cutover, or readiness claim" in text
     assert "the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence" in text
     assert "Do not edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients" in text
     assert "edit lockfiles" in text
@@ -680,9 +681,9 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "Current snapshot authority note" in state_text
     assert "the `Current V1 Gate Snapshot` above is the controlling V1 state" in state_text
     assert "do not override the post-G61 release-readiness gate" in state_text
-    assert "The next smallest safe V1 step is the future final readiness audit." in state_text
+    assert "The next smallest safe V1 step is release-candidate checklist refresh against the blocked final readiness audit result, followed by explicit cutover authorization if the operator approves." in state_text
     assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until" in state_text
-    assert "the future final readiness audit pass after G61 closeout and explicit cutover authorization is recorded" in state_text
+    assert "a final readiness pass after G61 closeout and explicit cutover authorization is recorded" in state_text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in state_text
     assert "After the bounded V1-G61 import proof, do not edit Sparkbot or Arc-Bot-shell for G61" in state_text
     assert "make LIMA-owned DNS/HTTP/socket/network calls" in state_text

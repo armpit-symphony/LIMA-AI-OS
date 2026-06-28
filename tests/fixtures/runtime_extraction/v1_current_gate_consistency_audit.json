@@ -78,8 +78,9 @@
   "required_snippets_by_document": {
     "readme": [
       "LIMA remains `CANDIDATE_ONLY`.",
-      "The active next V1 lane is post-G61 release-candidate readiness refresh.",
-      "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md"
+      "The active next V1 lane is release-candidate checklist refresh against the blocked final readiness audit result",
+      "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+      "docs/audits/V1_FINAL_READINESS_AUDIT.md"
     ],
     "current_project_state": [
       "V1-G61 implementation approval recorded: yes, limited to bounded local import proof.",
