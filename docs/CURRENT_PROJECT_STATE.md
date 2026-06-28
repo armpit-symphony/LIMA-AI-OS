@@ -85,6 +85,12 @@ Latest V1 checkpoint:
 - V1 release-candidate cutover authorization packet status audit: complete with verdict
   `PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION` in
   `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`; it verifies recorded valid cutover operator choice count `0` and creates no branch, tag, cutover, product-readiness, or production-readiness authority.
+- V1 current goal status audit: complete with verdict
+  `GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED` in
+  `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md`; it records achieved evidence and unproven V1.0.0 requirements while preserving the cutover blocker.
+- V1 consumer checkpoint freshness audit: complete with verdict
+  `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` in
+  `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md`; it records current clean consumer checkpoints and smoke/diff freshness without cutover authority.
 - V1 operator unblock action packet: added as the current operator handoff packet for the exact G61 decision in
   `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`.
 - V1 final candidate branch index: refreshed as the saved branch/checkpoint map and future branch/tag guard in

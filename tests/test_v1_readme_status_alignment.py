@@ -569,6 +569,12 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md" in text
     assert "verifies recorded valid cutover operator choice count `0`" in text
     assert "do not authorize release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product readiness, production readiness, or consumer production integration" in text
+    assert "V1_CURRENT_GOAL_STATUS_AUDIT.md" in text
+    assert "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED" in text
+    assert "V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md" in text
+    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED" in text
+    assert "consumer smoke and diff freshness through public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell" in text
+    assert "consumer production integration authority" in text
     assert "the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence" in text
     assert "Do not edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients" in text
     assert "edit lockfiles" in text
@@ -685,6 +691,14 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "V1 release-candidate cutover authorization packet status audit: complete" in state_text
     assert "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION" in state_text
     assert "recorded valid cutover operator choice count `0`" in state_text
+    assert "V1 current goal status audit: complete" in state_text
+    assert "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED" in state_text
+    assert "V1_CURRENT_GOAL_STATUS_AUDIT.md" in state_text
+    assert "unproven V1.0.0 requirements while preserving the cutover blocker" in state_text
+    assert "V1 consumer checkpoint freshness audit: complete" in state_text
+    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED" in state_text
+    assert "V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md" in state_text
+    assert "current clean consumer checkpoints and smoke/diff freshness without cutover authority" in state_text
     assert "V1 final blocker register: refreshed with final readiness and cutover blockers" in state_text
     assert "V1_FINAL_BLOCKER_REGISTER.md" in state_text
     assert "V1 operator unblock action packet: added as the current operator handoff packet" in state_text
