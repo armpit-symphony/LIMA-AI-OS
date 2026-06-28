@@ -108,7 +108,7 @@
       "The V1-G61 operator decision packet status audit proves `Approve-V1-G61` is recorded for the bounded local import execution proof only."
     ],
     "product_readiness_target": [
-      "The latest completed gate is `V1-G60`.",
+      "The latest completed implementation gate is `V1-G60`.",
       "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only."
     ],
     "readiness_gap_matrix": [

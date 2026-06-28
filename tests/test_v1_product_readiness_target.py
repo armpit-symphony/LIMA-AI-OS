@@ -35,7 +35,7 @@ def test_v1_target_documents_and_fixture_exist() -> None:
         "prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request"
     )
     assert fixture["source_commit_before_refresh"] == (
-        "37626bf236bf96c8a57a3ca351668e90eeb0e651"
+        "1be5cbc30184dfbe610d288b4c487b18f936d64c"
     )
 
     for relative_path in fixture["documents"].values():
@@ -170,11 +170,11 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
     assert current["v1_consumer_harness_usability_matrix_current"] is True
     assert current["v1_release_candidate_acceptance_checklist_current"] is True
     assert current["v1_release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
+        "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
     assert current["v1_release_candidate_cutover_runbook_current"] is True
     assert current["v1_release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
+        "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     )
     assert current["v1_current_gate_consistency_audit_complete"] is True
     assert current["v1_current_candidate_validation_refresh_complete"] is True
@@ -321,6 +321,23 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
         "Revise-V1-G61",
         "Pause",
     ]
+    assert current["v1_final_readiness_reconciliation_verdict"] == (
+        "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
+    )
+    assert current["v1_current_goal_status_focused_tests_passed"] == 21
+    assert current["v1_current_goal_status_broader_v1_tests_passed"] == 130
+    assert current["v1_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert current["v1_consumer_checkpoint_freshness_focused_tests_passed"] == 20
+    assert current["v1_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
+    assert current["v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
+    assert current["v1_final_candidate_branch_index_source_commit"] == (
+        "1be5cbc30184dfbe610d288b4c487b18f936d64c"
+    )
+    assert current["valid_cutover_choices"] == [
+        "Approve-V1-RC-Cutover",
+        "Revise-V1-RC-Cutover",
+        "Pause",
+    ]
 
 
 def test_v1_current_status_adds_no_new_runtime_sdk_network_or_secret_behavior() -> None:
@@ -347,29 +364,27 @@ def test_v1_current_status_adds_no_new_runtime_sdk_network_or_secret_behavior() 
         assert current[key] is False, key
 
 
-def test_v1_remaining_blockers_and_next_step_are_g61() -> None:
+def test_v1_remaining_blockers_and_next_step_are_cutover() -> None:
     fixture = _load_fixture()
     blockers = set(fixture["remaining_blockers"])
 
     assert "additional_v1_g61_implementation_unapproved" in blockers
-    assert "final_readiness_audit_not_executed_or_passed" in blockers
+    assert "release_candidate_acceptance_limited_to_first_consumer_harness_testing" in blockers
     assert "lockfile_edits_unapproved" in blockers
     assert "runtime_vendor_sdk_imports_in_lima_unapproved" in blockers
     assert "provider_secrets_and_credential_values_inaccessible_to_lima" in blockers
     assert "fallback_execution_unapproved" in blockers
     assert "consumer_production_runtime_integration_unapproved" in blockers
     assert "release_boundary_not_passed" in blockers
-    assert (
-        "explicit_cutover_authorization_not_recorded"
-        in blockers
-    )
+    assert "cutover_operator_choice_not_recorded" in blockers
+    assert "cutover_runbook_not_executed_after_rc_approval" in blockers
     assert "v1_product_readiness_not_approved" in blockers
     assert "production_behavior_not_approved" in blockers
-    assert fixture["recommended_next_step"] == "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization"
-    assert fixture["recommended_next_gap_id"] == "V1-G61"
+    assert fixture["recommended_next_step"] == "record_exactly_one_valid_cutover_operator_choice_then_execute_cutover_runbook_if_approved"
+    assert fixture["recommended_next_gap_id"] == "V1-RC-CUTOVER"
     assert (
         fixture["recommended_next_gap_to_close"]
-        == "final_readiness_audit_and_cutover_authorization"
+        == "cutover_operator_choice_and_runbook_execution"
     )
 
 
@@ -415,8 +430,8 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "V1 candidate harness quickstart execution audit with current verdict `PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER`" in text
     assert "V1 candidate harness quickstart post-refresh validation with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 tests, plus LIMA focused quickstart/handoff 17 tests, broader V1 harness/readiness 108 tests, and full LIMA suite 5360 tests" in text
     assert "V1 consumer harness usability matrix for Sparkbot and Arc-Bot-shell local candidate smoke criteria" in text
-    assert "V1 release-candidate acceptance checklist with current verdict `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`" in text
-    assert "V1 release-candidate cutover runbook with current verdict `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`" in text
+    assert "V1 release-candidate acceptance checklist with current verdict `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` for first-consumer harness testing only" in text
+    assert "V1 release-candidate cutover runbook with current verdict `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`" in text
     assert "V1 current gate consistency audit proving the active gate is G61" in text
     assert "V1 current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing" in text
     assert "V1 current candidate validation refresh latest LIMA readiness freshness supplement with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests passing" in text
@@ -428,17 +443,20 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "V1 final readiness audit template for the future post-G61 release-candidate audit" in text
     assert "V1 operator unblock action packet preserved as handoff traceability after the recorded G61 decision" in text
-    assert "V1 final candidate branch index for saved checkpoint and future branch/tag guard traceability" in text
+    assert "V1 final candidate branch index refreshed at current LIMA checkpoint `1be5cbc30184dfbe610d288b4c487b18f936d64c` for saved checkpoint and future branch/tag guard traceability" in text
     assert "Arc-Bot-shell clean-checkpoint gate recorded as input evidence only; release-candidate pass, final-readiness pass, branch, tag, cutover, and readiness claims remain blocked by separate gates" in text
     assert "local consumer harness usability criteria" in text
     assert "fake in-process executors, sanitized fixtures, no-network behavior, no-secret access, and no production wiring" in text
     assert "No additional V1-G61 implementation is approved" in text
     assert "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only." in text
-    assert "The V1.0.0 release-candidate acceptance checklist is not satisfied and the release-candidate cutover runbook remains blocked" in text
+    assert "The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing, final-readiness reconciliation passes for that scope, and the release-candidate cutover runbook remains blocked pending exactly one valid cutover operator choice" in text
     assert "The operator unblock action packet and final candidate branch index are handoff and traceability evidence only." in text
-    assert "The current gate consistency audit, current candidate validation refresh including latest LIMA readiness freshness supplement 15/89/5361 evidence and latest handoff freshness supplement 8/117/5362 plus 7/64/133/5364 evidence, post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence, current quickstart post-refresh evidence, current Arc clean-checkpoint proof are required inputs to any future final readiness audit" in text
+    assert "post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest current-goal evidence 21/130/5433, latest consumer checkpoint freshness evidence 20/130/5433" in text
     assert "built-in provider SDK clients" in text
     assert "secret lookup, credential value access" in text
     assert "consumer repository edits for V1-G61" in text
     assert "V1 product readiness or production readiness claims" in text
     assert "clean Arc-Bot-shell checkpoint proof is recorded as input evidence only and does not authorize release-candidate, final-readiness, branch, tag, cutover, or readiness claims" in text
+    assert "V1 latest current-goal evidence refresh passing 21 focused status tests, 130 broader V1 readiness/status tests, and the 5433-test full LIMA suite" in text
+    assert "V1 latest consumer checkpoint freshness refresh passing 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and the 5433-test full LIMA suite" in text
+    assert "Record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`" in text

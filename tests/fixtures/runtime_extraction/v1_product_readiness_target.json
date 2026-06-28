@@ -3,7 +3,7 @@
   "api_status": "CANDIDATE_ONLY",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
   "request_stage_lane_label": "prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request",
-  "source_commit_before_refresh": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "source_commit_before_refresh": "1be5cbc30184dfbe610d288b4c487b18f936d64c",
   "documents": {
     "target": "docs/V1_PRODUCT_READINESS_TARGET.md",
     "readiness_gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
@@ -122,9 +122,9 @@
     "v1_candidate_harness_quickstart_post_refresh_lima_full_suite_tests_passed": 5360,
     "v1_consumer_harness_usability_matrix_current": true,
     "v1_release_candidate_acceptance_checklist_current": true,
-    "v1_release_candidate_acceptance_checklist_verdict": "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS",
+    "v1_release_candidate_acceptance_checklist_verdict": "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "v1_release_candidate_cutover_runbook_current": true,
-    "v1_release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
+    "v1_release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
     "v1_current_gate_consistency_audit_complete": true,
     "v1_current_candidate_validation_refresh_complete": true,
     "v1_current_validation_focused_current_gate_tests_passed": 153,
@@ -189,7 +189,20 @@
     "provider_configuration_changes_added": false,
     "fallback_execution_added": false,
     "consumer_production_runtime_integration_added": false,
-    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false
+    "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "v1_final_readiness_reconciliation_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+    "v1_current_goal_status_focused_tests_passed": 21,
+    "v1_current_goal_status_broader_v1_tests_passed": 130,
+    "v1_current_goal_status_full_lima_suite_tests_passed": 5433,
+    "v1_consumer_checkpoint_freshness_focused_tests_passed": 20,
+    "v1_consumer_checkpoint_freshness_broader_v1_tests_passed": 130,
+    "v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5433,
+    "v1_final_candidate_branch_index_source_commit": "1be5cbc30184dfbe610d288b4c487b18f936d64c",
+    "valid_cutover_choices": [
+      "Approve-V1-RC-Cutover",
+      "Revise-V1-RC-Cutover",
+      "Pause"
+    ]
   },
   "remaining_blockers": [
     "lockfile_edits_unapproved",
@@ -203,10 +216,11 @@
     "v1_product_readiness_not_approved",
     "production_behavior_not_approved",
     "additional_v1_g61_implementation_unapproved",
-    "final_readiness_audit_not_executed_or_passed",
-    "explicit_cutover_authorization_not_recorded"
+    "release_candidate_acceptance_limited_to_first_consumer_harness_testing",
+    "cutover_operator_choice_not_recorded",
+    "cutover_runbook_not_executed_after_rc_approval"
   ],
-  "recommended_next_step": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization",
-  "recommended_next_gap_id": "V1-G61",
-  "recommended_next_gap_to_close": "final_readiness_audit_and_cutover_authorization"
+  "recommended_next_step": "record_exactly_one_valid_cutover_operator_choice_then_execute_cutover_runbook_if_approved",
+  "recommended_next_gap_id": "V1-RC-CUTOVER",
+  "recommended_next_gap_to_close": "cutover_operator_choice_and_runbook_execution"
 }
