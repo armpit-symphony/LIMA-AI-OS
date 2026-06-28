@@ -4,7 +4,7 @@
   "date": "2026-06-28",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
   "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "runbook_verdict": "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
+  "runbook_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
   "documents": {
     "runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
     "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
@@ -24,7 +24,8 @@
     "g61_approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
     "g61_runtime_vendor_sdk_import_execution_proof": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
     "g61_runtime_vendor_sdk_import_execution_proof_closeout": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
-    "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md"
+    "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
+    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md"
   },
   "required_future_final_audit": "docs/audits/V1_FINAL_READINESS_AUDIT.md",
   "cutover_preconditions": [
@@ -50,7 +51,7 @@
     "v1_g61_operator_decision": "Approve-V1-G61",
     "g61_implementation_and_closeout_complete_if_approved": true,
     "g61_runtime_vendor_sdk_import_execution_proof_current": true,
-    "release_candidate_acceptance_checklist_satisfied": false,
+    "release_candidate_acceptance_checklist_satisfied": true,
     "current_candidate_validation_refresh_audit_current": true,
     "post_validation_readiness_change_freshness_audit_current": true,
     "post_validation_readiness_change_freshness_full_lima_suite_tests_passed": 5359,
@@ -104,7 +105,9 @@
     "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof": true,
     "final_readiness_audit_exists": true,
     "final_readiness_audit_verdict": "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED",
-    "final_readiness_audit_lima_full_suite_tests_passed": 5391
+    "final_readiness_audit_lima_full_suite_tests_passed": 5391,
+    "final_readiness_reconciliation_audit_exists_and_passes": true,
+    "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
   },
   "future_cutover_procedure": [
     "confirm_final_readiness_audit_pass_candidate_ready_for_first_consumer_testing",
@@ -167,6 +170,6 @@
     "raw_sensitive_or_patch_content_persistence",
     "v1_product_production_or_completion_claim"
   ],
-  "next_action": "reconcile_checklist_and_blocked_final_readiness_audit_then_require_explicit_cutover_authorization",
+  "next_action": "require_explicit_cutover_authorization_after_checklist_reconciliation",
   "source_lima_commit_before_runbook_refresh": "bfa27f37212a24f0ca3e7d21c37e4ff80192db14"
 }

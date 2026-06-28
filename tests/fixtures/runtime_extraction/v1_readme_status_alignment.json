@@ -140,9 +140,9 @@
   "post_validation_readiness_change_latest_quickstart_artifact_refresh_release_cutover_final_readiness_production_arc_clean_checkpoint_or_g61_authority_created": false,
   "post_validation_readiness_change_freshness_release_authority_created": false,
   "release_candidate_acceptance_checklist_current": true,
-  "release_candidate_acceptance_checklist_verdict": "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS",
+  "release_candidate_acceptance_checklist_verdict": "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
   "release_candidate_cutover_runbook_current": true,
-  "release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
+  "release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
   "final_readiness_audit_template_current": true,
   "final_blocker_register_current": true,
   "g61_operator_approval_recorded": false,
@@ -185,5 +185,9 @@
   "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
   "v1_product_ready": false,
   "production_ready": false,
-  "next_step": "record_v1_g61_operator_decision"
+  "next_step": "record_v1_g61_operator_decision",
+  "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+  "final_readiness_reconciliation_audit_current": true,
+  "release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing": true,
+  "release_candidate_cutover_authorized": false
 }

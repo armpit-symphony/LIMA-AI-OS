@@ -26,11 +26,12 @@
     "arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
     "public_sparkbot_g56_publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
     "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
-    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md"
+    "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
+    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md"
   },
   "required_current_state": {
     "current_gate": "V1-G61",
-    "required_next_action": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization",
+    "required_next_action": "require_explicit_cutover_authorization_after_checklist_reconciliation",
     "valid_operator_choices": [
       "Approve-V1-G61",
       "Revise-V1-G61",
@@ -42,8 +43,6 @@
     "candidate_harness_quickstart_execution_audit_current": true,
     "g61_operator_decision_packet_status_audit_current": true,
     "g61_operator_decision_packet_approved": true,
-    "release_candidate_acceptance_checklist_blocked_pending_arc_checkpoint_and_final_readiness": true,
-    "release_candidate_cutover_runbook_blocked_pending_checklist_final_readiness_and_arc_checkpoint": true,
     "final_readiness_audit_template_waits_for_arc_clean_checkpoint": true,
     "post_validation_readiness_change_freshness_audit_current": true,
     "arc_bot_shell_local_drift_gate_current": true,
@@ -73,12 +72,15 @@
     "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
     "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
     "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
-    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
+    "release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing": true,
+    "release_candidate_cutover_runbook_blocked_pending_operator_authorization": true,
+    "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": true
   },
   "required_snippets_by_document": {
     "readme": [
       "LIMA remains `CANDIDATE_ONLY`.",
-      "The active next V1 lane is release-candidate checklist refresh against the blocked final readiness audit result",
+      "The active next V1 lane is explicit cutover authorization after checklist/final-readiness reconciliation",
       "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
       "docs/audits/V1_FINAL_READINESS_AUDIT.md"
     ],
@@ -108,7 +110,7 @@
       "Current request-stage readiness refresh: `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`"
     ],
     "final_blocker_register": [
-      "STOPPED_AT_FINAL_READINESS_AND_CUTOVER_AUTHORITY",
+      "STOPPED_AT_CUTOVER_AUTHORITY",
       "Additional V1-G61 implementation approval recorded by this register: no.",
       "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`"
     ],
@@ -121,14 +123,15 @@
       "Run the final readiness audit after release checklist refresh"
     ],
     "release_candidate_acceptance_checklist": [
-      "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS",
+      "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
       "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.",
       "Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation."
     ],
     "release_candidate_cutover_runbook": [
-      "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
+      "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
       "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.",
-      "Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence."
+      "Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence.",
+      "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     ],
     "final_readiness_audit_template": [
       "READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH",
@@ -184,6 +187,10 @@
     ],
     "candidate_harness_quickstart_execution_audit": [
       "PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER"
+    ],
+    "final_readiness_reconciliation_audit": [
+      "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+      "Cutover authorization | blocked"
     ]
   },
   "forbidden_current_state_phrases": [
@@ -233,5 +240,5 @@
     "consumer_production_runtime_integration_added": false,
     "v1_product_or_production_readiness_claimed": false
   },
-  "next_recommended_step": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization"
+  "next_recommended_step": "require_explicit_cutover_authorization_after_checklist_reconciliation"
 }

@@ -397,11 +397,11 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
     )
     assert fixture["release_candidate_acceptance_checklist_current"] is True
     assert fixture["release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
+        "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
     assert fixture["release_candidate_cutover_runbook_current"] is True
     assert fixture["release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
+        "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     )
     assert fixture["final_readiness_audit_template_current"] is True
     assert fixture["final_blocker_register_current"] is True
@@ -553,8 +553,8 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "latest quickstart artifact refresh evidence passing 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "current validation refresh evidence, post-validation freshness evidence, and recorded clean Arc-Bot-shell checkpoint proof before any future V1.0.0 release-candidate branch, tag, cutover, or readiness claim" in text
     assert "consumer smoke path testable with fake in-process executors and sanitized fixtures" in text
-    assert "The V1.0.0 release-candidate acceptance checklist and cutover runbook remain blocked by final readiness and explicit cutover authorization." in text
-    assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until the release checklist and cutover runbook pass after G61 closeout, a final readiness pass is recorded, and explicit cutover authorization is recorded." in text
+    assert "The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing; the cutover runbook remains blocked by explicit operator authorization." in text
+    assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until explicit cutover authorization is recorded and the runbook confirms checklist/reconciliation evidence remains current." in text
     assert "former public Sparkbot G56 GitHub 403 publication blocker is resolved" in text
     assert "V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md" in text
     assert "public Sparkbot remote publication remains blocked by GitHub 403" not in text
@@ -665,12 +665,12 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "V1 post-validation readiness-change latest quickstart artifact refresh supplement: recorded on 2026-06-21 with 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5364 tests" in state_text
     assert "does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, production, Arc-Bot-shell clean-checkpoint, or G61 implementation authority" in state_text
     assert "V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md" in state_text
-    assert "V1 release-candidate acceptance checklist: added" in state_text
+    assert "V1 release-candidate acceptance checklist: refreshed" in state_text
     assert "V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md" in state_text
-    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in state_text
-    assert "V1 release-candidate cutover runbook: added" in state_text
+    assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in state_text
+    assert "V1 release-candidate cutover runbook: refreshed" in state_text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in state_text
-    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in state_text
+    assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in state_text
     assert "V1 final readiness audit template: refreshed" in state_text
     assert "refreshed to require current validation refresh evidence through latest LIMA readiness freshness 15/89/5361 validation and latest handoff freshness 8/117/5362 plus 7/64/133/5364 validation, post-validation readiness-change freshness evidence, and clean Arc-Bot-shell checkpoint proof before any future pass" in state_text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in state_text
@@ -689,9 +689,9 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "Current snapshot authority note" in state_text
     assert "the `Current V1 Gate Snapshot` above is the controlling V1 state" in state_text
     assert "do not override the post-G61 release-readiness gate" in state_text
-    assert "The next smallest safe V1 step is release-candidate checklist refresh against the blocked final readiness audit result, followed by explicit cutover authorization if the operator approves." in state_text
+    assert "The next smallest safe V1 step is explicit cutover authorization if the operator approves, after confirming checklist/reconciliation evidence remains current." in state_text
     assert "Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until" in state_text
-    assert "a final readiness pass after G61 closeout and explicit cutover authorization is recorded" in state_text
+    assert "explicit cutover authorization is recorded through `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` and checklist/reconciliation evidence remains current" in state_text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in state_text
     assert "After the bounded V1-G61 import proof, do not edit Sparkbot or Arc-Bot-shell for G61" in state_text
     assert "make LIMA-owned DNS/HTTP/socket/network calls" in state_text

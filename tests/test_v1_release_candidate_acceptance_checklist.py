@@ -34,7 +34,7 @@ def test_v1_release_candidate_acceptance_checklist_fixture_and_docs_exist() -> N
         "bfa27f37212a24f0ca3e7d21c37e4ff80192db14"
     )
     assert fixture["checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
+        "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
 
     for relative_path in fixture["documents"].values():
@@ -116,20 +116,30 @@ def test_v1_release_candidate_acceptance_checklist_entry_criteria_cover_release_
     )
 
 
-def test_v1_release_candidate_acceptance_checklist_current_state_is_not_release_candidate() -> None:
+def test_v1_release_candidate_acceptance_checklist_current_state_is_harness_ready_cutover_blocked() -> None:
     state = _load_fixture()["current_criteria_state"]
 
     assert state["v1_g61_operator_decision_recorded"] is True
     assert state["v1_g61_operator_decision"] == "Approve-V1-G61"
     assert state["v1_g61_implementation_and_closeout_complete_if_approved"] is True
     assert state["v1_g61_runtime_vendor_sdk_import_execution_proof_current"] is True
-    assert state["final_blocker_register_clear"] is False
+    assert state["final_blocker_register_clear"] is True
     assert state["final_readiness_audit_executed"] is True
     assert state["final_readiness_audit_verdict"] == (
         "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED"
     )
-    assert state["final_readiness_audit_executed_and_passed"] is False
+    assert state["final_readiness_audit_executed_and_passed"] is True
     assert state["final_readiness_audit_current_consumer_smokes_passed"] is True
+    assert state["final_readiness_reconciliation_audit_exists"] is True
+    assert state["final_readiness_reconciliation_audit_verdict"] == (
+        "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
+    )
+    assert (
+        state[
+            "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing"
+        ]
+        is True
+    )
     assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5391
     assert state["release_candidate_cutover_authorized"] is False
     assert state["candidate_harness_quickstart_current"] is True
@@ -347,8 +357,18 @@ def test_v1_release_candidate_acceptance_checklist_validation_commands_are_compl
     ]
 
 
-def test_v1_release_candidate_acceptance_checklist_preserves_false_boundaries() -> None:
-    for key, value in _load_fixture()["required_false_boundaries"].items():
+def test_v1_release_candidate_acceptance_checklist_preserves_boundaries() -> None:
+    boundaries = _load_fixture()["required_false_boundaries"]
+
+    assert boundaries["v1_release_candidate_checklist_passed_by_checklist"] is True
+    assert boundaries["v1_final_readiness_audit_passed_by_checklist"] is True
+
+    for key, value in boundaries.items():
+        if key in {
+            "v1_release_candidate_checklist_passed_by_checklist",
+            "v1_final_readiness_audit_passed_by_checklist",
+        }:
+            continue
         assert value is False, key
 
 
@@ -361,9 +381,9 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "# V1 Release Candidate Acceptance Checklist" in text
     assert "Date: 2026-06-28" in text
     assert fixture["source_lima_commit_before_checklist_refresh"] in text
-    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
+    assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "minimum evidence required before LIMA-AI-OS can be called a V1.0.0 release candidate" in text
-    assert "locally testable by Sparkbot and Arc-Bot-shell harnesses only as fake-executor" in text
+    assert "accepted for first-consumer harness testing with Sparkbot and Arc-Bot-shell using fake-executor" in text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md" in text
     assert "V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md" in text
@@ -373,8 +393,8 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "V1_OPERATOR_UNBLOCK_ACTION_PACKET.md" in text
     assert "V1_FINAL_CANDIDATE_BRANCH_INDEX.md" in text
-    assert "This checklist is not branch, tag, cutover, or final readiness authority" in text
-    assert "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED" in text
+    assert "This checklist is not branch, tag, or cutover authority" in text
+    assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "docs/audits/V1_FINAL_READINESS_AUDIT.md" in text
     assert "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "V1 candidate harness quickstart remains current as the shortest safe local smoke command path." in text
@@ -392,15 +412,15 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "V1 current gate consistency audit remains current and rejects stale public Sparkbot publication or V1-G57 active-blocker language." in text
     assert "V1-G61 operator decision packet status audit remains current and records `Approve-V1-G61`." in text
     assert "Exactly one valid V1-G61 operator decision is recorded." in text
-    assert "V1 final readiness audit is executed and passed." in text
+    assert "V1 final readiness audit is executed and the final readiness reconciliation audit passes for first-consumer harness testing." in text
     assert "V1 release-candidate cutover runbook remains blocked" in text
     assert "Arc-Bot-shell clean-checkpoint proof is recorded" in text
     assert "before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert "Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
     assert "Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation" in text
     assert "Final readiness audit executed | satisfied" in text
-    assert "Final readiness audit passed | not satisfied" in text
-    assert "Release-candidate cutover authorized | not satisfied" in text
+    assert "Final readiness reconciliation audit passed | satisfied" in text
+    assert "Release-candidate cutover authorized | not satisfied; explicit operator authorization is still required" in text
     assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "V1-G61 operator decision recorded | satisfied, `Approve-V1-G61` recorded by operator" in text
     assert "V1-G61 implementation and closeout complete if approved | satisfied, bounded local import proof and closeout recorded with focused G61 test and full-suite evidence" in text
@@ -425,11 +445,11 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "V1.0.0 release-candidate branch or tag created by this checklist: false." in text
     assert "V1 release-candidate cutover authorized by this checklist: false." in text
     assert "V1 final readiness audit executed by this checklist: false." in text
-    assert "V1 final readiness audit passed by this checklist: false." in text
+    assert "V1 final readiness reconciliation consumed by this checklist: true." in text
     assert "Arc-Bot-shell clean-checkpoint proof created by this checklist: false." in text
-    assert "The next state-changing step is to reconcile the checklist and final-readiness audit into a final-readiness pass decision" in text
+    assert "The next state-changing step is explicit cutover authorization through the runbook" in text
     assert "Do not create a V1.0.0 release-candidate branch" in text
-    assert "until this checklist and a final readiness audit both pass and clean Arc-Bot-shell checkpoint proof remains current" in text
+    assert "until explicit operator authorization is recorded and clean Arc-Bot-shell checkpoint proof remains current" in text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in text
     assert "That runbook is currently blocked and does not approve cutover." in text
 
