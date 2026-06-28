@@ -26,7 +26,8 @@
     "g61_runtime_vendor_sdk_import_execution_proof_closeout": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
     "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
     "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
-    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+    "release_candidate_cutover_authorization_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md"
   },
   "required_future_final_audit": "docs/audits/V1_FINAL_READINESS_AUDIT.md",
   "cutover_preconditions": [
@@ -45,7 +46,8 @@
     "evidence_sanitized",
     "no_unapproved_runtime_provider_network_credential_connector_browser_file_device_robotics_physical_world_consumer_production_or_product_readiness_behavior",
     "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_final_branch_tag_cutover_or_readiness_claim",
-    "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof"
+    "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof",
+    "cutover_authorization_packet_status_audit_current_zero_valid_choices_until_operator_choice_recorded"
   ],
   "current_state": {
     "v1_g61_operator_decision_recorded": true,
@@ -111,13 +113,16 @@
     "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "cutover_authorization_packet_prepared": true,
     "cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
-    "cutover_authorization_choice_recorded": null
+    "cutover_authorization_choice_recorded": null,
+    "cutover_authorization_packet_status_audit_current": true,
+    "cutover_authorization_packet_valid_choice_count": 0
   },
   "future_cutover_procedure": [
     "confirm_final_readiness_audit_pass_candidate_ready_for_first_consumer_testing",
     "confirm_release_candidate_acceptance_checklist_satisfied",
     "confirm_current_gate_consistency_audit_passes",
     "confirm_g61_operator_decision_packet_status_audit_current_and_consistent_with_decision_state",
+    "confirm_cutover_authorization_packet_status_audit_current_until_operator_choice_recorded",
     "confirm_consumer_smoke_tests_pass",
     "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
     "confirm_historical_arc_drift_exclusion_is_superseded_compatibility_context_only",

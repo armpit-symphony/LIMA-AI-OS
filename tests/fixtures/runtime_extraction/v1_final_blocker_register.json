@@ -31,7 +31,8 @@
     "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
     "final_readiness_audit": "docs/audits/V1_FINAL_READINESS_AUDIT.md",
     "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
-    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+    "release_candidate_cutover_authorization_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md"
   },
   "resolved_blockers": {
     "public_sparkbot_publication": {
@@ -130,7 +131,8 @@
     "v1_release_candidate_acceptance_checklist_current_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
     "v1_release_candidate_cutover_runbook_current_cutover_blocked_at_operator_authorization",
     "v1_final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing",
-    "v1_release_candidate_cutover_authorization_packet_prepared_awaiting_explicit_operator_decision"
+    "v1_release_candidate_cutover_authorization_packet_prepared_awaiting_explicit_operator_decision",
+    "v1_release_candidate_cutover_authorization_packet_status_audit_current_zero_valid_choices"
   ],
   "boundaries_preserved": {
     "public_sparkbot_branch_merge_to_main_claimed": false,

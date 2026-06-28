@@ -134,6 +134,7 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
         "v1_g61_runtime_vendor_sdk_import_execution_proof_and_closeout_complete_bounded_local_only",
         "v1_release_candidate_acceptance_checklist_current_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
         "v1_release_candidate_cutover_runbook_current_cutover_blocked_at_operator_authorization",
+        "v1_release_candidate_cutover_authorization_packet_status_audit_current_zero_valid_choices",
         "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
         "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof",
         "consumer_repo_diff_hygiene_passed_at_recorded_checkpoints",
@@ -170,10 +171,12 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md" in text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md" in text
+    assert "V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md" in text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in text
     assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
     assert "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION" in text
+    assert "V1 release-candidate cutover authorization packet status audit current verdict: `PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION`; recorded valid cutover operator choice count `0`." in text
     assert "V1 final readiness reconciliation audit current state: passed for first-consumer harness testing" in text
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "This register is not cutover authority" in text

@@ -60,6 +60,8 @@ def test_v1_current_gate_consistency_records_current_state() -> None:
         "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": True,
         "release_candidate_cutover_authorization_packet_prepared": True,
         "release_candidate_cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
+        "release_candidate_cutover_authorization_packet_status_audit_current": True,
+        "release_candidate_cutover_authorization_packet_valid_choice_count": 0,
         "final_readiness_audit_template_waits_for_arc_clean_checkpoint": True,
         "post_validation_readiness_change_freshness_audit_current": True,
         "arc_bot_shell_local_drift_gate_current": True,
@@ -126,6 +128,7 @@ def test_v1_current_gate_consistency_rejects_stale_current_state_language() -> N
         "arc_bot_shell_local_drift_exclusion_audit",
         "candidate_harness_quickstart",
         "candidate_harness_quickstart_execution_audit",
+        "release_candidate_cutover_authorization_packet_status_audit",
     ]
     combined_text = "\n".join(
         (REPO_ROOT / fixture["documents"][document_key]).read_text(encoding="utf-8")
@@ -196,6 +199,7 @@ def test_v1_current_gate_consistency_audit_doc_matches_fixture() -> None:
     assert "Current G61 operator decision packet status audit: pass and approved for the bounded import proof." in text
     assert "Current release-candidate acceptance checklist: satisfied for first-consumer harness testing; cutover authorization remains separate." in text
     assert "Current release-candidate cutover runbook: blocked pending `Approve-V1-RC-Cutover` in the cutover authorization packet." in text
+    assert "Current release-candidate cutover authorization packet status audit: pass with recorded valid cutover operator choice count `0`; branch, tag, cutover, V1.0.0 readiness, product readiness, and production readiness remain blocked." in text
     assert "Current final readiness reconciliation audit: passed for first-consumer harness testing with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`." in text
     assert "Current post-validation readiness-change freshness audit: current" in text
     assert "Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only." in text

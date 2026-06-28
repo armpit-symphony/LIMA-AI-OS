@@ -65,6 +65,10 @@ def test_v1_release_candidate_cutover_runbook_preconditions_are_complete() -> No
         "g61_operator_decision_packet_status_audit_current_and_approve_v1_g61_recorded"
         in preconditions
     )
+    assert (
+        "cutover_authorization_packet_status_audit_current_zero_valid_choices_until_operator_choice_recorded"
+        in preconditions
+    )
     assert "final_readiness_audit_passes" in preconditions
     assert "public_sparkbot_accessible_sparkbot_and_arc_bot_shell_smoke_validation_passes" in preconditions
     assert (
@@ -236,6 +240,8 @@ def test_v1_release_candidate_cutover_runbook_current_state_is_blocked() -> None
     )
     assert state["current_gate_consistency_audit_current"] is True
     assert state["g61_operator_decision_packet_status_audit_current"] is True
+    assert state["cutover_authorization_packet_status_audit_current"] is True
+    assert state["cutover_authorization_packet_valid_choice_count"] == 0
     assert state["final_readiness_audit_exists"] is True
     assert state["final_readiness_audit_verdict"] == (
         "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED"
@@ -270,6 +276,7 @@ def test_v1_release_candidate_cutover_runbook_future_procedure_is_gated() -> Non
         "confirm_release_candidate_acceptance_checklist_satisfied",
         "confirm_current_gate_consistency_audit_passes",
         "confirm_g61_operator_decision_packet_status_audit_current_and_consistent_with_decision_state",
+        "confirm_cutover_authorization_packet_status_audit_current_until_operator_choice_recorded",
         "confirm_consumer_smoke_tests_pass",
         "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
         "confirm_historical_arc_drift_exclusion_is_superseded_compatibility_context_only",
@@ -322,6 +329,7 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md" in text
     assert "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md" in text
     assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
+    assert "V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md" in text
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "V1_OPERATOR_UNBLOCK_ACTION_PACKET.md" in text
     assert "V1_FINAL_CANDIDATE_BRANCH_INDEX.md" in text
@@ -342,6 +350,7 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "LIMA full suite | satisfied at current validation checkpoint; latest validation-refresh supplement full-suite evidence 5361 tests; latest handoff freshness supplement full-suite evidence 5362/5364 tests; latest quickstart post-refresh full-suite evidence 5360 tests; latest final blocker/index refresh full-suite evidence 5361 tests; latest post-G61 request refresh full-suite evidence 5362 tests; latest quickstart artifact refresh full-suite evidence 5364 tests" in text
     assert "Current gate consistency audit current | satisfied" in text
     assert "V1-G61 operator decision packet status audit current | satisfied, `Approve-V1-G61` recorded" in text
+    assert "Cutover authorization packet status audit | satisfied, blocked with recorded valid cutover operator choice count `0`" in text
     assert "Final readiness audit exists | satisfied" in text
     assert "Final readiness reconciliation audit passes | satisfied" in text
     assert "Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
@@ -357,6 +366,7 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "Create a release-candidate branch only after `Approve-V1-RC-Cutover` is recorded" in text
     assert "Confirm the current gate consistency audit still passes" in text
     assert "Confirm the G61 operator decision packet status audit is current and consistent with the recorded decision state." in text
+    assert "Confirm the cutover authorization packet status audit is current and still records blocked packet status until a valid operator choice is recorded." in text
     assert "Confirm the current candidate validation refresh audit records the latest focused current-gate validation, full-suite evidence, latest LIMA readiness freshness supplement evidence of 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness supplement evidence of 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
     assert "Confirm the post-validation readiness-change freshness audit covers later readiness docs, fixtures, or tests with same-turn focused, full-suite, and diff-check evidence, including current same-turn full-suite freshness evidence of 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence of 5360 tests, latest final blocker/index refresh evidence of 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence of 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence of 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests." in text
     assert "Create a V1.0.0 release-candidate tag only after `Approve-V1-RC-Cutover` is recorded" in text

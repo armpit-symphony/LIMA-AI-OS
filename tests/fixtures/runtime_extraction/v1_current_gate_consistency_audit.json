@@ -28,7 +28,8 @@
     "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
     "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
     "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
-    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+    "release_candidate_cutover_authorization_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md"
   },
   "required_current_state": {
     "current_gate": "V1-G61",
@@ -78,7 +79,9 @@
     "release_candidate_cutover_runbook_blocked_pending_operator_authorization": true,
     "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": true,
     "release_candidate_cutover_authorization_packet_prepared": true,
-    "release_candidate_cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION"
+    "release_candidate_cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
+    "release_candidate_cutover_authorization_packet_status_audit_current": true,
+    "release_candidate_cutover_authorization_packet_valid_choice_count": 0
   },
   "required_snippets_by_document": {
     "readme": [
@@ -199,6 +202,12 @@
       "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
       "Approve-V1-RC-Cutover",
       "Current recorded choice: none."
+    ],
+    "release_candidate_cutover_authorization_packet_status_audit": [
+      "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION",
+      "Recorded valid cutover operator choice count | `0`",
+      "Release-candidate branch creation allowed now: no.",
+      "Machine action: `record_exactly_one_valid_cutover_operator_choice`"
     ]
   },
   "forbidden_current_state_phrases": [

@@ -86,6 +86,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 - V1 release-candidate cutover authorization packet: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`
+- V1 release-candidate cutover authorization packet status audit: `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
 - V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
 - V1-G61 operator decision packet status audit current: satisfied, `Approve-V1-G61` recorded.
@@ -93,6 +94,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 release-candidate acceptance checklist current verdict: `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - V1 release-candidate cutover runbook current verdict: `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`.
 - V1 release-candidate cutover authorization packet current status: `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION`.
+- V1 release-candidate cutover authorization packet status audit current verdict: `PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION`; recorded valid cutover operator choice count `0`.
 - V1 final readiness reconciliation audit current state: passed for first-consumer harness testing with verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Public Sparkbot local G56 fake-executor smoke: passed, 8 tests.
 - Accessible Sparkbot G56 fake-executor smoke: passed, 8 tests.

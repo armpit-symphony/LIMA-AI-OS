@@ -21,6 +21,7 @@ This audit locks the current-facing V1 evidence chain to the post-G61 release-re
 - `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`
 - `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
+- `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`
 - `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
 - `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md`
 - `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`
@@ -46,6 +47,7 @@ This audit locks the current-facing V1 evidence chain to the post-G61 release-re
 - Current G61 operator decision packet status audit: pass and approved for the bounded import proof.
 - Current release-candidate acceptance checklist: satisfied for first-consumer harness testing; cutover authorization remains separate.
 - Current release-candidate cutover runbook: blocked pending `Approve-V1-RC-Cutover` in the cutover authorization packet.
+- Current release-candidate cutover authorization packet status audit: pass with recorded valid cutover operator choice count `0`; branch, tag, cutover, V1.0.0 readiness, product readiness, and production readiness remain blocked.
 - Current final readiness reconciliation audit: passed for first-consumer harness testing with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Current post-validation readiness-change freshness audit: current and required for readiness docs, fixtures, or tests changed after the current validation refresh.
 - Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only.
