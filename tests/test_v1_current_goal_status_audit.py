@@ -30,7 +30,9 @@ def test_v1_current_goal_status_audit_fixture_and_docs_exist() -> None:
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["date"] == "2026-06-28"
     assert fixture["branch"] == "docs-v1-post-g60-readiness-and-next-lane-matrix"
-    assert fixture["source_lima_commit_before_audit"] == "1e0f059"
+    assert fixture["source_lima_commit_before_audit"] == (
+        "a290d9cee297f93d1dad8229d615e10348542057"
+    )
     assert fixture["audit_verdict"] == (
         "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED"
     )
@@ -80,10 +82,10 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
         "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION"
     )
     assert evidence["cutover_authorization_packet_valid_choice_count"] == 0
-    assert evidence["latest_status_audit_focused_tests_passed"] == 44
-    assert evidence["latest_status_audit_broader_tests_passed"] == 110
+    assert evidence["latest_status_audit_focused_tests_passed"] == 21
+    assert evidence["latest_status_audit_broader_tests_passed"] == 130
     assert evidence["latest_status_audit_compileall_passed"] is True
-    assert evidence["latest_status_audit_full_lima_suite_tests_passed"] == 5419
+    assert evidence["latest_status_audit_full_lima_suite_tests_passed"] == 5433
     assert evidence["latest_status_audit_diff_hygiene_passed"] is True
 
 
@@ -119,10 +121,10 @@ def test_v1_current_goal_status_audit_preserves_boundaries() -> None:
 def test_v1_current_goal_status_audit_records_validation_refresh() -> None:
     validation = _load_fixture()["post_audit_validation_refresh"]
 
-    assert validation["focused_current_goal_status_tests_passed"] == 15
-    assert validation["broader_v1_readiness_status_tests_passed"] == 118
+    assert validation["focused_current_goal_status_tests_passed"] == 21
+    assert validation["broader_v1_readiness_status_tests_passed"] == 130
     assert validation["compileall_lima_passed"] is True
-    assert validation["full_lima_suite_tests_passed"] == 5427
+    assert validation["full_lima_suite_tests_passed"] == 5433
     assert validation["cutover_operator_choice_created_by_validation"] is False
     assert (
         validation[
@@ -156,16 +158,16 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION" in text
     assert "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION" in text
-    assert "focused tests 44 passed" in text
-    assert "broader V1 readiness/status tests 110 passed" in text
-    assert "full LIMA suite 5419 passed" in text
+    assert "focused tests 21 passed" in text
+    assert "broader V1 readiness/status tests 130 passed" in text
+    assert "full LIMA suite 5433 passed" in text
     assert "Exactly one valid cutover operator choice recorded | not proven" in text
     assert "Release-candidate branch created under runbook controls | not proven and not authorized" in text
     assert "V1.0.0 completion claimed by this audit: no." in text
     assert "Post-Audit Validation Refresh" in text
-    assert "passed, 15 tests" in text
-    assert "passed, 118 tests" in text
-    assert "passed, 5427 tests" in text
+    assert "passed, 21 tests" in text
+    assert "passed, 130 tests" in text
+    assert "passed, 5433 tests" in text
     assert "This validation refresh creates no cutover operator choice" in text
     assert "Machine action: `record_exactly_one_valid_cutover_operator_choice`" in text
 
