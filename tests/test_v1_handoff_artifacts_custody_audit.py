@@ -146,7 +146,7 @@ def test_v1_handoff_artifacts_custody_text_matches_fixture() -> None:
     assert "`handoff_artifacts/` is added to `.gitignore`" in text
     assert "The raw payload contents are not persisted" in text
     assert "operator decision packet status audit" in text
-    assert "status audit remains the committed evidence that the decision packet is awaiting exactly one valid operator choice" in text
+    assert "status audit remains the committed evidence that `Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "does not replace the current-gate consistency audit, release-candidate acceptance checklist, release-candidate cutover runbook, or final readiness audit template" in text
     assert "does not replace the committed candidate test handoff manifest" in text
     assert "Latest committed handoff freshness remains in docs/tests/fixtures evidence" in text

@@ -9,13 +9,13 @@ This checklist defines the minimum evidence required before LIMA-AI-OS can be ca
 
 It is docs/tests/fixtures-only readiness evidence. It records that `Approve-V1-G61` was provided separately and that the bounded G61 proof/closeout exists, but it does not itself approve V1-G61 implementation, complete V1.0, modify `lima/`, change public API exports, edit consumer repositories, add runtime vendor SDK imports in `lima/`, add provider SDK clients, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, wire consumer production runtime behavior, invoke connectors, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
-This checklist is not branch, tag, cutover, final readiness, or Arc-Bot-shell clean-checkpoint authority. It is currently a failing release-candidate bar. Passing this checklist later requires separate evidence that the final readiness audit is executed and passed, cutover is authorized through the runbook, and Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated.
+This checklist is not branch, tag, cutover, or final readiness authority. It is currently a failing release-candidate bar. Arc-Bot-shell clean-checkpoint proof is recorded as an input, but passing this checklist later still requires separate evidence that the final readiness audit is executed and passed and cutover is authorized through the runbook.
 
 ## Checklist Verdict
 
-Verdict: `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`
+Verdict: `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`
 
-LIMA-AI-OS is not a V1.0.0 release candidate yet. The current candidate is locally testable by Sparkbot and Arc-Bot-shell harnesses only as fake-executor, sanitized-fixture, no-network smoke evidence. The V1-G61 operator blocker is resolved by `Approve-V1-G61` and bounded proof closeout, but the release-candidate gate remains blocked until the final readiness audit passes, release-candidate cutover is authorized through the runbook, and Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated.
+LIMA-AI-OS is not a V1.0.0 release candidate yet. The current candidate is locally testable by Sparkbot and Arc-Bot-shell harnesses only as fake-executor, sanitized-fixture, no-network smoke evidence. The V1-G61 operator blocker is resolved by `Approve-V1-G61` and bounded proof closeout, and Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The release-candidate gate remains blocked until the final readiness audit passes and release-candidate cutover is authorized through the runbook.
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
@@ -72,8 +72,8 @@ All entry criteria must pass before creating a V1.0.0 release-candidate branch o
 - Public Sparkbot G56 fake-executor smoke test passes.
 - Accessible Sparkbot G56 fake-executor smoke test passes.
 - Arc-Bot-shell G56 fake-executor smoke test passes.
-- Arc-Bot-shell local worktree drift is either absent or explicitly excluded by `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` from V1 proof as compatibility evidence, not clean-checkpoint evidence; the current audit records 7 tracked modified files and 64 untracked files as excluded from release proof.
-- Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation.
 - `python -m compileall lima` passes.
 - `python -m pytest -q tests -p no:cacheprovider` passes.
 - `git diff --check` and `git diff --cached --check` pass in LIMA-AI-OS.
@@ -101,8 +101,8 @@ All entry criteria must pass before creating a V1.0.0 release-candidate branch o
 | Public Sparkbot G56 fake-executor smoke | satisfied |
 | Accessible Sparkbot G56 fake-executor smoke | satisfied |
 | Arc-Bot-shell G56 fake-executor smoke | satisfied |
-| Arc-Bot-shell local drift exclusion audit | satisfied as compatibility evidence only; current audit records 7 tracked modified files and 64 untracked files excluded from release proof; not clean-checkpoint evidence |
-| Arc-Bot-shell clean-checkpoint proof | not satisfied |
+| Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
+| Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation |
 | LIMA compileall | satisfied |
 | LIMA focused current-gate/release-readiness validation | satisfied, 153 tests |
 | LIMA full suite | satisfied, 5350 tests |
@@ -159,7 +159,7 @@ in `C:\Users\limap\LIMA-AI-OS`.
 - V1 release-candidate checklist passed by this checklist: false.
 - V1 release-candidate cutover authorized by this checklist: false.
 - V1 final readiness audit executed or passed by this checklist: false.
-- Arc-Bot-shell clean-checkpoint proof claimed by this checklist: false.
+- Arc-Bot-shell clean-checkpoint proof created by this checklist: false.
 - `lima/` runtime files changed by this checklist: false.
 - LIMA public API exports changed by this checklist: false.
 - Consumer repositories changed by this checklist: false.
@@ -180,6 +180,6 @@ in `C:\Users\limap\LIMA-AI-OS`.
 
 ## Next Action
 
-Keep this checklist as the release-candidate bar. The next state-changing step is clean Arc-Bot-shell checkpoint proof followed by a future final readiness audit. Do not create a V1.0.0 release-candidate branch, release tag, cutover, final-readiness pass, or product-readiness claim until this checklist, the future final readiness audit, and clean Arc-Bot-shell checkpoint proof all pass.
+Keep this checklist as the release-candidate bar. The next state-changing step is a future final readiness audit followed by explicit cutover authorization through the runbook. Do not create a V1.0.0 release-candidate branch, release tag, cutover, final-readiness pass, or product-readiness claim until this checklist and the future final readiness audit both pass and clean Arc-Bot-shell checkpoint proof remains current.
 
 After this checklist is satisfied, use `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` as the controlled branch/tag procedure. That runbook is currently blocked and does not approve cutover.

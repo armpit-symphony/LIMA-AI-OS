@@ -24,7 +24,7 @@ Use this quickstart only for local candidate smoke validation with fake in-proce
 - Keep Arc-Bot-shell at `C:\Users\limap\Arc-Bot-shell`.
 - Do not edit consumer repositories from this quickstart.
 - Do not proceed to G61 implementation unless `Approve-V1-G61` is explicitly recorded.
-- Treat `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md` as the current committed proof that the G61 packet is awaiting exactly one valid operator choice.
+- Treat `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md` as the current committed proof that `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
 - Treat `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md` as the current committed proof that stale blocker or release-candidate claims are rejected.
 - Treat `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`, `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, and `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md` as the current harness-usability and freshness evidence before using this quickstart as handoff proof.
 - Treat `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md` as the future final-audit shape only; this quickstart does not execute or pass that audit.
@@ -94,7 +94,7 @@ Expected result: compile passes, full LIMA suite passes, and diff checks pass.
 - It does not approve runtime vendor SDK imports in `lima/`.
 - It does not execute or pass the future final readiness audit.
 - It does not authorize a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
-- It does not turn Arc-Bot-shell compatibility smoke into clean-checkpoint proof for release, final-readiness, branch, tag, cutover, or readiness claims while unrelated local drift remains excluded.
+- It does not turn Arc-Bot-shell compatibility smoke into release, final-readiness, branch, tag, cutover, or readiness authority; clean-checkpoint proof is recorded separately as release-gate input evidence.
 - It does not approve built-in provider SDK clients, provider client construction, endpoint resolution, network egress, credential access, fallback, connectors, consumer production runtime integration, physical-world behavior, V1.0 completion, product readiness, or production readiness.
 
 ## Related Artifacts
@@ -139,4 +139,4 @@ Expected result: compile passes, full LIMA suite passes, and diff checks pass.
 
 ## Next Action
 
-If every quickstart command passes, the next state-changing step is still to record exactly one V1-G61 operator choice. Do not implement G61 or create release-candidate artifacts from this quickstart.
+If every quickstart command passes, the next state-changing step is still final readiness audit execution after release checklist refresh, followed by explicit cutover authorization. Do not add more G61 implementation or create release-candidate artifacts from this quickstart.

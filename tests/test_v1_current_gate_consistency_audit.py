@@ -44,7 +44,7 @@ def test_v1_current_gate_consistency_records_current_state() -> None:
     assert state == {
         "current_gate": "V1-G61",
         "required_next_action": (
-            "record_clean_arc_bot_shell_checkpoint_proof_then_execute_future_final_readiness_audit"
+            "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization"
         ),
         "valid_operator_choices": [
             "Approve-V1-G61",
@@ -189,16 +189,16 @@ def test_v1_current_gate_consistency_audit_doc_matches_fixture() -> None:
         "`docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md`"
         in text
     )
-    assert "Current long-range roadmap V1 section: aligned to G61 operator-decision blocker." in text
+    assert "Current long-range roadmap V1 section: aligned to post-G61 final readiness and cutover blockers." in text
     assert "Current decision log: includes ADR-0340 recording V1-G61 as the current blocker and earlier V1 ADRs as historical." in text
     assert "Historical consumer target/testability docs: include current-status refreshes pointing to G61 and preserving G55 as audit-time evidence only." in text
     assert "Current G61 operator decision packet status audit: pass and approved for the bounded import proof." in text
-    assert "Current release-candidate acceptance checklist: blocked pending final readiness audit and clean Arc checkpoint proof." in text
-    assert "Current release-candidate cutover runbook: blocked pending checklist satisfaction, final readiness audit, and clean Arc checkpoint proof." in text
-    assert "Current final readiness audit template: ready to run after clean Arc checkpoint proof." in text
+    assert "Current release-candidate acceptance checklist: blocked pending final readiness audit and cutover authorization." in text
+    assert "Current release-candidate cutover runbook: blocked pending checklist satisfaction, final readiness audit, and explicit operator authorization." in text
+    assert "Current final readiness audit template: ready to run after release checklist refresh." in text
     assert "Current post-validation readiness-change freshness audit: current" in text
-    assert "Current Arc-Bot-shell local drift posture: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` records 7 tracked modified files and 64 untracked files as compatibility evidence only; excluded drift is not clean-checkpoint proof." in text
-    assert "Current Arc-Bot-shell clean-checkpoint gate: clean checkpoint proof is required before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim." in text
+    assert "Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only." in text
+    assert "Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim still requires the remaining gates." in text
     assert "Current validation-refresh full LIMA suite evidence: 5350 tests passed." in text
     assert "Current validation-refresh latest LIMA readiness freshness supplement: 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests passed." in text
     assert "Current validation-refresh latest handoff freshness supplement: 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passed." in text
@@ -209,9 +209,9 @@ def test_v1_current_gate_consistency_audit_doc_matches_fixture() -> None:
     assert "Latest quickstart artifact refresh evidence: 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests passed." in text
     assert "public Sparkbot publication blocked by GitHub 403" in text
     assert "active V1-G57 operator-decision blocker" in text
-    assert "release-candidate branch, tag, cutover, or readiness action before checklist satisfaction, clean Arc-Bot-shell checkpoint proof, and final-readiness audit pass" in text
-    assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim that treats excluded Arc-Bot-shell drift as clean-checkpoint proof" in text
-    assert "Arc-Bot-shell smoke evidence described as clean-checkpoint evidence while unrelated local drift remains unexcluded" in text
+    assert "release-candidate branch, tag, cutover, or readiness action before checklist satisfaction, final-readiness audit pass, and explicit operator authorization" in text
+    assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim that treats Arc-Bot-shell smoke as a substitute for recorded clean-checkpoint proof" in text
+    assert "Arc-Bot-shell smoke evidence used as a substitute for recorded clean-checkpoint proof" in text
     assert "Recorded choice: Approve-V1-G61" in text
     assert "V1-G61 operator approval recorded by this audit: yes." in text
     assert fixture["next_recommended_step"] in text

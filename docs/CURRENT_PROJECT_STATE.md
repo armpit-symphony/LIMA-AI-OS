@@ -49,18 +49,18 @@ Latest V1 checkpoint:
   `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`.
 - V1 candidate test handoff manifest: refreshed for current Sparkbot and Arc-Bot-shell G56 smoke validation in
   `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`.
-- Arc-Bot-shell local checkpoint caveat: current smoke evidence validates compatibility, but unrelated local Arc worktree drift is excluded from V1 proof and is not clean-checkpoint evidence. The current drift exclusion audit records 7 tracked modified files and 64 untracked files as excluded from V1 release-candidate/final-readiness proof in `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`, with same-day recheck evidence that approved G56 smoke proof paths remain clean. A clean Arc-Bot-shell checkpoint proof is required before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- Arc-Bot-shell clean checkpoint: Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; it is release-gate input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
 - V1 candidate harness quickstart: added as the shortest safe local Sparkbot and Arc-Bot-shell smoke command path with verdict
   `QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER` in
   `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`.
 - V1 candidate harness quickstart execution audit: complete with verdict
   `PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER` in
   `docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`.
-- V1 candidate harness quickstart same-turn consumer smoke refresh: recorded on 2026-06-21 with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 smoke tests, plus post-refresh LIMA validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests. Arc-Bot-shell remains compatibility evidence only while unrelated local drift is excluded from V1 proof.
+- V1 candidate harness quickstart same-turn consumer smoke refresh: recorded on 2026-06-21 with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 smoke tests, plus post-refresh LIMA validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests. Arc-Bot-shell clean-checkpoint proof is now recorded as separate release-gate input evidence; candidate smoke remains fake-executor compatibility evidence only.
 - V1 consumer harness usability matrix: refreshed for Sparkbot and Arc-Bot-shell local candidate smoke criteria in
   `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`.
 - V1 consumer checkpoint manifest: added with exact Sparkbot, Sparkbot_shell, and Arc-Bot-shell checkpoint commits in
-  `docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md`; Arc-Bot-shell remains compatibility-only evidence until clean checkpoint proof is recorded.
+  `docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md`; Arc-Bot-shell clean-checkpoint proof is recorded separately as release-gate input evidence.
 - V1 current candidate validation refresh audit: complete with latest focused current-gate/release-readiness validation passing 153 tests and full LIMA suite passing 5350 tests in
   `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`.
 - V1 current candidate validation refresh LIMA-only supplement: recorded on 2026-06-21 with 37 focused G61 guard/operator/freshness tests, 147 focused V1 readiness regression tests, full LIMA suite validation with 5359 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate or G61 implementation authority.
@@ -70,13 +70,13 @@ Latest V1 checkpoint:
   `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`.
 - V1 post-validation readiness-change latest post-G61 request supplement: recorded on 2026-06-21 with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, full LIMA suite validation with 5362 tests, diff hygiene, and protected runtime/dependency/support path status clean. This supplement keeps request-stage handoff freshness visible; it does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, production, or G61 implementation authority.
 - V1 post-validation readiness-change latest quickstart artifact refresh supplement: recorded on 2026-06-21 with 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5364 tests, compile validation, diff hygiene, and protected runtime/dependency/support path status clean. This supplement keeps the quickstart doc/fixture/test evidence-to-preserve assertions current; it does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun and does not create release-candidate, cutover, final-readiness, production, Arc-Bot-shell clean-checkpoint, or G61 implementation authority.
-- V1 release-candidate acceptance checklist: added with verdict `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS` in
+- V1 release-candidate acceptance checklist: added with verdict `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS` in
   `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`.
-- V1 release-candidate cutover runbook: added with verdict `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS` in
+- V1 release-candidate cutover runbook: added with verdict `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION` in
   `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
 - V1 final readiness audit template: refreshed to require current validation refresh evidence through latest LIMA readiness freshness 15/89/5361 validation and latest handoff freshness 8/117/5362 plus 7/64/133/5364 validation, post-validation readiness-change freshness evidence, and clean Arc-Bot-shell checkpoint proof before any future pass in
   `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`.
-- V1 final blocker register: refreshed with active G61 operator-decision blocker in
+- V1 final blocker register: refreshed with final readiness and cutover blockers in
   `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`.
 - V1 operator unblock action packet: added as the current operator handoff packet for the exact G61 decision in
   `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`.
@@ -87,7 +87,7 @@ Latest V1 checkpoint:
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The next smallest safe V1 step is post-G61 release-candidate readiness refresh. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`, clean Arc-Bot-shell checkpoint proof, and the future final readiness audit are refreshed and pass after G61 closeout.
+The next smallest safe V1 step is the future final readiness audit. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`, and the future final readiness audit pass after G61 closeout and explicit cutover authorization is recorded.
 
 After the bounded V1-G61 import proof, do not edit Sparkbot or Arc-Bot-shell for G61, edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients, construct provider clients, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness without a new explicit gate.
 

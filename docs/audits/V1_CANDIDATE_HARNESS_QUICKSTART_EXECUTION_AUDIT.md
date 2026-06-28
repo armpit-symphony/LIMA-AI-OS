@@ -105,11 +105,11 @@ This refresh does not rerun consumer repositories and does not create release-ca
 - Post-refresh LIMA validation passes after adding the same-turn consumer smoke refresh assertions, including 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, compileall, and the full suite with 5360 tests.
 - Latest quickstart artifact refresh validation passes after adding current evidence-to-preserve assertions, including 7 focused quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, compileall, and the full suite with 5364 tests.
 - The result is limited to local fake-executor and sanitized-fixture smoke evidence.
-- The V1-G61 operator decision packet status audit confirms the packet is still awaiting exactly one valid operator choice.
+- The V1-G61 operator decision packet status audit confirms `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
 - The V1 current gate consistency audit remains the committed proof that stale blocker or release-candidate claims are rejected.
 - The future final readiness audit was not executed or passed by this quickstart execution audit.
-- Arc-Bot-shell smoke remains compatibility evidence only; it is not clean-checkpoint proof while unrelated local drift remains excluded.
-- The V1-G61 operator-decision blocker remains active.
+- Arc-Bot-shell smoke remains compatibility evidence only; clean-checkpoint proof is recorded separately as release-gate input evidence.
+- The V1-G61 operator-decision blocker is resolved only for bounded local import-proof evidence; release readiness and cutover remain blocked.
 
 ## Related Artifacts
 
@@ -151,4 +151,4 @@ This refresh does not rerun consumer repositories and does not create release-ca
 
 ## Next Action
 
-Keep this audit as current local consumer-harness execution evidence. The next state-changing step remains to record exactly one V1-G61 operator choice. Do not implement G61, create release-candidate artifacts, or claim V1/product/production readiness from this audit.
+Keep this audit as current local consumer-harness execution evidence. The next state-changing step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization. Do not add more G61 implementation, create release-candidate artifacts, or claim V1/product/production readiness from this audit.

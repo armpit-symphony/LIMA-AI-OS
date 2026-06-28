@@ -5,15 +5,15 @@ Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
 Source LIMA commit before register refresh: `37626bf236bf96c8a57a3ca351668e90eeb0e651`
 API status: `CANDIDATE_ONLY`
 
-This register records the current blocker state after the V1 candidate test handoff, public Sparkbot G56 publication resolution, completed G57 through G60 candidate-only evidence, and the G61 request-stage readiness refresh. It is docs/tests/fixtures-only readiness evidence. It does not approve V1-G61 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
+This register records the current blocker state after the V1 candidate test handoff, public Sparkbot G56 publication resolution, completed G57 through G60 candidate-only evidence, the approved bounded G61 proof/closeout, and Arc-Bot-shell clean-checkpoint proof. It is docs/tests/fixtures-only readiness evidence. It does not approve additional V1-G61 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
-This register is not release-candidate authority. It does not authorize a V1.0.0 branch, tag, release cutover, final-readiness pass, or Arc-Bot-shell clean-checkpoint claim. Those remain separate blocked gates after the G61 operator decision is resolved.
+This register is not release-candidate authority. It does not authorize a V1.0.0 branch, tag, release cutover, or final-readiness pass. It records Arc-Bot-shell clean-checkpoint proof as resolved input evidence only; release-candidate acceptance, final readiness, and cutover authorization remain separate blocked gates.
 
 ## Register Verdict
 
-Verdict: `STOPPED_AT_V1_G61_OPERATOR_DECISION`
+Verdict: `STOPPED_AT_FINAL_READINESS_AND_CUTOVER_AUTHORITY`
 
-The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, and G57 through G60 are completed candidate-only evidence. The current gate consistency audit rejects stale public Sparkbot publication and V1-G57 active-blocker language. The remaining state-changing step requires an explicit V1-G61 operator decision, and downstream release-candidate, cutover, final-readiness, and Arc clean-checkpoint gates remain blocked until their own evidence is produced.
+The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, G57 through G60 are completed candidate-only evidence, the V1-G61 operator decision is recorded as `Approve-V1-G61`, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The remaining release blockers are the future final readiness audit, release-candidate checklist pass, and explicit cutover authorization.
 
 ## Resolved Blockers
 
@@ -34,45 +34,41 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1-G58 built-in provider SDK client authority contract: complete and audited as candidate-only evidence.
 - V1-G59 SDK dependency and vendor provider SDK import authority: complete and audited as candidate-only evidence.
 - V1-G60 SDK dependency declaration and vendor provider SDK import-boundary evidence: complete and audited as candidate-only evidence.
-- Result: resolved through G60 only; no G61 implementation approval is implied.
-
-## Remaining Blocker
+- Result: resolved through G60 only; no additional G61 implementation approval is implied.
 
 ### V1-G61 Runtime Vendor SDK Import Execution Proof
 
-- Gate packet: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`
-- Approval request: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`
-- Current state: no valid implementation approval recorded.
-- Valid operator choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
-- Required unblock: exactly one valid operator choice recorded in the G61 decision packet.
-- If approved later, implementation must stay inside the file scope in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`.
+- Operator decision: `Approve-V1-G61` recorded separately.
+- Proof and closeout: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md` and `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md`.
+- Result: resolved as bounded local import proof only; no provider calls, secrets, network egress, fallback execution, or consumer production integration are authorized.
+
+### Arc-Bot-shell Clean Checkpoint
+
+- Proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`.
+- Clean pushed commit: `99a4ba4955f13626c2176a2c44592000029a16c3`.
+- Result: resolved as clean checkpoint proof only; it does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
+
+## Remaining Blockers
 
 ### Release-Candidate Acceptance
 
 - Checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
-- Current verdict: `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`
-- Required unblock: G61 decision resolved, any approved G61 implementation and closeout evidence completed, current validation refresh re-run, and checklist passed.
+- Current verdict: `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`
+- Required unblock: final readiness audit executed and passed, current validation evidence refreshed if any release-readiness artifacts change, and checklist passed.
 - Current state: blocked; this register does not create branch or tag authority.
 
 ### Release Cutover
 
 - Runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
-- Current verdict: `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`
-- Required unblock: release-candidate acceptance checklist and final readiness audit both pass.
+- Current verdict: `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`
+- Required unblock: release-candidate acceptance checklist and final readiness audit both pass, then explicit operator authorization for branch or tag creation is recorded.
 - Current state: blocked; this register does not authorize cutover.
 
 ### Final Readiness Audit
 
 - Template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
-- Required unblock: post-G61 current validation evidence, release-candidate checklist evidence, consumer smoke evidence, protected-surface checks, and explicit final audit pass.
+- Required unblock: post-G61 current validation evidence, release-candidate checklist evidence, consumer checkpoint evidence, protected-surface checks, and explicit final audit pass.
 - Current state: future audit scaffolding only; this register did not execute or pass final readiness.
-
-### Arc-Bot-shell Clean Checkpoint
-
-- Current evidence: Arc-Bot-shell G56 fake-executor smoke passes locally with unrelated local worktree drift excluded from V1 proof.
-- Same-day recheck evidence: approved G56 smoke proof paths remain clean; this is compatibility evidence only and not clean-checkpoint proof while unrelated local drift remains excluded.
-- Required unblock: clean checkpoint proof recorded after local drift is absent or resolved and revalidated before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
-- Current state: compatibility evidence only; not clean-checkpoint proof.
 
 ## Current Verified Evidence
 
@@ -97,18 +93,18 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
-- V1-G61 operator decision packet status audit current: satisfied, awaiting exactly one valid operator choice.
-- V1-G61 preapproval runtime-tree guard audit current: satisfied, refreshed on 2026-06-21, with no `openai` import, no provider SDK client construction, and no future G61 implementation files present before approval.
-- V1 release-candidate acceptance checklist current verdict: `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`.
-- V1 release-candidate cutover runbook current verdict: `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`.
+- V1-G61 operator decision packet status audit current: satisfied, `Approve-V1-G61` recorded.
+- V1-G61 preapproval runtime-tree guard audit current: satisfied before approval, with no `openai` import, no provider SDK client construction, and no unapproved future G61 implementation files present.
+- V1 release-candidate acceptance checklist current verdict: `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`.
+- V1 release-candidate cutover runbook current verdict: `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`.
 - V1 final readiness audit template current state: future audit scaffolding only; not executed or passed.
 - Public Sparkbot local G56 fake-executor smoke: passed, 8 tests.
 - Accessible Sparkbot G56 fake-executor smoke: passed, 8 tests.
 - Arc-Bot-shell G56 fake-executor smoke: passed, 8 tests.
-- Same-turn consumer smoke refresh: passed, public Sparkbot 8 tests, accessible Sparkbot 8 tests, and Arc-Bot-shell 8 tests; Arc-Bot-shell remains compatibility evidence only while unrelated local drift is excluded.
-- Arc-Bot-shell same-day approved G56 smoke proof-path recheck: passed; approved proof paths remain clean while unrelated local drift remains excluded from V1 release-candidate/final-readiness proof.
-- Arc-Bot-shell local drift exclusion audit: current, 7 tracked modified files and 64 untracked files excluded from V1 release-candidate/final-readiness proof.
-- Consumer repo diff hygiene: passed; Arc-Bot-shell local worktree drift is excluded from V1 proof and is not clean-checkpoint evidence.
+- Same-turn consumer smoke refresh: passed, public Sparkbot 8 tests, accessible Sparkbot 8 tests, and Arc-Bot-shell 8 tests.
+- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`.
+- Arc-Bot-shell local drift exclusion audit: historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation.
+- Consumer repo diff hygiene: passed at recorded checkpoints; Arc-Bot-shell clean-checkpoint proof is now the release-gate input.
 - LIMA focused G61/handoff/status tests: passed, earlier current-gate/release-readiness set 153 tests before later readiness freshness supplements.
 - LIMA full test suite: passed, earlier current evidence 5350 tests before later readiness freshness supplements.
 - LIMA post-validation readiness freshness full suite: passed, same-turn evidence 5359 tests after release/cutover freshness checks.
@@ -121,15 +117,15 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 ## Boundaries Preserved
 
-- V1-G61 implementation approval recorded: no.
-- V1-G61 runtime vendor SDK import execution proof implemented: no.
+- Additional V1-G61 implementation approval recorded by this register: no.
+- Additional V1-G61 runtime vendor SDK import execution proof implemented by this register: no.
 - Public Sparkbot G56 branch pushed to `sparkpit-labs/Sparkbot`: yes.
 - Public Sparkbot branch merge to main claimed: no.
 - Release-candidate branch or tag authority created by this register: no.
 - Release-candidate acceptance checklist passed by this register: no.
 - Release-candidate cutover authorized by this register: no.
 - Final readiness audit executed or passed by this register: no.
-- Arc-Bot-shell clean-checkpoint proof claimed by this register: no.
+- Arc-Bot-shell clean-checkpoint proof created by this register: no.
 - `lima/` runtime files changed by this register: no.
 - LIMA public API exports changed by this register: no.
 - Consumer repositories changed by this register: no.
@@ -149,10 +145,10 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 ## Next Unblock Actions
 
-1. Record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`.
-2. If `Approve-V1-G61` is recorded later, implement only the exact runtime vendor SDK import execution proof scope approved by the G61 request packet.
-3. Re-run current candidate validation after any approved G61 work.
-4. Pass the release-candidate acceptance checklist, final readiness audit, and clean Arc-Bot-shell checkpoint proof before any branch, tag, cutover, or readiness action.
+1. Execute the future final readiness audit using the current consumer checkpoint evidence, including Arc-Bot-shell clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
+2. Refresh validation if any release-readiness docs, fixtures, tests, or checkpoint evidence change before the audit.
+3. Pass the release-candidate acceptance checklist and final readiness audit before any branch, tag, cutover, or readiness action.
+4. Record explicit operator authorization before release-candidate branch or tag creation.
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 

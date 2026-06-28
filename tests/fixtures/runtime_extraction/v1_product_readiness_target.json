@@ -122,9 +122,9 @@
     "v1_candidate_harness_quickstart_post_refresh_lima_full_suite_tests_passed": 5360,
     "v1_consumer_harness_usability_matrix_current": true,
     "v1_release_candidate_acceptance_checklist_current": true,
-    "v1_release_candidate_acceptance_checklist_verdict": "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS",
+    "v1_release_candidate_acceptance_checklist_verdict": "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS",
     "v1_release_candidate_cutover_runbook_current": true,
-    "v1_release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS",
+    "v1_release_candidate_cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
     "v1_current_gate_consistency_audit_complete": true,
     "v1_current_candidate_validation_refresh_complete": true,
     "v1_current_validation_focused_current_gate_tests_passed": 153,
@@ -160,10 +160,10 @@
     "arc_bot_shell_local_drift_exclusion_audit_untracked_file_count": 64,
     "arc_bot_shell_same_day_recheck_approved_g56_smoke_proof_paths_clean": true,
     "arc_bot_shell_clean_checkpoint_required_before_release_final_branch_tag_cutover_or_readiness_claim": true,
-    "arc_bot_shell_clean_checkpoint_proof_recorded": false,
+    "arc_bot_shell_clean_checkpoint_proof_recorded": true,
     "v1_final_readiness_audit_template_current": true,
-    "v1_g61_operator_approval_recorded": false,
-    "v1_g61_runtime_implementation_approved": false,
+    "v1_g61_operator_approval_recorded": true,
+    "v1_g61_runtime_implementation_approved": true,
     "v1_g61_valid_operator_choices": [
       "Approve-V1-G61",
       "Revise-V1-G61",
@@ -192,8 +192,6 @@
     "connector_browser_network_file_device_robotics_physical_world_behavior_added": false
   },
   "remaining_blockers": [
-    "v1_g61_operator_approval_not_recorded",
-    "runtime_vendor_sdk_import_execution_proof_not_implemented",
     "lockfile_edits_unapproved",
     "runtime_vendor_sdk_imports_in_lima_unapproved",
     "direct_provider_sdk_network_egress_by_lima_forbidden",
@@ -201,12 +199,14 @@
     "fallback_execution_unapproved",
     "consumer_production_runtime_integration_unapproved",
     "live_runtime_parity_across_first_shells_not_product_ready",
-    "arc_bot_shell_clean_checkpoint_proof_not_recorded_for_release_final_branch_tag_cutover_or_readiness_claim",
     "release_boundary_not_passed",
     "v1_product_readiness_not_approved",
-    "production_behavior_not_approved"
+    "production_behavior_not_approved",
+    "additional_v1_g61_implementation_unapproved",
+    "final_readiness_audit_not_executed_or_passed",
+    "explicit_cutover_authorization_not_recorded"
   ],
-  "recommended_next_step": "record_v1_g61_operator_decision",
+  "recommended_next_step": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization",
   "recommended_next_gap_id": "V1-G61",
-  "recommended_next_gap_to_close": "runtime_vendor_sdk_import_execution_proof_request"
+  "recommended_next_gap_to_close": "final_readiness_audit_and_cutover_authorization"
 }

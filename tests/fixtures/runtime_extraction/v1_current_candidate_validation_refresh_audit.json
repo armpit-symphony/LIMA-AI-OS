@@ -196,11 +196,10 @@
     "protected_runtime_dependency_support_paths_status": "clean"
   },
   "active_blockers_remaining": [
-    "exactly_one_valid_v1_g61_operator_choice_recorded",
     "release_candidate_acceptance_checklist_not_passed",
     "release_candidate_cutover_not_authorized",
     "final_readiness_audit_not_executed_or_passed",
-    "arc_bot_shell_clean_checkpoint_proof_not_recorded"
+    "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only"
   ],
   "evidence_interpretation": [
     "public_sparkbot_local_checkout_still_validates_fake_executor_path",
@@ -210,16 +209,16 @@
     "v1_candidate_harness_quickstart_execution_audit_current",
     "v1_current_gate_consistency_audit_current",
     "v1_current_gate_consistency_audit_committed_stale_claim_rejection_proof",
-    "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice",
+    "v1_g61_operator_decision_packet_status_audit_current_approve_recorded_bounded_proof_only",
     "v1_release_candidate_acceptance_checklist_blocked_not_passed",
     "v1_release_candidate_cutover_runbook_blocked_not_authority",
     "v1_final_readiness_audit_template_future_scaffolding_not_executed",
-    "arc_bot_shell_candidate_smoke_not_clean_checkpoint_proof",
+    "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
     "v1_g57_through_v1_g60_candidate_only_evidence_complete",
     "later_lima_validation_supplement_current_37_147_5359_with_protected_paths_clean",
     "latest_lima_readiness_freshness_supplement_current_15_89_5361_with_protected_paths_clean",
     "latest_handoff_freshness_supplement_current_8_117_5362_and_7_64_133_5364_with_protected_paths_clean",
-    "v1_g61_gate_unchanged"
+    "v1_g61_bounded_proof_complete_final_readiness_cutover_still_blocked"
   ],
   "boundaries_preserved": {
     "v1_g61_implementation_approval_recorded_by_audit": false,

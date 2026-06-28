@@ -30,7 +30,7 @@
   },
   "required_current_state": {
     "current_gate": "V1-G61",
-    "required_next_action": "record_clean_arc_bot_shell_checkpoint_proof_then_execute_future_final_readiness_audit",
+    "required_next_action": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization",
     "valid_operator_choices": [
       "Approve-V1-G61",
       "Revise-V1-G61",
@@ -87,51 +87,52 @@
       "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md"
     ],
     "long_range_roadmap": [
-      "The active V1 gate is operator decision for the prepared request-only `V1-G61` runtime vendor SDK import execution proof packet.",
+      "The active V1 lane is post-G61 release-candidate readiness refresh after the bounded `Approve-V1-G61` import execution proof.",
       "Completed implementation evidence is refreshed through `V1-G60`",
       "Current V1-G61 request-only authority documents:",
-      "The next smallest safe V1 action is to record exactly one operator choice in the V1-G61 runtime vendor SDK import execution proof operator decision packet"
+      "The next smallest safe V1 action is to run the final readiness audit after the release checklist refresh"
     ],
     "decisions": [
       "## ADR-0340: V1-G61 Supersedes Earlier V1 Decision-Log Gates As Current Blocker",
       "The V1 decision log records `V1-G61` as the current operator-decision gate",
       "Earlier V1 ADRs, including the V1-G55 decision-log status and consumer target refresh, remain historical evidence only",
-      "Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`."
+      "The V1-G61 operator decision packet status audit proves `Approve-V1-G61` is recorded for the bounded local import execution proof only."
     ],
     "product_readiness_target": [
       "The latest completed gate is `V1-G60`.",
-      "The active next lane is operator decision on the prepared request-only `V1-G61`"
+      "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only."
     ],
     "readiness_gap_matrix": [
       "Current active gate: `V1-G61`",
       "Current request-stage readiness refresh: `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`"
     ],
     "final_blocker_register": [
-      "STOPPED_AT_V1_G61_OPERATOR_DECISION",
-      "V1-G61 implementation approval recorded: no."
+      "STOPPED_AT_FINAL_READINESS_AND_CUTOVER_AUTHORITY",
+      "Additional V1-G61 implementation approval recorded by this register: no.",
+      "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`"
     ],
     "operator_unblock_packet": [
-      "AWAITING_OPERATOR_G61_DECISION",
-      "Required operator action: record exactly one V1-G61 operator choice."
+      "G61_DECISION_RECORDED_FINAL_READINESS_BLOCKED",
+      "Required operator action: run the final readiness audit after release checklist refresh"
     ],
     "final_candidate_branch_index": [
       "CANDIDATE_INDEX_READY_WITH_G61_OPERATOR_BLOCKER",
-      "Record exactly one V1-G61 operator choice"
+      "Run the final readiness audit after release checklist refresh"
     ],
     "release_candidate_acceptance_checklist": [
-      "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS",
-      "Arc-Bot-shell local worktree drift is either absent or explicitly excluded by `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` from V1 proof as compatibility evidence, not clean-checkpoint evidence; the current audit records 7 tracked modified files and 64 untracked files as excluded from release proof.",
-      "Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim."
+      "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS",
+      "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.",
+      "Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation."
     ],
     "release_candidate_cutover_runbook": [
-      "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS",
-      "Confirm `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` is current before treating the Arc smoke as compatibility evidence; the current audit records 7 tracked modified files and 64 untracked files excluded from release proof.",
-      "Confirm Arc-Bot-shell clean-checkpoint proof is recorded after local drift is absent or resolved and revalidated before treating Arc evidence as release-candidate, final-readiness, branch, tag, cutover, or readiness evidence."
+      "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION",
+      "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.",
+      "Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence."
     ],
     "final_readiness_audit_template": [
-      "READY_TO_RUN_POST_G61_AFTER_ARC_CLEAN_CHECKPOINT",
-      "Arc-Bot-shell local drift exclusion audit state, including the current `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` finding of 7 tracked modified files and 64 untracked files excluded from release proof",
-      "Arc-Bot-shell has a clean-checkpoint proof recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim"
+      "READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH",
+      "Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`",
+      "Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim"
     ],
     "arc_bot_shell_local_drift_exclusion_audit": [
       "PASS_CURRENT_ARC_DRIFT_EXCLUDED_FROM_V1_RELEASE_PROOF",
@@ -143,13 +144,13 @@
       "## Current Status Refresh",
       "This document's original runtime-gate section is historical audit-time evidence",
       "Current active gate: `V1-G61`.",
-      "Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+      "Current next step is to run final readiness audit after release checklist refresh"
     ],
     "consumer_testability_matrix_through_work_settings": [
       "## Current Status Refresh",
       "This matrix is historical Work/Settings testability evidence.",
       "Current active gate: `V1-G61`.",
-      "Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+      "Current next step is to run final readiness audit after release checklist refresh"
     ],
     "current_candidate_validation_refresh_audit": [
       "LOCAL_CANDIDATE_VALIDATION_REFRESH_PASS_WITH_G61_OPERATOR_BLOCKER",
@@ -201,11 +202,17 @@
     "CANDIDATE_INDEX_READY_WITH_EXTERNAL_UNBLOCKS",
     "V1.0.0 release-candidate branch is created",
     "V1.0.0 release-candidate tag is created",
-    "release-candidate branch, tag, cutover, or readiness action before checklist satisfaction, clean Arc-Bot-shell checkpoint proof, and final-readiness audit pass",
-    "Arc-Bot-shell smoke evidence is clean-checkpoint evidence",
-    "Arc-Bot-shell local drift resolved",
+    "release-candidate branch, tag, cutover, or readiness action before checklist satisfaction, final-readiness audit pass, and explicit operator authorization",
+    "Arc-Bot-shell smoke evidence used as a substitute for recorded clean-checkpoint proof",
+    "Arc-Bot-shell clean-checkpoint proof recorded but not release authority",
     "Recorded choice: Revise-V1-G61",
-    "Recorded choice: Pause"
+    "Recorded choice: Pause",
+    "The next smallest safe V1 action is to record exactly one operator choice in the V1-G61 runtime vendor SDK import execution proof operator decision packet",
+    "Required operator action: record exactly one V1-G61 operator choice.",
+    "Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`",
+    "the packet is still awaiting exactly one valid choice",
+    "awaiting exactly one valid operator choice",
+    "awaiting one exact valid choice"
   ],
   "boundaries_preserved": {
     "v1_g61_operator_approval_recorded_by_audit": true,
@@ -225,5 +232,5 @@
     "consumer_production_runtime_integration_added": false,
     "v1_product_or_production_readiness_claimed": false
   },
-  "next_recommended_step": "record_clean_arc_bot_shell_checkpoint_proof_then_execute_future_final_readiness_audit"
+  "next_recommended_step": "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization"
 }

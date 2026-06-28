@@ -266,7 +266,7 @@ def test_v1_candidate_harness_quickstart_execution_audit_text_matches_fixture() 
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in text
     assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
-    assert "status audit confirms the packet is still awaiting exactly one valid operator choice" in text
+    assert "status audit confirms `Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "stale blocker or release-candidate claims are rejected" in text
     assert "future final readiness audit was not executed or passed" in text
     assert "Arc-Bot-shell smoke remains compatibility evidence only" in text
@@ -277,7 +277,7 @@ def test_v1_candidate_harness_quickstart_execution_audit_text_matches_fixture() 
     assert "Arc-Bot-shell clean-checkpoint evidence claimed by this audit: false." in text
     assert "Consumer repositories changed by this audit: false." in text
     assert "V1.0 completion, product-readiness, or production-readiness claimed: false." in text
-    assert "Do not implement G61, create release-candidate artifacts, or claim V1/product/production readiness from this audit." in text
+    assert "Do not add more G61 implementation, create release-candidate artifacts, or claim V1/product/production readiness from this audit." in text
 
 
 def test_v1_candidate_harness_quickstart_execution_audit_has_no_sensitive_markers() -> None:

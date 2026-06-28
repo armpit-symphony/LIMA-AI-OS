@@ -16,13 +16,13 @@ Current controlling V1 state:
 - Current active gate: `V1-G61`.
 - Latest completed implementation evidence: `V1-G60`.
 - Latest runtime authority-chain audit: `V1-G56`.
-- Current required action: record exactly one V1-G61 operator choice.
+- Current required action: run final readiness audit after release checklist refresh, then require explicit cutover authorization.
 - Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
 - Current V1-G61 implementation approval recorded: no.
 - Current V1-G61 runtime vendor SDK import execution proof implemented: no.
 - Current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`.
 - Current candidate validation refresh: `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`.
-- Current G61 operator decision packet status audit: `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, awaiting exactly one valid operator choice.
+- Current G61 operator decision packet status audit: `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, records `Approve-V1-G61` for bounded local import-proof evidence only.
 - Current candidate handoff manifest: `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`, with latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests.
 - Current quickstart artifact freshness: `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`, with latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 
@@ -84,4 +84,4 @@ Creating that PR still requires GitHub auth/write permission for `sparkpit-labs/
 
 Keep these branches separate and testable while the V1-G55 decision remains pending. If `Approve-V1-G55` is explicitly recorded, implement only the bounded LIMA-side real provider SDK/network egress authority wrapper named in the G55 approval request. If G55 stays pending, the next safe work is docs/tests/fixtures-only readiness evidence or PR/auth unblock work for the public Sparkbot target.
 
-Current next step is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`. Stop before implementation unless `Approve-V1-G61` is recorded with the exact approval wording.
+Current next step is to run final readiness audit after release checklist refresh, then require explicit cutover authorization. Stop before additional implementation beyond the bounded proof already recorded.

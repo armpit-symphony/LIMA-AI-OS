@@ -138,7 +138,7 @@ def test_v1_candidate_harness_quickstart_text_matches_fixture() -> None:
     assert "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md" in text
     assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in text
-    assert "current committed proof that the G61 packet is awaiting exactly one valid operator choice" in text
+    assert "current committed proof that `Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "current harness-usability and freshness evidence before using this quickstart as handoff proof" in text
     assert "stale blocker or release-candidate claims are rejected" in text
     assert "this quickstart does not execute or pass that audit" in text
@@ -154,11 +154,11 @@ def test_v1_candidate_harness_quickstart_text_matches_fixture() -> None:
     assert "It does not approve V1-G61." in text
     assert "It does not execute or pass the future final readiness audit." in text
     assert "It does not authorize a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim." in text
-    assert "It does not turn Arc-Bot-shell compatibility smoke into clean-checkpoint proof for release, final-readiness, branch, tag, cutover, or readiness claims" in text
+    assert "It does not turn Arc-Bot-shell compatibility smoke into release, final-readiness, branch, tag, cutover, or readiness authority; clean-checkpoint proof is recorded separately as release-gate input evidence." in text
     assert "Arc-Bot-shell clean-checkpoint evidence claimed by this quickstart: false." in text
     assert "V1 release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim authorized by this quickstart: false." in text
     assert "V1.0 completion, product-readiness, or production-readiness claimed: false." in text
-    assert "Do not implement G61 or create release-candidate artifacts from this quickstart." in text
+    assert "Do not add more G61 implementation or create release-candidate artifacts from this quickstart." in text
 
 
 def test_v1_candidate_harness_quickstart_has_no_sensitive_markers() -> None:

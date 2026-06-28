@@ -34,7 +34,7 @@ def test_v1_release_candidate_cutover_runbook_fixture_and_docs_exist() -> None:
         "37626bf236bf96c8a57a3ca351668e90eeb0e651"
     )
     assert fixture["runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS"
+        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
     )
 
     for relative_path in fixture["documents"].values():
@@ -68,15 +68,15 @@ def test_v1_release_candidate_cutover_runbook_preconditions_are_complete() -> No
     assert "final_readiness_audit_passes" in preconditions
     assert "public_sparkbot_accessible_sparkbot_and_arc_bot_shell_smoke_validation_passes" in preconditions
     assert (
-        "arc_bot_shell_local_drift_exclusion_audit_current_7_tracked_modified_files_49_untracked_entries_excluded_from_release_proof"
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_final_branch_tag_cutover_or_readiness_claim"
         in preconditions
     )
     assert (
-        "arc_bot_shell_local_drift_absent_or_explicitly_excluded_as_compatibility_only_not_release_final_branch_tag_cutover_or_readiness_evidence"
+        "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof"
         in preconditions
     )
     assert (
-        "arc_bot_shell_clean_checkpoint_proof_recorded_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_claim"
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_final_branch_tag_cutover_or_readiness_claim"
         in preconditions
     )
     assert "lima_compileall_full_suite_and_diff_hygiene_pass" in preconditions
@@ -244,7 +244,9 @@ def test_v1_release_candidate_cutover_runbook_current_state_is_blocked() -> None
     assert state["arc_bot_shell_local_drift_exclusion_audit_tracked_modified_file_count"] == 7
     assert state["arc_bot_shell_local_drift_exclusion_audit_untracked_file_count"] == 64
     assert state["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
-    assert state["arc_bot_shell_clean_checkpoint_evidence"] is False
+    assert state["arc_bot_shell_clean_checkpoint_evidence"] is True
+    assert state["arc_bot_shell_clean_checkpoint_commit"] == "99a4ba4955f13626c2176a2c44592000029a16c3"
+    assert state["arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof"] is True
     assert state["lima_full_suite"] is True
     assert state["cutover_authorized_by_runbook"] is False
     assert state["release_candidate_branch_creation_allowed"] is False
@@ -260,9 +262,8 @@ def test_v1_release_candidate_cutover_runbook_future_procedure_is_gated() -> Non
         "confirm_current_gate_consistency_audit_passes",
         "confirm_g61_operator_decision_packet_status_audit_current_and_consistent_with_decision_state",
         "confirm_consumer_smoke_tests_pass",
-        "confirm_arc_bot_shell_local_drift_absent_or_explicitly_excluded_as_compatibility_only_not_release_candidate_evidence",
-        "confirm_arc_bot_shell_local_drift_exclusion_audit_current_7_tracked_modified_files_49_untracked_entries_excluded_from_release_proof",
-        "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_evidence",
+        "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+        "confirm_historical_arc_drift_exclusion_is_superseded_compatibility_context_only",
         "confirm_current_candidate_validation_refresh_latest_153_5350_15_89_5361_and_8_117_5362_plus_7_64_133_5364_handoff_supplement_evidence",
         "confirm_post_validation_readiness_change_freshness_same_turn_5359_latest_quickstart_5360_final_blocker_index_15_89_5361_post_g61_request_8_117_5362_and_quickstart_artifact_7_64_133_5364_evidence",
         "confirm_lima_compileall_full_suite_and_diff_checks_pass",
@@ -288,8 +289,8 @@ def test_v1_release_candidate_cutover_runbook_records_stop_conditions() -> None:
         "v1_g61_implementation_without_exact_approval",
         "treat_runbook_as_g61_approval",
         "treat_runbook_as_passed_release_candidate_checklist_cutover_or_final_readiness_audit",
-        "treat_arc_candidate_smoke_as_clean_checkpoint_proof_while_local_drift_excluded",
-        "release_candidate_branch_or_tag_before_checklist_final_audit_and_clean_arc_checkpoint_proof_pass",
+        "treat_arc_candidate_smoke_as_substitute_for_recorded_clean_checkpoint_proof",
+        "release_candidate_branch_or_tag_before_checklist_final_audit_and_explicit_operator_authorization",
         "consumer_repo_edit_from_runbook_lane",
         "runtime_or_public_api_change_from_runbook_lane",
         "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",
@@ -306,7 +307,7 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
 
     assert "# V1 Release Candidate Cutover Runbook" in text
     assert fixture["source_lima_commit_before_runbook"] in text
-    assert "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS" in text
+    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
     assert "controlled path from the current V1 candidate evidence set" in text
     assert "V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md" in text
     assert "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md" in text
@@ -331,14 +332,13 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "LIMA full suite | satisfied at current validation checkpoint; latest validation-refresh supplement full-suite evidence 5361 tests; latest handoff freshness supplement full-suite evidence 5362/5364 tests; latest quickstart post-refresh full-suite evidence 5360 tests; latest final blocker/index refresh full-suite evidence 5361 tests; latest post-G61 request refresh full-suite evidence 5362 tests; latest quickstart artifact refresh full-suite evidence 5364 tests" in text
     assert "Current gate consistency audit current | satisfied" in text
     assert "V1-G61 operator decision packet status audit current | satisfied, `Approve-V1-G61` recorded" in text
-    assert "Arc-Bot-shell local drift exclusion audit | satisfied as compatibility evidence only; current audit records 7 tracked modified files and 64 untracked files excluded from release proof; not clean-checkpoint evidence" in text
-    assert "Arc-Bot-shell clean-checkpoint proof | blocked" in text
+    assert "Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
+    assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "Cutover authorized by this runbook | blocked" in text
-    assert "Confirm Arc-Bot-shell local worktree drift is either absent or explicitly excluded from V1 proof" in text
-    assert "the current audit records 7 tracked modified files and 64 untracked files excluded from release proof" in text
-    assert "Confirm Arc-Bot-shell clean-checkpoint proof is recorded" in text
-    assert "not release-candidate evidence" in text
-    assert "before treating Arc evidence as release-candidate, final-readiness, branch, tag, cutover, or readiness evidence" in text
+    assert "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded" in text
+    assert "historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context" in text
+    assert "Confirm Arc-Bot-shell evidence is not treated as release-candidate, final-readiness, branch, tag, cutover, or readiness evidence unless the clean checkpoint proof remains current" in text
+    assert "not current release-candidate evidence" in text
     assert "Release-candidate branch creation | blocked" in text
     assert "Release-candidate tag creation | blocked" in text
     assert "Create a release-candidate branch only after operator approval" in text
@@ -352,12 +352,12 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "V1.0.0 release-candidate tag created by this runbook: false." in text
     assert "V1 release-candidate cutover authorized by this runbook: false." in text
     assert "V1 final readiness audit executed or passed by this runbook: false." in text
-    assert "Arc-Bot-shell clean-checkpoint proof claimed by this runbook: false." in text
+    assert "Arc-Bot-shell clean-checkpoint proof created by this runbook: false." in text
     assert "treat this runbook as a passed release-candidate checklist" in text
-    assert "treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof" in text
-    assert "before the checklist, final audit, and clean Arc-Bot-shell checkpoint proof pass" in text
+    assert "treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof" in text
+    assert "before the checklist and final audit pass and explicit branch/tag authorization is recorded" in text
     assert "Keep cutover blocked." in text
-    assert "Record clean Arc-Bot-shell checkpoint proof and then execute a future final readiness audit" in text
+    assert "Execute a future final readiness audit, then require explicit operator authorization" in text
 
 
 def test_v1_release_candidate_cutover_runbook_has_no_sensitive_markers() -> None:

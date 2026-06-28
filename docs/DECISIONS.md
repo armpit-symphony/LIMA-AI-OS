@@ -6578,12 +6578,11 @@ The current V1 evidence chain has advanced beyond the V1-G55 and V1-G56 provider
 Consequences:
 
 - Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
-- The V1-G61 operator decision packet status audit proves the packet is present, no approval is recorded, and exactly one valid operator choice is still required.
-- Operator approval is not recorded by this ADR.
-- V1-G61 runtime implementation remains unapproved.
-- The next smallest safe action is to record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`.
-- If `Approve-V1-G61` is recorded later, implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`.
-- If `Revise-V1-G61` or `Pause` is recorded, implementation must not begin and the candidate readiness packet must be refreshed around that outcome.
+- The V1-G61 operator decision packet status audit proves `Approve-V1-G61` is recorded for the bounded local import execution proof only.
+- Operator approval for the bounded G61 proof is recorded, but no release-candidate, final-readiness, cutover, product-readiness, or production-readiness authority is created by this ADR.
+- Additional V1-G61 runtime implementation remains unapproved.
+- The next smallest safe action is to run the final readiness audit after the release checklist refresh, then require explicit cutover authorization before any branch, tag, cutover, or readiness claim.
+- Any follow-on implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md` and must not expand beyond the recorded proof.
 - The current validation refresh records 153 focused current-gate/release-readiness tests, 5350 full LIMA suite tests, latest LIMA readiness freshness evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passing, but successful tests do not approve G61 implementation or V1 product readiness.
 - No runtime behavior is added by this decision-log refresh.
 - No `lima/` runtime files are changed by this decision-log refresh.

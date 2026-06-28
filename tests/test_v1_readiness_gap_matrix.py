@@ -93,11 +93,11 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     assert anchor["consumer_harness_usability_matrix_current"] is True
     assert anchor["release_candidate_acceptance_checklist_current"] is True
     assert anchor["release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS"
+        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
     )
     assert anchor["release_candidate_cutover_runbook_current"] is True
     assert anchor["release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS"
+        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
     )
     assert anchor["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
     assert anchor["arc_bot_shell_local_drift_exclusion_audit_current"] is True
@@ -523,13 +523,13 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "Current consumer harness usability matrix: `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`" in text
     assert "Current release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`" in text
     assert "Current release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`" in text
-    assert "Current Arc-Bot-shell local drift stance: smoke compatibility evidence only" in text
-    assert "unrelated local worktree drift is excluded from V1 proof" in text
+    assert "Current Arc-Bot-shell clean-checkpoint stance" in text
+    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
-    assert "7 tracked modified files and 64 untracked files excluded from V1 release-candidate/final-readiness proof" in text
-    assert "same-day recheck proving approved G56 smoke proof paths remain clean" in text
-    assert "not clean-checkpoint evidence" in text
-    assert "Any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim requires a clean Arc-Bot-shell checkpoint proof." in text
+    assert "release-gate input evidence only" in text
+    assert "does not authorize release-candidate acceptance" in text
+    assert "does not authorize release-candidate acceptance" in text
+    assert "any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim still requires the remaining checklist, final-audit, and cutover-authorization gates" in text
     assert "Current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`" in text
     assert "Current candidate validation refresh audit: `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`" in text
     assert "Current post-validation readiness-change freshness audit: `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`" in text
@@ -545,14 +545,14 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "defines current Sparkbot and Arc-Bot-shell harness usability as local candidate smoke only" in text
     assert "`V1-G57` through `V1-G60`" in text
     assert "`V1-G61`" in text
-    assert "request-gate audit passes; preapproval runtime-tree guard audit passes; operator decision packet status audit proves the packet is still awaiting one exact valid choice; post-G61 request readiness refresh is complete" in text
+    assert "request-gate audit passes; preapproval runtime-tree guard audit passes; operator decision packet status audit proves `Approve-V1-G61` is recorded for bounded local import-proof evidence only; post-G61 request readiness refresh is complete" in text
     assert "current gate consistency rejects stale G56/G57 blocker language" in text
-    assert "Arc drift exclusion evidence records current dirty Arc local state as compatibility-only evidence, same-day approved G56 smoke proof paths clean, and not clean-checkpoint proof" in text
+    assert "Arc clean-checkpoint proof records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only" in text
     assert "current validation refresh records 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests" in text
     assert "post-validation readiness-change freshness evidence records same-turn validation requirements for later readiness docs, fixtures, or tests with full LIMA suite passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "candidate harness quickstart execution evidence records consumers 8/8/8 and LIMA 17/108/5360 plus latest quickstart artifact refresh 7/64/133/5364" in text
-    assert "same-day approved G56 smoke proof paths clean" in text
-    assert "Awaiting operator decision; implementation not approved" in text
+    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "Bounded local import proof complete; final readiness and cutover authority still blocked" in text
     assert "V1-G61 runtime vendor SDK import execution proof implementation without exact approval" in text
     assert "credential handling or real provider SDK/network egress in an import execution proof lane" in text
     assert "built-in provider SDK clients" in text
@@ -565,13 +565,13 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "Treat the V1 current gate consistency audit as the active-gate guardrail" in text
     assert "Treat the V1 current candidate validation refresh as current validation evidence only: 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing, plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
     assert "Treat the V1 post-validation readiness-change freshness audit as same-turn freshness evidence for later readiness docs, fixtures, or tests, including 5359 release/cutover freshness proof, latest quickstart 5360 full-suite proof, latest final blocker/index 15/89/5361 proof, latest post-G61 request readiness-refresh 8/117/5362 proof, and latest quickstart artifact refresh 7/64/133/5364 proof, not a release approval." in text
-    assert "Treat the V1 release-candidate cutover runbook as the future branch/tag procedure only, with current verdict `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`; excluded Arc-Bot-shell drift is compatibility-only evidence recorded by `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`, and any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim requires a clean Arc-Bot-shell checkpoint proof." in text
-    assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim while Arc-Bot-shell drift is only excluded rather than resolved with clean-checkpoint proof" in text
+    assert "Treat the V1 release-candidate cutover runbook as the future branch/tag procedure only, with current verdict `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, and any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim still requires the remaining checklist, final-audit, and cutover-authorization gates." in text
+    assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim that treats Arc smoke or clean-checkpoint proof as sufficient without checklist, final audit, and cutover authorization" in text
     assert "Treat the V1 final readiness audit template as a future post-G61 release-candidate audit input" in text
     assert "the G61 preapproval runtime-tree guard audit, the G61 operator decision packet status audit, the post-G61 request readiness refresh" in text
     assert (
-        "completed implementation evidence chain through G60, request-stage readiness through the post-G61 refresh, current consumer harness usability criteria and quickstart execution evidence for Sparkbot and Arc-Bot-shell local candidate smoke tests, a release-candidate acceptance checklist, a cutover runbook, a current gate consistency audit, a current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests, a post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, an Arc drift exclusion audit proving current Arc dirty state is compatibility-only evidence with approved G56 smoke proof paths clean, and a final readiness audit template"
+        "completed implementation evidence chain through G60, request-stage readiness through the post-G61 refresh, current consumer harness usability criteria and quickstart execution evidence for Sparkbot and Arc-Bot-shell local candidate smoke tests, a release-candidate acceptance checklist, a cutover runbook, a current gate consistency audit, a current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests, a post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, recorded Arc clean-checkpoint proof, and a final readiness audit template"
         in text
     )
     assert "post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
-    assert "The next smallest safe step is to record exactly one operator choice in the V1-G61 runtime vendor SDK import execution proof operator decision packet." in text
+    assert "The next smallest safe step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization before any branch, tag, cutover, or readiness claim." in text

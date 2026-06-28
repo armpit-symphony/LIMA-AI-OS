@@ -1,4 +1,4 @@
-"""Static checks for the V1 final candidate branch index."""
+"""Static checks for the 11 final candidate branch index."""
 
 from __future__ import annotations
 
@@ -145,7 +145,7 @@ def test_v1_final_candidate_branch_index_records_consumer_checkpoints() -> None:
         "untracked_file_count": 64,
         "release_candidate_final_readiness_proof": False,
         "same_day_approved_g56_smoke_proof_paths_clean": True,
-        "clean_checkpoint_proof_recorded": False,
+        "clean_checkpoint_proof_recorded": True,
     }
 
 
@@ -155,12 +155,10 @@ def test_v1_final_candidate_branch_index_requires_external_unblocks() -> None:
     assert fixture["required_current_unblocks"] == [
         "g61_operator_decision_packet_status_audit_current_and_consistent_with_recorded_decision_state",
         "g61_preapproval_runtime_tree_guard_audit_current_and_passing",
-        "exactly_one_valid_v1_g61_operator_choice_recorded",
         "if_approve_v1_g61_then_runtime_vendor_sdk_import_execution_proof_scope_complete",
         "release_candidate_acceptance_checklist_passed",
         "release_candidate_cutover_authorized_after_final_readiness_pass",
         "final_readiness_audit_executed_and_passed",
-        "arc_bot_shell_clean_checkpoint_proof_recorded_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_claim",
     ]
     assert fixture["valid_v1_g61_choices"] == [
         "Approve-V1-G61",
@@ -179,11 +177,11 @@ def test_v1_final_candidate_branch_index_requires_external_unblocks() -> None:
         "rerun_lima_compileall_full_suite_and_diff_checks",
         "refresh_current_candidate_validation_refresh_audit",
         "refresh_final_blocker_register_and_branch_index_freshness_after_later_readiness_edits",
-        "if_g61_approved_include_focused_g61_implementation_test_and_closeout",
+        "preserve_focused_g61_implementation_test_and_closeout_as_bounded_local_proof",
         "refresh_arc_bot_shell_local_drift_exclusion_audit_if_arc_drift_changes_before_final_readiness",
-        "record_arc_bot_shell_clean_checkpoint_proof_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_claim",
+        "confirm_arc_bot_shell_clean_checkpoint_proof_remains_current_before_release_final_branch_tag_cutover_or_readiness_claim",
         "run_final_readiness_audit_on_separate_branch",
-        "if_checklist_final_audit_and_clean_arc_checkpoint_proof_pass_use_cutover_runbook_before_branch_tag_cutover_or_readiness",
+        "if_checklist_final_audit_and_cutover_authorization_pass_use_cutover_runbook_before_branch_tag_cutover_or_readiness",
     ]
 
 
@@ -235,33 +233,33 @@ def test_v1_final_candidate_branch_index_text_matches_fixture() -> None:
     assert "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md" in text
     assert "V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md" in text
     assert "V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md" in text
-    assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
+    assert "V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md" in text
     assert "V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md" in text
     assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
     assert "V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md" in text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in text
     assert "This index is not release-candidate branch or tag authority" in text
-    assert "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS" in text
-    assert "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS" in text
+    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
+    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
     assert "future audit scaffolding only" in text
-    assert "Arc-Bot-shell clean checkpoint: not recorded" in text
+    assert "Arc-Bot-shell clean checkpoint: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "LIMA quickstart post-refresh validation: passed, 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests." in text
     assert "LIMA latest final blocker/index readiness refresh: passed, 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests." in text
     assert "LIMA latest post-G61 request readiness-refresh: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests." in text
     assert "LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests." in text
     assert "LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
-    assert "Arc-Bot-shell approved G56 smoke proof-path recheck: passed; approved proof paths remain clean while unrelated local drift remains excluded from V1 release-candidate/final-readiness proof." in text
-    assert "same-day approved G56 smoke proof paths rechecked clean" in text
-    assert "current 7 tracked modified files and 64 untracked files excluded from V1 release-candidate/final-readiness proof" in text
-    assert "Record Arc-Bot-shell clean-checkpoint proof after local drift is absent or resolved and revalidated before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
+    assert "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release-candidate/final-readiness authority remains blocked." in text
+    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "historical Arc-Bot-shell local drift as compatibility-only context" in text
+    assert "Run the final readiness audit after release checklist refresh, then require explicit cutover authorization before any branch, tag, cutover, or readiness claim" in text
     assert "must remain current and consistent with the recorded decision state" in text
-    assert "must remain current and passing before any G61 implementation" in text
+    assert "must remain current and passing before any final readiness audit, release-candidate branch, tag, cutover, or readiness claim" in text
     assert "Re-run or refresh `docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`" in text
     assert "Re-run or refresh `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`" in text
     assert "Refresh final blocker/register and branch-index freshness evidence after any later readiness edits" in text
-    assert "Refresh `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` if Arc-Bot-shell local drift changes before final-readiness evaluation." in text
+    assert "Confirm `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` remains current before final-readiness evaluation." in text
     assert "sparkpit-labs/Sparkbot" in text
-    assert "unrelated local worktree drift is excluded from V1 proof" in text
+    assert "clean checkpoint proof recorded" in text
     assert "Approve-V1-G61" in text
     assert "Public Sparkbot G56 branch pushed to `sparkpit-labs/Sparkbot`: yes." in text
     assert "Release-candidate branch or tag authority created by this index: no." in text
@@ -270,9 +268,9 @@ def test_v1_final_candidate_branch_index_text_matches_fixture() -> None:
     assert "Arc-Bot-shell clean-checkpoint proof claimed by this index: no." in text
     assert "treat this index as release-candidate branch or tag authority" in text
     assert "treat this index as a passed release-candidate checklist" in text
-    assert "treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof" in text
-    assert "If the release-candidate acceptance checklist, final readiness audit, and clean Arc-Bot-shell checkpoint proof pass" in text
-    assert "V1-G61 implementation approval recorded by this index: no." in text
+    assert "treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof" in text
+    assert "If the release-candidate acceptance checklist and final readiness audit pass" in text
+    assert "Additional V1-G61 implementation approval recorded by this index: no." in text
     assert "V1.0 completion, product readiness, or production readiness claimed: no." in text
 
 

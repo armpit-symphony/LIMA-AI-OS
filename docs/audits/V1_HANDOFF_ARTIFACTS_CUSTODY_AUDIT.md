@@ -36,7 +36,7 @@ The raw payload contents are not persisted in this audit, fixture, or test.
 - The directory does not replace the committed candidate test handoff manifest, candidate test handoff manifest execution audit, candidate harness quickstart, candidate harness quickstart execution audit, consumer harness usability matrix, post-G61 request readiness-refresh supplement, or latest quickstart artifact refresh evidence.
 - Latest committed handoff freshness remains in docs/tests/fixtures evidence, including 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests, plus 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - The directory does not record the exact `Approve-V1-G61` operator decision.
-- The G61 operator decision packet status audit remains the committed evidence that the decision packet is awaiting exactly one valid operator choice.
+- The G61 operator decision packet status audit remains the committed evidence that `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
 - The release-candidate checklist and cutover runbook remain committed evidence that V1 branch/tag work is blocked at the G61 operator decision.
 - The directory is excluded from final V1 readiness proof unless a later explicit artifact-publication gate approves a sanitized artifact manifest.
 

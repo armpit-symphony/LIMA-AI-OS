@@ -168,17 +168,15 @@
     "untracked_file_count": 64,
     "release_candidate_final_readiness_proof": false,
     "same_day_approved_g56_smoke_proof_paths_clean": true,
-    "clean_checkpoint_proof_recorded": false
+    "clean_checkpoint_proof_recorded": true
   },
   "required_current_unblocks": [
     "g61_operator_decision_packet_status_audit_current_and_consistent_with_recorded_decision_state",
     "g61_preapproval_runtime_tree_guard_audit_current_and_passing",
-    "exactly_one_valid_v1_g61_operator_choice_recorded",
     "if_approve_v1_g61_then_runtime_vendor_sdk_import_execution_proof_scope_complete",
     "release_candidate_acceptance_checklist_passed",
     "release_candidate_cutover_authorized_after_final_readiness_pass",
-    "final_readiness_audit_executed_and_passed",
-    "arc_bot_shell_clean_checkpoint_proof_recorded_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_claim"
+    "final_readiness_audit_executed_and_passed"
   ],
   "valid_v1_g61_choices": [
     "Approve-V1-G61",
@@ -197,11 +195,11 @@
     "rerun_lima_compileall_full_suite_and_diff_checks",
     "refresh_current_candidate_validation_refresh_audit",
     "refresh_final_blocker_register_and_branch_index_freshness_after_later_readiness_edits",
-    "if_g61_approved_include_focused_g61_implementation_test_and_closeout",
+    "preserve_focused_g61_implementation_test_and_closeout_as_bounded_local_proof",
     "refresh_arc_bot_shell_local_drift_exclusion_audit_if_arc_drift_changes_before_final_readiness",
-    "record_arc_bot_shell_clean_checkpoint_proof_after_local_drift_absent_or_resolved_and_revalidated_before_release_final_branch_tag_cutover_or_readiness_claim",
+    "confirm_arc_bot_shell_clean_checkpoint_proof_remains_current_before_release_final_branch_tag_cutover_or_readiness_claim",
     "run_final_readiness_audit_on_separate_branch",
-    "if_checklist_final_audit_and_clean_arc_checkpoint_proof_pass_use_cutover_runbook_before_branch_tag_cutover_or_readiness"
+    "if_checklist_final_audit_and_cutover_authorization_pass_use_cutover_runbook_before_branch_tag_cutover_or_readiness"
   ],
   "boundaries_preserved": {
     "v1_g61_implementation_approval_recorded_by_index": false,

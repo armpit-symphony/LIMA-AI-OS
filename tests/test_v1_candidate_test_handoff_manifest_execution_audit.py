@@ -253,27 +253,27 @@ def test_v1_candidate_handoff_execution_audit_text_matches_fixture() -> None:
     assert "V1 current gate consistency audit is current" in text
     assert "committed proof that stale public Sparkbot publication" in text
     assert "V1-G61 operator decision packet status audit is current" in text
-    assert "awaiting exactly one valid operator choice" in text
+    assert "`Approve-V1-G61` for bounded local import-proof evidence only" in text
     assert "V1 release-candidate acceptance checklist is current" in text
     assert "blocked evidence, not release authority" in text
     assert "V1 release-candidate cutover runbook is current" in text
     assert "blocked evidence, not cutover authority" in text
     assert "V1 final readiness audit template is current as future audit scaffolding only" in text
-    assert "not clean-checkpoint proof while unrelated Arc local drift remains excluded" in text
+    assert "Arc-Bot-shell compatibility smoke is local fake-executor candidate evidence only; clean-checkpoint proof is recorded separately and remains release-gate input evidence only." in text
     assert "G61 preapproval runtime-tree guard audit" in text
     assert "G61 operator decision packet status audit" in text
     assert "post-G61 readiness assertions remain aligned" in text
     assert "Full LIMA static/runtime-test suite passes at the current manifest checkpoint with 5359 tests." in text
     assert "Public Sparkbot G56 publication is resolved" in text
     assert "unrelated local worktree drift is excluded from V1 proof" in text
-    assert "V1-G61 remains unapproved" in text
+    assert "`Approve-V1-G61` for bounded local import-proof evidence only" in text
     assert "V1-G61 implementation approval recorded: no." in text
     assert "Release-candidate branch or tag authority created by this audit: no." in text
     assert "Final readiness audit executed or passed by this audit: no." in text
     assert "Arc-Bot-shell clean-checkpoint proof claimed by this audit: no." in text
     assert "treat this audit as release-candidate branch or tag authority" in text
     assert "treat this audit as a passed final readiness audit" in text
-    assert "treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof" in text
+    assert "treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof" in text
     assert "Public Sparkbot remote publication remains blocked" not in text
     assert "V1-G57 remains unapproved" not in text
     assert "Provider SDK clients added: no." in text

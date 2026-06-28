@@ -103,8 +103,8 @@ def test_v1_g61_decision_log_text_matches_current_gate() -> None:
     ) in text
     assert "Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
     assert "operator decision packet status audit" in text
-    assert "exactly one valid operator choice is still required" in text
-    assert "V1-G61 runtime implementation remains unapproved." in text
+    assert "`Approve-V1-G61` is recorded for the bounded local import execution proof only" in text
+    assert "Additional V1-G61 runtime implementation remains unapproved." in text
     assert "153 focused current-gate/release-readiness tests, 5350 full LIMA suite tests" in text
     assert "latest LIMA readiness freshness evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests" in text
     assert "latest handoff freshness evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passing" in text

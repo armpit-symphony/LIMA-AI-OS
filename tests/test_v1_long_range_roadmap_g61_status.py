@@ -127,10 +127,10 @@ def test_v1_long_range_roadmap_current_gate_is_g61_request_prep() -> None:
         is True
     )
     assert fixture["release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS"
+        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
     )
     assert fixture["release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS"
+        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
     )
     assert fixture["final_readiness_audit_template_current"] is True
     assert fixture["operator_approval_recorded"] is False
@@ -180,11 +180,11 @@ def test_v1_long_range_roadmap_text_points_to_g61_request_prep() -> None:
     assert "## V1 Product Readiness Target" in text
     assert "public `Sparkbot`" in text
     assert (
-        "The active V1 gate is operator decision for the prepared request-only `V1-G61` runtime vendor SDK import execution proof packet."
+        "The active V1 lane is post-G61 release-candidate readiness refresh after the bounded `Approve-V1-G61` import execution proof."
         in text
     )
     assert "Completed implementation evidence is refreshed through `V1-G60`" in text
-    assert "No V1-G61 implementation is approved." in text
+    assert "No additional V1-G61 implementation is approved." in text
     assert "Current V1-G60 completed dependency/import-boundary documents:" in text
     assert "`docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUDIT.md`" in text
     assert "`docs/readiness/V1_POST_G60_NEXT_LANE_DECISION_MATRIX.md`" in text
@@ -192,7 +192,7 @@ def test_v1_long_range_roadmap_text_points_to_g61_request_prep() -> None:
     assert "`docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`" in text
     assert "`docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`" in text
     assert "operator decision packet status audit" in text
-    assert "exactly one valid operator choice is still required" in text
+    assert "`Approve-V1-G61` is recorded for the bounded local import execution proof only" in text
     assert "Current V1.0.0 candidate-readiness control documents:" in text
     assert "`docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`" in text
     assert "`docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`" in text
@@ -202,10 +202,9 @@ def test_v1_long_range_roadmap_text_points_to_g61_request_prep() -> None:
     assert "latest handoff freshness evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests" in text
     assert "That evidence and clean Arc-Bot-shell checkpoint proof are required before any future release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert (
-        "The next smallest safe V1 action is to record exactly one operator choice "
-        "in the V1-G61 runtime vendor SDK import execution proof operator decision packet"
+        "The next smallest safe V1 action is to run the final readiness audit after the release checklist refresh, "
+        "then require explicit cutover authorization before any branch, tag, cutover, or readiness claim."
     ) in text
-    assert "`Approve-V1-G61`, `Revise-V1-G61`, or `Pause`" in text
     assert "approved vendor SDK module can be imported in a controlled local test context" in text
     assert "lockfile edits" in text
     assert "runtime imports in `lima/`" in text

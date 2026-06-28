@@ -219,18 +219,18 @@ def test_v1_candidate_test_handoff_manifest_text_matches_fixture() -> None:
     assert "release-candidate checklist and cutover runbook remain blocked" in text
     assert "clean Arc-Bot-shell checkpoint proof is recorded" in text
     assert "final readiness audit template has not been executed by this manifest" in text
-    assert "status audit proves the packet is still awaiting exactly one valid choice" in text
+    assert "status audit proves `Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "fake in-process executor, sanitized fixture, no-network, no-secret, no-production-wiring evidence only" in text
     assert "public G56 target publication resolved by audit" in text
-    assert "V1-G61 remains unapproved" in text
+    assert "`Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "No" not in text[:300]
     assert "does not approve V1-G61 implementation" in text
     assert "V1.0.0 release-candidate branch or tag authorized by this manifest" in text
     assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim authorized by this manifest" in text
     assert "Arc-Bot-shell clean-checkpoint evidence claimed by this manifest" in text
     assert "Release-candidate branch/tag authority: blocked" in text
-    assert "Arc-Bot-shell clean-checkpoint proof: blocked" in text
-    assert "clean-checkpoint proof for release, final-readiness, branch, tag, cutover, or readiness claims" in text
+    assert "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked." in text
+    assert "treat Arc-Bot-shell compatibility evidence as a substitute for recorded clean-checkpoint proof, or treat clean-checkpoint proof as release, final-readiness, branch, tag, cutover, or readiness authority" in text
     assert "claim V1.0 completion, product readiness, or production readiness" in text
 
 

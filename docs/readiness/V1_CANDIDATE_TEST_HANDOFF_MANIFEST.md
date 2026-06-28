@@ -13,7 +13,7 @@ It is docs/tests/fixtures-only readiness evidence. It does not approve V1-G61 im
 
 Verdict: `READY_FOR_LOCAL_CANDIDATE_TESTING_WITH_G61_OPERATOR_BLOCKER`
 
-The current candidate remains testable locally with fake in-process provider SDK/network executors only. Public Sparkbot G56 publication is resolved, V1-G57 through V1-G60 are completed candidate-only evidence, and V1-G61 remains unapproved until an explicit operator choice is recorded.
+The current candidate remains testable locally with fake in-process provider SDK/network executors only. Public Sparkbot G56 publication is resolved, V1-G57 through V1-G60 are completed candidate-only evidence, and `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
 
 ## Source Evidence
 
@@ -78,7 +78,7 @@ Run these commands from the listed paths. Stop on any failure.
 - The V1 current gate consistency audit locks current-facing handoff, readiness, and release artifacts to the active G61 operator-decision gate.
 - The V1 release-candidate checklist and cutover runbook remain blocked until the G61 decision is resolved, the final readiness audit passes, and clean Arc-Bot-shell checkpoint proof is recorded.
 - The V1 final readiness audit template has not been executed by this manifest.
-- The V1-G61 operator decision packet status audit proves the packet is still awaiting exactly one valid choice and does not approve implementation.
+- The V1-G61 operator decision packet status audit proves `Approve-V1-G61` is recorded for bounded local import-proof evidence only and does not approve release, cutover, product readiness, or production readiness.
 - LIMA-AI-OS records the runtime authority chain through G56, completed G57 through G60 candidate-only evidence, and the request-only G61 operator gate.
 - The local candidate remains bounded to fake/caller-injected execution evidence and sanitized fixtures.
 
@@ -114,7 +114,7 @@ The following must remain false while this manifest is the current handoff:
 - V1-G61 implementation: blocked until exactly one valid operator choice is recorded, and implementation may proceed only if that choice is `Approve-V1-G61` with the exact approval wording.
 - Runtime import execution proof: blocked until V1-G61 is approved.
 - Release-candidate branch/tag authority: blocked until the release-candidate checklist, final readiness audit, and clean Arc-Bot-shell checkpoint proof pass under separate approval.
-- Arc-Bot-shell clean-checkpoint proof: blocked while unrelated local drift remains excluded from current V1 proof.
+- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked.
 - Latest handoff freshness supplements: evidence only; they do not approve V1-G61 implementation, release-candidate acceptance, final readiness, cutover, consumer production integration, Arc-Bot-shell clean-checkpoint proof, product readiness, or production readiness.
 - Lockfile edits, runtime imports in `lima/`, provider client construction, credentials, endpoint resolution, network egress, fallback, consumer production runtime integration, and product readiness remain separate blocked gates.
 
@@ -124,7 +124,7 @@ Stop and record a blocker before any step that would:
 
 - implement V1-G61 without exact approval
 - treat this handoff manifest as release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness-claim authority
-- treat Arc-Bot-shell compatibility evidence as clean-checkpoint proof for release, final-readiness, branch, tag, cutover, or readiness claims while unrelated local drift remains excluded
+- treat Arc-Bot-shell compatibility evidence as a substitute for recorded clean-checkpoint proof, or treat clean-checkpoint proof as release, final-readiness, branch, tag, cutover, or readiness authority
 - edit consumer repositories from this manifest lane
 - add runtime behavior, public API exports, provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, network calls, secret access, credential value access, fallback, connectors, or physical-world behavior
 - persist raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents

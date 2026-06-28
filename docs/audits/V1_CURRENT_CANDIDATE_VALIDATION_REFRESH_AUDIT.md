@@ -7,7 +7,7 @@ API status: `CANDIDATE_ONLY`
 
 This audit refreshes the current local validation evidence for the V1 candidate after the G61 request-stage readiness package. It is docs/tests/fixtures-only evidence. It does not approve V1-G61 implementation, complete V1.0, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
-This audit is validation-refresh evidence only. The passing checks are required inputs to later release-candidate review, but they do not create release-candidate branch/tag authority, authorize cutover, execute the final readiness audit, or prove an Arc-Bot-shell clean checkpoint while unrelated Arc local drift remains excluded.
+This audit is validation-refresh evidence only. The passing checks are required inputs to later release-candidate review, but they do not create release-candidate branch/tag authority, authorize cutover, execute the final readiness audit, or create Arc-Bot-shell clean-checkpoint proof.
 
 ## Audit Verdict
 
@@ -108,11 +108,11 @@ This supplement records later LIMA docs/tests/fixtures validation after the post
 - Arc-Bot-shell still validates the G56 smoke path.
 - The V1 candidate harness quickstart execution audit records local quickstart smoke pass evidence for public Sparkbot, accessible Sparkbot, and Arc-Bot-shell while preserving the G61 operator blocker.
 - The V1 current gate consistency audit locks current-facing docs to the G61 operator-decision gate and rejects stale public Sparkbot publication or V1-G57 active-blocker language.
-- The V1-G61 operator decision packet status audit confirms the decision packet is present, has no recorded approval, and is still awaiting exactly one valid operator choice.
-- The V1 release-candidate acceptance checklist remains `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`; this validation refresh is an input to that checklist, not a passed release-candidate checklist.
-- The V1 release-candidate cutover runbook remains `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`; this validation refresh is an input to future cutover review, not cutover authority.
+- The V1-G61 operator decision packet status audit confirms `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
+- The V1 release-candidate acceptance checklist remains `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`; this validation refresh is an input to that checklist, not a passed release-candidate checklist.
+- The V1 release-candidate cutover runbook remains `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; this validation refresh is an input to future cutover review, not cutover authority.
 - The V1 final readiness audit template remains future audit scaffolding; this validation refresh did not execute or pass the final readiness audit.
-- Arc-Bot-shell evidence remains local fake-executor compatibility evidence only; it is not clean-checkpoint proof while unrelated local drift remains excluded.
+- Arc-Bot-shell local fake-executor smoke remains compatibility evidence only; clean-checkpoint proof is recorded separately as release-gate input evidence.
 - The V1-G57 through V1-G60 evidence chain is complete as candidate-only evidence.
 - The later 2026-06-21 LIMA validation supplement records 37 focused G61 guard/operator/freshness tests, 147 focused V1 readiness regression tests, full LIMA suite validation with 5359 tests, diff hygiene, and protected runtime/dependency/support path status as clean.
 - The latest 2026-06-21 LIMA readiness freshness supplement records 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, full LIMA suite validation with 5361 tests, diff hygiene, and protected runtime/dependency/support path status as clean.
@@ -155,7 +155,7 @@ Stop before any next step that would:
 - treat this audit as G61 approval
 - treat this audit as release-candidate branch or tag authority
 - treat this audit as a passed release-candidate checklist, release cutover, or final readiness audit
-- treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof while local drift remains excluded
+- treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof
 - edit consumer repositories from this audit lane
 - add runtime behavior, public API exports, provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, network calls, secret access, credential value access, fallback, connectors, or physical-world behavior
 - persist raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents

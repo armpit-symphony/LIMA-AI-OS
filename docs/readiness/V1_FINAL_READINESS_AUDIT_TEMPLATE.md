@@ -7,11 +7,11 @@ API status: `CANDIDATE_ONLY`
 
 This template defines the final audit that must run after the post-G61 readiness inputs are refreshed.
 
-It is docs/tests/fixtures-only readiness evidence. It records that `Approve-V1-G61` was provided separately and that the bounded G61 proof/closeout exists, but it does not execute the final audit, approve V1-G61 implementation, complete V1.0, satisfy the release-candidate checklist, authorize cutover, authorize branch or tag actions, prove an Arc-Bot-shell clean checkpoint, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
+It is docs/tests/fixtures-only readiness evidence. It records that `Approve-V1-G61` was provided separately, that the bounded G61 proof/closeout exists, and that Arc-Bot-shell clean-checkpoint proof is recorded separately, but it does not execute the final audit, approve additional V1-G61 implementation, complete V1.0, satisfy the release-candidate checklist, authorize cutover, authorize branch or tag actions, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
 ## Template Verdict
 
-Verdict: `READY_TO_RUN_POST_G61_AFTER_ARC_CLEAN_CHECKPOINT`
+Verdict: `READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH`
 
 This final readiness audit must not be executed as a pass until the remaining release-candidate blockers are resolved:
 
@@ -21,7 +21,7 @@ This final readiness audit must not be executed as a pass until the remaining re
 - any readiness docs, fixtures, or tests changed after the current validation refresh have same-turn focused, full-suite, and diff-check validation evidence, including current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, or the final audit proves no such later changes exist
 - V1 release-candidate acceptance checklist blockers are closed
 - V1 release-candidate cutover runbook preconditions are satisfied but not executed by this template
-- Arc-Bot-shell has a clean-checkpoint proof recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 
 If `Revise-V1-G61` or `Pause` is recorded, the final audit must record the revision or pause outcome and must not claim product readiness.
 
@@ -67,9 +67,9 @@ The final audit must record:
 - public Sparkbot branch and target publication proof
 - accessible Sparkbot branch and pushed commit
 - Arc-Bot-shell branch and pushed commit
-- Arc-Bot-shell local drift disposition: absent, or explicitly excluded from V1 proof as compatibility evidence only before any release-candidate, final-readiness, branch, tag, cutover, or readiness claim
-- Arc-Bot-shell local drift exclusion audit state, including the current `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md` finding of 7 tracked modified files and 64 untracked files excluded from release proof, or a refreshed audit if those counts change before final readiness
-- Arc-Bot-shell clean-checkpoint proof, required for any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`
+- Arc-Bot-shell historical local drift exclusion audit state, treated only as superseded compatibility context after clean-checkpoint proof is recorded
+- Arc-Bot-shell clean-checkpoint proof, required and recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - V1 candidate harness quickstart execution audit state
 - V1 candidate harness quickstart execution audit post-refresh validation state, including consumers 8/8/8 and LIMA 17/108/5360 tests
 - V1 release-candidate acceptance checklist state
@@ -139,8 +139,8 @@ The final readiness audit may pass only if:
 - public Sparkbot G56 smoke passes
 - accessible Sparkbot G56 smoke passes
 - Arc-Bot-shell G56 smoke passes
-- Arc-Bot-shell local drift exclusion audit remains current and records the current 7 tracked modified files and 64 untracked files as compatibility-only evidence, or records refreshed counts before final readiness
-- Arc-Bot-shell local worktree drift is absent and a clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`
+- Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - LIMA compileall passes
 - LIMA full suite passes
 - G61 preapproval runtime-tree guard still proves no runtime vendor SDK import or provider client construction in `lima/`
@@ -165,9 +165,9 @@ The final readiness audit must fail or remain blocked if:
 - V1-G61 operator decision packet status audit is missing, stale, or contradicts the recorded G61 decision state
 - public Sparkbot, accessible Sparkbot, Arc-Bot-shell, or LIMA validation fails
 - V1 candidate harness quickstart execution audit is missing, stale, does not record current post-refresh consumers 8/8/8 plus LIMA 17/108/5360 tests, or records a failed consumer smoke or diff check
-- Arc-Bot-shell local drift exclusion audit is missing, stale, or no longer matches the current Arc-Bot-shell local drift counts before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim
-- Arc-Bot-shell has unrelated local drift that is neither absent nor explicitly excluded as compatibility evidence only before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim
-- Arc-Bot-shell drift is only explicitly excluded rather than resolved before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell clean-checkpoint proof is missing, stale, or no longer matches the documented clean pushed commit before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell evidence reverts to compatibility-only smoke without current clean-checkpoint proof before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell historical drift exclusion is treated as release proof instead of superseded compatibility context before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - Arc-Bot-shell clean-checkpoint proof is missing before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents are persisted in evidence
 - LIMA-owned provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, DNS/HTTP/socket/network calls, direct provider egress, secret lookup, credential value access, provider configuration changes, fallback, connectors, browser/file/device/robotics/physical-world behavior, or consumer production runtime integration appear without explicit later approval
@@ -192,7 +192,7 @@ Stop the final audit and record a blocked verdict if any operator, maintainer, o
 - Release-candidate checklist passed by this template: no.
 - Release-candidate cutover authorized by this template: no.
 - Branch or tag action authorized by this template: no.
-- Arc-Bot-shell clean-checkpoint proof claimed by this template: no.
+- Arc-Bot-shell clean-checkpoint proof created by this template: no.
 - V1-G61 operator decision recorded by this template: no.
 - V1-G61 implementation approved by this template: no.
 - V1-G61 runtime vendor SDK import execution proof implemented by this template: no.

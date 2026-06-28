@@ -158,7 +158,7 @@ def test_consumer_target_state_text_matches_fixture() -> None:
     assert "Current active gate: `V1-G61`." in text
     assert "Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
     assert "V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
-    assert "awaiting exactly one valid operator choice" in text
+    assert "records `Approve-V1-G61` for bounded local import-proof evidence only" in text
     assert "V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md" in text
     assert "latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests" in text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in text
@@ -181,8 +181,9 @@ def test_consumer_target_state_text_matches_fixture() -> None:
         in text
     )
     assert (
-        "Current next step is to record exactly one V1-G61 operator choice in "
-        "`docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`"
+        "Current next step is to run final readiness audit after release checklist refresh, "
+        "then require explicit cutover authorization. Stop before additional implementation "
+        "beyond the bounded proof already recorded."
         in text
     )
 

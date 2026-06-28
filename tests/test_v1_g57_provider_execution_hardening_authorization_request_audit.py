@@ -157,7 +157,7 @@ def test_v1_g57_request_audit_status_docs_match_current_gate() -> None:
     assert "V1-G57 provider execution hardening authorization approval request" in readme
     assert "V1 runtime authority chain audit through G56: complete." in state
     assert "V1-G57 provider execution hardening authorization evidence: complete and audited" in state
-    assert "No V1-G61 implementation is approved" in target
+    assert "No additional V1-G61 implementation is approved" in target
     assert "Current active gate: `V1-G61`" in gap
 
 

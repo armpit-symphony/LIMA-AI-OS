@@ -170,11 +170,11 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
     assert current["v1_consumer_harness_usability_matrix_current"] is True
     assert current["v1_release_candidate_acceptance_checklist_current"] is True
     assert current["v1_release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS"
+        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
     )
     assert current["v1_release_candidate_cutover_runbook_current"] is True
     assert current["v1_release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS"
+        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
     )
     assert current["v1_current_gate_consistency_audit_complete"] is True
     assert current["v1_current_candidate_validation_refresh_complete"] is True
@@ -312,10 +312,10 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
         ]
         is True
     )
-    assert current["arc_bot_shell_clean_checkpoint_proof_recorded"] is False
+    assert current["arc_bot_shell_clean_checkpoint_proof_recorded"] is True
     assert current["v1_final_readiness_audit_template_current"] is True
-    assert current["v1_g61_operator_approval_recorded"] is False
-    assert current["v1_g61_runtime_implementation_approved"] is False
+    assert current["v1_g61_operator_approval_recorded"] is True
+    assert current["v1_g61_runtime_implementation_approved"] is True
     assert current["v1_g61_valid_operator_choices"] == [
         "Approve-V1-G61",
         "Revise-V1-G61",
@@ -351,8 +351,8 @@ def test_v1_remaining_blockers_and_next_step_are_g61() -> None:
     fixture = _load_fixture()
     blockers = set(fixture["remaining_blockers"])
 
-    assert "v1_g61_operator_approval_not_recorded" in blockers
-    assert "runtime_vendor_sdk_import_execution_proof_not_implemented" in blockers
+    assert "additional_v1_g61_implementation_unapproved" in blockers
+    assert "final_readiness_audit_not_executed_or_passed" in blockers
     assert "lockfile_edits_unapproved" in blockers
     assert "runtime_vendor_sdk_imports_in_lima_unapproved" in blockers
     assert "provider_secrets_and_credential_values_inaccessible_to_lima" in blockers
@@ -360,16 +360,16 @@ def test_v1_remaining_blockers_and_next_step_are_g61() -> None:
     assert "consumer_production_runtime_integration_unapproved" in blockers
     assert "release_boundary_not_passed" in blockers
     assert (
-        "arc_bot_shell_clean_checkpoint_proof_not_recorded_for_release_final_branch_tag_cutover_or_readiness_claim"
+        "explicit_cutover_authorization_not_recorded"
         in blockers
     )
     assert "v1_product_readiness_not_approved" in blockers
     assert "production_behavior_not_approved" in blockers
-    assert fixture["recommended_next_step"] == "record_v1_g61_operator_decision"
+    assert fixture["recommended_next_step"] == "execute_future_final_readiness_audit_then_require_explicit_cutover_authorization"
     assert fixture["recommended_next_gap_id"] == "V1-G61"
     assert (
         fixture["recommended_next_gap_to_close"]
-        == "runtime_vendor_sdk_import_execution_proof_request"
+        == "final_readiness_audit_and_cutover_authorization"
     )
 
 
@@ -410,13 +410,13 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "Valid G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
     assert "Current status remains not V1 product-ready." in text
     assert "V1-G61 preapproval runtime-tree guard audit" in text
-    assert "V1-G61 operator decision packet status audit proving the packet is still awaiting one exact valid choice" in text
+    assert "V1-G61 operator decision packet status audit proving `Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "V1 candidate harness quickstart with current verdict `QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER`" in text
     assert "V1 candidate harness quickstart execution audit with current verdict `PASS_LOCAL_CANDIDATE_HARNESS_QUICKSTART_WITH_G61_OPERATOR_BLOCKER`" in text
     assert "V1 candidate harness quickstart post-refresh validation with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 tests, plus LIMA focused quickstart/handoff 17 tests, broader V1 harness/readiness 108 tests, and full LIMA suite 5360 tests" in text
     assert "V1 consumer harness usability matrix for Sparkbot and Arc-Bot-shell local candidate smoke criteria" in text
-    assert "V1 release-candidate acceptance checklist with current verdict `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`" in text
-    assert "V1 release-candidate cutover runbook with current verdict `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`" in text
+    assert "V1 release-candidate acceptance checklist with current verdict `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`" in text
+    assert "V1 release-candidate cutover runbook with current verdict `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`" in text
     assert "V1 current gate consistency audit proving the active gate is G61" in text
     assert "V1 current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing" in text
     assert "V1 current candidate validation refresh latest LIMA readiness freshness supplement with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests passing" in text
@@ -424,21 +424,21 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "V1 post-validation readiness-change freshness audit proving same-turn readiness edits after the validation refresh are covered by release/cutover freshness checks, a 5359-test full LIMA suite pass, latest quickstart post-refresh 5360-test full LIMA suite evidence, and latest final blocker/index refresh evidence passing 15 focused final blocker/index tests, 89 broader affected readiness tests, and 5361 full-suite tests" in text
     assert "V1 latest post-G61 request readiness-refresh evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and the 5362-test full LIMA suite" in text
     assert "V1 latest quickstart artifact refresh evidence passing 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and the 5364-test full LIMA suite" in text
-    assert "V1 Arc-Bot-shell local drift exclusion audit proving current Arc local drift, currently 7 tracked modified files and 64 untracked files, is compatibility-only evidence and excluded from V1 release-candidate/final-readiness proof, with same-day recheck evidence that approved G56 smoke proof paths remain clean" in text
+    assert "V1 Arc-Bot-shell clean-checkpoint proof recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only" in text
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "V1 final readiness audit template for the future post-G61 release-candidate audit" in text
-    assert "V1 operator unblock action packet for recording exactly one G61 operator decision" in text
+    assert "V1 operator unblock action packet preserved as handoff traceability after the recorded G61 decision" in text
     assert "V1 final candidate branch index for saved checkpoint and future branch/tag guard traceability" in text
-    assert "Arc-Bot-shell clean-checkpoint gate requiring clean checkpoint proof before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
+    assert "Arc-Bot-shell clean-checkpoint gate recorded as input evidence only; release-candidate pass, final-readiness pass, branch, tag, cutover, and readiness claims remain blocked by separate gates" in text
     assert "local consumer harness usability criteria" in text
     assert "fake in-process executors, sanitized fixtures, no-network behavior, no-secret access, and no production wiring" in text
-    assert "No V1-G61 implementation is approved" in text
-    assert "The operator decision packet status audit proves that no V1-G61 choice is recorded yet." in text
+    assert "No additional V1-G61 implementation is approved" in text
+    assert "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only." in text
     assert "The V1.0.0 release-candidate acceptance checklist is not satisfied and the release-candidate cutover runbook remains blocked" in text
     assert "The operator unblock action packet and final candidate branch index are handoff and traceability evidence only." in text
-    assert "The current gate consistency audit, current candidate validation refresh including latest LIMA readiness freshness supplement 15/89/5361 evidence and latest handoff freshness supplement 8/117/5362 plus 7/64/133/5364 evidence, post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence, current quickstart post-refresh evidence, current Arc drift exclusion audit, and clean Arc-Bot-shell checkpoint proof are required inputs to any future final readiness audit" in text
+    assert "The current gate consistency audit, current candidate validation refresh including latest LIMA readiness freshness supplement 15/89/5361 evidence and latest handoff freshness supplement 8/117/5362 plus 7/64/133/5364 evidence, post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence, current quickstart post-refresh evidence, current Arc clean-checkpoint proof are required inputs to any future final readiness audit" in text
     assert "built-in provider SDK clients" in text
     assert "secret lookup, credential value access" in text
     assert "consumer repository edits for V1-G61" in text
     assert "V1 product readiness or production readiness claims" in text
-    assert "clean Arc-Bot-shell checkpoint proof is not recorded for release-candidate, final-readiness, branch, tag, cutover, or readiness claims" in text
+    assert "clean Arc-Bot-shell checkpoint proof is recorded as input evidence only and does not authorize release-candidate, final-readiness, branch, tag, cutover, or readiness claims" in text

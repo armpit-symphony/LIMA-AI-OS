@@ -15,7 +15,7 @@ This audit is not release-candidate authority. It does not create a branch, tag,
 
 Verdict: `PASS_WITH_G61_OPERATOR_BLOCKER`
 
-The manifest validation path passes locally for the fake-executor consumer smoke checks and the LIMA focused/full validation checks. Public Sparkbot G56 publication is resolved. V1-G57 through V1-G60 are complete as candidate-only evidence. The V1 consumer harness usability matrix and current gate consistency audit are current as Sparkbot and Arc-Bot-shell local candidate smoke criteria. The current gate consistency audit remains the committed proof that stale public Sparkbot publication and V1-G57 active-blocker claims are rejected. V1-G61 remains unapproved until exactly one valid operator choice is recorded.
+The manifest validation path passes locally for the fake-executor consumer smoke checks and the LIMA focused/full validation checks. Public Sparkbot G56 publication is resolved. V1-G57 through V1-G60 are complete as candidate-only evidence. The V1 consumer harness usability matrix and current gate consistency audit are current as Sparkbot and Arc-Bot-shell local candidate smoke criteria. The current gate consistency audit remains the committed proof that stale public Sparkbot publication and V1-G57 active-blocker claims are rejected. V1-G61 approval is recorded only for bounded local import-proof evidence; release readiness and cutover remain blocked.
 
 ## Executed Checkpoints
 
@@ -55,11 +55,11 @@ The manifest validation path passes locally for the fake-executor consumer smoke
 - V1 latest quickstart artifact refresh records current evidence-to-preserve assertions with 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - V1 consumer harness usability matrix is current and records fake in-process executor, sanitized fixture, no-network, no-secret, no-production-wiring criteria for Sparkbot and Arc-Bot-shell local candidate smoke tests.
 - V1 current gate consistency audit is current and rejects stale public Sparkbot publication or V1-G57 active-blocker language.
-- V1-G61 operator decision packet status audit is current and records the packet as awaiting exactly one valid operator choice.
-- V1 release-candidate acceptance checklist is current and records `NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS`; it is blocked evidence, not release authority.
-- V1 release-candidate cutover runbook is current and records `CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS`; it is blocked evidence, not cutover authority.
+- V1-G61 operator decision packet status audit is current and records `Approve-V1-G61` for bounded local import-proof evidence only.
+- V1 release-candidate acceptance checklist is current and records `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`; it is blocked evidence, not release authority.
+- V1 release-candidate cutover runbook is current and records `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; it is blocked evidence, not cutover authority.
 - V1 final readiness audit template is current as future audit scaffolding only; it was not executed or passed by this manifest execution audit.
-- Arc-Bot-shell compatibility evidence is local fake-executor candidate smoke evidence only; it is not clean-checkpoint proof while unrelated Arc local drift remains excluded.
+- Arc-Bot-shell compatibility smoke is local fake-executor candidate evidence only; clean-checkpoint proof is recorded separately and remains release-gate input evidence only.
 - LIMA handoff, final blocker, final branch index, final audit template, G61 request, G61 request-gate audit, G61 preapproval runtime-tree guard audit, G61 operator decision packet status audit, and post-G61 readiness assertions remain aligned.
 - Full LIMA static/runtime-test suite passes at the current manifest checkpoint with 5359 tests.
 
@@ -94,12 +94,12 @@ The manifest validation path passes locally for the fake-executor consumer smoke
 
 ## Current Blockers
 
-- V1-G61 implementation remains blocked until exactly one valid operator choice is recorded, and implementation may proceed only if that choice is `Approve-V1-G61`.
-- Runtime vendor SDK import execution proof remains blocked until V1-G61 is approved.
+- Additional V1-G61 implementation remains blocked beyond the bounded local import-proof evidence already recorded.
+- Runtime vendor SDK import execution proof is recorded as local test-scoped evidence only, not provider execution, network, or release authority.
 - Release-candidate branch/tag authority remains blocked until the acceptance checklist passes after G61 resolution.
 - Release cutover remains blocked until the cutover runbook is executed after release-candidate acceptance.
 - Final readiness remains blocked until the final readiness audit is executed and passed.
-- Arc-Bot-shell clean-checkpoint proof remains blocked until local drift is resolved or a separate clean checkpoint is recorded.
+- Arc-Bot-shell clean-checkpoint proof is recorded separately as release-gate input evidence only.
 - Latest handoff freshness supplements remain evidence-only and do not create G61 implementation, release-candidate, final-readiness, cutover, consumer production integration, Arc clean-checkpoint, product-readiness, or production-readiness authority.
 - Lockfile edits, runtime imports in `lima/`, provider client construction, credentials, endpoint resolution, network egress, fallback, consumer production runtime integration, and product readiness remain separate blocked gates.
 
@@ -111,7 +111,7 @@ Stop before any next step that would:
 - treat this audit as G61 approval
 - treat this audit as release-candidate branch or tag authority
 - treat this audit as a passed final readiness audit
-- treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof while local drift remains excluded
+- treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof
 - edit consumer repositories from this audit lane
 - add runtime behavior, public API exports, provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, network calls, secret access, credential value access, fallback, connectors, or physical-world behavior
 - persist raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents
@@ -119,4 +119,4 @@ Stop before any next step that would:
 
 ## Recommended Next Step
 
-Keep this execution audit as the current local test evidence for the V1 candidate handoff. The next state-changing step requires operator action: record exactly one V1-G61 operator choice in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`.
+Keep this execution audit as the current local test evidence for the V1 candidate handoff. The next state-changing step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization before any branch, tag, cutover, or readiness claim.

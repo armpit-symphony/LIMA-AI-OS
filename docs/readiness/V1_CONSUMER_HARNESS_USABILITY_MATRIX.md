@@ -25,7 +25,7 @@ The current V1 candidate is usable by a consumer harness only when all of the fo
 - The harness test proves candidate call shape and authority metadata only.
 - The harness performs no LIMA-owned DNS/HTTP/socket/network call.
 - The harness performs no provider endpoint resolution, credential lookup, provider token access, fallback execution, connector invocation, browser/file/device/robotics/physical-world action, or production runtime wiring.
-- The G61 operator decision packet status audit remains current and records the packet as awaiting exactly one valid operator choice.
+- The G61 operator decision packet status audit remains current and records `Approve-V1-G61` for bounded local import-proof evidence only.
 - The current-gate consistency audit remains current and rejects stale blocker or release-candidate claims.
 - The current candidate validation refresh, post-validation readiness-change freshness audit, latest post-G61 request readiness-refresh supplement, and latest quickstart artifact refresh evidence remain current for the harness handoff.
 - The release-candidate acceptance checklist and cutover runbook remain blocked until the G61 operator decision is resolved, the final readiness audit passes, and clean Arc-Bot-shell checkpoint proof is recorded.
@@ -38,7 +38,7 @@ The current V1 candidate is usable by a consumer harness only when all of the fo
 | --- | --- | --- | --- | --- | --- |
 | Public Sparkbot target checkout | `C:\Users\limap\Sparkbot-public` on `v1-g56-runtime-authority-chain-audit` at `ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2` | G56 fake-executor provider SDK/network egress smoke against local LIMA checkout | `python -m pytest -q tests\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | `8 passed` | Candidate smoke only; no production wiring or provider egress. |
 | Accessible Sparkbot checkpoint | `C:\Users\limap\Sparkbot` on `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | G56 fake-executor provider SDK/network egress smoke against local LIMA checkout | `python -m pytest -q tests\test_sparkbot_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | `8 passed` | Candidate smoke only; no production wiring or provider egress. |
-| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` on `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at `2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0` | G56 fake-executor provider SDK/network egress smoke against local LIMA checkout | `python -m pytest -q tests\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | `8 passed` | Candidate smoke only; no production wiring, provider egress, or clean-checkpoint claim while unrelated local drift remains excluded. |
+| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` on `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at `2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0` | G56 fake-executor provider SDK/network egress smoke against local LIMA checkout | `python -m pytest -q tests\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | `8 passed` | Candidate smoke plus separate clean-checkpoint proof; no production wiring, provider egress, release authority, or cutover claim. |
 
 ## LIMA-Side Evidence Chain
 
@@ -99,7 +99,7 @@ Stop and record a blocker before any step that would:
 - implement V1-G61 without exact approval
 - treat this matrix as G61 implementation approval
 - treat this matrix as release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness-claim authority
-- treat Arc-Bot-shell compatibility smoke as clean-checkpoint evidence for release, final-readiness, branch, tag, cutover, or readiness claims while unrelated local drift remains excluded
+- treat Arc-Bot-shell compatibility smoke as a substitute for recorded clean-checkpoint proof, or treat clean-checkpoint proof as release, final-readiness, branch, tag, cutover, or readiness authority
 - edit Sparkbot, Sparkbot-public, or Arc-Bot-shell from this matrix lane
 - add runtime behavior, public API exports, provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, network calls, secret access, credential value access, fallback, connectors, or physical-world behavior
 - persist raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents

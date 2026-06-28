@@ -37,7 +37,7 @@ def test_v1_final_readiness_template_fixture_and_docs_exist() -> None:
         "37626bf236bf96c8a57a3ca351668e90eeb0e651"
     )
     assert fixture["template_verdict"] == (
-        "READY_TO_RUN_POST_G61_AFTER_ARC_CLEAN_CHECKPOINT"
+        "READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH"
     )
 
     for relative_path in fixture["documents"].values():
@@ -54,16 +54,14 @@ def test_v1_final_readiness_template_requires_unblocks_before_pass() -> None:
         "post_validation_readiness_doc_fixture_test_changes_have_same_turn_validation_or_are_absent": True,
         "release_candidate_acceptance_checklist_blockers_closed": False,
         "release_candidate_cutover_preconditions_satisfied_not_executed_by_template": False,
-        "arc_bot_shell_clean_checkpoint_proof_recorded_before_pass_branch_tag_cutover_or_readiness_claim": False,
+        "arc_bot_shell_clean_checkpoint_proof_recorded_before_pass_branch_tag_cutover_or_readiness_claim": True,
     }
     assert fixture["required_repository_evidence"] == [
         "lima_ai_os_branch_and_commit_under_audit",
         "public_sparkbot_branch_and_target_publication_proof",
         "accessible_sparkbot_branch_and_pushed_commit",
         "arc_bot_shell_branch_and_pushed_commit",
-        "arc_bot_shell_local_drift_absent_or_explicitly_excluded_as_compatibility_only_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
-        "arc_bot_shell_local_drift_exclusion_audit_current_7_tracked_modified_files_49_untracked_entries_excluded_from_release_proof_or_refreshed_before_final_readiness",
-        "arc_bot_shell_clean_checkpoint_proof_required_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "candidate_harness_quickstart_execution_audit_state",
         "candidate_harness_quickstart_execution_audit_post_refresh_consumers_8_8_8_lima_17_108_5360_current",
         "release_candidate_acceptance_checklist_state",
@@ -78,8 +76,6 @@ def test_v1_final_readiness_template_requires_unblocks_before_pass() -> None:
         "g61_preapproval_runtime_tree_guard_state",
         "post_g61_authorities_remain_blocked_unless_separately_approved",
     ]
-
-
 def test_v1_final_readiness_template_validation_commands_cover_all_repos() -> None:
     commands = _load_fixture()["required_validation_commands"]
 
@@ -124,8 +120,8 @@ def test_v1_final_readiness_template_pass_and_fail_criteria_are_explicit() -> No
         "public_sparkbot_g56_smoke_passes",
         "accessible_sparkbot_g56_smoke_passes",
         "arc_bot_shell_g56_smoke_passes",
-        "arc_bot_shell_local_drift_exclusion_audit_current_or_refreshed_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
-        "arc_bot_shell_local_drift_absent_and_clean_checkpoint_proof_recorded_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_clean_checkpoint_proof_current_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "lima_compileall_passes",
         "lima_full_suite_passes",
         "g61_preapproval_runtime_tree_guard_still_passes",
@@ -147,9 +143,9 @@ def test_v1_final_readiness_template_pass_and_fail_criteria_are_explicit() -> No
         "g61_operator_decision_packet_status_audit_missing_stale_or_contradicts_recorded_decision_state",
         "consumer_or_lima_validation_fails",
         "candidate_harness_quickstart_execution_audit_missing_stale_failed_or_lacks_post_refresh_consumers_8_8_8_lima_17_108_5360",
-        "arc_bot_shell_local_drift_exclusion_audit_missing_stale_or_count_mismatch_before_v1_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
-        "arc_bot_shell_local_drift_unexcluded_before_v1_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
-        "arc_bot_shell_drift_only_explicitly_excluded_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_clean_checkpoint_proof_missing_stale_or_commit_mismatch_before_v1_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_evidence_reverts_to_compatibility_only_without_clean_checkpoint_before_v1_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_historical_drift_exclusion_treated_as_release_proof_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "arc_bot_shell_clean_checkpoint_proof_missing_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "raw_sensitive_or_patch_content_persisted",
         "forbidden_provider_network_secret_fallback_connector_physical_or_production_behavior_appears",
@@ -185,7 +181,7 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
 
     assert "# V1 Final Readiness Audit Template" in text
     assert fixture["source_lima_commit_before_template"] in text
-    assert "READY_TO_RUN_POST_G61_AFTER_ARC_CLEAN_CHECKPOINT" in text
+    assert "READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH" in text
     assert "exactly one V1-G61 operator decision is recorded; current state is `Approve-V1-G61`" in text
     assert "the bounded G61 implementation proof and closeout are complete" in text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in text
@@ -213,9 +209,9 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
     assert "V1 current gate consistency audit state" in text
     assert "V1 candidate harness quickstart execution audit state" in text
     assert "V1 candidate harness quickstart execution audit post-refresh validation state, including consumers 8/8/8 and LIMA 17/108/5360 tests" in text
-    assert "Arc-Bot-shell local drift disposition" in text
-    assert "Arc-Bot-shell local drift exclusion audit state" in text
-    assert "7 tracked modified files and 64 untracked files excluded from release proof" in text
+    assert "Arc-Bot-shell clean-checkpoint proof state" in text
+    assert "Arc-Bot-shell historical local drift exclusion audit state" in text
+    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "Arc-Bot-shell clean-checkpoint proof" in text
     assert "V1 release-candidate acceptance checklist is satisfied" in text
     assert "V1 candidate harness quickstart execution audit remains current" in text
@@ -227,16 +223,16 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
     assert "same-turn focused validation, full LIMA suite, and diff-check evidence recorded before the audit passes, including current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "V1 current gate consistency audit remains current and rejects stale public Sparkbot publication or V1-G57 active-blocker language" in text
     assert "V1 release-candidate cutover runbook preconditions are satisfied before any branch, tag, cutover, or readiness action" in text
-    assert "Arc-Bot-shell local drift exclusion audit remains current and records the current 7 tracked modified files and 64 untracked files as compatibility-only evidence" in text
-    assert "Arc-Bot-shell local worktree drift is absent and a clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
+    assert "Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert "V1 release-candidate acceptance checklist still reports a blocker" in text
     assert "V1 current candidate validation refresh audit is missing, stale, or does not record the latest focused current-gate, full-suite, and latest LIMA readiness freshness supplement evidence" in text
     assert "V1 post-validation readiness-change freshness audit is missing, stale, or does not cover readiness docs, fixtures, or tests changed after the current validation refresh" in text
     assert "readiness docs, fixtures, or tests changed after the current validation refresh without same-turn focused validation, full LIMA suite, and diff-check evidence" in text
     assert "V1 candidate harness quickstart execution audit is missing, stale, does not record current post-refresh consumers 8/8/8 plus LIMA 17/108/5360 tests, or records a failed consumer smoke or diff check" in text
-    assert "Arc-Bot-shell local drift exclusion audit is missing, stale, or no longer matches the current Arc-Bot-shell local drift counts" in text
-    assert "Arc-Bot-shell has unrelated local drift that is neither absent nor explicitly excluded as compatibility evidence only before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim" in text
-    assert "Arc-Bot-shell drift is only explicitly excluded rather than resolved before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
+    assert "Arc-Bot-shell clean-checkpoint proof is missing, stale, or no longer matches the documented clean pushed commit" in text
+    assert "Arc-Bot-shell evidence reverts to compatibility-only smoke without current clean-checkpoint proof before a V1 release-candidate, final-readiness, branch, tag, cutover, or readiness claim" in text
+    assert "Arc-Bot-shell historical drift exclusion is treated as release proof instead of superseded compatibility context before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert "Arc-Bot-shell clean-checkpoint proof is missing before a release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert "V1 release-candidate cutover runbook still reports a blocker before branch, tag, cutover, or readiness action" in text
     assert "V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md" in text
@@ -253,7 +249,7 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
     assert "Release-candidate cutover authorized by this template: no." in text
     assert "Branch or tag action authorized by this template: no." in text
     assert "cutover or readiness-claim authority" in text
-    assert "Arc-Bot-shell clean-checkpoint proof claimed by this template: no." in text
+    assert "Arc-Bot-shell clean-checkpoint proof created by this template: no." in text
     assert "Stop the final audit and record a blocked verdict" in text
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_TESTING" in text
     assert "must not claim production readiness" in text

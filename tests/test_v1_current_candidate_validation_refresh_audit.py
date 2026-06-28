@@ -98,11 +98,10 @@ def test_v1_current_candidate_validation_refresh_keeps_g61_blocker() -> None:
     fixture = _load_fixture()
 
     assert fixture["active_blockers_remaining"] == [
-        "exactly_one_valid_v1_g61_operator_choice_recorded",
         "release_candidate_acceptance_checklist_not_passed",
         "release_candidate_cutover_not_authorized",
         "final_readiness_audit_not_executed_or_passed",
-        "arc_bot_shell_clean_checkpoint_proof_not_recorded",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
     ]
     assert fixture["evidence_interpretation"] == [
         "public_sparkbot_local_checkout_still_validates_fake_executor_path",
@@ -112,16 +111,16 @@ def test_v1_current_candidate_validation_refresh_keeps_g61_blocker() -> None:
         "v1_candidate_harness_quickstart_execution_audit_current",
         "v1_current_gate_consistency_audit_current",
         "v1_current_gate_consistency_audit_committed_stale_claim_rejection_proof",
-        "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice",
+        "v1_g61_operator_decision_packet_status_audit_current_approve_recorded_bounded_proof_only",
         "v1_release_candidate_acceptance_checklist_blocked_not_passed",
         "v1_release_candidate_cutover_runbook_blocked_not_authority",
         "v1_final_readiness_audit_template_future_scaffolding_not_executed",
-        "arc_bot_shell_candidate_smoke_not_clean_checkpoint_proof",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
         "v1_g57_through_v1_g60_candidate_only_evidence_complete",
         "later_lima_validation_supplement_current_37_147_5359_with_protected_paths_clean",
         "latest_lima_readiness_freshness_supplement_current_15_89_5361_with_protected_paths_clean",
         "latest_handoff_freshness_supplement_current_8_117_5362_and_7_64_133_5364_with_protected_paths_clean",
-        "v1_g61_gate_unchanged",
+        "v1_g61_bounded_proof_complete_final_readiness_cutover_still_blocked",
     ]
 
     validation = fixture["lima_validation_results"]
@@ -296,14 +295,14 @@ def test_v1_current_candidate_validation_refresh_text_matches_fixture() -> None:
     assert "V1 current gate consistency audit" in text
     assert "committed proof that stale public Sparkbot publication" in text
     assert "V1-G61 operator decision packet status audit" in text
-    assert "still awaiting exactly one valid operator choice" in text
-    assert "NOT_RELEASE_CANDIDATE_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS_BLOCKERS" in text
+    assert "`Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
+    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
     assert "not a passed release-candidate checklist" in text
-    assert "CUTOVER_BLOCKED_AT_ARC_CLEAN_CHECKPOINT_AND_FINAL_READINESS" in text
+    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
     assert "not cutover authority" in text
     assert "future audit scaffolding" in text
     assert "did not execute or pass the final readiness audit" in text
-    assert "not clean-checkpoint proof while unrelated local drift remains excluded" in text
+    assert "Arc-Bot-shell local fake-executor smoke remains compatibility evidence only; clean-checkpoint proof is recorded separately as release-gate input evidence" in text
     assert "83 passed" in text
     assert "153 passed" in text
     assert "5350 passed" in text
@@ -352,7 +351,7 @@ def test_v1_current_candidate_validation_refresh_text_matches_fixture() -> None:
         "tests, 133 broader G61/readiness tests, full LIMA suite validation with "
         "5362 and 5364 tests"
     ) in text
-    assert "V1-G61 still requires exactly one valid operator decision" in text
+    assert "`Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
     assert "V1-G61 implementation approval recorded by this audit: no." in text
     assert "Release-candidate branch or tag authority created by this audit: no." in text
     assert "Release-candidate cutover authorized by this audit: no." in text
@@ -360,7 +359,7 @@ def test_v1_current_candidate_validation_refresh_text_matches_fixture() -> None:
     assert "Arc-Bot-shell clean-checkpoint proof claimed by this audit: no." in text
     assert "treat this audit as release-candidate branch or tag authority" in text
     assert "treat this audit as a passed release-candidate checklist" in text
-    assert "treat Arc-Bot-shell local candidate smoke evidence as clean-checkpoint proof" in text
+    assert "treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof" in text
     assert "public Sparkbot branch publication to `sparkpit-labs/Sparkbot` still requires write credentials" not in text
     assert "V1-G57 still requires exactly one valid operator decision" not in text
     assert "V1.0 completion, product readiness, or production readiness claimed: no." in text
