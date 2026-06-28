@@ -1,8 +1,8 @@
 # V1 Final Blocker Register
 
-Date: 2026-06-21
+Date: 2026-06-28
 Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
-Source LIMA commit before register refresh: `37626bf236bf96c8a57a3ca351668e90eeb0e651`
+Source LIMA commit before register refresh: `bfa27f37212a24f0ca3e7d21c37e4ff80192db14`
 API status: `CANDIDATE_ONLY`
 
 This register records the current blocker state after the V1 candidate test handoff, public Sparkbot G56 publication resolution, completed G57 through G60 candidate-only evidence, the approved bounded G61 proof/closeout, and Arc-Bot-shell clean-checkpoint proof. It is docs/tests/fixtures-only readiness evidence. It does not approve additional V1-G61 implementation, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
@@ -13,7 +13,7 @@ This register is not release-candidate authority. It does not authorize a V1.0.0
 
 Verdict: `STOPPED_AT_FINAL_READINESS_AND_CUTOVER_AUTHORITY`
 
-The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, G57 through G60 are completed candidate-only evidence, the V1-G61 operator decision is recorded as `Approve-V1-G61`, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The remaining release blockers are the future final readiness audit, release-candidate checklist pass, and explicit cutover authorization.
+The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, G57 through G60 are completed candidate-only evidence, the V1-G61 operator decision is recorded as `Approve-V1-G61`, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The remaining release blockers are a final-readiness pass, release-candidate checklist pass, and explicit cutover authorization. The final readiness audit now exists but records a blocked verdict, not a pass.
 
 ## Resolved Blockers
 
@@ -54,7 +54,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 - Checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - Current verdict: `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`
-- Required unblock: final readiness audit executed and passed, current validation evidence refreshed if any release-readiness artifacts change, and checklist passed.
+- Required unblock: final readiness audit pass, current validation evidence refreshed if any release-readiness artifacts change, and checklist passed.
 - Current state: blocked; this register does not create branch or tag authority.
 
 ### Release Cutover
@@ -68,7 +68,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 - Template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
 - Required unblock: post-G61 current validation evidence, release-candidate checklist evidence, consumer checkpoint evidence, protected-surface checks, and explicit final audit pass.
-- Current state: future audit scaffolding only; this register did not execute or pass final readiness.
+- Current state: executed in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with blocked verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`; not passed.
 
 ## Current Verified Evidence
 
@@ -93,11 +93,12 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
+- V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
 - V1-G61 operator decision packet status audit current: satisfied, `Approve-V1-G61` recorded.
 - V1-G61 preapproval runtime-tree guard audit current: satisfied before approval, with no `openai` import, no provider SDK client construction, and no unapproved future G61 implementation files present.
 - V1 release-candidate acceptance checklist current verdict: `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`.
 - V1 release-candidate cutover runbook current verdict: `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`.
-- V1 final readiness audit template current state: future audit scaffolding only; not executed or passed.
+- V1 final readiness audit current state: executed with blocked verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`; not passed.
 - Public Sparkbot local G56 fake-executor smoke: passed, 8 tests.
 - Accessible Sparkbot G56 fake-executor smoke: passed, 8 tests.
 - Arc-Bot-shell G56 fake-executor smoke: passed, 8 tests.
@@ -114,6 +115,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.
 - LIMA diff hygiene: passed.
+- Latest final-readiness audit execution: passed current consumer smoke 8/8/8, Sparkbot_shell clean status, LIMA compileall, and LIMA full suite with 5391 tests; blocked on checklist/cutover authority.
 
 ## Boundaries Preserved
 
@@ -124,7 +126,8 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - Release-candidate branch or tag authority created by this register: no.
 - Release-candidate acceptance checklist passed by this register: no.
 - Release-candidate cutover authorized by this register: no.
-- Final readiness audit executed or passed by this register: no.
+- Final readiness audit executed by this register: no.
+- Final readiness audit passed by this register: no.
 - Arc-Bot-shell clean-checkpoint proof created by this register: no.
 - `lima/` runtime files changed by this register: no.
 - LIMA public API exports changed by this register: no.
@@ -145,7 +148,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 ## Next Unblock Actions
 
-1. Execute the future final readiness audit using the current consumer checkpoint evidence, including Arc-Bot-shell clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
+1. Reconcile the release-candidate checklist and blocked final-readiness audit using the current consumer checkpoint evidence, including Arc-Bot-shell clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
 2. Refresh validation if any release-readiness docs, fixtures, tests, or checkpoint evidence change before the audit.
 3. Pass the release-candidate acceptance checklist and final readiness audit before any branch, tag, cutover, or readiness action.
 4. Record explicit operator authorization before release-candidate branch or tag creation.

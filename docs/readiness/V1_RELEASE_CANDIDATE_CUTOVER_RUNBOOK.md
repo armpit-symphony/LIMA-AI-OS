@@ -1,8 +1,8 @@
 # V1 Release Candidate Cutover Runbook
 
-Date: 2026-06-22
+Date: 2026-06-28
 Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
-Source LIMA commit before runbook: `37626bf236bf96c8a57a3ca351668e90eeb0e651`
+Source LIMA commit before runbook refresh: `bfa27f37212a24f0ca3e7d21c37e4ff80192db14`
 API status: `CANDIDATE_ONLY`
 
 This runbook defines the controlled path from the current V1 candidate evidence set to a future V1.0.0 release-candidate branch or tag for Sparkbot and Arc-Bot-shell harness use.
@@ -15,7 +15,7 @@ This runbook is not itself cutover authority. It remains blocked procedure text 
 
 Verdict: `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`
 
-The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This runbook may be used only as a future procedure after the release-candidate acceptance checklist is satisfied, the final readiness audit passes, and operator authorization for branch or tag creation is recorded.
+The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`, and `docs/audits/V1_FINAL_READINESS_AUDIT.md` exists with blocked verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`. This runbook may be used only as a future procedure after the release-candidate acceptance checklist is satisfied, the final readiness audit passes, and operator authorization for branch or tag creation is recorded.
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
@@ -38,7 +38,7 @@ This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CAND
 - V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 operator unblock action packet: `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`
 - V1 final candidate branch index: `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`
-- Future V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
+- V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
 - V1-G61 operator decision packet: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`
 - V1-G61 approval request: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`
 - V1-G61 runtime vendor SDK import execution proof: `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md`
@@ -76,7 +76,8 @@ Every precondition must be satisfied before creating any V1.0.0 release-candidat
 | Latest quickstart post-refresh validation | satisfied, consumers 8/8/8 and LIMA 17/108/5360 tests |
 | Current gate consistency audit current | satisfied |
 | V1-G61 operator decision packet status audit current | satisfied, `Approve-V1-G61` recorded |
-| Final readiness audit exists and passes | blocked |
+| Final readiness audit exists | satisfied, `docs/audits/V1_FINAL_READINESS_AUDIT.md` records blocked verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED` |
+| Final readiness audit passes | blocked |
 | Public Sparkbot candidate smoke | satisfied as current G56 fake-executor evidence |
 | Accessible Sparkbot candidate smoke | satisfied as current G56 fake-executor evidence |
 | Arc-Bot-shell candidate smoke | satisfied as current G56 fake-executor evidence |
@@ -123,7 +124,8 @@ The future cutover audit must record the exact branch, tag, validation commands,
 - V1-G61 runtime vendor SDK import execution proof implemented by this runbook: false.
 - V1 release-candidate checklist passed by this runbook: false.
 - V1 release-candidate cutover authorized by this runbook: false.
-- V1 final readiness audit executed or passed by this runbook: false.
+- V1 final readiness audit executed by this runbook: false.
+- V1 final readiness audit passed by this runbook: false.
 - Arc-Bot-shell clean-checkpoint proof created by this runbook: false.
 - V1.0.0 release-candidate branch created by this runbook: false.
 - V1.0.0 release-candidate tag created by this runbook: false.
@@ -161,4 +163,4 @@ Stop before any step that would:
 
 ## Next Action
 
-Keep cutover blocked. Execute a future final readiness audit, then require explicit operator authorization for release-candidate branch creation, release-candidate tag creation, cutover, or any V1.0.0 readiness claim.
+Keep cutover blocked. Reconcile the checklist and blocked final-readiness audit into a final-readiness pass decision, then require explicit operator authorization for release-candidate branch creation, release-candidate tag creation, cutover, or any V1.0.0 readiness claim.

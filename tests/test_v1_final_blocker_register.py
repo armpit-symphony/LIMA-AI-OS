@@ -28,7 +28,7 @@ def test_v1_final_blocker_register_fixture_and_docs_exist() -> None:
 
     assert fixture["register_id"] == "v1_final_blocker_register"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
-    assert fixture["date"] == "2026-06-21"
+    assert fixture["date"] == "2026-06-28"
     assert fixture["branch"] == (
         "docs-v1-post-g60-readiness-and-next-lane-matrix"
     )
@@ -36,7 +36,7 @@ def test_v1_final_blocker_register_fixture_and_docs_exist() -> None:
         "docs-v1-post-g60-readiness-and-next-lane-matrix"
     )
     assert fixture["source_lima_commit_before_register_refresh"] == (
-        "37626bf236bf96c8a57a3ca351668e90eeb0e651"
+        "bfa27f37212a24f0ca3e7d21c37e4ff80192db14"
     )
     assert fixture["register_verdict"] == "STOPPED_AT_FINAL_READINESS_AND_CUTOVER_AUTHORITY"
 
@@ -83,9 +83,14 @@ def test_v1_final_blocker_register_records_verified_blockers() -> None:
     }
     assert blockers["final_readiness_audit"] == {
         "template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
-        "executed_or_passed": False,
+        "audit": "docs/audits/V1_FINAL_READINESS_AUDIT.md",
+        "executed": True,
+        "passed": False,
+        "current_verdict": (
+            "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED"
+        ),
         "required_unblock": (
-            "post_g61_validation_release_checklist_consumer_checkpoint_protected_surface_and_explicit_final_audit_pass"
+            "release_candidate_checklist_reconciled_current_validation_refreshed_if_needed_and_explicit_final_audit_pass"
         ),
     }
 def test_v1_final_blocker_register_records_resolved_public_sparkbot() -> None:
@@ -133,13 +138,15 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
         "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof",
         "consumer_repo_diff_hygiene_passed_at_recorded_checkpoints",
         "lima_diff_hygiene_passed",
+        "v1_final_readiness_audit_executed_blocked_checklist_cutover_authority_not_satisfied",
+        "v1_final_readiness_audit_current_consumer_smoke_8_8_8_lima_5391_passed",
     }
     assert required <= evidence
     assert "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice" not in evidence
     assert "arc_bot_shell_local_drift_excluded_from_v1_proof" not in evidence
     assert fixture["next_unblock_actions"] == [
-        "execute_future_final_readiness_audit_with_current_consumer_checkpoint_evidence",
-        "refresh_validation_if_release_readiness_artifacts_change_before_audit",
+        "reconcile_release_candidate_checklist_and_blocked_final_readiness_audit_with_current_consumer_checkpoint_evidence",
+        "refresh_validation_if_release_readiness_artifacts_change_before_final_pass_decision",
         "pass_release_candidate_acceptance_checklist_and_final_readiness_audit_before_branch_tag_cutover_or_readiness",
         "record_explicit_operator_authorization_before_release_candidate_branch_or_tag_creation",
     ]
@@ -166,7 +173,8 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in text
     assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
     assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
-    assert "future audit scaffolding only" in text
+    assert "V1 final readiness audit current state: executed with blocked verdict" in text
+    assert "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED" in text
     assert "This register is not release-candidate authority" in text
     assert "does not authorize a V1.0.0 branch, tag, release cutover" in text
     assert "V1-G61 operator decision packet status audit current: satisfied, `Approve-V1-G61` recorded." in text
@@ -186,7 +194,8 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "Public Sparkbot G56 branch pushed to `sparkpit-labs/Sparkbot`: yes." in text
     assert "Release-candidate branch or tag authority created by this register: no." in text
     assert "Release-candidate cutover authorized by this register: no." in text
-    assert "Final readiness audit executed or passed by this register: no." in text
+    assert "Final readiness audit executed by this register: no." in text
+    assert "Final readiness audit passed by this register: no." in text
     assert "Arc-Bot-shell clean-checkpoint proof created by this register: no." in text
     assert "Pass the release-candidate acceptance checklist and final readiness audit" in text
     assert "Approve-V1-G61" in text

@@ -28,10 +28,10 @@ def test_v1_release_candidate_cutover_runbook_fixture_and_docs_exist() -> None:
 
     assert fixture["runbook_id"] == "v1_release_candidate_cutover_runbook"
     assert fixture["api_status"] == "CANDIDATE_ONLY"
-    assert fixture["date"] == "2026-06-22"
+    assert fixture["date"] == "2026-06-28"
     assert fixture["branch"] == "docs-v1-post-g60-readiness-and-next-lane-matrix"
-    assert fixture["source_lima_commit_before_runbook"] == (
-        "37626bf236bf96c8a57a3ca351668e90eeb0e651"
+    assert fixture["source_lima_commit_before_runbook_refresh"] == (
+        "bfa27f37212a24f0ca3e7d21c37e4ff80192db14"
     )
     assert fixture["runbook_verdict"] == (
         "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
@@ -236,7 +236,12 @@ def test_v1_release_candidate_cutover_runbook_current_state_is_blocked() -> None
     )
     assert state["current_gate_consistency_audit_current"] is True
     assert state["g61_operator_decision_packet_status_audit_current"] is True
+    assert state["final_readiness_audit_exists"] is True
+    assert state["final_readiness_audit_verdict"] == (
+        "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED"
+    )
     assert state["final_readiness_audit_exists_and_passes"] is False
+    assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5391
     assert state["public_sparkbot_candidate_smoke"] is True
     assert state["accessible_sparkbot_candidate_smoke"] is True
     assert state["arc_bot_shell_candidate_smoke"] is True
@@ -306,8 +311,9 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     )
 
     assert "# V1 Release Candidate Cutover Runbook" in text
-    assert fixture["source_lima_commit_before_runbook"] in text
+    assert fixture["source_lima_commit_before_runbook_refresh"] in text
     assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
+    assert "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED" in text
     assert "controlled path from the current V1 candidate evidence set" in text
     assert "V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md" in text
     assert "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md" in text
@@ -332,6 +338,8 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "LIMA full suite | satisfied at current validation checkpoint; latest validation-refresh supplement full-suite evidence 5361 tests; latest handoff freshness supplement full-suite evidence 5362/5364 tests; latest quickstart post-refresh full-suite evidence 5360 tests; latest final blocker/index refresh full-suite evidence 5361 tests; latest post-G61 request refresh full-suite evidence 5362 tests; latest quickstart artifact refresh full-suite evidence 5364 tests" in text
     assert "Current gate consistency audit current | satisfied" in text
     assert "V1-G61 operator decision packet status audit current | satisfied, `Approve-V1-G61` recorded" in text
+    assert "Final readiness audit exists | satisfied" in text
+    assert "Final readiness audit passes | blocked" in text
     assert "Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
     assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "Cutover authorized by this runbook | blocked" in text
@@ -351,13 +359,14 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "V1.0.0 release-candidate branch created by this runbook: false." in text
     assert "V1.0.0 release-candidate tag created by this runbook: false." in text
     assert "V1 release-candidate cutover authorized by this runbook: false." in text
-    assert "V1 final readiness audit executed or passed by this runbook: false." in text
+    assert "V1 final readiness audit executed by this runbook: false." in text
+    assert "V1 final readiness audit passed by this runbook: false." in text
     assert "Arc-Bot-shell clean-checkpoint proof created by this runbook: false." in text
     assert "treat this runbook as a passed release-candidate checklist" in text
     assert "treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof" in text
     assert "before the checklist and final audit pass and explicit branch/tag authorization is recorded" in text
     assert "Keep cutover blocked." in text
-    assert "Execute a future final readiness audit, then require explicit operator authorization" in text
+    assert "Reconcile the checklist and blocked final-readiness audit into a final-readiness pass decision" in text
 
 
 def test_v1_release_candidate_cutover_runbook_has_no_sensitive_markers() -> None:
