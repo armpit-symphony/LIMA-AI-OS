@@ -562,6 +562,10 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "`openai>=1.0.0,<3.0.0`" in text
     assert "The latest V1 final readiness audit execution is recorded in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`." in text
     assert "release-candidate checklist refresh and explicit cutover authorization remain required before any branch, tag, cutover, or readiness claim" in text
+    assert "V1_FINAL_READINESS_RECONCILIATION_AUDIT.md" in text
+    assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
+    assert "resolves the circular final-readiness/checklist blocker for first-consumer harness testing only" in text
+    assert "does not authorize release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product readiness, production readiness, or consumer production integration" in text
     assert "the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence" in text
     assert "Do not edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients" in text
     assert "edit lockfiles" in text
@@ -670,6 +674,10 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "V1 final readiness audit template: refreshed" in state_text
     assert "refreshed to require current validation refresh evidence through latest LIMA readiness freshness 15/89/5361 validation and latest handoff freshness 8/117/5362 plus 7/64/133/5364 validation, post-validation readiness-change freshness evidence, and clean Arc-Bot-shell checkpoint proof before any future pass" in state_text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in state_text
+    assert "V1 final readiness reconciliation audit: recorded" in state_text
+    assert "V1_FINAL_READINESS_RECONCILIATION_AUDIT.md" in state_text
+    assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in state_text
+    assert "first-consumer harness testing only" in state_text
     assert "V1 final blocker register: refreshed with final readiness and cutover blockers" in state_text
     assert "V1_FINAL_BLOCKER_REGISTER.md" in state_text
     assert "V1 operator unblock action packet: added as the current operator handoff packet" in state_text
