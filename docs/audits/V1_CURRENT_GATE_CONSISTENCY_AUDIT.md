@@ -37,7 +37,7 @@ This audit locks the current-facing V1 evidence chain to the post-G61 release-re
 
 - API status: `CANDIDATE_ONLY`.
 - Current active gate: `V1-G61`.
-- Current required action: require explicit cutover authorization before any branch or tag action, after confirming checklist/reconciliation evidence remains current.
+- Current required action: record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` before any branch or tag action.
 - Valid V1-G61 choices: `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
 - Current implementation approval: recorded for the bounded V1-G61 import execution proof.
 - Current runtime vendor SDK import execution proof: complete as approved V1-G61 local import proof.
@@ -45,11 +45,11 @@ This audit locks the current-facing V1 evidence chain to the post-G61 release-re
 - Current candidate harness quickstart execution audit: pass with G61 proof closeout preserved.
 - Current G61 operator decision packet status audit: pass and approved for the bounded import proof.
 - Current release-candidate acceptance checklist: satisfied for first-consumer harness testing; cutover authorization remains separate.
-- Current release-candidate cutover runbook: blocked pending explicit operator authorization.
+- Current release-candidate cutover runbook: blocked pending `Approve-V1-RC-Cutover` in the cutover authorization packet.
 - Current final readiness reconciliation audit: passed for first-consumer harness testing with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Current post-validation readiness-change freshness audit: current and required for readiness docs, fixtures, or tests changed after the current validation refresh.
 - Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only.
-- Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but branch, tag, cutover, or readiness claim still requires explicit operator authorization.
+- Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but branch, tag, cutover, or readiness claim still requires `Approve-V1-RC-Cutover` in the cutover authorization packet.
 - Current long-range roadmap V1 section: aligned to post-G61 final readiness and cutover blockers.
 - Current decision log: includes ADR-0340 recording V1-G61 as the current blocker and earlier V1 ADRs as historical.
 - Historical consumer target/testability docs: include current-status refreshes pointing to G61 and preserving G55 as audit-time evidence only.
@@ -102,6 +102,6 @@ Historical audits may still describe their audit-time blockers when clearly labe
 
 ## Audit Decision
 
-The current-facing V1 docs are aligned to the post-G61 release-readiness gate after final-readiness reconciliation. The next valid action is requiring explicit cutover authorization before any branch, tag, cutover, or V1.0.0 readiness claim.
+The current-facing V1 docs are aligned to the post-G61 release-readiness gate after final-readiness reconciliation. The next valid action is recording exactly one valid cutover operator choice before any branch, tag, cutover, or V1.0.0 readiness claim.
 
-Machine action: `require_explicit_cutover_authorization_after_checklist_reconciliation`.
+Machine action: `record_exactly_one_valid_cutover_operator_choice`.

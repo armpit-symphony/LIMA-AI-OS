@@ -27,11 +27,12 @@
     "public_sparkbot_g56_publication_resolution_audit": "docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md",
     "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md",
     "candidate_harness_quickstart_execution_audit": "docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md",
-    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md"
+    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
   },
   "required_current_state": {
     "current_gate": "V1-G61",
-    "required_next_action": "require_explicit_cutover_authorization_after_checklist_reconciliation",
+    "required_next_action": "record_exactly_one_valid_cutover_operator_choice",
     "valid_operator_choices": [
       "Approve-V1-G61",
       "Revise-V1-G61",
@@ -75,12 +76,14 @@
     "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
     "release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing": true,
     "release_candidate_cutover_runbook_blocked_pending_operator_authorization": true,
-    "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": true
+    "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": true,
+    "release_candidate_cutover_authorization_packet_prepared": true,
+    "release_candidate_cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION"
   },
   "required_snippets_by_document": {
     "readme": [
       "LIMA remains `CANDIDATE_ONLY`.",
-      "The active next V1 lane is explicit cutover authorization after checklist/final-readiness reconciliation",
+      "The active next V1 lane is recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`",
       "V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
       "docs/audits/V1_FINAL_READINESS_AUDIT.md"
     ],
@@ -191,6 +194,11 @@
     "final_readiness_reconciliation_audit": [
       "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
       "Cutover authorization | blocked"
+    ],
+    "release_candidate_cutover_authorization_packet": [
+      "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
+      "Approve-V1-RC-Cutover",
+      "Current recorded choice: none."
     ]
   },
   "forbidden_current_state_phrases": [
@@ -240,5 +248,5 @@
     "consumer_production_runtime_integration_added": false,
     "v1_product_or_production_readiness_claimed": false
   },
-  "next_recommended_step": "require_explicit_cutover_authorization_after_checklist_reconciliation"
+  "next_recommended_step": "record_exactly_one_valid_cutover_operator_choice"
 }

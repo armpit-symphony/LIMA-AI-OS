@@ -25,7 +25,8 @@
     "g61_runtime_vendor_sdk_import_execution_proof": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
     "g61_runtime_vendor_sdk_import_execution_proof_closeout": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
     "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
-    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md"
+    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
   },
   "required_future_final_audit": "docs/audits/V1_FINAL_READINESS_AUDIT.md",
   "cutover_preconditions": [
@@ -107,7 +108,10 @@
     "final_readiness_audit_verdict": "BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED",
     "final_readiness_audit_lima_full_suite_tests_passed": 5391,
     "final_readiness_reconciliation_audit_exists_and_passes": true,
-    "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
+    "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+    "cutover_authorization_packet_prepared": true,
+    "cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
+    "cutover_authorization_choice_recorded": null
   },
   "future_cutover_procedure": [
     "confirm_final_readiness_audit_pass_candidate_ready_for_first_consumer_testing",
@@ -170,6 +174,6 @@
     "raw_sensitive_or_patch_content_persistence",
     "v1_product_production_or_completion_claim"
   ],
-  "next_action": "require_explicit_cutover_authorization_after_checklist_reconciliation",
+  "next_action": "record_exactly_one_valid_cutover_operator_choice",
   "source_lima_commit_before_runbook_refresh": "bfa27f37212a24f0ca3e7d21c37e4ff80192db14"
 }

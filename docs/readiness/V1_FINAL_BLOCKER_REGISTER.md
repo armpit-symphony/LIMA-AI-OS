@@ -60,7 +60,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 - Runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 - Current verdict: `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`
-- Required unblock: explicit operator authorization for branch creation, tag creation, and cutover is recorded after confirming checklist/reconciliation evidence remains current.
+- Required unblock: exactly one valid cutover operator choice is recorded in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, and that choice is `Approve-V1-RC-Cutover`, after confirming checklist/reconciliation evidence remains current.
 - Current state: blocked; this register does not authorize cutover.
 
 ## Current Verified Evidence
@@ -85,12 +85,14 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
+- V1 release-candidate cutover authorization packet: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
 - V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
 - V1-G61 operator decision packet status audit current: satisfied, `Approve-V1-G61` recorded.
 - V1-G61 preapproval runtime-tree guard audit current: satisfied before approval, with no `openai` import, no provider SDK client construction, and no unapproved future G61 implementation files present.
 - V1 release-candidate acceptance checklist current verdict: `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - V1 release-candidate cutover runbook current verdict: `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`.
+- V1 release-candidate cutover authorization packet current status: `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION`.
 - V1 final readiness reconciliation audit current state: passed for first-consumer harness testing with verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Public Sparkbot local G56 fake-executor smoke: passed, 8 tests.
 - Accessible Sparkbot G56 fake-executor smoke: passed, 8 tests.
@@ -141,7 +143,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 ## Next Unblock Actions
 
-1. Record explicit operator authorization before release-candidate branch creation, tag creation, cutover, or any V1.0.0 readiness claim.
+1. Record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` before release-candidate branch creation, tag creation, cutover, or any V1.0.0 readiness claim.
 2. Refresh validation if any release-readiness docs, fixtures, tests, or checkpoint evidence change before cutover.
 3. Confirm the release-candidate acceptance checklist, final readiness reconciliation audit, and Arc-Bot-shell clean-checkpoint proof remain current before any branch, tag, cutover, or readiness action.
 

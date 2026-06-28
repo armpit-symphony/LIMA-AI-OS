@@ -37,6 +37,7 @@ This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CAND
 - V1 Arc-Bot-shell local drift exclusion audit: `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
 - V1 Arc-Bot-shell clean checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`
 - V1 operator unblock action packet: `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`
+- V1 release-candidate cutover authorization packet: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`
 - V1 final candidate branch index: `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`
 - V1 final readiness audit: `docs/audits/V1_FINAL_READINESS_AUDIT.md`
 - V1 final readiness reconciliation audit: `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md`
@@ -57,6 +58,7 @@ Every precondition must be satisfied before creating any V1.0.0 release-candidat
 - `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md` remains current and records same-turn focused, full-suite, and diff-check evidence requirements for readiness docs, fixtures, or tests changed after the current validation refresh, with current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md` remains current and passes before any branch or tag action.
 - `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md` remains current and records `Approve-V1-G61`.
+- `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` records exactly one valid cutover operator choice, and that choice is `Approve-V1-RC-Cutover`.
 - The final readiness reconciliation audit exists and passes with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Public Sparkbot, accessible Sparkbot, and Arc-Bot-shell candidate smoke validation passes.
 - Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
@@ -85,7 +87,8 @@ Every precondition must be satisfied before creating any V1.0.0 release-candidat
 | Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
 | Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation |
 | LIMA full suite | satisfied at current validation checkpoint; latest validation-refresh supplement full-suite evidence 5361 tests; latest handoff freshness supplement full-suite evidence 5362/5364 tests; latest quickstart post-refresh full-suite evidence 5360 tests; latest final blocker/index refresh full-suite evidence 5361 tests; latest post-G61 request refresh full-suite evidence 5362 tests; latest quickstart artifact refresh full-suite evidence 5364 tests |
-| Cutover authorized by this runbook | blocked pending explicit operator authorization |
+| Cutover authorization packet | prepared, `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION` |
+| Cutover authorized by this runbook | blocked pending `Approve-V1-RC-Cutover` |
 | Release-candidate branch creation | blocked |
 | Release-candidate tag creation | blocked |
 
@@ -97,6 +100,7 @@ Run this procedure only after all cutover preconditions are satisfied:
 2. Confirm the release-candidate acceptance checklist reports `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 3. Confirm the current gate consistency audit still passes and records V1-G61 as the active current gate.
 4. Confirm the G61 operator decision packet status audit is current and consistent with the recorded decision state.
+5. Confirm `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` records `Approve-V1-RC-Cutover`.
 5. Confirm public Sparkbot, accessible Sparkbot, and Arc-Bot-shell smoke tests pass from their documented checkpoints.
 6. Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
 7. Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence.
@@ -105,8 +109,8 @@ Run this procedure only after all cutover preconditions are satisfied:
 10. Confirm the post-validation readiness-change freshness audit covers later readiness docs, fixtures, or tests with same-turn focused, full-suite, and diff-check evidence, including current same-turn full-suite freshness evidence of 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence of 5360 tests, latest final blocker/index refresh evidence of 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence of 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence of 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 11. Confirm LIMA `python -m compileall lima`, `python -m pytest -q tests -p no:cacheprovider`, `git diff --check`, and `git diff --cached --check` pass.
 12. Confirm `git status --short --branch` is clean except intentional staged release-candidate metadata.
-13. Create a release-candidate branch only after operator approval for branch creation.
-14. Create a V1.0.0 release-candidate tag only after operator approval for tag creation.
+13. Create a release-candidate branch only after `Approve-V1-RC-Cutover` is recorded.
+14. Create a V1.0.0 release-candidate tag only after `Approve-V1-RC-Cutover` is recorded.
 15. Record the branch/tag identifiers in a future cutover audit.
 
 ## Required Future Cutover Audit
@@ -164,4 +168,4 @@ Stop before any step that would:
 
 ## Next Action
 
-Keep cutover blocked. The checklist/final-readiness loop is reconciled for first-consumer harness testing; the next required action is explicit operator authorization for release-candidate branch creation, release-candidate tag creation, cutover, or any V1.0.0 readiness claim.
+Keep cutover blocked. The checklist/final-readiness loop is reconciled for first-consumer harness testing; the next required action is recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`.

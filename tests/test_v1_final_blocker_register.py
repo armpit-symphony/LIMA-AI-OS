@@ -83,7 +83,7 @@ def test_v1_final_blocker_register_records_verified_blockers() -> None:
         "runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
         "current_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
         "authorized": False,
-        "required_unblock": "explicit_operator_authorization_for_branch_tag_and_cutover_recorded",
+        "required_unblock": "approve_v1_rc_cutover_recorded_in_cutover_authorization_packet",
     }
 def test_v1_final_blocker_register_records_resolved_public_sparkbot() -> None:
     resolved = _load_fixture()["resolved_blockers"]["public_sparkbot_publication"]
@@ -145,7 +145,7 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
     assert "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice" not in evidence
     assert "arc_bot_shell_local_drift_excluded_from_v1_proof" not in evidence
     assert fixture["next_unblock_actions"] == [
-        "record_explicit_operator_authorization_before_release_candidate_branch_tag_cutover_or_readiness_claim",
+        "record_exactly_one_valid_cutover_operator_choice_before_branch_tag_cutover_or_readiness_claim",
         "refresh_validation_if_release_readiness_artifacts_change_before_cutover",
         "confirm_checklist_reconciliation_and_arc_clean_checkpoint_remain_current_before_branch_tag_cutover_or_readiness",
     ]
@@ -169,9 +169,11 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md" in text
     assert "V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md" in text
     assert "V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md" in text
+    assert "V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md" in text
     assert "V1_FINAL_READINESS_AUDIT_TEMPLATE.md" in text
     assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
+    assert "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION" in text
     assert "V1 final readiness reconciliation audit current state: passed for first-consumer harness testing" in text
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "This register is not cutover authority" in text
@@ -196,7 +198,7 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "Final readiness audit executed by this register: no." in text
     assert "Final readiness reconciliation consumed by this register: yes." in text
     assert "Arc-Bot-shell clean-checkpoint proof created by this register: no." in text
-    assert "Record explicit operator authorization before release-candidate branch creation" in text
+    assert "Record exactly one valid cutover operator choice" in text
     assert "Approve-V1-G61" in text
     assert "Additional V1-G61 implementation approval recorded by this register: no." in text
     assert "Additional V1-G61 runtime vendor SDK import execution proof implemented by this register: no." in text

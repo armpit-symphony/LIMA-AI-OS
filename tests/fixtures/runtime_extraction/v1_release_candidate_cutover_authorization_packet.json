@@ -1,0 +1,70 @@
+{
+  "packet_id": "v1_release_candidate_cutover_authorization_packet",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-28",
+  "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_lima_commit_before_packet": "ecd7ca3",
+  "packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
+  "documents": {
+    "packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+    "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
+    "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
+    "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md"
+  },
+  "valid_operator_choices": [
+    "Approve-V1-RC-Cutover",
+    "Revise-V1-RC-Cutover",
+    "Pause"
+  ],
+  "current_recorded_choice": null,
+  "evidence_ready_for_decision": {
+    "g61_operator_decision": "Approve-V1-G61",
+    "bounded_g61_proof_closeout_complete": true,
+    "release_candidate_acceptance_checklist_verdict": "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+    "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
+    "cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
+    "final_blocker_register_verdict": "STOPPED_AT_CUTOVER_AUTHORITY",
+    "arc_bot_shell_clean_checkpoint_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+    "focused_v1_readiness_status_tests_passed_before_packet": 96,
+    "compileall_lima_passed_before_packet": true,
+    "full_lima_suite_tests_passed_before_packet": 5405
+  },
+  "approval_effect_if_recorded_later": {
+    "authorizes_runbook_to_create_release_candidate_branch_after_validation": true,
+    "authorizes_runbook_to_create_release_candidate_tag_after_validation": true,
+    "requires_separate_cutover_audit": true,
+    "authorizes_product_readiness": false,
+    "authorizes_production_readiness": false
+  },
+  "boundaries_preserved": {
+    "cutover_operator_decision_recorded_by_packet": false,
+    "release_candidate_branch_authorized_without_later_valid_choice": false,
+    "release_candidate_tag_authorized_without_later_valid_choice": false,
+    "release_cutover_authorized_without_later_valid_choice": false,
+    "v1_completion_claimed_by_packet": false,
+    "product_readiness_claimed_by_packet": false,
+    "production_readiness_claimed_by_packet": false,
+    "lima_runtime_files_changed_by_packet": false,
+    "lima_public_api_exports_changed_by_packet": false,
+    "consumer_repositories_changed_by_packet": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "provider_sdk_clients_added": false,
+    "lockfile_edits_added": false,
+    "lima_owned_network_calls_added": false,
+    "secret_or_credential_value_access_added": false,
+    "fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false
+  },
+  "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
+  "post_packet_validation": {
+    "focused_cutover_packet_current_gate_tests_passed": 37,
+    "broader_v1_readiness_status_tests_passed": 102,
+    "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5412,
+    "diff_check_passed": true,
+    "release_or_cutover_authority_created_by_validation": false
+  }
+}

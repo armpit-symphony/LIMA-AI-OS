@@ -76,10 +76,12 @@ Latest V1 checkpoint:
   `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
 - V1 final readiness audit template: refreshed to require current validation refresh evidence through latest LIMA readiness freshness 15/89/5361 validation and latest handoff freshness 8/117/5362 plus 7/64/133/5364 validation, post-validation readiness-change freshness evidence, and clean Arc-Bot-shell checkpoint proof before any future pass in
   `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`.
-- V1 final readiness audit execution: recorded in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`; public Sparkbot, accessible Sparkbot, and Arc-Bot-shell smoke tests pass 8/8/8, Sparkbot_shell is clean, LIMA compileall passes, and the LIMA full suite passes with 5391 tests, but release-candidate checklist refresh and explicit cutover authorization remain required.
+- V1 final readiness audit execution: recorded in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`; public Sparkbot, accessible Sparkbot, and Arc-Bot-shell smoke tests pass 8/8/8, Sparkbot_shell is clean, LIMA compileall passes, and the LIMA full suite passes with 5391 tests. The checklist/final-readiness loop is reconciled; exactly one valid cutover operator choice remains required.
 - V1 final readiness reconciliation audit: recorded in `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` with verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`; it resolves the circular final-readiness/checklist blocker for first-consumer harness testing only and does not authorize release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product readiness, production readiness, or consumer production integration.
 - V1 final blocker register: refreshed with final readiness and cutover blockers in
   `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`.
+- V1 release-candidate cutover authorization packet: prepared with status `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION` in
+  `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`.
 - V1 operator unblock action packet: added as the current operator handoff packet for the exact G61 decision in
   `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`.
 - V1 final candidate branch index: refreshed as the saved branch/checkpoint map and future branch/tag guard in
@@ -89,7 +91,7 @@ Latest V1 checkpoint:
 - Product readiness: not approved.
 - Production readiness: not approved.
 
-The next smallest safe V1 step is explicit cutover authorization if the operator approves, after confirming checklist/reconciliation evidence remains current. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until explicit cutover authorization is recorded through `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` and checklist/reconciliation evidence remains current.
+The next smallest safe V1 step is recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, if the operator approves. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until `Approve-V1-RC-Cutover` is recorded in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, the cutover runbook is executed, and checklist/reconciliation evidence remains current.
 
 After the bounded V1-G61 import proof, do not edit Sparkbot or Arc-Bot-shell for G61, edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients, construct provider clients, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, access provider tokens or API keys, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness without a new explicit gate.
 

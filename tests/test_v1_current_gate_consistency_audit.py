@@ -43,7 +43,7 @@ def test_v1_current_gate_consistency_records_current_state() -> None:
 
     assert state == {
         "current_gate": "V1-G61",
-        "required_next_action": "require_explicit_cutover_authorization_after_checklist_reconciliation",
+        "required_next_action": "record_exactly_one_valid_cutover_operator_choice",
         "valid_operator_choices": [
             "Approve-V1-G61",
             "Revise-V1-G61",
@@ -58,6 +58,8 @@ def test_v1_current_gate_consistency_records_current_state() -> None:
         "release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing": True,
         "release_candidate_cutover_runbook_blocked_pending_operator_authorization": True,
         "final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing": True,
+        "release_candidate_cutover_authorization_packet_prepared": True,
+        "release_candidate_cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
         "final_readiness_audit_template_waits_for_arc_clean_checkpoint": True,
         "post_validation_readiness_change_freshness_audit_current": True,
         "arc_bot_shell_local_drift_gate_current": True,
@@ -193,11 +195,11 @@ def test_v1_current_gate_consistency_audit_doc_matches_fixture() -> None:
     assert "Historical consumer target/testability docs: include current-status refreshes pointing to G61 and preserving G55 as audit-time evidence only." in text
     assert "Current G61 operator decision packet status audit: pass and approved for the bounded import proof." in text
     assert "Current release-candidate acceptance checklist: satisfied for first-consumer harness testing; cutover authorization remains separate." in text
-    assert "Current release-candidate cutover runbook: blocked pending explicit operator authorization." in text
+    assert "Current release-candidate cutover runbook: blocked pending `Approve-V1-RC-Cutover` in the cutover authorization packet." in text
     assert "Current final readiness reconciliation audit: passed for first-consumer harness testing with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`." in text
     assert "Current post-validation readiness-change freshness audit: current" in text
     assert "Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only." in text
-    assert "Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but branch, tag, cutover, or readiness claim still requires explicit operator authorization." in text
+    assert "Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but branch, tag, cutover, or readiness claim still requires `Approve-V1-RC-Cutover` in the cutover authorization packet." in text
     assert "Current validation-refresh full LIMA suite evidence: 5350 tests passed." in text
     assert "Current validation-refresh latest LIMA readiness freshness supplement: 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests passed." in text
     assert "Current validation-refresh latest handoff freshness supplement: 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passed." in text
