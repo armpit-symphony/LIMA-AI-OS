@@ -98,6 +98,24 @@ def test_v1_cutover_authorization_packet_status_audit_creates_no_authority() -> 
     assert fixture["next_required_action"] == "record_exactly_one_valid_cutover_operator_choice"
 
 
+def test_v1_cutover_authorization_packet_status_audit_records_validation_refresh() -> None:
+    validation = _load_fixture()["post_audit_validation_refresh"]
+
+    assert validation["focused_packet_current_gate_tests_passed"] == 44
+    assert validation["broader_v1_readiness_status_tests_passed"] == 110
+    assert validation["compileall_lima_passed"] is True
+    assert validation["full_lima_suite_tests_passed"] == 5419
+    assert validation["diff_check_passed"] is True
+    assert validation["cached_diff_check_passed"] is True
+    assert validation["release_branch_tag_cutover_or_readiness_authority_created"] is False
+    assert (
+        validation[
+            "runtime_provider_network_credential_connector_or_physical_world_behavior_added"
+        ]
+        is False
+    )
+
+
 def test_v1_cutover_authorization_packet_status_audit_text_matches_fixture() -> None:
     fixture = _load_fixture()
     text = (REPO_ROOT / fixture["documents"]["audit"]).read_text(encoding="utf-8")
@@ -118,6 +136,12 @@ def test_v1_cutover_authorization_packet_status_audit_text_matches_fixture() -> 
     assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
     assert "focused packet/current-gate tests 37 passed" in text
     assert "full LIMA suite 5412 passed" in text
+    assert "Post-Audit Validation Refresh" in text
+    assert "passed, 44 tests" in text
+    assert "passed, 110 tests" in text
+    assert "passed, 5419 tests" in text
+    assert "git diff --cached --check" in text
+    assert "This validation refresh creates no release-candidate branch, tag, cutover" in text
     assert "Release-candidate branch creation allowed now: no." in text
     assert "Release-candidate tag creation allowed now: no." in text
     assert "Release cutover allowed now: no." in text
