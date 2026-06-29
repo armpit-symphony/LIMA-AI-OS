@@ -24,7 +24,8 @@
     "post_validation_readiness_change_freshness_audit": "docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md",
     "arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
     "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
-    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md"
+    "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
+    "local_document_harness_install_committed_feature_audit": "docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md"
   },
   "lima_branch_checkpoints": [
     {
@@ -108,6 +109,11 @@
       "purpose": "record_latest_combined_handoff_freshness"
     },
     {
+      "branch": "docs-v1-local-document-harness-install-audit",
+      "commit_or_label": "latest local harness/install audit label",
+      "purpose": "record_committed_candidate_only_local_document_harness_install_support_without_release_authority"
+    },
+    {
       "branch": "v1-g61-runtime-vendor-sdk-import-execution-proof",
       "commit_or_label": "proposed future implementation branch",
       "purpose": "future_g61_implementation_only_if_approve_v1_g61_recorded"
@@ -172,7 +178,10 @@
     "lima_latest_current_goal_status_full_suite_tests": 5435,
     "lima_latest_consumer_checkpoint_freshness_focused_tests": 20,
     "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 130,
-    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435
+    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435,
+    "lima_latest_local_harness_install_focused_tests": 20,
+    "lima_latest_local_harness_install_broader_v1_tests": 78,
+    "lima_latest_local_harness_install_full_suite_tests": 5457
   },
   "arc_bot_shell_local_drift_exclusion": {
     "audit_document": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
@@ -221,7 +230,8 @@
     "fallback_execution_added": false,
     "connector_browser_file_device_robotics_physical_world_behavior_added": false,
     "consumer_production_runtime_integration_added": false,
-    "v1_product_or_production_readiness_claimed": false
+    "v1_product_or_production_readiness_claimed": false,
+    "local_document_harness_customer_data_or_installer_execution_authorized_by_index": false
   },
   "stop_conditions": [
     "v1_g61_implementation_without_exact_approval",
@@ -233,6 +243,7 @@
     "runtime_or_public_api_change_from_index_lane",
     "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",
     "raw_sensitive_or_patch_content_persistence",
+    "local_document_harness_customer_data_downloader_installer_release_authority",
     "v1_product_production_or_completion_claim"
   ],
   "valid_cutover_choices": [

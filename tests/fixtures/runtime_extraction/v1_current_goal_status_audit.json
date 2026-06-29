@@ -54,7 +54,10 @@
     "latest_post_bc63_local_harness_broader_tests_passed": 78,
     "latest_post_bc63_compileall_passed": true,
     "latest_post_bc63_full_lima_suite_tests_passed": 5457,
-    "latest_post_bc63_diff_hygiene_passed": true
+    "latest_post_bc63_diff_hygiene_passed": true,
+    "latest_product_gap_index_consistency_focused_tests_passed": 25,
+    "latest_product_gap_index_consistency_broader_tests_passed": 58,
+    "latest_product_gap_index_consistency_full_lima_suite_tests_passed": 5457
   },
   "requirements_not_yet_proven": {
     "exactly_one_valid_cutover_operator_choice_recorded": false,
@@ -116,6 +119,15 @@
     "focused_local_harness_drift_tests_passed": 20,
     "broader_v1_readiness_status_tests_passed": 78,
     "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5457,
+    "diff_hygiene_passed": true,
+    "cutover_operator_choice_created_by_refresh": false,
+    "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
+    "customer_data_downloader_installer_or_production_authority_created_by_refresh": false
+  },
+  "post_bc63_product_gap_index_consistency_refresh": {
+    "focused_product_gap_index_tests_passed": 25,
+    "broader_readiness_status_tests_passed": 58,
     "full_lima_suite_tests_passed": 5457,
     "diff_hygiene_passed": true,
     "cutover_operator_choice_created_by_refresh": false,

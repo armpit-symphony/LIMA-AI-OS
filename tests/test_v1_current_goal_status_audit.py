@@ -100,6 +100,9 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
     assert evidence["latest_post_bc63_compileall_passed"] is True
     assert evidence["latest_post_bc63_full_lima_suite_tests_passed"] == 5457
     assert evidence["latest_post_bc63_diff_hygiene_passed"] is True
+    assert evidence["latest_product_gap_index_consistency_focused_tests_passed"] == 25
+    assert evidence["latest_product_gap_index_consistency_broader_tests_passed"] == 58
+    assert evidence["latest_product_gap_index_consistency_full_lima_suite_tests_passed"] == 5457
 
 
 def test_v1_current_goal_status_audit_records_unproven_requirements() -> None:
@@ -226,6 +229,9 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "passed, 78 tests" in text
     assert "passed, 5457 tests" in text
     assert "customer-data handling approval" in text
+    assert "Latest product/gap/index consistency refresh" in text
+    assert "passed, 25 tests" in text
+    assert "passed, 58 tests" in text
     assert "Machine action: `record_exactly_one_valid_cutover_operator_choice`" in text
 
 

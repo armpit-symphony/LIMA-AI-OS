@@ -64,6 +64,7 @@ def test_v1_final_candidate_branch_index_records_lima_checkpoints() -> None:
         "docs-v1-post-g61-request-readiness-freshness",
         "docs-v1-quickstart-artifact-freshness",
         "docs-v1-handoff-freshness",
+        "docs-v1-local-document-harness-install-audit",
         "v1-g61-runtime-vendor-sdk-import-execution-proof",
     ]
     assert [checkpoint["commit_or_label"] for checkpoint in checkpoints] == [
@@ -83,6 +84,7 @@ def test_v1_final_candidate_branch_index_records_lima_checkpoints() -> None:
         "latest request freshness supplement label",
         "latest quickstart artifact freshness supplement label",
         "latest handoff freshness supplement label",
+        "latest local harness/install audit label",
         "proposed future implementation branch",
     ]
 
@@ -151,6 +153,9 @@ def test_v1_final_candidate_branch_index_records_consumer_checkpoints() -> None:
         "lima_latest_consumer_checkpoint_freshness_focused_tests": 20,
         "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 130,
         "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435,
+        "lima_latest_local_harness_install_focused_tests": 20,
+        "lima_latest_local_harness_install_broader_v1_tests": 78,
+        "lima_latest_local_harness_install_full_suite_tests": 5457,
     }
 
     drift = _load_fixture()["arc_bot_shell_local_drift_exclusion"]
@@ -207,6 +212,7 @@ def test_v1_final_candidate_branch_index_stop_conditions_are_bounded() -> None:
         "runtime_or_public_api_change_from_index_lane",
         "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",
         "raw_sensitive_or_patch_content_persistence",
+        "local_document_harness_customer_data_downloader_installer_release_authority",
         "v1_product_production_or_completion_claim",
     ]
 

@@ -330,6 +330,14 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
     assert current["v1_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert current["v1_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
     assert current["v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
+    assert current["v1_local_document_harness_install_committed_feature_audit_complete"] is True
+    assert current["v1_local_document_harness_install_committed_feature_audit_verdict"] == (
+        "PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED"
+    )
+    assert current["v1_local_runtime_drift_exclusion_audit_superseded"] is True
+    assert current["v1_post_bc63_local_harness_focused_tests_passed"] == 20
+    assert current["v1_post_bc63_local_harness_broader_v1_tests_passed"] == 78
+    assert current["v1_post_bc63_local_harness_full_lima_suite_tests_passed"] == 5457
     assert current["v1_final_candidate_branch_index_source_commit"] == (
         "1be5cbc30184dfbe610d288b4c487b18f936d64c"
     )
@@ -360,6 +368,8 @@ def test_v1_current_status_adds_no_new_runtime_sdk_network_or_secret_behavior() 
         "fallback_execution_added",
         "consumer_production_runtime_integration_added",
         "connector_browser_network_file_device_robotics_physical_world_behavior_added",
+        "local_document_harness_customer_data_or_production_use_authorized_by_target",
+        "downloader_or_installer_execution_approved_by_target",
     ):
         assert current[key] is False, key
 
@@ -375,6 +385,7 @@ def test_v1_remaining_blockers_and_next_step_are_cutover() -> None:
     assert "provider_secrets_and_credential_values_inaccessible_to_lima" in blockers
     assert "fallback_execution_unapproved" in blockers
     assert "consumer_production_runtime_integration_unapproved" in blockers
+    assert "local_document_harness_customer_data_downloader_installer_production_authority_unapproved" in blockers
     assert "release_boundary_not_passed" in blockers
     assert "cutover_operator_choice_not_recorded" in blockers
     assert "cutover_runbook_not_executed_after_rc_approval" in blockers
@@ -422,6 +433,8 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "`docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`" in text
     assert "`docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`" in text
     assert "`docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`" in text
+    assert "`docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`" in text
+    assert "V1 post-bc63 local harness/install evidence refresh passing 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and the 5457-test full LIMA suite" in text
     assert "Valid G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`." in text
     assert "Current status remains not V1 product-ready." in text
     assert "V1-G61 preapproval runtime-tree guard audit" in text

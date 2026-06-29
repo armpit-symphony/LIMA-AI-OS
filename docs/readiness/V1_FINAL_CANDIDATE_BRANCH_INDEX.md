@@ -5,7 +5,7 @@ Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
 Source LIMA commit before index refresh: `a60700a9bd6f31f1d36b8c3619284da63a6ccd60`
 API status: `CANDIDATE_ONLY`
 
-This index records the current saved branch map for the V1 candidate after the latest current-goal and consumer-checkpoint freshness refresh. It is docs/tests/fixtures-only readiness evidence for operator handoff and self-audit traceability.
+This index records the current saved branch map for the V1 candidate after the latest current-goal, consumer-checkpoint, and local harness/install freshness refresh. It is docs/tests/fixtures-only readiness evidence for operator handoff and self-audit traceability.
 
 This index does not approve V1-G61 implementation, complete V1.0, modify `lima/`, change public API exports, edit consumer repositories, add provider SDK clients, add runtime vendor SDK imports in `lima/`, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
@@ -37,6 +37,7 @@ The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Spar
 | `docs-v1-post-g61-request-readiness-freshness` | latest request freshness supplement label | Records latest post-G61 request readiness freshness with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests. |
 | `docs-v1-quickstart-artifact-freshness` | latest quickstart artifact freshness supplement label | Records latest quickstart artifact freshness with 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests. |
 | `docs-v1-handoff-freshness` | latest handoff freshness supplement label | Records combined latest handoff freshness with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests. |
+| `docs-v1-local-document-harness-install-audit` | latest local harness/install audit label | Records committed candidate-only local PC document harness/install support with 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and 5457 full-suite tests. |
 | `v1-g61-runtime-vendor-sdk-import-execution-proof` | proposed future implementation branch | May be used only if `Approve-V1-G61` is explicitly recorded. |
 
 ## Consumer Checkpoints
@@ -60,8 +61,9 @@ The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Spar
 - LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.
 - LIMA latest current-goal evidence refresh: passed, 16 focused status tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
 - LIMA latest consumer checkpoint freshness refresh: passed, 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
+- LIMA latest local harness/install evidence refresh: passed, 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and 5457 full-suite tests; tracked candidate-only local PC testing support does not create customer-data handling, downloader/installer execution, cutover, product, or production authority.
 
-Traceability artifacts: `V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`, `V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`, `V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, `V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`, `V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, `V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, `V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`, and `V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
+Traceability artifacts: `V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`, `V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`, `V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, `V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`, `V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, `V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, `V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`, `V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`, and `V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
 
 ## Current Required Unblock
 
@@ -79,6 +81,7 @@ Additional blocked gates:
 - Release cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`, current verdict `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`.
 - Final readiness reconciliation audit: `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md`, current verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`; it does not authorize branch, tag, cutover, or V1.0.0 completion.
 - Final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`, future audit scaffolding only; not executed or passed by this index.
+- Local document harness/install audit: `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`, candidate-only local PC testing support only; not customer-data handling, downloader/installer execution, cutover, product, or production authority.
 - Arc-Bot-shell clean-checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
 - Arc-Bot-shell historical drift exclusion evidence remains compatibility-only context; clean-checkpoint proof is the current release-gate input.
 - Arc-Bot-shell clean checkpoint: clean checkpoint proof recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; current Arc smoke remains compatibility evidence and release authority remains blocked.
@@ -121,6 +124,7 @@ After exactly one cutover operator choice is recorded:
 - Provider configuration changes added: no.
 - Fallback execution added: no.
 - Connector, browser, file, device, robotics, or physical-world behavior added: no.
+- Customer-data handling or downloader/installer execution approved by this index: no.
 - Consumer production runtime integration added: no.
 - V1.0 completion, product readiness, or production readiness claimed: no.
 

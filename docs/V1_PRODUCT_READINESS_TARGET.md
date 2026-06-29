@@ -51,6 +51,9 @@ Authoritative completed provider SDK/network and dependency evidence files:
 - `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`
 - `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`
 - `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
+- `docs/readiness/V1_LOCAL_INSTALL_AND_DOCUMENT_HARNESS_QUICKSTART.md`
+- `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`
+- `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md`
 
 Observed workspace branch for this refresh:
 
@@ -119,6 +122,7 @@ The V1 evidence chain now includes:
 - V1 latest quickstart artifact refresh evidence passing 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and the 5364-test full LIMA suite
 - V1 latest current-goal evidence refresh passing 16 focused status tests, 56 broader V1 readiness/status tests, and the 5435-test full LIMA suite
 - V1 latest consumer checkpoint freshness refresh passing 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and the 5435-test full LIMA suite
+- V1 post-bc63 local harness/install evidence refresh passing 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and the 5457-test full LIMA suite; this records tracked candidate-only local PC testing support and supersedes the previous local runtime drift exclusion without creating cutover, customer-data handling, downloader/installer execution, product, or production authority
 - V1 Arc-Bot-shell clean-checkpoint proof recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only
 - V1 final readiness audit template for the future post-G61 release-candidate audit, not a current release approval
 - V1 operator unblock action packet preserved as handoff traceability after the recorded G61 decision, not release approval
@@ -170,7 +174,7 @@ For V1, LIMA must prove compatibility with the first shells before product readi
 
 Current status remains not V1 product-ready.
 
-The latest completed implementation gate is `V1-G60`. `Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only. No additional V1-G61 implementation is approved. The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing, final-readiness reconciliation passes for that scope, and the release-candidate cutover runbook remains blocked pending exactly one valid cutover operator choice. The operator unblock action packet and final candidate branch index are handoff and traceability evidence only. The current gate consistency audit, current candidate validation refresh including latest LIMA readiness freshness supplement 15/89/5361 evidence and latest handoff freshness supplement 8/117/5362 plus 7/64/133/5364 evidence, post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest current-goal evidence 16/56/5435, latest consumer checkpoint freshness evidence 16/56/5435, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence, current quickstart post-refresh evidence, and current Arc clean-checkpoint proof are required inputs to any future cutover runbook execution, but they do not approve implementation, release, production use, or consumer production integration.
+The latest completed implementation gate is `V1-G60`. `Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only. No additional V1-G61 implementation is approved. The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing, final-readiness reconciliation passes for that scope, and the release-candidate cutover runbook remains blocked pending exactly one valid cutover operator choice. The operator unblock action packet and final candidate branch index are handoff and traceability evidence only. The current gate consistency audit, current candidate validation refresh including latest LIMA readiness freshness supplement 15/89/5361 evidence and latest handoff freshness supplement 8/117/5362 plus 7/64/133/5364 evidence, post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest current-goal evidence 16/56/5435, latest consumer checkpoint freshness evidence 16/56/5435, latest post-bc63 local harness/install evidence 20/78/5457, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence, current quickstart post-refresh evidence, and current Arc clean-checkpoint proof are required inputs to any future cutover runbook execution, but they do not approve implementation, release, production use, or consumer production integration.
 
 After the bounded `Approve-V1-G61` proof, the following remain blocked:
 
@@ -200,6 +204,7 @@ After the bounded `Approve-V1-G61` proof, the following remain blocked:
 - provider secrets and credential values remain inaccessible to LIMA
 - fallback execution remains unapproved
 - consumer production runtime integration remains unapproved
+- local document harness support remains candidate-only local PC testing support and does not approve customer-data handling, downloader/installer execution as release validation, product readiness, or production readiness
 - live runtime parity across first shells is not proven as product readiness
 - clean Arc-Bot-shell checkpoint proof is recorded as input evidence only and does not authorize release-candidate, final-readiness, branch, tag, cutover, or readiness claims
 - release boundary remains not passed because cutover authorization is not recorded

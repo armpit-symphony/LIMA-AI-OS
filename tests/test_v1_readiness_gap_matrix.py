@@ -225,6 +225,14 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     assert anchor["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert anchor["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
     assert anchor["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
+    assert anchor["local_document_harness_install_committed_feature_audit_current"] is True
+    assert anchor["local_document_harness_install_committed_feature_audit_document"] == (
+        "docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md"
+    )
+    assert anchor["local_runtime_drift_exclusion_audit_superseded"] is True
+    assert anchor["latest_post_bc63_local_harness_focused_tests_passed"] == 20
+    assert anchor["latest_post_bc63_local_harness_broader_v1_tests_passed"] == 78
+    assert anchor["latest_post_bc63_local_harness_full_lima_suite_tests_passed"] == 5457
     assert anchor["final_readiness_audit_template_current"] is True
     assert anchor["final_readiness_audit_template_document"] == (
         "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md"
@@ -419,6 +427,11 @@ def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
     assert g61["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert g61["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
     assert g61["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
+    assert g61["local_document_harness_install_committed_feature_audit_complete"] is True
+    assert g61["local_runtime_drift_exclusion_audit_superseded"] is True
+    assert g61["latest_post_bc63_local_harness_focused_tests_passed"] == 20
+    assert g61["latest_post_bc63_local_harness_broader_v1_tests_passed"] == 78
+    assert g61["latest_post_bc63_local_harness_full_lima_suite_tests_passed"] == 5457
     assert (
         g61["arc_bot_shell_same_day_recheck_approved_g56_smoke_proof_paths_clean"]
         is True
@@ -461,6 +474,7 @@ def test_v1_gap_matrix_stop_conditions_cover_forbidden_g61_surfaces() -> None:
     assert "provider_configuration_change" in stop_conditions
     assert "fallback_execution" in stop_conditions
     assert "consumer_production_runtime_integration" in stop_conditions
+    assert "local_document_harness_customer_data_downloader_installer_release_authority" in stop_conditions
     assert (
         "connector_browser_network_file_device_robotics_physical_world_behavior"
         in stop_conditions
@@ -514,6 +528,8 @@ def test_v1_gap_matrix_boundary_results_add_no_new_runtime_behavior() -> None:
         "fallback_execution_added",
         "consumer_production_runtime_integration_added",
         "connector_browser_network_file_device_robotics_physical_world_behavior_added",
+        "local_document_harness_customer_data_or_production_use_authorized",
+        "downloader_or_installer_execution_approved_as_release_validation",
         "v1_release_claimed",
     ):
         assert boundary[key] is False, key
@@ -546,6 +562,8 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "Current candidate validation refresh audit: `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`" in text
     assert "Current post-validation readiness-change freshness audit: `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`" in text
     assert "Current final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`" in text
+    assert "Current local document harness/install audit: `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`" in text
+    assert "Latest post-bc63 local harness/install refresh: 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and full LIMA suite 5457 tests passing" in text
     assert "Current validation evidence: 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing" in text
     assert "Current validation latest LIMA readiness freshness supplement: 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and full LIMA suite passing with 5361 tests" in text
     assert "Current post-validation freshness evidence: same-turn release/cutover freshness validation and full LIMA suite passing with 5359 tests" in text
@@ -563,6 +581,7 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "current validation refresh records 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests" in text
     assert "post-validation readiness-change freshness evidence records same-turn validation requirements for later readiness docs, fixtures, or tests with full LIMA suite passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "candidate harness quickstart execution evidence records consumers 8/8/8 and LIMA 17/108/5360 plus latest quickstart artifact refresh 7/64/133/5364" in text
+    assert "local document harness/install evidence records tracked candidate-only local PC testing support with 20/78/5457 validation" in text
     assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "Bounded local import proof complete; first-consumer final-readiness reconciliation passes; cutover authority still blocked" in text
     assert "V1-G61 runtime vendor SDK import execution proof implementation without exact approval" in text
@@ -579,10 +598,11 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "Treat the V1 post-validation readiness-change freshness audit as same-turn freshness evidence for later readiness docs, fixtures, or tests, including 5359 release/cutover freshness proof, latest quickstart 5360 full-suite proof, latest final blocker/index 15/89/5361 proof, latest post-G61 request readiness-refresh 8/117/5362 proof, and latest quickstart artifact refresh 7/64/133/5364 proof, not a release approval." in text
     assert "Treat the V1 release-candidate cutover runbook as the future branch/tag procedure only, with current verdict `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`; Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, and any branch, tag, cutover, V1.0.0 completion, product-readiness, or production-readiness claim still requires exactly one valid cutover operator choice and completed runbook evidence." in text
     assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim that treats Arc smoke or clean-checkpoint proof as sufficient without checklist, final audit, and cutover authorization" in text
+    assert "Treat the V1 local document harness/install audit as candidate-only local PC testing support, with 20/78/5457 validation" in text
     assert "Treat the V1 final readiness audit template as a future post-G61 release-candidate audit input" in text
     assert "the G61 preapproval runtime-tree guard audit, the G61 operator decision packet status audit, the post-G61 request readiness refresh" in text
     assert (
-        "completed implementation evidence chain through G60, request-stage readiness through the post-G61 refresh, current consumer harness usability criteria and quickstart execution evidence for Sparkbot and Arc-Bot-shell local candidate smoke tests, a release-candidate acceptance checklist, a cutover runbook, a current gate consistency audit, a current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests, a post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, recorded Arc clean-checkpoint proof, and a final readiness audit template"
+        "completed implementation evidence chain through G60, request-stage readiness through the post-G61 refresh, current consumer harness usability criteria and quickstart execution evidence for Sparkbot and Arc-Bot-shell local candidate smoke tests, a release-candidate acceptance checklist, a cutover runbook, a current gate consistency audit, a current candidate validation refresh with 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests plus latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests, a post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, post-bc63 local harness/install evidence passing 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and the 5457-test full LIMA suite, recorded Arc clean-checkpoint proof, and a final readiness audit template"
         in text
     )
     assert "post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text

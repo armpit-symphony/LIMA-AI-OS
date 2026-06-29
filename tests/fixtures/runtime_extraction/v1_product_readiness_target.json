@@ -36,7 +36,10 @@
     "v1_arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
     "v1_final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
     "v1_operator_unblock_action_packet": "docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md",
-    "v1_final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md"
+    "v1_final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
+    "v1_local_document_harness_quickstart": "docs/readiness/V1_LOCAL_INSTALL_AND_DOCUMENT_HARNESS_QUICKSTART.md",
+    "v1_local_document_harness_install_committed_feature_audit": "docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md",
+    "v1_local_runtime_drift_exclusion_audit": "docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md"
   },
   "product_direction_only": true,
   "runtime_implementation_approved_by_this_fixture": false,
@@ -202,7 +205,15 @@
       "Approve-V1-RC-Cutover",
       "Revise-V1-RC-Cutover",
       "Pause"
-    ]
+    ],
+    "v1_local_document_harness_install_committed_feature_audit_complete": true,
+    "v1_local_document_harness_install_committed_feature_audit_verdict": "PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED",
+    "v1_local_runtime_drift_exclusion_audit_superseded": true,
+    "v1_post_bc63_local_harness_focused_tests_passed": 20,
+    "v1_post_bc63_local_harness_broader_v1_tests_passed": 78,
+    "v1_post_bc63_local_harness_full_lima_suite_tests_passed": 5457,
+    "local_document_harness_customer_data_or_production_use_authorized_by_target": false,
+    "downloader_or_installer_execution_approved_by_target": false
   },
   "remaining_blockers": [
     "lockfile_edits_unapproved",
@@ -211,6 +222,7 @@
     "provider_secrets_and_credential_values_inaccessible_to_lima",
     "fallback_execution_unapproved",
     "consumer_production_runtime_integration_unapproved",
+    "local_document_harness_customer_data_downloader_installer_production_authority_unapproved",
     "live_runtime_parity_across_first_shells_not_product_ready",
     "release_boundary_not_passed",
     "v1_product_readiness_not_approved",

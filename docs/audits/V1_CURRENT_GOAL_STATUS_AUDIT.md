@@ -32,6 +32,7 @@ LIMA has strong candidate-only harness readiness evidence for first-consumer har
 | Latest recorded status-audit validation | focused tests 16 passed, broader V1 readiness/status tests 56 passed, compileall passed, full LIMA suite 5435 passed, diff hygiene passed |
 | Local install/document harness lane | `bc63ed3b00055976b1728d80124137d7ce15d871` adds tracked candidate-only local install and read-only document harness support; `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md` records the lane with verdict `PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED`, and `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md` is superseded as closure evidence |
 | Latest post-bc63 local harness/install validation | focused local harness/drift tests 20 passed, broader V1 readiness/status tests 78 passed, compileall passed, full LIMA suite 5457 passed, diff hygiene passed |
+| Latest product/gap/index consistency refresh | product target, readiness gap matrix, and final candidate branch index now cite post-bc63 local harness/install evidence; focused product/gap/index tests 25 passed, broader readiness/status tests 58 passed, full LIMA suite 5457 passed, diff hygiene passed |
 
 ## Requirements Not Yet Proven
 
@@ -118,6 +119,19 @@ After commit `bc63ed3b00055976b1728d80124137d7ce15d871` added the candidate-only
 | `git diff --check` | passed |
 
 This post-bc63 refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, customer-data handling approval, downloader/installer execution approval, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
+
+## Post-bc63 Product/Gap/Index Consistency Refresh
+
+After the local harness/install audit was committed, the product readiness target, readiness gap matrix, and final candidate branch index were refreshed to cite the same post-bc63 evidence chain. This keeps high-level release-candidate traceability aligned with the active goal audit without recording a cutover operator choice.
+
+| Command | Result |
+| --- | --- |
+| `python -m pytest -q tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_final_candidate_branch_index.py -p no:cacheprovider` | passed, 25 tests |
+| `python -m pytest -q tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_current_goal_status_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_local_document_harness_install_committed_feature_audit.py -p no:cacheprovider` | passed, 58 tests |
+| `python -m pytest -q tests -p no:cacheprovider` | passed, 5457 tests |
+| `git diff --check` | passed |
+
+This product/gap/index refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, customer-data handling approval, downloader/installer execution approval, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
 
 ## Next Required Action
 
