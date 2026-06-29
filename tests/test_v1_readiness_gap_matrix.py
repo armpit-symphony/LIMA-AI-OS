@@ -221,10 +221,10 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     assert anchor["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
     assert anchor["latest_current_goal_status_focused_tests_passed"] == 21
     assert anchor["latest_current_goal_status_broader_v1_tests_passed"] == 130
-    assert anchor["latest_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert anchor["latest_current_goal_status_full_lima_suite_tests_passed"] == 5435
     assert anchor["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert anchor["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
-    assert anchor["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
+    assert anchor["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
     assert anchor["final_readiness_audit_template_current"] is True
     assert anchor["final_readiness_audit_template_document"] == (
         "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md"
@@ -415,10 +415,10 @@ def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
     assert g61["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
     assert g61["latest_current_goal_status_focused_tests_passed"] == 21
     assert g61["latest_current_goal_status_broader_v1_tests_passed"] == 130
-    assert g61["latest_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert g61["latest_current_goal_status_full_lima_suite_tests_passed"] == 5435
     assert g61["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert g61["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
-    assert g61["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
+    assert g61["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
     assert (
         g61["arc_bot_shell_same_day_recheck_approved_g56_smoke_proof_paths_clean"]
         is True

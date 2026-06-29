@@ -35,8 +35,8 @@ It is docs/tests/fixtures-only. It does not approve runtime behavior, shell wiri
 - Latest final blocker/index freshness evidence: 15 focused final blocker/index tests, 89 broader affected readiness tests, and full LIMA suite 5361 tests passing
 - Latest post-G61 request readiness-refresh evidence: 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and full LIMA suite 5362 tests passing
 - Latest quickstart artifact refresh evidence: 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and full LIMA suite 5364 tests passing
-- Latest current-goal evidence refresh: 21 focused status tests, 130 broader V1 readiness/status tests, and full LIMA suite 5433 tests passing
-- Latest consumer checkpoint freshness refresh: 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and full LIMA suite 5433 tests passing
+- Latest current-goal evidence refresh: 16 focused status tests, 56 broader V1 readiness/status tests, and full LIMA suite 5435 tests passing
+- Latest consumer checkpoint freshness refresh: 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and full LIMA suite 5435 tests passing
 
 ## Readiness Matrix
 

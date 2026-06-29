@@ -193,10 +193,10 @@
     "v1_final_readiness_reconciliation_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "v1_current_goal_status_focused_tests_passed": 21,
     "v1_current_goal_status_broader_v1_tests_passed": 130,
-    "v1_current_goal_status_full_lima_suite_tests_passed": 5433,
+    "v1_current_goal_status_full_lima_suite_tests_passed": 5435,
     "v1_consumer_checkpoint_freshness_focused_tests_passed": 20,
     "v1_consumer_checkpoint_freshness_broader_v1_tests_passed": 130,
-    "v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5433,
+    "v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5435,
     "v1_final_candidate_branch_index_source_commit": "1be5cbc30184dfbe610d288b4c487b18f936d64c",
     "valid_cutover_choices": [
       "Approve-V1-RC-Cutover",

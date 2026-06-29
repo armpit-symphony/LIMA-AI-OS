@@ -109,8 +109,8 @@
     "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
     "v1_release_candidate_cutover_authorization_packet_awaiting_explicit_operator_decision",
     "v1_release_candidate_cutover_authorization_packet_status_audit_valid_choice_count_0",
-    "v1_current_goal_status_audit_21_130_5433_cutover_required",
-    "v1_consumer_checkpoint_freshness_audit_20_130_5433_cutover_still_blocked"
+    "v1_current_goal_status_audit_16_56_5435_cutover_required",
+    "v1_consumer_checkpoint_freshness_audit_16_56_5435_cutover_still_blocked"
   ],
   "boundaries_preserved": {
     "v1_g61_operator_decision_recorded_by_packet": false,

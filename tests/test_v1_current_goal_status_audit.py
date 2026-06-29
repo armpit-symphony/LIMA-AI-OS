@@ -31,7 +31,10 @@ def test_v1_current_goal_status_audit_fixture_and_docs_exist() -> None:
     assert fixture["date"] == "2026-06-28"
     assert fixture["branch"] == "docs-v1-post-g60-readiness-and-next-lane-matrix"
     assert fixture["source_lima_commit_before_audit"] == (
-        "a290d9cee297f93d1dad8229d615e10348542057"
+        "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
+    )
+    assert fixture["source_lima_commit_before_audit_refresh"] == (
+        "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
     )
     assert fixture["audit_verdict"] == (
         "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED"
@@ -82,11 +85,12 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
         "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION"
     )
     assert evidence["cutover_authorization_packet_valid_choice_count"] == 0
-    assert evidence["latest_status_audit_focused_tests_passed"] == 21
-    assert evidence["latest_status_audit_broader_tests_passed"] == 130
+    assert evidence["latest_status_audit_focused_tests_passed"] == 16
+    assert evidence["latest_status_audit_broader_tests_passed"] == 56
     assert evidence["latest_status_audit_compileall_passed"] is True
-    assert evidence["latest_status_audit_full_lima_suite_tests_passed"] == 5433
+    assert evidence["latest_status_audit_full_lima_suite_tests_passed"] == 5435
     assert evidence["latest_status_audit_diff_hygiene_passed"] is True
+    assert evidence["latest_status_audit_post_58c_full_lima_suite_tests_passed"] == 5435
 
 
 def test_v1_current_goal_status_audit_records_unproven_requirements() -> None:
@@ -121,10 +125,10 @@ def test_v1_current_goal_status_audit_preserves_boundaries() -> None:
 def test_v1_current_goal_status_audit_records_validation_refresh() -> None:
     validation = _load_fixture()["post_audit_validation_refresh"]
 
-    assert validation["focused_current_goal_status_tests_passed"] == 21
-    assert validation["broader_v1_readiness_status_tests_passed"] == 130
+    assert validation["focused_current_goal_status_tests_passed"] == 16
+    assert validation["broader_v1_readiness_status_tests_passed"] == 56
     assert validation["compileall_lima_passed"] is True
-    assert validation["full_lima_suite_tests_passed"] == 5433
+    assert validation["full_lima_suite_tests_passed"] == 5435
     assert validation["cutover_operator_choice_created_by_validation"] is False
     assert (
         validation[
@@ -138,6 +142,21 @@ def test_v1_current_goal_status_audit_records_validation_refresh() -> None:
         ]
         is False
     )
+
+
+def test_v1_current_goal_status_audit_records_post_58c_refresh() -> None:
+    refresh = _load_fixture()["post_58c_cutover_evidence_refresh"]
+
+    assert refresh["source_lima_commit_before_refresh"] == (
+        "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
+    )
+    assert refresh["focused_current_goal_consumer_freshness_tests_passed"] == 16
+    assert refresh["broader_readiness_status_tests_passed"] == 56
+    assert refresh["compileall_lima_passed"] is True
+    assert refresh["full_lima_suite_tests_passed"] == 5435
+    assert refresh["cutover_operator_choice_created_by_refresh"] is False
+    assert refresh["release_branch_tag_cutover_or_readiness_authority_created_by_refresh"] is False
+    assert refresh["runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh"] is False
 
 
 def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
@@ -158,17 +177,21 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION" in text
     assert "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION" in text
-    assert "focused tests 21 passed" in text
-    assert "broader V1 readiness/status tests 130 passed" in text
-    assert "full LIMA suite 5433 passed" in text
+    assert "focused tests 16 passed" in text
+    assert "broader V1 readiness/status tests 56 passed" in text
+    assert "full LIMA suite 5435 passed" in text
     assert "Exactly one valid cutover operator choice recorded | not proven" in text
     assert "Release-candidate branch created under runbook controls | not proven and not authorized" in text
     assert "V1.0.0 completion claimed by this audit: no." in text
     assert "Post-Audit Validation Refresh" in text
-    assert "passed, 21 tests" in text
-    assert "passed, 130 tests" in text
-    assert "passed, 5433 tests" in text
+    assert "passed, 16 tests" in text
+    assert "passed, 56 tests" in text
+    assert "passed, 5435 tests" in text
     assert "This validation refresh creates no cutover operator choice" in text
+    assert "Post-58c Cutover-Evidence Refresh" in text
+    assert "passed, 16 tests" in text
+    assert "passed, 56 tests" in text
+    assert "passed, 5435 tests" in text
     assert "Machine action: `record_exactly_one_valid_cutover_operator_choice`" in text
 
 

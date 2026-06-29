@@ -58,8 +58,8 @@ The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Spar
 - LIMA latest post-G61 request readiness-refresh: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests.
 - LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.
-- LIMA latest current-goal evidence refresh: passed, 21 focused status tests, 130 broader V1 readiness/status tests, and 5433 full-suite tests.
-- LIMA latest consumer checkpoint freshness refresh: passed, 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and 5433 full-suite tests.
+- LIMA latest current-goal evidence refresh: passed, 16 focused status tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
+- LIMA latest consumer checkpoint freshness refresh: passed, 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
 
 Traceability artifacts: `V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`, `V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`, `V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, `V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`, `V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, `V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, `V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`, and `V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
 

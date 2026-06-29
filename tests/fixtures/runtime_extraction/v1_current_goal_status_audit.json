@@ -3,7 +3,7 @@
   "api_status": "CANDIDATE_ONLY",
   "date": "2026-06-28",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "source_lima_commit_before_audit": "a290d9cee297f93d1dad8229d615e10348542057",
+  "source_lima_commit_before_audit": "58c26d8755cfe0cfd555433a4b8908ed304b74d1",
   "audit_verdict": "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED",
   "documents": {
     "audit": "docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md",
@@ -40,11 +40,12 @@
     "cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
     "cutover_authorization_packet_status_audit_verdict": "PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION",
     "cutover_authorization_packet_valid_choice_count": 0,
-    "latest_status_audit_focused_tests_passed": 21,
-    "latest_status_audit_broader_tests_passed": 130,
+    "latest_status_audit_focused_tests_passed": 16,
+    "latest_status_audit_broader_tests_passed": 56,
     "latest_status_audit_compileall_passed": true,
-    "latest_status_audit_full_lima_suite_tests_passed": 5433,
-    "latest_status_audit_diff_hygiene_passed": true
+    "latest_status_audit_full_lima_suite_tests_passed": 5435,
+    "latest_status_audit_diff_hygiene_passed": true,
+    "latest_status_audit_post_58c_full_lima_suite_tests_passed": 5435
   },
   "requirements_not_yet_proven": {
     "exactly_one_valid_cutover_operator_choice_recorded": false,
@@ -80,12 +81,23 @@
   },
   "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
   "post_audit_validation_refresh": {
-    "focused_current_goal_status_tests_passed": 21,
-    "broader_v1_readiness_status_tests_passed": 130,
+    "focused_current_goal_status_tests_passed": 16,
+    "broader_v1_readiness_status_tests_passed": 56,
     "compileall_lima_passed": true,
-    "full_lima_suite_tests_passed": 5433,
+    "full_lima_suite_tests_passed": 5435,
     "cutover_operator_choice_created_by_validation": false,
     "release_branch_tag_cutover_or_readiness_authority_created_by_validation": false,
     "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_validation": false
+  },
+  "source_lima_commit_before_audit_refresh": "58c26d8755cfe0cfd555433a4b8908ed304b74d1",
+  "post_58c_cutover_evidence_refresh": {
+    "source_lima_commit_before_refresh": "58c26d8755cfe0cfd555433a4b8908ed304b74d1",
+    "focused_current_goal_consumer_freshness_tests_passed": 16,
+    "broader_readiness_status_tests_passed": 56,
+    "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5435,
+    "cutover_operator_choice_created_by_refresh": false,
+    "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
+    "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh": false
   }
 }

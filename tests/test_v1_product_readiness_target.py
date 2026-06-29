@@ -326,10 +326,10 @@ def test_v1_current_status_tracks_post_g61_request_lane() -> None:
     )
     assert current["v1_current_goal_status_focused_tests_passed"] == 21
     assert current["v1_current_goal_status_broader_v1_tests_passed"] == 130
-    assert current["v1_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert current["v1_current_goal_status_full_lima_suite_tests_passed"] == 5435
     assert current["v1_consumer_checkpoint_freshness_focused_tests_passed"] == 20
     assert current["v1_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
-    assert current["v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
+    assert current["v1_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5435
     assert current["v1_final_candidate_branch_index_source_commit"] == (
         "1be5cbc30184dfbe610d288b4c487b18f936d64c"
     )
@@ -451,12 +451,12 @@ def test_v1_product_readiness_doc_matches_post_g60_gate() -> None:
     assert "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only." in text
     assert "The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing, final-readiness reconciliation passes for that scope, and the release-candidate cutover runbook remains blocked pending exactly one valid cutover operator choice" in text
     assert "The operator unblock action packet and final candidate branch index are handoff and traceability evidence only." in text
-    assert "post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest current-goal evidence 21/130/5433, latest consumer checkpoint freshness evidence 20/130/5433" in text
+    assert "post-validation readiness-change freshness audit including latest final blocker/index 15/89/5361 evidence, latest current-goal evidence 16/56/5435, latest consumer checkpoint freshness evidence 16/56/5435" in text
     assert "built-in provider SDK clients" in text
     assert "secret lookup, credential value access" in text
     assert "consumer repository edits for V1-G61" in text
     assert "V1 product readiness or production readiness claims" in text
     assert "clean Arc-Bot-shell checkpoint proof is recorded as input evidence only and does not authorize release-candidate, final-readiness, branch, tag, cutover, or readiness claims" in text
-    assert "V1 latest current-goal evidence refresh passing 21 focused status tests, 130 broader V1 readiness/status tests, and the 5433-test full LIMA suite" in text
-    assert "V1 latest consumer checkpoint freshness refresh passing 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and the 5433-test full LIMA suite" in text
+    assert "V1 latest current-goal evidence refresh passing 16 focused status tests, 56 broader V1 readiness/status tests, and the 5435-test full LIMA suite" in text
+    assert "V1 latest consumer checkpoint freshness refresh passing 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and the 5435-test full LIMA suite" in text
     assert "Record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`" in text

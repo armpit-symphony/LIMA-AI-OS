@@ -147,8 +147,8 @@ def test_v1_operator_unblock_packet_preserves_current_evidence_and_boundaries() 
         "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
         "v1_release_candidate_cutover_authorization_packet_awaiting_explicit_operator_decision",
         "v1_release_candidate_cutover_authorization_packet_status_audit_valid_choice_count_0",
-        "v1_current_goal_status_audit_21_130_5433_cutover_required",
-        "v1_consumer_checkpoint_freshness_audit_20_130_5433_cutover_still_blocked",
+        "v1_current_goal_status_audit_16_56_5435_cutover_required",
+        "v1_consumer_checkpoint_freshness_audit_16_56_5435_cutover_still_blocked",
     ]
 
     for key, value in fixture["boundaries_preserved"].items():
@@ -210,7 +210,7 @@ def test_v1_operator_unblock_packet_text_matches_fixture() -> None:
     assert "Final readiness audit and reconciliation evidence, executed and reconciled for first-consumer harness testing only; not cutover authority" in text
     assert "Arc-Bot-shell clean checkpoint, recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "Arc-Bot-shell clean checkpoint, recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
-    assert "latest current-goal evidence of 21 focused status tests, 130 broader readiness/status tests, and 5433 full-suite tests" in text
+    assert "latest current-goal evidence of 16 focused status tests, 56 broader readiness/status tests, and 5435 full-suite tests" in text
     assert "Arc-Bot-shell clean-checkpoint proof: clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked" in text
     assert "candidate harness quickstart execution audit remains current and records public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 consumer smoke tests plus LIMA post-refresh validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests" in text
     assert "post-validation readiness-change freshness evidence remains current, including same-turn 5359 full-suite evidence after release/cutover freshness checks, latest quickstart post-refresh 5360 full-suite evidence, latest final blocker/index 15/89/5361 evidence, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence" in text

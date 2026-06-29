@@ -30,7 +30,8 @@ def test_v1_consumer_checkpoint_freshness_audit_fixture_and_docs_exist() -> None
     assert fixture["api_status"] == "CANDIDATE_ONLY"
     assert fixture["date"] == "2026-06-28"
     assert fixture["branch"] == "docs-v1-post-g60-readiness-and-next-lane-matrix"
-    assert fixture["source_lima_commit_before_audit"] == "676e2ce"
+    assert fixture["source_lima_commit_before_audit"] == "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
+    assert fixture["source_lima_commit_before_audit_refresh"] == "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
     assert fixture["audit_verdict"] == (
         "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED"
     )
@@ -93,10 +94,10 @@ def test_v1_consumer_checkpoint_freshness_audit_records_command_results() -> Non
     assert commands["sparkbot_shell_fake_executor_smoke_tests_available_in_this_lane"] is False
 
     validation = _load_fixture()["post_audit_lima_validation_refresh"]
-    assert validation["focused_consumer_checkpoint_tests_passed"] == 20
-    assert validation["broader_v1_readiness_status_tests_passed"] == 130
+    assert validation["focused_consumer_checkpoint_tests_passed"] == 16
+    assert validation["broader_v1_readiness_status_tests_passed"] == 56
     assert validation["compileall_lima_passed"] is True
-    assert validation["full_lima_suite_tests_passed"] == 5433
+    assert validation["full_lima_suite_tests_passed"] == 5435
     assert validation["cutover_operator_choice_created_by_validation"] is False
     assert (
         validation[
@@ -122,6 +123,21 @@ def test_v1_consumer_checkpoint_freshness_audit_preserves_boundaries() -> None:
     assert fixture["next_required_action"] == "record_exactly_one_valid_cutover_operator_choice"
 
 
+def test_v1_consumer_checkpoint_freshness_audit_records_post_58c_refresh() -> None:
+    refresh = _load_fixture()["post_58c_consumer_freshness_refresh"]
+
+    assert refresh["source_lima_commit_before_refresh"] == (
+        "58c26d8755cfe0cfd555433a4b8908ed304b74d1"
+    )
+    assert refresh["focused_current_goal_consumer_freshness_tests_passed"] == 16
+    assert refresh["broader_readiness_status_tests_passed"] == 56
+    assert refresh["compileall_lima_passed"] is True
+    assert refresh["full_lima_suite_tests_passed"] == 5435
+    assert refresh["cutover_operator_choice_created_by_refresh"] is False
+    assert refresh["release_branch_tag_cutover_or_readiness_authority_created_by_refresh"] is False
+    assert refresh["runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh"] is False
+
+
 def test_v1_consumer_checkpoint_freshness_audit_text_matches_fixture() -> None:
     fixture = _load_fixture()
     text = (REPO_ROOT / fixture["documents"]["audit"]).read_text(encoding="utf-8")
@@ -138,10 +154,14 @@ def test_v1_consumer_checkpoint_freshness_audit_text_matches_fixture() -> None:
     assert "passed, 8 tests" in text
     assert "Sparkbot_shell has no LIMA fake-executor smoke command in this audit lane" in text
     assert "Post-Audit LIMA Validation Refresh" in text
-    assert "passed, 20 tests" in text
-    assert "passed, 130 tests" in text
-    assert "passed, 5433 tests" in text
+    assert "passed, 16 tests" in text
+    assert "passed, 56 tests" in text
+    assert "passed, 5435 tests" in text
     assert "This LIMA validation refresh creates no cutover operator choice" in text
+    assert "Post-58c Consumer Freshness Supplement" in text
+    assert "passed, 16 tests" in text
+    assert "passed, 56 tests" in text
+    assert "passed, 5435 tests" in text
     assert "Release-candidate branch created by this audit: no." in text
     assert "Consumer repositories modified by this audit: no." in text
     assert "valid cutover operator choice count remains `0`" in text

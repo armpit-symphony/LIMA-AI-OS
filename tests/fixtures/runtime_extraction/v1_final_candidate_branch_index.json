@@ -169,10 +169,10 @@
     "lima_latest_handoff_freshness_quickstart_full_suite_tests": 5364,
     "lima_latest_current_goal_status_focused_tests": 21,
     "lima_latest_current_goal_status_broader_v1_tests": 130,
-    "lima_latest_current_goal_status_full_suite_tests": 5433,
+    "lima_latest_current_goal_status_full_suite_tests": 5435,
     "lima_latest_consumer_checkpoint_freshness_focused_tests": 20,
     "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 130,
-    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5433
+    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435
   },
   "arc_bot_shell_local_drift_exclusion": {
     "audit_document": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",

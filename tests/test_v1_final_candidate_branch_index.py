@@ -147,10 +147,10 @@ def test_v1_final_candidate_branch_index_records_consumer_checkpoints() -> None:
         "lima_latest_handoff_freshness_quickstart_full_suite_tests": 5364,
         "lima_latest_current_goal_status_focused_tests": 21,
         "lima_latest_current_goal_status_broader_v1_tests": 130,
-        "lima_latest_current_goal_status_full_suite_tests": 5433,
+        "lima_latest_current_goal_status_full_suite_tests": 5435,
         "lima_latest_consumer_checkpoint_freshness_focused_tests": 20,
         "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 130,
-        "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5433,
+        "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435,
     }
 
     drift = _load_fixture()["arc_bot_shell_local_drift_exclusion"]
@@ -252,8 +252,8 @@ def test_v1_final_candidate_branch_index_text_matches_fixture() -> None:
     assert "LIMA latest post-G61 request readiness-refresh: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests." in text
     assert "LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests." in text
     assert "LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
-    assert "LIMA latest current-goal evidence refresh: passed, 21 focused status tests, 130 broader V1 readiness/status tests, and 5433 full-suite tests." in text
-    assert "LIMA latest consumer checkpoint freshness refresh: passed, 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and 5433 full-suite tests." in text
+    assert "LIMA latest current-goal evidence refresh: passed, 16 focused status tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests." in text
+    assert "LIMA latest consumer checkpoint freshness refresh: passed, 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests." in text
     assert "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release-candidate/final-readiness authority remains blocked." in text
     assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
     assert "historical Arc-Bot-shell local drift as compatibility-only context" in text

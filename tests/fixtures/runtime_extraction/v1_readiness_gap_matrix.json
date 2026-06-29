@@ -103,10 +103,10 @@
     ],
     "latest_current_goal_status_focused_tests_passed": 21,
     "latest_current_goal_status_broader_v1_tests_passed": 130,
-    "latest_current_goal_status_full_lima_suite_tests_passed": 5433,
+    "latest_current_goal_status_full_lima_suite_tests_passed": 5435,
     "latest_consumer_checkpoint_freshness_focused_tests_passed": 20,
     "latest_consumer_checkpoint_freshness_broader_v1_tests_passed": 130,
-    "latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5433
+    "latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5435
   },
   "gap_groups": [
     {
@@ -204,10 +204,10 @@
       "runtime_approval_needed": false,
       "latest_current_goal_status_focused_tests_passed": 21,
       "latest_current_goal_status_broader_v1_tests_passed": 130,
-      "latest_current_goal_status_full_lima_suite_tests_passed": 5433,
+      "latest_current_goal_status_full_lima_suite_tests_passed": 5435,
       "latest_consumer_checkpoint_freshness_focused_tests_passed": 20,
       "latest_consumer_checkpoint_freshness_broader_v1_tests_passed": 130,
-      "latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5433
+      "latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed": 5435
     }
   ],
   "next_smallest_safe_step": "record_exactly_one_valid_cutover_operator_choice",
