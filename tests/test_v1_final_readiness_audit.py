@@ -106,14 +106,14 @@ def test_v1_final_readiness_audit_blocks_cutover_authority() -> None:
     assert criteria["consumer_smokes_pass"] is True
     assert criteria["arc_clean_checkpoint_usable"] is True
     assert criteria["lima_full_suite_passes"] is True
-    assert criteria["release_candidate_acceptance_checklist_satisfied"] is False
+    assert criteria["release_candidate_acceptance_checklist_satisfied"] is True
     assert criteria["release_candidate_cutover_authorized"] is False
     assert criteria["explicit_branch_tag_cutover_operator_authorization_recorded"] is False
     assert fixture["next_required_actions"] == [
-        "refresh_release_candidate_acceptance_checklist_against_this_audit_result",
-        "decide_whether_checklist_remains_blocked_or_moves_to_cutover_authorization_only_blocking",
-        "require_explicit_operator_authorization_before_branch_tag_cutover_or_readiness_claim",
-        "rerun_lima_focused_full_validation_and_diff_hygiene_after_audit_artifact_commit",
+        "preserve_reconciled_release_candidate_acceptance_checklist_as_first_consumer_harness_testing_evidence_only",
+        "keep_runbook_blocked_at_explicit_cutover_authorization",
+        "record_exactly_one_valid_cutover_operator_choice_before_branch_tag_cutover_or_readiness_claim",
+        "rerun_lima_focused_full_validation_and_diff_hygiene_after_further_readiness_artifact_change",
     ]
 
 
@@ -139,13 +139,13 @@ def test_v1_final_readiness_audit_text_matches_fixture() -> None:
     assert "Sparkbot-public, accessible Sparkbot, and Arc-Bot-shell smoke tests pass" in text
     assert "Sparkbot_shell is clean" in text
     assert "current clean HEAD is a descendant of the recorded clean-checkpoint proof commit" in text
-    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
-    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
+    assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
+    assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
     assert "no explicit operator authorization for branch or tag creation is recorded" in text
     assert "40fc474b0e09580a82f90518ebe341e2c98cd644" in text
     assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
     assert "passed, 5391 tests" in text
-    assert "Release-candidate acceptance checklist satisfied | fail" in text
+    assert "Release-candidate acceptance checklist satisfied | pass with reconciliation" in text
     assert "Release-candidate cutover authorized | fail" in text
     assert "Final readiness pass claimed by this artifact: no." in text
     assert "Release-candidate checklist passed by this artifact: no." in text

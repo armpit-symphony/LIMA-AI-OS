@@ -196,8 +196,8 @@ def test_consumer_testability_matrix_text_matches_fixture() -> None:
     assert "No product readiness, production readiness, or V1.0 completion." in text
     assert fixture["consumer_branches"]["public_sparkbot"]["manual_compare_url"] in text
     assert (
-        "Current next step is to run final readiness audit after release checklist refresh, "
-        "then require explicit cutover authorization. Stop before additional implementation "
+        "Current next step is to record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, "
+        "then execute the runbook before any branch, tag, cutover, or readiness claim. Stop before additional implementation "
         "beyond the bounded proof already recorded."
         in text
     )

@@ -9,7 +9,7 @@ This packet preserves the operator handoff context after the bounded V1-G61 proo
 
 It is docs/tests/fixtures-only readiness evidence. It does not approve V1-G61 implementation, complete V1.0, modify `lima/`, change public API exports, edit consumer repositories, edit dependency manifests, edit lockfiles, add runtime vendor SDK imports in `lima/`, add provider SDK clients, construct provider clients, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim product/production readiness.
 
-This packet is not release-candidate branch, tag, cutover, or final readiness authority. `Approve-V1-G61` is recorded and the bounded G61 proof is closed, but V1.0.0 still requires current validation to remain fresh, the release-candidate checklist to pass, the final readiness audit to pass, and explicit cutover authorization before any branch, tag, cutover, or readiness claim.
+This packet is not release-candidate branch, tag, cutover, or final readiness authority. `Approve-V1-G61` is recorded and the bounded G61 proof is closed. Later release-candidate evidence satisfies the checklist/final-readiness loop for first-consumer harness testing only, but V1.0.0 still requires explicit cutover authorization through `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` before any branch, tag, cutover, or readiness claim.
 
 ## Packet Verdict
 
@@ -21,10 +21,10 @@ Downstream gates remain blocked after this packet:
 
 1. Additional V1-G61 implementation beyond the bounded local proof.
 2. Current validation refresh after any approved G61 work.
-3. Post-validation readiness-change freshness evidence, currently same-turn full-suite freshness evidence of 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence of 5360 tests, latest final blocker/index refresh evidence of 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence of 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence of 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
-4. Release-candidate acceptance checklist, currently `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`.
-5. Release cutover runbook, currently `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`.
-6. Final readiness audit, not executed or passed by this packet.
+3. Post-validation readiness-change freshness evidence, currently same-turn full-suite freshness evidence of 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence of 5360 tests, latest final blocker/index refresh evidence of 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence of 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, latest quickstart artifact refresh evidence of 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, latest current-goal evidence of 21 focused status tests, 130 broader readiness/status tests, and 5433 full-suite tests, and latest consumer checkpoint freshness evidence of 20 focused consumer/current-goal tests, 130 broader V1 readiness/status tests, and 5433 full-suite tests.
+4. Release-candidate acceptance checklist, currently `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
+5. Release cutover runbook, currently `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`.
+6. Final readiness audit and reconciliation evidence, executed and reconciled for first-consumer harness testing only; not cutover authority.
 7. Arc-Bot-shell clean checkpoint, recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This is input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
 
 ## Resolved Prior Action: Public Sparkbot Publication
@@ -52,35 +52,35 @@ The prior V1-G57 operator-decision blocker is resolved as completed candidate-on
 
 This evidence does not authorize built-in provider SDK clients, dependency changes, runtime import execution, credential access, endpoint resolution, network egress, fallback, consumer production integration, physical-world behavior, final API freeze, or product readiness.
 
-## Current Required Action: Final Readiness And Cutover Authorization
+## Current Required Action: Cutover Authorization
 
-Required operator action: run the final readiness audit after release checklist refresh, then record explicit cutover authorization before any branch, tag, cutover, or readiness claim.
+Required operator action: record exactly one valid cutover operator choice before any branch, tag, cutover, or readiness claim.
 
 Valid choices:
 
-- `Approve-V1-G61`
-- `Revise-V1-G61`
+- `Approve-V1-RC-Cutover`
+- `Revise-V1-RC-Cutover`
 - `Pause`
 
 Exact approval text if approving:
 
 ```text
-Approve-V1-G61
+Approve-V1-RC-Cutover
 
-I explicitly approve V1-G61 implementation of the runtime vendor SDK import execution proof slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md.
+I explicitly approve V1.0.0 release-candidate branch/tag cutover for first-consumer harness testing only, limited to the current LIMA-AI-OS release-candidate checklist, final-readiness reconciliation audit, cutover runbook, consumer checkpoint manifest, and preserved CANDIDATE_ONLY boundaries.
 ```
 
 Decision packet:
 
-- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md`
+- `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`
 
 Decision packet status audit:
 
-- `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`
+- `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`
 
-Approval request:
+Runbook:
 
-- `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md`
+- `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
 
 The bounded proof already added only:
 
@@ -127,6 +127,8 @@ Evidence required to close this action:
 - V1 Arc-Bot-shell clean-checkpoint proof: clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked
 - V1 release-candidate acceptance checklist: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`
 - V1 release-candidate cutover runbook: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`
+- V1 release-candidate cutover authorization packet: `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`
+- V1 release-candidate cutover authorization packet status audit: `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`
 - V1 final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`
 - Arc-Bot-shell clean checkpoint: proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; latest smoke remains compatibility evidence only, and neither smoke nor clean proof authorizes release-candidate acceptance, final-readiness pass, branch, tag, cutover, or readiness claims without the remaining gates
 
@@ -178,4 +180,4 @@ Stop before any next step that would:
 
 ## Next Step After Action
 
-After the V1-G61 decision and bounded proof closeout, refresh validation evidence as needed, preserve post-validation readiness-change freshness evidence, and then evaluate the release-candidate checklist, final readiness audit, cutover runbook, and recorded Arc-Bot-shell clean-checkpoint proof. Until those gates pass with explicit cutover authorization, keep LIMA in `CANDIDATE_ONLY`.
+After the V1-G61 decision, bounded proof closeout, final-readiness reconciliation, and release-candidate checklist refresh, preserve validation freshness and record exactly one valid cutover operator choice before any branch, tag, cutover, or readiness claim. Until `Approve-V1-RC-Cutover` is recorded and the runbook is executed, keep LIMA in `CANDIDATE_ONLY`.

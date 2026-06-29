@@ -151,4 +151,4 @@ This refresh does not rerun consumer repositories and does not create release-ca
 
 ## Next Action
 
-Keep this audit as current local consumer-harness execution evidence. The next state-changing step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization. Do not add more G61 implementation, create release-candidate artifacts, or claim V1/product/production readiness from this audit.
+Keep this audit as local consumer-harness execution evidence. The current state-changing step is explicit `Approve-V1-RC-Cutover` authorization before any branch, tag, cutover, or readiness claim. Do not add more G61 implementation, create release-candidate artifacts, or claim V1/product/production readiness from this audit.

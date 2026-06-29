@@ -84,4 +84,4 @@ Creating that PR still requires GitHub auth/write permission for `sparkpit-labs/
 
 Keep these branches separate and testable while the V1-G55 decision remains pending. If `Approve-V1-G55` is explicitly recorded, implement only the bounded LIMA-side real provider SDK/network egress authority wrapper named in the G55 approval request. If G55 stays pending, the next safe work is docs/tests/fixtures-only readiness evidence or PR/auth unblock work for the public Sparkbot target.
 
-Current next step is to run final readiness audit after release checklist refresh, then require explicit cutover authorization. Stop before additional implementation beyond the bounded proof already recorded.
+Current next step is to record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, then execute the runbook before any branch, tag, cutover, or readiness claim. Stop before additional implementation beyond the bounded proof already recorded.

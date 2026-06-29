@@ -88,7 +88,7 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
         is True
     )
     assert fixture["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
-    assert fixture["arc_bot_shell_clean_checkpoint_evidence"] is False
+    assert fixture["arc_bot_shell_clean_checkpoint_evidence"] is True
     assert (
         fixture[
             "arc_bot_shell_clean_checkpoint_required_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim"
@@ -405,8 +405,8 @@ def test_v1_readme_status_fixture_preserves_candidate_only_boundary() -> None:
     )
     assert fixture["final_readiness_audit_template_current"] is True
     assert fixture["final_blocker_register_current"] is True
-    assert fixture["g61_operator_approval_recorded"] is False
-    assert fixture["g61_runtime_implementation_approved"] is False
+    assert fixture["g61_operator_approval_recorded"] is True
+    assert fixture["g61_runtime_implementation_approved"] is True
     assert fixture["g61_valid_operator_choices"] == [
         "Approve-V1-G61",
         "Revise-V1-G61",
@@ -467,9 +467,9 @@ def test_v1_readme_status_fixture_points_to_exact_next_step() -> None:
     fixture = _load_fixture()
 
     assert fixture["next_recommended_lane"] == (
-        "operator_decision_v1_g61_runtime_vendor_sdk_import_execution_proof"
+        "cutover_authorization_v1_rc"
     )
-    assert fixture["next_step"] == "record_v1_g61_operator_decision"
+    assert fixture["next_step"] == "record_v1_rc_cutover_operator_decision"
 
 
 def test_readme_contains_current_v1_status_and_boundaries() -> None:

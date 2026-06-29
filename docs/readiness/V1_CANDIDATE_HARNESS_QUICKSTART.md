@@ -139,4 +139,4 @@ Expected result: compile passes, full LIMA suite passes, and diff checks pass.
 
 ## Next Action
 
-If every quickstart command passes, the next state-changing step is still final readiness audit execution after release checklist refresh, followed by explicit cutover authorization. Do not add more G61 implementation or create release-candidate artifacts from this quickstart.
+If every quickstart command passes, the current state-changing step is still explicit `Approve-V1-RC-Cutover` authorization before any branch, tag, cutover, or readiness claim. Do not add more G61 implementation or create release-candidate artifacts from this quickstart.

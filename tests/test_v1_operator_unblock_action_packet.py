@@ -72,27 +72,28 @@ def test_v1_operator_unblock_packet_records_exact_g61_decision_action() -> None:
     action = _load_fixture()["required_operator_actions"]["v1_g61_operator_decision"]
 
     assert action["required_action"] == (
-        "run_final_readiness_audit_after_release_checklist_refresh_then_require_explicit_cutover_authorization"
+        "record_exactly_one_valid_cutover_operator_choice_before_branch_tag_cutover_or_readiness_claim"
     )
-    assert action["valid_choices"] == ["Approve-V1-G61", "Revise-V1-G61", "Pause"]
+    assert action["valid_choices"] == ["Approve-V1-RC-Cutover", "Revise-V1-RC-Cutover", "Pause"]
     assert action["operator_choice_recorded_by_packet"] is False
-    assert action["operator_choice_recorded_externally"] is True
-    assert action["recorded_choice"] == "Approve-V1-G61"
+    assert action["operator_choice_recorded_externally"] is False
+    assert action["recorded_valid_cutover_choice_count"] == 0
     assert action["exact_approve_text"] == (
-        "Approve-V1-G61\n\n"
-        "I explicitly approve V1-G61 implementation of the runtime vendor SDK "
-        "import execution proof slice, limited to the file "
-        "scope, behavior scope, tests, rollback plan, and stop conditions in "
-        "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md."
+        "Approve-V1-RC-Cutover\n\n"
+        "I explicitly approve V1.0.0 release-candidate branch/tag cutover for "
+        "first-consumer harness testing only, limited to the current LIMA-AI-OS "
+        "release-candidate checklist, final-readiness reconciliation audit, "
+        "cutover runbook, consumer checkpoint manifest, and preserved "
+        "CANDIDATE_ONLY boundaries."
     )
     assert action["decision_packet"] == (
-        "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md"
+        "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md"
     )
     assert action["decision_packet_status_audit"] == (
-        "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md"
+        "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md"
     )
     assert action["approval_request"] == (
-        "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md"
+        "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md"
     )
     assert action["approved_future_file_scope_if_approved"] == [
         "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
@@ -140,10 +141,14 @@ def test_v1_operator_unblock_packet_preserves_current_evidence_and_boundaries() 
         "v1_latest_handoff_freshness_8_117_5362_plus_7_64_133_5364_passed",
         "v1_arc_bot_shell_local_drift_exclusion_audit_current_7_modified_49_untracked_excluded_from_release_proof",
         "v1_arc_bot_shell_same_day_drift_recheck_g56_proof_paths_clean_dirty_arc_compatibility_only",
-        "v1_release_candidate_acceptance_checklist_not_release_candidate_final_readiness_cutover_blockers",
-        "v1_release_candidate_cutover_runbook_cutover_blocked_at_final_readiness_and_operator_authorization",
-        "v1_final_readiness_audit_template_future_scaffolding_only",
+        "v1_release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
+        "v1_release_candidate_cutover_runbook_cutover_blocked_at_operator_authorization",
+        "v1_final_readiness_audit_and_reconciliation_recorded_first_consumer_harness_testing_only",
         "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
+        "v1_release_candidate_cutover_authorization_packet_awaiting_explicit_operator_decision",
+        "v1_release_candidate_cutover_authorization_packet_status_audit_valid_choice_count_0",
+        "v1_current_goal_status_audit_21_130_5433_cutover_required",
+        "v1_consumer_checkpoint_freshness_audit_20_130_5433_cutover_still_blocked",
     ]
 
     for key, value in fixture["boundaries_preserved"].items():
@@ -167,7 +172,7 @@ def test_v1_operator_unblock_packet_stop_conditions_and_next_step_are_bounded() 
         "v1_product_production_or_completion_claim",
     ]
     assert fixture["next_step_after_action"] == (
-        "execute_final_readiness_audit_after_release_checklist_refresh_then_require_explicit_cutover_authorization"
+        "record_exactly_one_valid_cutover_operator_choice_then_execute_runbook_before_branch_tag_cutover_or_readiness_claim"
     )
 
 
@@ -181,7 +186,8 @@ def test_v1_operator_unblock_packet_text_matches_fixture() -> None:
     assert fixture["source_lima_commit_before_packet_refresh"] in text
     assert "G61_DECISION_RECORDED_FINAL_READINESS_BLOCKED" in text
     assert "Approve-V1-G61" in text
-    assert "I explicitly approve V1-G61 implementation" in text
+    assert "Approve-V1-RC-Cutover" in text
+    assert "I explicitly approve V1.0.0 release-candidate branch/tag cutover" in text
     assert "Public Sparkbot V1-G56 publication is recorded as resolved" in text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md" in text
     assert "V1_CONSUMER_HARNESS_USABILITY_MATRIX.md" in text
@@ -198,13 +204,13 @@ def test_v1_operator_unblock_packet_text_matches_fixture() -> None:
     assert "no `openai` import, no provider SDK client construction, and no future G61 implementation files present before approval" in text
     assert "This packet is not release-candidate branch, tag, cutover, or final readiness authority" in text
     assert "post-validation readiness-change freshness evidence remains current" in text
-    assert "explicit cutover authorization before any branch, tag, cutover, or readiness claim" in text
-    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
-    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
-    assert "Final readiness audit, not executed or passed by this packet" in text
+    assert "record exactly one valid cutover operator choice before any branch, tag, cutover, or readiness claim" in text
+    assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
+    assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
+    assert "Final readiness audit and reconciliation evidence, executed and reconciled for first-consumer harness testing only; not cutover authority" in text
     assert "Arc-Bot-shell clean checkpoint, recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "Arc-Bot-shell clean checkpoint, recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
-    assert "Post-validation readiness-change freshness evidence, currently same-turn full-suite freshness evidence of 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence of 5360 tests, latest final blocker/index refresh evidence of 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence of 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence of 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests." in text
+    assert "latest current-goal evidence of 21 focused status tests, 130 broader readiness/status tests, and 5433 full-suite tests" in text
     assert "Arc-Bot-shell clean-checkpoint proof: clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked" in text
     assert "candidate harness quickstart execution audit remains current and records public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 consumer smoke tests plus LIMA post-refresh validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests" in text
     assert "post-validation readiness-change freshness evidence remains current, including same-turn 5359 full-suite evidence after release/cutover freshness checks, latest quickstart post-refresh 5360 full-suite evidence, latest final blocker/index 15/89/5361 evidence, latest post-G61 request readiness-refresh 8/117/5362 evidence, and latest quickstart artifact refresh 7/64/133/5364 evidence" in text
@@ -231,7 +237,7 @@ def test_v1_operator_unblock_packet_text_matches_fixture() -> None:
     assert "Final readiness audit executed or passed by this packet: no." in text
     assert "Arc-Bot-shell clean-checkpoint proof created by this packet: no." in text
     assert "V1.0 completion, product readiness, or production readiness claimed: no." in text
-    assert "preserve post-validation readiness-change freshness evidence" in text
+    assert "record exactly one valid cutover operator choice" in text
 
 
 def test_v1_operator_unblock_packet_has_no_sensitive_markers() -> None:

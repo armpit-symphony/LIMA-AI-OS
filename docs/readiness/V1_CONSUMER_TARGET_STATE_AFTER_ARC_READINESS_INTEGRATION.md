@@ -107,4 +107,4 @@ Historical audit-time next step was to record exactly one valid operator choice 
 
 If the intended path is implementation, the choice must be `Approve-V1-G55` using the exact required wording from `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`. Otherwise, keep LIMA at `CANDIDATE_ONLY` and continue only docs/tests/fixtures review, guard, audit, request-revision, or decision-recording work.
 
-Current next step is to run final readiness audit after release checklist refresh, then require explicit cutover authorization. Stop before additional implementation beyond the bounded proof already recorded.
+Current next step is to record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, then execute the runbook before any branch, tag, cutover, or readiness claim. Stop before additional implementation beyond the bounded proof already recorded.

@@ -15,7 +15,7 @@ Verdict: `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIE
 
 The audit confirms that the local candidate evidence is strong enough for continued first-consumer harness testing: Sparkbot-public, accessible Sparkbot, and Arc-Bot-shell smoke tests pass from clean checkpoints; Sparkbot_shell is clean; LIMA compile/import validation and full tests pass; and Arc-Bot-shell current clean HEAD is a descendant of the recorded clean-checkpoint proof commit.
 
-The audit does not pass final readiness for V1.0.0 release-candidate cutover because `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md` still reports `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`, `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` still reports `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`, and no explicit operator authorization for branch or tag creation is recorded.
+At execution time, this audit did not pass V1.0.0 release-candidate cutover. Later reconciliation evidence resolves the checklist/final-readiness loop for first-consumer harness testing only: `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md` now reports `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`, `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` now reports `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`, and no explicit operator authorization for branch or tag creation is recorded.
 
 ## Inputs Reviewed
 
@@ -92,8 +92,8 @@ The audit does not pass final readiness for V1.0.0 release-candidate cutover bec
 | LIMA compileall passes | pass | current command evidence |
 | LIMA full suite passes | pass | current command evidence, 5391 tests |
 | LIMA diff hygiene passes before audit edits | pass | current command evidence |
-| Release-candidate acceptance checklist satisfied | fail | current checklist still reports `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS` |
-| Release-candidate cutover authorized | fail | current runbook still reports `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION` |
+| Release-candidate acceptance checklist satisfied | pass with reconciliation | current checklist reports `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` for first-consumer harness testing only |
+| Release-candidate cutover authorized | fail | current runbook reports `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION` |
 | Explicit branch/tag/cutover operator authorization recorded | fail | no such authorization recorded in the audited inputs |
 
 ## Protected Boundary Findings
@@ -138,7 +138,7 @@ The audit does not pass final readiness for V1.0.0 release-candidate cutover bec
 
 ## Next Required Actions
 
-1. Refresh the release-candidate acceptance checklist against this audit result.
-2. Decide whether the checklist should remain blocked or move to cutover-authorization-only blocking.
-3. Require explicit operator authorization before any release-candidate branch, tag, cutover, or readiness claim.
-4. Rerun LIMA focused/full validation and diff hygiene after this audit artifact is committed.
+1. Preserve the reconciled release-candidate acceptance checklist as first-consumer harness testing evidence only.
+2. Keep the runbook blocked at explicit cutover authorization.
+3. Record exactly one valid cutover operator choice before any release-candidate branch, tag, cutover, or readiness claim.
+4. Rerun LIMA focused/full validation and diff hygiene after any further readiness artifact change.

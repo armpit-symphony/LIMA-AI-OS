@@ -45,8 +45,8 @@ def test_v1_long_range_roadmap_fixture_and_docs_exist() -> None:
 def test_v1_long_range_roadmap_current_gate_is_g61_request_prep() -> None:
     fixture = _load_fixture()
 
-    assert fixture["current_gate"] == "V1-G61"
-    assert fixture["latest_completed_gate"] == "V1-G60"
+    assert fixture["current_gate"] == "V1-RC-CUTOVER"
+    assert fixture["latest_completed_gate"] == "V1-G61"
     assert fixture["latest_authority_chain_audit"] == "V1-G56"
     assert (
         fixture["latest_request_stage_readiness_refresh"]
@@ -127,22 +127,22 @@ def test_v1_long_range_roadmap_current_gate_is_g61_request_prep() -> None:
         is True
     )
     assert fixture["release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
+        "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
     assert fixture["release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
+        "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     )
     assert fixture["final_readiness_audit_template_current"] is True
-    assert fixture["operator_approval_recorded"] is False
-    assert fixture["runtime_implementation_approved"] is False
+    assert fixture["operator_approval_recorded"] is True
+    assert fixture["runtime_implementation_approved"] is True
     assert fixture["valid_operator_choices"] == [
-        "Approve-V1-G61",
-        "Revise-V1-G61",
+        "Approve-V1-RC-Cutover",
+        "Revise-V1-RC-Cutover",
         "Pause",
     ]
     assert fixture["v1_product_ready"] is False
     assert fixture["production_ready"] is False
-    assert fixture["next_smallest_safe_step"] == "record_v1_g61_operator_decision"
+    assert fixture["next_smallest_safe_step"] == "record_v1_rc_cutover_operator_decision"
 
 
 def test_v1_long_range_roadmap_refresh_adds_no_forbidden_behavior() -> None:
@@ -202,8 +202,8 @@ def test_v1_long_range_roadmap_text_points_to_g61_request_prep() -> None:
     assert "latest handoff freshness evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests" in text
     assert "That evidence and clean Arc-Bot-shell checkpoint proof are required before any future release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert (
-        "The next smallest safe V1 action is to run the final readiness audit after the release checklist refresh, "
-        "then require explicit cutover authorization before any branch, tag, cutover, or readiness claim."
+        "The next smallest safe V1 action is to record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, "
+        "then execute the runbook before any branch, tag, cutover, or readiness claim."
     ) in text
     assert "approved vendor SDK module can be imported in a controlled local test context" in text
     assert "lockfile edits" in text

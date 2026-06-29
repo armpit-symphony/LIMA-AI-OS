@@ -107,7 +107,7 @@
     "arc_clean_checkpoint_usable": true,
     "lima_compileall_passes": true,
     "lima_full_suite_passes": true,
-    "release_candidate_acceptance_checklist_satisfied": false,
+    "release_candidate_acceptance_checklist_satisfied": true,
     "release_candidate_cutover_authorized": false,
     "explicit_branch_tag_cutover_operator_authorization_recorded": false
   },
@@ -134,9 +134,9 @@
     "v1_completion_product_or_production_readiness_claimed": false
   },
   "next_required_actions": [
-    "refresh_release_candidate_acceptance_checklist_against_this_audit_result",
-    "decide_whether_checklist_remains_blocked_or_moves_to_cutover_authorization_only_blocking",
-    "require_explicit_operator_authorization_before_branch_tag_cutover_or_readiness_claim",
-    "rerun_lima_focused_full_validation_and_diff_hygiene_after_audit_artifact_commit"
+    "preserve_reconciled_release_candidate_acceptance_checklist_as_first_consumer_harness_testing_evidence_only",
+    "keep_runbook_blocked_at_explicit_cutover_authorization",
+    "record_exactly_one_valid_cutover_operator_choice_before_branch_tag_cutover_or_readiness_claim",
+    "rerun_lima_focused_full_validation_and_diff_hygiene_after_further_readiness_artifact_change"
   ]
 }

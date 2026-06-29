@@ -25,7 +25,9 @@
     "arc_bot_shell_local_drift_exclusion_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
     "release_candidate_acceptance_checklist": "docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md",
     "release_candidate_cutover_runbook": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
-    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md"
+    "final_readiness_audit_template": "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md",
+    "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+    "release_candidate_cutover_authorization_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md"
   },
   "resolved_prior_actions": {
     "public_sparkbot_publication": {
@@ -45,17 +47,17 @@
   },
   "required_operator_actions": {
     "v1_g61_operator_decision": {
-      "required_action": "run_final_readiness_audit_after_release_checklist_refresh_then_require_explicit_cutover_authorization",
+      "required_action": "record_exactly_one_valid_cutover_operator_choice_before_branch_tag_cutover_or_readiness_claim",
       "valid_choices": [
-        "Approve-V1-G61",
-        "Revise-V1-G61",
+        "Approve-V1-RC-Cutover",
+        "Revise-V1-RC-Cutover",
         "Pause"
       ],
       "operator_choice_recorded_by_packet": false,
-      "exact_approve_text": "Approve-V1-G61\n\nI explicitly approve V1-G61 implementation of the runtime vendor SDK import execution proof slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md.",
-      "decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
-      "decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
-      "approval_request": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md",
+      "exact_approve_text": "Approve-V1-RC-Cutover\n\nI explicitly approve V1.0.0 release-candidate branch/tag cutover for first-consumer harness testing only, limited to the current LIMA-AI-OS release-candidate checklist, final-readiness reconciliation audit, cutover runbook, consumer checkpoint manifest, and preserved CANDIDATE_ONLY boundaries.",
+      "decision_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
+      "decision_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md",
+      "approval_request": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md",
       "approved_future_file_scope_if_approved": [
         "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF.md",
         "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_CLOSEOUT.md",
@@ -73,8 +75,8 @@
         "post_validation_readiness_change_freshness_evidence_remains_current_before_release_final_branch_tag_cutover_or_readiness_claim",
         "g61_decision_does_not_pass_release_checklist_authorize_cutover_execute_final_readiness_or_prove_arc_clean_checkpoint"
       ],
-      "operator_choice_recorded_externally": true,
-      "recorded_choice": "Approve-V1-G61"
+      "operator_choice_recorded_externally": false,
+      "recorded_valid_cutover_choice_count": 0
     }
   },
   "current_evidence_to_preserve": [
@@ -101,10 +103,14 @@
     "v1_latest_handoff_freshness_8_117_5362_plus_7_64_133_5364_passed",
     "v1_arc_bot_shell_local_drift_exclusion_audit_current_7_modified_49_untracked_excluded_from_release_proof",
     "v1_arc_bot_shell_same_day_drift_recheck_g56_proof_paths_clean_dirty_arc_compatibility_only",
-    "v1_release_candidate_acceptance_checklist_not_release_candidate_final_readiness_cutover_blockers",
-    "v1_release_candidate_cutover_runbook_cutover_blocked_at_final_readiness_and_operator_authorization",
-    "v1_final_readiness_audit_template_future_scaffolding_only",
-    "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only"
+    "v1_release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
+    "v1_release_candidate_cutover_runbook_cutover_blocked_at_operator_authorization",
+    "v1_final_readiness_audit_and_reconciliation_recorded_first_consumer_harness_testing_only",
+    "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
+    "v1_release_candidate_cutover_authorization_packet_awaiting_explicit_operator_decision",
+    "v1_release_candidate_cutover_authorization_packet_status_audit_valid_choice_count_0",
+    "v1_current_goal_status_audit_21_130_5433_cutover_required",
+    "v1_consumer_checkpoint_freshness_audit_20_130_5433_cutover_still_blocked"
   ],
   "boundaries_preserved": {
     "v1_g61_operator_decision_recorded_by_packet": false,
@@ -149,5 +155,5 @@
     "raw_sensitive_or_patch_content_persistence",
     "v1_product_production_or_completion_claim"
   ],
-  "next_step_after_action": "execute_final_readiness_audit_after_release_checklist_refresh_then_require_explicit_cutover_authorization"
+  "next_step_after_action": "record_exactly_one_valid_cutover_operator_choice_then_execute_runbook_before_branch_tag_cutover_or_readiness_claim"
 }

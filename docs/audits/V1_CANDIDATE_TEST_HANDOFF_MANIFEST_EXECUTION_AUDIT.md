@@ -56,8 +56,8 @@ The manifest validation path passes locally for the fake-executor consumer smoke
 - V1 consumer harness usability matrix is current and records fake in-process executor, sanitized fixture, no-network, no-secret, no-production-wiring criteria for Sparkbot and Arc-Bot-shell local candidate smoke tests.
 - V1 current gate consistency audit is current and rejects stale public Sparkbot publication or V1-G57 active-blocker language.
 - V1-G61 operator decision packet status audit is current and records `Approve-V1-G61` for bounded local import-proof evidence only.
-- V1 release-candidate acceptance checklist is current and records `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`; it is blocked evidence, not release authority.
-- V1 release-candidate cutover runbook is current and records `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; it is blocked evidence, not cutover authority.
+- V1 release-candidate acceptance checklist is current and records `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`; it is first-consumer harness testing evidence, not cutover authority.
+- V1 release-candidate cutover runbook is current and records `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`; it is blocked procedure evidence, not cutover authority.
 - V1 final readiness audit template is current as future audit scaffolding only; it was not executed or passed by this manifest execution audit.
 - Arc-Bot-shell compatibility smoke is local fake-executor candidate evidence only; clean-checkpoint proof is recorded separately and remains release-gate input evidence only.
 - LIMA handoff, final blocker, final branch index, final audit template, G61 request, G61 request-gate audit, G61 preapproval runtime-tree guard audit, G61 operator decision packet status audit, and post-G61 readiness assertions remain aligned.
@@ -119,4 +119,4 @@ Stop before any next step that would:
 
 ## Recommended Next Step
 
-Keep this execution audit as the current local test evidence for the V1 candidate handoff. The next state-changing step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization before any branch, tag, cutover, or readiness claim.
+Keep this execution audit as local test evidence for the V1 candidate handoff. The current state-changing step is explicit `Approve-V1-RC-Cutover` authorization before any branch, tag, cutover, or readiness claim.

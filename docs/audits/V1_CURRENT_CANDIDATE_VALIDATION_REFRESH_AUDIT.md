@@ -109,15 +109,15 @@ This supplement records later LIMA docs/tests/fixtures validation after the post
 - The V1 candidate harness quickstart execution audit records local quickstart smoke pass evidence for public Sparkbot, accessible Sparkbot, and Arc-Bot-shell while preserving the G61 operator blocker.
 - The V1 current gate consistency audit locks current-facing docs to the G61 operator-decision gate and rejects stale public Sparkbot publication or V1-G57 active-blocker language.
 - The V1-G61 operator decision packet status audit confirms `Approve-V1-G61` is recorded for bounded local import-proof evidence only.
-- The V1 release-candidate acceptance checklist remains `NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS`; this validation refresh is an input to that checklist, not a passed release-candidate checklist.
-- The V1 release-candidate cutover runbook remains `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; this validation refresh is an input to future cutover review, not cutover authority.
-- The V1 final readiness audit template remains future audit scaffolding; this validation refresh did not execute or pass the final readiness audit.
+- The V1 release-candidate acceptance checklist now reports `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`; this validation refresh is preserved input evidence, not cutover authority.
+- The V1 release-candidate cutover runbook now reports `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`; this validation refresh is input evidence for future cutover review, not cutover authority.
+- The V1 final readiness audit and final readiness reconciliation audit are recorded later in the readiness chain; this validation refresh remains historical input evidence and did not itself execute, pass, or authorize cutover.
 - Arc-Bot-shell local fake-executor smoke remains compatibility evidence only; clean-checkpoint proof is recorded separately as release-gate input evidence.
 - The V1-G57 through V1-G60 evidence chain is complete as candidate-only evidence.
 - The later 2026-06-21 LIMA validation supplement records 37 focused G61 guard/operator/freshness tests, 147 focused V1 readiness regression tests, full LIMA suite validation with 5359 tests, diff hygiene, and protected runtime/dependency/support path status as clean.
 - The latest 2026-06-21 LIMA readiness freshness supplement records 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, full LIMA suite validation with 5361 tests, diff hygiene, and protected runtime/dependency/support path status as clean.
 - The latest 2026-06-21 handoff freshness supplement records 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5362 and 5364 tests, diff hygiene, and protected runtime/dependency/support path status as clean.
-- The V1-G61 gate is unchanged; this audit did not record an operator decision or implement G61.
+- The V1-G61 gate is resolved only as bounded local import-proof evidence; this audit did not authorize release-candidate branch/tag cutover.
 
 ## Boundaries Preserved
 

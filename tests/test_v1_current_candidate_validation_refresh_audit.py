@@ -98,10 +98,9 @@ def test_v1_current_candidate_validation_refresh_keeps_g61_blocker() -> None:
     fixture = _load_fixture()
 
     assert fixture["active_blockers_remaining"] == [
-        "release_candidate_acceptance_checklist_not_passed",
         "release_candidate_cutover_not_authorized",
-        "final_readiness_audit_not_executed_or_passed",
-        "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
+        "explicit_v1_rc_cutover_operator_choice_not_recorded",
+        "product_or_production_readiness_not_authorized",
     ]
     assert fixture["evidence_interpretation"] == [
         "public_sparkbot_local_checkout_still_validates_fake_executor_path",
@@ -112,15 +111,15 @@ def test_v1_current_candidate_validation_refresh_keeps_g61_blocker() -> None:
         "v1_current_gate_consistency_audit_current",
         "v1_current_gate_consistency_audit_committed_stale_claim_rejection_proof",
         "v1_g61_operator_decision_packet_status_audit_current_approve_recorded_bounded_proof_only",
-        "v1_release_candidate_acceptance_checklist_blocked_not_passed",
-        "v1_release_candidate_cutover_runbook_blocked_not_authority",
-        "v1_final_readiness_audit_template_future_scaffolding_not_executed",
+        "v1_release_candidate_acceptance_checklist_satisfied_for_first_consumer_harness_testing_not_cutover_authority",
+        "v1_release_candidate_cutover_runbook_blocked_at_operator_authorization",
+        "v1_final_readiness_audit_and_reconciliation_recorded_later_not_cutover_authority",
         "arc_bot_shell_clean_checkpoint_proof_recorded_as_release_gate_input_only",
         "v1_g57_through_v1_g60_candidate_only_evidence_complete",
         "later_lima_validation_supplement_current_37_147_5359_with_protected_paths_clean",
         "latest_lima_readiness_freshness_supplement_current_15_89_5361_with_protected_paths_clean",
         "latest_handoff_freshness_supplement_current_8_117_5362_and_7_64_133_5364_with_protected_paths_clean",
-        "v1_g61_bounded_proof_complete_final_readiness_cutover_still_blocked",
+        "v1_g61_bounded_proof_complete_release_candidate_checklist_reconciled_cutover_still_blocked",
     ]
 
     validation = fixture["lima_validation_results"]
@@ -296,12 +295,12 @@ def test_v1_current_candidate_validation_refresh_text_matches_fixture() -> None:
     assert "committed proof that stale public Sparkbot publication" in text
     assert "V1-G61 operator decision packet status audit" in text
     assert "`Approve-V1-G61` is recorded for bounded local import-proof evidence only" in text
-    assert "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS" in text
-    assert "not a passed release-candidate checklist" in text
-    assert "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION" in text
+    assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "not cutover authority" in text
-    assert "future audit scaffolding" in text
-    assert "did not execute or pass the final readiness audit" in text
+    assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
+    assert "not cutover authority" in text
+    assert "final readiness audit and final readiness reconciliation audit are recorded later" in text
+    assert "did not itself execute, pass, or authorize cutover" in text
     assert "Arc-Bot-shell local fake-executor smoke remains compatibility evidence only; clean-checkpoint proof is recorded separately as release-gate input evidence" in text
     assert "83 passed" in text
     assert "153 passed" in text

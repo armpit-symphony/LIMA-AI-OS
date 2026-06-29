@@ -181,8 +181,8 @@ def test_consumer_target_state_text_matches_fixture() -> None:
         in text
     )
     assert (
-        "Current next step is to run final readiness audit after release checklist refresh, "
-        "then require explicit cutover authorization. Stop before additional implementation "
+        "Current next step is to record exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, "
+        "then execute the runbook before any branch, tag, cutover, or readiness claim. Stop before additional implementation "
         "beyond the bounded proof already recorded."
         in text
     )

@@ -255,9 +255,9 @@ def test_v1_candidate_handoff_execution_audit_text_matches_fixture() -> None:
     assert "V1-G61 operator decision packet status audit is current" in text
     assert "`Approve-V1-G61` for bounded local import-proof evidence only" in text
     assert "V1 release-candidate acceptance checklist is current" in text
-    assert "blocked evidence, not release authority" in text
+    assert "first-consumer harness testing evidence, not cutover authority" in text
     assert "V1 release-candidate cutover runbook is current" in text
-    assert "blocked evidence, not cutover authority" in text
+    assert "blocked procedure evidence, not cutover authority" in text
     assert "V1 final readiness audit template is current as future audit scaffolding only" in text
     assert "Arc-Bot-shell compatibility smoke is local fake-executor candidate evidence only; clean-checkpoint proof is recorded separately and remains release-gate input evidence only." in text
     assert "G61 preapproval runtime-tree guard audit" in text
