@@ -1,7 +1,7 @@
 param(
     [string]$Repository = "armpit-symphony/LIMA-AI-OS",
     [string]$Branch = "docs-v1-post-g60-readiness-and-next-lane-matrix",
-    [string]$DestinationRoot = (Join-Path $env:USERPROFILE "lima_build_sources"),
+    [string]$DestinationRoot = "C:\tmp\lima_build_sources",
     [switch]$Install,
     [switch]$InstallDependencies,
     [switch]$SkipTests,
@@ -17,7 +17,7 @@ function Write-Step {
 
 $safeBranch = $Branch -replace "[^A-Za-z0-9._-]", "_"
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$downloadDir = Join-Path $DestinationRoot "lima-ai-os-$safeBranch-$stamp"
+$downloadDir = Join-Path $DestinationRoot "lima-$stamp"
 $zipPath = Join-Path $downloadDir "source.zip"
 $archiveUrl = "https://github.com/$Repository/archive/refs/heads/$Branch.zip"
 
@@ -25,6 +25,7 @@ Write-Step "CANDIDATE_ONLY downloader"
 Write-Step "Repository: $Repository"
 Write-Step "Branch: $Branch"
 Write-Step "Destination: $downloadDir"
+Write-Step "Branch label: $safeBranch"
 Write-Step "This does not claim product readiness or production readiness."
 
 if ($DryRun) {
@@ -42,9 +43,17 @@ Write-Step "Downloading source archive"
 Invoke-WebRequest -Uri $archiveUrl -OutFile $zipPath
 
 Write-Step "Expanding source archive"
-Expand-Archive -Path $zipPath -DestinationPath $downloadDir -Force
+if (Get-Command tar.exe -ErrorAction SilentlyContinue) {
+    tar.exe -xf $zipPath -C $downloadDir
+    if ($LASTEXITCODE -ne 0) {
+        throw "tar.exe failed with exit code $LASTEXITCODE"
+    }
+}
+else {
+    Expand-Archive -Path $zipPath -DestinationPath $downloadDir -Force
+}
 
-$sourcePath = Get-ChildItem -Path $downloadDir -Directory |
+$sourcePath = Get-ChildItem -Path $downloadDir -Directory -Recurse -Depth 2 |
     Where-Object { Test-Path (Join-Path $_.FullName "pyproject.toml") } |
     Select-Object -First 1
 
@@ -68,6 +77,9 @@ if ($Install) {
         $installArgs += "-SkipTests"
     }
     powershell @installArgs
+    if ($LASTEXITCODE -ne 0) {
+        throw "candidate installer failed with exit code $LASTEXITCODE"
+    }
 }
 
 Write-Step "Download complete"
