@@ -91,6 +91,10 @@ Latest V1 checkpoint:
 - V1 consumer checkpoint freshness audit: complete with verdict
   `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` in
   `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md`; it records current clean consumer checkpoints and smoke/diff freshness without cutover authority.
+- V1 local install/document harness committed feature audit: complete with verdict
+  `PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` in
+  `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`; it records commit `bc63ed3b00055976b1728d80124137d7ce15d871` as tracked local PC testing support only. The prior local runtime drift exclusion audit is superseded as a closure record in
+  `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md`. Use synthetic or non-sensitive local documents only; this lane does not authorize downloader/installer execution as release validation, customer-data processing, consumer production integration, branch creation, tagging, cutover, product readiness, or production readiness.
 - V1 operator unblock action packet: added as the current operator handoff packet for the exact G61 decision in
   `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`.
 - V1 final candidate branch index: refreshed as the saved branch/checkpoint map and future branch/tag guard in

@@ -3,71 +3,65 @@
   "api_status": "CANDIDATE_ONLY",
   "date": "2026-06-28",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "observed_lima_commit": "f554a2f048c6231a2b321390e1a309101bee02c9",
-  "audit_verdict": "LOCAL_RUNTIME_DRIFT_EXCLUDED_FROM_V1_RELEASE_PROOF",
+  "original_observed_lima_commit": "f554a2f048c6231a2b321390e1a309101bee02c9",
+  "superseding_lima_commit": "bc63ed3b00055976b1728d80124137d7ce15d871",
+  "audit_verdict": "LOCAL_RUNTIME_DRIFT_SUPERSEDED_BY_COMMITTED_CANDIDATE_HARNESS_AUDIT",
   "documents": {
-    "audit": "docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md"
+    "audit": "docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md",
+    "superseding_audit": "docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md"
   },
-  "observed_untracked_artifacts": [
+  "originally_observed_artifacts": [
     {
       "path": "docs/readiness/V1_LOCAL_INSTALL_AND_DOCUMENT_HARNESS_QUICKSTART.md",
-      "git_state": "untracked",
-      "observed_role": "local_install_document_harness_quickstart",
-      "release_proof_treatment": "excluded"
+      "original_git_state": "untracked",
+      "current_git_state": "tracked",
+      "current_release_proof_treatment": "candidate_only_not_release_authority"
     },
     {
       "path": "lima/harness/v1_local_document_harness.py",
-      "git_state": "untracked",
-      "observed_role": "candidate_local_document_inspection_runtime_cli",
-      "release_proof_treatment": "excluded",
-      "observed_size_bytes": 11113,
-      "py_compile_passed": true
+      "original_git_state": "untracked",
+      "current_git_state": "tracked",
+      "current_release_proof_treatment": "candidate_only_not_production_runtime_authority"
     },
     {
       "path": "scripts/download_lima_ai_os_candidate.ps1",
-      "git_state": "untracked",
-      "observed_role": "github_source_archive_downloader_optional_installer_execution",
-      "release_proof_treatment": "excluded",
+      "original_git_state": "untracked",
+      "current_git_state": "tracked",
+      "current_release_proof_treatment": "operator_run_utility_not_validation_authority",
       "network_capable_unless_dry_run": true
     },
     {
       "path": "scripts/install_lima_ai_os_candidate.ps1",
-      "git_state": "untracked",
-      "observed_role": "local_venv_package_installer_optional_dependency_install",
-      "release_proof_treatment": "excluded",
+      "original_git_state": "untracked",
+      "current_git_state": "tracked",
+      "current_release_proof_treatment": "operator_run_utility_not_validation_authority",
       "writes_install_root_unless_dry_run": true
     },
     {
       "path": "tests/test_v1_local_document_harness.py",
-      "git_state": "untracked",
-      "observed_role": "local_document_harness_tests",
-      "release_proof_treatment": "excluded"
+      "original_git_state": "untracked",
+      "current_git_state": "tracked",
+      "current_release_proof_treatment": "committed_candidate_only_test_evidence"
     }
   ],
-  "missing_referenced_tests": [],
-  "release_impact": {
-    "pushed_branch_synced": true,
-    "local_worktree_clean": false,
-    "local_clean_checkpoint_claim_allowed": false,
-    "cutover_blocker_changed_by_audit": false,
+  "closure_release_impact": {
+    "original_drift_resolved_as_tracked_content": true,
+    "local_worktree_can_be_clean_with_artifacts_present": true,
+    "cutover_blocker_changed_by_closure": false,
     "required_cutover_action": "record_exactly_one_valid_cutover_operator_choice"
   },
   "boundaries_preserved": {
-    "runtime_install_artifacts_staged_by_audit": false,
-    "runtime_install_artifacts_committed_by_audit": false,
-    "runtime_behavior_approved_by_audit": false,
-    "local_document_harness_support_claimed_by_audit": false,
-    "downloader_or_installer_execution_approved_by_audit": false,
-    "network_behavior_approved_by_audit": false,
-    "file_read_behavior_approved_by_audit": false,
-    "dependency_installation_approved_by_audit": false,
-    "consumer_production_integration_approved_by_audit": false,
-    "release_candidate_branch_or_tag_created_by_audit": false,
-    "cutover_operator_choice_recorded_by_audit": false,
-    "product_or_production_readiness_claimed_by_audit": false
+    "runtime_install_artifacts_approved_by_original_drift_audit": false,
+    "runtime_install_artifacts_committed_after_original_audit": true,
+    "runtime_behavior_approved_for_production_by_closure": false,
+    "local_document_harness_support_claimed_v1_ready_by_closure": false,
+    "downloader_or_installer_execution_approved_by_closure": false,
+    "network_behavior_approved_by_closure": false,
+    "dependency_installation_approved_by_closure": false,
+    "consumer_production_integration_approved_by_closure": false,
+    "release_candidate_branch_or_tag_created_by_closure": false,
+    "cutover_operator_choice_recorded_by_closure": false,
+    "product_or_production_readiness_claimed_by_closure": false
   },
-  "next_required_action": "exclude_or_resolve_local_runtime_drift_before_clean_checkpoint_claim",
-  "present_untracked_tests": [
-    "tests/test_v1_local_document_harness.py"
-  ]
+  "next_required_action": "use_committed_feature_audit_and_record_cutover_choice_before_release_claim"
 }

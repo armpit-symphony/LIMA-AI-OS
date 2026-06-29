@@ -30,6 +30,8 @@ LIMA has strong candidate-only harness readiness evidence for first-consumer har
 | Cutover authorization packet | prepared with `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION` |
 | Cutover authorization packet status audit | `PASS_CUTOVER_AUTHORIZATION_PACKET_AWAITING_EXPLICIT_OPERATOR_DECISION`; valid choice count `0` |
 | Latest recorded status-audit validation | focused tests 16 passed, broader V1 readiness/status tests 56 passed, compileall passed, full LIMA suite 5435 passed, diff hygiene passed |
+| Local install/document harness lane | `bc63ed3b00055976b1728d80124137d7ce15d871` adds tracked candidate-only local install and read-only document harness support; `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md` records the lane with verdict `PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED`, and `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md` is superseded as closure evidence |
+| Latest post-bc63 local harness/install validation | focused local harness/drift tests 20 passed, broader V1 readiness/status tests 78 passed, compileall passed, full LIMA suite 5457 passed, diff hygiene passed |
 
 ## Requirements Not Yet Proven
 
@@ -102,6 +104,20 @@ After commit `58c26d8755cfe0cfd555433a4b8908ed304b74d1` refreshed cutover-readin
 | `python -m pytest -q tests -p no:cacheprovider` | passed, 5435 tests |
 
 This post-58c refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
+
+## Post-bc63 Local Harness/Install Evidence Refresh
+
+After commit `bc63ed3b00055976b1728d80124137d7ce15d871` added the candidate-only local install and read-only document harness lane, this audit was refreshed again to keep the active goal posture aligned with current HEAD. The branch now has tracked local PC testing support, not untracked drift, but the goal remains incomplete because no valid cutover operator choice is recorded.
+
+| Command | Result |
+| --- | --- |
+| `python -m pytest -q tests\test_v1_local_document_harness.py tests\test_v1_local_runtime_drift_exclusion_audit.py tests\test_v1_local_document_harness_install_committed_feature_audit.py -p no:cacheprovider` | passed, 20 tests |
+| `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_local_document_harness.py tests\test_v1_local_runtime_drift_exclusion_audit.py tests\test_v1_local_document_harness_install_committed_feature_audit.py -p no:cacheprovider` | passed, 78 tests |
+| `python -m compileall lima` | passed |
+| `python -m pytest -q tests -p no:cacheprovider` | passed, 5457 tests |
+| `git diff --check` | passed |
+
+This post-bc63 refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, customer-data handling approval, downloader/installer execution approval, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
 
 ## Next Required Action
 

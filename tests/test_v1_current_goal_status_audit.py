@@ -91,6 +91,15 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
     assert evidence["latest_status_audit_full_lima_suite_tests_passed"] == 5435
     assert evidence["latest_status_audit_diff_hygiene_passed"] is True
     assert evidence["latest_status_audit_post_58c_full_lima_suite_tests_passed"] == 5435
+    assert evidence["local_document_harness_install_committed_feature_audit_verdict"] == (
+        "PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED"
+    )
+    assert evidence["local_runtime_drift_exclusion_audit_superseded"] is True
+    assert evidence["latest_post_bc63_local_harness_focused_tests_passed"] == 20
+    assert evidence["latest_post_bc63_local_harness_broader_tests_passed"] == 78
+    assert evidence["latest_post_bc63_compileall_passed"] is True
+    assert evidence["latest_post_bc63_full_lima_suite_tests_passed"] == 5457
+    assert evidence["latest_post_bc63_diff_hygiene_passed"] is True
 
 
 def test_v1_current_goal_status_audit_records_unproven_requirements() -> None:
@@ -159,6 +168,22 @@ def test_v1_current_goal_status_audit_records_post_58c_refresh() -> None:
     assert refresh["runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh"] is False
 
 
+def test_v1_current_goal_status_audit_records_post_bc63_refresh() -> None:
+    refresh = _load_fixture()["post_bc63_local_harness_install_evidence_refresh"]
+
+    assert refresh == {
+        "source_lima_commit_before_refresh": "bc63ed3b00055976b1728d80124137d7ce15d871",
+        "focused_local_harness_drift_tests_passed": 20,
+        "broader_v1_readiness_status_tests_passed": 78,
+        "compileall_lima_passed": True,
+        "full_lima_suite_tests_passed": 5457,
+        "diff_hygiene_passed": True,
+        "cutover_operator_choice_created_by_refresh": False,
+        "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": False,
+        "customer_data_downloader_installer_or_production_authority_created_by_refresh": False,
+    }
+
+
 def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     fixture = _load_fixture()
     text = (REPO_ROOT / fixture["documents"]["audit"]).read_text(encoding="utf-8")
@@ -180,6 +205,10 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "focused tests 16 passed" in text
     assert "broader V1 readiness/status tests 56 passed" in text
     assert "full LIMA suite 5435 passed" in text
+    assert "PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED" in text
+    assert "focused local harness/drift tests 20 passed" in text
+    assert "broader V1 readiness/status tests 78 passed" in text
+    assert "full LIMA suite 5457 passed" in text
     assert "Exactly one valid cutover operator choice recorded | not proven" in text
     assert "Release-candidate branch created under runbook controls | not proven and not authorized" in text
     assert "V1.0.0 completion claimed by this audit: no." in text
@@ -192,6 +221,11 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "passed, 16 tests" in text
     assert "passed, 56 tests" in text
     assert "passed, 5435 tests" in text
+    assert "Post-bc63 Local Harness/Install Evidence Refresh" in text
+    assert "passed, 20 tests" in text
+    assert "passed, 78 tests" in text
+    assert "passed, 5457 tests" in text
+    assert "customer-data handling approval" in text
     assert "Machine action: `record_exactly_one_valid_cutover_operator_choice`" in text
 
 

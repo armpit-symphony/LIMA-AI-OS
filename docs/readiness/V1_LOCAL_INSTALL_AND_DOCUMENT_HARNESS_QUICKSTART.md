@@ -63,6 +63,10 @@ operator-supplied local file, returns bounded metadata and a short preview, and
 keeps writes, deletes, mutation, provider calls, network calls, connector calls,
 audit persistence, product readiness, and production readiness false.
 
+Use synthetic or non-sensitive local documents only. The preview is returned to
+stdout/JSON for operator inspection and must not be treated as approved handling
+for customer, HR, finance, legal, medical, regulated, or production data.
+
 ## Validation
 
 Focused validation:

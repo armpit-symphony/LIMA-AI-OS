@@ -43,7 +43,7 @@ This repository currently contains:
 - Public contract definitions
 - Package skeleton
 - Import-only tests
-- Narrow non-executing candidate, preview, status-normalization, and read-only runtime-state helpers
+- Narrow non-executing candidate, preview, status-normalization, read-only runtime-state helpers, and a candidate-only local document harness for synthetic/non-sensitive local PC testing
 
 It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
 
@@ -56,6 +56,8 @@ Current post-approval update: `Approve-V1-G61` is recorded and the bounded V1-G6
 Post-reconciliation update: `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. This resolves the circular final-readiness/checklist blocker for first-consumer harness testing only. `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` is prepared with status `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION`; `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md` verifies recorded valid cutover operator choice count `0`. These artifacts do not authorize release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product readiness, production readiness, or consumer production integration.
 
 Latest status update: `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md` records verdict `GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED`, and `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md` records verdict `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` with consumer smoke and diff freshness through public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell. These artifacts preserve the same cutover blocker and create no branch, tag, cutover, product-readiness, production-readiness, or consumer production integration authority.
+
+Local harness/install update: `bc63ed3b00055976b1728d80124137d7ce15d871` adds the candidate-only local install and read-only document harness lane. `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md` records it as tracked local PC testing support only, and `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md` is now a superseded drift-closure record. Use synthetic or non-sensitive local documents only; this lane does not authorize downloader/installer execution as release validation, customer-data processing, consumer production integration, branch creation, tagging, cutover, product readiness, or production readiness.
 
 The V1 target is to make LIMA usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`. The V1 runtime authority chain is audited through `V1-G56`; completed implementation evidence is refreshed through `V1-G60`; request-stage readiness is refreshed through the post-G61 request readiness refresh; and the V1-G61 runtime vendor SDK import execution proof approval request is prepared for operator decision.
 

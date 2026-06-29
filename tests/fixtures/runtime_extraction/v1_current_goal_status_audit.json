@@ -14,7 +14,9 @@
     "release_candidate_cutover_authorization_packet": "docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md",
     "release_candidate_cutover_authorization_packet_status_audit": "docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md",
     "final_readiness_reconciliation_audit": "docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md",
-    "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md"
+    "arc_bot_shell_clean_checkpoint_proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
+    "local_document_harness_install_committed_feature_audit": "docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md",
+    "local_runtime_drift_exclusion_audit": "docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md"
   },
   "goal_completion": {
     "goal_complete": false,
@@ -45,7 +47,14 @@
     "latest_status_audit_compileall_passed": true,
     "latest_status_audit_full_lima_suite_tests_passed": 5435,
     "latest_status_audit_diff_hygiene_passed": true,
-    "latest_status_audit_post_58c_full_lima_suite_tests_passed": 5435
+    "latest_status_audit_post_58c_full_lima_suite_tests_passed": 5435,
+    "local_document_harness_install_committed_feature_audit_verdict": "PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED",
+    "local_runtime_drift_exclusion_audit_superseded": true,
+    "latest_post_bc63_local_harness_focused_tests_passed": 20,
+    "latest_post_bc63_local_harness_broader_tests_passed": 78,
+    "latest_post_bc63_compileall_passed": true,
+    "latest_post_bc63_full_lima_suite_tests_passed": 5457,
+    "latest_post_bc63_diff_hygiene_passed": true
   },
   "requirements_not_yet_proven": {
     "exactly_one_valid_cutover_operator_choice_recorded": false,
@@ -77,7 +86,9 @@
     "provider_sdk_clients_added": false,
     "lima_owned_network_egress_added": false,
     "secret_or_credential_access_added": false,
-    "connector_browser_file_device_robotics_or_physical_world_behavior_added": false
+    "connector_browser_file_device_robotics_or_physical_world_behavior_added": false,
+    "local_document_harness_customer_data_or_production_use_authorized_by_audit": false,
+    "downloader_or_installer_execution_approved_by_audit": false
   },
   "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
   "post_audit_validation_refresh": {
@@ -99,5 +110,16 @@
     "cutover_operator_choice_created_by_refresh": false,
     "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
     "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh": false
+  },
+  "post_bc63_local_harness_install_evidence_refresh": {
+    "source_lima_commit_before_refresh": "bc63ed3b00055976b1728d80124137d7ce15d871",
+    "focused_local_harness_drift_tests_passed": 20,
+    "broader_v1_readiness_status_tests_passed": 78,
+    "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5457,
+    "diff_hygiene_passed": true,
+    "cutover_operator_choice_created_by_refresh": false,
+    "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
+    "customer_data_downloader_installer_or_production_authority_created_by_refresh": false
   }
 }
