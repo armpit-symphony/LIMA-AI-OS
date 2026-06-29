@@ -112,7 +112,7 @@
       "`Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof/closeout exists as local test-scoped evidence only."
     ],
     "readiness_gap_matrix": [
-      "Current active gate: `V1-G61`",
+      "Current active gate: `V1-RC-CUTOVER`",
       "Current request-stage readiness refresh: `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`"
     ],
     "final_blocker_register": [

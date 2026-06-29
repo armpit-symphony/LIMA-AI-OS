@@ -37,7 +37,7 @@ def test_v1_gap_matrix_exists_and_preserves_non_implementation_scope() -> None:
         "prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request"
     )
     assert fixture["source_commit_before_matrix_refresh"] == (
-        "37626bf236bf96c8a57a3ca351668e90eeb0e651"
+        "ff70200cc08d8989adc48c29c9605c03b69279fb"
     )
     assert fixture["docs_tests_fixtures_only"] is True
     assert fixture["api_status"] == "CANDIDATE_ONLY"
@@ -57,7 +57,7 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     anchor = _load_fixture()["current_anchor"]
 
     assert anchor["latest_completed_gate"] == "V1-G60"
-    assert anchor["current_gate"] == "V1-G61"
+    assert anchor["current_gate"] == "V1-RC-CUTOVER"
     assert anchor["g55_operator_approval_recorded"] is True
     assert anchor["g55_runtime_implementation_approved"] is True
     assert anchor["g55_independent_audit_complete"] is True
@@ -93,11 +93,11 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     assert anchor["consumer_harness_usability_matrix_current"] is True
     assert anchor["release_candidate_acceptance_checklist_current"] is True
     assert anchor["release_candidate_acceptance_checklist_verdict"] == (
-        "NOT_RELEASE_CANDIDATE_FINAL_READINESS_AND_CUTOVER_BLOCKERS"
+        "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
     assert anchor["release_candidate_cutover_runbook_current"] is True
     assert anchor["release_candidate_cutover_runbook_verdict"] == (
-        "CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION"
+        "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     )
     assert anchor["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
     assert anchor["arc_bot_shell_local_drift_exclusion_audit_current"] is True
@@ -115,7 +115,7 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
         anchor["arc_bot_shell_same_day_recheck_approved_g56_smoke_proof_paths_clean"]
         is True
     )
-    assert anchor["arc_bot_shell_clean_checkpoint_evidence"] is False
+    assert anchor["arc_bot_shell_clean_checkpoint_evidence"] is True
     assert (
         anchor[
             "arc_bot_shell_clean_checkpoint_required_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim"
@@ -219,19 +219,25 @@ def test_v1_gap_matrix_current_anchor_is_g61_request_prep() -> None:
     assert anchor["latest_quickstart_artifact_refresh_adjacent_tests_passed"] == 64
     assert anchor["latest_quickstart_artifact_refresh_broader_tests_passed"] == 133
     assert anchor["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
+    assert anchor["latest_current_goal_status_focused_tests_passed"] == 21
+    assert anchor["latest_current_goal_status_broader_v1_tests_passed"] == 130
+    assert anchor["latest_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert anchor["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
+    assert anchor["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
+    assert anchor["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
     assert anchor["final_readiness_audit_template_current"] is True
     assert anchor["final_readiness_audit_template_document"] == (
         "docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md"
     )
-    assert anchor["g61_operator_approval_recorded"] is False
-    assert anchor["g61_runtime_implementation_approved"] is False
+    assert anchor["g61_operator_approval_recorded"] is True
+    assert anchor["g61_runtime_implementation_approved"] is True
     assert anchor["next_required_artifact"] == (
-        "v1_g61_runtime_vendor_sdk_import_execution_proof_approval_request"
+        "v1_release_candidate_cutover_authorization_packet"
     )
-    assert anchor["next_required_action"] == "record_v1_g61_operator_decision"
+    assert anchor["next_required_action"] == "record_exactly_one_valid_cutover_operator_choice"
     assert anchor["valid_operator_choices"] == [
-        "Approve-V1-G61",
-        "Revise-V1-G61",
+        "Approve-V1-RC-Cutover",
+        "Revise-V1-RC-Cutover",
         "Pause",
     ]
 
@@ -267,7 +273,7 @@ def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
 
     g61 = groups["V1-G61"]
     assert g61["status"] == (
-        "approval_request_prepared_awaiting_operator_decision_implementation_not_approved"
+        "bounded_local_import_proof_complete_cutover_authority_blocked"
     )
     assert (
         g61["approval_request_document"]
@@ -407,23 +413,29 @@ def test_v1_gap_matrix_covers_expected_gap_groups() -> None:
     assert g61["latest_quickstart_artifact_refresh_adjacent_tests_passed"] == 64
     assert g61["latest_quickstart_artifact_refresh_broader_tests_passed"] == 133
     assert g61["latest_quickstart_artifact_refresh_full_lima_suite_tests_passed"] == 5364
+    assert g61["latest_current_goal_status_focused_tests_passed"] == 21
+    assert g61["latest_current_goal_status_broader_v1_tests_passed"] == 130
+    assert g61["latest_current_goal_status_full_lima_suite_tests_passed"] == 5433
+    assert g61["latest_consumer_checkpoint_freshness_focused_tests_passed"] == 20
+    assert g61["latest_consumer_checkpoint_freshness_broader_v1_tests_passed"] == 130
+    assert g61["latest_consumer_checkpoint_freshness_full_lima_suite_tests_passed"] == 5433
     assert (
         g61["arc_bot_shell_same_day_recheck_approved_g56_smoke_proof_paths_clean"]
         is True
     )
     assert g61["final_readiness_audit_template_current"] is True
-    assert g61["g61_operator_approval_recorded"] is False
+    assert g61["g61_operator_approval_recorded"] is True
     assert g61["runtime_implementation_added"] is False
-    assert g61["runtime_approval_needed"] is True
+    assert g61["runtime_approval_needed"] is False
 
 
 def test_v1_gap_matrix_recommends_g61_request_preparation() -> None:
     fixture = _load_fixture()
 
-    assert fixture["next_smallest_safe_step"] == "record_v1_g61_operator_decision"
-    assert fixture["next_smallest_safe_step_status"] == "pending_operator_decision"
+    assert fixture["next_smallest_safe_step"] == "record_exactly_one_valid_cutover_operator_choice"
+    assert fixture["next_smallest_safe_step_status"] == "pending_cutover_operator_decision"
     assert fixture["next_smallest_safe_step_reason"] == (
-        "g60_dependency_declaration_is_audited_and_next_runtime_import_execution_proof_should_remain_test_scoped_request_only"
+        "checklist_and_first_consumer_final_readiness_reconciliation_are_satisfied_but_cutover_authority_is_not_recorded"
     )
 
 
@@ -482,8 +494,8 @@ def test_v1_gap_matrix_boundary_results_add_no_new_runtime_behavior() -> None:
     assert boundary["v1_candidate_harness_quickstart_added"] is True
     assert boundary["v1_candidate_harness_quickstart_execution_audit_added"] is True
     assert boundary["v1_consumer_harness_usability_matrix_added"] is True
-    assert boundary["v1_g61_operator_approval_recorded"] is False
-    assert boundary["v1_g61_runtime_implementation_added"] is False
+    assert boundary["v1_g61_operator_approval_recorded"] is True
+    assert boundary["v1_g61_runtime_implementation_added"] is True
 
     for key in (
         "runtime_behavior_added_by_refresh",
@@ -513,7 +525,7 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "This matrix turns the V1 product target into the current implementation-readiness sequence." in text
     assert "Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`" in text
     assert "Request-stage lane label: `prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request`" in text
-    assert "Current active gate: `V1-G61`" in text
+    assert "Current active gate: `V1-RC-CUTOVER`" in text
     assert "Current request-stage audit: `docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md`" in text
     assert "Current preapproval runtime-tree guard audit: `docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`" in text
     assert "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md" in text
@@ -529,7 +541,7 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "release-gate input evidence only" in text
     assert "does not authorize release-candidate acceptance" in text
     assert "does not authorize release-candidate acceptance" in text
-    assert "any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim still requires the remaining checklist, final-audit, and cutover-authorization gates" in text
+    assert "any branch, tag, cutover, V1.0.0 completion, product-readiness, or production-readiness claim still requires exactly one valid cutover operator choice and completed runbook evidence" in text
     assert "Current gate consistency audit: `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`" in text
     assert "Current candidate validation refresh audit: `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`" in text
     assert "Current post-validation readiness-change freshness audit: `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`" in text
@@ -552,7 +564,7 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "post-validation readiness-change freshness evidence records same-turn validation requirements for later readiness docs, fixtures, or tests with full LIMA suite passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "candidate harness quickstart execution evidence records consumers 8/8/8 and LIMA 17/108/5360 plus latest quickstart artifact refresh 7/64/133/5364" in text
     assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
-    assert "Bounded local import proof complete; final readiness and cutover authority still blocked" in text
+    assert "Bounded local import proof complete; first-consumer final-readiness reconciliation passes; cutover authority still blocked" in text
     assert "V1-G61 runtime vendor SDK import execution proof implementation without exact approval" in text
     assert "credential handling or real provider SDK/network egress in an import execution proof lane" in text
     assert "built-in provider SDK clients" in text
@@ -565,7 +577,7 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
     assert "Treat the V1 current gate consistency audit as the active-gate guardrail" in text
     assert "Treat the V1 current candidate validation refresh as current validation evidence only: 153 focused current-gate/release-readiness tests and 5350 full LIMA suite tests passing, plus latest LIMA readiness freshness supplement evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness supplement evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
     assert "Treat the V1 post-validation readiness-change freshness audit as same-turn freshness evidence for later readiness docs, fixtures, or tests, including 5359 release/cutover freshness proof, latest quickstart 5360 full-suite proof, latest final blocker/index 15/89/5361 proof, latest post-G61 request readiness-refresh 8/117/5362 proof, and latest quickstart artifact refresh 7/64/133/5364 proof, not a release approval." in text
-    assert "Treat the V1 release-candidate cutover runbook as the future branch/tag procedure only, with current verdict `CUTOVER_BLOCKED_AT_FINAL_READINESS_AND_OPERATOR_AUTHORIZATION`; Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, and any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim still requires the remaining checklist, final-audit, and cutover-authorization gates." in text
+    assert "Treat the V1 release-candidate cutover runbook as the future branch/tag procedure only, with current verdict `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`; Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, and any branch, tag, cutover, V1.0.0 completion, product-readiness, or production-readiness claim still requires exactly one valid cutover operator choice and completed runbook evidence." in text
     assert "release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim that treats Arc smoke or clean-checkpoint proof as sufficient without checklist, final audit, and cutover authorization" in text
     assert "Treat the V1 final readiness audit template as a future post-G61 release-candidate audit input" in text
     assert "the G61 preapproval runtime-tree guard audit, the G61 operator decision packet status audit, the post-G61 request readiness refresh" in text
@@ -574,4 +586,4 @@ def test_v1_gap_matrix_doc_matches_g61_next_step_and_boundaries() -> None:
         in text
     )
     assert "post-validation readiness-change freshness audit with same-turn full LIMA suite evidence passing 5359 tests, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
-    assert "The next smallest safe step is final readiness audit execution after release checklist refresh, followed by explicit cutover authorization before any branch, tag, cutover, or readiness claim." in text
+    assert "The next smallest safe step is recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`; only `Approve-V1-RC-Cutover` authorizes revalidation and cutover runbook execution before any branch, tag, cutover, or readiness claim." in text
