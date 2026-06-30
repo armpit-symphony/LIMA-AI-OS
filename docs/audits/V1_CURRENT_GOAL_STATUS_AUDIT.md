@@ -24,7 +24,7 @@ LIMA has strong candidate-only harness readiness evidence for first-consumer har
 | Public Sparkbot publication blocker | resolved |
 | Provider authority chain | G57 through G60 complete as candidate-only evidence |
 | G61 runtime vendor SDK import execution proof | `Approve-V1-G61` recorded for bounded local import proof only; proof/closeout complete |
-| Arc-Bot-shell clean checkpoint | clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded as release-gate input evidence only |
+| Arc-Bot-shell clean checkpoint | clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded as release-gate input evidence only |
 | Release-candidate acceptance checklist | `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` |
 | Final-readiness reconciliation | `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` |
 | Cutover authorization packet | prepared with `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION` |
@@ -127,7 +127,7 @@ After the local harness/install audit was committed, the product readiness targe
 | Command | Result |
 | --- | --- |
 | `python -m pytest -q tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_final_candidate_branch_index.py -p no:cacheprovider` | passed, 25 tests |
-| `python -m pytest -q tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_current_goal_status_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_local_document_harness_install_committed_feature_audit.py -p no:cacheprovider` | passed, 58 tests |
+| `python -m pytest -q tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_current_goal_status_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_local_document_harness_install_committed_feature_audit.py -p no:cacheprovider` | passed, 59 tests |
 | `python -m pytest -q tests -p no:cacheprovider` | passed, 5457 tests |
 | `git diff --check` | passed |
 

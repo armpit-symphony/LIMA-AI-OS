@@ -21,7 +21,7 @@ This final readiness audit must not be executed as a pass until the remaining re
 - any readiness docs, fixtures, or tests changed after the current validation refresh have same-turn focused, full-suite, and diff-check validation evidence, including current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests, or the final audit proves no such later changes exist
 - V1 release-candidate acceptance checklist blockers are closed
 - V1 release-candidate cutover runbook preconditions are satisfied but not executed by this template
-- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
+- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 
 If `Revise-V1-G61` or `Pause` is recorded, the final audit must record the revision or pause outcome and must not claim product readiness.
 
@@ -67,7 +67,7 @@ The final audit must record:
 - public Sparkbot branch and target publication proof
 - accessible Sparkbot branch and pushed commit
 - Arc-Bot-shell branch and pushed commit
-- Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`
+- Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`
 - Arc-Bot-shell historical local drift exclusion audit state, treated only as superseded compatibility context after clean-checkpoint proof is recorded
 - Arc-Bot-shell clean-checkpoint proof, required and recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - V1 candidate harness quickstart execution audit state
@@ -139,7 +139,7 @@ The final readiness audit may pass only if:
 - public Sparkbot G56 smoke passes
 - accessible Sparkbot G56 smoke passes
 - Arc-Bot-shell G56 smoke passes
-- Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`
+- Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`
 - Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim
 - LIMA compileall passes
 - LIMA full suite passes

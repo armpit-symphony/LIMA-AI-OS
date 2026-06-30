@@ -72,7 +72,7 @@ def test_v1_release_candidate_cutover_runbook_preconditions_are_complete() -> No
     assert "final_readiness_audit_passes" in preconditions
     assert "public_sparkbot_accessible_sparkbot_and_arc_bot_shell_smoke_validation_passes" in preconditions
     assert (
-        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_final_branch_tag_cutover_or_readiness_claim"
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f_before_release_final_branch_tag_cutover_or_readiness_claim"
         in preconditions
     )
     assert (
@@ -80,7 +80,7 @@ def test_v1_release_candidate_cutover_runbook_preconditions_are_complete() -> No
         in preconditions
     )
     assert (
-        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_final_branch_tag_cutover_or_readiness_claim"
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f_before_release_final_branch_tag_cutover_or_readiness_claim"
         in preconditions
     )
     assert "lima_compileall_full_suite_and_diff_hygiene_pass" in preconditions
@@ -251,7 +251,7 @@ def test_v1_release_candidate_cutover_runbook_current_state_is_blocked() -> None
     assert state["final_readiness_reconciliation_audit_verdict"] == (
         "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     )
-    assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5391
+    assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5459
     assert state["public_sparkbot_candidate_smoke"] is True
     assert state["accessible_sparkbot_candidate_smoke"] is True
     assert state["arc_bot_shell_candidate_smoke"] is True
@@ -260,7 +260,7 @@ def test_v1_release_candidate_cutover_runbook_current_state_is_blocked() -> None
     assert state["arc_bot_shell_local_drift_exclusion_audit_untracked_file_count"] == 64
     assert state["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
     assert state["arc_bot_shell_clean_checkpoint_evidence"] is True
-    assert state["arc_bot_shell_clean_checkpoint_commit"] == "99a4ba4955f13626c2176a2c44592000029a16c3"
+    assert state["arc_bot_shell_clean_checkpoint_commit"] == "147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
     assert state["arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof"] is True
     assert state["lima_full_suite"] is True
     assert state["cutover_authorized_by_runbook"] is False
@@ -278,7 +278,7 @@ def test_v1_release_candidate_cutover_runbook_future_procedure_is_gated() -> Non
         "confirm_g61_operator_decision_packet_status_audit_current_and_consistent_with_decision_state",
         "confirm_cutover_authorization_packet_status_audit_current_until_operator_choice_recorded",
         "confirm_consumer_smoke_tests_pass",
-        "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+        "confirm_arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "confirm_historical_arc_drift_exclusion_is_superseded_compatibility_context_only",
         "confirm_current_candidate_validation_refresh_latest_153_5350_15_89_5361_and_8_117_5362_plus_7_64_133_5364_handoff_supplement_evidence",
         "confirm_post_validation_readiness_change_freshness_same_turn_5359_latest_quickstart_5360_final_blocker_index_15_89_5361_post_g61_request_8_117_5362_and_quickstart_artifact_7_64_133_5364_evidence",
@@ -354,7 +354,7 @@ def test_v1_release_candidate_cutover_runbook_text_matches_fixture() -> None:
     assert "Final readiness audit exists | satisfied" in text
     assert "Final readiness reconciliation audit passes | satisfied" in text
     assert "Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
-    assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "Cutover authorization packet | prepared, `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION`" in text
     assert "Cutover authorized by this runbook | blocked pending `Approve-V1-RC-Cutover`" in text
     assert "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded" in text

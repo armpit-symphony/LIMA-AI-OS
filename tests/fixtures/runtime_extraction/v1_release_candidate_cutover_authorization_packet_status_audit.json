@@ -33,7 +33,7 @@
     "final_readiness_reconciliation_audit_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "cutover_runbook_verdict": "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
     "final_blocker_register_verdict": "STOPPED_AT_CUTOVER_AUTHORITY",
-    "arc_bot_shell_clean_checkpoint_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+    "arc_bot_shell_clean_checkpoint_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
     "focused_packet_current_gate_tests_passed": 37,
     "broader_v1_readiness_status_tests_passed": 102,
     "compileall_lima_passed": true,

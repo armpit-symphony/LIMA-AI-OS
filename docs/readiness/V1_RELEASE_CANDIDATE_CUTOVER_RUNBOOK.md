@@ -15,11 +15,11 @@ This runbook is not itself cutover authority. It remains blocked procedure text 
 
 Verdict: `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION`
 
-The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`, the release-candidate acceptance checklist is satisfied for first-consumer harness testing, and `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. This runbook may be used only as a future branch/tag procedure after explicit operator authorization for branch creation, tag creation, and cutover is recorded.
+The V1.0.0 release-candidate cutover is not currently allowed. `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`, the release-candidate acceptance checklist is satisfied for first-consumer harness testing, and `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. This runbook may be used only as a future branch/tag procedure after explicit operator authorization for branch creation, tag creation, and cutover is recorded.
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
-Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
 
 This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final-readiness reconciliation and release-candidate acceptance are now satisfied for first-consumer harness testing, while cutover remains blocked until explicit operator authorization is recorded through the runbook.
 ## Required Inputs Before Cutover
@@ -63,7 +63,7 @@ Every precondition must be satisfied before creating any V1.0.0 release-candidat
 - `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` records exactly one valid cutover operator choice, and that choice is `Approve-V1-RC-Cutover`.
 - The final readiness reconciliation audit exists and passes with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`.
 - Public Sparkbot, accessible Sparkbot, and Arc-Bot-shell candidate smoke validation passes.
-- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
 - Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation.
 - LIMA compileall, full suite, and diff hygiene pass.
 - Evidence remains sanitized.
@@ -87,7 +87,7 @@ Every precondition must be satisfied before creating any V1.0.0 release-candidat
 | Public Sparkbot candidate smoke | satisfied as current G56 fake-executor evidence |
 | Accessible Sparkbot candidate smoke | satisfied as current G56 fake-executor evidence |
 | Arc-Bot-shell candidate smoke | satisfied as current G56 fake-executor evidence |
-| Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
+| Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
 | Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation |
 | LIMA full suite | satisfied at current validation checkpoint; latest validation-refresh supplement full-suite evidence 5361 tests; latest handoff freshness supplement full-suite evidence 5362/5364 tests; latest quickstart post-refresh full-suite evidence 5360 tests; latest final blocker/index refresh full-suite evidence 5361 tests; latest post-G61 request refresh full-suite evidence 5362 tests; latest quickstart artifact refresh full-suite evidence 5364 tests |
 | Cutover authorization packet | prepared, `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION` |
@@ -106,7 +106,7 @@ Run this procedure only after all cutover preconditions are satisfied:
 5. Confirm the cutover authorization packet status audit is current and still records blocked packet status until a valid operator choice is recorded.
 6. Confirm `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` records `Approve-V1-RC-Cutover`.
 7. Confirm public Sparkbot, accessible Sparkbot, and Arc-Bot-shell smoke tests pass from their documented checkpoints.
-8. Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
+8. Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`.
 9. Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence.
 10. Confirm Arc-Bot-shell evidence is not treated as release-candidate, final-readiness, branch, tag, cutover, or readiness evidence unless the clean checkpoint proof remains current.
 11. Confirm the current candidate validation refresh audit records the latest focused current-gate validation, full-suite evidence, latest LIMA readiness freshness supplement evidence of 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness supplement evidence of 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.

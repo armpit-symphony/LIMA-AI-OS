@@ -33,7 +33,7 @@ Current recorded choice: none.
 | Final-readiness reconciliation audit | `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` |
 | Cutover runbook | `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION` |
 | Final blocker register | `STOPPED_AT_CUTOVER_AUTHORITY` |
-| Arc-Bot-shell clean-checkpoint proof | recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` |
+| Arc-Bot-shell clean-checkpoint proof | recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` |
 | Current validation evidence | focused V1 readiness/status 96 tests, compileall, and full LIMA suite 5405 tests passed before this packet |
 
 ## If Approved Later

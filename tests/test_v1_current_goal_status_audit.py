@@ -70,7 +70,7 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
     assert evidence["g61_operator_decision"] == "Approve-V1-G61"
     assert evidence["g61_bounded_local_import_proof_complete"] is True
     assert evidence["arc_bot_shell_clean_checkpoint_commit"] == (
-        "99a4ba4955f13626c2176a2c44592000029a16c3"
+        "147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
     )
     assert evidence["release_candidate_acceptance_checklist_verdict"] == (
         "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
@@ -101,7 +101,7 @@ def test_v1_current_goal_status_audit_records_achieved_evidence() -> None:
     assert evidence["latest_post_bc63_full_lima_suite_tests_passed"] == 5457
     assert evidence["latest_post_bc63_diff_hygiene_passed"] is True
     assert evidence["latest_product_gap_index_consistency_focused_tests_passed"] == 25
-    assert evidence["latest_product_gap_index_consistency_broader_tests_passed"] == 58
+    assert evidence["latest_product_gap_index_consistency_broader_tests_passed"] == 59
     assert evidence["latest_product_gap_index_consistency_full_lima_suite_tests_passed"] == 5457
 
 
@@ -200,7 +200,7 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "Sparkbot_shell" in text
     assert "Sparkbot" in text
     assert "Arc-Bot-shell" in text
-    assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
+    assert "147cec0b9cb3ff6f060c8079a7f944526bb26b6f" in text
     assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION" in text
@@ -231,7 +231,7 @@ def test_v1_current_goal_status_audit_text_matches_fixture() -> None:
     assert "customer-data handling approval" in text
     assert "Latest product/gap/index consistency refresh" in text
     assert "passed, 25 tests" in text
-    assert "passed, 58 tests" in text
+    assert "passed, 59 tests" in text
     assert "Machine action: `record_exactly_one_valid_cutover_operator_choice`" in text
 
 

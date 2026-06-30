@@ -58,7 +58,7 @@ def test_v1_final_blocker_register_records_verified_blockers() -> None:
     }
     assert resolved["arc_bot_shell_clean_checkpoint"] == {
         "proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
-        "clean_pushed_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+        "clean_pushed_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "resolved": True,
         "release_authority_created": False,
     }
@@ -135,12 +135,12 @@ def test_v1_final_blocker_register_records_evidence_and_next_actions() -> None:
         "v1_release_candidate_acceptance_checklist_current_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
         "v1_release_candidate_cutover_runbook_current_cutover_blocked_at_operator_authorization",
         "v1_release_candidate_cutover_authorization_packet_status_audit_current_zero_valid_choices",
-        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof",
         "consumer_repo_diff_hygiene_passed_at_recorded_checkpoints",
         "lima_diff_hygiene_passed",
         "v1_final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing",
-        "v1_final_readiness_audit_current_consumer_smoke_8_8_8_lima_5391_passed",
+        "v1_final_readiness_audit_current_consumer_smoke_8_8_8_lima_5459_passed",
     }
     assert required <= evidence
     assert "v1_g61_operator_decision_packet_status_audit_current_awaiting_choice" not in evidence
@@ -186,7 +186,7 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "earlier current evidence 5350 tests before later readiness freshness supplements" in text
     assert "same-turn evidence 5359 tests after release/cutover freshness checks" in text
     assert "Same-turn consumer smoke refresh: passed, public Sparkbot 8 tests, accessible Sparkbot 8 tests, and Arc-Bot-shell 8 tests." in text
-    assert "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "LIMA quickstart post-refresh validation: passed, 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests." in text
     assert "LIMA latest final blocker/index readiness refresh: passed, 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests." in text
     assert "LIMA latest post-G61 request readiness-refresh: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests." in text
@@ -194,7 +194,7 @@ def test_v1_final_blocker_register_text_matches_fixture() -> None:
     assert "LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests." in text
     assert "Arc-Bot-shell local drift exclusion audit: historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation" in text
     assert "Arc-Bot-shell clean-checkpoint proof is now the release-gate input" in text
-    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "Public Sparkbot G56 branch pushed to `sparkpit-labs/Sparkbot`: yes." in text
     assert "Release-candidate branch or tag authority created by this register: no." in text
     assert "Release-candidate cutover authorized by this register: no." in text

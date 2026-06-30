@@ -61,7 +61,7 @@ def test_v1_final_readiness_template_requires_unblocks_before_pass() -> None:
         "public_sparkbot_branch_and_target_publication_proof",
         "accessible_sparkbot_branch_and_pushed_commit",
         "arc_bot_shell_branch_and_pushed_commit",
-        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "candidate_harness_quickstart_execution_audit_state",
         "candidate_harness_quickstart_execution_audit_post_refresh_consumers_8_8_8_lima_17_108_5360_current",
         "release_candidate_acceptance_checklist_state",
@@ -120,7 +120,7 @@ def test_v1_final_readiness_template_pass_and_fail_criteria_are_explicit() -> No
         "public_sparkbot_g56_smoke_passes",
         "accessible_sparkbot_g56_smoke_passes",
         "arc_bot_shell_g56_smoke_passes",
-        "arc_bot_shell_clean_checkpoint_proof_current_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+        "arc_bot_shell_clean_checkpoint_proof_current_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "arc_bot_shell_clean_checkpoint_proof_recorded_before_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim",
         "lima_compileall_passes",
         "lima_full_suite_passes",
@@ -211,7 +211,7 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
     assert "V1 candidate harness quickstart execution audit post-refresh validation state, including consumers 8/8/8 and LIMA 17/108/5360 tests" in text
     assert "Arc-Bot-shell clean-checkpoint proof state" in text
     assert "Arc-Bot-shell historical local drift exclusion audit state" in text
-    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "Arc-Bot-shell clean-checkpoint proof" in text
     assert "V1 release-candidate acceptance checklist is satisfied" in text
     assert "V1 candidate harness quickstart execution audit remains current" in text
@@ -223,7 +223,7 @@ def test_v1_final_readiness_template_text_matches_fixture() -> None:
     assert "same-turn focused validation, full LIMA suite, and diff-check evidence recorded before the audit passes, including current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused tests, 89 broader affected readiness tests, and 5361 full-suite tests, latest post-G61 request refresh evidence passing 8 focused tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests" in text
     assert "V1 current gate consistency audit remains current and rejects stale public Sparkbot publication or V1-G57 active-blocker language" in text
     assert "V1 release-candidate cutover runbook preconditions are satisfied before any branch, tag, cutover, or readiness action" in text
-    assert "Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof remains current at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim" in text
     assert "V1 release-candidate acceptance checklist still reports a blocker" in text
     assert "V1 current candidate validation refresh audit is missing, stale, or does not record the latest focused current-gate, full-suite, and latest LIMA readiness freshness supplement evidence" in text

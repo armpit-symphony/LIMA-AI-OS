@@ -65,9 +65,9 @@ def test_v1_final_readiness_audit_records_current_checkpoints() -> None:
     assert checkpoints["arc_bot_shell"] == {
         "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
         "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-        "commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
+        "commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "clean": True,
-        "recorded_clean_checkpoint_proof_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+        "recorded_clean_checkpoint_proof_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
         "current_head_descends_from_recorded_clean_checkpoint": True,
     }
 
@@ -89,7 +89,7 @@ def test_v1_final_readiness_audit_records_validation_results() -> None:
     assert validation["lima_full_suite"] == {
         "command": "python -m pytest -q tests -p no:cacheprovider",
         "passed": True,
-        "tests_passed": 5391,
+        "tests_passed": 5459,
     }
 
     for key, value in validation.items():
@@ -142,9 +142,9 @@ def test_v1_final_readiness_audit_text_matches_fixture() -> None:
     assert "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
     assert "no explicit operator authorization for branch or tag creation is recorded" in text
-    assert "40fc474b0e09580a82f90518ebe341e2c98cd644" in text
-    assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
-    assert "passed, 5391 tests" in text
+    assert "147cec0b9cb3ff6f060c8079a7f944526bb26b6f" in text
+    assert "147cec0b9cb3ff6f060c8079a7f944526bb26b6f" in text
+    assert "passed, 5459 tests" in text
     assert "Release-candidate acceptance checklist satisfied | pass with reconciliation" in text
     assert "Release-candidate cutover authorized | fail" in text
     assert "Final readiness pass claimed by this artifact: no." in text

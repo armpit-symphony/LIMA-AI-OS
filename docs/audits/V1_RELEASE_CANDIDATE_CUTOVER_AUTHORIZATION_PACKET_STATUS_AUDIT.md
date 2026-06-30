@@ -43,7 +43,7 @@ The packet is ready for an explicit operator decision, but no valid cutover oper
 | Final-readiness reconciliation audit | `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` |
 | Cutover runbook | `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION` |
 | Final blocker register | `STOPPED_AT_CUTOVER_AUTHORITY` |
-| Arc-Bot-shell clean-checkpoint proof | clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded |
+| Arc-Bot-shell clean-checkpoint proof | clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded |
 | Current validation evidence inherited from packet | focused packet/current-gate tests 37 passed, broader V1 readiness/status tests 102 passed, compileall passed, full LIMA suite 5412 passed, diff hygiene passed |
 
 This evidence proves readiness for the operator decision surface only. It does not bypass the missing cutover choice.

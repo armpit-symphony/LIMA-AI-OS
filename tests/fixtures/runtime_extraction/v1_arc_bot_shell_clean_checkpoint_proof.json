@@ -1,7 +1,7 @@
 {
   "proof_id": "v1_arc_bot_shell_clean_checkpoint_proof",
   "api_status": "CANDIDATE_ONLY",
-  "date": "2026-06-24",
+  "date": "2026-06-29",
   "lima_commit_before_proof_refresh": "2f46248ea90fef5efcb49f3892c275dc64621f87",
   "verdict": "PASS_ARC_BOT_SHELL_CLEAN_CHECKPOINT_RECORDED",
   "document": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
@@ -10,16 +10,14 @@
     "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
     "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
     "previous_dirty_checkpoint": "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0",
-    "clean_checkpoint_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+    "clean_checkpoint_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
     "local_status_clean_after_push": true,
     "pushed_to_origin": true
   },
   "validation": {
-    "full_pytest": "331 passed",
-    "compileall": "passed",
-    "git_diff_check": "passed_with_line_ending_warnings_only",
-    "git_diff_cached_check": "passed",
-    "arc_worker_smoke": "35 passed"
+    "runtime_gate_mvp_artifact_approval_console_tests": "38 passed",
+    "lima_g56_fake_executor_smoke": "8 passed",
+    "git_diff_check": "passed"
   },
   "boundaries": {
     "arc_bot_shell_clean_checkpoint_proof_recorded": true,

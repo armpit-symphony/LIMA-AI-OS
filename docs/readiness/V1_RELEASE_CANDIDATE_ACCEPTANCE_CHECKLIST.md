@@ -15,11 +15,11 @@ This checklist is not branch, tag, or cutover authority. It is now satisfied for
 
 Verdict: `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`
 
-LIMA-AI-OS is accepted for first-consumer harness testing with Sparkbot and Arc-Bot-shell using fake-executor, sanitized-fixture, no-network smoke evidence. The V1-G61 operator blocker is resolved by `Approve-V1-G61` and bounded proof closeout, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`, the final readiness audit has executed with current consumer smoke and LIMA validation passing, and the reconciliation audit resolves the checklist/final-readiness loop. Release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product-readiness, and production-readiness claims remain blocked until explicit operator authorization is recorded through the runbook.
+LIMA-AI-OS is accepted for first-consumer harness testing with Sparkbot and Arc-Bot-shell using fake-executor, sanitized-fixture, no-network smoke evidence. The V1-G61 operator blocker is resolved by `Approve-V1-G61` and bounded proof closeout, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`, the final readiness audit has executed with current consumer smoke and LIMA validation passing, and the reconciliation audit resolves the checklist/final-readiness loop. Release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product-readiness, and production-readiness claims remain blocked until explicit operator authorization is recorded through the runbook.
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
-Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
 
 This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final-readiness reconciliation and release-candidate acceptance are now satisfied for first-consumer harness testing, while cutover remains blocked until explicit operator authorization is recorded through the runbook.
 ## Required Release-Candidate Inputs
@@ -74,7 +74,7 @@ All entry criteria must pass before creating a V1.0.0 release-candidate branch o
 - Public Sparkbot G56 fake-executor smoke test passes.
 - Accessible Sparkbot G56 fake-executor smoke test passes.
 - Arc-Bot-shell G56 fake-executor smoke test passes.
-- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
+- Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.
 - Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation.
 - `python -m compileall lima` passes.
 - `python -m pytest -q tests -p no:cacheprovider` passes.
@@ -90,7 +90,7 @@ All entry criteria must pass before creating a V1.0.0 release-candidate branch o
 | V1-G61 operator decision recorded | satisfied, `Approve-V1-G61` recorded by operator |
 | V1-G61 implementation and closeout complete if approved | satisfied, bounded local import proof and closeout recorded with focused G61 test and full-suite evidence |
 | Final blocker register clear | satisfied for first-consumer harness testing; cutover authority remains blocked separately |
-| Final readiness audit executed | satisfied, `docs/audits/V1_FINAL_READINESS_AUDIT.md` records current consumer smoke 8/8/8 and LIMA full-suite 5391 tests passing |
+| Final readiness audit executed | satisfied, `docs/audits/V1_FINAL_READINESS_AUDIT.md` records current consumer smoke 8/8/8 and LIMA full-suite 5459 tests passing |
 | Final readiness reconciliation audit passed | satisfied, `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` |
 | Release-candidate cutover authorized | not satisfied; explicit operator authorization is still required |
 | Candidate harness quickstart execution audit current | satisfied |
@@ -104,11 +104,11 @@ All entry criteria must pass before creating a V1.0.0 release-candidate branch o
 | Public Sparkbot G56 fake-executor smoke | satisfied |
 | Accessible Sparkbot G56 fake-executor smoke | satisfied |
 | Arc-Bot-shell G56 fake-executor smoke | satisfied |
-| Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
+| Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` |
 | Arc-Bot-shell local drift exclusion audit | historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation |
 | LIMA compileall | satisfied |
 | LIMA focused current-gate/release-readiness validation | satisfied, 153 tests |
-| LIMA full suite | satisfied, 5391 tests in current final-readiness audit evidence; older validation-refresh baseline remains 5350 tests |
+| LIMA full suite | satisfied, 5459 tests in current final-readiness audit evidence; older validation-refresh baseline remains 5350 tests |
 | LIMA current validation latest readiness freshness supplement | satisfied, 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests |
 | LIMA current validation latest handoff freshness supplement | satisfied, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests |
 | LIMA quickstart post-refresh full suite | satisfied, 5360 tests |

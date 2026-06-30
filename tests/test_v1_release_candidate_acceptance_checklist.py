@@ -97,7 +97,7 @@ def test_v1_release_candidate_acceptance_checklist_entry_criteria_cover_release_
     assert "accessible_sparkbot_g56_fake_executor_smoke_passes" in criteria
     assert "arc_bot_shell_g56_fake_executor_smoke_passes" in criteria
     assert (
-        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3"
+        "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
         in criteria
     )
     assert (
@@ -140,7 +140,7 @@ def test_v1_release_candidate_acceptance_checklist_current_state_is_harness_read
         ]
         is True
     )
-    assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5391
+    assert state["final_readiness_audit_lima_full_suite_tests_passed"] == 5459
     assert state["release_candidate_cutover_authorized"] is False
     assert state["candidate_harness_quickstart_current"] is True
     assert state["candidate_harness_quickstart_execution_audit_current"] is True
@@ -260,11 +260,11 @@ def test_v1_release_candidate_acceptance_checklist_current_state_is_harness_read
     assert state["arc_bot_shell_local_drift_exclusion_audit_untracked_file_count"] == 64
     assert state["arc_bot_shell_local_drift_excluded_from_v1_proof"] is True
     assert state["arc_bot_shell_clean_checkpoint_evidence"] is True
-    assert state["arc_bot_shell_clean_checkpoint_commit"] == "99a4ba4955f13626c2176a2c44592000029a16c3"
+    assert state["arc_bot_shell_clean_checkpoint_commit"] == "147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
     assert state["arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof"] is True
     assert state["compileall_lima"] is True
     assert state["focused_current_gate_validation_tests_passed"] == 153
-    assert state["full_lima_suite_tests_passed"] == 5391
+    assert state["full_lima_suite_tests_passed"] == 5459
     assert (
         state[
             "current_candidate_validation_refresh_latest_supplement_focused_final_blocker_index_tests_passed"
@@ -396,7 +396,7 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "This checklist is not branch, tag, or cutover authority" in text
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "docs/audits/V1_FINAL_READINESS_AUDIT.md" in text
-    assert "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "V1 candidate harness quickstart remains current as the shortest safe local smoke command path." in text
     assert "V1 candidate harness quickstart execution audit remains current and records public Sparkbot, accessible Sparkbot, and Arc-Bot-shell local smoke passes." in text
     assert "V1 candidate harness quickstart execution audit records the latest same-turn consumer smoke refresh with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 tests" in text
@@ -421,7 +421,7 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "Final readiness audit executed | satisfied" in text
     assert "Final readiness reconciliation audit passed | satisfied" in text
     assert "Release-candidate cutover authorized | not satisfied; explicit operator authorization is still required" in text
-    assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof | satisfied, clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "V1-G61 operator decision recorded | satisfied, `Approve-V1-G61` recorded by operator" in text
     assert "V1-G61 implementation and closeout complete if approved | satisfied, bounded local import proof and closeout recorded with focused G61 test and full-suite evidence" in text
     assert "Candidate harness quickstart execution audit current | satisfied" in text
@@ -434,7 +434,7 @@ def test_v1_release_candidate_acceptance_checklist_text_matches_fixture() -> Non
     assert "Current gate consistency audit current | satisfied" in text
     assert "V1-G61 operator decision packet status audit current | satisfied, `Approve-V1-G61` recorded" in text
     assert "LIMA focused current-gate/release-readiness validation | satisfied, 153 tests" in text
-    assert "LIMA full suite | satisfied, 5391 tests in current final-readiness audit evidence" in text
+    assert "LIMA full suite | satisfied, 5459 tests in current final-readiness audit evidence" in text
     assert "LIMA current validation latest readiness freshness supplement | satisfied, 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests" in text
     assert "LIMA current validation latest handoff freshness supplement | satisfied, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests" in text
     assert "LIMA quickstart post-refresh full suite | satisfied, 5360 tests" in text

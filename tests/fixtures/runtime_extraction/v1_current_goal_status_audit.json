@@ -36,7 +36,7 @@
     "provider_authority_chain_g57_through_g60_complete_candidate_only": true,
     "g61_operator_decision": "Approve-V1-G61",
     "g61_bounded_local_import_proof_complete": true,
-    "arc_bot_shell_clean_checkpoint_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+    "arc_bot_shell_clean_checkpoint_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
     "release_candidate_acceptance_checklist_verdict": "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "final_readiness_reconciliation_verdict": "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
     "cutover_authorization_packet_status": "AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION",
@@ -56,7 +56,7 @@
     "latest_post_bc63_full_lima_suite_tests_passed": 5457,
     "latest_post_bc63_diff_hygiene_passed": true,
     "latest_product_gap_index_consistency_focused_tests_passed": 25,
-    "latest_product_gap_index_consistency_broader_tests_passed": 58,
+    "latest_product_gap_index_consistency_broader_tests_passed": 59,
     "latest_product_gap_index_consistency_full_lima_suite_tests_passed": 5457
   },
   "requirements_not_yet_proven": {
@@ -127,7 +127,7 @@
   },
   "post_bc63_product_gap_index_consistency_refresh": {
     "focused_product_gap_index_tests_passed": 25,
-    "broader_readiness_status_tests_passed": 58,
+    "broader_readiness_status_tests_passed": 59,
     "full_lima_suite_tests_passed": 5457,
     "diff_hygiene_passed": true,
     "cutover_operator_choice_created_by_refresh": false,

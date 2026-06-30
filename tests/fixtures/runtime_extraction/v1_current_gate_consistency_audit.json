@@ -118,7 +118,7 @@
     "final_blocker_register": [
       "STOPPED_AT_CUTOVER_AUTHORITY",
       "Additional V1-G61 implementation approval recorded by this register: no.",
-      "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`"
+      "Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`"
     ],
     "operator_unblock_packet": [
       "G61_DECISION_RECORDED_FINAL_READINESS_BLOCKED",
@@ -130,18 +130,18 @@
     ],
     "release_candidate_acceptance_checklist": [
       "CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED",
-      "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.",
+      "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim.",
       "Historical Arc-Bot-shell local drift exclusion evidence remains compatibility-only context and is superseded by the clean-checkpoint proof for release-gate evaluation."
     ],
     "release_candidate_cutover_runbook": [
       "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION",
-      "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.",
+      "Confirm Arc-Bot-shell clean-checkpoint proof remains recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`.",
       "Confirm any historical Arc-Bot-shell local drift exclusion evidence is treated only as superseded compatibility context, not current release-candidate evidence.",
       "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED"
     ],
     "final_readiness_audit_template": [
       "READY_TO_RUN_FINAL_AUDIT_AFTER_RELEASE_CHECKLIST_REFRESH",
-      "Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`",
+      "Arc-Bot-shell clean-checkpoint proof state, including clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`",
       "Arc-Bot-shell clean-checkpoint proof is recorded before any release-candidate pass, final-readiness pass, branch, tag, cutover, or readiness claim"
     ],
     "arc_bot_shell_local_drift_exclusion_audit": [

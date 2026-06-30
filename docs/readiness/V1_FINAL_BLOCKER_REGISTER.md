@@ -13,7 +13,7 @@ This register is not cutover authority. It does not authorize a V1.0.0 branch, t
 
 Verdict: `STOPPED_AT_CUTOVER_AUTHORITY`
 
-The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, G57 through G60 are completed candidate-only evidence, the V1-G61 operator decision is recorded as `Approve-V1-G61`, the bounded G61 proof/closeout exists, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`, and `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. The remaining release blocker is explicit cutover authorization.
+The LIMA-side candidate handoff is locally testable and validated with fake in-process provider SDK/network executors. Public Sparkbot G56 publication is resolved, Sparkbot and Arc-Bot-shell G56 fake-executor smoke tests pass locally, G57 through G60 are completed candidate-only evidence, the V1-G61 operator decision is recorded as `Approve-V1-G61`, the bounded G61 proof/closeout exists, Arc-Bot-shell clean-checkpoint proof is recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`, and `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. The remaining release blocker is explicit cutover authorization.
 
 ## Resolved Blockers
 
@@ -45,7 +45,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 ### Arc-Bot-shell Clean Checkpoint
 
 - Proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`.
-- Clean pushed commit: `99a4ba4955f13626c2176a2c44592000029a16c3`.
+- Clean pushed commit: `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`.
 - Result: resolved as clean checkpoint proof only; it does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
 
 ### Final Readiness Reconciliation
@@ -100,7 +100,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - Accessible Sparkbot G56 fake-executor smoke: passed, 8 tests.
 - Arc-Bot-shell G56 fake-executor smoke: passed, 8 tests.
 - Same-turn consumer smoke refresh: passed, public Sparkbot 8 tests, accessible Sparkbot 8 tests, and Arc-Bot-shell 8 tests.
-- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`.
+- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`.
 - Arc-Bot-shell local drift exclusion audit: historical compatibility evidence only; superseded by clean-checkpoint proof for release-gate evaluation.
 - Consumer repo diff hygiene: passed at recorded checkpoints; Arc-Bot-shell clean-checkpoint proof is now the release-gate input.
 - LIMA focused G61/handoff/status tests: passed, earlier current-gate/release-readiness set 153 tests before later readiness freshness supplements.
@@ -112,7 +112,7 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 - LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.
 - LIMA diff hygiene: passed.
-- Latest final-readiness audit execution: passed current consumer smoke 8/8/8, Sparkbot_shell clean status, LIMA compileall, and LIMA full suite with 5391 tests; blocked on checklist/cutover authority.
+- Latest final-readiness audit execution: passed current consumer smoke 8/8/8, Sparkbot_shell clean status, LIMA compileall, and LIMA full suite with 5459 tests; blocked on checklist/cutover authority.
 
 ## Boundaries Preserved
 
@@ -151,6 +151,6 @@ The LIMA-side candidate handoff is locally testable and validated with fake in-p
 
 ## 2026-06-24 Arc Clean Checkpoint Supplement
 
-Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
+Arc-Bot-shell clean-checkpoint proof is now recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`. This supersedes earlier same-document language that treated Arc-Bot-shell local drift as an active release blocker.
 
 This supplement closes only the Arc clean-checkpoint blocker. LIMA remains `CANDIDATE_ONLY`; final-readiness reconciliation and release-candidate acceptance are now satisfied for first-consumer harness testing, while cutover remains blocked until explicit operator authorization is recorded through the runbook.

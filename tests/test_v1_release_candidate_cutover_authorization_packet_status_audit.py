@@ -74,7 +74,7 @@ def test_v1_cutover_authorization_packet_status_audit_records_ready_evidence() -
     assert evidence["cutover_runbook_verdict"] == "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     assert evidence["final_blocker_register_verdict"] == "STOPPED_AT_CUTOVER_AUTHORITY"
     assert evidence["arc_bot_shell_clean_checkpoint_commit"] == (
-        "99a4ba4955f13626c2176a2c44592000029a16c3"
+        "147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
     )
     assert evidence["focused_packet_current_gate_tests_passed"] == 37
     assert evidence["broader_v1_readiness_status_tests_passed"] == 102
@@ -133,7 +133,7 @@ def test_v1_cutover_authorization_packet_status_audit_text_matches_fixture() -> 
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
     assert "STOPPED_AT_CUTOVER_AUTHORITY" in text
-    assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
+    assert "147cec0b9cb3ff6f060c8079a7f944526bb26b6f" in text
     assert "focused packet/current-gate tests 37 passed" in text
     assert "full LIMA suite 5412 passed" in text
     assert "Post-Audit Validation Refresh" in text

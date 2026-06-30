@@ -63,7 +63,7 @@ def test_v1_release_candidate_cutover_authorization_packet_records_ready_evidenc
     assert evidence["cutover_runbook_verdict"] == "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION"
     assert evidence["final_blocker_register_verdict"] == "STOPPED_AT_CUTOVER_AUTHORITY"
     assert evidence["arc_bot_shell_clean_checkpoint_commit"] == (
-        "99a4ba4955f13626c2176a2c44592000029a16c3"
+        "147cec0b9cb3ff6f060c8079a7f944526bb26b6f"
     )
     assert evidence["focused_v1_readiness_status_tests_passed_before_packet"] == 96
     assert evidence["compileall_lima_passed_before_packet"] is True
@@ -112,7 +112,7 @@ def test_v1_release_candidate_cutover_authorization_packet_text_matches_fixture(
     assert "PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED" in text
     assert "CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION" in text
     assert "STOPPED_AT_CUTOVER_AUTHORITY" in text
-    assert "99a4ba4955f13626c2176a2c44592000029a16c3" in text
+    assert "147cec0b9cb3ff6f060c8079a7f944526bb26b6f" in text
     assert "Post-Packet Validation Executed" in text
     assert "passed, 37 tests" in text
     assert "passed, 102 tests" in text

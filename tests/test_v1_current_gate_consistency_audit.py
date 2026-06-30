@@ -202,7 +202,7 @@ def test_v1_current_gate_consistency_audit_doc_matches_fixture() -> None:
     assert "Current release-candidate cutover authorization packet status audit: pass with recorded valid cutover operator choice count `0`; branch, tag, cutover, V1.0.0 readiness, product readiness, and production readiness remain blocked." in text
     assert "Current final readiness reconciliation audit: passed for first-consumer harness testing with `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`." in text
     assert "Current post-validation readiness-change freshness audit: current" in text
-    assert "Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as release-gate input evidence only." in text
+    assert "Current Arc-Bot-shell clean-checkpoint posture: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` records clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` as release-gate input evidence only." in text
     assert "Current Arc-Bot-shell clean-checkpoint gate: proof is recorded, but branch, tag, cutover, or readiness claim still requires `Approve-V1-RC-Cutover` in the cutover authorization packet." in text
     assert "Current validation-refresh full LIMA suite evidence: 5350 tests passed." in text
     assert "Current validation-refresh latest LIMA readiness freshness supplement: 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests passed." in text

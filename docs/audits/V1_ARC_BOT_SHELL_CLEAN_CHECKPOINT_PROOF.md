@@ -22,7 +22,7 @@ Verdict: `PASS_ARC_BOT_SHELL_CLEAN_CHECKPOINT_RECORDED`
 
 Arc-Bot-shell now has a clean, pushed checkpoint on
 `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` at
-`99a4ba4955f13626c2176a2c44592000029a16c3`.
+`147cec0b9cb3ff6f060c8079a7f944526bb26b6f`.
 
 ## Arc Checkpoint
 
@@ -30,21 +30,21 @@ Arc-Bot-shell now has a clean, pushed checkpoint on
 - Local path: `C:\Users\limap\Arc-Bot-shell`
 - Branch: `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke`
 - Previous dirty checkpoint: `2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0`
-- Clean checkpoint commit: `99a4ba4955f13626c2176a2c44592000029a16c3`
+- Clean checkpoint commit: `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`
 - Local status after push: clean and tracking origin with no ahead/behind marker
 - Pushed to origin: yes
 
 ## Validation Evidence
 
-- `python -m pytest -q -p no:cacheprovider`: `331 passed`
-- `python -m compileall arc_guardian_spine phase0_runtime_ui_scaffold phase1_business_shell_inventory phase6_lima_office_integration phase7_approval_evidence phase10_field_deployment phase11_pilot_readiness phase12_mvp_completion`: passed
-- `git diff --check`: passed with line-ending conversion warnings only
-- `git diff --cached --check`: passed
-- `.\scripts\arc_worker_smoke.ps1`: compact projections emitted and focused smoke tests `35 passed`
+- `python -m pytest -q tests\test_arc_runtime_implementation_gate.py tests\test_arc_mvp_completion_gate.py tests\test_arc_bot_artifact_pack.py tests\test_arc_approval_evidence_dependency.py tests\test_arc_bot_phase1_client_configuration_no_execution.py tests\test_arc_bot_basic_guardian_console.py -p no:cacheprovider`: `38 passed`
+- `python -m pytest -q tests\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider`: `8 passed`
+- `git diff --check`: passed
 
-The Arc smoke script preserves read-only boundaries: it emits projections and
-runs local tests only. It does not install software, start services, attach to a
-live supervisor, call models, call providers, call connectors, send external
+The Arc validation preserves read-only and candidate-only boundaries. It checks
+runtime gate, MVP completion, artifact pack, approval evidence, no-execution
+client configuration, Guardian console, and LIMA G56 fake-executor smoke
+evidence only. It does not install software, start services, attach to a live
+supervisor, call models, call providers, call connectors, send external
 messages, mutate customer systems, write durable evidence, or grant runtime
 authority.
 

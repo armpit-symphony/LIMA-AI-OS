@@ -58,7 +58,7 @@ At execution time, this audit did not pass V1.0.0 release-candidate cutover. Lat
 | Public Sparkbot | `C:\Users\limap\Sparkbot-public` | `v1-g56-runtime-authority-chain-audit` | `ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2` | clean | smoke evidence accepted |
 | Accessible Sparkbot | `C:\Users\limap\Sparkbot` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | clean | smoke evidence accepted |
 | Sparkbot_shell | `C:\Users\limap\Sparkbot_shell` | `sparkbot-shell-work-settings-runtime-preview` | `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | clean | shell checkpoint accepted |
-| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `40fc474b0e09580a82f90518ebe341e2c98cd644` | clean | smoke evidence accepted; current HEAD descends from clean-checkpoint proof commit `99a4ba4955f13626c2176a2c44592000029a16c3` |
+| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` | clean | smoke evidence accepted; current HEAD descends from clean-checkpoint proof commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` |
 
 ## Validation Executed
 
@@ -74,7 +74,7 @@ At execution time, this audit did not pass V1.0.0 release-candidate cutover. Lat
 | Sparkbot_shell | `git status --short --branch` | passed, clean tracking branch |
 | Sparkbot_shell | `git diff --check` | passed |
 | LIMA-AI-OS | `python -m compileall lima` | passed |
-| LIMA-AI-OS | `python -m pytest -q tests -p no:cacheprovider` | passed, 5391 tests |
+| LIMA-AI-OS | `python -m pytest -q tests -p no:cacheprovider` | passed, 5459 tests |
 | LIMA-AI-OS | `git diff --check` | passed before audit edits |
 
 ## Criteria Assessment
@@ -88,9 +88,9 @@ At execution time, this audit did not pass V1.0.0 release-candidate cutover. Lat
 | Accessible Sparkbot G56 smoke passes | pass | current command evidence, 8 tests |
 | Arc-Bot-shell G56 smoke passes | pass | current command evidence, 8 tests |
 | Sparkbot_shell checkpoint remains clean | pass | current `git status --short --branch` evidence |
-| Arc-Bot-shell clean-checkpoint proof remains usable | pass with note | current Arc HEAD `40fc474b0e09580a82f90518ebe341e2c98cd644` is a clean descendant of recorded proof commit `99a4ba4955f13626c2176a2c44592000029a16c3` |
+| Arc-Bot-shell clean-checkpoint proof remains usable | pass with note | current Arc HEAD `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` is a clean descendant of recorded proof commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` |
 | LIMA compileall passes | pass | current command evidence |
-| LIMA full suite passes | pass | current command evidence, 5391 tests |
+| LIMA full suite passes | pass | current command evidence, 5459 tests |
 | LIMA diff hygiene passes before audit edits | pass | current command evidence |
 | Release-candidate acceptance checklist satisfied | pass with reconciliation | current checklist reports `CHECKLIST_SATISFIED_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED` for first-consumer harness testing only |
 | Release-candidate cutover authorized | fail | current runbook reports `CUTOVER_BLOCKED_AT_OPERATOR_AUTHORIZATION` |

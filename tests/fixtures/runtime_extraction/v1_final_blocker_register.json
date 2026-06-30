@@ -61,7 +61,7 @@
     },
     "arc_bot_shell_clean_checkpoint": {
       "proof": "docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md",
-      "clean_pushed_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+      "clean_pushed_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
       "resolved": true,
       "release_authority_created": false
     },
@@ -124,10 +124,10 @@
     "lima_diff_hygiene_passed",
     "v1_g61_operator_decision_packet_status_audit_current_approve_v1_g61_recorded",
     "v1_g61_runtime_vendor_sdk_import_execution_proof_and_closeout_complete_bounded_local_only",
-    "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_99a4ba4955f13626c2176a2c44592000029a16c3",
+    "arc_bot_shell_clean_checkpoint_proof_recorded_at_clean_pushed_commit_147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
     "arc_bot_shell_historical_local_drift_exclusion_superseded_by_clean_checkpoint_proof",
     "consumer_repo_diff_hygiene_passed_at_recorded_checkpoints",
-    "v1_final_readiness_audit_current_consumer_smoke_8_8_8_lima_5391_passed",
+    "v1_final_readiness_audit_current_consumer_smoke_8_8_8_lima_5459_passed",
     "v1_release_candidate_acceptance_checklist_current_satisfied_for_first_consumer_harness_testing_cutover_authorization_required",
     "v1_release_candidate_cutover_runbook_current_cutover_blocked_at_operator_authorization",
     "v1_final_readiness_reconciliation_audit_passed_for_first_consumer_harness_testing",

@@ -45,9 +45,9 @@
     "arc_bot_shell": {
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-      "commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
+      "commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
       "clean": true,
-      "recorded_clean_checkpoint_proof_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+      "recorded_clean_checkpoint_proof_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
       "current_head_descends_from_recorded_clean_checkpoint": true
     }
   },
@@ -91,7 +91,7 @@
     "lima_full_suite": {
       "command": "python -m pytest -q tests -p no:cacheprovider",
       "passed": true,
-      "tests_passed": 5391
+      "tests_passed": 5459
     },
     "lima_diff_check_before_audit_edits": {
       "command": "git diff --check",
