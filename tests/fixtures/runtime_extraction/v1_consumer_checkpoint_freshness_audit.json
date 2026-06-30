@@ -1,10 +1,10 @@
 {
   "audit_id": "v1_consumer_checkpoint_freshness_audit",
   "api_status": "CANDIDATE_ONLY",
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "source_lima_commit_before_audit": "edeb683be9a878b75751d7b527edf41c8702c165",
-  "audit_verdict": "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED",
+  "source_lima_commit_before_audit": "c7ccae3adcfda1ecf167cc9e2d107569965a0201",
+  "audit_verdict": "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_CLEAN_CHECKPOINT_CUTOVER_STILL_BLOCKED",
   "documents": {
     "audit": "docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md",
     "consumer_checkpoint_manifest": "docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md",
@@ -40,18 +40,15 @@
     "arc_bot_shell": {
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
-      "commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
-      "local_status_clean": false,
+      "commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
+      "local_status_clean": true,
       "tracking_origin": true,
-      "recorded_clean_checkpoint_proof_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+      "recorded_clean_checkpoint_proof_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
       "current_head_descends_from_recorded_clean_checkpoint": true,
-      "evidence_role": "arc_candidate_head_with_local_untracked_drift_excluded_from_clean_checkpoint_proof",
-      "untracked_file_count": 2,
-      "untracked_files": [
-        "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
-        "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
-      ],
-      "local_clean_checkpoint_claim_allowed": false
+      "evidence_role": "arc_clean_pushed_checkpoint_with_runtime_gate_response_artifacts_committed_release_authority_blocked",
+      "untracked_file_count": 0,
+      "untracked_files": [],
+      "local_clean_checkpoint_claim_allowed": true
     }
   },
   "commands_executed": {
@@ -87,9 +84,9 @@
   "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
   "post_audit_lima_validation_refresh": {
     "focused_consumer_checkpoint_tests_passed": 18,
-    "broader_v1_readiness_status_tests_passed": 58,
+    "broader_v1_readiness_status_tests_passed": 59,
     "compileall_lima_passed": true,
-    "full_lima_suite_tests_passed": 5458,
+    "full_lima_suite_tests_passed": 5459,
     "cutover_operator_choice_created_by_validation": false,
     "release_branch_tag_cutover_or_readiness_authority_created_by_validation": false,
     "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_validation": false
@@ -130,5 +127,33 @@
     "broader_readiness_status_tests_passed": 58,
     "compileall_lima_passed": true,
     "full_lima_suite_tests_passed": 5458
+  },
+  "post_arc_clean_checkpoint_refresh": {
+    "source_lima_commit_before_refresh": "c7ccae3adcfda1ecf167cc9e2d107569965a0201",
+    "previous_arc_bot_shell_commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
+    "arc_bot_shell_commit": "147cec0b9cb3ff6f060c8079a7f944526bb26b6f",
+    "arc_bot_shell_local_status_clean": true,
+    "arc_bot_shell_tracking_origin": true,
+    "arc_bot_shell_untracked_file_count": 0,
+    "arc_bot_shell_clean_checkpoint_claim_allowed": true,
+    "arc_bot_shell_gate_tests_passed": 38,
+    "arc_bot_shell_lima_smoke_tests_passed": 8,
+    "arc_bot_shell_diff_check_passed": true,
+    "arc_bot_shell_push_passed": true,
+    "runtime_gate_response_artifacts_committed": [
+      "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
+      "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
+    ],
+    "consumer_repositories_modified_before_lima_refresh": true,
+    "lima_runtime_files_changed_by_refresh": false,
+    "cutover_operator_choice_created_by_refresh": false,
+    "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
+    "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
+    "focused_current_goal_consumer_freshness_tests_passed": 18,
+    "focused_current_goal_consumer_branch_index_tests_passed": 27,
+    "focused_consumer_branch_readme_tests_passed": 24,
+    "broader_readiness_status_tests_passed": 59,
+    "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5459
   }
 }

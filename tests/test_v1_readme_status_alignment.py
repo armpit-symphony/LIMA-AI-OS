@@ -511,13 +511,12 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "operator handoff action" in text
     assert "saved candidate branch map" in text
     assert "Arc-Bot-shell smoke evidence is compatibility evidence only" in text
-    assert "The current Arc-Bot-shell local checkout has two untracked response artifacts" in text
-    assert "must be cleaned or intentionally committed and revalidated before it can serve as fresh clean-checkpoint proof" in text
-    assert "Arc-Bot-shell clean-checkpoint proof is recorded" in text
-    assert "release-gate input evidence only" in text
-    assert "Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof is refreshed at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
+    assert "Arc-Bot-shell clean-checkpoint proof is refreshed" in text
+    assert "candidate-only release-gate input evidence" in text
+    assert "historical proof remains captured in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`" in text
     assert "does not authorize release-candidate acceptance" in text
-    assert "it is historical release-gate input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness." in text
+    assert "It is candidate-only release-gate input evidence and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness." in text
     assert "focused current-gate/release-readiness validation as passing with 153 tests" in text
     assert "full LIMA suite passing with 5350 tests" in text
     assert "A later 2026-06-21 LIMA-only validation supplement" in text
@@ -574,10 +573,9 @@ def test_readme_contains_current_v1_status_and_boundaries() -> None:
     assert "V1_CURRENT_GOAL_STATUS_AUDIT.md" in text
     assert "GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED" in text
     assert "V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md" in text
-    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED" in text
-    assert "Sparkbot and Sparkbot_shell are clean local checkpoints" in text
-    assert "Arc-Bot-shell remains on checkpoint commit `40fc474b0e09580a82f90518ebe341e2c98cd644`" in text
-    assert "excluded from fresh clean-checkpoint proof until cleaned or intentionally committed and revalidated" in text
+    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_CLEAN_CHECKPOINT_CUTOVER_STILL_BLOCKED" in text
+    assert "Sparkbot, Sparkbot_shell, and Arc-Bot-shell are clean local checkpoints" in text
+    assert "Arc-Bot-shell is pushed at `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in text
     assert "consumer production integration authority" in text
     assert "the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence" in text
     assert "Do not edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients" in text
@@ -625,14 +623,12 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "V1 candidate test handoff manifest: refreshed" in state_text
     assert "V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md" in state_text
     assert "Arc-Bot-shell clean checkpoint" in state_text
-    assert "Arc-Bot-shell clean-checkpoint proof is recorded" in state_text
-    assert "release-gate input evidence only" in state_text
-    assert "clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`" in state_text
+    assert "Arc-Bot-shell clean-checkpoint proof is refreshed" in state_text
+    assert "candidate-only release-gate input evidence" in state_text
+    assert "clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in state_text
     assert "does not authorize release-candidate acceptance" in state_text
     assert "V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md" in state_text
-    assert "it is historical release-gate input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness." in state_text
-    assert "Current local Arc-Bot-shell status is not clean because two untracked response artifacts are present" in state_text
-    assert "Arc must be cleaned or intentionally committed and revalidated before it can provide fresh clean-checkpoint proof" in state_text
+    assert "It is candidate-only release-gate input evidence and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness." in state_text
     assert "V1 candidate harness quickstart: added" in state_text
     assert "QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER" in state_text
     assert "V1_CANDIDATE_HARNESS_QUICKSTART.md" in state_text
@@ -702,10 +698,10 @@ def test_current_project_state_contains_current_g61_gate_snapshot() -> None:
     assert "V1_CURRENT_GOAL_STATUS_AUDIT.md" in state_text
     assert "unproven V1.0.0 requirements while preserving the cutover blocker" in state_text
     assert "V1 consumer checkpoint freshness audit: complete" in state_text
-    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED" in state_text
+    assert "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_CLEAN_CHECKPOINT_CUTOVER_STILL_BLOCKED" in state_text
     assert "V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md" in state_text
-    assert "records Sparkbot and Sparkbot_shell as clean checkpoints" in state_text
-    assert "records Arc-Bot-shell on checkpoint commit `40fc474b0e09580a82f90518ebe341e2c98cd644` with two untracked local response artifacts excluded from fresh clean-checkpoint proof" in state_text
+    assert "records Sparkbot, Sparkbot_shell, and Arc-Bot-shell as clean checkpoints" in state_text
+    assert "records Arc-Bot-shell on pushed checkpoint commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`" in state_text
     assert "preserves the cutover blocker without cutover authority" in state_text
     assert "V1 final blocker register: refreshed with final readiness and cutover blockers" in state_text
     assert "V1_FINAL_BLOCKER_REGISTER.md" in state_text

@@ -1,11 +1,11 @@
 # V1 Consumer Checkpoint Freshness Audit
 
-Date: 2026-06-29
+Date: 2026-06-30
 Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
-Source LIMA commit before audit refresh: `edeb683be9a878b75751d7b527edf41c8702c165`
+Source LIMA commit before audit refresh: `c7ccae3adcfda1ecf167cc9e2d107569965a0201`
 API status: `CANDIDATE_ONLY`
 
-Audit verdict: `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED`
+Audit verdict: `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_CLEAN_CHECKPOINT_CUTOVER_STILL_BLOCKED`
 
 This audit refreshes the local consumer checkpoint posture for Sparkbot, Sparkbot_shell, and Arc-Bot-shell after the current-goal status audit. It is read-only, docs/tests/fixtures-only readiness evidence. It does not record a cutover operator choice, create a release-candidate branch, create a tag, perform cutover, modify consumer repositories, modify `lima/`, change public API exports, add runtime vendor SDK imports in `lima/`, add provider SDK clients, edit dependency manifests, edit lockfiles, resolve provider endpoints, make LIMA-owned DNS/HTTP/socket/network calls, read secrets, access credential values, call providers, execute fallback, invoke connectors, wire consumer production runtime behavior, execute browser/file/device/robotics/physical-world behavior, or claim V1.0.0 completion, product readiness, or production readiness.
 
@@ -16,14 +16,14 @@ This audit refreshes the local consumer checkpoint posture for Sparkbot, Sparkbo
 | Public Sparkbot | `C:\Users\limap\Sparkbot-public` | `v1-g56-runtime-authority-chain-audit` | `ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2` | clean | public candidate smoke checkpoint |
 | Accessible Sparkbot | `C:\Users\limap\Sparkbot` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | clean, tracking origin | accessible candidate smoke checkpoint |
 | Sparkbot_shell | `C:\Users\limap\Sparkbot_shell` | `sparkbot-shell-work-settings-runtime-preview` | `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | clean, tracking origin | shell checkpoint only |
-| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `40fc474b0e09580a82f90518ebe341e2c98cd644` | not clean; tracking origin; 2 untracked local response artifacts | Arc candidate HEAD still matches recorded checkpoint commit, but current local checkout is excluded from clean-checkpoint proof until cleaned or intentionally committed and revalidated |
+| Arc-Bot-shell | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` | clean, tracking origin | Arc clean pushed checkpoint with runtime implementation gate response artifacts committed; release authority remains blocked |
 
-Arc-Bot-shell current HEAD `40fc474b0e09580a82f90518ebe341e2c98cd644` descends from the recorded clean-checkpoint proof commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The current Arc-Bot-shell local checkout is not clean-checkpoint proof because it contains two untracked files:
+Arc-Bot-shell current HEAD `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` is a clean pushed descendant of the recorded clean-checkpoint proof commit `99a4ba4955f13626c2176a2c44592000029a16c3`. The two prior local response artifacts are now intentionally committed in Arc-Bot-shell:
 
 - `docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json`
 - `docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md`
 
-This audit does not modify Arc-Bot-shell, does not replace the recorded clean-checkpoint proof, and does not create release authority. The recorded clean proof remains historical release-gate input only; the current Arc local checkout must be cleaned or intentionally committed by the Arc repo owner and revalidated before it can serve as fresh clean-checkpoint proof.
+This audit records the current Arc clean checkpoint as candidate-only consumer evidence. It does not create release authority, does not authorize release-candidate acceptance, and does not bypass the cutover operator choice requirement.
 
 ## Commands Executed
 
@@ -44,9 +44,9 @@ Sparkbot_shell has no LIMA fake-executor smoke command in this audit lane; its f
 | Command | Result |
 | --- | --- |
 | `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py -p no:cacheprovider` | passed, 18 tests |
-| `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py -p no:cacheprovider` | passed, 58 tests |
+| `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py -p no:cacheprovider` | passed, 59 tests |
 | `python -m compileall lima` | passed |
-| `python -m pytest -q tests -p no:cacheprovider` | passed, 5458 tests |
+| `python -m pytest -q tests -p no:cacheprovider` | passed, 5459 tests |
 
 This LIMA validation refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
 
@@ -84,6 +84,39 @@ Post-edeb LIMA validation:
 | `python -m pytest -q tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_current_goal_status_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py -p no:cacheprovider` | passed, 58 tests |
 | `python -m compileall lima` | passed |
 | `python -m pytest -q tests -p no:cacheprovider` | passed, 5458 tests |
+## Post-Arc Clean Checkpoint Refresh
+
+After pushed LIMA commit `c7ccae3adcfda1ecf167cc9e2d107569965a0201`, Arc-Bot-shell local response artifacts were intentionally committed and pushed in Arc-Bot-shell commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`. The Arc-Bot-shell worktree is now clean and tracking origin on `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke`.
+
+| Repository | Local status command result | Release-proof treatment |
+| --- | --- | --- |
+| Sparkbot | clean, tracking origin at `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | current clean consumer checkpoint input |
+| Sparkbot_shell | clean, tracking origin at `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | current clean shell checkpoint input |
+| Arc-Bot-shell | clean, tracking origin at `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` | current clean Arc checkpoint input; release authority still blocked |
+
+Arc-Bot-shell validation for this refresh:
+
+| Command | Result |
+| --- | --- |
+| `python -m pytest -q tests\test_arc_runtime_implementation_gate.py tests\test_arc_mvp_completion_gate.py tests\test_arc_bot_artifact_pack.py tests\test_arc_approval_evidence_dependency.py tests\test_arc_bot_phase1_client_configuration_no_execution.py tests\test_arc_bot_basic_guardian_console.py -p no:cacheprovider` | passed, 38 tests |
+| `python -m pytest -q tests\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider` | passed, 8 tests |
+| `git diff --check` | passed |
+| `git push` | passed, `40fc474b0e09580a82f90518ebe341e2c98cd644` to `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` |
+
+This post-Arc clean checkpoint refresh creates no cutover operator choice, release-candidate branch, release-candidate tag, cutover, V1.0.0 readiness claim, product-readiness claim, production-readiness claim, consumer production integration, provider execution, network egress, credential access, connector behavior, or physical-world behavior.
+
+Post-Arc LIMA validation:
+
+| Command | Result |
+| --- | --- |
+| `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py -p no:cacheprovider` | passed, 18 tests |
+| `python -m pytest -q tests\test_v1_current_goal_status_audit.py tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_final_candidate_branch_index.py -p no:cacheprovider` | passed, 27 tests |
+| `python -m pytest -q tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_readme_status_alignment.py -p no:cacheprovider` | passed, 24 tests |
+| `python -m pytest -q tests\test_v1_consumer_checkpoint_freshness_audit.py tests\test_v1_final_candidate_branch_index.py tests\test_v1_current_goal_status_audit.py tests\test_v1_readme_status_alignment.py tests\test_v1_current_gate_consistency_audit.py tests\test_v1_product_readiness_target.py tests\test_v1_readiness_gap_matrix.py -p no:cacheprovider` | passed, 59 tests |
+| `python -m compileall lima` | passed |
+| `python -m pytest -q tests -p no:cacheprovider` | passed, 5459 tests |
+
+
 ## Boundary Confirmation
 
 - Cutover operator choice recorded by this audit: no.
@@ -106,6 +139,6 @@ Post-edeb LIMA validation:
 
 ## Audit Decision
 
-Sparkbot and Sparkbot_shell remain clean candidate-only input evidence for the V1 cutover decision surface. Arc-Bot-shell HEAD still matches the recorded candidate checkpoint commit, but the current local checkout is not clean-checkpoint proof because two untracked response artifacts are present. This does not bypass the current cutover blocker. The valid cutover operator choice count remains `0`, and the next required action remains recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`.
+Sparkbot, Sparkbot_shell, and Arc-Bot-shell now all have clean candidate-only checkpoint evidence for the V1 cutover decision surface. Arc-Bot-shell clean pushed checkpoint `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` includes the previously untracked runtime implementation gate response artifacts as planning/state-only evidence. This does not bypass the current cutover blocker. The valid cutover operator choice count remains `0`, and the next required action remains recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`.
 
 Machine action: `record_exactly_one_valid_cutover_operator_choice`.
