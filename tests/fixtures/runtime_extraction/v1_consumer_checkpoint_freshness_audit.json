@@ -1,10 +1,10 @@
 {
   "audit_id": "v1_consumer_checkpoint_freshness_audit",
   "api_status": "CANDIDATE_ONLY",
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "source_lima_commit_before_audit": "58c26d8755cfe0cfd555433a4b8908ed304b74d1",
-  "audit_verdict": "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED",
+  "source_lima_commit_before_audit": "edeb683be9a878b75751d7b527edf41c8702c165",
+  "audit_verdict": "PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED",
   "documents": {
     "audit": "docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md",
     "consumer_checkpoint_manifest": "docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md",
@@ -41,11 +41,17 @@
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
       "commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
-      "local_status_clean": true,
+      "local_status_clean": false,
       "tracking_origin": true,
       "recorded_clean_checkpoint_proof_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
       "current_head_descends_from_recorded_clean_checkpoint": true,
-      "evidence_role": "arc_candidate_smoke_checkpoint_clean_descendant"
+      "evidence_role": "arc_candidate_head_with_local_untracked_drift_excluded_from_clean_checkpoint_proof",
+      "untracked_file_count": 2,
+      "untracked_files": [
+        "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
+        "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
+      ],
+      "local_clean_checkpoint_claim_allowed": false
     }
   },
   "commands_executed": {
@@ -80,10 +86,10 @@
   "current_valid_cutover_operator_choice_count": 0,
   "next_required_action": "record_exactly_one_valid_cutover_operator_choice",
   "post_audit_lima_validation_refresh": {
-    "focused_consumer_checkpoint_tests_passed": 16,
-    "broader_v1_readiness_status_tests_passed": 56,
+    "focused_consumer_checkpoint_tests_passed": 18,
+    "broader_v1_readiness_status_tests_passed": 58,
     "compileall_lima_passed": true,
-    "full_lima_suite_tests_passed": 5435,
+    "full_lima_suite_tests_passed": 5458,
     "cutover_operator_choice_created_by_validation": false,
     "release_branch_tag_cutover_or_readiness_authority_created_by_validation": false,
     "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_validation": false
@@ -98,5 +104,31 @@
     "cutover_operator_choice_created_by_refresh": false,
     "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
     "runtime_provider_network_credential_connector_or_physical_world_behavior_added_by_refresh": false
+  },
+  "post_edeb_arc_bot_shell_local_drift_refresh": {
+    "source_lima_commit_before_refresh": "edeb683be9a878b75751d7b527edf41c8702c165",
+    "sparkbot_commit": "ddaa4ccaacd328ddcc1f00a040c2c140abee428e",
+    "sparkbot_local_status_clean": true,
+    "sparkbot_shell_commit": "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc",
+    "sparkbot_shell_local_status_clean": true,
+    "arc_bot_shell_commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
+    "arc_bot_shell_local_status_clean": false,
+    "arc_bot_shell_untracked_file_count": 2,
+    "arc_bot_shell_untracked_files": [
+      "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
+      "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
+    ],
+    "arc_bot_shell_current_head_descends_from_recorded_clean_checkpoint": true,
+    "arc_bot_shell_current_local_clean_checkpoint_claim_allowed": false,
+    "recorded_clean_checkpoint_proof_commit": "99a4ba4955f13626c2176a2c44592000029a16c3",
+    "clean_checkpoint_proof_still_historical_release_gate_input": true,
+    "consumer_repositories_modified_by_refresh": false,
+    "cutover_operator_choice_created_by_refresh": false,
+    "release_branch_tag_cutover_or_readiness_authority_created_by_refresh": false,
+    "next_required_arc_action": "clean_or_intentionally_commit_arc_local_response_artifacts_then_revalidate_before_fresh_clean_checkpoint_proof",
+    "focused_current_goal_consumer_freshness_tests_passed": 18,
+    "broader_readiness_status_tests_passed": 58,
+    "compileall_lima_passed": true,
+    "full_lima_suite_tests_passed": 5458
   }
 }

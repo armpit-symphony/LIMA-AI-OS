@@ -1,10 +1,10 @@
 {
   "index_id": "v1_final_candidate_branch_index",
   "api_status": "CANDIDATE_ONLY",
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
   "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-  "source_lima_commit_before_index": "a60700a9bd6f31f1d36b8c3619284da63a6ccd60",
+  "source_lima_commit_before_index": "edeb683be9a878b75751d7b527edf41c8702c165",
   "index_verdict": "CANDIDATE_INDEX_READY_WITH_G61_OPERATOR_BLOCKER",
   "documents": {
     "final_candidate_branch_index": "docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md",
@@ -30,8 +30,8 @@
   "lima_branch_checkpoints": [
     {
       "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
-      "commit_or_label": "a60700a9bd6f31f1d36b8c3619284da63a6ccd60",
-      "purpose": "current_observed_workspace_branch_for_latest_current_goal_and_consumer_checkpoint_freshness"
+      "commit_or_label": "edeb683be9a878b75751d7b527edf41c8702c165",
+      "purpose": "current_observed_workspace_branch_before_post_edeb_arc_bot_shell_local_drift_refresh"
     },
     {
       "branch": "prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request",
@@ -136,7 +136,7 @@
       "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
       "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
       "commit": "40fc474b0e09580a82f90518ebe341e2c98cd644",
-      "status": "clean_local_branch_tracking_origin_descends_from_clean_checkpoint_proof_release_authority_blocked"
+      "status": "not_clean_local_branch_tracking_origin_two_untracked_response_artifacts_descends_from_clean_checkpoint_proof_excluded_until_cleaned_or_committed_and_revalidated_release_authority_blocked"
     },
     "sparkbot_shell_checkpoint": {
       "local_path": "C:\\Users\\limap\\Sparkbot_shell",
@@ -151,7 +151,7 @@
       8,
       8
     ],
-    "arc_bot_shell_same_day_approved_g56_smoke_proof_paths_clean": true,
+    "arc_bot_shell_same_day_approved_g56_smoke_proof_paths_clean": false,
     "lima_post_validation_readiness_freshness_full_suite_tests": 5359,
     "lima_quickstart_post_refresh_focused_tests": 17,
     "lima_quickstart_post_refresh_broader_v1_tests": 108,
@@ -176,19 +176,32 @@
     "lima_latest_current_goal_status_focused_tests": 21,
     "lima_latest_current_goal_status_broader_v1_tests": 130,
     "lima_latest_current_goal_status_full_suite_tests": 5435,
-    "lima_latest_consumer_checkpoint_freshness_focused_tests": 20,
-    "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 130,
-    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5435,
+    "lima_latest_consumer_checkpoint_freshness_focused_tests": 18,
+    "lima_latest_consumer_checkpoint_freshness_broader_v1_tests": 58,
+    "lima_latest_consumer_checkpoint_freshness_full_suite_tests": 5458,
     "lima_latest_local_harness_install_focused_tests": 20,
     "lima_latest_local_harness_install_broader_v1_tests": 78,
-    "lima_latest_local_harness_install_full_suite_tests": 5457
+    "lima_latest_local_harness_install_full_suite_tests": 5457,
+    "arc_bot_shell_current_local_untracked_file_count": 2,
+    "arc_bot_shell_current_local_clean_checkpoint_claim_allowed": false,
+    "arc_bot_shell_current_local_untracked_files": [
+      "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
+      "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
+    ]
   },
   "arc_bot_shell_local_drift_exclusion": {
     "audit_document": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
-    "current_local_status_clean": true,
-    "historical_drift_exclusion_audit_superseded_for_release_gate": true,
+    "current_local_status_clean": false,
+    "historical_drift_exclusion_audit_superseded_for_release_gate": false,
     "release_candidate_final_readiness_proof": false,
-    "clean_checkpoint_proof_recorded": true
+    "clean_checkpoint_proof_recorded": true,
+    "current_local_untracked_file_count": 2,
+    "current_local_untracked_files": [
+      "docs/interop/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE.json",
+      "docs/proof_packets/ARC_BOT_RUNTIME_IMPLEMENTATION_GATE_RESPONSE_PACKET.md"
+    ],
+    "current_local_clean_checkpoint_claim_allowed": false,
+    "required_before_fresh_clean_checkpoint_proof": "clean_or_intentionally_commit_arc_local_response_artifacts_then_revalidate"
   },
   "required_current_unblocks": [
     "record_exactly_one_valid_cutover_operator_choice",
@@ -199,12 +212,12 @@
   "post_unblock_sequence": [
     "if_pause_stop_branch_tag_cutover_work_and_preserve_candidate_only_evidence",
     "if_revise_v1_rc_cutover_update_cutover_packet_and_rerun_affected_readiness_evidence",
-    "if_approve_v1_rc_cutover_rerun_public_accessible_sparkbot_sparkbot_shell_and_arc_checkpoint_checks",
+    "if_approve_v1_rc_cutover_rerun_public_accessible_sparkbot_sparkbot_shell_and_arc_checkpoint_checks_after_arc_clean_or_intentional_commit_revalidation",
     "rerun_lima_compileall_focused_v1_readiness_status_tests_full_suite_and_diff_check",
     "confirm_current_goal_status_and_consumer_checkpoint_freshness_audits_remain_current",
     "execute_release_candidate_cutover_runbook_only_after_approval_and_validation_freshness",
     "record_release_candidate_branch_and_tag_identifiers_in_future_cutover_audit_before_readiness_claim",
-    "do_not_treat_arc_smoke_or_clean_checkpoint_proof_as_release_authority_without_cutover_approval_and_completed_runbook"
+    "do_not_treat_arc_smoke_historical_clean_checkpoint_proof_or_current_drifted_arc_local_checkout_as_release_authority_without_cutover_approval_clean_arc_revalidation_and_completed_runbook"
   ],
   "boundaries_preserved": {
     "v1_g61_implementation_approval_recorded_by_index": false,
@@ -238,7 +251,7 @@
     "treat_this_index_as_g61_approval",
     "treat_this_index_as_release_candidate_branch_or_tag_authority",
     "treat_this_index_as_passed_release_candidate_checklist_cutover_or_final_readiness_audit",
-    "treat_arc_candidate_smoke_as_clean_checkpoint_proof_while_local_drift_excluded",
+    "treat_current_drifted_arc_local_checkout_as_clean_checkpoint_proof",
     "consumer_repo_edit_from_index_lane",
     "runtime_or_public_api_change_from_index_lane",
     "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",

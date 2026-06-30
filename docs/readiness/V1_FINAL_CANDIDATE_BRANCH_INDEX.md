@@ -1,8 +1,8 @@
 # V1 Final Candidate Branch Index
 
-Date: 2026-06-28
+Date: 2026-06-29
 Observed workspace branch: `docs-v1-post-g60-readiness-and-next-lane-matrix`
-Source LIMA commit before index refresh: `a60700a9bd6f31f1d36b8c3619284da63a6ccd60`
+Source LIMA commit before index refresh: `edeb683be9a878b75751d7b527edf41c8702c165`
 API status: `CANDIDATE_ONLY`
 
 This index records the current saved branch map for the V1 candidate after the latest current-goal, consumer-checkpoint, and local harness/install freshness refresh. It is docs/tests/fixtures-only readiness evidence for operator handoff and self-audit traceability.
@@ -15,13 +15,13 @@ This index is not release-candidate branch or tag authority. It records saved ca
 
 Verdict: `CANDIDATE_INDEX_READY_WITH_G61_OPERATOR_BLOCKER`
 
-The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell. Public Sparkbot G56 publication is resolved. V1-G57 through V1-G60 are completed candidate-only evidence, `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded. The release-candidate checklist is satisfied for first-consumer harness testing and final-readiness reconciliation passes for that scope. The candidate is still not V1.0.0 complete because cutover authorization is not recorded, the cutover runbook is not executed, and no branch, tag, cutover, or readiness claim is authorized.
+The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell. Public Sparkbot G56 publication is resolved. V1-G57 through V1-G60 are completed candidate-only evidence, `Approve-V1-G61` is recorded, the bounded G61 proof/closeout exists, and Arc-Bot-shell clean-checkpoint proof is recorded as historical release-gate input. The current Arc-Bot-shell local checkout is not clean because two untracked response artifacts are present, so it must be cleaned or intentionally committed and revalidated before it can serve as fresh clean-checkpoint proof. The release-candidate checklist is satisfied for first-consumer harness testing and final-readiness reconciliation passes for that scope. The candidate is still not V1.0.0 complete because cutover authorization is not recorded, the cutover runbook is not executed, and no branch, tag, cutover, or readiness claim is authorized.
 
 ## Current LIMA Branch Checkpoints
 
 | Branch or lane | Commit or label | Purpose |
 | --- | --- | --- |
-| `docs-v1-post-g60-readiness-and-next-lane-matrix` | `a60700a9bd6f31f1d36b8c3619284da63a6ccd60` | Current observed workspace branch for the latest current-goal and consumer-checkpoint freshness refresh. |
+| `docs-v1-post-g60-readiness-and-next-lane-matrix` | `edeb683be9a878b75751d7b527edf41c8702c165` | Current observed workspace branch before the post-edeb Arc-Bot-shell local drift refresh. |
 | `prepare-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request` | request-stage lane label | Prepares the G61 runtime vendor SDK import execution proof approval request. |
 | `audit-v1-g61-runtime-vendor-sdk-import-execution-proof-approval-request` | audit lane label | Independently audits the G61 request gate. |
 | `audit-v1-g61-preapproval-runtime-tree-guard` | guard audit label | Records the preapproval runtime-tree guard that fails if LIMA runtime imports the vendor SDK or constructs provider clients before exact approval. |
@@ -47,12 +47,12 @@ The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Spar
 | Public Sparkbot target checkout | `C:\Users\limap\Sparkbot-public` | `v1-g56-runtime-authority-chain-audit` | `ae5cc9c563ea2b0f08c91af03164a78b4b20e3e2` | clean local branch; public G56 target publication resolved by audit |
 | Accessible Sparkbot checkpoint | `C:\Users\limap\Sparkbot` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `ddaa4ccaacd328ddcc1f00a040c2c140abee428e` | clean local branch tracking origin |
 | Sparkbot_shell checkpoint | `C:\Users\limap\Sparkbot_shell` | `sparkbot-shell-work-settings-runtime-preview` | `548b6d6aa6cde98b261e867c0c2db86ddbfa83dc` | clean local branch tracking origin; shell checkpoint only |
-| Arc-Bot-shell checkpoint | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `40fc474b0e09580a82f90518ebe341e2c98cd644` | clean local branch tracking origin; descends from clean checkpoint proof `99a4ba4955f13626c2176a2c44592000029a16c3`; release authority remains blocked |
+| Arc-Bot-shell checkpoint | `C:\Users\limap\Arc-Bot-shell` | `v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke` | `40fc474b0e09580a82f90518ebe341e2c98cd644` | not clean locally; tracking origin; 2 untracked response artifacts; descends from clean checkpoint proof `99a4ba4955f13626c2176a2c44592000029a16c3`; excluded from fresh clean-checkpoint proof until cleaned or intentionally committed and revalidated; release authority remains blocked |
 
 ## Current Validation Evidence
 
 - Consumer quickstart smoke refresh: passed, public Sparkbot 8 tests, accessible Sparkbot 8 tests, and Arc-Bot-shell 8 tests.
-- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; release-candidate/final-readiness authority remains blocked.
+- Arc-Bot-shell clean-checkpoint proof: recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3` as historical release-gate input; the current local checkout has 2 untracked response artifacts and is excluded from fresh clean-checkpoint proof until cleaned or intentionally committed and revalidated; release-candidate/final-readiness authority remains blocked.
 - LIMA post-validation readiness freshness full suite: passed, same-turn evidence 5359 tests after release/cutover freshness checks.
 - LIMA quickstart post-refresh validation: passed, 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests.
 - LIMA latest final blocker/index readiness refresh: passed, 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests.
@@ -60,7 +60,7 @@ The V1 candidate evidence is saved across LIMA, public Sparkbot, accessible Spar
 - LIMA latest quickstart artifact refresh: passed, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
 - LIMA latest handoff freshness supplement: passed, 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests.
 - LIMA latest current-goal evidence refresh: passed, 16 focused status tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
-- LIMA latest consumer checkpoint freshness refresh: passed, 16 focused consumer/current-goal tests, 56 broader V1 readiness/status tests, and 5435 full-suite tests.
+- LIMA latest consumer checkpoint freshness refresh: records Sparkbot and Sparkbot_shell clean, records Arc-Bot-shell HEAD at `40fc474b0e09580a82f90518ebe341e2c98cd644` with 2 untracked local response artifacts excluded from fresh clean-checkpoint proof, and preserves the cutover blocker.
 - LIMA latest local harness/install evidence refresh: passed, 20 focused local harness/drift tests, 78 broader V1 readiness/status tests, and 5457 full-suite tests; tracked candidate-only local PC testing support does not create customer-data handling, downloader/installer execution, cutover, product, or production authority.
 
 Traceability artifacts: `V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`, `V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`, `V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, `V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`, `V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, `V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, `V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`, `V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md`, `V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`, and `V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`.
@@ -82,9 +82,9 @@ Additional blocked gates:
 - Final readiness reconciliation audit: `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md`, current verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`; it does not authorize branch, tag, cutover, or V1.0.0 completion.
 - Final readiness audit template: `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`, future audit scaffolding only; not executed or passed by this index.
 - Local document harness/install audit: `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`, candidate-only local PC testing support only; not customer-data handling, downloader/installer execution, cutover, product, or production authority.
-- Arc-Bot-shell clean-checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`.
-- Arc-Bot-shell historical drift exclusion evidence remains compatibility-only context; clean-checkpoint proof is the current release-gate input.
-- Arc-Bot-shell clean checkpoint: clean checkpoint proof recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; current Arc smoke remains compatibility evidence and release authority remains blocked.
+- Arc-Bot-shell clean-checkpoint proof: `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`, clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; current local checkout is not fresh clean proof until Arc local response artifacts are cleaned or intentionally committed and revalidated.
+- Arc-Bot-shell historical drift exclusion evidence remains compatibility-only context; clean-checkpoint proof remains historical release-gate input, and current Arc local drift must be resolved before any fresh clean-checkpoint claim.
+- Arc-Bot-shell clean checkpoint: clean checkpoint proof recorded at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; current Arc smoke remains compatibility evidence, current local checkout has 2 untracked response artifacts, and release authority remains blocked.
 
 ## Post-Unblock Sequence
 
@@ -92,12 +92,12 @@ After exactly one cutover operator choice is recorded:
 
 1. If the choice is `Pause`, stop branch/tag/cutover work and preserve candidate-only evidence.
 2. If the choice is `Revise-V1-RC-Cutover`, update the cutover packet and rerun affected readiness evidence before reconsidering.
-3. If the choice is `Approve-V1-RC-Cutover`, rerun public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell checkpoint checks.
+3. If the choice is `Approve-V1-RC-Cutover`, rerun public Sparkbot, accessible Sparkbot, Sparkbot_shell, and Arc-Bot-shell checkpoint checks; Arc-Bot-shell must be clean or intentionally committed before it can count as fresh clean-checkpoint proof.
 4. Re-run LIMA `python -m compileall lima`, the focused V1 readiness/status tests, the full `python -m pytest -q tests -p no:cacheprovider` suite, and `git diff --check`.
 5. Confirm `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md` and `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md` remain current for the exact LIMA and consumer commits under audit.
 6. Execute `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md` only after approval and validation freshness are confirmed.
 7. Record release-candidate branch and tag identifiers in a future cutover audit before any V1.0.0 readiness claim.
-8. Do not treat Arc smoke or clean-checkpoint proof as release authority without the recorded cutover approval and completed runbook.
+8. Do not treat Arc smoke, historical clean-checkpoint proof, or the current drifted Arc local checkout as release authority without the recorded cutover approval, clean Arc revalidation, and completed runbook.
 
 ## Boundaries Preserved
 
@@ -109,7 +109,7 @@ After exactly one cutover operator choice is recorded:
 - Release-candidate acceptance checklist passed by this index: no.
 - Release-candidate cutover authorized by this index: no.
 - Final readiness audit executed or passed by this index: no.
-- Arc-Bot-shell clean-checkpoint proof claimed by this index: no.
+- Arc-Bot-shell clean-checkpoint proof claimed by this index: no; current local Arc clean-checkpoint proof claimed by this index: no.
 - `lima/` runtime files changed by this index: no.
 - LIMA public API exports changed by this index: no.
 - Consumer repositories changed by this index: no.
@@ -136,7 +136,7 @@ Stop before any next step that would:
 - treat this index as additional G61 implementation approval
 - treat this index as release-candidate branch or tag authority
 - treat this index as a passed release-candidate checklist, release cutover, or final readiness audit
-- treat Arc-Bot-shell local candidate smoke evidence as a substitute for the recorded clean-checkpoint proof
+- treat Arc-Bot-shell local candidate smoke evidence or the current drifted Arc local checkout as a substitute for clean-checkpoint proof
 - edit consumer repositories from this index lane
 - add runtime behavior, public API exports, provider SDK clients, runtime vendor SDK imports in `lima/`, lockfile edits, endpoint resolution, network calls, secret access, credential value access, fallback, connectors, or physical-world behavior
 - persist raw prompts, raw model responses, raw customer data, secrets, credential values, provider tokens, API keys, raw diffs, full patches, or raw file contents

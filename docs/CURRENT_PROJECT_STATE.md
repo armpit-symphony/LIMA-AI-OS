@@ -49,7 +49,7 @@ Latest V1 checkpoint:
   `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`.
 - V1 candidate test handoff manifest: refreshed for current Sparkbot and Arc-Bot-shell G56 smoke validation in
   `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`.
-- Arc-Bot-shell clean checkpoint: Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; it is release-gate input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
+- Arc-Bot-shell clean checkpoint: Arc-Bot-shell clean-checkpoint proof is recorded in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md` at clean pushed commit `99a4ba4955f13626c2176a2c44592000029a16c3`; it is historical release-gate input evidence only and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness. Current local Arc-Bot-shell status is not clean because two untracked response artifacts are present, so Arc must be cleaned or intentionally committed and revalidated before it can provide fresh clean-checkpoint proof.
 - V1 candidate harness quickstart: added as the shortest safe local Sparkbot and Arc-Bot-shell smoke command path with verdict
   `QUICKSTART_READY_FOR_LOCAL_CANDIDATE_SMOKE_WITH_G61_OPERATOR_BLOCKER` in
   `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`.
@@ -89,8 +89,8 @@ Latest V1 checkpoint:
   `GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED` in
   `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md`; it records achieved evidence and unproven V1.0.0 requirements while preserving the cutover blocker.
 - V1 consumer checkpoint freshness audit: complete with verdict
-  `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` in
-  `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md`; it records current clean consumer checkpoints and smoke/diff freshness without cutover authority.
+  `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_LOCAL_DRIFT_CUTOVER_STILL_BLOCKED` in
+  `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md`; it records Sparkbot and Sparkbot_shell as clean checkpoints, records Arc-Bot-shell on checkpoint commit `40fc474b0e09580a82f90518ebe341e2c98cd644` with two untracked local response artifacts excluded from fresh clean-checkpoint proof, and preserves the cutover blocker without cutover authority.
 - V1 local install/document harness committed feature audit: complete with verdict
   `PASS_COMMITTED_LOCAL_DOCUMENT_HARNESS_INSTALL_CANDIDATE_ONLY_CUTOVER_STILL_BLOCKED` in
   `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md`; it records commit `bc63ed3b00055976b1728d80124137d7ce15d871` as tracked local PC testing support only. The prior local runtime drift exclusion audit is superseded as a closure record in
