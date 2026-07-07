@@ -32,7 +32,15 @@
     "validate_v1_consumer_integration_compatibility_freeze"
   ],
   "added_adapter_exports": [
+    "V1ConsumerEvidenceEnvelope",
+    "V1ConsumerEvidenceEnvelopeError",
     "V1ConsumerImportDryRunError",
+    "V1ShellGovernedRuntimeResponse",
+    "V1ShellRuntimeAdapterError",
+    "V1ShellRuntimeInput",
+    "build_v1_consumer_evidence_envelope",
+    "build_v1_shell_runtime_candidate",
+    "run_v1_shell_governed_preflight",
     "validate_v1_consumer_integration_proof_to_import_dry_run"
   ],
   "post_cleanup_adapter_all_exports": [
@@ -41,8 +49,16 @@
     "SparkbotMeetingInputPayload",
     "SparkbotOperatorInputPayload",
     "SparkbotVoiceInputPayload",
+    "V1ConsumerEvidenceEnvelope",
+    "V1ConsumerEvidenceEnvelopeError",
     "V1ConsumerImportDryRunError",
     "V1ConsumerIntegrationCompatibilityError",
+    "V1ShellGovernedRuntimeResponse",
+    "V1ShellRuntimeAdapterError",
+    "V1ShellRuntimeInput",
+    "build_v1_consumer_evidence_envelope",
+    "build_v1_shell_runtime_candidate",
+    "run_v1_shell_governed_preflight",
     "validate_v1_consumer_integration_proof_to_import_dry_run",
     "validate_v1_consumer_integration_compatibility_freeze"
   ],

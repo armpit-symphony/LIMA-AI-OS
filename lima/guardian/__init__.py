@@ -9,6 +9,7 @@ from .humaninput_pipeline_fakes import (
 )
 from .fixture_harness import AdapterFixtureHarness, AdapterFixtureHarnessResult
 from .pipeline_fakes import FakeGuardianPipeline, FakeGuardianPipelineResult
+from .policy_adapter import PolicyAdapterDecision, evaluate_policy, map_guardian_semantic
 from .policy_fakes import FakePolicyRiskEvaluator
 from .spine_fakes import FakeSpineAuditRecorder
 from .v1_approval_enforcement import (
@@ -53,6 +54,9 @@ __all__ = [
     "V1FileMutationPreviewError",
     "V1GuardianDecisionGateError",
     "V1LiveApprovalEvidenceError",
+    "PolicyAdapterDecision",
+    "evaluate_policy",
+    "map_guardian_semantic",
     "enforce_v1_destructive_approval",
     "review_v1_runtime_request",
     "validate_v1_consumer_proof_packet_intake",

@@ -1,5 +1,7 @@
 # LIMA-AI-OS
 
+Current status: v0.1 governed dry-run runtime kernel alpha in recovery. Not a full AI OS. Not production Sparkbot/Arc runtime. No execution.
+
 LIMA-AI-OS is the Phase 0 home for the **LIMA Runtime / LIMA Kernel**: a Guardian-gated agent and robotics runtime extracted from Sparkbot.
 
 This is not a greenfield rewrite. Sparkbot is the battle-tested source of truth. LIMA-AI-OS starts with architecture, contracts, and package boundaries so SparkPit Labs can extract the runtime safely, preserve Sparkbot parity, and put every externally actionable operation behind Guardian.

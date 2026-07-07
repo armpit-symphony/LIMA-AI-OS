@@ -21,5 +21,6 @@ include = ["lima*"]
 
 [tool.pytest.ini_options]
 norecursedirs = [
+  ".pytest_cache",
   "pytest-cache-files-*",
 ]
