@@ -151,6 +151,12 @@ def _authority_record() -> dict[str, Any]:
 
 def _execution_request(**overrides: Any) -> dict[str, Any]:
     request = {
+        'guardian_decision': {
+            'decision_id': 'decision:v1-g44:001',
+            'status': 'allow',
+            'allowed': True,
+            'requires_approval': False,
+        },
         "execution_id": "execution:v1-g46:001",
         "authority_record": _authority_record(),
         "provider_executor_ref": "provider-executor:v1-g46:fake-openai",
@@ -319,6 +325,13 @@ def test_v1_g46_executes_only_through_injected_provider_executor() -> None:
 
     assert len(calls) == 1
     assert calls[0] == {
+        'guardian_decision': {
+            'decision_id': 'decision:v1-g44:001',
+            'status': 'allow',
+            'allowed': True,
+            'requires_approval': False,
+        },
+        'guardian_decision_id': 'decision:v1-g44:001',
         "execution_id": "execution:v1-g46:001",
         "authority_id": "authority:v1-g44:001",
         "authority_record_hash": _authority_record()["record_hash"],
@@ -559,6 +572,98 @@ def test_v1_g46_provider_executor_errors_are_wrapped() -> None:
 
     with pytest.raises(V1LiveProviderModelCallExecutionError, match="executor failed"):
         execute_v1_live_provider_model_call(_execution_request(), failing_executor)
+
+
+@pytest.mark.parametrize(
+    'guardian_decision',
+    [
+        None,
+        {},
+        {
+            'decision_id': '',
+            'status': 'allow',
+            'allowed': True,
+            'requires_approval': False,
+        },
+        {
+            'decision_id': 'decision:v1-g44:001',
+            'status': 'deny',
+            'allowed': False,
+            'requires_approval': False,
+        },
+        {
+            'decision_id': 'decision:v1-g44:001',
+            'status': 'approval_required',
+            'allowed': False,
+            'requires_approval': True,
+        },
+    ],
+)
+def test_v1_g46_invalid_guardian_decisions_fail_closed(
+    guardian_decision: Any,
+) -> None:
+    calls = 0
+
+    def fake_executor(payload: Any) -> dict[str, Any]:
+        nonlocal calls
+        calls += 1
+        return _provider_result()
+
+    with pytest.raises(V1LiveProviderModelCallExecutionError, match='Guardian|guardian'):
+        execute_v1_live_provider_model_call(
+            _execution_request(guardian_decision=guardian_decision),
+            fake_executor,
+        )
+
+    assert calls == 0
+
+
+def test_v1_g46_guardian_decision_id_is_preserved_end_to_end() -> None:
+    observed_payload: dict[str, Any] = {}
+
+    def fake_executor(payload: Any) -> dict[str, Any]:
+        observed_payload.update(payload)
+        return _provider_result()
+
+    record = execute_v1_live_provider_model_call(_execution_request(), fake_executor)
+
+    expected = 'decision:v1-g44:001'
+    assert observed_payload['guardian_decision_id'] == expected
+    assert observed_payload['guardian_decision']['decision_id'] == expected
+    assert record['guardian_decision_id'] == expected
+    assert record['guardian_decision']['decision_id'] == expected
+
+
+def test_v1_g46_mismatched_guardian_lineage_fails_closed() -> None:
+    with pytest.raises(V1LiveProviderModelCallExecutionError, match='does not match'):
+        execute_v1_live_provider_model_call(
+            _execution_request(
+                guardian_decision={
+                    'decision_id': 'guardian-decision:wrong',
+                    'status': 'allow',
+                    'allowed': True,
+                    'requires_approval': False,
+                }
+            ),
+            lambda payload: _provider_result(),
+        )
+
+
+def test_v1_g46_unsupported_executor_fails_closed() -> None:
+    calls = 0
+
+    def executor(payload: Any) -> dict[str, Any]:
+        nonlocal calls
+        calls += 1
+        return _provider_result()
+
+    with pytest.raises(V1LiveProviderModelCallExecutionError, match='unsupported executor'):
+        execute_v1_live_provider_model_call(
+            _execution_request(provider_executor_ref='provider-executor:network'),
+            executor,
+        )
+
+    assert calls == 0
 
 
 def test_v1_g46_runtime_source_has_no_direct_provider_or_network_clients() -> None:

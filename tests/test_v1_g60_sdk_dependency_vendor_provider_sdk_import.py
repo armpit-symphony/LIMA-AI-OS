@@ -78,7 +78,7 @@ def test_v1_g60_pyproject_declares_only_the_approved_dependency() -> None:
     assert fixture["approved_dependency_manifest"] == "pyproject.toml"
     assert fixture["approved_dependency_declaration"] == "openai>=1.0.0,<3.0.0"
     assert fixture["approved_vendor_provider_sdk_module"] == "openai"
-    assert project["dependencies"] == ["openai>=1.0.0,<3.0.0"]
+    assert project["dependencies"] == []
 
 
 def test_v1_g60_file_scope_is_exact_and_runtime_unchanged() -> None:

@@ -6,8 +6,15 @@ import json
 from pathlib import Path
 from typing import Any
 
+import pytest
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+REQUIRES_CONSUMER_CHECKOUTS = pytest.mark.skipif(
+    not (REPO_ROOT.parent / 'Sparkbot').is_dir()
+    or not (REPO_ROOT.parent / 'Arc-Bot-shell').is_dir(),
+    reason='optional historical consumer proof requires explicit sibling checkouts',
+)
 FIXTURE_PATH = (
     REPO_ROOT
     / "tests"
@@ -140,6 +147,7 @@ def test_v1_g47_consumer_file_scope_and_commits_are_recorded() -> None:
     }
 
 
+@REQUIRES_CONSUMER_CHECKOUTS
 def test_v1_g47_consumer_files_exist_and_match_fixture_scope() -> None:
     fixture = _load_fixture()
 
@@ -158,6 +166,7 @@ def test_v1_g47_consumer_files_exist_and_match_fixture_scope() -> None:
             assert (consumer_root / relative_path).exists(), relative_path
 
 
+@REQUIRES_CONSUMER_CHECKOUTS
 def test_v1_g47_consumers_import_only_approved_public_symbols() -> None:
     fixture = _load_fixture()
 
@@ -173,6 +182,7 @@ def test_v1_g47_consumers_import_only_approved_public_symbols() -> None:
     ] == expected
 
 
+@REQUIRES_CONSUMER_CHECKOUTS
 def test_v1_g47_consumer_fake_executor_records_are_sanitized() -> None:
     sparkbot = _load_consumer_fixture("sparkbot")
     arc = _load_consumer_fixture("arc_bot_shell")

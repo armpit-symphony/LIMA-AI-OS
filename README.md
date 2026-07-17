@@ -1,5 +1,8 @@
 # LIMA-AI-OS
 
+Arc consumers use the fake-executor-only runtime baseline documented in
+[`docs/ARC_CONSUMER_RUNTIME_BASELINE.md`](docs/ARC_CONSUMER_RUNTIME_BASELINE.md).
+
 Current status: v0.1 governed dry-run runtime kernel alpha in recovery. Not a full AI OS. Not production Sparkbot/Arc runtime. No execution.
 
 LIMA-AI-OS is the Phase 0 home for the **LIMA Runtime / LIMA Kernel**: a Guardian-gated agent and robotics runtime extracted from Sparkbot.

@@ -13,6 +13,7 @@ from lima.guardian.guardian_core_policy_adapter import (
     GUARDIAN_CORE_SOURCE_POLICY,
     STATIC_FALLBACK_SOURCE_POLICY,
 )
+from lima.guardian import guardian_core_policy_adapter
 from lima.runtime import run_governed_request
 
 
@@ -134,6 +135,14 @@ def test_guardian_core_source_policy_is_reported_when_used(monkeypatch: pytest.M
 
 
 def test_static_fallback_is_explicit_when_guardian_core_unavailable(monkeypatch: pytest.MonkeyPatch) -> None:
+    def unavailable() -> None:
+        raise ModuleNotFoundError('guardian_core is intentionally unavailable')
+
+    monkeypatch.setattr(
+        guardian_core_policy_adapter,
+        '_load_guardian_core_decider',
+        unavailable,
+    )
     monkeypatch.delitem(sys.modules, "guardian_core", raising=False)
     monkeypatch.delitem(sys.modules, "guardian_core.policy", raising=False)
 

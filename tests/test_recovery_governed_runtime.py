@@ -4,9 +4,26 @@ from __future__ import annotations
 
 from typing import Any
 
+import pytest
+
 from lima.contracts import GovernedDecision, GovernedRequest
+from lima.guardian import guardian_core_policy_adapter
 from lima.guardian.policy_adapter import map_guardian_semantic
 from lima.runtime import run_governed_request
+
+
+@pytest.fixture(autouse=True)
+def _force_static_policy_for_recovery_tests(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    def unavailable() -> None:
+        raise ModuleNotFoundError('guardian_core is intentionally unavailable')
+
+    monkeypatch.setattr(
+        guardian_core_policy_adapter,
+        '_load_guardian_core_decider',
+        unavailable,
+    )
 
 
 def _request(**overrides: Any) -> dict[str, Any]:

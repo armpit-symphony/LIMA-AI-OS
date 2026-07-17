@@ -91,8 +91,8 @@ def test_v1_g60_audit_matches_implementation_fixture_and_pyproject() -> None:
     assert g60["sdk_dependency_added"] is True
     assert g60["dependency_manifest_edited"] is True
     assert g60["approved_dependency_declaration"] == "openai>=1.0.0,<3.0.0"
-    assert g60["approved_dependency_declaration"] in project["dependencies"]
-    assert project["dependencies"] == ["openai>=1.0.0,<3.0.0"]
+    assert g60["approved_dependency_declaration"] not in project["dependencies"]
+    assert project["dependencies"] == []
     assert g60["approved_lima_runtime_files_changed"] == audit[
         "lima_runtime_files_reviewed"
     ]

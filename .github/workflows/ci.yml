@@ -18,3 +18,5 @@ jobs:
         run: python -m compileall lima tests
       - name: Tests
         run: pytest -q
+      - name: Installed Arc consumer fake-executor proof
+        run: python scripts/prove_arc_consumer_baseline.py

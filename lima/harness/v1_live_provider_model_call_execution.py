@@ -15,6 +15,8 @@ import hashlib
 import json
 from typing import Any, Final
 
+from lima.contracts.guardian import GuardianDecision, GuardianDecisionStatus
+
 
 SCHEMA_VERSION: Final[str] = "v1-g46-candidate"
 AUTHORITY_SCHEMA_VERSION: Final[str] = "v1-g44-candidate"
@@ -22,6 +24,7 @@ ALLOWED_FINISH_STATUSES: Final[frozenset[str]] = frozenset(
     {"completed", "blocked", "failed", "cancelled"}
 )
 REQUIRED_EXECUTION_FIELDS: Final[tuple[str, ...]] = (
+    'guardian_decision',
     "execution_id",
     "authority_record",
     "provider_executor_ref",
@@ -186,16 +189,31 @@ def execute_v1_live_provider_model_call(
     _reject_raw_sensitive_content(execution_request)
     _reject_forbidden_claims(execution_request)
 
+    if execution_request.get('runtime_consumer') == 'arc_bot_shell':
+        return _execute_arc_consumer_baseline(execution_request, provider_executor)
+
+    guardian_decision = _validate_guardian_decision(
+        execution_request.get('guardian_decision')
+    )
+
     for field_name in REQUIRED_EXECUTION_FIELDS:
         if field_name not in execution_request:
             raise V1LiveProviderModelCallExecutionError(f"{field_name} is required")
 
     execution_id = _required_text(execution_request.get("execution_id"), "execution_id")
     authority = _validate_authority_record(execution_request.get("authority_record"))
+    if authority['guardian_decision_id'] != guardian_decision['decision_id']:
+        raise V1LiveProviderModelCallExecutionError(
+            'Guardian decision_id does not match authority lineage'
+        )
     provider_executor_ref = _required_text(
         execution_request.get("provider_executor_ref"),
         "provider_executor_ref",
     )
+    if 'fake' not in provider_executor_ref.lower():
+        raise V1LiveProviderModelCallExecutionError(
+            'unsupported executor; this baseline accepts fake executors only'
+        )
     provider_request_ref = _required_text(
         execution_request.get("provider_request_ref"),
         "provider_request_ref",
@@ -253,6 +271,8 @@ def execute_v1_live_provider_model_call(
     )
 
     executor_payload = {
+        'guardian_decision': dict(guardian_decision),
+        'guardian_decision_id': guardian_decision['decision_id'],
         "execution_id": execution_id,
         "authority_id": authority["authority_id"],
         "authority_record_hash": authority["record_hash"],
@@ -281,6 +301,8 @@ def execute_v1_live_provider_model_call(
     result = _validate_provider_result(provider_result)
 
     record = {
+        'guardian_decision': dict(guardian_decision),
+        'guardian_decision_id': guardian_decision['decision_id'],
         "record_type": "v1_live_provider_model_call_execution",
         "schema_version": SCHEMA_VERSION,
         "execution_id": execution_id,
@@ -357,6 +379,112 @@ def execute_v1_live_provider_model_call(
     return record
 
 
+def _execute_arc_consumer_baseline(
+    runtime_request: Mapping[str, Any],
+    executor: Callable[[Mapping[str, Any]], Mapping[str, Any]],
+) -> dict[str, Any]:
+    required_fields = (
+        'request_id',
+        'runtime_consumer',
+        'requested_action',
+        'guardian_decision',
+        'executor_ref',
+        'normalized_request',
+    )
+    for field_name in required_fields:
+        if field_name not in runtime_request:
+            raise V1LiveProviderModelCallExecutionError(f'{field_name} is required')
+
+    request_id = _required_text(runtime_request.get('request_id'), 'request_id')
+    if runtime_request.get('runtime_consumer') != 'arc_bot_shell':
+        raise V1LiveProviderModelCallExecutionError('unsupported runtime consumer')
+    if runtime_request.get('requested_action') != 'arc.local_model_preview':
+        raise V1LiveProviderModelCallExecutionError('unsupported requested action')
+    guardian_decision = _validate_guardian_decision(
+        runtime_request.get('guardian_decision')
+    )
+    executor_ref = _required_text(runtime_request.get('executor_ref'), 'executor_ref')
+    if 'fake' not in executor_ref.lower():
+        raise V1LiveProviderModelCallExecutionError(
+            'unsupported executor; this baseline accepts fake executors only'
+        )
+    normalized_request = _mapping(
+        runtime_request.get('normalized_request'),
+        'normalized_request',
+    )
+
+    executor_payload = {
+        'request_id': request_id,
+        'runtime_consumer': 'arc_bot_shell',
+        'requested_action': 'arc.local_model_preview',
+        'guardian_decision': dict(guardian_decision),
+        'guardian_decision_id': guardian_decision['decision_id'],
+        'normalized_request': dict(normalized_request),
+        'evidence_refs': list(
+            _string_sequence(
+                runtime_request.get('evidence_refs', ()),
+                'evidence_refs',
+                allow_empty=True,
+            )
+        ),
+    }
+
+    try:
+        raw_result = executor(executor_payload)
+    except Exception as exc:  # pragma: no cover - exact exception type is caller-owned.
+        raise V1LiveProviderModelCallExecutionError('provider executor failed') from exc
+
+    result = _mapping(raw_result, 'executor result')
+    provider = _required_text(result.get('provider'), 'executor result.provider')
+    model = _required_text(result.get('model'), 'executor result.model')
+    output_text = _required_text(
+        result.get('output_text'),
+        'executor result.output_text',
+    )
+    _reject_raw_sensitive_content(output_text)
+    if result.get('network_called') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'fake executor must report network_called=false'
+        )
+    if result.get('credentials_used') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'fake executor must report credentials_used=false'
+        )
+    if result.get('ollama_called', False) is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'fake executor must report ollama_called=false'
+        )
+
+    record = {
+        'record_type': 'arc_consumer_runtime_baseline',
+        'schema_version': 'arc-consumer-baseline-v1',
+        'status': 'completed',
+        'request_id': request_id,
+        'runtime_consumer': 'arc_bot_shell',
+        'requested_action': 'arc.local_model_preview',
+        'guardian_decision': dict(guardian_decision),
+        'guardian_decision_id': guardian_decision['decision_id'],
+        'executor_ref': executor_ref,
+        'executor_called': True,
+        'provider': provider,
+        'model': model,
+        'output_text': output_text,
+        'network_called': False,
+        'credentials_used': False,
+        'ollama_called': False,
+        'evidence': {
+            'guardian_decision_id': guardian_decision['decision_id'],
+            'executor_ref': executor_ref,
+            'executor_called': True,
+            'network_called': False,
+            'credentials_used': False,
+            'ollama_called': False,
+        },
+    }
+    record['record_hash'] = _record_hash(record)
+    return record
+
+
 def _validate_authority_record(value: Any) -> dict[str, Any]:
     authority = _mapping(value, "authority_record")
     if authority.get("record_type") != "v1_live_provider_model_call_authority":
@@ -389,7 +517,21 @@ def _validate_authority_record(value: Any) -> dict[str, Any]:
                 "V1-G44 authority cannot already claim execution"
             )
 
+    lineage = _mapping(
+        authority.get('request_or_guardian_decision_linkage'),
+        'authority_record.request_or_guardian_decision_linkage',
+    )
+    guardian_decision_id = _required_text(
+        lineage.get('guardian_decision_id'),
+        'authority_record.request_or_guardian_decision_linkage.guardian_decision_id',
+    )
+    if lineage.get('linkage_required') is not True:
+        raise V1LiveProviderModelCallExecutionError(
+            'Guardian decision lineage must be required'
+        )
+
     return {
+        'guardian_decision_id': guardian_decision_id,
         "authority_id": _required_text(authority.get("authority_id"), "authority_id"),
         "record_hash": _required_text(authority.get("record_hash"), "record_hash"),
         "provider_id": _required_text(authority.get("provider_id"), "provider_id"),
@@ -405,6 +547,49 @@ def _validate_authority_record(value: Any) -> dict[str, Any]:
             "estimated_cost_class",
         ),
         "latency_tier": _required_text(authority.get("latency_tier"), "latency_tier"),
+    }
+
+
+def _validate_guardian_decision(value: Any) -> dict[str, Any]:
+    if isinstance(value, GuardianDecision):
+        decision_id = _required_text(value.decision_id, 'guardian_decision.decision_id')
+        if value.status is not GuardianDecisionStatus.APPROVED:
+            raise V1LiveProviderModelCallExecutionError(
+                'Guardian decision must be approved and execution-eligible'
+            )
+        return {
+            'decision_id': decision_id,
+            'status': value.status.value,
+            'allowed': True,
+            'requires_approval': False,
+        }
+
+    decision = _mapping(value, 'guardian_decision')
+    decision_id = _required_text(
+        decision.get('decision_id'),
+        'guardian_decision.decision_id',
+    )
+    raw_status = decision.get('status')
+    if isinstance(raw_status, GuardianDecisionStatus):
+        raw_status = raw_status.value
+    status = _normalize_token(_required_text(raw_status, 'guardian_decision.status'))
+    if status not in {'allow', 'allowed', 'approved'}:
+        raise V1LiveProviderModelCallExecutionError(
+            'Guardian decision must be approved and execution-eligible'
+        )
+    if decision.get('allowed') is not True:
+        raise V1LiveProviderModelCallExecutionError(
+            'Guardian decision must explicitly allow execution'
+        )
+    if decision.get('requires_approval') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'Guardian approval-required decisions cannot execute'
+        )
+    return {
+        'decision_id': decision_id,
+        'status': status,
+        'allowed': True,
+        'requires_approval': False,
     }
 
 
