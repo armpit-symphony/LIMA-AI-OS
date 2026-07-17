@@ -1,0 +1,61 @@
+{
+  "gate_id": "v1_g15_shell_harness_guiderail_contract",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g15-shell-harness-guiderail-contract",
+  "operator_decision": "Approve-V1-G15",
+  "approved_scope": "shell_harness_guiderail_input_contract_slice",
+  "approved_file_map": [
+    "lima/shells/contracts/v1_guiderail_input.py",
+    "lima/shells/contracts/__init__.py",
+    "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT.md",
+    "docs/V1_G15_SHELL_HARNESS_GUIDERAIL_CONTRACT_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g15_shell_harness_guiderail_contract.json",
+    "tests/test_v1_g15_shell_harness_guiderail_contract.py"
+  ],
+  "runtime_symbols": [
+    "V1GuiderailInputError",
+    "validate_v1_shell_harness_guiderail_input"
+  ],
+  "runtime_behavior_added": true,
+  "runtime_behavior_scope": "candidate_local_shell_harness_guiderail_input_validation",
+  "required_contract_fields": [
+    "capability_profile",
+    "guardrail_mode",
+    "approval_policy",
+    "actor_scope",
+    "session_scope",
+    "tenant_scope",
+    "shell_scope",
+    "allowed_capability_lanes",
+    "destructive_edit_delete_policy",
+    "file_mutation_policy",
+    "provider_model_policy",
+    "connector_policy",
+    "browser_network_policy",
+    "physical_world_policy",
+    "emergency_stop_expectations",
+    "rollback_expectations",
+    "dry_run_vs_execution_authorized_posture",
+    "operator_approval_evidence_expectations",
+    "audit_evidence_linkage_expectations"
+  ],
+  "capability_open": true,
+  "authority_gated": true,
+  "physical_world_policy": "blocked_until_dedicated_authority_lane",
+  "forbidden_behavior": {
+    "consumer_integration_added": false,
+    "shell_runtime_wiring_added": false,
+    "provider_model_routing_added": false,
+    "connector_behavior_added": false,
+    "browser_network_behavior_added": false,
+    "file_mutation_behavior_added": false,
+    "device_robotics_physical_world_behavior_added": false,
+    "humaninput_bridge_activated": false,
+    "external_sends_added": false,
+    "approval_token_issued": false,
+    "raw_pin_verification_added": false,
+    "final_api_freeze_approved": false,
+    "product_ready": false
+  },
+  "recommended_next_step": "separate_v1_g15_audit_branch"
+}

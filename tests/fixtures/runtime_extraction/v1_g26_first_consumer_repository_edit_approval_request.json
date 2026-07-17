@@ -1,0 +1,92 @@
+{
+  "gate_id": "v1_g26_first_consumer_repository_edit_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g26-first-consumer-repository-edit-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "consumer_repository_edit_implementation_added": false,
+  "lima_runtime_files_changed": false,
+  "sparkbot_runtime_source_mutation_added": false,
+  "arc_bot_shell_runtime_source_mutation_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_code_imports_added": false,
+  "live_lima_imports_from_consumers_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "runtime_export_cleanup_approved": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G26",
+    "Revise-V1-G26",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G26 implementation of the first consumer repository edit slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g26-first-consumer-repository-edit",
+  "local_path_audit": {
+    "read_only": true,
+    "sparkbot_repo": "C:/Users/limap/Sparkbot",
+    "sparkbot_branch_seen": "proof-sparkbot-shell-lima-consumer-packet",
+    "arc_bot_shell_repo": "C:/Users/limap/Arc-Bot-shell",
+    "arc_bot_shell_branch_seen": "v1-g7-arc-bot-shell-integration-proof-packet",
+    "arc_bot_shell_pytest_cache_warning_seen": true,
+    "pytest_cache_allowed": false
+  },
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "required_prior_evidence_refs": [
+    "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE.md",
+    "docs/V1_G21_CONSUMER_INTEGRATION_COMPATIBILITY_FREEZE.md",
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G23_CONSUMER_INTEGRATION_PROOF_TO_IMPORT_DRY_RUN.md",
+    "docs/V1_G24_FIRST_CONSUMER_IMPORT_PLAN_EVIDENCE_PACKETS.md",
+    "docs/V1_G25_FIRST_CONSUMER_REPO_PATCH_PREVIEW_EVIDENCE.md"
+  ],
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT.md",
+    "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g26_first_consumer_repository_edit.json",
+    "tests/test_v1_g26_first_consumer_repository_edit.py"
+  ],
+  "approved_sparkbot_files_if_operator_says_yes": [
+    "docs/proof_packets/SPARKBOT_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+    "tests/fixtures/sparkbot_lima_v1_g26_static_consumer_edit_packet.json",
+    "tests/test_sparkbot_lima_v1_g26_static_consumer_edit_packet.py"
+  ],
+  "approved_arc_bot_shell_files_if_operator_says_yes": [
+    "docs/proof_packets/ARC_BOT_SHELL_LIMA_V1_G26_STATIC_CONSUMER_EDIT_PACKET.md",
+    "tests/fixtures/arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.json",
+    "tests/test_arc_bot_shell_lima_v1_g26_static_consumer_edit_packet.py"
+  ],
+  "consumer_edit_scope_if_approved": {
+    "sparkbot": "static_docs_tests_fixtures_only",
+    "arc_bot": "static_docs_tests_fixtures_only",
+    "runtime_source_files_allowed": false,
+    "live_imports_allowed": false,
+    "runtime_calls_allowed": false
+  },
+  "documents": {
+    "approval_request": "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g26_revise_v1_g26_or_pause"
+}

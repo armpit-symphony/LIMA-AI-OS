@@ -1,0 +1,44 @@
+{
+  "guard_id": "v1_g11_no_implicit_runtime_approval_guard",
+  "gap_id": "V1-G11",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "document": "docs/V1_G11_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md",
+  "guard_status": "retired_after_approve_v1_g11_recorded",
+  "docs_tests_fixtures_only": true,
+  "operator_approval_recorded": true,
+  "runtime_implementation_approved": true,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "shell_repos_changed": false,
+  "runtime_exports_changed": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "guarded_fixture_files": [
+    "tests/fixtures/runtime_extraction/v1_readme_status_alignment.json",
+    "tests/fixtures/runtime_extraction/v1_readiness_gap_matrix.json",
+    "tests/fixtures/runtime_extraction/v1_product_readiness_target.json",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate_work_order.json",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate_approval_request.json",
+    "tests/fixtures/runtime_extraction/v1_g11_roadmap_decision_alignment.json",
+    "tests/fixtures/runtime_extraction/v1_g11_operator_decision_readiness_closeout.json",
+    "tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json",
+    "tests/fixtures/runtime_extraction/v1_g11_broad_goal_non_approval_audit.json"
+  ],
+  "authoritative_approval_record": {
+    "file": "tests/fixtures/runtime_extraction/v1_g11_operator_decision_packet.json",
+    "path": "decision_record",
+    "recorded_choice": "Approve-V1-G11",
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": true
+  },
+  "doc_required_phrases": [
+    "The valid `Approve-V1-G11` decision is now recorded",
+    "Guard status: retired after valid `Approve-V1-G11` decision recorded",
+    "Runtime implementation approved: yes, limited to the exact V1-G11 request scope"
+  ],
+  "recommended_next_step": "create_approved_v1_g11_implementation_branch"
+}

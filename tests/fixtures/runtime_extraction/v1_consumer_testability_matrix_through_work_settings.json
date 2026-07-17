@@ -1,0 +1,127 @@
+{
+  "matrix_id": "v1_consumer_testability_matrix_through_work_settings",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-consumer-testability-through-work-settings",
+  "source_lima_commit_before_matrix": "525648d1d7ef536dc89e793095db89f69728c015",
+  "documents": {
+    "consumer_testability_matrix": "docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md",
+    "consumer_work_settings_readiness_audit": "docs/audits/V1_CONSUMER_WORK_SETTINGS_READINESS_AUDIT.md",
+    "public_sparkbot_publication_audit": "docs/audits/V1_PUBLIC_SPARKBOT_PREVIEW_PUBLICATION_AUDIT.md",
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "g61_operator_decision_packet": "docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_OPERATOR_DECISION_PACKET.md",
+    "g61_operator_decision_packet_status_audit": "docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md",
+    "current_gate_consistency_audit": "docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md",
+    "current_candidate_validation_refresh_audit": "docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md",
+    "candidate_test_handoff_manifest": "docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md",
+    "candidate_harness_quickstart": "docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md"
+  },
+  "current_status_refresh": {
+    "current_gate": "V1-G61",
+    "latest_completed_gate": "V1-G60",
+    "latest_authority_chain_audit": "V1-G56",
+    "required_next_action": "record_exactly_one_v1_g61_operator_choice",
+    "valid_operator_choices": [
+      "Approve-V1-G61",
+      "Revise-V1-G61",
+      "Pause"
+    ],
+    "v1_g61_operator_approval_recorded": false,
+    "v1_g61_runtime_vendor_sdk_import_execution_proof_implemented": false,
+    "g61_operator_decision_packet_status_audit": "awaiting_exactly_one_valid_operator_choice",
+    "historical_g55_gate_superseded_for_current_action": true,
+    "latest_post_g61_request_refresh_focused_tests_passed": 8,
+    "latest_post_g61_request_refresh_broader_tests_passed": 117,
+    "latest_post_g61_request_refresh_full_lima_suite_tests_passed": 5362,
+    "latest_quickstart_artifact_refresh_focused_tests_passed": 7,
+    "latest_quickstart_artifact_refresh_adjacent_tests_passed": 64,
+    "latest_quickstart_artifact_refresh_broader_tests_passed": 133,
+    "latest_quickstart_artifact_refresh_full_lima_suite_tests_passed": 5364,
+    "latest_handoff_freshness_authority_created": false
+  },
+  "consumer_branches": {
+    "public_sparkbot": {
+      "repository": "armpit-symphony/Sparkbot",
+      "target_repository": "sparkpit-labs/Sparkbot",
+      "branch": "public-work-settings-preview",
+      "commit": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+      "target_pr_created": false,
+      "manual_compare_url": "https://github.com/sparkpit-labs/Sparkbot/compare/main...armpit-symphony:public-work-settings-preview?expand=1"
+    },
+    "sparkbot_shell": {
+      "repository": "armpit-symphony/Sparkbot_shell",
+      "branch": "sparkbot-shell-work-settings-runtime-preview",
+      "commit": "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc"
+    },
+    "arc_bot_shell": {
+      "repository": "armpit-symphony/Arc-Bot-shell",
+      "branch": "arc-work-queue-runtime-settings-docs",
+      "commit": "a05faea14ab24341b4b4567967911e33e51ce88a"
+    },
+    "lima_ai_os": {
+      "repository": "armpit-symphony/LIMA-AI-OS",
+      "branch": "audit-v1-consumer-work-settings-readiness",
+      "commit": "525648d1d7ef536dc89e793095db89f69728c015"
+    }
+  },
+  "validation_commands": [
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "result": "93 passed in 0.27s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "result": "13 passed in 0.04s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "npm run build",
+      "result": "passed: tsc --noEmit && vite build"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": ".\\.venv-public-test\\Scripts\\python.exe -B -m pytest -q backend\\tests\\test_capabilities.py -p no:cacheprovider",
+      "result": "4 passed, 1 Starlette/httpx deprecation warning"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run test -- --run",
+      "result": "1 test file passed, 4 tests passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run build",
+      "result": "passed: vite build"
+    },
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "result": "4698 passed"
+    }
+  ],
+  "proves": [
+    "consumer_work_settings_surfaces_are_testable_from_named_branches",
+    "public_sparkbot_static_work_local_ai_preview_has_backend_frontend_checks",
+    "sparkbot_shell_local_browser_preview_has_boundary_tests",
+    "arc_bot_shell_operator_console_work_queue_runtime_settings_docs_have_tests",
+    "lima_records_matching_consumer_readiness_audit"
+  ],
+  "does_not_prove": {
+    "v1_g55_implementation_approved": false,
+    "lima_provider_sdk_network_egress_runtime_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "provider_model_generation_through_lima_added": false,
+    "credential_lookup_or_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "non_local_endpoint_checks_allowed": false,
+    "connector_browser_network_file_device_robotics_physical_world_authority_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "public_sparkbot_target_pr_created": false,
+    "product_ready": false,
+    "production_ready": false,
+    "v1_0_complete": false
+  },
+  "recommended_next_step": "record_one_valid_operator_choice_in_v1_g61_operator_decision_packet",
+  "historical_recommended_next_step": "keep_consumer_branches_separate_and_testable_while_v1_g55_is_pending"
+}

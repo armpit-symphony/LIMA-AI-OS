@@ -1,0 +1,107 @@
+{
+  "packet_set_id": "v1_g45_runtime_export_cleanup_public_api_refresh",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g45-runtime-export-cleanup-public-api-refresh",
+  "operator_decision": "Approve-V1-G45",
+  "approved_scope": "runtime_export_cleanup_public_api_refresh_slice",
+  "runtime_export_cleanup_public_api_refresh_approved": true,
+  "runtime_export_cleanup_public_api_refresh_added": true,
+  "lima_runtime_files_changed": true,
+  "approved_runtime_files_changed": [
+    "lima/harness/__init__.py"
+  ],
+  "approved_docs_tests_fixtures_changed": [
+    "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH.md",
+    "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g45_runtime_export_cleanup_public_api_refresh.json",
+    "tests/test_v1_g45_runtime_export_cleanup_public_api_refresh.py",
+    "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json"
+  ],
+  "cleanup_target": {
+    "package": "lima.harness",
+    "runtime_file": "lima/harness/__init__.py",
+    "export_surface": "lima.harness.__all__",
+    "source_existing_validator_module": "lima/harness/v1_live_provider_model_call_authority.py"
+  },
+  "previous_frozen_harness_exports": [
+    "V1ProviderModelRoutingAuthorityError",
+    "validate_v1_provider_model_routing_authority"
+  ],
+  "added_harness_exports": [
+    "V1LiveProviderModelCallAuthorityError",
+    "validate_v1_live_provider_model_call_authority"
+  ],
+  "post_refresh_harness_all_exports": [
+    "V1ProviderModelRoutingAuthorityError",
+    "validate_v1_provider_model_routing_authority",
+    "V1LiveProviderModelCallAuthorityError",
+    "validate_v1_live_provider_model_call_authority"
+  ],
+  "existing_frozen_harness_exports_preserved": true,
+  "existing_frozen_harness_exports_removed": false,
+  "existing_frozen_harness_exports_renamed": false,
+  "validator_behavior_changed": false,
+  "new_validator_added": false,
+  "g44_validator_module_changed": false,
+  "g20_validator_module_changed": false,
+  "g22_final_public_api_freeze_fixture_refreshed": true,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "live_provider_model_call_execution_added": false,
+  "actual_model_request_dispatch_execution_added": false,
+  "network_call_added": false,
+  "provider_readiness_network_check_added": false,
+  "token_guardian_live_routing_added": false,
+  "secret_lookup_added": false,
+  "credential_value_access_added": false,
+  "fallback_execution_added": false,
+  "tool_execution_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "raw_prompt_model_response_customer_data_persisted": false,
+  "credential_or_secret_persisted": false,
+  "product_ready": false,
+  "accepted_evidence_refs": [
+    "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH_APPROVAL_REQUEST.md",
+    "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH_OPERATOR_DECISION_PACKET.md",
+    "docs/V1_G44_LIVE_PROVIDER_MODEL_CALL_AUTHORITY.md",
+    "docs/V1_G44_LIVE_PROVIDER_MODEL_CALL_AUTHORITY_CLOSEOUT.md",
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/audits/V1_G44_LIVE_PROVIDER_MODEL_CALL_AUTHORITY_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G44_AUDIT.md"
+  ],
+  "rollback_metadata": {
+    "rollback_ref": "rollback:v1-g45:runtime-export-cleanup-public-api-refresh",
+    "rollback_runtime_file_refs": [
+      "lima/harness/__init__.py"
+    ],
+    "rollback_fixture_refs": [
+      "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json"
+    ],
+    "remove_docs_tests_fixtures_refs": [
+      "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH.md",
+      "docs/V1_G45_RUNTIME_EXPORT_CLEANUP_PUBLIC_API_REFRESH_CLOSEOUT.md",
+      "tests/fixtures/runtime_extraction/v1_g45_runtime_export_cleanup_public_api_refresh.json",
+      "tests/test_v1_g45_runtime_export_cleanup_public_api_refresh.py"
+    ],
+    "consumer_repo_changes_required": false,
+    "external_service_changes_required": false,
+    "provider_configuration_changes_required": false,
+    "credential_rotation_required": false
+  },
+  "required_confirmations": {
+    "no_validator_behavior_change_confirmation": true,
+    "no_consumer_repo_mutation_confirmation": true,
+    "no_live_provider_model_execution_confirmation": true,
+    "no_network_secret_credential_fallback_tool_connector_physical_world_confirmation": true,
+    "no_raw_content_secret_credential_customer_data_patch_persistence_confirmation": true,
+    "proof_not_authority_confirmation": true
+  }
+}

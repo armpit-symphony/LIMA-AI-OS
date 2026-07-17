@@ -1,0 +1,93 @@
+{
+  "audit_id": "v1_g14_implementation_blocker_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g14-destructive-approval-enforcement-approval-request",
+  "source_commit_before_audit": "c3f55365b0b37af52b73b4fdb7b25c5a5de22005",
+  "docs_tests_fixtures_only": true,
+  "audit_verdict": "BLOCKED_PENDING_OPERATOR_DECISION",
+  "blocker": "missing_valid_approve_v1_g14_decision_record",
+  "required_unblock_choice": "Approve-V1-G14",
+  "required_approved_branch": "v1-g14-destructive-approval-enforcement",
+  "documents": {
+    "approval_request": "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_APPROVAL_REQUEST.md",
+    "preflight_audit": "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_PREFLIGHT_AUDIT.md",
+    "work_order": "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G14_DESTRUCTIVE_APPROVAL_ENFORCEMENT_OPERATOR_DECISION_PACKET.md",
+    "no_implicit_approval_guard": "docs/V1_G14_NO_IMPLICIT_RUNTIME_APPROVAL_GUARD.md",
+    "implementation_blocker_audit": "docs/audits/V1_G14_IMPLEMENTATION_BLOCKER_AUDIT.md",
+    "current_state": "docs/CURRENT_PROJECT_STATE.md"
+  },
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "runtime_implementation_approved": false
+  },
+  "valid_operator_choices": [
+    "Approve-V1-G14",
+    "Revise-V1-G14",
+    "Pause"
+  ],
+  "inputs_that_are_not_approval": [
+    "persistent_broad_goal",
+    "v1_g13_recommendation",
+    "v1_g14_approval_request",
+    "v1_g14_preflight_audit",
+    "v1_g14_work_order",
+    "operator_decision_packet_with_recorded_choice_none",
+    "v1_g3_static_destructive_approval_contract",
+    "v1_g11_runtime_request_decision_gate_evidence",
+    "v1_g12_durable_audit_evidence_persistence_evidence",
+    "successful_validation_on_request_branch"
+  ],
+  "can_continue_without_approval": [
+    "docs_tests_fixtures_review",
+    "guard_docs",
+    "audit_docs",
+    "decision_recording_work"
+  ],
+  "cannot_continue_without_approval": [
+    "v1_g14_runtime_implementation",
+    "lima_runtime_file_changes_for_v1_g14",
+    "destructive_approval_enforcement_behavior",
+    "file_mutation_delete_overwrite_external_file_action_behavior",
+    "approval_token_issuance",
+    "raw_pin_verification_or_persistence",
+    "approval_metadata_as_execution_authority",
+    "provider_model_routing",
+    "shell_wiring_or_consumer_integration",
+    "humaninput_bridge_activation",
+    "connector_behavior",
+    "browser_file_network_device_robotics_physical_world_behavior",
+    "external_database_migrations_queues_workers_daemons_subprocesses_threads",
+    "runtime_export_cleanup",
+    "final_api_freeze"
+  ],
+  "boundaries": {
+    "runtime_behavior_added": false,
+    "approval_enforcement_added": false,
+    "file_mutation_behavior_added": false,
+    "approval_tokens_issued": false,
+    "raw_pin_verification_or_persistence_added": false,
+    "external_database_writes_added": false,
+    "lima_runtime_files_changed": false,
+    "provider_model_routing_added": false,
+    "shell_runtime_wiring_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_behavior_added": false,
+    "consumer_repos_touched": false,
+    "sparkbot_touched": false,
+    "sparkbot_shell_touched": false,
+    "arc_bot_shell_touched": false,
+    "lima_robo_os_touched": false,
+    "lima_office_touched": false,
+    "product_ready": false,
+    "production_ready": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false
+  },
+  "recommended_next_step": "record_exactly_one_operator_choice_for_v1_g14"
+}

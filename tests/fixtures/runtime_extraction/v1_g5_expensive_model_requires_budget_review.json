@@ -1,0 +1,78 @@
+{
+  "case_id": "v1_g5_expensive_model_requires_budget_review",
+  "case_family": "routing_gate_fail_closed",
+  "docs_tests_fixtures_only": true,
+  "route_candidate": {
+    "route_family": "heavy_hitter_route",
+    "source_shell": "Arc-Bot-shell",
+    "provider_id": "anthropic",
+    "model_id": "claude-opus",
+    "model_role": "heavy_hitter",
+    "data_sensitivity": "project_context",
+    "prompt_context_class": "large_analysis",
+    "requested_tool_packs": [
+      "model"
+    ],
+    "allowed_tool_packs": [
+      "model"
+    ],
+    "secret_ref": "vault://providers/anthropic/default",
+    "budget_class": "requires_review",
+    "estimated_cost_class": "high",
+    "fallback_chain": [
+      "backup_model_route"
+    ]
+  },
+  "routing_gates": {
+    "shell_allows_model_pack": true,
+    "guardian_decision_allows_model_routing": false,
+    "provider_model_configured": true,
+    "secret_ref_exists_or_no_key_local": true,
+    "data_sensitivity_allowed": true,
+    "budget_cost_policy_allows": false,
+    "tool_pack_scope_allows": true,
+    "fallback_inherits_same_gates": true,
+    "audit_evidence_redacted": true
+  },
+  "static_review_result": {
+    "accepted_as_static_evidence": true,
+    "accepted_as_runtime_route": false,
+    "result": "blocked_expensive_model_requires_budget_review"
+  },
+  "kernel_status": "needs_review",
+  "packet_status": "explain_plan",
+  "expected_blocked_claims": [
+    "expensive_model_without_budget_review",
+    "provider_model_routing_claim"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "provider_model_routing_active": false,
+    "provider_model_call_allowed": false,
+    "provider_readiness_check_allowed": false,
+    "token_guardian_live_route_allowed": false,
+    "fallback_execution_allowed": false,
+    "secret_lookup_allowed": false,
+    "raw_secret_allowed": false,
+    "raw_private_context_in_audit_allowed": false,
+    "guardian_decision_created": false,
+    "approval_granted": false,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "external_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "file_mutation_allowed": false,
+    "connector_mutation_allowed": false,
+    "audit_persistence_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "runtime_test_harness_active": false
+  }
+}

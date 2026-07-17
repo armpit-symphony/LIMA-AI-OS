@@ -1,5 +1,10 @@
 # LIMA-AI-OS
 
+Arc consumers use the fake-executor-only runtime baseline documented in
+[`docs/ARC_CONSUMER_RUNTIME_BASELINE.md`](docs/ARC_CONSUMER_RUNTIME_BASELINE.md).
+
+Current status: v0.1 governed dry-run runtime kernel alpha in recovery. Not a full AI OS. Not production Sparkbot/Arc runtime. No execution.
+
 LIMA-AI-OS is the Phase 0 home for the **LIMA Runtime / LIMA Kernel**: a Guardian-gated agent and robotics runtime extracted from Sparkbot.
 
 This is not a greenfield rewrite. Sparkbot is the battle-tested source of truth. LIMA-AI-OS starts with architecture, contracts, and package boundaries so SparkPit Labs can extract the runtime safely, preserve Sparkbot parity, and put every externally actionable operation behind Guardian.
@@ -32,9 +37,9 @@ LIMA Runtime is the trust-gated operating layer that should eventually sit under
 
 The long-term vision can be called an AI OS. The engineering surface is more concrete: runtime, kernel, contracts, trust gate, model harness, spine, drivers, shells, tool packs, and persistence interface.
 
-## Phase 0 Status
+## Current Safety Status
 
-**Phase 0 only. No runtime implementation yet.**
+**Candidate-only, non-production safety work. No live/executing runtime behavior is approved.**
 
 This repository currently contains:
 
@@ -43,8 +48,47 @@ This repository currently contains:
 - Public contract definitions
 - Package skeleton
 - Import-only tests
+- Narrow non-executing candidate, preview, status-normalization, read-only runtime-state helpers, and a candidate-only local document harness for synthetic/non-sensitive local PC testing
 
 It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
+
+## Current V1 Status
+
+LIMA remains `CANDIDATE_ONLY`.
+
+Current post-approval update: `Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence. The proof imports only the approved `openai` module in tests, records sanitized version evidence `2.43.0`, and does not edit `lima/`, dependency manifests, lockfiles, Sparkbot, Arc-Bot-shell, provider clients, endpoint resolution, network egress, credentials, fallback, consumer production integration, product readiness, or final public API freeze. The latest V1 final readiness audit execution is recorded in `docs/audits/V1_FINAL_READINESS_AUDIT.md` with verdict `BLOCKED_RELEASE_CANDIDATE_CHECKLIST_AND_CUTOVER_AUTHORITY_NOT_SATISFIED`. Current consumer smoke and LIMA validation evidence pass, the release-candidate checklist is satisfied for first-consumer harness testing, and exactly one valid cutover operator choice remains required before any branch, tag, cutover, or readiness claim.
+
+Post-reconciliation update: `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md` records verdict `PASS_CANDIDATE_READY_FOR_FIRST_CONSUMER_HARNESS_TESTING_CUTOVER_AUTHORIZATION_REQUIRED`. This resolves the circular final-readiness/checklist blocker for first-consumer harness testing only. `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` is prepared with status `AWAITING_EXPLICIT_CUTOVER_OPERATOR_DECISION`; `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md` verifies recorded valid cutover operator choice count `0`. These artifacts do not authorize release-candidate branch creation, tag creation, cutover, V1.0.0 completion, product readiness, production readiness, or consumer production integration.
+
+Latest status update: `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md` records verdict `GOAL_NOT_COMPLETE_CUTOVER_OPERATOR_DECISION_REQUIRED`, and `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md` records verdict `PASS_CONSUMER_CHECKPOINT_FRESHNESS_CANDIDATE_ONLY_WITH_ARC_CLEAN_CHECKPOINT_CUTOVER_STILL_BLOCKED`. Sparkbot, Sparkbot_shell, and Arc-Bot-shell are clean local checkpoints. Arc-Bot-shell is pushed at `147cec0b9cb3ff6f060c8079a7f944526bb26b6f` with the runtime implementation gate response artifacts committed as planning/state-only evidence. These artifacts preserve the same cutover blocker and create no branch, tag, cutover, product-readiness, production-readiness, or consumer production integration authority.
+
+Local harness/install update: `bc63ed3b00055976b1728d80124137d7ce15d871` adds the candidate-only local install and read-only document harness lane. `docs/audits/V1_LOCAL_DOCUMENT_HARNESS_INSTALL_COMMITTED_FEATURE_AUDIT.md` records it as tracked local PC testing support only, and `docs/audits/V1_LOCAL_RUNTIME_DRIFT_EXCLUSION_AUDIT.md` is now a superseded drift-closure record. Use synthetic or non-sensitive local documents only; this lane does not authorize downloader/installer execution as release validation, customer-data processing, consumer production integration, branch creation, tagging, cutover, product readiness, or production readiness.
+
+The V1 target is to make LIMA usable first by `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`. The V1 runtime authority chain is audited through `V1-G56`; completed implementation evidence is refreshed through `V1-G60`; request-stage readiness is refreshed through the post-G61 request readiness refresh; and the V1-G61 runtime vendor SDK import execution proof approval request is prepared for operator decision.
+
+The V1-G61 request gate is independently audited in `docs/audits/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST_AUDIT.md`, with the current request-only readiness refresh recorded in `docs/readiness/V1_POST_G61_REQUEST_READINESS_REFRESH.md`. The preapproval runtime-tree guard is recorded in `docs/audits/V1_G61_PREAPPROVAL_RUNTIME_TREE_GUARD_AUDIT.md` and checks that no runtime vendor SDK import or provider client construction appears in `lima/` before exact approval. These artifacts preserve the operator-decision blocker and do not approve implementation.
+
+The V1-G61 operator decision packet status audit is recorded in `docs/audits/V1_G61_OPERATOR_DECISION_PACKET_STATUS_AUDIT.md`. It proves `Approve-V1-G61` is recorded for bounded local import-proof evidence only and does not create release-candidate, cutover, product-readiness, or production-readiness authority.
+
+The current gate consistency audit is recorded in `docs/audits/V1_CURRENT_GATE_CONSISTENCY_AUDIT.md`. It checks the current-facing README, project-state, readiness, and audit artifacts for alignment on the active V1-G61 operator-decision gate and rejects stale public Sparkbot publication or V1-G57 active-blocker language.
+
+The current local harness handoff for Sparkbot and Arc-Bot-shell is recorded in `docs/readiness/V1_CANDIDATE_TEST_HANDOFF_MANIFEST.md`, with the shortest safe local smoke command path captured in `docs/readiness/V1_CANDIDATE_HARNESS_QUICKSTART.md`, current quickstart execution evidence captured in `docs/audits/V1_CANDIDATE_HARNESS_QUICKSTART_EXECUTION_AUDIT.md`, harness usability criteria captured in `docs/readiness/V1_CONSUMER_HARNESS_USABILITY_MATRIX.md`, consumer checkpoint coordination captured in `docs/readiness/V1_CONSUMER_CHECKPOINT_MANIFEST.md`, current validation refresh evidence captured in `docs/audits/V1_CURRENT_CANDIDATE_VALIDATION_REFRESH_AUDIT.md`, post-validation readiness-change freshness captured in `docs/audits/V1_POST_VALIDATION_READINESS_CHANGE_FRESHNESS_AUDIT.md`, the current goal status captured in `docs/audits/V1_CURRENT_GOAL_STATUS_AUDIT.md`, consumer checkpoint freshness captured in `docs/audits/V1_CONSUMER_CHECKPOINT_FRESHNESS_AUDIT.md`, the current Arc-Bot-shell drift exclusion audit captured in `docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md`, the V1.0.0 release-candidate bar captured in `docs/readiness/V1_RELEASE_CANDIDATE_ACCEPTANCE_CHECKLIST.md`, the blocked future cutover path captured in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_RUNBOOK.md`, the final readiness audit template captured in `docs/readiness/V1_FINAL_READINESS_AUDIT_TEMPLATE.md`, the historical final readiness audit execution captured in `docs/audits/V1_FINAL_READINESS_AUDIT.md`, the final readiness reconciliation captured in `docs/audits/V1_FINAL_READINESS_RECONCILIATION_AUDIT.md`, the cutover authorization packet status captured in `docs/audits/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET_STATUS_AUDIT.md`, the active cutover blocker summarized in `docs/readiness/V1_FINAL_BLOCKER_REGISTER.md`, the operator handoff action captured in `docs/readiness/V1_OPERATOR_UNBLOCK_ACTION_PACKET.md`, and the saved candidate branch map captured in `docs/readiness/V1_FINAL_CANDIDATE_BRANCH_INDEX.md`. These artifacts keep the consumer smoke path testable with fake in-process executors and sanitized fixtures while preserving the cutover authorization blocker after the bounded V1-G61 proof. Arc-Bot-shell smoke evidence is compatibility evidence only. Arc-Bot-shell clean-checkpoint proof is refreshed at clean pushed commit `147cec0b9cb3ff6f060c8079a7f944526bb26b6f`; historical proof remains captured in `docs/audits/V1_ARC_BOT_SHELL_CLEAN_CHECKPOINT_PROOF.md`. It is candidate-only release-gate input evidence and does not authorize release-candidate acceptance, branch, tag, cutover, product readiness, or production readiness.
+
+The current validation refresh records focused current-gate/release-readiness validation as passing with 153 tests and the full LIMA suite passing with 5350 tests. A later 2026-06-21 LIMA-only validation supplement in the same audit records 37 focused G61 guard/operator/freshness tests, 147 focused V1 readiness regression tests, full LIMA suite validation with 5359 tests, diff hygiene, and protected runtime/dependency/support path status as clean; it does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun. The latest 2026-06-21 LIMA readiness freshness supplement in the same validation refresh records 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, full LIMA suite validation with 5361 tests, diff hygiene, and protected runtime/dependency/support path status as clean; it also does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun or create release, cutover, final-readiness, or G61 implementation authority. The latest 2026-06-21 handoff freshness supplement in the same validation refresh records 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, full LIMA suite validation with 5362 and 5364 tests, diff hygiene, and protected runtime/dependency/support path status as clean; it also does not claim Sparkbot or Arc-Bot-shell checkpoints were rerun or create release, cutover, final-readiness, Arc clean-checkpoint, consumer production integration, or G61 implementation authority. The candidate harness quickstart execution audit now records same-turn consumer smoke refresh evidence with public Sparkbot, accessible Sparkbot, and Arc-Bot-shell each passing 8 tests, plus post-refresh LIMA validation passing 17 focused quickstart/handoff tests, 108 broader V1 harness/readiness tests, and 5360 full-suite tests. The post-validation readiness-change freshness audit records that later readiness docs, fixtures, or tests require same-turn focused, full-suite, and diff-check evidence before they can support any future final-readiness pass. It records current same-turn full-suite freshness evidence passing 5359 tests after release/cutover freshness checks, latest quickstart post-refresh full-suite evidence passing 5360 tests, latest final blocker/index refresh evidence passing 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, latest post-G61 request readiness-refresh supplement evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests, and latest quickstart artifact refresh evidence passing 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests. The release-candidate checklist, cutover runbook, and final readiness audit template all require current validation refresh evidence, post-validation freshness evidence, and recorded clean Arc-Bot-shell checkpoint proof before any future V1.0.0 release-candidate branch, tag, cutover, or readiness claim.
+
+Current machine-checkable freshness evidence: latest final blocker/index refresh evidence passing 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests; latest post-G61 request readiness-refresh supplement evidence passing 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, and 5362 full-suite tests; latest quickstart artifact refresh evidence passing 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5364 full-suite tests.
+
+The V1 consumer target state after Arc readiness integration is recorded in `docs/readiness/V1_CONSUMER_TARGET_STATE_AFTER_ARC_READINESS_INTEGRATION.md`. It accepts Arc-Bot-shell runtime gating readiness integration as consumer-side testing evidence and records the saved `Sparkbot_shell` preview state. The former public Sparkbot G56 GitHub 403 publication blocker is resolved in `docs/audits/V1_PUBLIC_SPARKBOT_G56_PUBLICATION_RESOLUTION_AUDIT.md`.
+
+`V1-G60` is complete as approved dependency declaration and vendor provider SDK import-boundary evidence. It adds `openai>=1.0.0,<3.0.0` to `pyproject.toml` only. G60 is `CANDIDATE_ONLY`; it does not edit a lockfile, add runtime vendor SDK imports in `lima/`, prove installed runtime import execution, add LIMA-owned provider SDK clients, construct provider clients, resolve endpoints, perform DNS/HTTP/socket/network calls, perform direct provider egress, read secrets, access credential values, change provider configuration, execute fallback, wire consumer production runtime integration, or claim product readiness.
+
+Traceability note: the V1-G57 provider execution hardening authorization approval request has since been implemented and audited as completed candidate-only evidence in the path from the G56 consumer smoke proof to the G60 dependency declaration.
+
+The active next V1 lane is recording exactly one valid cutover operator choice in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md`, if the operator approves. Do not edit lockfiles, add runtime vendor SDK imports in `lima/`, add built-in provider SDK clients, construct provider clients, resolve provider endpoints, make LIMA-owned network calls, read secrets, access credential values, change provider configuration, execute fallback, wire consumer production runtime behavior, or claim V1/product/production readiness from the completed import proof.
+
+Existing V1 candidate slices remain non-production evidence only. The completed G60 dependency declaration does not authorize runtime import execution, built-in SDK clients, LIMA-owned network, credential, connector, browser, file, device, robotics, physical-world behavior, final API freeze, or production use.
+
+The V1.0.0 release-candidate acceptance checklist is satisfied for first-consumer harness testing; the cutover runbook remains blocked by explicit operator authorization. Do not create a V1.0.0 release-candidate branch, release tag, cutover claim, or readiness claim until `Approve-V1-RC-Cutover` is recorded in `docs/readiness/V1_RELEASE_CANDIDATE_CUTOVER_AUTHORIZATION_PACKET.md` and the runbook confirms checklist/reconciliation evidence remains current.
 
 ## Core Invariant
 
@@ -1101,8 +1145,24 @@ Result:
 
 - Phase 48.2 is docs/tests/fixtures-only concrete implementation design-review metadata.
 - It proposes `first_concrete_typed_bridge_acceptance_test_design` as a design-only future candidate lane.
-- Candidate future files are named but not created.
-- Runtime implementation, runtime harness creation, executable acceptance tests, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
+- It records `docs/V1_PRODUCT_READINESS_TARGET.md` as product-direction evidence for first-shell V1 readiness: `Sparkbot_shell`, `Sparkbot`, and `Arc-Bot-shell`; future live approval, real `GuardianDecision`, provider/model routing, shell-owned haptic intent support, and operator approval for destructive edits/deletes.
+- It records `docs/V1_READINESS_GAP_MATRIX.md` as the current V1 gap sequence.
+- It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md` as the narrow Sparkbot_shell request for source-backed `thinking` / progress-state proof.
+- It adds `docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md` as LIMA intake for Sparkbot_shell commit `36d697bf875a44dbafa41fc841ded86437917627`, accepting `thinking` as source-backed local shell evidence only.
+- It adds `docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md` as the static V1-G2 typed bridge acceptance proof.
+- It adds `docs/V1_G3_DESTRUCTIVE_EDIT_DELETE_OPERATOR_APPROVAL_CONTRACT.md` as the static V1-G3 destructive edit/delete operator-approval contract proof.
+- It adds `docs/V1_G4_REAL_GUARDIAN_DECISION_LIVE_APPROVAL_PATH_GATE.md` as the static V1-G4 real `GuardianDecision` and live approval path design gate.
+- It adds `docs/V1_G5_PROVIDER_MODEL_ROUTING_CONTRACT.md` as the static V1-G5 provider/model routing contract and acceptance-test design.
+- It adds `docs/V1_G6_HAPTIC_INTENT_METADATA_CONTRACT.md` as the static V1-G6 haptic intent metadata contract and shell fixture proof.
+- It adds `docs/V1_G7_FIRST_SHELL_INTEGRATION_PROOF_REQUEST.md` as the V1-G7 first-shell integration proof request gate.
+- The next smallest safe V1 action is `V1-G7D`: request all three first-shell proof packets in parallel, then perform one LIMA intake audit per returned packet.
+- V1-G2 proof fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G3 contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G4 design-gate fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G5 routing contract fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G6 haptic intent metadata fixtures and static tests are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- V1-G7 request-gate fixture and static test are created under `tests/fixtures/runtime_extraction/` and `tests/`.
+- Runtime implementation, runtime harness creation, `lima/` changes, `tests/support/` changes, and Sparkbot Shell changes remain unapproved.
 
 Status:
 

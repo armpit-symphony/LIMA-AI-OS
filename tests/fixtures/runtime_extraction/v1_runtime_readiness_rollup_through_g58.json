@@ -1,0 +1,102 @@
+{
+  "rollup_id": "v1_runtime_readiness_rollup_through_g58",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-post-g58-readiness-and-next-lane-matrix",
+  "source_commit_before_refresh": "4c5ace14d87404d6397b45221268e1da9b4e0087",
+  "documents": {
+    "rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G58.md",
+    "g58_audit": "docs/audits/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT_AUDIT.md",
+    "g58_implementation": "docs/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT.md",
+    "g58_closeout": "docs/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT_CLOSEOUT.md",
+    "post_g58_next_lane_matrix": "docs/readiness/V1_POST_G58_NEXT_LANE_DECISION_MATRIX.md",
+    "post_g57_readiness_rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G57.md",
+    "g57_audit": "docs/audits/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_AUDIT.md",
+    "g57_implementation": "docs/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION.md",
+    "g56_implementation": "docs/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE.md",
+    "g55_implementation": "docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS.md"
+  },
+  "required_verdicts": {
+    "v1_runtime_authority_chain": "CANDIDATE_ONLY",
+    "provider_model_routing_authority_metadata": "CANDIDATE_ONLY",
+    "fake_sdk_fake_egress_harness_evidence": "CANDIDATE_ONLY",
+    "real_provider_sdk_network_egress_wrapper_with_caller_injected_executor_only": "CANDIDATE_ONLY",
+    "consumer_fake_executor_provider_sdk_network_egress_smoke_evidence": "CANDIDATE_ONLY",
+    "provider_execution_hardening_authorization_metadata": "CANDIDATE_ONLY",
+    "built_in_provider_sdk_client_authority_contract_metadata": "CANDIDATE_ONLY",
+    "built_in_provider_sdk_client_implementation": "NOT_APPROVED",
+    "sdk_dependency_additions": "NOT_APPROVED",
+    "vendor_provider_sdk_imports": "NOT_APPROVED",
+    "lima_owned_provider_endpoint_resolution_execution": "NOT_APPROVED",
+    "lima_owned_direct_provider_network_egress": "NOT_APPROVED",
+    "secret_lookup_and_credential_value_access": "NOT_APPROVED",
+    "fallback_execution": "NOT_APPROVED",
+    "connector_browser_network_authority": "NOT_APPROVED",
+    "consumer_production_runtime_integration": "NOT_APPROVED",
+    "physical_world_readiness": "BLOCKED",
+    "product_readiness": "NOT_READY",
+    "final_public_api_freeze": "NOT_APPROVED"
+  },
+  "current_status": {
+    "latest_completed_gate": "V1-G58",
+    "latest_independent_audit": "V1-G58",
+    "latest_readiness_rollup": "V1-G58",
+    "current_gate": "sdk_dependency_and_vendor_provider_sdk_import_authority_request",
+    "next_recommended_lane": "prepare_sdk_dependency_and_vendor_provider_sdk_import_authority_request",
+    "next_lane_request_only": true,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "g58_status": {
+    "built_in_provider_sdk_client_authority_contract_approved": true,
+    "built_in_provider_sdk_client_authority_contract_implemented": true,
+    "built_in_provider_sdk_client_authority_contract_audited": true,
+    "metadata_only": true,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_expanded": false,
+    "sparkbot_files_changed": false,
+    "arc_bot_shell_files_changed": false,
+    "consumer_production_runtime_integration_added": false,
+    "built_in_provider_sdk_client_implementation_added": false,
+    "sdk_dependency_added": false,
+    "vendor_provider_sdk_import_added": false,
+    "provider_execution_expansion_added": false,
+    "product_readiness_claimed": false,
+    "final_public_api_freeze_approved": false
+  },
+  "blocked_authorities": {
+    "built_in_provider_sdk_client_implementation_approved": false,
+    "sdk_dependency_approved": false,
+    "vendor_provider_sdk_import_approved": false,
+    "lima_owned_endpoint_resolution_approved": false,
+    "lima_owned_dns_http_socket_network_call_approved": false,
+    "lima_owned_direct_provider_egress_approved": false,
+    "provider_credential_value_access_approved": false,
+    "provider_secret_lookup_approved": false,
+    "provider_token_or_api_key_access_approved": false,
+    "provider_configuration_change_approved": false,
+    "fallback_execution_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "consumer_production_runtime_integration_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false,
+    "final_public_api_freeze_approved": false
+  },
+  "validation_evidence": {
+    "focused_v1_g58_validation": {
+      "passed": true,
+      "tests_passed": 10
+    },
+    "focused_v1_g58_audit_validation": {
+      "passed": true,
+      "tests_passed": 10
+    },
+    "focused_v1_g58_rollup_validation": {
+      "passed": true,
+      "tests_passed": 301
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 5133
+    }
+  }
+}

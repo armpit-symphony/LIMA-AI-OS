@@ -1,0 +1,105 @@
+{
+  "gap_id": "V1-G2",
+  "gap_name": "typed_bridge_acceptance_proof",
+  "proof_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF.md",
+  "audit_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_AUDIT.md",
+  "closeout_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_CLOSEOUT.md",
+  "gate_document": "docs/V1_G2_TYPED_BRIDGE_ACCEPTANCE_PROOF_GATE.md",
+  "proof_branch": "v1-g2-typed-bridge-acceptance-proof",
+  "gate_branch": "v1-g2-typed-bridge-acceptance-proof-gate",
+  "gate_commit": "d8956f0838b6d1183ab625928e37c1c978af1d78",
+  "api_status": "CANDIDATE_ONLY",
+  "v1_product_ready": false,
+  "v1_g2_status": "complete_static_docs_tests_fixtures_proof",
+  "proof_completed": true,
+  "proof_accepted_as_static_evidence": true,
+  "proof_accepted_as_runtime_parity": false,
+  "docs_tests_fixtures_only": true,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "tests_support_changed": false,
+  "runtime_exports_changed": false,
+  "shell_repos_changed": false,
+  "sparkbot_shell_wiring_added": false,
+  "sparkbot_import_added": false,
+  "sparkbot_code_copied": false,
+  "arc_bot_shell_wiring_added": false,
+  "provider_model_routing_added": false,
+  "guardian_decision_runtime_added": false,
+  "approval_enforcement_added": false,
+  "execution_dispatch_persistence_added": false,
+  "browser_file_network_device_robotics_behavior_added": false,
+  "haptic_device_behavior_added": false,
+  "runtime_export_cleanup_approved": false,
+  "final_freeze_approved": false,
+  "case_fixture_files": [
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_preview_only_positive.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_approval_bypass.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_runtime_claim.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_missing_guardian_request.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_execution_claim.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_provider_model_tool_driver_claim.json",
+    "tests/fixtures/runtime_extraction/typed_bridge_acceptance_fail_closed_browser_file_network_device_robotics_claim.json"
+  ],
+  "metadata_chain_under_proof": [
+    "source_request_metadata",
+    "typed_intentenvelope_candidate_metadata",
+    "guardian_request_metadata",
+    "future_guardian_decision_metadata_absent_pending_or_blocked",
+    "still_no_execution"
+  ],
+  "packet_statuses": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "kernel_status_mappings": [
+    {
+      "kernel_status": "proposed",
+      "packet_status": "preview_only"
+    },
+    {
+      "kernel_status": "needs_review",
+      "packet_status": "explain_plan"
+    },
+    {
+      "kernel_status": "blocked",
+      "packet_status": "blocked"
+    }
+  ],
+  "accepted_evidence": [
+    "source_request_metadata_shape",
+    "typed_intentenvelope_candidate_metadata_shape",
+    "guardian_request_metadata_shape",
+    "future_guardian_decision_absent_pending_blocked_boundary",
+    "kernel_status_to_shell_packet_status_mapping",
+    "fail_closed_negative_cases",
+    "no_runtime_boundary"
+  ],
+  "rejected_claims": [
+    "runtime_bridge_behavior",
+    "real_intentcompiler_behavior",
+    "real_guardian_request_runtime_behavior",
+    "real_guardian_decision_authority",
+    "approval_enforcement",
+    "provider_model_routing",
+    "haptic_device_behavior",
+    "audit_persistence",
+    "shell_runtime_wiring",
+    "production_readiness",
+    "v1_product_readiness"
+  ],
+  "remaining_v1_blockers": [
+    "destructive_edit_delete_operator_approval_contract_missing",
+    "real_approval_enforcement_not_implemented",
+    "real_guardian_decision_path_not_implemented",
+    "provider_model_routing_runtime_not_implemented",
+    "haptic_intent_metadata_contract_missing",
+    "sparkbot_and_arc_bot_shell_integration_proof_missing",
+    "lima_runtime_wiring_not_implemented",
+    "audit_persistence_not_implemented",
+    "production_behavior_not_approved"
+  ],
+  "recommended_next_step": "V1-G3"
+}

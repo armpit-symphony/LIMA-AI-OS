@@ -1,0 +1,73 @@
+{
+  "case_id": "typed_bridge_acceptance_preview_only_positive",
+  "case_family": "positive_non_authoritative_preview",
+  "docs_tests_fixtures_only": true,
+  "source_request_metadata": {
+    "source_kind": "shell_request",
+    "channel": "chat",
+    "tenant_id": "tenant_demo",
+    "actor_id": "operator_demo",
+    "lineage_ref": "lineage:v1-g2:preview",
+    "request_summary": "draft a customer follow-up"
+  },
+  "typed_intentenvelope_candidate_metadata": {
+    "candidate_status": "proposed",
+    "intent_kind": "drafting",
+    "confidence": "medium",
+    "risk_class": "low",
+    "clarification_state": "not_required",
+    "requested_tool_packs": [
+      "comms"
+    ],
+    "evidence_requirements": [
+      "recipient_context",
+      "draft_preview"
+    ],
+    "non_authoritative": true
+  },
+  "guardian_request_metadata": {
+    "request_state": "needs_review",
+    "requested_action_class": "draft_only",
+    "policy_review_needed": true,
+    "approval_posture": "not_granted",
+    "evidence_refs": [
+      "draft_preview_ref"
+    ]
+  },
+  "future_guardian_decision_metadata": {
+    "state": "absent",
+    "decision_id": null,
+    "approval_granted": false,
+    "execution_allowed": false
+  },
+  "kernel_status": "proposed",
+  "packet_status": "preview_only",
+  "packet_status_catalog": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "expected_blocked_claims": [],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "approval_granted": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "guardian_decision_created": false,
+    "runtime_test_harness_active": false
+  }
+}

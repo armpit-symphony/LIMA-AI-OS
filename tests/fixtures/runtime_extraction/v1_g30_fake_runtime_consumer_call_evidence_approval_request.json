@@ -1,0 +1,85 @@
+{
+  "gate_id": "v1_g30_fake_runtime_consumer_call_evidence_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g30-fake-runtime-consumer-call-evidence-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "fake_runtime_consumer_call_evidence_approved": false,
+  "fake_runtime_consumer_call_evidence_added": false,
+  "lima_runtime_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "live_consumer_import_calls_added": false,
+  "planned_adapter_symbols_called": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G30",
+    "Revise-V1-G30",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G30 implementation of the fake-runtime consumer call evidence slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g30-fake-runtime-consumer-call-evidence",
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "fake_runtime_candidate_adapter_symbols_if_operator_says_yes": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.validate_v1_consumer_integration_proof_to_import_dry_run"
+  ],
+  "fake_runtime_scope_if_operator_says_yes": {
+    "metadata_only": true,
+    "fake_runtime_only": true,
+    "fake_call_envelopes_allowed": true,
+    "adapter_symbol_calls_allowed": false,
+    "no_network_required": true,
+    "no_secret_required": true,
+    "provider_model_calls_allowed": false,
+    "consumer_repo_edits_allowed": false,
+    "lima_runtime_file_edits_allowed": false,
+    "live_runtime_calls_allowed": false
+  },
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE.md",
+    "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g30_fake_runtime_consumer_call_evidence.json",
+    "tests/test_v1_g30_fake_runtime_consumer_call_evidence.py"
+  ],
+  "approved_consumer_files_if_operator_says_yes": [],
+  "required_prior_evidence_refs": [
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/V1_G28_RUNTIME_EXPORT_CLEANUP.md",
+    "docs/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING.md",
+    "docs/audits/V1_G29_LIVE_CONSUMER_IMPORT_CALL_PLANNING_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G29_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G29.md",
+    "docs/readiness/V1_POST_G29_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G30_FAKE_RUNTIME_CONSUMER_CALL_EVIDENCE_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g30_revise_v1_g30_or_pause"
+}

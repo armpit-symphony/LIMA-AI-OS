@@ -1,0 +1,121 @@
+{
+  "audit_id": "v1_arc_phase1_runtime_authority_gating_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-19",
+  "audit_branch": "audit-v1-arc-phase1-runtime-authority-gating",
+  "source_lima_commit_before_audit": "c76b54aec3dd8f774d8267c666e1e9a0eb2ce1a4",
+  "documents": {
+    "audit": "docs/audits/V1_ARC_PHASE1_RUNTIME_AUTHORITY_GATING_AUDIT.md",
+    "prior_arc_phase1_readiness_bundle_audit": "docs/audits/V1_ARC_PHASE1_READINESS_BUNDLE_AUDIT.md"
+  },
+  "consumer_checkpoint": {
+    "repository": "armpit-symphony/Arc-Bot-shell",
+    "branch": "arc-bot-runtime-ui-scaffold-foundation-phase-chain",
+    "commit": "a3f0ffc6713358cf5b9fbd40bfd402b8a12d9b1f",
+    "source_commit_before_checkpoint": "8b2002036bda180d6a0d6a01e67c1316f77623c1",
+    "remote_commit_verified": true
+  },
+  "accepted_evidence": [
+    "README.md",
+    "docs/ROADMAP_PHASE1_BUSINESS_MVP.md",
+    "docs/proof_packets/ARC_BOT_PHASE1_MVP_ROADMAP_PACKET.md",
+    "docs/proof_packets/ARC_BOT_PHASE1_READINESS_BUNDLE_PACKET.md",
+    "docs/proof_packets/ARC_BOT_PHASE1_RUNTIME_AUTHORITY_GATING_PACKET.md",
+    "phase1_runtime_authority_gating/__init__.py",
+    "phase1_runtime_authority_gating/gating.py",
+    "tests/fixtures/arc_bot_phase1_runtime_authority_gating_packet.json",
+    "tests/test_arc_bot_business_mvp_roadmap.py",
+    "tests/test_arc_bot_phase1_readiness_bundle_packet.py",
+    "tests/test_arc_bot_phase1_runtime_authority_gating.py"
+  ],
+  "required_future_gates": [
+    "approval_token_lineage",
+    "connector_authority_approval",
+    "evidence_and_rollback_gate",
+    "guardian_runtime_authority_approval",
+    "production_readiness_approval"
+  ],
+  "validation_commands": [
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests\\test_arc_bot_phase1_runtime_authority_gating.py tests\\test_arc_bot_business_mvp_roadmap.py tests\\test_arc_bot_phase1_readiness_bundle_packet.py -p no:cacheprovider --basetemp=.pytest-arc-runtime-authority-gating-v2",
+      "result": "9 passed in 0.05s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m phase1_runtime_authority_gating.gating --compact",
+      "result": "passed with compact JSON and runpy preload warning"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m json.tool tests\\fixtures\\arc_bot_phase1_runtime_authority_gating_packet.json",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m compileall phase1_runtime_authority_gating",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider --basetemp=.pytest-arc-full-v3",
+      "result": "223 passed in 0.41s"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --cached --check",
+      "result": "passed before commit"
+    }
+  ],
+  "validation_notes": {
+    "prior_focused_temp_cleanup_error": true,
+    "prior_focused_error_reason": "existing .pytest-arc-runtime-authority-gating directory was ACL-locked on local Windows host",
+    "fresh_repo_local_basetemp_focused_suite_passed": true
+  },
+  "scope_audit": {
+    "arc_branch_saved_and_pushed": true,
+    "arc_planning_docs_proof_fixture_tests_projection_helpers_only": true,
+    "runtime_authority_gating_fixture_backed": true,
+    "runtime_authority_gating_read_only": true,
+    "runtime_authority_gating_phase_gated": true,
+    "all_required_future_gates_unresolved": true,
+    "runtime_boundary_flags_all_false": true,
+    "lima_docs_tests_fixtures_only": true,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_exports_changed": false,
+    "public_sparkbot_files_changed": false,
+    "sparkbot_shell_files_changed": false,
+    "arc_consumer_production_runtime_integration_approved": false,
+    "v1_g55_implementation_approved_or_started": false
+  },
+  "boundary_results": {
+    "live_ui_routes_or_interactive_controls_added": false,
+    "runtime_execution_added": false,
+    "live_model_provider_calls_added": false,
+    "provider_sdk_network_egress_added": false,
+    "built_in_provider_sdk_clients_added": false,
+    "sdk_dependencies_or_vendor_sdk_imports_added": false,
+    "endpoint_resolution_execution_added": false,
+    "lima_owned_dns_http_socket_network_calls_or_direct_provider_egress_added": false,
+    "credential_storage_or_lookup_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "connector_reads_or_writes_added": false,
+    "browser_network_device_robotics_physical_world_behavior_added": false,
+    "tool_execution_added": false,
+    "worker_dispatch_or_task_execution_added": false,
+    "runtime_route_mutation_added": false,
+    "customer_system_mutation_added": false,
+    "persistence_mutation_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "product_ready": false,
+    "production_ready": false,
+    "v1_0_complete": false
+  },
+  "audit_decision": "accept_arc_phase1_runtime_authority_gating_as_consumer_testing_evidence",
+  "recommended_next_step": "continue consumer-side readiness audits without starting v1_g55_runtime_authority"
+}

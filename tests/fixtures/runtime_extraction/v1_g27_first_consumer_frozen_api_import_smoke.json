@@ -1,0 +1,155 @@
+{
+  "packet_set_id": "v1_g27_first_consumer_frozen_api_import_smoke",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g27-first-consumer-frozen-api-import-smoke",
+  "operator_decision": "Approve-V1-G27",
+  "approved_scope": "first_consumer_frozen_api_import_smoke_tests_fixtures_slice",
+  "consumer_frozen_api_import_smoke_added": true,
+  "lima_runtime_files_changed": false,
+  "sparkbot_runtime_source_mutation_added": false,
+  "arc_bot_shell_runtime_source_mutation_added": false,
+  "imported_symbols_called": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "runtime_export_cleanup_approved": false,
+  "runtime_export_cleanup_added": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "approved_import_smoke_symbols": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.V1ConsumerIntegrationCompatibilityError"
+  ],
+  "accepted_evidence_refs": [
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G24_FIRST_CONSUMER_IMPORT_PLAN_EVIDENCE_PACKETS.md",
+    "docs/V1_G25_FIRST_CONSUMER_REPO_PATCH_PREVIEW_EVIDENCE.md",
+    "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT.md"
+  ],
+  "consumer_records": [
+    {
+      "consumer_record_id": "frozen-api-import-smoke:v1-g27:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "consumer_branch": "v1-g27-first-consumer-frozen-api-import-smoke",
+      "consumer_commit_sha": "e169fa91ff9ccf35bf24d6f1ff9f57f5dae8402f",
+      "consumer_files_added": [
+        "tests/fixtures/sparkbot_lima_v1_g27_frozen_api_import_smoke.json",
+        "tests/test_sparkbot_lima_v1_g27_frozen_api_import_smoke.py"
+      ],
+      "approved_import_smoke_symbols": [
+        "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+        "lima.adapters.V1ConsumerIntegrationCompatibilityError"
+      ],
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "v1_g24_import_plan_id": "import-plan:v1-g24:sparkbot:001",
+      "v1_g25_patch_preview_id": "patch-preview:v1-g25:sparkbot:001",
+      "v1_g26_static_consumer_edit_id": "static-consumer-edit:v1-g26:sparkbot:001",
+      "test_only_import_smoke_added": true,
+      "imported_symbols_called": false,
+      "runtime_source_files_changed": false,
+      "lima_runtime_behavior_invoked": false,
+      "consumer_runtime_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "runtime_export_cleanup_approved": false,
+      "provider_model_calls_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted": false,
+      "raw_file_content_persisted": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "command_ref": "python -B -m pytest -q tests/test_sparkbot_lima_v1_g27_frozen_api_import_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g27:sparkbot-frozen-api-import-smoke",
+        "rollback_file_refs": [
+          "tests/fixtures/sparkbot_lima_v1_g27_frozen_api_import_smoke.json",
+          "tests/test_sparkbot_lima_v1_g27_frozen_api_import_smoke.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_live_import_call_confirmation": true,
+        "no_runtime_wiring_confirmation": true,
+        "no_runtime_export_cleanup_confirmation": true,
+        "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    },
+    {
+      "consumer_record_id": "frozen-api-import-smoke:v1-g27:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "consumer_branch": "v1-g27-first-consumer-frozen-api-import-smoke",
+      "consumer_commit_sha": "e619e51d2dca81b272173dffcbc60bf9c3f0d659",
+      "consumer_files_added": [
+        "tests/fixtures/arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.json",
+        "tests/test_arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.py"
+      ],
+      "approved_import_smoke_symbols": [
+        "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+        "lima.adapters.V1ConsumerIntegrationCompatibilityError"
+      ],
+      "frozen_api_packet_ref": "api-freeze:v1-g22",
+      "v1_g24_import_plan_id": "import-plan:v1-g24:arc-bot-shell:001",
+      "v1_g25_patch_preview_id": "patch-preview:v1-g25:arc-bot-shell:001",
+      "v1_g26_static_consumer_edit_id": "static-consumer-edit:v1-g26:arc-bot-shell:001",
+      "test_only_import_smoke_added": true,
+      "imported_symbols_called": false,
+      "runtime_source_files_changed": false,
+      "lima_runtime_behavior_invoked": false,
+      "consumer_runtime_calls_added": false,
+      "consumer_integration_added": false,
+      "shell_runtime_wiring_added": false,
+      "runtime_export_cleanup_approved": false,
+      "provider_model_calls_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_diff_or_patch_persisted": false,
+      "raw_file_content_persisted": false,
+      "proof_not_authority": true,
+      "validation_metadata": {
+        "command_ref": "python -B -m pytest -q tests/test_arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "result": "7 passed",
+        "live_runtime_required": false,
+        "external_services_required": false
+      },
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g27:arc-bot-shell-frozen-api-import-smoke",
+        "rollback_file_refs": [
+          "tests/fixtures/arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.json",
+          "tests/test_arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.py"
+        ],
+        "runtime_source_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_live_import_call_confirmation": true,
+        "no_runtime_wiring_confirmation": true,
+        "no_runtime_export_cleanup_confirmation": true,
+        "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+        "proof_not_authority_confirmation": true
+      }
+    }
+  ]
+}

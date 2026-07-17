@@ -1,0 +1,99 @@
+{
+  "gate_id": "v1_g52_consumer_fake_executor_provider_invocation_smoke_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g52-consumer-fake-executor-provider-invocation-smoke-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "consumer_fake_executor_provider_invocation_smoke_approved": false,
+  "consumer_fake_executor_provider_invocation_smoke_added": false,
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "consumer_runtime_calls_added": false,
+  "live_provider_model_call_execution_added": false,
+  "provider_executor_invocation_added": false,
+  "real_provider_executor_invocation_added": false,
+  "fake_provider_executor_invocation_added": false,
+  "direct_provider_sdk_added": false,
+  "direct_network_code_added": false,
+  "provider_endpoint_resolution_added": false,
+  "network_call_performed": false,
+  "secret_lookup_added": false,
+  "credential_value_access_added": false,
+  "provider_token_or_api_key_access_added": false,
+  "fallback_execution_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_prompt_persisted": false,
+  "raw_model_response_persisted": false,
+  "raw_customer_data_persisted": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G52",
+    "Revise-V1-G52",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G52 implementation of the consumer fake-executor provider invocation smoke slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g52-consumer-fake-executor-provider-invocation-smoke",
+  "consumer_smoke_target_if_operator_says_yes": {
+    "public_lima_package": "lima.harness",
+    "symbols_to_import": [
+      "V1ExecutableRealProviderExecutorInvocationError",
+      "execute_v1_executable_real_provider_executor_invocation"
+    ],
+    "provider_executor_type": "fake_in_process_executor_only",
+    "uses_v1_g50_envelope_metadata": true,
+    "live_provider_credentials_allowed": false,
+    "network_calls_allowed": false,
+    "provider_endpoint_resolution_allowed": false,
+    "fallback_execution_allowed": false,
+    "connector_browser_network_physical_world_allowed": false,
+    "product_readiness_claim_allowed": false
+  },
+  "approved_lima_runtime_files_if_operator_says_yes": [],
+  "approved_lima_docs_tests_fixtures_if_operator_says_yes": [
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE.md",
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g52_consumer_fake_executor_provider_invocation_smoke.json",
+    "tests/test_v1_g52_consumer_fake_executor_provider_invocation_smoke.py"
+  ],
+  "approved_sparkbot_files_if_operator_says_yes": [
+    "tests/test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+    "tests/fixtures/sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+  ],
+  "approved_arc_bot_shell_files_if_operator_says_yes": [
+    "tests/test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+    "tests/fixtures/arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+  ],
+  "required_prior_evidence_refs": [
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_CLOSEOUT.md",
+    "docs/audits/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G51_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G51.md",
+    "docs/readiness/V1_POST_G51_NEXT_LANE_DECISION_MATRIX.md",
+    "docs/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G47_CONSUMER_FAKE_EXECUTOR_PROVIDER_MODEL_CALL_SMOKE.md",
+    "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION.md",
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g52_revise_v1_g52_or_pause"
+}

@@ -1361,7 +1361,9 @@ The runtime is credible only if the trust boundary is real:
 
 ## Current Status
 
-Phase 0 only. No runtime implementation yet.
+Candidate-only, non-production safety work. No live/executing runtime behavior is approved.
+
+The repository now contains narrow non-executing candidate, preview, status-normalization, and read-only runtime-state helpers. Those helpers do not approve live tool execution, production deployment wiring, credentials, real model calls, approval enforcement, persistence, or robotics control paths.
 
 ## Phase 2.28 — Fake GuardianDecision Test Design Review
 
@@ -9027,3 +9029,26 @@ Status:
 
 - prepared on `phase-48-2-concrete-implementation-design-review`
 - not merged or tagged
+
+## V1-G11 - Runtime Request Decision Gate Approval Request
+
+Goal:
+
+- Record the exact operator approval question for the first V1 runtime slice.
+- Preserve that implementation remains blocked until the exact V1-G11 request is explicitly approved.
+- Keep the request packet docs/tests/fixtures-only.
+
+Result:
+
+- `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` records the proposed typed request and GuardianDecision preflight runtime slice.
+- `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md` confirms the request is ready for operator decision.
+- `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md` translates the request into a concrete implementation work order that remains conditional on explicit approval.
+- `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` records the valid operator choices, exact required approval wording, and an empty Decision Record section without recording approval.
+- The request and operator decision packet do not approve runtime implementation.
+- No `lima/` files, `tests/support` files, shell repos, Sparkbot code, provider/model routing, persistence, shell wiring, haptic device behavior, runtime export cleanup, final freeze, or production behavior are added.
+
+Status:
+
+- prepared on `v1-g11-runtime-slice-approval-request`
+- not merged or tagged
+- next step is to record one valid operator choice in the V1-G11 operator decision packet's Decision Record section

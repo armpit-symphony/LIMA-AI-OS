@@ -1,0 +1,110 @@
+{
+  "audit_id": "v1_arc_bot_shell_local_drift_exclusion_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-21",
+  "observed_workspace_branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_lima_commit_before_audit_refresh": "37626bf236bf96c8a57a3ca351668e90eeb0e651",
+  "audit_verdict": "PASS_CURRENT_ARC_DRIFT_EXCLUDED_FROM_V1_RELEASE_PROOF",
+  "documents": {
+    "arc_drift_audit": "docs/audits/V1_ARC_BOT_SHELL_LOCAL_DRIFT_EXCLUSION_AUDIT.md",
+    "final_blocker_register": "docs/readiness/V1_FINAL_BLOCKER_REGISTER.md",
+    "candidate_handoff_execution_audit": "docs/audits/V1_CANDIDATE_TEST_HANDOFF_MANIFEST_EXECUTION_AUDIT.md",
+    "g56_consumer_smoke_audit": "docs/audits/V1_G56_CONSUMER_FAKE_EXECUTOR_PROVIDER_SDK_NETWORK_EGRESS_SMOKE_AUDIT.md"
+  },
+  "arc_bot_shell_state": {
+    "local_path": "C:\\Users\\limap\\Arc-Bot-shell",
+    "branch": "v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+    "upstream_branch": "origin/v1-g56-consumer-fake-executor-provider-sdk-network-egress-smoke",
+    "upstream_checkpoint_commit": "2b95eaf11920c7c7163c5ca5a5cc4e5b3f8753c0",
+    "tracked_modified_file_count": 7,
+    "untracked_file_count": 64,
+    "raw_diffs_read_or_persisted": false,
+    "raw_file_contents_read_or_persisted": false
+  },
+  "approved_g56_files": {
+    "test_path": "tests/test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py",
+    "fixture_path": "tests/fixtures/arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.json",
+    "test_exists": true,
+    "fixture_exists": true,
+    "test_has_local_diff": false,
+    "fixture_has_local_diff": false,
+    "test_is_untracked": false,
+    "fixture_is_untracked": false
+  },
+  "validation": {
+    "arc_g56_fake_executor_smoke": {
+      "command": "python -m pytest -q tests\\test_arc_bot_shell_lima_v1_g56_fake_executor_provider_sdk_network_egress_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "arc_diff_check": {
+      "command": "git diff --check",
+      "passed": true,
+      "warnings": "line_ending_conversion_warnings_only"
+    }
+  },
+  "latest_same_day_recheck": {
+    "git_status_short_sanitized_counts_current": true,
+    "tracked_modified_file_count": 7,
+    "untracked_file_count": 64,
+    "approved_g56_smoke_proof_paths_checked_directly": true,
+    "approved_g56_smoke_proof_paths_clean": true,
+    "arc_g56_fake_executor_smoke_passed": true,
+    "arc_g56_fake_executor_smoke_tests_passed": 8,
+    "arc_diff_check_passed": true,
+    "arc_diff_check_warnings": "line_ending_conversion_warnings_only",
+    "raw_diffs_persisted": false,
+    "raw_file_contents_persisted": false,
+    "raw_status_path_inventory_persisted": false,
+    "release_candidate_final_readiness_branch_tag_cutover_or_readiness_authority_created": false
+  },
+  "evidence_accepted": [
+    "arc_g56_fake_executor_proof_tied_to_upstream_checkpoint_commit",
+    "local_dirty_files_outside_approved_g56_smoke_test_and_fixture",
+    "local_dirty_files_not_accepted_as_lima_v1_proof",
+    "dirty_files_require_separate_arc_ownership_cleanup_or_commit_and_future_clean_checkpoint_audit"
+  ],
+  "boundary_results": {
+    "arc_bot_shell_files_changed_by_audit": false,
+    "arc_bot_shell_files_reverted_by_audit": false,
+    "arc_bot_shell_dirty_worktree_cleaned_by_audit": false,
+    "lima_runtime_behavior_added_by_audit": false,
+    "lima_runtime_files_changed_by_audit": false,
+    "lima_public_api_exports_changed_by_audit": false,
+    "v1_g61_implementation_approved_by_audit": false,
+    "provider_sdk_clients_added": false,
+    "runtime_vendor_sdk_imports_added_to_lima": false,
+    "lockfile_edits_added": false,
+    "provider_endpoint_resolution_added": false,
+    "lima_owned_dns_http_socket_network_or_provider_egress_added": false,
+    "secret_lookup_credential_value_or_provider_token_access_added": false,
+    "provider_configuration_or_fallback_execution_added": false,
+    "connector_browser_file_device_robotics_physical_world_behavior_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "product_production_or_v1_completion_claim_added": false
+  },
+  "blocker_register_effect": {
+    "arc_drift_blocker_bounded_by_current_exclusion_audit": true,
+    "arc_bot_shell_clean": false,
+    "dirty_files_accepted_as_v1_proof": false,
+    "final_release_readiness_gate_closed": false
+  },
+  "remaining_open_gates": [
+    "exact_v1_g61_operator_decision",
+    "v1_g61_implementation_only_if_exact_approve_recorded",
+    "release_candidate_acceptance_checklist_after_any_approved_g61_closeout",
+    "final_readiness_audit_after_release_candidate_acceptance",
+    "clean_arc_bot_shell_checkpoint_proof_after_local_drift_absent_or_resolved_and_revalidated"
+  ],
+  "stop_conditions_preserved": [
+    "revert_or_clean_unrelated_arc_work_without_explicit_instruction",
+    "use_current_arc_dirty_files_as_v1_proof_without_separate_approval_or_audit",
+    "v1_g61_implementation_without_exact_approval",
+    "treat_this_audit_as_release_candidate_final_readiness_branch_tag_cutover_or_readiness_claim_authority",
+    "consumer_repo_edit_from_audit_lane",
+    "runtime_or_public_api_change_from_audit_lane",
+    "runtime_vendor_sdk_import_lockfile_secret_credential_token_sdk_endpoint_network_or_fallback_required",
+    "raw_sensitive_or_patch_content_persistence",
+    "v1_product_production_or_completion_claim"
+  ]
+}

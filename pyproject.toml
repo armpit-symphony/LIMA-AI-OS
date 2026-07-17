@@ -8,6 +8,7 @@ version = "0.0.1"
 description = "Phase 0 contracts for the LIMA Runtime / LIMA Kernel."
 readme = "README.md"
 requires-python = ">=3.11"
+dependencies = []
 license = { file = "LICENSE" }
 authors = [
   { name = "SparkPit Labs" }
@@ -18,5 +19,6 @@ include = ["lima*"]
 
 [tool.pytest.ini_options]
 norecursedirs = [
+  ".pytest_cache",
   "pytest-cache-files-*",
 ]

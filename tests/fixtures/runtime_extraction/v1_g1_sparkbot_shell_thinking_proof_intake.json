@@ -1,0 +1,105 @@
+{
+  "gap_id": "V1-G1",
+  "gap_name": "sparkbot_shell_thinking_progress_proof",
+  "intake_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE.md",
+  "audit_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE_AUDIT.md",
+  "closeout_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_INTAKE_CLOSEOUT.md",
+  "request_document": "docs/V1_G1_SPARKBOT_SHELL_THINKING_PROOF_REQUEST.md",
+  "source_target": "docs/V1_PRODUCT_READINESS_TARGET.md",
+  "gap_matrix": "docs/V1_READINESS_GAP_MATRIX.md",
+  "lima_intake_branch": "intake-sparkbot-shell-thinking-state-proof-packet",
+  "lima_base_branch": "phase-48-2-concrete-implementation-design-review",
+  "lima_base_commit": "a463354ad5c9b3c2d02151b8663c71ea2450a337",
+  "sparkbot_shell_branch": "sparkbot-shell-thinking-state-proof-packet",
+  "sparkbot_shell_commit": "36d697bf875a44dbafa41fc841ded86437917627",
+  "proof_received": true,
+  "proof_accepted_as_source_backed_shell_evidence": true,
+  "proof_accepted_as_live_parity": false,
+  "v1_g1_status": "accepted_source_backed_local_shell_evidence",
+  "api_status": "CANDIDATE_ONLY",
+  "source_backed_thinking": true,
+  "docs_fixture_only_thinking": false,
+  "sparkbot_shell_local_ui_behavior_added": true,
+  "thinking_source_files": [
+    "src/types/shell.ts",
+    "src/components/ChatShell.tsx",
+    "src/styles.css"
+  ],
+  "thinking_render_entrypoints": [
+    "ChatMessage.shellState",
+    "ChatShell.sendPlaceholderMessage",
+    "ChatShell transcript article className",
+    "chat-state-pill",
+    "chat-message thinking style"
+  ],
+  "state_transitions": [
+    {
+      "from": "received",
+      "to": "thinking"
+    },
+    {
+      "from": "thinking",
+      "to": "completed"
+    }
+  ],
+  "desktop_behavior_reviewed": true,
+  "mobile_behavior_reviewed": true,
+  "haptics_shell_owned": true,
+  "lima_owns_haptics": false,
+  "haptic_implementation_added": false,
+  "lima_boundary_results": {
+    "docs_tests_fixtures_only": true,
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "runtime_exports_changed": false,
+    "sparkbot_shell_wiring_added": false,
+    "sparkbot_shell_import_added": false,
+    "sparkbot_import_added": false,
+    "sparkbot_code_copied": false,
+    "provider_model_routing_added": false,
+    "guardian_decision_runtime_added": false,
+    "approval_enforcement_added": false,
+    "execution_dispatch_persistence_added": false,
+    "browser_file_network_device_robotics_behavior_added": false,
+    "audit_persistence_added": false,
+    "production_readiness_claimed": false,
+    "v1_product_ready": false,
+    "runtime_export_cleanup_approved": false,
+    "final_freeze_approved": false
+  },
+  "accepted_evidence": [
+    "source-backed local in-band thinking state",
+    "received to thinking transition",
+    "thinking to completed transition",
+    "visible transcript state badge",
+    "bounded local placeholder transition",
+    "static fixture and test proof"
+  ],
+  "rejected_claims": [
+    "live model streaming parity",
+    "provider/model response pacing",
+    "LIMA runtime integration",
+    "GuardianDecision authority",
+    "approval enforcement",
+    "haptic implementation",
+    "haptic proof",
+    "audit persistence",
+    "production readiness",
+    "V1 product readiness"
+  ],
+  "remaining_v1_blockers": [
+    "typed_bridge_acceptance_proof_missing",
+    "destructive_edit_delete_operator_approval_contract_missing",
+    "real_approval_enforcement_not_implemented",
+    "real_guardian_decision_path_not_implemented",
+    "provider_model_routing_runtime_not_implemented",
+    "haptic_intent_metadata_contract_missing",
+    "haptics_proof_missing",
+    "sparkbot_and_arc_bot_shell_integration_proof_missing",
+    "lima_runtime_wiring_not_implemented",
+    "audit_persistence_not_implemented",
+    "production_behavior_not_approved"
+  ],
+  "recommended_next_step": "V1-G2"
+}

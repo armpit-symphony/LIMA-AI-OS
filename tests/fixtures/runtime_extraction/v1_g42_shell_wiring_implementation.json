@@ -1,0 +1,285 @@
+{
+  "packet_set_id": "v1_g42_shell_wiring_implementation",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g42-shell-wiring-implementation",
+  "operator_decision": "Approve-V1-G42",
+  "approved_scope": "shell_wiring_implementation_slice",
+  "shell_wiring_implementation_approved": true,
+  "shell_wiring_implementation_added": true,
+  "static_shell_wiring_implementation_evidence_added": true,
+  "bounded_shell_wiring_implementation_evidence_only": true,
+  "lima_docs_tests_fixtures_only": true,
+  "lima_runtime_files_changed": false,
+  "sparkbot_files_changed": true,
+  "arc_bot_shell_files_changed": true,
+  "sparkbot_files_limited_to_approved_paths": true,
+  "arc_bot_shell_files_limited_to_approved_paths": true,
+  "consumer_runtime_source_files_changed": false,
+  "raw_patch_bodies_persisted": false,
+  "raw_patch_bodies_persisted_in_lima_evidence": false,
+  "unapproved_patches_applied": false,
+  "adapter_symbols_called": false,
+  "consumer_runtime_modules_imported": false,
+  "lima_runtime_modules_imported_by_consumer_tests": false,
+  "runtime_shell_wiring_execution_added": false,
+  "provider_model_calls_added": false,
+  "model_request_dispatch_added": false,
+  "fallback_execution_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_outside_local_tests_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "human_input_bridge_activated": false,
+  "scheduled_task_execution_added": false,
+  "external_sends_added": false,
+  "external_database_writes_added": false,
+  "raw_sensitive_content_persisted_in_lima_evidence": false,
+  "product_ready": false,
+  "proof_not_live_dispatch_authority": true,
+  "proof_not_product_readiness": true,
+  "approved_lima_files_changed": [
+    "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION.md",
+    "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g42_shell_wiring_implementation.json",
+    "tests/test_v1_g42_shell_wiring_implementation.py"
+  ],
+  "approved_consumer_files_changed": {
+    "sparkbot": [
+      "tests/fixtures/sparkbot_lima_v1_g42_shell_wiring_implementation.json",
+      "tests/test_sparkbot_lima_v1_g42_shell_wiring_implementation.py"
+    ],
+    "arc_bot": [
+      "tests/fixtures/arc_bot_shell_lima_v1_g42_shell_wiring_implementation.json",
+      "tests/test_arc_bot_shell_lima_v1_g42_shell_wiring_implementation.py"
+    ]
+  },
+  "reviewed_evidence_refs": [
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION.md",
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_CLOSEOUT.md",
+    "docs/audits/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G41_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G41.md",
+    "docs/readiness/V1_POST_G41_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "future_required_gates": [
+    "provider_model_dispatch_approval_request",
+    "connector_browser_network_authority_approval_request",
+    "physical_world_authority_approval_request",
+    "product_readiness_approval_request"
+  ],
+  "blocked_future_authorities": {
+    "provider_model_dispatch_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false
+  },
+  "remaining_gaps": [
+    "runtime_shell_wiring_execution_not_approved",
+    "provider_model_dispatch_not_approved",
+    "secret_credential_access_not_approved",
+    "connector_browser_network_authority_not_approved",
+    "physical_world_authority_not_approved",
+    "product_readiness_not_approved"
+  ],
+  "shell_wiring_records": [
+    {
+      "shell_wiring_record_id": "shell-wiring-implementation:v1-g42:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "consumer_branch": "v1-g42-shell-wiring-implementation",
+      "consumer_commit_sha": "25c1e288b3d6b8c94d4bfe1c91113d078480f96e",
+      "source_consumer_integration_implementation_record_ref": "consumer-integration-implementation:v1-g41:sparkbot:001",
+      "source_shell_boundary_record_ref": "shell-wiring-design:v1-g40:sparkbot:001",
+      "source_boundary_map_ref": "shell-boundary-map:v1-g40:sparkbot",
+      "source_g42_consumer_fixture_ref": "tests/fixtures/sparkbot_lima_v1_g42_shell_wiring_implementation.json",
+      "shell_wiring_implementation_result": "static_shell_wiring_implementation_evidence_created",
+      "shell_wiring_implementation_approved": true,
+      "shell_wiring_implementation_added": true,
+      "static_wiring_fixture_added": true,
+      "static_wiring_test_added": true,
+      "bounded_shell_wiring_implementation_evidence_only": true,
+      "static_g41_implementation_fixture_reference_validated": true,
+      "static_shell_boundary_reference_validated": true,
+      "docs_tests_fixtures_only": true,
+      "approved_consumer_files_changed": [
+        "tests/fixtures/sparkbot_lima_v1_g42_shell_wiring_implementation.json",
+        "tests/test_sparkbot_lima_v1_g42_shell_wiring_implementation.py"
+      ],
+      "consumer_runtime_source_files_changed": false,
+      "raw_patch_bodies_persisted": false,
+      "unapproved_patches_applied": false,
+      "adapter_symbols_called": false,
+      "consumer_runtime_modules_imported": false,
+      "lima_runtime_modules_imported_by_consumer_tests": false,
+      "runtime_shell_wiring_execution_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "fallback_execution_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_sensitive_content_persisted_in_lima_evidence": false,
+      "proof_not_live_dispatch_authority": true,
+      "proof_not_product_readiness": true,
+      "product_ready": false,
+      "future_required_gates": [
+        "provider_model_dispatch_approval_request",
+        "connector_browser_network_authority_approval_request",
+        "physical_world_authority_approval_request",
+        "product_readiness_approval_request"
+      ],
+      "blocked_future_authorities": {
+        "provider_model_dispatch_approved": false,
+        "connector_browser_network_authority_approved": false,
+        "physical_world_authority_approved": false,
+        "product_readiness_approved": false
+      },
+      "remaining_gaps": [
+        "runtime_shell_wiring_execution_not_approved",
+        "provider_model_dispatch_not_approved",
+        "secret_credential_access_not_approved",
+        "connector_browser_network_authority_not_approved",
+        "physical_world_authority_not_approved",
+        "product_readiness_not_approved"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g42:sparkbot-shell-wiring-implementation",
+        "rollback_lima_file_refs": [
+          "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION.md",
+          "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g42_shell_wiring_implementation.json",
+          "tests/test_v1_g42_shell_wiring_implementation.py"
+        ],
+        "rollback_consumer_file_refs": [
+          "tests/fixtures/sparkbot_lima_v1_g42_shell_wiring_implementation.json",
+          "tests/test_sparkbot_lima_v1_g42_shell_wiring_implementation.py"
+        ],
+        "runtime_source_repair_required": false,
+        "consumer_runtime_source_repair_required": false,
+        "shell_runtime_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "shell_wiring_implementation_approval_recorded_confirmation": true,
+        "no_lima_runtime_file_change_confirmation": true,
+        "approved_consumer_files_only_confirmation": true,
+        "g41_consumer_integration_implementation_reference_only_confirmation": true,
+        "g40_shell_boundary_reference_only_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_raw_patch_body_persistence_confirmation": true,
+        "no_unapproved_patch_application_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_consumer_runtime_module_import_confirmation": true,
+        "no_lima_runtime_module_import_confirmation": true,
+        "no_runtime_shell_wiring_execution_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_sensitive_content_in_lima_evidence_confirmation": true,
+        "proof_not_live_dispatch_authority_confirmation": true,
+        "proof_not_product_readiness_confirmation": true
+      }
+    },
+    {
+      "shell_wiring_record_id": "shell-wiring-implementation:v1-g42:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "consumer_branch": "v1-g42-shell-wiring-implementation",
+      "consumer_commit_sha": "e76c33e32676386ae35a4b12f934684ad1969038",
+      "source_consumer_integration_implementation_record_ref": "consumer-integration-implementation:v1-g41:arc-bot-shell:001",
+      "source_shell_boundary_record_ref": "shell-wiring-design:v1-g40:arc-bot-shell:001",
+      "source_boundary_map_ref": "shell-boundary-map:v1-g40:arc-bot-shell",
+      "source_g42_consumer_fixture_ref": "tests/fixtures/arc_bot_shell_lima_v1_g42_shell_wiring_implementation.json",
+      "shell_wiring_implementation_result": "static_shell_wiring_implementation_evidence_created",
+      "shell_wiring_implementation_approved": true,
+      "shell_wiring_implementation_added": true,
+      "static_wiring_fixture_added": true,
+      "static_wiring_test_added": true,
+      "bounded_shell_wiring_implementation_evidence_only": true,
+      "static_g41_implementation_fixture_reference_validated": true,
+      "static_shell_boundary_reference_validated": true,
+      "docs_tests_fixtures_only": true,
+      "approved_consumer_files_changed": [
+        "tests/fixtures/arc_bot_shell_lima_v1_g42_shell_wiring_implementation.json",
+        "tests/test_arc_bot_shell_lima_v1_g42_shell_wiring_implementation.py"
+      ],
+      "consumer_runtime_source_files_changed": false,
+      "raw_patch_bodies_persisted": false,
+      "unapproved_patches_applied": false,
+      "adapter_symbols_called": false,
+      "consumer_runtime_modules_imported": false,
+      "lima_runtime_modules_imported_by_consumer_tests": false,
+      "runtime_shell_wiring_execution_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "fallback_execution_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_sensitive_content_persisted_in_lima_evidence": false,
+      "proof_not_live_dispatch_authority": true,
+      "proof_not_product_readiness": true,
+      "product_ready": false,
+      "future_required_gates": [
+        "provider_model_dispatch_approval_request",
+        "connector_browser_network_authority_approval_request",
+        "physical_world_authority_approval_request",
+        "product_readiness_approval_request"
+      ],
+      "blocked_future_authorities": {
+        "provider_model_dispatch_approved": false,
+        "connector_browser_network_authority_approved": false,
+        "physical_world_authority_approved": false,
+        "product_readiness_approved": false
+      },
+      "remaining_gaps": [
+        "runtime_shell_wiring_execution_not_approved",
+        "provider_model_dispatch_not_approved",
+        "secret_credential_access_not_approved",
+        "connector_browser_network_authority_not_approved",
+        "physical_world_authority_not_approved",
+        "product_readiness_not_approved"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g42:arc-bot-shell-shell-wiring-implementation",
+        "rollback_lima_file_refs": [
+          "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION.md",
+          "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g42_shell_wiring_implementation.json",
+          "tests/test_v1_g42_shell_wiring_implementation.py"
+        ],
+        "rollback_consumer_file_refs": [
+          "tests/fixtures/arc_bot_shell_lima_v1_g42_shell_wiring_implementation.json",
+          "tests/test_arc_bot_shell_lima_v1_g42_shell_wiring_implementation.py"
+        ],
+        "runtime_source_repair_required": false,
+        "consumer_runtime_source_repair_required": false,
+        "shell_runtime_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "shell_wiring_implementation_approval_recorded_confirmation": true,
+        "no_lima_runtime_file_change_confirmation": true,
+        "approved_consumer_files_only_confirmation": true,
+        "g41_consumer_integration_implementation_reference_only_confirmation": true,
+        "g40_shell_boundary_reference_only_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_raw_patch_body_persistence_confirmation": true,
+        "no_unapproved_patch_application_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_consumer_runtime_module_import_confirmation": true,
+        "no_lima_runtime_module_import_confirmation": true,
+        "no_runtime_shell_wiring_execution_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_sensitive_content_in_lima_evidence_confirmation": true,
+        "proof_not_live_dispatch_authority_confirmation": true,
+        "proof_not_product_readiness_confirmation": true
+      }
+    }
+  ]
+}

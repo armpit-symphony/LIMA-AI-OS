@@ -1,0 +1,216 @@
+{
+  "packet_set_id": "v1_g51_executable_real_provider_executor_invocation",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g51-executable-real-provider-executor-invocation",
+  "operator_decision": "Approve-V1-G51",
+  "scope_amendment_decision": "Approve-V1-G51-Scope-Amendment",
+  "approved_scope": "executable_real_provider_executor_invocation_wrapper_slice",
+  "executable_real_provider_executor_invocation_wrapper_approved": true,
+  "executable_real_provider_executor_invocation_wrapper_added": true,
+  "executable_real_provider_executor_invocation_result": "bounded_caller_injected_provider_executor_wrapper_created",
+  "lima_runtime_files_changed": true,
+  "lima_public_api_changed": true,
+  "approved_runtime_files_changed": [
+    "lima/harness/v1_executable_real_provider_executor_invocation.py",
+    "lima/harness/__init__.py"
+  ],
+  "approved_docs_tests_fixtures_changed": [
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g51_executable_real_provider_executor_invocation.json",
+    "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json",
+    "tests/test_v1_g51_executable_real_provider_executor_invocation.py"
+  ],
+  "approved_scope_amendment_files_changed": [
+    "tests/test_v1_g46_live_provider_model_call_execution.py"
+  ],
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wired": false,
+  "provider_executor_invocation_added": true,
+  "provider_executor_invoked": true,
+  "real_provider_executor_invocation_added": true,
+  "real_provider_executor_invoked": true,
+  "fake_provider_executor_invocation_added": false,
+  "actual_model_request_dispatch_execution_added": true,
+  "model_request_dispatched": true,
+  "caller_injected_provider_executor_only": true,
+  "local_tests_use_fake_injected_executors_only": true,
+  "built_in_provider_sdk_added": false,
+  "built_in_provider_sdk_used": false,
+  "direct_provider_sdk_added": false,
+  "direct_provider_sdk_used": false,
+  "direct_network_code_added": false,
+  "direct_network_code_used": false,
+  "network_call_performed_by_lima_harness": false,
+  "provider_endpoint_resolution_added": false,
+  "provider_endpoint_resolution_performed": false,
+  "network_call_performed": false,
+  "ambient_environment_secret_lookup_added": false,
+  "secret_lookup_added": false,
+  "secret_lookup_performed": false,
+  "credential_value_access_added": false,
+  "credential_value_accessed": false,
+  "provider_token_or_api_key_access_added": false,
+  "provider_token_or_api_key_accessed": false,
+  "credential_storage_or_rotation_added": false,
+  "provider_configuration_changes_added": false,
+  "fallback_execution_added": false,
+  "fallback_executed": false,
+  "provider_readiness_network_check_added": false,
+  "token_guardian_live_routing_added": false,
+  "tool_execution_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "scheduled_task_execution_added": false,
+  "external_send_added": false,
+  "raw_prompt_persisted": false,
+  "raw_model_response_persisted": false,
+  "raw_customer_data_persisted": false,
+  "raw_secret_or_credential_persisted": false,
+  "provider_token_or_api_key_persisted": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "raw_sensitive_content_persisted": false,
+  "product_ready": false,
+  "execution_target": {
+    "package": "lima.harness",
+    "runtime_file": "lima/harness/v1_executable_real_provider_executor_invocation.py",
+    "export_surface": "lima.harness.__all__",
+    "provider_executor_boundary": "caller_injected_executor_only",
+    "requires_v1_g50_invocation_envelope": true,
+    "requires_v1_g49_executor_authority_linkage": true,
+    "requires_v1_g48_credential_network_hardening": true
+  },
+  "previous_harness_exports": [
+    "V1ProviderModelRoutingAuthorityError",
+    "validate_v1_provider_model_routing_authority",
+    "V1LiveProviderModelCallAuthorityError",
+    "validate_v1_live_provider_model_call_authority",
+    "V1LiveProviderModelCallExecutionError",
+    "execute_v1_live_provider_model_call"
+  ],
+  "added_harness_exports": [
+    "V1ExecutableRealProviderExecutorInvocationError",
+    "execute_v1_executable_real_provider_executor_invocation"
+  ],
+  "post_refresh_harness_all_exports": [
+    "V1ProviderModelRoutingAuthorityError",
+    "validate_v1_provider_model_routing_authority",
+    "V1LiveProviderModelCallAuthorityError",
+    "validate_v1_live_provider_model_call_authority",
+    "V1LiveProviderModelCallExecutionError",
+    "execute_v1_live_provider_model_call",
+    "V1ExecutableRealProviderExecutorInvocationError",
+    "execute_v1_executable_real_provider_executor_invocation"
+  ],
+  "existing_frozen_harness_exports_preserved": true,
+  "existing_frozen_harness_exports_removed": false,
+  "existing_frozen_harness_exports_renamed": false,
+  "g46_export_assertion_scope_amendment_applied": true,
+  "g22_final_public_api_freeze_fixture_refreshed": true,
+  "execution_boundary": {
+    "provider_executor_boundary_ref": "boundary:v1-g51:caller-injected-executor",
+    "caller_injected_provider_executor": true,
+    "provider_executor_call_allowed": true,
+    "max_attempts": 1,
+    "built_in_provider_sdk_used": false,
+    "direct_provider_sdk_used": false,
+    "direct_network_code_used": false,
+    "provider_endpoint_resolution_performed": false,
+    "network_call_performed_by_lima_harness": false,
+    "ambient_secret_lookup_performed": false,
+    "secret_lookup_performed": false,
+    "credential_value_accessed": false,
+    "provider_token_or_api_key_accessed": false,
+    "fallback_allowed": false,
+    "tool_execution_allowed": false,
+    "consumer_repo_mutation_allowed": false,
+    "connector_browser_network_file_device_robotics_physical_world_behavior_allowed": false
+  },
+  "accepted_evidence_refs": [
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_APPROVAL_REQUEST.md",
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_OPERATOR_DECISION_PACKET.md",
+    "docs/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION_CLOSEOUT.md",
+    "docs/audits/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G50_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G50.md",
+    "docs/V1_G49_REAL_PROVIDER_EXECUTOR.md",
+    "docs/V1_G48_PROVIDER_CREDENTIAL_NETWORK_HARDENING.md",
+    "docs/V1_G46_LIVE_PROVIDER_MODEL_CALL_EXECUTION.md"
+  ],
+  "rollback_metadata": {
+    "rollback_ref": "rollback:v1-g51:executable-real-provider-executor-invocation",
+    "rollback_runtime_file_refs": [
+      "lima/harness/v1_executable_real_provider_executor_invocation.py",
+      "lima/harness/__init__.py"
+    ],
+    "rollback_fixture_refs": [
+      "tests/fixtures/runtime_extraction/v1_g22_final_public_api_freeze.json"
+    ],
+    "rollback_scope_amendment_refs": [
+      "tests/test_v1_g46_live_provider_model_call_execution.py"
+    ],
+    "remove_docs_tests_fixtures_refs": [
+      "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+      "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_CLOSEOUT.md",
+      "tests/fixtures/runtime_extraction/v1_g51_executable_real_provider_executor_invocation.json",
+      "tests/test_v1_g51_executable_real_provider_executor_invocation.py"
+    ],
+    "consumer_repo_changes_required": false,
+    "external_service_changes_required": false,
+    "provider_configuration_changes_required": false,
+    "credential_rotation_required": false,
+    "production_deployment_changes_required": false
+  },
+  "lima_validation_results": {
+    "focused_v1_g51_validation": {
+      "command": "python -m pytest -q tests\\test_v1_g51_executable_real_provider_executor_invocation.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 71
+    },
+    "focused_v1_g51_g50_g49_g48_g47_g46_g22_validation": {
+      "command": "python -m pytest -q tests\\test_v1_g51_executable_real_provider_executor_invocation.py tests\\test_v1_g51_executable_real_provider_executor_invocation_approval_request.py tests\\test_v1_g50_real_provider_executor_invocation.py tests\\test_v1_g50_real_provider_executor_invocation_approval_request.py tests\\test_v1_g49_real_provider_executor.py tests\\test_v1_g49_real_provider_executor_approval_request.py tests\\test_v1_g48_provider_credential_network_hardening.py tests\\test_v1_g47_consumer_fake_executor_provider_model_call_smoke.py tests\\test_v1_g46_live_provider_model_call_execution.py tests\\test_v1_g22_final_public_api_freeze.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 286
+    },
+    "compileall_lima": {
+      "command": "python -m compileall lima",
+      "passed": true
+    },
+    "full_lima_suite": {
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 4516
+    }
+  },
+  "required_confirmations": {
+    "operator_approval_recorded_confirmation": true,
+    "scope_amendment_recorded_confirmation": true,
+    "approved_file_scope_only_confirmation": true,
+    "runtime_scope_limited_to_harness_confirmation": true,
+    "public_api_scope_limited_to_harness_exports_confirmation": true,
+    "prior_harness_exports_preserved_confirmation": true,
+    "v1_g50_invocation_envelope_required_confirmation": true,
+    "v1_g49_executor_authority_linkage_confirmation": true,
+    "v1_g48_credential_network_hardening_linkage_confirmation": true,
+    "caller_injected_provider_executor_only_confirmation": true,
+    "local_tests_use_fake_injected_executors_only_confirmation": true,
+    "no_built_in_provider_sdk_confirmation": true,
+    "no_direct_network_code_confirmation": true,
+    "no_provider_endpoint_resolution_confirmation": true,
+    "no_network_call_by_lima_confirmation": true,
+    "no_secret_lookup_confirmation": true,
+    "no_credential_value_access_confirmation": true,
+    "no_provider_token_or_api_key_access_confirmation": true,
+    "no_fallback_execution_confirmation": true,
+    "no_consumer_repo_mutation_confirmation": true,
+    "no_connector_browser_network_physical_world_confirmation": true,
+    "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+    "no_product_readiness_confirmation": true
+  }
+}

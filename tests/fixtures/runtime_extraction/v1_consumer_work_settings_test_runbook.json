@@ -1,0 +1,189 @@
+{
+  "runbook_id": "v1_consumer_work_settings_test_runbook",
+  "api_status": "CANDIDATE_ONLY",
+  "date": "2026-06-19",
+  "branch": "docs-v1-consumer-work-settings-test-runbook",
+  "source_lima_commit_before_runbook": "dbdcca147c44539e9c4cdd302b3eb05c1af067ed",
+  "documents": {
+    "test_runbook": "docs/runbooks/V1_CONSUMER_WORK_SETTINGS_TEST_RUNBOOK.md",
+    "consumer_testability_matrix": "docs/readiness/V1_CONSUMER_TESTABILITY_MATRIX_THROUGH_WORK_SETTINGS.md",
+    "consumer_work_settings_readiness_audit": "docs/audits/V1_CONSUMER_WORK_SETTINGS_READINESS_AUDIT.md",
+    "public_sparkbot_publication_audit": "docs/audits/V1_PUBLIC_SPARKBOT_PREVIEW_PUBLICATION_AUDIT.md",
+    "v1_g54_fake_sdk_egress_harness_audit": "docs/audits/V1_G54_FAKE_SDK_EGRESS_HARNESS_AUDIT.md",
+    "v1_g55_implementation_blocker_audit": "docs/audits/V1_G55_IMPLEMENTATION_BLOCKER_AUDIT.md"
+  },
+  "consumer_branches": {
+    "lima_ai_os_source": {
+      "repository": "armpit-symphony/LIMA-AI-OS",
+      "branch": "docs-v1-consumer-testability-through-work-settings",
+      "commit": "dbdcca147c44539e9c4cdd302b3eb05c1af067ed"
+    },
+    "public_sparkbot": {
+      "repository": "armpit-symphony/Sparkbot",
+      "target_repository": "sparkpit-labs/Sparkbot",
+      "branch": "public-work-settings-preview",
+      "commit": "81eed8c4067b1a73885bbc79003ea5870b1604a2",
+      "target_pr_created": false,
+      "manual_compare_url": "https://github.com/sparkpit-labs/Sparkbot/compare/main...armpit-symphony:public-work-settings-preview?expand=1"
+    },
+    "sparkbot_shell": {
+      "repository": "armpit-symphony/Sparkbot_shell",
+      "branch": "sparkbot-shell-work-settings-runtime-preview",
+      "commit": "548b6d6aa6cde98b261e867c0c2db86ddbfa83dc"
+    },
+    "arc_bot_shell": {
+      "repository": "armpit-symphony/Arc-Bot-shell",
+      "branch": "arc-work-queue-runtime-settings-docs",
+      "commit": "a05faea14ab24341b4b4567967911e33e51ce88a"
+    }
+  },
+  "checkout_preflight_commands": [
+    {
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "git -C C:\\Users\\limap\\LIMA-AI-OS status --short --branch"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": "git -C C:\\Users\\limap\\Sparkbot-public status --short --branch"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "git -C C:\\Users\\limap\\Sparkbot_shell status --short --branch"
+    },
+    {
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git -C C:\\Users\\limap\\Arc-Bot-shell status --short --branch"
+    }
+  ],
+  "validation_commands": [
+    {
+      "step": 1,
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "expected_result": "93 passed in 0.27s"
+    },
+    {
+      "step": 2,
+      "repo": "C:\\Users\\limap\\Arc-Bot-shell",
+      "command": "git diff --check",
+      "expected_result": "pass"
+    },
+    {
+      "step": 3,
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "python -B -m pytest -q tests -p no:cacheprovider",
+      "expected_result": "13 passed in 0.04s"
+    },
+    {
+      "step": 4,
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "npm run build",
+      "expected_result": "passed: tsc --noEmit && vite build"
+    },
+    {
+      "step": 5,
+      "repo": "C:\\Users\\limap\\Sparkbot_shell",
+      "command": "git diff --check",
+      "expected_result": "pass"
+    },
+    {
+      "step": 6,
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": ".\\.venv-public-test\\Scripts\\python.exe -B -m pytest -q backend\\tests\\test_capabilities.py -p no:cacheprovider",
+      "expected_result": "4 passed, 1 Starlette/httpx deprecation warning"
+    },
+    {
+      "step": 7,
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run test -- --run",
+      "expected_result": "1 test file passed, 4 tests passed"
+    },
+    {
+      "step": 8,
+      "repo": "C:\\Users\\limap\\Sparkbot-public\\frontend",
+      "command": "npm run build",
+      "expected_result": "passed: vite build"
+    },
+    {
+      "step": 9,
+      "repo": "C:\\Users\\limap\\Sparkbot-public",
+      "command": "git diff --check",
+      "expected_result": "pass"
+    },
+    {
+      "step": 10,
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python -m compileall lima",
+      "expected_result": "pass"
+    },
+    {
+      "step": 11,
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "expected_result": "pass; source matrix baseline was 4703 passed before this runbook"
+    },
+    {
+      "step": 12,
+      "repo": "C:\\Users\\limap\\LIMA-AI-OS",
+      "command": "git diff --check",
+      "expected_result": "pass"
+    }
+  ],
+  "user_visible_smoke_targets": {
+    "public_sparkbot": [
+      "work_local_ai_settings_preview_renders_from_preview_branch",
+      "backend_capabilities_test_remains_metadata_limited",
+      "target_pr_not_created_by_runbook"
+    ],
+    "sparkbot_shell": [
+      "work_route_local_browser_preview",
+      "settings_route_local_browser_preview",
+      "local_file_ingestion_and_in_memory_edit_preview_stay_local",
+      "endpoint_checks_limited_to_localhost_loopback"
+    ],
+    "arc_bot_shell": [
+      "work_queue_operator_console_docs_tests",
+      "runtime_settings_operator_console_docs_tests",
+      "runtime_boundaries_documented_fail_closed"
+    ],
+    "lima_ai_os": [
+      "g54_fake_sdk_fake_egress_evidence_candidate_only",
+      "g55_request_only_without_explicit_approval",
+      "consumer_work_settings_readiness_not_product_readiness"
+    ]
+  },
+  "boundary_results": {
+    "v1_g55_implementation_approved": false,
+    "g55_runtime_wrapper_added": false,
+    "lima_runtime_files_changed_by_runbook": false,
+    "public_api_exports_changed_by_runbook": false,
+    "provider_sdk_network_egress_runtime_added": false,
+    "built_in_provider_sdk_client_added": false,
+    "sdk_dependencies_added": false,
+    "endpoint_resolution_execution_added": false,
+    "lima_owned_dns_http_socket_network_calls_added": false,
+    "credential_lookup_or_value_access_added": false,
+    "provider_token_or_api_key_access_added": false,
+    "non_local_endpoint_checks_allowed": false,
+    "connector_browser_network_file_device_robotics_physical_world_authority_added": false,
+    "consumer_production_runtime_integration_added": false,
+    "public_sparkbot_target_pr_created": false,
+    "product_ready": false,
+    "production_ready": false,
+    "v1_0_complete": false
+  },
+  "stop_conditions": [
+    "unexpected_branch_or_commit_drift",
+    "unreviewed_dirty_worktree",
+    "consumer_validation_failure",
+    "lima_validation_failure",
+    "secret_credential_token_sdk_endpoint_or_network_required",
+    "public_sparkbot_target_write_without_auth",
+    "v1_g55_implementation_without_exact_approval"
+  ],
+  "known_blockers": {
+    "public_sparkbot_target_pr_requires_auth_or_cross_repo_pr_path": true,
+    "v1_g55_requires_exact_operator_choice": true
+  },
+  "recommended_next_step": "continue_docs_tests_fixtures_readiness_or_public_sparkbot_pr_auth_unblock_until_v1_g55_is_explicitly_decided"
+}

@@ -1,0 +1,90 @@
+{
+  "gate_id": "v1_g16_guarded_file_mutation_policy",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g16-guarded-file-mutation-policy",
+  "operator_decision": "Approve-V1-G16",
+  "approved_scope": "guarded_file_mutation_policy_contract_slice",
+  "approved_runtime_file_map": [
+    "lima/guardian/v1_file_mutation_policy.py",
+    "lima/guardian/__init__.py"
+  ],
+  "docs_tests_fixtures_file_map": [
+    "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY.md",
+    "docs/V1_G16_GUARDED_FILE_MUTATION_POLICY_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g16_guarded_file_mutation_policy.json",
+    "tests/test_v1_g16_guarded_file_mutation_policy.py"
+  ],
+  "runtime_symbols": [
+    "V1FileMutationPolicyError",
+    "validate_v1_guarded_file_mutation_policy"
+  ],
+  "runtime_behavior_added": true,
+  "runtime_behavior_scope": "candidate_local_non_executing_file_mutation_policy_validation",
+  "actual_file_mutation_execution_approved": false,
+  "actual_file_mutation_execution_added": false,
+  "preview_diff_runtime_behavior_added": false,
+  "required_policy_fields": [
+    "request_classification",
+    "mutation_intent_scope",
+    "workspace_root_boundary",
+    "target_path_expectations",
+    "shell_harness_file_authority",
+    "operator_approval_evidence_requirements",
+    "dry_run_preview_requirement",
+    "diff_patch_preview_expectation",
+    "rollback_expectation",
+    "destructive_delete_confirmation_expectation",
+    "audit_evidence_linkage",
+    "tenant_scope",
+    "shell_scope",
+    "actor_scope",
+    "session_scope"
+  ],
+  "policy_topics": [
+    "file_edit_request_classification",
+    "file_delete_request_classification",
+    "destructive_mutation_classification",
+    "workspace_root_boundary",
+    "path_traversal_rejection",
+    "target_path_normalization_expectations",
+    "shell_harness_provided_file_authority",
+    "user_operator_approval_evidence_requirements",
+    "dry_run_preview_requirement",
+    "diff_patch_preview_expectation",
+    "rollback_expectation",
+    "destructive_delete_confirmation_expectation",
+    "audit_evidence_linkage",
+    "tenant_shell_actor_session_scope",
+    "no_mutation_without_approval_policy",
+    "no_mutation_outside_approved_scope",
+    "no_raw_secret_file_content_persistence",
+    "no_consumer_integration"
+  ],
+  "distinctions": [
+    "policy_authority_contract_implemented",
+    "preview_dry_run_behavior_required_but_not_implemented",
+    "actual_file_mutation_execution_not_approved"
+  ],
+  "forbidden_behavior": {
+    "actual_file_mutation_execution_added": false,
+    "file_read_behavior_added": false,
+    "file_write_behavior_added": false,
+    "file_delete_behavior_added": false,
+    "patch_application_behavior_added": false,
+    "approval_token_issuance_added": false,
+    "raw_pin_verification_added": false,
+    "raw_file_content_persistence_added": false,
+    "consumer_integration_added": false,
+    "provider_model_routing_added": false,
+    "tool_execution_added": false,
+    "shell_runtime_wiring_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_network_device_robotics_physical_world_behavior_added": false,
+    "external_sends_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_ready": false
+  },
+  "recommended_next_step": "separate_v1_g16_audit_branch_before_preview_diff_or_execution_lanes"
+}

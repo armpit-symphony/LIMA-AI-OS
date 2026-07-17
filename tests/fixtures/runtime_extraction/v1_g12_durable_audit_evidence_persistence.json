@@ -1,0 +1,78 @@
+{
+  "gate_id": "v1_g12_durable_audit_evidence_persistence",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g12-durable-audit-evidence-persistence",
+  "operator_decision": "Approve-V1-G12",
+  "operator": "Phil Lima",
+  "approval_date": "2026-06-14",
+  "approved_scope": "durable_audit_evidence_persistence_runtime_slice",
+  "approved_file_map": [
+    "lima/spine/v1_audit_evidence.py",
+    "lima/spine/__init__.py",
+    "lima/persistence/v1_audit_store.py",
+    "lima/persistence/__init__.py",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE.md",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g12_durable_audit_evidence_persistence.json",
+    "tests/test_v1_g12_durable_audit_evidence_persistence.py"
+  ],
+  "runtime_symbols": [
+    "V1AuditEvidenceError",
+    "build_v1_audit_event_record",
+    "build_v1_audit_lineage_record",
+    "V1AuditStoreError",
+    "V1LocalAuditStore"
+  ],
+  "accepted_behaviors": [
+    "reviewed_v1_request_decision_metadata_creates_redacted_audit_event",
+    "audit_record_hashes_are_deterministic",
+    "append_only_local_store_uses_explicit_store_path",
+    "scoped_lookup_by_event_id_lineage_id_and_decision_id",
+    "cross_tenant_or_cross_shell_lookup_fails_closed",
+    "audit_records_are_proof_not_execution_authority"
+  ],
+  "fail_closed_cases": [
+    "missing_lineage_id",
+    "missing_event_id",
+    "missing_tenant_ref",
+    "missing_actor_ref",
+    "missing_shell_id",
+    "missing_decision_id",
+    "destructive_file_operation_without_approval_id",
+    "destructive_file_operation_without_approval_evidence_ref",
+    "raw_secret_value",
+    "raw_approval_pin",
+    "raw_approval_token",
+    "raw_prompt",
+    "raw_file_contents",
+    "raw_customer_data",
+    "unknown_privacy_class",
+    "forged_execution_authority",
+    "provider_model_tool_browser_network_device_robotics_claims"
+  ],
+  "record_types": [
+    "v1_audit_event",
+    "v1_audit_lineage"
+  ],
+  "store_file": "v1_audit_records.jsonl",
+  "forbidden_behavior": {
+    "provider_model_routing_added": false,
+    "provider_model_calls_added": false,
+    "tool_execution_added": false,
+    "shell_runtime_wiring_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_added": false,
+    "external_database_writes_added": false,
+    "migrations_added": false,
+    "queues_workers_daemons_subprocesses_threads_added": false,
+    "raw_sensitive_content_persisted": false,
+    "audit_metadata_execution_authority_added": false,
+    "approval_token_issued": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_readiness_claimed": false,
+    "production_readiness_claimed": false
+  },
+  "current_readiness_verdict": "candidate_only_v1_g12_durable_audit_evidence_slice_complete_release_boundary_not_passed"
+}

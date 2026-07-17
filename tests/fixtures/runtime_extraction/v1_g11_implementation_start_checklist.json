@@ -1,0 +1,108 @@
+{
+  "checklist_id": "v1_g11_implementation_start_checklist",
+  "gap_id": "V1-G11",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g11-runtime-slice-approval-request",
+  "document": "docs/V1_G11_IMPLEMENTATION_START_CHECKLIST.md",
+  "source_documents": [
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_WORK_ORDER.md",
+    "docs/V1_G11_PRE_IMPLEMENTATION_FILE_EXPORT_ABSENCE_GUARD.md"
+  ],
+  "checklist_status": "approve_v1_g11_recorded_start_allowed_on_approved_branch_only",
+  "docs_tests_fixtures_only": true,
+  "runtime_implementation_allowed_now": true,
+  "operator_approval_recorded": true,
+  "runtime_implementation_approved": true,
+  "current_decision_record": {
+    "recorded_choice": "Approve-V1-G11",
+    "recorded_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": true
+  },
+  "required_approval_record": {
+    "recorded_choice": "Approve-V1-G11",
+    "recorded_approval_wording": "I explicitly approve V1-G11 implementation of the typed request and GuardianDecision preflight runtime slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md.",
+    "recorded_revision_request": null,
+    "recorded_pause_reason": null,
+    "approved_implementation_branch": "v1-g11-runtime-request-decision-gate",
+    "runtime_implementation_approved": true
+  },
+  "allowed_implementation_branch_if_approved": "v1-g11-runtime-request-decision-gate",
+  "current_branch_may_implement": false,
+  "approved_runtime_scope_if_approved": "typed_request_guardian_decision_preflight_runtime_slice",
+  "approved_files_if_approved": [
+    "lima/kernel/v1_runtime_request.py",
+    "lima/kernel/__init__.py",
+    "lima/guardian/v1_decision_gate.py",
+    "lima/guardian/__init__.py",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE.md",
+    "docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g11_runtime_request_decision_gate.json",
+    "tests/test_v1_g11_runtime_request_decision_gate.py"
+  ],
+  "required_future_symbols_if_approved": [
+    "V1RuntimeRequestError",
+    "build_v1_runtime_request",
+    "V1GuardianDecisionGateError",
+    "review_v1_runtime_request"
+  ],
+  "required_validation_if_approved": [
+    "cmd /c \"python3 --version || python --version\"",
+    "cmd /c \"python3 -m compileall lima || python -m compileall lima\"",
+    "cmd /c \"python3 -m pytest -q tests\\test_v1_g11_runtime_request_decision_gate.py || python -m pytest -q tests\\test_v1_g11_runtime_request_decision_gate.py\"",
+    "cmd /c \"python3 -m pytest -q || python -m pytest -q\"",
+    "git diff --check",
+    "git diff --cached --check"
+  ],
+  "still_forbidden_if_approved": [
+    "raw_natural_language_parsing",
+    "humaninput_live_bridge_behavior",
+    "provider_model_calls_or_runtime_routing",
+    "tool_execution",
+    "file_mutation",
+    "browser_or_network_behavior",
+    "connector_behavior",
+    "shell_runtime_wiring",
+    "sparkbot_sparkbot_shell_arc_bot_shell_imports_or_code_copy",
+    "durable_persistence_database_writes_audit_storage",
+    "queues_workers_daemons_subprocesses_threads",
+    "approval_token_issuance",
+    "destructive_edit_delete_approval_without_operator_approval_evidence",
+    "haptic_device_behavior",
+    "device_robotics_iot_drone_robot_humanoid_physical_world_behavior",
+    "runtime_export_cleanup",
+    "final_api_freeze",
+    "v1_product_or_production_readiness_claims"
+  ],
+  "current_boundary_flags": {
+    "runtime_behavior_added": false,
+    "lima_runtime_files_changed": false,
+    "tests_support_changed": false,
+    "shell_repos_changed": false,
+    "sparkbot_import_added": false,
+    "sparkbot_shell_import_added": false,
+    "arc_bot_shell_import_added": false,
+    "sparkbot_code_copied": false,
+    "provider_model_routing_added": false,
+    "shell_wiring_added": false,
+    "persistence_added": false,
+    "haptic_device_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_added": false,
+    "runtime_exports_changed": false,
+    "runtime_export_cleanup_approved": false,
+    "final_freeze_approved": false,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "doc_required_phrases": [
+    "V1-G11 implementation is now approved only for the approved implementation branch",
+    "Any missing, mixed, misspelled, or extra decision state must be treated as no approval",
+    "The approval-request branch, `v1-g11-runtime-slice-approval-request`, must not carry implementation work"
+  ],
+  "state_required_phrase": "V1-G11 implementation start checklist document",
+  "recommended_next_step": "create_approved_v1_g11_implementation_branch"
+}

@@ -1,0 +1,59 @@
+{
+  "case_id": "typed_bridge_acceptance_fail_closed_missing_guardian_request",
+  "case_family": "fail_closed_missing_guardian_request",
+  "docs_tests_fixtures_only": true,
+  "source_request_metadata": {
+    "source_kind": "shell_request",
+    "channel": "chat",
+    "tenant_id": "tenant_demo",
+    "actor_id": "operator_demo",
+    "lineage_ref": "lineage:v1-g2:missing-guardian",
+    "request_summary": "prepare risky admin change"
+  },
+  "typed_intentenvelope_candidate_metadata": {
+    "candidate_status": "needs_review",
+    "intent_kind": "admin_change",
+    "confidence": "medium",
+    "risk_class": "high",
+    "clarification_state": "not_required",
+    "requested_tool_packs": [
+      "admin"
+    ],
+    "evidence_requirements": [
+      "admin_change_preview"
+    ]
+  },
+  "guardian_request_metadata": null,
+  "future_guardian_decision_metadata": {
+    "state": "pending",
+    "decision_id": null,
+    "approval_granted": false,
+    "execution_allowed": false
+  },
+  "kernel_status": "needs_review",
+  "packet_status": "deferred",
+  "expected_blocked_claims": [
+    "missing_guardian_request_metadata"
+  ],
+  "control_flags": {
+    "non_authoritative": true,
+    "safe_by_default": true,
+    "local_only": true,
+    "deterministic": true,
+    "execution_allowed": false,
+    "dispatch_allowed": false,
+    "persistence_allowed": false,
+    "approval_granted": false,
+    "external_calls_allowed": false,
+    "provider_model_routing_allowed": false,
+    "model_calls_allowed": false,
+    "tool_calls_allowed": false,
+    "driver_calls_allowed": false,
+    "adapter_calls_allowed": false,
+    "browser_file_network_device_robotics_allowed": false,
+    "haptic_device_behavior_allowed": false,
+    "physical_world_allowed": false,
+    "guardian_decision_created": false,
+    "runtime_test_harness_active": false
+  }
+}

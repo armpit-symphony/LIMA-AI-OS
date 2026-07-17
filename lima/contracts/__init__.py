@@ -60,6 +60,9 @@ from .events import (
     ToolExposureAuditEvent,
     ToolCallEvent,
 )
+from .audit_event import GovernedAuditEvent
+from .governed_decision import GovernedDecision
+from .governed_request import GovernedRequest
 from .guardian import (
     ConsequentialActionRequest,
     ConsequentialActionType,
@@ -167,6 +170,9 @@ __all__ = [
     "GuardianDecisionRef",
     "GuardianDecisionStatus",
     "GuardianProtocol",
+    "GovernedAuditEvent",
+    "GovernedDecision",
+    "GovernedRequest",
     "HarnessProtocol",
     "HumanInputAdapterDesign",
     "HumanInputAdapterMapping",

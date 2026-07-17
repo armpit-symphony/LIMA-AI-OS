@@ -1,0 +1,66 @@
+{
+  "gate_id": "v1_g13_readiness_gap_refresh_next_lane_decision_gate",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g13-readiness-gap-refresh-next-lane-decision-gate",
+  "source_branch": "audit-v1-g12-durable-audit-evidence-persistence",
+  "source_commit": "ba9f1483e49d8a4e11106f3074d2ced2becd155b",
+  "docs_tests_fixtures_only": true,
+  "runtime_behavior_added": false,
+  "lima_runtime_files_changed": false,
+  "operator_approval_recorded_for_next_runtime": false,
+  "v1_product_ready": false,
+  "production_ready": false,
+  "runtime_export_cleanup_approved": false,
+  "final_api_freeze_approved": false,
+  "documents": {
+    "gate": "docs/V1_G13_READINESS_GAP_REFRESH_AND_NEXT_LANE_DECISION_GATE.md",
+    "closeout": "docs/V1_G13_READINESS_GAP_REFRESH_CLOSEOUT.md",
+    "current_state": "docs/CURRENT_PROJECT_STATE.md",
+    "v1_g12_audit": "docs/audits/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_AUDIT.md"
+  },
+  "accepted_evidence": {
+    "v1_g11_runtime_slice_implemented": true,
+    "v1_g11_audit_verdict": "PASS",
+    "v1_g12_runtime_slice_implemented": true,
+    "v1_g12_audit_verdict": "PASS_WITH_WARNINGS",
+    "v1_g12_local_jsonl_store_candidate_only": true
+  },
+  "remaining_blockers": [
+    "v1_product_release_boundary_not_passed",
+    "live_destructive_edit_delete_approval_enforcement_not_implemented",
+    "approval_token_issuance_not_approved",
+    "humaninput_bridge_activation_not_implemented",
+    "provider_model_runtime_routing_not_implemented",
+    "shell_runtime_wiring_not_implemented",
+    "external_database_backed_audit_persistence_not_implemented",
+    "audit_retention_workers_not_implemented",
+    "export_delete_review_workflow_not_implemented",
+    "runtime_export_cleanup_unapproved",
+    "final_api_freeze_unapproved",
+    "production_behavior_not_approved"
+  ],
+  "next_lane_options": [
+    "V1-G14-Approval-Enforcement-Request",
+    "Provider-Model-Routing-Request",
+    "Shell-Wiring-Request",
+    "External-Audit-Store-Request",
+    "Product-Release-Reaudit"
+  ],
+  "recommended_next_lane": "V1-G14-Approval-Enforcement-Request",
+  "recommended_next_lane_scope": "docs_tests_fixtures_only_operator_approval_request",
+  "next_runtime_implementation_approved": false,
+  "stop_conditions": [
+    "runtime_approval_enforcement",
+    "approval_token_issuance",
+    "provider_model_calls_or_routing",
+    "shell_runtime_wiring",
+    "humaninput_bridge_activation",
+    "connector_behavior",
+    "browser_file_network_device_robotics_physical_world_behavior",
+    "external_database_writes_migrations_queues_workers_daemons_subprocesses_threads",
+    "raw_sensitive_content_persistence",
+    "runtime_export_cleanup",
+    "final_api_freeze",
+    "v1_product_or_production_readiness_claim"
+  ]
+}

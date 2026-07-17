@@ -6472,3 +6472,121 @@ Consequences:
 - Implementation approval remains false.
 - Runtime implementation remains not recommended.
 - Any future implementation lane remains blocked pending separate explicit Phil approval.
+
+## ADR-0336: V1-G11 Approval Request Is Ready But Runtime Remains Unapproved
+
+Status: Accepted
+
+Decision:
+
+The V1-G11 typed request and GuardianDecision preflight runtime-slice approval request is ready for operator decision, but runtime implementation remains unapproved until the exact request is explicitly approved.
+
+Context:
+
+V1-G10 defined the minimum runtime implementation gate and exact file-touch map. V1-G11 now records the exact approval question in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_APPROVAL_REQUEST.md` and audits that request in `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_PREFLIGHT_AUDIT.md`.
+
+Consequences:
+
+- V1-G11 approval-request work is docs/tests/fixtures-only.
+- Operator approval is not recorded by the request packet.
+- No `lima/` runtime files are changed by the request packet.
+- The only future implementation scope, if approved, is the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
+- Destructive edit/delete must map to approval-required status and must not execute or become approved without operator approval evidence.
+- Provider/model calls, shell wiring, durable persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, and physical-world behavior remain unapproved.
+
+## ADR-0337: V1-G11 Operator Decision Packet Records Choices But Not Approval
+
+Status: Accepted
+
+Decision:
+
+The V1-G11 operator decision packet is the authoritative place to record `Approve-V1-G11`, `Revise-V1-G11`, or `Pause`. It includes an empty Decision Record section, but the packet itself does not record approval or authorize runtime implementation.
+
+Context:
+
+The active V1 objective makes live approval, GuardianDecision, haptics, and provider/model routing acceptable product directions, but broad product direction must not be confused with exact V1-G11 runtime approval. `docs/V1_G11_RUNTIME_REQUEST_DECISION_GATE_OPERATOR_DECISION_PACKET.md` now records the exact approval wording and rejects implicit approval from general V1 direction, prior static gates, or the packet itself.
+
+Consequences:
+
+- Operator approval remains unrecorded until one valid choice is explicitly recorded in the packet's Decision Record section.
+- Runtime implementation remains unapproved.
+- The only future implementation scope, if approved, remains the typed request and GuardianDecision preflight runtime slice named in the V1-G11 request.
+- No `lima/` files, tests/support helpers, shell repositories, Sparkbot imports/code copy, provider/model routing, persistence, haptic device behavior, runtime export cleanup, final freeze, V1 readiness, production readiness, robotics, or physical-world behavior are added by the decision packet.
+
+## ADR-0338: V1-G55 Is The Active Provider SDK Network Egress Decision Gate
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records V1-G55 as the active operator decision gate for the bounded real provider SDK/network egress authority slice. The prepared V1-G55 approval request, operator decision packet, preflight audit, and implementation blocker audit govern the next step until exactly one valid operator choice is recorded.
+
+Context:
+
+Previous V1 decision-log entries stopped at V1-G11, while the current V1 readiness chain has advanced through V1-G54 and prepared the V1-G55 approval request. V1-G54 fake SDK/fake-egress harness evidence and the runtime authority chain audit through G54 are complete. V1-G55 is prepared as request-only metadata, and the implementation blocker audit records that implementation remains blocked pending explicit `Approve-V1-G55`.
+
+Consequences:
+
+- Valid V1-G55 operator choices are `Approve-V1-G55`, `Revise-V1-G55`, or `Pause`.
+- Operator approval is not recorded by this ADR.
+- Runtime implementation remains unapproved.
+- The proposed V1-G55 implementation branch remains `v1-g55-real-provider-sdk-network-egress` and must not be used for implementation unless `Approve-V1-G55` is explicitly recorded.
+- Without `Approve-V1-G55`, only docs/tests/fixtures review, guard docs, audit docs, request revision work, and decision-recording work may continue.
+- If approved later, implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G55_REAL_PROVIDER_SDK_NETWORK_EGRESS_APPROVAL_REQUEST.md`.
+- No runtime behavior is added by this decision-log refresh.
+- No `lima/` runtime files are changed by this decision-log refresh.
+- No public API exports are changed by this decision-log refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
+- No provider SDK/network egress invocation, caller-injected provider SDK network executor invocation, built-in provider SDK client, SDK dependency, vendor SDK import, direct provider SDK implementation, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector behavior, browser/file/network/device/robotics/physical-world behavior, raw sensitive payload persistence, product-readiness claim, or production-readiness claim is authorized by this ADR.
+
+## ADR-0339: V1 Consumer Target Refresh Tracks Arc Readiness Without Unblocking G55
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records a docs/tests/fixtures-only consumer target state refresh after the Arc-Bot-shell runtime gating readiness integration audit. The refresh accepts Arc-Bot-shell readiness integration as consumer-side testing evidence and records the public Sparkbot publication permission blocker, while preserving V1-G55 as the active unapproved implementation gate.
+
+Context:
+
+After V1-G54 and the G55 request/blocker chain, Arc-Bot-shell gained a pushed readiness integration checkpoint at `3004367aa7aa96b4b2518c0e3783cf5afba979c0`, audited by `docs/audits/V1_ARC_RUNTIME_GATING_READINESS_INTEGRATION_AUDIT.md`. Public Sparkbot has a clean local preview branch at `81eed8c4067b1a73885bbc79003ea5870b1604a2`, but pushing to `sparkpit-labs/Sparkbot` remains blocked by GitHub 403 for the current `armpit-symphony` credential.
+
+Consequences:
+
+- The refresh is docs/tests/fixtures-only.
+- V1-G55 remains the active implementation decision gate.
+- Operator approval for G55 remains unrecorded.
+- Runtime implementation remains unapproved.
+- No `lima/` runtime files are changed by this refresh.
+- No public API exports are changed by this refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this refresh.
+- Public Sparkbot remote publication remains an external permission blocker, not a LIMA runtime blocker.
+- No provider SDK/network egress invocation, built-in provider SDK client, SDK dependency, vendor SDK import, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, fallback execution, consumer production integration, connector/browser/network/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this refresh.
+
+## ADR-0340: V1-G61 Supersedes Earlier V1 Decision-Log Gates As Current Blocker
+
+Status: Accepted
+
+Decision:
+
+The V1 decision log records `V1-G61` as the current operator-decision gate for the runtime vendor SDK import execution proof request. Earlier V1 ADRs, including the V1-G55 decision-log status and consumer target refresh, remain historical evidence only and do not describe the current active blocker.
+
+Context:
+
+The current V1 evidence chain has advanced beyond the V1-G55 and V1-G56 provider SDK/network lanes. The runtime authority chain is audited through `V1-G56`; completed implementation evidence is refreshed through `V1-G60`; the request-only V1-G61 approval packet, request-gate audit, preapproval runtime-tree guard audit, operator decision packet status audit, post-G61 request readiness refresh, current gate consistency audit, current validation refresh including latest LIMA readiness freshness 15/89/5361 evidence and latest handoff freshness 8/117/5362 plus 7/64/133/5364 evidence, release-candidate checklist, cutover runbook, and final readiness audit template now define the current candidate boundary.
+
+Consequences:
+
+- Valid V1-G61 operator choices are `Approve-V1-G61`, `Revise-V1-G61`, or `Pause`.
+- The V1-G61 operator decision packet status audit proves `Approve-V1-G61` is recorded for the bounded local import execution proof only.
+- Operator approval for the bounded G61 proof is recorded, but no release-candidate, final-readiness, cutover, product-readiness, or production-readiness authority is created by this ADR.
+- Additional V1-G61 runtime implementation remains unapproved.
+- The next smallest safe action is to run the final readiness audit after the release checklist refresh, then require explicit cutover authorization before any branch, tag, cutover, or readiness claim.
+- Any follow-on implementation must remain limited to the exact file scope, behavior scope, tests, rollback plan, and stop conditions in `docs/V1_G61_RUNTIME_VENDOR_SDK_IMPORT_EXECUTION_PROOF_APPROVAL_REQUEST.md` and must not expand beyond the recorded proof.
+- The current validation refresh records 153 focused current-gate/release-readiness tests, 5350 full LIMA suite tests, latest LIMA readiness freshness evidence with 15 focused final blocker/index tests, 89 broader affected V1 readiness tests, and 5361 full-suite tests, and latest handoff freshness evidence with 8 focused post-G61 request-refresh tests, 117 broader G61/readiness tests, 7 focused candidate harness quickstart tests, 64 adjacent harness/readiness tests, 133 broader G61/readiness tests, and 5362/5364 full-suite tests passing, but successful tests do not approve G61 implementation or V1 product readiness.
+- No runtime behavior is added by this decision-log refresh.
+- No `lima/` runtime files are changed by this decision-log refresh.
+- No public API exports are changed by this decision-log refresh.
+- No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
+- No dependency manifest or lockfile is changed by this decision-log refresh.
+- No runtime vendor SDK import execution proof, runtime vendor SDK import in `lima/`, built-in provider SDK client, provider client construction, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector/browser/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this ADR.

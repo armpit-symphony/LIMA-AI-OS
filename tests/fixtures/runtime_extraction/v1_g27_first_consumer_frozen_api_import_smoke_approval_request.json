@@ -1,0 +1,81 @@
+{
+  "gate_id": "v1_g27_first_consumer_frozen_api_import_smoke_approval_request",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "prepare-v1-g27-first-consumer-frozen-api-import-smoke-approval-request",
+  "docs_tests_fixtures_only_request": true,
+  "implementation_approved": false,
+  "operator_approval_recorded": false,
+  "consumer_frozen_api_import_smoke_added": false,
+  "lima_runtime_files_changed": false,
+  "sparkbot_runtime_source_mutation_added": false,
+  "arc_bot_shell_runtime_source_mutation_added": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "runtime_export_cleanup_approved": false,
+  "provider_model_calls_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "product_ready": false,
+  "valid_operator_choices": [
+    "Approve-V1-G27",
+    "Revise-V1-G27",
+    "Pause"
+  ],
+  "required_approval_wording": "I explicitly approve V1-G27 implementation of the first consumer frozen API import-smoke slice, limited to the file scope, behavior scope, tests, rollback plan, and stop conditions in docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_APPROVAL_REQUEST.md.",
+  "decision_record": {
+    "recorded_choice": "none",
+    "recorded_approval_wording": "none",
+    "recorded_revision_request": "none",
+    "recorded_pause_reason": "none",
+    "approved_implementation_branch": "none",
+    "implementation_approved": false
+  },
+  "proposed_implementation_branch": "v1-g27-first-consumer-frozen-api-import-smoke",
+  "target_consumers": [
+    "sparkbot",
+    "arc_bot"
+  ],
+  "approved_import_smoke_symbols_if_operator_says_yes": [
+    "lima.adapters.validate_v1_consumer_integration_compatibility_freeze",
+    "lima.adapters.V1ConsumerIntegrationCompatibilityError"
+  ],
+  "approved_lima_files_if_operator_says_yes": [
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE.md",
+    "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g27_first_consumer_frozen_api_import_smoke.json",
+    "tests/test_v1_g27_first_consumer_frozen_api_import_smoke.py"
+  ],
+  "approved_sparkbot_files_if_operator_says_yes": [
+    "tests/fixtures/sparkbot_lima_v1_g27_frozen_api_import_smoke.json",
+    "tests/test_sparkbot_lima_v1_g27_frozen_api_import_smoke.py"
+  ],
+  "approved_arc_bot_shell_files_if_operator_says_yes": [
+    "tests/fixtures/arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.json",
+    "tests/test_arc_bot_shell_lima_v1_g27_frozen_api_import_smoke.py"
+  ],
+  "import_smoke_scope_if_approved": {
+    "test_only_import_allowed": true,
+    "call_imported_symbols_allowed": false,
+    "consumer_runtime_calls_allowed": false,
+    "runtime_source_files_allowed": false,
+    "live_provider_model_calls_allowed": false
+  },
+  "required_prior_evidence_refs": [
+    "docs/V1_G22_FINAL_PUBLIC_API_FREEZE.md",
+    "docs/V1_G24_FIRST_CONSUMER_IMPORT_PLAN_EVIDENCE_PACKETS.md",
+    "docs/V1_G25_FIRST_CONSUMER_REPO_PATCH_PREVIEW_EVIDENCE.md",
+    "docs/V1_G26_FIRST_CONSUMER_REPOSITORY_EDIT.md"
+  ],
+  "documents": {
+    "approval_request": "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_APPROVAL_REQUEST.md",
+    "work_order": "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_WORK_ORDER.md",
+    "operator_decision_packet": "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_OPERATOR_DECISION_PACKET.md",
+    "preflight_audit": "docs/V1_G27_FIRST_CONSUMER_FROZEN_API_IMPORT_SMOKE_PREFLIGHT_AUDIT.md"
+  },
+  "recommended_next_step": "operator_decision_on_approve_v1_g27_revise_v1_g27_or_pause"
+}

@@ -20,3 +20,4 @@ build/
 *.sqlite3
 *.jsonl
 data/
+handoff_artifacts/

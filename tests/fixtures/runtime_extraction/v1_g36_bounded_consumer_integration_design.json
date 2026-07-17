@@ -1,0 +1,351 @@
+{
+  "packet_set_id": "v1_g36_bounded_consumer_integration_design",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g36-bounded-consumer-integration-design",
+  "operator_decision": "Approve-V1-G36",
+  "approved_scope": "bounded_consumer_integration_design_slice",
+  "bounded_consumer_integration_design_added": true,
+  "metadata_design_only": true,
+  "lima_docs_tests_fixtures_only": true,
+  "future_patch_preview_gate_proposed": true,
+  "future_consumer_repository_edit_gate_required": true,
+  "bounded_consumer_integration_design_approved": true,
+  "consumer_integration_approved": false,
+  "consumer_integration_added": false,
+  "consumer_runtime_source_files_changed": false,
+  "lima_runtime_files_changed": false,
+  "consumer_repo_mutation_added": false,
+  "sparkbot_files_changed": false,
+  "arc_bot_shell_files_changed": false,
+  "adapter_symbols_called": false,
+  "consumer_runtime_modules_imported": false,
+  "shell_runtime_wiring_implementation_added": false,
+  "provider_model_calls_added": false,
+  "model_request_dispatch_added": false,
+  "fallback_execution_added": false,
+  "secret_lookup_added": false,
+  "credential_access_added": false,
+  "tool_execution_outside_local_tests_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "human_input_bridge_activated": false,
+  "scheduled_task_execution_added": false,
+  "external_sends_added": false,
+  "external_database_writes_added": false,
+  "raw_sensitive_content_persisted_in_lima_evidence": false,
+  "product_ready": false,
+  "proof_not_integration_authority": true,
+  "proof_not_product_readiness": true,
+  "approved_lima_files_changed": [
+    "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN.md",
+    "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g36_bounded_consumer_integration_design.json",
+    "tests/test_v1_g36_bounded_consumer_integration_design.py"
+  ],
+  "approved_consumer_files_changed": [],
+  "reviewed_evidence_refs": [
+    "docs/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW.md",
+    "docs/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW_CLOSEOUT.md",
+    "docs/audits/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G35_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G35.md",
+    "docs/readiness/V1_POST_G35_NEXT_LANE_DECISION_MATRIX.md"
+  ],
+  "future_required_gates": [
+    "consumer_integration_patch_preview_approval_request",
+    "consumer_repository_edit_approval_request",
+    "consumer_integration_import_smoke_approval_request",
+    "shell_wiring_design_approval_request",
+    "provider_model_dispatch_approval_request",
+    "connector_browser_network_authority_approval_request",
+    "physical_world_authority_approval_request",
+    "product_readiness_approval_request"
+  ],
+  "blocked_future_authorities": {
+    "patch_preview_implementation_approved": false,
+    "consumer_repository_edit_approved": false,
+    "consumer_integration_import_smoke_approved": false,
+    "shell_wiring_implementation_approved": false,
+    "provider_model_dispatch_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false
+  },
+  "candidate_file_map_categories": [
+    "lima_evidence_docs_tests_fixtures",
+    "consumer_static_test_fixtures_after_future_edit_gate",
+    "consumer_static_tests_after_future_edit_gate",
+    "consumer_shell_adapter_boundary_after_future_shell_wiring_gate",
+    "lima_runtime_boundary_after_future_runtime_gate"
+  ],
+  "handoff_contracts": [
+    {
+      "contract_id": "handoff-contract:v1-g36:candidate-import-surface",
+      "contract_name": "candidate_import_surface_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    },
+    {
+      "contract_id": "handoff-contract:v1-g36:consumer-fixture",
+      "contract_name": "consumer_fixture_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    },
+    {
+      "contract_id": "handoff-contract:v1-g36:consumer-smoke-test",
+      "contract_name": "consumer_smoke_test_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    },
+    {
+      "contract_id": "handoff-contract:v1-g36:lima-evidence-packet",
+      "contract_name": "lima_evidence_packet_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    },
+    {
+      "contract_id": "handoff-contract:v1-g36:rollback-checkpoint",
+      "contract_name": "rollback_checkpoint_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    },
+    {
+      "contract_id": "handoff-contract:v1-g36:guardian-authority-boundary",
+      "contract_name": "guardian_authority_boundary_contract",
+      "status": "design_only",
+      "requires_future_gate": true,
+      "implementation_added": false
+    }
+  ],
+  "bounded_design_records": [
+    {
+      "bounded_design_record_id": "bounded-consumer-integration-design:v1-g36:sparkbot:001",
+      "consumer_packet_family": "sparkbot",
+      "consumer_name": "Sparkbot",
+      "consumer_repository": "sparkpit-labs/Sparkbot",
+      "reviewed_consumer_branch": "v1-g34-live-consumer-import-call",
+      "reviewed_consumer_commit_sha": "cee164655e1603f5e68b6df9773dc5b08dd27ca0",
+      "source_compatibility_review_record_ref": "consumer-integration-compatibility-review:v1-g35:sparkbot:001",
+      "bounded_design_result": "candidate_bounded_design_defined_for_future_patch_preview_gate",
+      "metadata_design_only": true,
+      "future_patch_preview_gate_proposed": true,
+      "future_consumer_repository_edit_gate_required": true,
+      "consumer_integration_approved": false,
+      "consumer_integration_added": false,
+      "consumer_repo_mutation_added": false,
+      "consumer_runtime_source_files_changed": false,
+      "adapter_symbols_called": false,
+      "consumer_runtime_modules_imported": false,
+      "shell_runtime_wiring_implementation_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "fallback_execution_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_sensitive_content_persisted_in_lima_evidence": false,
+      "proof_not_integration_authority": true,
+      "proof_not_product_readiness": true,
+      "product_ready": false,
+      "candidate_file_map_categories": [
+        "lima_evidence_docs_tests_fixtures",
+        "consumer_static_test_fixtures_after_future_edit_gate",
+        "consumer_static_tests_after_future_edit_gate",
+        "consumer_shell_adapter_boundary_after_future_shell_wiring_gate",
+        "lima_runtime_boundary_after_future_runtime_gate"
+      ],
+      "future_required_gates": [
+        "consumer_integration_patch_preview_approval_request",
+        "consumer_repository_edit_approval_request",
+        "consumer_integration_import_smoke_approval_request",
+        "shell_wiring_design_approval_request",
+        "provider_model_dispatch_approval_request",
+        "connector_browser_network_authority_approval_request",
+        "physical_world_authority_approval_request",
+        "product_readiness_approval_request"
+      ],
+      "blocked_future_authorities": {
+        "patch_preview_implementation_approved": false,
+        "consumer_repository_edit_approved": false,
+        "consumer_integration_import_smoke_approved": false,
+        "shell_wiring_implementation_approved": false,
+        "provider_model_dispatch_approved": false,
+        "connector_browser_network_authority_approved": false,
+        "physical_world_authority_approved": false,
+        "product_readiness_approved": false
+      },
+      "handoff_contract_refs": [
+        "handoff-contract:v1-g36:candidate-import-surface",
+        "handoff-contract:v1-g36:consumer-fixture",
+        "handoff-contract:v1-g36:consumer-smoke-test",
+        "handoff-contract:v1-g36:lima-evidence-packet",
+        "handoff-contract:v1-g36:rollback-checkpoint",
+        "handoff-contract:v1-g36:guardian-authority-boundary"
+      ],
+      "source_evidence_refs": [
+        "docs/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW.md",
+        "docs/audits/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW_AUDIT.md",
+        "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G35_AUDIT.md",
+        "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G35.md",
+        "docs/readiness/V1_POST_G35_NEXT_LANE_DECISION_MATRIX.md"
+      ],
+      "remaining_gaps": [
+        "patch_preview_not_approved",
+        "consumer_repository_edit_not_approved",
+        "consumer_integration_not_approved",
+        "shell_wiring_implementation_not_approved",
+        "provider_model_dispatch_not_approved",
+        "secret_credential_access_not_approved",
+        "connector_browser_network_authority_not_approved",
+        "physical_world_authority_not_approved",
+        "product_readiness_not_approved"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g36:sparkbot-bounded-integration-design",
+        "rollback_lima_file_refs": [
+          "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN.md",
+          "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g36_bounded_consumer_integration_design.json",
+          "tests/test_v1_g36_bounded_consumer_integration_design.py"
+        ],
+        "rollback_consumer_file_refs": [],
+        "runtime_source_repair_required": false,
+        "consumer_repository_repair_required": false,
+        "shell_runtime_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_lima_runtime_file_change_confirmation": true,
+        "no_consumer_repo_mutation_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_consumer_runtime_module_import_confirmation": true,
+        "no_consumer_integration_implementation_confirmation": true,
+        "no_shell_wiring_implementation_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_sensitive_content_in_lima_evidence_confirmation": true,
+        "proof_not_integration_authority_confirmation": true,
+        "proof_not_product_readiness_confirmation": true
+      }
+    },
+    {
+      "bounded_design_record_id": "bounded-consumer-integration-design:v1-g36:arc-bot-shell:001",
+      "consumer_packet_family": "arc_bot",
+      "consumer_name": "Arc-Bot-shell",
+      "consumer_repository": "armpit-symphony/Arc-Bot-shell",
+      "reviewed_consumer_branch": "v1-g34-live-consumer-import-call",
+      "reviewed_consumer_commit_sha": "61404a3bf7d95a45138ebd97992bcebe61651d79",
+      "source_compatibility_review_record_ref": "consumer-integration-compatibility-review:v1-g35:arc-bot-shell:001",
+      "bounded_design_result": "candidate_bounded_design_defined_for_future_patch_preview_gate",
+      "metadata_design_only": true,
+      "future_patch_preview_gate_proposed": true,
+      "future_consumer_repository_edit_gate_required": true,
+      "consumer_integration_approved": false,
+      "consumer_integration_added": false,
+      "consumer_repo_mutation_added": false,
+      "consumer_runtime_source_files_changed": false,
+      "adapter_symbols_called": false,
+      "consumer_runtime_modules_imported": false,
+      "shell_runtime_wiring_implementation_added": false,
+      "provider_model_calls_added": false,
+      "model_request_dispatch_added": false,
+      "fallback_execution_added": false,
+      "secret_lookup_added": false,
+      "credential_access_added": false,
+      "tool_execution_outside_local_tests_added": false,
+      "action_execution_added": false,
+      "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+      "raw_sensitive_content_persisted_in_lima_evidence": false,
+      "proof_not_integration_authority": true,
+      "proof_not_product_readiness": true,
+      "product_ready": false,
+      "candidate_file_map_categories": [
+        "lima_evidence_docs_tests_fixtures",
+        "consumer_static_test_fixtures_after_future_edit_gate",
+        "consumer_static_tests_after_future_edit_gate",
+        "consumer_shell_adapter_boundary_after_future_shell_wiring_gate",
+        "lima_runtime_boundary_after_future_runtime_gate"
+      ],
+      "future_required_gates": [
+        "consumer_integration_patch_preview_approval_request",
+        "consumer_repository_edit_approval_request",
+        "consumer_integration_import_smoke_approval_request",
+        "shell_wiring_design_approval_request",
+        "provider_model_dispatch_approval_request",
+        "connector_browser_network_authority_approval_request",
+        "physical_world_authority_approval_request",
+        "product_readiness_approval_request"
+      ],
+      "blocked_future_authorities": {
+        "patch_preview_implementation_approved": false,
+        "consumer_repository_edit_approved": false,
+        "consumer_integration_import_smoke_approved": false,
+        "shell_wiring_implementation_approved": false,
+        "provider_model_dispatch_approved": false,
+        "connector_browser_network_authority_approved": false,
+        "physical_world_authority_approved": false,
+        "product_readiness_approved": false
+      },
+      "handoff_contract_refs": [
+        "handoff-contract:v1-g36:candidate-import-surface",
+        "handoff-contract:v1-g36:consumer-fixture",
+        "handoff-contract:v1-g36:consumer-smoke-test",
+        "handoff-contract:v1-g36:lima-evidence-packet",
+        "handoff-contract:v1-g36:rollback-checkpoint",
+        "handoff-contract:v1-g36:guardian-authority-boundary"
+      ],
+      "source_evidence_refs": [
+        "docs/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW.md",
+        "docs/audits/V1_G35_CONSUMER_INTEGRATION_COMPATIBILITY_REVIEW_AUDIT.md",
+        "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G35_AUDIT.md",
+        "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G35.md",
+        "docs/readiness/V1_POST_G35_NEXT_LANE_DECISION_MATRIX.md"
+      ],
+      "remaining_gaps": [
+        "patch_preview_not_approved",
+        "consumer_repository_edit_not_approved",
+        "consumer_integration_not_approved",
+        "shell_wiring_implementation_not_approved",
+        "provider_model_dispatch_not_approved",
+        "secret_credential_access_not_approved",
+        "connector_browser_network_authority_not_approved",
+        "physical_world_authority_not_approved",
+        "product_readiness_not_approved"
+      ],
+      "rollback_metadata": {
+        "rollback_ref": "rollback:v1-g36:arc-bot-shell-bounded-integration-design",
+        "rollback_lima_file_refs": [
+          "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN.md",
+          "docs/V1_G36_BOUNDED_CONSUMER_INTEGRATION_DESIGN_CLOSEOUT.md",
+          "tests/fixtures/runtime_extraction/v1_g36_bounded_consumer_integration_design.json",
+          "tests/test_v1_g36_bounded_consumer_integration_design.py"
+        ],
+        "rollback_consumer_file_refs": [],
+        "runtime_source_repair_required": false,
+        "consumer_repository_repair_required": false,
+        "shell_runtime_repair_required": false,
+        "external_service_changes_required": false
+      },
+      "required_confirmations": {
+        "no_lima_runtime_file_change_confirmation": true,
+        "no_consumer_repo_mutation_confirmation": true,
+        "no_consumer_runtime_source_change_confirmation": true,
+        "no_adapter_symbol_call_confirmation": true,
+        "no_consumer_runtime_module_import_confirmation": true,
+        "no_consumer_integration_implementation_confirmation": true,
+        "no_shell_wiring_implementation_confirmation": true,
+        "no_provider_model_secret_credential_connector_browser_network_physical_world_confirmation": true,
+        "no_raw_sensitive_content_in_lima_evidence_confirmation": true,
+        "proof_not_integration_authority_confirmation": true,
+        "proof_not_product_readiness_confirmation": true
+      }
+    }
+  ]
+}

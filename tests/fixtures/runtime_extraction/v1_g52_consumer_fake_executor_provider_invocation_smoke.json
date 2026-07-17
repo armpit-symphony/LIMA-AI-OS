@@ -1,0 +1,241 @@
+{
+  "packet_set_id": "v1_g52_consumer_fake_executor_provider_invocation_smoke",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g52-consumer-fake-executor-provider-invocation-smoke",
+  "operator_decision": "Approve-V1-G52",
+  "approved_scope": "consumer_fake_executor_provider_invocation_smoke_slice",
+  "consumer_fake_executor_provider_invocation_smoke_approved": true,
+  "consumer_fake_executor_provider_invocation_smoke_added": true,
+  "consumer_fake_executor_provider_invocation_smoke_result": "consumer_fake_executor_provider_invocation_smoke_evidence_created",
+  "lima_runtime_files_changed": false,
+  "lima_public_api_changed": false,
+  "approved_lima_runtime_files_changed": [],
+  "approved_lima_docs_tests_fixtures_changed": [
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE.md",
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g52_consumer_fake_executor_provider_invocation_smoke.json",
+    "tests/test_v1_g52_consumer_fake_executor_provider_invocation_smoke.py"
+  ],
+  "sparkbot_files_changed": true,
+  "arc_bot_shell_files_changed": true,
+  "consumer_production_runtime_source_files_changed": false,
+  "consumer_runtime_calls_added": false,
+  "consumer_integration_added": false,
+  "shell_runtime_wiring_added": false,
+  "lima_runtime_behavior_added_by_v1_g52": false,
+  "lima_public_api_expanded": false,
+  "v1_g50_invocation_envelope_metadata_used": true,
+  "fake_in_process_provider_executor_invoked_by_consumer_tests": true,
+  "actual_external_provider_invoked": false,
+  "live_provider_credentials_used": false,
+  "new_lima_provider_executor_invocation_runtime_added": false,
+  "built_in_provider_sdk_added": false,
+  "built_in_provider_sdk_used": false,
+  "direct_provider_sdk_added": false,
+  "direct_provider_sdk_used": false,
+  "direct_network_code_added": false,
+  "direct_network_code_used": false,
+  "provider_endpoint_resolution_added": false,
+  "provider_endpoint_resolution_performed": false,
+  "network_call_performed": false,
+  "provider_readiness_network_check_added": false,
+  "token_guardian_live_routing_added": false,
+  "ambient_environment_secret_lookup_added": false,
+  "secret_lookup_added": false,
+  "secret_lookup_performed": false,
+  "credential_access_added": false,
+  "credential_value_access_added": false,
+  "credential_value_accessed": false,
+  "provider_token_or_api_key_access_added": false,
+  "provider_token_or_api_key_accessed": false,
+  "fallback_execution_added": false,
+  "fallback_executed": false,
+  "tool_execution_added": false,
+  "action_execution_added": false,
+  "connector_browser_network_file_device_robotics_physical_world_behavior_added": false,
+  "scheduled_task_execution_added": false,
+  "external_send_added": false,
+  "raw_prompt_persisted": false,
+  "raw_model_response_persisted": false,
+  "raw_customer_data_persisted": false,
+  "raw_secret_or_credential_persisted": false,
+  "provider_token_or_api_key_persisted": false,
+  "raw_diff_or_patch_persisted": false,
+  "raw_file_content_persisted": false,
+  "raw_sensitive_content_persisted": false,
+  "product_ready": false,
+  "public_lima_harness_symbols_imported_by_consumers": [
+    "V1ExecutableRealProviderExecutorInvocationError",
+    "execute_v1_executable_real_provider_executor_invocation"
+  ],
+  "consumer_repositories": {
+    "sparkbot": {
+      "repository": "sparkpit-labs/Sparkbot",
+      "local_path": "../Sparkbot",
+      "branch": "v1-g52-consumer-fake-executor-provider-invocation-smoke",
+      "commit": "77838a00f981bbae1e2f299055df4f4ee7d9663a",
+      "approved_files_changed": [
+        "tests/test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+        "tests/fixtures/sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+      ],
+      "fixture_ref": "tests/fixtures/sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.json",
+      "test_ref": "tests/test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+      "focused_v1_g52_validation": {
+        "command": "python -B -m pytest -q tests\\test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "tests_passed": 8
+      },
+      "focused_v1_g47_validation": {
+        "command": "python -B -m pytest -q tests\\test_sparkbot_lima_v1_g47_fake_executor_provider_model_call_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "tests_passed": 8
+      }
+    },
+    "arc_bot_shell": {
+      "repository": "armpit-symphony/Arc-Bot-shell",
+      "local_path": "../Arc-Bot-shell",
+      "branch": "v1-g52-consumer-fake-executor-provider-invocation-smoke",
+      "commit": "8358b8c3afb0bc18b886b19452e160c3c560e3cf",
+      "approved_files_changed": [
+        "tests/test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+        "tests/fixtures/arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+      ],
+      "fixture_ref": "tests/fixtures/arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.json",
+      "test_ref": "tests/test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+      "focused_v1_g52_validation": {
+        "command": "python -B -m pytest -q tests\\test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "tests_passed": 8
+      },
+      "focused_v1_g47_validation": {
+        "command": "python -B -m pytest -q tests\\test_arc_bot_shell_lima_v1_g47_fake_executor_provider_model_call_smoke.py -p no:cacheprovider",
+        "passed": true,
+        "tests_passed": 8
+      }
+    }
+  },
+  "accepted_evidence_refs": [
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_APPROVAL_REQUEST.md",
+    "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_OPERATOR_DECISION_PACKET.md",
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_CLOSEOUT.md",
+    "docs/audits/V1_G51_EXECUTABLE_REAL_PROVIDER_EXECUTOR_INVOCATION_AUDIT.md",
+    "docs/audits/V1_RUNTIME_AUTHORITY_CHAIN_THROUGH_G51_AUDIT.md",
+    "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G51.md",
+    "docs/readiness/V1_POST_G51_NEXT_LANE_DECISION_MATRIX.md",
+    "docs/V1_G50_REAL_PROVIDER_EXECUTOR_INVOCATION.md",
+    "docs/V1_G47_CONSUMER_FAKE_EXECUTOR_PROVIDER_MODEL_CALL_SMOKE.md",
+    "docs/V1_G42_SHELL_WIRING_IMPLEMENTATION.md",
+    "docs/V1_G41_CONSUMER_INTEGRATION_IMPLEMENTATION.md"
+  ],
+  "future_required_gates": [
+    "built_in_provider_sdk_approval_request",
+    "provider_network_egress_approval_request",
+    "fallback_execution_approval_request",
+    "connector_browser_network_authority_approval_request",
+    "physical_world_authority_approval_request",
+    "product_readiness_approval_request"
+  ],
+  "blocked_future_authorities": {
+    "built_in_provider_sdk_approved": false,
+    "provider_secret_lookup_approved": false,
+    "provider_credential_value_access_approved": false,
+    "provider_network_egress_approved": false,
+    "fallback_execution_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false
+  },
+  "rollback_metadata": {
+    "rollback_ref": "rollback:v1-g52:consumer-fake-executor-provider-invocation-smoke",
+    "lima_runtime_file_changes_to_revert": [],
+    "remove_lima_docs_tests_fixtures_refs": [
+      "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE.md",
+      "docs/V1_G52_CONSUMER_FAKE_EXECUTOR_PROVIDER_INVOCATION_SMOKE_CLOSEOUT.md",
+      "tests/fixtures/runtime_extraction/v1_g52_consumer_fake_executor_provider_invocation_smoke.json",
+      "tests/test_v1_g52_consumer_fake_executor_provider_invocation_smoke.py"
+    ],
+    "remove_sparkbot_files_refs": [
+      "tests/test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+      "tests/fixtures/sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+    ],
+    "remove_arc_bot_shell_files_refs": [
+      "tests/test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py",
+      "tests/fixtures/arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.json"
+    ],
+    "lima_runtime_repair_required": false,
+    "public_api_repair_required": false,
+    "consumer_production_runtime_repair_required": false,
+    "external_service_changes_required": false,
+    "provider_configuration_changes_required": false,
+    "credential_rotation_required": false,
+    "production_deployment_changes_required": false
+  },
+  "consumer_validation_results": {
+    "sparkbot_focused_v1_g52": {
+      "command": "python -B -m pytest -q tests\\test_sparkbot_lima_v1_g52_fake_executor_provider_invocation_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "sparkbot_focused_v1_g47": {
+      "command": "python -B -m pytest -q tests\\test_sparkbot_lima_v1_g47_fake_executor_provider_model_call_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "arc_bot_shell_focused_v1_g52": {
+      "command": "python -B -m pytest -q tests\\test_arc_bot_shell_lima_v1_g52_fake_executor_provider_invocation_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    },
+    "arc_bot_shell_focused_v1_g47": {
+      "command": "python -B -m pytest -q tests\\test_arc_bot_shell_lima_v1_g47_fake_executor_provider_model_call_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 8
+    }
+  },
+  "lima_validation_results": {
+    "focused_v1_g52_validation": {
+      "command": "python -m pytest -q tests\\test_v1_g52_consumer_fake_executor_provider_invocation_smoke.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 12
+    },
+    "focused_v1_g52_g51_g50_g22_validation": {
+      "command": "python -m pytest -q tests\\test_v1_g52_consumer_fake_executor_provider_invocation_smoke.py tests\\test_v1_g51_executable_real_provider_executor_invocation.py tests\\test_v1_g50_real_provider_executor_invocation.py tests\\test_v1_g22_final_public_api_freeze.py -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 144
+    },
+    "compileall_lima": {
+      "command": "python -m compileall lima",
+      "passed": true
+    },
+    "full_lima_suite": {
+      "command": "python -m pytest -q tests -p no:cacheprovider",
+      "passed": true,
+      "tests_passed": 4536
+    }
+  },
+  "required_confirmations": {
+    "consumer_fake_executor_provider_invocation_smoke_approval_recorded_confirmation": true,
+    "approved_file_scope_only_confirmation": true,
+    "no_lima_runtime_file_change_confirmation": true,
+    "no_lima_public_api_change_confirmation": true,
+    "consumer_test_fixture_scope_only_confirmation": true,
+    "no_consumer_production_runtime_source_change_confirmation": true,
+    "v1_g50_envelope_metadata_confirmation": true,
+    "v1_g51_public_wrapper_import_only_confirmation": true,
+    "fake_in_process_provider_executor_only_confirmation": true,
+    "no_actual_external_provider_invocation_confirmation": true,
+    "no_live_provider_credentials_confirmation": true,
+    "no_direct_provider_sdk_confirmation": true,
+    "no_direct_network_code_confirmation": true,
+    "no_provider_endpoint_resolution_confirmation": true,
+    "no_network_call_confirmation": true,
+    "no_secret_lookup_confirmation": true,
+    "no_credential_value_access_confirmation": true,
+    "no_provider_token_or_api_key_access_confirmation": true,
+    "no_fallback_execution_confirmation": true,
+    "no_connector_browser_network_physical_world_confirmation": true,
+    "no_raw_content_secret_credential_customer_data_diff_patch_confirmation": true,
+    "proof_not_product_readiness_confirmation": true
+  }
+}

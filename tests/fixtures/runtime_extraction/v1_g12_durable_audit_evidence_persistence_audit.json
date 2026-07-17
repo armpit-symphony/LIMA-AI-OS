@@ -1,0 +1,96 @@
+{
+  "audit_id": "v1_g12_durable_audit_evidence_persistence_audit",
+  "api_status": "CANDIDATE_ONLY",
+  "audit_branch": "audit-v1-g12-durable-audit-evidence-persistence",
+  "implementation_branch": "v1-g12-durable-audit-evidence-persistence",
+  "implementation_commit": "457b654a50e100ef7c000de25bb6d2c7493b9fc6",
+  "base_commit_before_implementation": "f15261de86869bf68d555ed75f88785b06926a7c",
+  "verdict": "PASS_WITH_WARNINGS",
+  "audit_document": "docs/audits/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_AUDIT.md",
+  "files_audited": [
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_OPERATOR_DECISION_PACKET.md",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE.md",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
+    "lima/spine/v1_audit_evidence.py",
+    "lima/spine/__init__.py",
+    "lima/persistence/v1_audit_store.py",
+    "lima/persistence/__init__.py",
+    "tests/fixtures/runtime_extraction/v1_g12_durable_audit_evidence_persistence.json",
+    "tests/test_v1_g12_durable_audit_evidence_persistence.py"
+  ],
+  "implementation_changed_files": [
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE.md",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_CLOSEOUT.md",
+    "docs/V1_G12_DURABLE_AUDIT_EVIDENCE_PERSISTENCE_OPERATOR_DECISION_PACKET.md",
+    "lima/persistence/__init__.py",
+    "lima/persistence/v1_audit_store.py",
+    "lima/spine/__init__.py",
+    "lima/spine/v1_audit_evidence.py",
+    "tests/fixtures/runtime_extraction/v1_g12_durable_audit_evidence_persistence.json",
+    "tests/test_v1_g12_durable_audit_evidence_persistence.py"
+  ],
+  "approved_runtime_file_map": [
+    "lima/spine/v1_audit_evidence.py",
+    "lima/spine/__init__.py",
+    "lima/persistence/v1_audit_store.py",
+    "lima/persistence/__init__.py"
+  ],
+  "runtime_files_within_approved_map": true,
+  "operator_decision": {
+    "recorded_choice": "Approve-V1-G12",
+    "approved_implementation_branch": "v1-g12-durable-audit-evidence-persistence",
+    "runtime_implementation_approved": true
+  },
+  "runtime_symbols": [
+    "V1AuditEvidenceError",
+    "build_v1_audit_event_record",
+    "build_v1_audit_lineage_record",
+    "V1AuditStoreError",
+    "V1LocalAuditStore"
+  ],
+  "behavior_results": {
+    "reviewed_v1_request_decision_metadata_creates_redacted_event": "pass",
+    "missing_lineage_event_tenant_actor_shell_decision_fails_closed": "pass",
+    "destructive_edit_delete_requires_approval_evidence": "pass",
+    "raw_sensitive_content_fails_closed": "pass",
+    "unknown_privacy_class_fails_closed": "pass",
+    "record_hashes_are_deterministic": "pass",
+    "append_only_store_writes_explicit_local_path": "pass",
+    "lookup_by_event_lineage_decision_scoped": "pass",
+    "cross_tenant_or_cross_shell_lookup_fails_closed": "pass",
+    "audit_records_proof_not_authority": "pass",
+    "future_policy_claims_remain_non_executing": "pass"
+  },
+  "boundary_results": {
+    "consumer_repos_touched": false,
+    "sparkbot_touched": false,
+    "sparkbot_shell_touched": false,
+    "arc_bot_shell_touched": false,
+    "lima_robo_os_touched": false,
+    "lima_office_touched": false,
+    "provider_model_routing_added": false,
+    "provider_model_calls_added": false,
+    "tool_execution_added": false,
+    "shell_runtime_wiring_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_file_network_device_robotics_physical_world_added": false,
+    "external_database_writes_added": false,
+    "migrations_added": false,
+    "queues_workers_daemons_subprocesses_threads_added": false,
+    "raw_sensitive_content_persistence_allowed": false,
+    "audit_metadata_execution_authority_added": false,
+    "approval_token_or_pin_emitted": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_readiness_claimed": false,
+    "production_readiness_claimed": false
+  },
+  "warnings": [
+    "operator_decision_packet_updated_by_explicit_operator_instruction_outside_implementation_file_map",
+    "local_jsonl_store_is_not_external_database_or_production_audit_service",
+    "approved_decision_status_is_evidence_only_not_execution_authority"
+  ],
+  "recommended_next_lane": "v1_g13_readiness_gap_refresh_and_next_lane_decision_gate",
+  "recommended_next_lane_scope": "docs_tests_fixtures_only"
+}

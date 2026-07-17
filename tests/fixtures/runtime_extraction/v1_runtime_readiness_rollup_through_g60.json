@@ -1,0 +1,119 @@
+{
+  "rollup_id": "v1_runtime_readiness_rollup_through_g60",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "docs-v1-post-g60-readiness-and-next-lane-matrix",
+  "source_commit_before_refresh": "0550acdbd4cd2c9f1817a0ca163b3b6d3e9d09cc",
+  "documents": {
+    "rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G60.md",
+    "g60_audit": "docs/audits/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUDIT.md",
+    "g60_implementation": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT.md",
+    "g60_closeout": "docs/V1_G60_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_CLOSEOUT.md",
+    "post_g60_next_lane_matrix": "docs/readiness/V1_POST_G60_NEXT_LANE_DECISION_MATRIX.md",
+    "post_g60_request_refresh": "docs/readiness/V1_POST_G60_REQUEST_READINESS_REFRESH.md",
+    "post_g59_readiness_rollup": "docs/readiness/V1_RUNTIME_READINESS_ROLLUP_THROUGH_G59.md",
+    "g59_audit": "docs/audits/V1_G59_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUTHORITY_AUDIT.md",
+    "g59_implementation": "docs/V1_G59_SDK_DEPENDENCY_VENDOR_PROVIDER_SDK_IMPORT_AUTHORITY.md",
+    "g58_audit": "docs/audits/V1_G58_BUILT_IN_PROVIDER_SDK_CLIENT_AUTHORITY_CONTRACT_AUDIT.md",
+    "g57_audit": "docs/audits/V1_G57_PROVIDER_EXECUTION_HARDENING_AUTHORIZATION_AUDIT.md"
+  },
+  "required_verdicts": {
+    "v1_runtime_authority_chain": "CANDIDATE_ONLY",
+    "provider_model_routing_authority_metadata": "CANDIDATE_ONLY",
+    "fake_sdk_fake_egress_harness_evidence": "CANDIDATE_ONLY",
+    "real_provider_sdk_network_egress_wrapper_with_caller_injected_executor_only": "CANDIDATE_ONLY",
+    "consumer_fake_executor_provider_sdk_network_egress_smoke_evidence": "CANDIDATE_ONLY",
+    "provider_execution_hardening_authorization_metadata": "CANDIDATE_ONLY",
+    "built_in_provider_sdk_client_authority_contract_metadata": "CANDIDATE_ONLY",
+    "sdk_dependency_vendor_provider_sdk_import_authority_metadata": "CANDIDATE_ONLY",
+    "sdk_dependency_declaration_vendor_provider_sdk_import_boundary_evidence": "CANDIDATE_ONLY",
+    "sdk_dependency_additions": "CANDIDATE_ONLY",
+    "dependency_manifest_edits": "CANDIDATE_ONLY",
+    "approved_dependency_declaration": "openai>=1.0.0,<3.0.0",
+    "lockfile_edits": "NOT_APPROVED",
+    "runtime_vendor_provider_sdk_imports_in_lima": "NOT_APPROVED",
+    "runtime_vendor_sdk_import_execution_proof": "NOT_APPROVED",
+    "built_in_provider_sdk_client_implementation": "NOT_APPROVED",
+    "provider_client_construction": "NOT_APPROVED",
+    "lima_owned_provider_endpoint_resolution_execution": "NOT_APPROVED",
+    "lima_owned_direct_provider_network_egress": "NOT_APPROVED",
+    "secret_lookup_and_credential_value_access": "NOT_APPROVED",
+    "fallback_execution": "NOT_APPROVED",
+    "connector_browser_network_authority": "NOT_APPROVED",
+    "consumer_production_runtime_integration": "NOT_APPROVED",
+    "physical_world_readiness": "BLOCKED",
+    "product_readiness": "NOT_READY",
+    "final_public_api_freeze": "NOT_APPROVED"
+  },
+  "current_status": {
+    "latest_completed_gate": "V1-G60",
+    "latest_independent_audit": "V1-G60",
+    "latest_readiness_rollup": "V1-G60",
+    "current_gate": "runtime_vendor_sdk_import_execution_proof_request",
+    "next_recommended_lane": "prepare_runtime_vendor_sdk_import_execution_proof_approval_request",
+    "next_lane_request_only": true,
+    "v1_product_ready": false,
+    "production_ready": false
+  },
+  "g60_status": {
+    "sdk_dependency_vendor_provider_sdk_import_approved": true,
+    "sdk_dependency_vendor_provider_sdk_import_implemented": true,
+    "sdk_dependency_vendor_provider_sdk_import_audited": true,
+    "approved_dependency_declaration": "openai>=1.0.0,<3.0.0",
+    "dependency_manifest_edited": true,
+    "dependency_manifest": "pyproject.toml",
+    "metadata_and_manifest_only": true,
+    "lima_runtime_files_changed": false,
+    "lima_public_api_expanded": false,
+    "sparkbot_files_changed": false,
+    "arc_bot_shell_files_changed": false,
+    "consumer_production_runtime_integration_added": false,
+    "lockfile_edited": false,
+    "vendor_provider_sdk_runtime_import_added_to_lima": false,
+    "runtime_import_execution_claimed": false,
+    "built_in_provider_sdk_client_implementation_added": false,
+    "provider_client_construction_added": false,
+    "provider_execution_expansion_added": false,
+    "provider_network_egress_added": false,
+    "credential_value_access_added": false,
+    "product_readiness_claimed": false,
+    "final_public_api_freeze_approved": false
+  },
+  "blocked_authorities": {
+    "lockfile_edit_approved": false,
+    "runtime_vendor_sdk_import_execution_approved": false,
+    "runtime_vendor_provider_sdk_import_in_lima_approved": false,
+    "built_in_provider_sdk_client_implementation_approved": false,
+    "provider_client_construction_approved": false,
+    "lima_owned_endpoint_resolution_approved": false,
+    "lima_owned_dns_http_socket_network_call_approved": false,
+    "lima_owned_direct_provider_egress_approved": false,
+    "provider_credential_value_access_approved": false,
+    "provider_secret_lookup_approved": false,
+    "provider_token_or_api_key_access_approved": false,
+    "provider_configuration_change_approved": false,
+    "fallback_execution_approved": false,
+    "connector_browser_network_authority_approved": false,
+    "consumer_production_runtime_integration_approved": false,
+    "physical_world_authority_approved": false,
+    "product_readiness_approved": false,
+    "final_public_api_freeze_approved": false
+  },
+  "validation_evidence": {
+    "focused_v1_g60_validation": {
+      "passed": true,
+      "tests_passed": 12
+    },
+    "focused_v1_g60_audit_validation": {
+      "passed": true,
+      "tests_passed": 11
+    },
+    "focused_v1_g60_rollup_validation": {
+      "passed": true,
+      "tests_passed": 375
+    },
+    "full_lima_suite_before_refresh": {
+      "passed": true,
+      "tests_passed": 5239
+    }
+  }
+}

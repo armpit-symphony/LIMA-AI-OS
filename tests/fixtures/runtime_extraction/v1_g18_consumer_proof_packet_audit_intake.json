@@ -1,0 +1,79 @@
+{
+  "gate_id": "v1_g18_consumer_proof_packet_audit_intake",
+  "api_status": "CANDIDATE_ONLY",
+  "branch": "v1-g18-consumer-proof-packet-audit-intake",
+  "operator_decision": "Approve-V1-G18",
+  "approved_scope": "consumer_proof_packet_audit_intake_metadata_slice",
+  "approved_runtime_file_map": [
+    "lima/guardian/v1_consumer_proof_packet_intake.py",
+    "lima/guardian/__init__.py"
+  ],
+  "docs_tests_fixtures_file_map": [
+    "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE.md",
+    "docs/V1_G18_CONSUMER_PROOF_PACKET_AUDIT_INTAKE_CLOSEOUT.md",
+    "tests/fixtures/runtime_extraction/v1_g18_consumer_proof_packet_audit_intake.json",
+    "tests/test_v1_g18_consumer_proof_packet_audit_intake.py"
+  ],
+  "runtime_symbols": [
+    "V1ConsumerProofPacketIntakeError",
+    "validate_v1_consumer_proof_packet_intake"
+  ],
+  "runtime_behavior_added": true,
+  "runtime_behavior_scope": "candidate_local_non_executing_consumer_proof_packet_audit_intake_validation",
+  "consumer_proof_packet_audit_intake_runtime_behavior_added": true,
+  "consumer_packet_families": [
+    "sparkbot",
+    "arc_bot",
+    "lima_robo_os",
+    "lima_office",
+    "future_shell"
+  ],
+  "required_artifact_fields": [
+    "consumer_packet_family",
+    "consumer_name",
+    "consumer_repository",
+    "consumer_branch_ref",
+    "consumer_commit_sha",
+    "proof_packet_path",
+    "audit_packet_path",
+    "machine_readable_summary_path",
+    "validation_commands",
+    "proposed_import_call_shape_evidence",
+    "normalized_metadata_examples",
+    "capability_profile_expectations",
+    "guardian_approval_boundary_expectations",
+    "dry_run_non_execution_confirmation",
+    "no_live_consumer_runtime_path_calls_lima",
+    "no_bypass_claims",
+    "independent_audit_required",
+    "packet_status"
+  ],
+  "normalized_packet_statuses": [
+    "received",
+    "missing",
+    "blocked",
+    "rejected",
+    "accepted_static_evidence"
+  ],
+  "forbidden_behavior": {
+    "consumer_repo_mutation_added": false,
+    "consumer_code_import_added": false,
+    "consumer_runtime_call_added": false,
+    "consumer_integration_added": false,
+    "shell_runtime_wiring_added": false,
+    "provider_model_routing_added": false,
+    "tool_execution_added": false,
+    "humaninput_bridge_activated": false,
+    "connector_behavior_added": false,
+    "browser_network_file_device_robotics_physical_world_behavior_added": false,
+    "scheduled_task_execution_added": false,
+    "external_sends_added": false,
+    "approval_token_issuance_added": false,
+    "raw_pin_verification_added": false,
+    "external_database_writes_added": false,
+    "runtime_export_cleanup_approved": false,
+    "final_api_freeze_approved": false,
+    "product_ready": false
+  },
+  "recommended_next_step": "separate_v1_g18_audit_branch_before_consumer_integration_or_execution_lanes"
+}
