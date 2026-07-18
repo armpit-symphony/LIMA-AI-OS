@@ -12,6 +12,16 @@ LIMA remains `CANDIDATE_ONLY`.
 
 The V1 target remains first testing with `Sparkbot_shell`, public `Sparkbot`, and `Arc-Bot-shell`.
 
+The current Arc consumer publication lane explicitly approves the narrow
+v1.1 runtime-contract expansion for a caller-injected loopback Ollama executor.
+The public harness must validate a real Guardian allow decision and preserve
+its decision_id; accept only executor_kind=fake or
+executor_kind=loopback_ollama; restrict the Ollama path to HTTP
+127.0.0.1/localhost base URLs; forbid credentials, external side effects,
+cloud fallback, tools, connectors, files, browsers, devices, robotics, and
+office-system actions; and preserve sanitized success/unavailable metadata.
+LIMA does not add an HTTP client or perform the Ollama network request itself.
+
 Current post-approval update: `Approve-V1-G61` is recorded and the bounded V1-G61 runtime vendor SDK import execution proof is complete as local test-scoped evidence. The proof imports only the approved `openai` module in tests, records sanitized version evidence `2.43.0`, and does not edit `lima/`, dependency manifests, lockfiles, Sparkbot, Arc-Bot-shell, provider clients, endpoint resolution, network egress, credentials, fallback, consumer production integration, product readiness, or final public API freeze.
 
 Latest V1 checkpoint:

@@ -20,3 +20,5 @@ jobs:
         run: pytest -q
       - name: Installed Arc consumer fake-executor proof
         run: python scripts/prove_arc_consumer_baseline.py
+      - name: Installed Arc loopback Ollama contract proof
+        run: python scripts/prove_arc_loopback_ollama_runtime.py

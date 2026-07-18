@@ -33,6 +33,7 @@ runtime_request = {
         'requires_approval': False,
     },
     'executor_ref': 'in_process_fake_executor',
+    'executor_kind': 'fake',
     'normalized_request': {
         'actor_id': 'operator:test',
         'shell_id': 'arc:test',
