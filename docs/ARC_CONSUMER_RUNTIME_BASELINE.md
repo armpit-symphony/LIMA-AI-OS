@@ -1,8 +1,9 @@
 # Arc Consumer Runtime Baseline
 
 This document defines the narrow public LIMA Runtime contract published for
-Arc Bot v0.9. It is a fake-executor-only integration boundary. It does not add
-Ollama, a cloud provider, credentials, connector execution, or network access.
+Arc Bot v0.9. It remains the compatible fake-executor path after the v1.1
+loopback Ollama expansion. The separate v1.1 contract is documented in
+ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md.
 
 ## Public API
 
@@ -22,7 +23,10 @@ The Arc consumer request requires:
 - `requested_action`: exactly `arc.local_model_preview`.
 - `guardian_decision`: an allow decision with a non-empty `decision_id`,
   `allowed=true`, and `requires_approval=false`.
-- `executor_ref`: a non-empty reference containing `fake`.
+- `executor_kind`: `fake` for new consumers.
+- `executor_ref`: a non-empty executor evidence reference. Historical v0.9
+  requests remain compatible only for the exact `in_process_fake_executor`
+  reference when `executor_kind` is absent.
 - `normalized_request`: a non-empty mapping containing the bounded Arc request
   context.
 - `evidence_refs`: an optional sequence of evidence references.
@@ -47,8 +51,9 @@ level, in `guardian_decision`, and in `evidence`.
 LIMA rejects the request before executor invocation when the Guardian decision
 is missing, has a missing or empty `decision_id`, is denied, or requires
 approval. It also rejects malformed requests, unsupported consumers or actions,
-non-fake executor references, executor exceptions, and malformed or unsafe
-executor results.
+unsupported executor kinds, executor exceptions, and malformed or unsafe
+executor results. Executor kind is not inferred from a substring in the
+executor reference.
 
 The deterministic installed-package proof is:
 

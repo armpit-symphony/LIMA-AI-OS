@@ -14,6 +14,7 @@ from collections.abc import Callable, Mapping, Sequence
 import hashlib
 import json
 from typing import Any, Final
+from urllib.parse import urlsplit
 
 from lima.contracts.guardian import GuardianDecision, GuardianDecisionStatus
 
@@ -22,6 +23,29 @@ SCHEMA_VERSION: Final[str] = "v1-g46-candidate"
 AUTHORITY_SCHEMA_VERSION: Final[str] = "v1-g44-candidate"
 ALLOWED_FINISH_STATUSES: Final[frozenset[str]] = frozenset(
     {"completed", "blocked", "failed", "cancelled"}
+)
+ARC_EXECUTOR_KIND_FAKE: Final[str] = "fake"
+ARC_EXECUTOR_KIND_LOOPBACK_OLLAMA: Final[str] = "loopback_ollama"
+ARC_EXECUTOR_KINDS: Final[frozenset[str]] = frozenset(
+    {ARC_EXECUTOR_KIND_FAKE, ARC_EXECUTOR_KIND_LOOPBACK_OLLAMA}
+)
+LEGACY_FAKE_EXECUTOR_REFS: Final[frozenset[str]] = frozenset(
+    {
+        "in_process_fake_executor",
+        "provider-executor:v1-g46:fake-openai",
+    }
+)
+LOOPBACK_OLLAMA_HOSTS: Final[frozenset[str]] = frozenset(
+    {"127.0.0.1", "localhost"}
+)
+LOOPBACK_OLLAMA_ERROR_CATEGORIES: Final[frozenset[str]] = frozenset(
+    {
+        "service_unavailable",
+        "model_unavailable",
+        "timeout",
+        "malformed_response",
+        "executor_error",
+    }
 )
 REQUIRED_EXECUTION_FIELDS: Final[tuple[str, ...]] = (
     'guardian_decision',
@@ -210,9 +234,13 @@ def execute_v1_live_provider_model_call(
         execution_request.get("provider_executor_ref"),
         "provider_executor_ref",
     )
-    if 'fake' not in provider_executor_ref.lower():
+    executor_kind = _resolve_executor_kind(
+        execution_request,
+        provider_executor_ref,
+    )
+    if executor_kind != ARC_EXECUTOR_KIND_FAKE:
         raise V1LiveProviderModelCallExecutionError(
-            'unsupported executor; this baseline accepts fake executors only'
+            "unsupported executor_kind for the V1-G46 provider path"
         )
     provider_request_ref = _required_text(
         execution_request.get("provider_request_ref"),
@@ -404,14 +432,14 @@ def _execute_arc_consumer_baseline(
         runtime_request.get('guardian_decision')
     )
     executor_ref = _required_text(runtime_request.get('executor_ref'), 'executor_ref')
-    if 'fake' not in executor_ref.lower():
-        raise V1LiveProviderModelCallExecutionError(
-            'unsupported executor; this baseline accepts fake executors only'
-        )
+    executor_kind = _resolve_executor_kind(runtime_request, executor_ref)
     normalized_request = _mapping(
         runtime_request.get('normalized_request'),
         'normalized_request',
     )
+    loopback_contract: dict[str, Any] = {}
+    if executor_kind == ARC_EXECUTOR_KIND_LOOPBACK_OLLAMA:
+        loopback_contract = _validate_arc_loopback_ollama_request(runtime_request)
 
     executor_payload = {
         'request_id': request_id,
@@ -419,6 +447,8 @@ def _execute_arc_consumer_baseline(
         'requested_action': 'arc.local_model_preview',
         'guardian_decision': dict(guardian_decision),
         'guardian_decision_id': guardian_decision['decision_id'],
+        'executor_kind': executor_kind,
+        'executor_ref': executor_ref,
         'normalized_request': dict(normalized_request),
         'evidence_refs': list(
             _string_sequence(
@@ -428,12 +458,85 @@ def _execute_arc_consumer_baseline(
             )
         ),
     }
+    executor_payload.update(loopback_contract)
 
     try:
         raw_result = executor(executor_payload)
-    except Exception as exc:  # pragma: no cover - exact exception type is caller-owned.
-        raise V1LiveProviderModelCallExecutionError('provider executor failed') from exc
+    except Exception:  # pragma: no cover - exact exception type is caller-owned.
+        raise V1LiveProviderModelCallExecutionError(
+            'provider executor failed'
+        ) from None
 
+    if executor_kind == ARC_EXECUTOR_KIND_FAKE:
+        return _normalize_arc_fake_result(
+            raw_result,
+            request_id=request_id,
+            guardian_decision=guardian_decision,
+            executor_ref=executor_ref,
+        )
+    return _normalize_arc_loopback_ollama_result(
+        raw_result,
+        request_id=request_id,
+        guardian_decision=guardian_decision,
+        executor_ref=executor_ref,
+        expected_endpoint=loopback_contract['endpoint'],
+        expected_model=loopback_contract['model'],
+    )
+
+
+def _resolve_executor_kind(
+    runtime_request: Mapping[str, Any],
+    executor_ref: str,
+) -> str:
+    raw_kind = runtime_request.get('executor_kind')
+    if raw_kind is None:
+        if executor_ref in LEGACY_FAKE_EXECUTOR_REFS:
+            return ARC_EXECUTOR_KIND_FAKE
+        raise V1LiveProviderModelCallExecutionError(
+            'unsupported executor; executor_kind is required'
+        )
+    executor_kind = _required_text(raw_kind, 'executor_kind')
+    if executor_kind not in ARC_EXECUTOR_KINDS:
+        raise V1LiveProviderModelCallExecutionError('unsupported executor_kind')
+    return executor_kind
+
+
+def _validate_arc_loopback_ollama_request(
+    runtime_request: Mapping[str, Any],
+) -> dict[str, Any]:
+    if runtime_request.get('network_scope') != 'loopback_only':
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama requires network_scope=loopback_only'
+        )
+    if runtime_request.get('credentials_used') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama forbids credentials'
+        )
+    if runtime_request.get('external_side_effects') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama forbids external side effects'
+        )
+    endpoint = _normalize_loopback_ollama_endpoint(
+        runtime_request.get('endpoint'),
+        'endpoint',
+    )
+    model = _required_text(runtime_request.get('model'), 'model')
+    return {
+        'endpoint': endpoint,
+        'model': model,
+        'network_scope': 'loopback_only',
+        'credentials_used': False,
+        'external_side_effects': False,
+    }
+
+
+def _normalize_arc_fake_result(
+    raw_result: Any,
+    *,
+    request_id: str,
+    guardian_decision: Mapping[str, Any],
+    executor_ref: str,
+) -> dict[str, Any]:
     result = _mapping(raw_result, 'executor result')
     provider = _required_text(result.get('provider'), 'executor result.provider')
     model = _required_text(result.get('model'), 'executor result.model')
@@ -465,6 +568,7 @@ def _execute_arc_consumer_baseline(
         'guardian_decision': dict(guardian_decision),
         'guardian_decision_id': guardian_decision['decision_id'],
         'executor_ref': executor_ref,
+        'executor_kind': ARC_EXECUTOR_KIND_FAKE,
         'executor_called': True,
         'provider': provider,
         'model': model,
@@ -475,6 +579,7 @@ def _execute_arc_consumer_baseline(
         'evidence': {
             'guardian_decision_id': guardian_decision['decision_id'],
             'executor_ref': executor_ref,
+            'executor_kind': ARC_EXECUTOR_KIND_FAKE,
             'executor_called': True,
             'network_called': False,
             'credentials_used': False,
@@ -483,6 +588,196 @@ def _execute_arc_consumer_baseline(
     }
     record['record_hash'] = _record_hash(record)
     return record
+
+
+def _normalize_arc_loopback_ollama_result(
+    raw_result: Any,
+    *,
+    request_id: str,
+    guardian_decision: Mapping[str, Any],
+    executor_ref: str,
+    expected_endpoint: str,
+    expected_model: str,
+) -> dict[str, Any]:
+    result = _mapping(raw_result, 'executor result')
+    provider = _required_text(result.get('provider'), 'executor result.provider')
+    if provider != 'ollama':
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report provider=ollama'
+        )
+    model = _required_text(result.get('model'), 'executor result.model')
+    if model != expected_model:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama result model does not match request'
+        )
+    endpoint = _normalize_loopback_ollama_endpoint(
+        result.get('endpoint'),
+        'executor result.endpoint',
+    )
+    if endpoint != expected_endpoint:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama result endpoint does not match request'
+        )
+    if result.get('network_called') is not True:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report network_called=true'
+        )
+    if result.get('network_scope') != 'loopback_only':
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report network_scope=loopback_only'
+        )
+    if result.get('ollama_called') is not True:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report ollama_called=true'
+        )
+    if result.get('credentials_used') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report credentials_used=false'
+        )
+    if result.get('external_side_effects') is not False:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama executor must report external_side_effects=false'
+        )
+
+    duration_value = result.get('duration_ms')
+    duration_ms = (
+        None
+        if duration_value is None
+        else _nonnegative_int(duration_value, 'executor result.duration_ms')
+    )
+    status = _normalize_token(
+        _required_text(result.get('status'), 'executor result.status')
+    )
+    output_text = ''
+    error_category: str | None = None
+    error_message: str | None = None
+    if status == 'completed':
+        output_text = _required_text(
+            result.get('output_text'),
+            'executor result.output_text',
+        )
+        _reject_raw_sensitive_content(output_text)
+        if result.get('error_category') not in {None, ''}:
+            raise V1LiveProviderModelCallExecutionError(
+                'completed loopback_ollama result cannot include error_category'
+            )
+        if result.get('error_message') not in {None, ''}:
+            raise V1LiveProviderModelCallExecutionError(
+                'completed loopback_ollama result cannot include error_message'
+            )
+    elif status == 'unavailable':
+        if result.get('output_text') not in {None, ''}:
+            raise V1LiveProviderModelCallExecutionError(
+                'unavailable loopback_ollama result cannot include output_text'
+            )
+        error_category = _normalize_token(
+            _required_text(
+                result.get('error_category'),
+                'executor result.error_category',
+            )
+        )
+        if error_category not in LOOPBACK_OLLAMA_ERROR_CATEGORIES:
+            raise V1LiveProviderModelCallExecutionError(
+                'loopback_ollama error_category is not supported'
+            )
+        error_message = _sanitized_error_message(
+            result.get('error_message'),
+            'executor result.error_message',
+        )
+    else:
+        raise V1LiveProviderModelCallExecutionError(
+            'loopback_ollama status must be completed or unavailable'
+        )
+
+    record = {
+        'record_type': 'arc_consumer_loopback_ollama_runtime',
+        'schema_version': 'arc-consumer-loopback-ollama-v1.1',
+        'status': status,
+        'request_id': request_id,
+        'runtime_consumer': 'arc_bot_shell',
+        'requested_action': 'arc.local_model_preview',
+        'guardian_decision': dict(guardian_decision),
+        'guardian_decision_id': guardian_decision['decision_id'],
+        'executor_ref': executor_ref,
+        'executor_kind': ARC_EXECUTOR_KIND_LOOPBACK_OLLAMA,
+        'executor_called': True,
+        'provider': provider,
+        'model': model,
+        'output_text': output_text,
+        'endpoint': endpoint,
+        'network_called': True,
+        'network_scope': 'loopback_only',
+        'ollama_called': True,
+        'credentials_used': False,
+        'external_side_effects': False,
+        'duration_ms': duration_ms,
+        'error_category': error_category,
+        'error_message': error_message,
+        'evidence': {
+            'guardian_decision_id': guardian_decision['decision_id'],
+            'requested_action': 'arc.local_model_preview',
+            'executor_ref': executor_ref,
+            'executor_kind': ARC_EXECUTOR_KIND_LOOPBACK_OLLAMA,
+            'executor_called': True,
+            'provider': provider,
+            'model': model,
+            'endpoint': endpoint,
+            'network_called': True,
+            'network_scope': 'loopback_only',
+            'ollama_called': True,
+            'credentials_used': False,
+            'external_side_effects': False,
+            'duration_ms': duration_ms,
+            'status': status,
+            'error_category': error_category,
+            'error_message': error_message,
+        },
+    }
+    record['record_hash'] = _record_hash(record)
+    return record
+
+
+def _normalize_loopback_ollama_endpoint(value: Any, field_name: str) -> str:
+    endpoint = _required_text(value, field_name)
+    try:
+        parsed = urlsplit(endpoint)
+        port = parsed.port
+        host = parsed.hostname
+    except ValueError as exc:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} is not a valid URL'
+        ) from exc
+    if parsed.scheme != 'http':
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} must use http'
+        )
+    if parsed.username is not None or parsed.password is not None:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} cannot include URL credentials'
+        )
+    if host not in LOOPBACK_OLLAMA_HOSTS:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} must use an approved loopback host'
+        )
+    if parsed.path not in {'', '/'} or parsed.query or parsed.fragment:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} must be a loopback base URL'
+        )
+    if port is None or port < 1 or port > 65535:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} must include a valid port'
+        )
+    return f'http://{host}:{port}'
+
+
+def _sanitized_error_message(value: Any, field_name: str) -> str:
+    message = _required_text(value, field_name)
+    if len(message) > 512 or '\n' in message or '\r' in message:
+        raise V1LiveProviderModelCallExecutionError(
+            f'{field_name} must be a short single-line message'
+        )
+    _reject_raw_sensitive_content(message)
+    return message
 
 
 def _validate_authority_record(value: Any) -> dict[str, Any]:

@@ -1,9 +1,15 @@
 # LIMA-AI-OS
 
-Arc consumers use the fake-executor-only runtime baseline documented in
-[`docs/ARC_CONSUMER_RUNTIME_BASELINE.md`](docs/ARC_CONSUMER_RUNTIME_BASELINE.md).
+Arc consumers use two narrow Guardian-gated runtime contracts:
 
-Current status: v0.1 governed dry-run runtime kernel alpha in recovery. Not a full AI OS. Not production Sparkbot/Arc runtime. No execution.
+- the compatible fake-executor baseline in
+  [docs/ARC_CONSUMER_RUNTIME_BASELINE.md](docs/ARC_CONSUMER_RUNTIME_BASELINE.md);
+- the explicit loopback-only Ollama executor contract in
+  [docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md](docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md).
+
+Current status: candidate-only governed runtime kernel. Not a full AI OS and
+not production Sparkbot/Arc runtime. Only explicitly Guardian-approved,
+caller-injected executor contracts may execute.
 
 LIMA-AI-OS is the Phase 0 home for the **LIMA Runtime / LIMA Kernel**: a Guardian-gated agent and robotics runtime extracted from Sparkbot.
 
@@ -39,7 +45,8 @@ The long-term vision can be called an AI OS. The engineering surface is more con
 
 ## Current Safety Status
 
-**Candidate-only, non-production safety work. No live/executing runtime behavior is approved.**
+**Candidate-only, non-production safety work. Runtime execution is limited to
+explicitly approved Guardian-gated, caller-injected executor contracts.**
 
 This repository currently contains:
 
@@ -50,7 +57,9 @@ This repository currently contains:
 - Import-only tests
 - Narrow non-executing candidate, preview, status-normalization, read-only runtime-state helpers, and a candidate-only local document harness for synthetic/non-sensitive local PC testing
 
-It does not contain migrated Sparkbot runtime behavior, live tool execution, production deployment wiring, credentials, real model calls, or robotics control paths.
+It does not contain migrated Sparkbot runtime behavior, built-in Ollama or
+cloud provider clients, live tool execution, production deployment wiring,
+credential lookup, fallback, or robotics control paths.
 
 ## Current V1 Status
 

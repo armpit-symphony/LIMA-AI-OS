@@ -6590,3 +6590,37 @@ Consequences:
 - No Sparkbot, public Sparkbot, Sparkbot_shell, or Arc-Bot-shell files are changed by this decision-log refresh.
 - No dependency manifest or lockfile is changed by this decision-log refresh.
 - No runtime vendor SDK import execution proof, runtime vendor SDK import in `lima/`, built-in provider SDK client, provider client construction, endpoint resolution, DNS/HTTP/socket/network call, direct provider egress, secret lookup, credential value access, provider token/API key access, provider configuration change, fallback execution, consumer production integration, connector/browser/file/device/robotics/physical-world behavior, product-readiness claim, or production-readiness claim is authorized by this ADR.
+
+## ADR-0341: Arc Loopback Ollama Uses An Explicit Guardian-Gated Executor Kind
+
+Status: Accepted
+
+Decision:
+
+The Arc consumer runtime contract distinguishes fake and loopback_ollama
+executor kinds explicitly. LIMA may invoke a caller-injected loopback_ollama
+callable only for arc.local_model_preview after validating a real Guardian
+allow decision, exact decision_id lineage, loopback-only network scope,
+credential prohibition, side-effect prohibition, a non-empty model, and an
+HTTP 127.0.0.1 or localhost base endpoint with an explicit valid port.
+
+Context:
+
+The published Arc v0.9 baseline intentionally accepted fake executors only.
+Arc v0.10 correctly stopped because disguising Ollama as fake or falsifying
+network and Ollama flags would violate the trust boundary. This decision
+authorizes the smallest LIMA-only contract expansion needed before Arc can
+resume.
+
+Consequences:
+
+- Executor safety is not inferred from a substring in an executor reference.
+- Historical exact fake executor references remain compatible.
+- Guardian deny and approval-required decisions stop before invocation.
+- Loopback Ollama results must truthfully report network_called=true,
+  network_scope=loopback_only, and ollama_called=true.
+- Successful and controlled unavailable results preserve sanitized metadata
+  and the unchanged Guardian decision_id.
+- LIMA adds no Ollama client, provider SDK client, credential lookup, cloud
+  fallback, generic network executor, Arc import, connector, file, browser,
+  device, robotics, office-system, or production behavior.
