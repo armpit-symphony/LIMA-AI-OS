@@ -13,11 +13,28 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install test dependencies
-        run: python -m pip install -e . pytest
+        run: python -m pip install -e . pytest build
       - name: Compile
         run: python -m compileall lima tests
       - name: Tests
         run: pytest -q
+      - name: Build governed-kernel release-candidate wheel
+        env:
+          SOURCE_DATE_EPOCH: "1784353973"
+        run: |
+          python -m build --wheel --no-isolation --outdir dist
+          python -m build --wheel --no-isolation --outdir dist-second
+      - name: Prove clean v0.1 governed-kernel installation
+        run: >-
+          python scripts/prove_v0_1_governed_kernel_rc.py
+          --wheel dist/lima_runtime-0.1.0rc1-py3-none-any.whl
+          --second-wheel dist-second/lima_runtime-0.1.0rc1-py3-none-any.whl
+      - name: Upload governed-kernel release-candidate wheel
+        uses: actions/upload-artifact@v4
+        with:
+          name: lima-runtime-v0.1.0rc1-wheel
+          path: dist/lima_runtime-0.1.0rc1-py3-none-any.whl
+          if-no-files-found: error
       - name: Installed Arc consumer fake-executor proof
         run: python scripts/prove_arc_consumer_baseline.py
       - name: Installed Arc loopback Ollama contract proof

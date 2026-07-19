@@ -1,15 +1,29 @@
 # LIMA-AI-OS
 
-Arc consumers use two narrow Guardian-gated runtime contracts:
+## v0.1 Governed-Kernel Release Candidate
 
-- the compatible fake-executor baseline in
-  [docs/ARC_CONSUMER_RUNTIME_BASELINE.md](docs/ARC_CONSUMER_RUNTIME_BASELINE.md);
-- the explicit loopback-only Ollama executor contract in
-  [docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md](docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md).
+`lima-runtime==0.1.0rc1` is the installable, candidate-only package milestone
+for Sparkbot and Arc. Its supported consumer surface is exactly
+`lima.runtime.run_governed_request`. It returns governed preview decisions and
+cannot execute approvals, providers, models, tools, connectors, files,
+network actions, or robotics.
 
-Current status: candidate-only governed runtime kernel. Not a full AI OS and
-not production Sparkbot/Arc runtime. Only explicitly Guardian-approved,
-caller-injected executor contracts may execute.
+See
+[docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md](docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md)
+for the consolidated recovery lineage, immutable pin guidance, clean-wheel
+proof, and release gates.
+
+Current status: non-executing governed-kernel release candidate. Not a full AI
+OS and not a production Sparkbot/Arc runtime. An `allowed_dry_run` decision is
+preview authority only and never execution authority.
+
+Historical Arc fake-executor and loopback-only Ollama contracts remain in the
+repository for regression compatibility. They are excluded from the supported
+v0.1 governed-kernel release-candidate surface and are absent from its wheel.
+The wheel contains only `lima`, `lima.contracts`, and `lima.governed_kernel`:
+
+- [docs/ARC_CONSUMER_RUNTIME_BASELINE.md](docs/ARC_CONSUMER_RUNTIME_BASELINE.md)
+- [docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md](docs/ARC_LOOPBACK_OLLAMA_RUNTIME_V1_1.md)
 
 LIMA-AI-OS is the Phase 0 home for the **LIMA Runtime / LIMA Kernel**: a Guardian-gated agent and robotics runtime extracted from Sparkbot.
 

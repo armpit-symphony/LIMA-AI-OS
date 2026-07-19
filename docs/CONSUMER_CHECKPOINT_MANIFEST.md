@@ -1,5 +1,24 @@
 # Consumer Checkpoint Manifest
 
+## Consolidated v0.1 Release-Candidate Lane
+
+Current main commit
+`deea1c4f5b6d3455a7e97e4b621e22b8d22a6244` contains the governed-kernel,
+Guardian Core integration, consumer-manifest, and Arc consumer recovery
+commits listed below in one continuous ancestry. The
+`lima-runtime==0.1.0rc1` recovery PR therefore certifies and packages that
+history; it does not cherry-pick or duplicate it.
+
+The supported release-candidate surface is only
+`lima.runtime.run_governed_request`. Sparkbot and Arc may install and pin the
+exact reviewed commit for decision preview and governed preflight. Approval
+execution, providers, tools, connectors, network actions, file mutation,
+background work, and robotics remain blocked. Historical executor harnesses
+are not part of the supported v0.1 release-candidate surface.
+
+Install, artifact, and immutable pin guidance lives in
+`docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md`.
+
 ## Recovery Status
 
 LIMA recovery v0.1 has produced a governed dry-run runtime seam.

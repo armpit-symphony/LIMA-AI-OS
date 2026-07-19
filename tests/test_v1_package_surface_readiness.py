@@ -5,11 +5,16 @@ from __future__ import annotations
 from importlib import import_module
 from pathlib import Path
 import pkgutil
+import tomllib
 
 
 def test_v1_governed_dry_run_modules_are_inside_lima_package_surface() -> None:
-    pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
-    assert 'include = ["lima*"]' in pyproject
+    pyproject = tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))
+    assert pyproject["tool"]["setuptools"]["packages"] == [
+        "lima",
+        "lima.contracts",
+        "lima.governed_kernel",
+    ]
 
     module_names = {module.name for module in pkgutil.walk_packages(["lima"], prefix="lima.")}
     assert "lima.kernel.v1_governed_preflight" in module_names

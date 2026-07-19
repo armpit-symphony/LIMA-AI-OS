@@ -7,8 +7,8 @@ from typing import Any
 import pytest
 
 from lima.contracts import GovernedDecision, GovernedRequest
-from lima.guardian import guardian_core_policy_adapter
-from lima.guardian.policy_adapter import map_guardian_semantic
+from lima.governed_kernel import guardian_core_policy_adapter
+from lima.governed_kernel.policy_adapter import map_guardian_semantic
 from lima.runtime import run_governed_request
 
 
