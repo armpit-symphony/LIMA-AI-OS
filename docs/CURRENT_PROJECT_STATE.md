@@ -6,6 +6,24 @@ For long-range product direction, Phase 3 continuation assumptions, and operator
 
 ## Current State
 
+### Current v0.1 Governed-Kernel Release-Candidate Lane
+
+The operator has authorized one narrow recovery PR for an installable
+`lima-runtime==0.1.0rc1` candidate. This authorization consolidates recovery
+history already present on main and adds packaging, install proof, and
+consumer pin guidance. It does not authorize the V1.0.0 cutover, a tag,
+registry publication, production readiness, approval execution, provider or
+model calls, tool or connector calls, network actions, or robotics.
+
+The release-candidate base is
+`deea1c4f5b6d3455a7e97e4b621e22b8d22a6244`. Its supported consumer entrypoint
+is exactly `lima.runtime.run_governed_request` for non-executing Sparkbot
+decision preview and Arc governed preflight. Exact-head review and separate
+operator approval remain required before any tag or publication.
+
+The detailed package contract is
+`docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md`.
+
 ### Current V1 Gate Snapshot
 
 LIMA remains `CANDIDATE_ONLY`.

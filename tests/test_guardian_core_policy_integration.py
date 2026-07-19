@@ -9,11 +9,11 @@ import sys
 
 import pytest
 
-from lima.guardian.guardian_core_policy_adapter import (
+from lima.governed_kernel.guardian_core_policy_adapter import (
     GUARDIAN_CORE_SOURCE_POLICY,
     STATIC_FALLBACK_SOURCE_POLICY,
 )
-from lima.guardian import guardian_core_policy_adapter
+from lima.governed_kernel import guardian_core_policy_adapter
 from lima.runtime import run_governed_request
 
 

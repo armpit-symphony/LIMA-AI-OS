@@ -9,7 +9,7 @@ from typing import Any
 from lima.contracts.audit_event import GovernedAuditEvent
 from lima.contracts.governed_decision import GovernedDecision
 from lima.contracts.governed_request import GovernedRequest
-from lima.guardian.guardian_core_policy_adapter import SOURCE_POLICY, evaluate_policy
+from lima.governed_kernel.guardian_core_policy_adapter import SOURCE_POLICY, evaluate_policy
 
 
 def run_governed_request(request: GovernedRequest | dict[str, Any]) -> GovernedDecision:
