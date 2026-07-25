@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import logging
 from typing import Any
 
 import pytest
 
+import lima.runtime as runtime_module
 from lima.contracts import GovernedDecision, GovernedRequest
 from lima.governed_kernel import guardian_core_policy_adapter
 from lima.governed_kernel.policy_adapter import map_guardian_semantic
@@ -121,6 +123,35 @@ def test_malformed_request_fails_closed() -> None:
     assert decision.status == "denied"
     assert decision.allowed is False
     assert "malformed_request" in decision.reason_codes
+
+
+def test_malformed_request_redacts_internal_exception_details(
+    monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    private_detail = r"C:\private\tenant\config.toml contained INTERNAL_TOKEN"
+
+    def raise_private_error(request: object) -> GovernedRequest:
+        del request
+        raise ValueError(private_detail)
+
+    monkeypatch.setattr(runtime_module, "_coerce_request", raise_private_error)
+
+    with caplog.at_level(logging.ERROR, logger="lima.runtime"):
+        decision = run_governed_request(
+            {"request_id": "bad-redacted", "consumer": "arc-bot"}
+        )
+
+    public_result = repr(decision.to_dict())
+    assert decision.status == "denied"
+    assert decision.allowed is False
+    assert private_detail not in public_result
+    assert "error" not in decision.metadata
+    assert "error" not in decision.audit_event.metadata
+    assert private_detail in caplog.text
+    assert decision.executable is False
+    assert decision.execution_allowed is False
+    assert decision.side_effects_allowed is False
 
 
 def test_sparkbot_shaped_normalized_fixture_returns_decision() -> None:
