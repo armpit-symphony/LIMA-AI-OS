@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import logging
 from types import ModuleType
 from typing import Any
 import sys
@@ -153,6 +154,43 @@ def test_static_fallback_is_explicit_when_guardian_core_unavailable(monkeypatch:
     assert decision.audit_event.source_policy == STATIC_FALLBACK_SOURCE_POLICY
     assert "guardian_core_unavailable" in decision.reason_codes
     assert "static_policy_fallback" in decision.reason_codes
+    assert decision.executable is False
+    assert decision.execution_allowed is False
+    assert decision.side_effects_allowed is False
+
+
+def test_guardian_core_error_is_logged_and_public_reason_codes_are_fixed(
+    monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    private_detail = r"C:\private\guardian\policy.py contained INTERNAL_TOKEN"
+
+    def broken_decider(*args: object, **kwargs: object) -> object:
+        del args, kwargs
+        raise RuntimeError(private_detail)
+
+    monkeypatch.setattr(
+        guardian_core_policy_adapter,
+        "_load_guardian_core_decider",
+        lambda: broken_decider,
+    )
+
+    with caplog.at_level(
+        logging.ERROR,
+        logger="lima.governed_kernel.guardian_core_policy_adapter",
+    ):
+        decision = run_governed_request(
+            _request(request_id="guardian-error-redacted", consumer="arc-bot")
+        )
+
+    public_result = repr(decision.to_dict())
+    assert decision.status == "denied"
+    assert decision.allowed is False
+    assert tuple(decision.reason_codes) == ("guardian_core_policy_error", "fail_closed")
+    assert decision.source_policy == GUARDIAN_CORE_SOURCE_POLICY
+    assert decision.audit_event.source_policy == GUARDIAN_CORE_SOURCE_POLICY
+    assert private_detail not in public_result
+    assert private_detail in caplog.text
     assert decision.executable is False
     assert decision.execution_allowed is False
     assert decision.side_effects_allowed is False

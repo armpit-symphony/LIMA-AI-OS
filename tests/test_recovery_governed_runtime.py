@@ -154,6 +154,41 @@ def test_malformed_request_redacts_internal_exception_details(
     assert decision.side_effects_allowed is False
 
 
+def test_policy_evaluation_error_is_logged_and_fails_closed_without_leaking(
+    monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    private_detail = r"C:\private\guardian\bundle.json contained INTERNAL_TOKEN"
+
+    def raise_private_error(request: GovernedRequest) -> object:
+        del request
+        raise RuntimeError(private_detail)
+
+    monkeypatch.setattr(runtime_module, "evaluate_policy", raise_private_error)
+
+    with caplog.at_level(logging.ERROR, logger="lima.runtime"):
+        decision = run_governed_request(
+            _request(request_id="policy-error-redacted", consumer="arc-bot")
+        )
+
+    public_result = repr(decision.to_dict())
+    assert decision.status == "denied"
+    assert decision.allowed is False
+    assert tuple(decision.reason_codes) == ("policy_evaluation_error", "fail_closed")
+    assert decision.source_policy == guardian_core_policy_adapter.STATIC_FALLBACK_SOURCE_POLICY
+    assert (
+        decision.audit_event.source_policy
+        == guardian_core_policy_adapter.STATIC_FALLBACK_SOURCE_POLICY
+    )
+    assert private_detail not in public_result
+    assert private_detail in caplog.text
+    assert decision.request_id == "policy-error-redacted"
+    assert decision.consumer == "arc-bot"
+    assert decision.executable is False
+    assert decision.execution_allowed is False
+    assert decision.side_effects_allowed is False
+
+
 def test_sparkbot_shaped_normalized_fixture_returns_decision() -> None:
     decision = run_governed_request(
         _request(
