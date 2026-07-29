@@ -5,6 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Mapping, Sequence
 
+from .guardian_decision_reference import GuardianDecisionReference
+
 
 @dataclass(frozen=True)
 class GovernedRequest:
@@ -18,6 +20,7 @@ class GovernedRequest:
     requested_action: str
     action_category: str
     tool_name: str | None
+    guardian_binding: GuardianDecisionReference | None = None
     tool_args: Mapping[str, Any] = field(default_factory=dict)
     trust_context: Mapping[str, Any] = field(default_factory=dict)
     evidence_refs: Sequence[str] = field(default_factory=tuple)
@@ -33,6 +36,7 @@ class GovernedRequest:
             requested_action=_required_text(value.get("requested_action"), "requested_action"),
             action_category=_required_text(value.get("action_category"), "action_category"),
             tool_name=_optional_text(value.get("tool_name")),
+            guardian_binding=_guardian_binding(value.get("guardian_binding")),
             tool_args=_mapping(value.get("tool_args"), "tool_args"),
             trust_context=_mapping(value.get("trust_context"), "trust_context"),
             evidence_refs=_text_sequence(value.get("evidence_refs"), "evidence_refs"),
@@ -50,6 +54,13 @@ class GovernedRequest:
         _mapping(self.tool_args, "tool_args")
         _mapping(self.trust_context, "trust_context")
         _text_sequence(self.evidence_refs, "evidence_refs")
+        if self.guardian_binding is not None:
+            self.guardian_binding.validate()
+            self.guardian_binding.validate_request_binding(
+                request_id=self.request_id,
+                requested_action=self.requested_action,
+                trust_context=self.trust_context,
+            )
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -61,6 +72,11 @@ class GovernedRequest:
             "requested_action": self.requested_action,
             "action_category": self.action_category,
             "tool_name": self.tool_name,
+            "guardian_binding": (
+                self.guardian_binding.to_dict()
+                if self.guardian_binding is not None
+                else None
+            ),
             "tool_args": dict(self.tool_args),
             "trust_context": dict(self.trust_context),
             "evidence_refs": tuple(self.evidence_refs),
@@ -88,6 +104,12 @@ def _mapping(value: Any, field_name: str) -> Mapping[str, Any]:
     if not isinstance(value, Mapping):
         raise ValueError(f"{field_name} must be a mapping")
     return dict(value)
+
+
+def _guardian_binding(value: Any) -> GuardianDecisionReference | None:
+    if value is None:
+        return None
+    return GuardianDecisionReference.from_mapping(value)
 
 
 def _text_sequence(value: Any, field_name: str) -> tuple[str, ...]:
