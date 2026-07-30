@@ -9,6 +9,7 @@ into LIMA's non-executing ``GovernedDecision`` statuses.
 from __future__ import annotations
 
 from dataclasses import replace
+import logging
 from typing import Any, Callable, Final, Mapping
 
 from lima.contracts.governed_request import GovernedRequest
@@ -33,6 +34,8 @@ _DENY_CATEGORIES: Final[frozenset[str]] = frozenset(
     {"shell", "model_call", "connector_call", "physical_world", "unknown"}
 )
 
+logger = logging.getLogger(__name__)
+
 
 def evaluate_policy(request: GovernedRequest) -> PolicyAdapterDecision:
     """Evaluate a request through Guardian Core or an explicit static fallback."""
@@ -55,14 +58,15 @@ def evaluate_policy(request: GovernedRequest) -> PolicyAdapterDecision:
             is_privileged=bool(request.trust_context.get("is_privileged")),
             extra_policies=extra_policies,
         )
-    except Exception as exc:
+    except Exception:
+        logger.exception("Guardian Core policy evaluation failed closed")
         return PolicyAdapterDecision(
             guardian_semantic="deny",
             status="denied",
             allowed=False,
             requires_approval=False,
             risk_level="blocked",
-            reason_codes=("guardian_core_policy_error", "fail_closed", str(exc)),
+            reason_codes=("guardian_core_policy_error", "fail_closed"),
             source_policy=GUARDIAN_CORE_SOURCE_POLICY,
         )
 

@@ -4,12 +4,18 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 import hashlib
+import logging
 from typing import Any
 
 from lima.contracts.audit_event import GovernedAuditEvent
 from lima.contracts.governed_decision import GovernedDecision
 from lima.contracts.governed_request import GovernedRequest
-from lima.governed_kernel.guardian_core_policy_adapter import SOURCE_POLICY, evaluate_policy
+from lima.governed_kernel.guardian_core_policy_adapter import evaluate_policy
+from lima.governed_kernel.policy_adapter import PolicyAdapterDecision
+
+
+logger = logging.getLogger(__name__)
+_RUNTIME_FAIL_CLOSED_SOURCE_POLICY = "lima.runtime.fail_closed:v0.1"
 
 
 def run_governed_request(request: GovernedRequest | dict[str, Any]) -> GovernedDecision:
@@ -18,10 +24,25 @@ def run_governed_request(request: GovernedRequest | dict[str, Any]) -> GovernedD
     try:
         governed_request = _coerce_request(request)
         governed_request.validate()
-    except Exception as exc:
-        return _fail_closed_decision(request, exc)
+    except Exception:
+        logger.exception("Governed request validation failed closed")
+        return _fail_closed_decision(request)
 
-    policy_decision = evaluate_policy(governed_request)
+    try:
+        policy_decision = evaluate_policy(governed_request)
+        return _decision_from_policy(governed_request, policy_decision)
+    except Exception:
+        logger.exception("Governed policy evaluation failed closed")
+        return _fail_closed_decision(
+            governed_request,
+            reason_codes=("policy_evaluation_error", "fail_closed"),
+        )
+
+
+def _decision_from_policy(
+    governed_request: GovernedRequest,
+    policy_decision: PolicyAdapterDecision,
+) -> GovernedDecision:
     decision_id = _stable_id("decision", governed_request.request_id)
     audit_event = GovernedAuditEvent(
         event_id=_stable_id("audit", f"{governed_request.request_id}:{decision_id}"),
@@ -67,7 +88,11 @@ def _coerce_request(request: GovernedRequest | dict[str, Any]) -> GovernedReques
     raise ValueError("request must be a GovernedRequest or mapping")
 
 
-def _fail_closed_decision(raw_request: Any, exc: Exception) -> GovernedDecision:
+def _fail_closed_decision(
+    raw_request: Any,
+    *,
+    reason_codes: tuple[str, ...] = ("malformed_request", "fail_closed"),
+) -> GovernedDecision:
     request_id = _raw_text(raw_request, "request_id") or "malformed-request"
     consumer = _raw_text(raw_request, "consumer") or "unknown"
     actor_id = _raw_text(raw_request, "actor_id") or "unknown"
@@ -81,9 +106,9 @@ def _fail_closed_decision(raw_request: Any, exc: Exception) -> GovernedDecision:
         actor_id=actor_id,
         surface=surface,
         status="denied",
-        reason_codes=("malformed_request", "fail_closed"),
-        source_policy=SOURCE_POLICY,
-        metadata={"error": str(exc), "dry_run_kernel": True, "no_execution_path": True},
+        reason_codes=reason_codes,
+        source_policy=_RUNTIME_FAIL_CLOSED_SOURCE_POLICY,
+        metadata={"dry_run_kernel": True, "no_execution_path": True},
     )
     return GovernedDecision(
         decision_id=decision_id,
@@ -93,14 +118,17 @@ def _fail_closed_decision(raw_request: Any, exc: Exception) -> GovernedDecision:
         allowed=False,
         requires_approval=False,
         risk_level="blocked",
-        reason_codes=("malformed_request", "fail_closed"),
-        source_policy=SOURCE_POLICY,
+        reason_codes=reason_codes,
+        source_policy=_RUNTIME_FAIL_CLOSED_SOURCE_POLICY,
         audit_event=audit_event,
-        metadata={"error": str(exc), "dry_run_kernel": True},
+        metadata={"dry_run_kernel": True},
     )
 
 
 def _raw_text(raw_request: Any, key: str) -> str | None:
+    if isinstance(raw_request, GovernedRequest):
+        value = getattr(raw_request, key)
+        return value.strip() if isinstance(value, str) and value.strip() else None
     if isinstance(raw_request, Mapping):
         value = raw_request.get(key)
         if isinstance(value, str) and value.strip():
