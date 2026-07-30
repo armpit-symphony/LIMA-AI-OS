@@ -123,6 +123,8 @@ def test_malformed_request_fails_closed() -> None:
     assert decision.status == "denied"
     assert decision.allowed is False
     assert "malformed_request" in decision.reason_codes
+    assert decision.source_policy == "lima.runtime.fail_closed:v0.1"
+    assert decision.audit_event.source_policy == "lima.runtime.fail_closed:v0.1"
 
 
 def test_malformed_request_redacts_internal_exception_details(
@@ -175,11 +177,8 @@ def test_policy_evaluation_error_is_logged_and_fails_closed_without_leaking(
     assert decision.status == "denied"
     assert decision.allowed is False
     assert tuple(decision.reason_codes) == ("policy_evaluation_error", "fail_closed")
-    assert decision.source_policy == guardian_core_policy_adapter.STATIC_FALLBACK_SOURCE_POLICY
-    assert (
-        decision.audit_event.source_policy
-        == guardian_core_policy_adapter.STATIC_FALLBACK_SOURCE_POLICY
-    )
+    assert decision.source_policy == "lima.runtime.fail_closed:v0.1"
+    assert decision.audit_event.source_policy == "lima.runtime.fail_closed:v0.1"
     assert private_detail not in public_result
     assert private_detail in caplog.text
     assert decision.request_id == "policy-error-redacted"

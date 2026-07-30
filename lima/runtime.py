@@ -10,11 +10,12 @@ from typing import Any
 from lima.contracts.audit_event import GovernedAuditEvent
 from lima.contracts.governed_decision import GovernedDecision
 from lima.contracts.governed_request import GovernedRequest
-from lima.governed_kernel.guardian_core_policy_adapter import SOURCE_POLICY, evaluate_policy
+from lima.governed_kernel.guardian_core_policy_adapter import evaluate_policy
 from lima.governed_kernel.policy_adapter import PolicyAdapterDecision
 
 
 logger = logging.getLogger(__name__)
+_RUNTIME_FAIL_CLOSED_SOURCE_POLICY = "lima.runtime.fail_closed:v0.1"
 
 
 def run_governed_request(request: GovernedRequest | dict[str, Any]) -> GovernedDecision:
@@ -106,7 +107,7 @@ def _fail_closed_decision(
         surface=surface,
         status="denied",
         reason_codes=reason_codes,
-        source_policy=SOURCE_POLICY,
+        source_policy=_RUNTIME_FAIL_CLOSED_SOURCE_POLICY,
         metadata={"dry_run_kernel": True, "no_execution_path": True},
     )
     return GovernedDecision(
@@ -118,7 +119,7 @@ def _fail_closed_decision(
         requires_approval=False,
         risk_level="blocked",
         reason_codes=reason_codes,
-        source_policy=SOURCE_POLICY,
+        source_policy=_RUNTIME_FAIL_CLOSED_SOURCE_POLICY,
         audit_event=audit_event,
         metadata={"dry_run_kernel": True},
     )
