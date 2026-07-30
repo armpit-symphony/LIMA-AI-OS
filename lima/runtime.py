@@ -43,7 +43,24 @@ def _decision_from_policy(
     governed_request: GovernedRequest,
     policy_decision: PolicyAdapterDecision,
 ) -> GovernedDecision:
-    decision_id = _stable_id("decision", governed_request.request_id)
+    guardian_binding = governed_request.guardian_binding
+    binding_hash = (
+        guardian_binding.content_hash if guardian_binding is not None else None
+    )
+    decision_seed = governed_request.request_id
+    if binding_hash is not None:
+        decision_seed = f"{decision_seed}:{binding_hash}"
+    decision_id = _stable_id("decision", decision_seed)
+    binding_metadata = {
+        "guardian_binding_present": guardian_binding is not None,
+        "guardian_binding_hash": binding_hash,
+        "guardian_decision_id": (
+            guardian_binding.decision_id if guardian_binding is not None else None
+        ),
+        "guardian_binding_mode": (
+            guardian_binding.binding_mode if guardian_binding is not None else None
+        ),
+    }
     audit_event = GovernedAuditEvent(
         event_id=_stable_id("audit", f"{governed_request.request_id}:{decision_id}"),
         request_id=governed_request.request_id,
@@ -59,6 +76,7 @@ def _decision_from_policy(
             "guardian_semantic": policy_decision.guardian_semantic,
             "dry_run_kernel": True,
             "no_execution_path": True,
+            **binding_metadata,
         },
     )
     return GovernedDecision(
@@ -76,6 +94,12 @@ def _decision_from_policy(
             "guardian_semantic": policy_decision.guardian_semantic,
             "dry_run_kernel": True,
             "request": governed_request.to_dict(),
+            "guardian_binding": (
+                guardian_binding.to_dict()
+                if guardian_binding is not None
+                else None
+            ),
+            **binding_metadata,
         },
     )
 
