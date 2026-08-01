@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from datetime import datetime, timedelta, timezone
+from types import ModuleType
 from typing import Any
+import sys
 
 import pytest
 
@@ -28,6 +30,53 @@ NOW = datetime.now(timezone.utc).replace(microsecond=0)
 _HASH_A = "sha256:" + "a" * 64
 _HASH_B = "sha256:" + "b" * 64
 _HASH_C = "sha256:" + "c" * 64
+
+
+@dataclass(frozen=True)
+class _FakeGuardianCoreDecision:
+    tool_name: str
+    action: str
+    high_risk: bool = False
+    reason: str = "fake guardian core decision"
+    scope: str = "read"
+    resource: str = "test"
+    action_type: str = "test"
+
+
+def _install_fake_guardian_core(
+    monkeypatch: pytest.MonkeyPatch,
+    action: str = "allow",
+) -> None:
+    """Pin Guardian Core to a known verdict.
+
+    Without this the outcome depends on whether a real ``guardian_core`` happens
+    to be importable, which is true on a developer box with a sibling Guardian
+    checkout and false in a clean CI clone.
+    """
+
+    guardian_core_module = ModuleType("guardian_core")
+    policy_module = ModuleType("guardian_core.policy")
+
+    def decide_tool_use(
+        tool_name: str,
+        args: dict[str, Any] | None = None,
+        *,
+        room_execution_allowed: bool | None = None,
+        is_operator: bool = False,
+        is_privileged: bool = False,
+        extra_policies: dict[str, dict[str, Any]] | None = None,
+    ) -> _FakeGuardianCoreDecision:
+        return _FakeGuardianCoreDecision(tool_name=tool_name, action=action)
+
+    policy_module.decide_tool_use = decide_tool_use  # type: ignore[attr-defined]
+    guardian_core_module.policy = policy_module  # type: ignore[attr-defined]
+    monkeypatch.setitem(sys.modules, "guardian_core", guardian_core_module)
+    monkeypatch.setitem(sys.modules, "guardian_core.policy", policy_module)
+
+
+@pytest.fixture(autouse=True)
+def _allow_by_default(monkeypatch: pytest.MonkeyPatch) -> None:
+    _install_fake_guardian_core(monkeypatch, "allow")
 
 
 def _binding(**overrides: Any) -> GuardianDecisionReference:
@@ -204,31 +253,27 @@ def test_issuance_requires_a_guardian_binding() -> None:
 
 
 @pytest.mark.parametrize(
-    ("action_kind", "expected_status"),
+    ("guardian_action", "expected_status"),
     [
-        ("arc.shell_command", "denied"),
-        ("arc.credential_access", "privileged_required"),
+        ("deny", "denied"),
+        ("confirm", "confirm_required"),
     ],
 )
 def test_issuance_denies_non_allowed_decisions(
-    action_kind: str,
+    monkeypatch: pytest.MonkeyPatch,
+    guardian_action: str,
     expected_status: str,
 ) -> None:
-    binding = _binding(bound_action_type=action_kind)
-    payload = _request(binding=binding)
-    payload["requested_action"] = action_kind
-    payload["action_category"] = (
-        "shell" if action_kind == "arc.shell_command" else "credential_access"
-    )
-    payload["trust_context"] = dict(payload["trust_context"])
+    _install_fake_guardian_core(monkeypatch, guardian_action)
+    payload = _request()
     decision = run_governed_request(payload)
-    assert decision.status != "allowed_dry_run"
+    assert decision.status == expected_status
 
     with pytest.raises(ExecutionGrantDenied) as excinfo:
         issue_execution_grant(
             payload,
             decision,
-            capability=action_kind,
+            capability="arc.safe_read",
             side_effects_allowed=False,
             now=NOW,
         )
@@ -237,6 +282,35 @@ def test_issuance_denies_non_allowed_decisions(
         "decision_status_not_grantable",
         "approval_still_required",
     }
+
+
+def test_issuance_denies_when_guardian_core_is_unavailable(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """A static fallback decision must never be grantable."""
+
+    monkeypatch.setattr(
+        "lima.governed_kernel.guardian_core_policy_adapter._load_guardian_core_decider",
+        _raise_module_not_found,
+    )
+    monkeypatch.delitem(sys.modules, "guardian_core", raising=False)
+    payload = _request()
+    decision = run_governed_request(payload)
+    assert decision.source_policy == "lima_static_policy_fallback"
+
+    with pytest.raises(ExecutionGrantDenied) as excinfo:
+        issue_execution_grant(
+            payload,
+            decision,
+            capability="arc.safe_read",
+            side_effects_allowed=False,
+            now=NOW,
+        )
+    assert excinfo.value.reason_code == "guardian_core_policy_required"
+
+
+def _raise_module_not_found() -> Any:
+    raise ModuleNotFoundError("guardian_core")
 
 
 def test_issuance_denies_a_decision_for_a_different_request() -> None:
