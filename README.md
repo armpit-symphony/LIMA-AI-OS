@@ -1,12 +1,46 @@
 # LIMA-AI-OS
 
+## Start here
+
+This repository is large and its status sections below are a governance record
+rather than an orientation. If you are trying to work with the stack, read
+these first:
+
+- **[docs/GOVERNED_STACK_MAP.md](docs/GOVERNED_STACK_MAP.md)** — how the four
+  repositories fit together, which LIMA commit each consumer pins and why they
+  differ, and which Sparkbot repository to actually work in.
+- **[docs/GOVERNED_EXECUTION_GRANT.md](docs/GOVERNED_EXECUTION_GRANT.md)** —
+  the only contract that can carry execution authority, and the two
+  independent opt-ins that gate it.
+
+The one-line model: **LIMA decides, shells execute.** A `GovernedDecision`
+structurally cannot authorize execution, so permission has to come from a
+separate, narrow, short-lived grant that no single party can enable alone.
+
+Consumers pin LIMA at deliberately different commits. Before "fixing" a
+difference between them, check the pin map in the stack map document.
+
 ## v0.1 Governed-Kernel Release Candidate
 
 `lima-runtime==0.1.0rc1` is the installable, candidate-only package milestone
-for Sparkbot and Arc. Its supported consumer surface is exactly
-`lima.runtime.run_governed_request`. It returns governed preview decisions and
-cannot execute approvals, providers, models, tools, connectors, files,
-network actions, or robotics.
+for Sparkbot and Arc. It returns governed preview decisions and cannot execute
+approvals, providers, models, tools, connectors, files, network actions, or
+robotics.
+
+Its supported consumer surface is two entry points:
+
+- `lima.runtime.run_governed_request` — returns a `GovernedDecision`, which can
+  never authorize execution.
+- `lima.runtime.issue_execution_grant` — returns a
+  `GovernedExecutionGrant`, the separate contract that can. Only a decision
+  with status `allowed_dry_run` is grantable, the grant is single-use and
+  capped at a 300-second TTL, and it is never sufficient on its own: an
+  enforcer that has not been independently opted in by an operator must still
+  deny.
+
+Issuing a grant performs no execution, no provider call, and no side effect.
+Consumers pinned before the grant landed — Sparkbot at `4e7c648`, Arc at its
+frozen `40d6f13` — see only the first entry point, which is intended.
 
 See
 [docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md](docs/V0_1_GOVERNED_KERNEL_RELEASE_CANDIDATE.md)
